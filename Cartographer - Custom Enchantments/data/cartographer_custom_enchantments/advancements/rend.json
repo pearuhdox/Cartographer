@@ -1,0 +1,32 @@
+{
+    "display": {
+        "title": {
+            "text": "Rend",
+            "color": "gray"
+        },
+        "description": {
+            "text": "Arrows from this weapon inflict a stack of Bleeding for 5 seconds.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rend:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "cartographer_custom_enchantments:ranged_tree"
+}

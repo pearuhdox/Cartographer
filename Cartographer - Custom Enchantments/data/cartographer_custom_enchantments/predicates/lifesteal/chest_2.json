@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "chest": {
+        "nbt": "{Lifesteal:2}"
+      }
+    },
+    "player": {}
+  }
+}

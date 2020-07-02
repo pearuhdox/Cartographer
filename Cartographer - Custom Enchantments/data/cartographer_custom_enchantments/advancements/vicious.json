@@ -1,0 +1,70 @@
+{
+    "display": {
+        "title": {
+            "text": "Vicious",
+            "color": "gray"
+        },
+        "description": {
+            "text": "Applies a stack of bleeding to the target for N seconds, where N is the enchantment level.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Vicious:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Vicious:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Vicious:3}"
+                    }
+                ]
+            }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Vicious:4}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4"
+        ]
+    ],
+    "parent": "cartographer_custom_enchantments:transfiguration"
+}

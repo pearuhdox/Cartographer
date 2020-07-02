@@ -1,0 +1,14 @@
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_0] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_1] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_2] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_3] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_4] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_5] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_6] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_7] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_8] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/slot_106] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/head_1] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/chest_1] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/legs_1] run scoreboard players add @s curse_malevolent 1
+execute as @a[predicate=cartographer_custom_enchantments:curse_malevolence/feet_1] run scoreboard players add @s curse_malevolent 1

@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Current:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Current          ",
+            "color": "gray"
+        },
+        "description": {
+            "color": "white",
+            "text": "When thrown, this trident will drag the hit mob to its current location, until it is retrieved, or returns to you."
+        },
+        "icon": {
+            "item": "minecraft:trident"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_custom_enchantments:ranged_tree"
+}

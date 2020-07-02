@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Concealed:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Concealed     ",
+            "color": "gray"
+        },
+        "description": {
+            "color": "white",
+            "text": "While held or worn, the user gains Invisibility I."
+        },
+        "icon": {
+            "item": "minecraft:oak_leaves"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_custom_enchantments:aquadynamic"
+}

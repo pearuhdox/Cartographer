@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Aquadynamic:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "color": "gray",
+            "text": "Aquadynamic"
+        },
+        "description": {
+            "color": "white",
+            "text": "While held or worn, the user gains Conduit Power I."
+        },
+        "icon": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_custom_enchantments:agility"
+}

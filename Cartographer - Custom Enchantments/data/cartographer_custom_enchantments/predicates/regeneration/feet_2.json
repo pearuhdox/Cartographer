@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "feet": {
+        "nbt": "{Regeneration:2}"
+      }
+    },
+    "player": {}
+  }
+}

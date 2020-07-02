@@ -1,0 +1,1 @@
+tellraw @a {"text":" - Custom Enchantments (v0.1)","color":"aqua","bold":false,"italic":false,"hoverEvent":{"action":"show_text","value":[{"text":"Adds over 20 custom enchantments for weapons, armor, and held items."}]}}

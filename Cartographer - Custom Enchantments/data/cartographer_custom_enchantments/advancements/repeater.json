@@ -1,0 +1,48 @@
+{
+    "display": {
+        "title": {
+            "text": "Repeater",
+            "color": "gray"
+        },
+        "description": {
+            "text": "This crossbow loads an additional arrow per reload per level.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Repeater:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Repeater:2}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2"
+        ]
+    ],
+    "parent": "cartographer_custom_enchantments:auto_charge"
+}

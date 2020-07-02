@@ -1,0 +1,58 @@
+{
+    "display": {
+        "title": {
+            "text": "Echo",
+            "color": "gray"
+        },
+        "description": {
+            "text": "Attacking instantly recharges your attack cooldown. This can only happen every 6/5/4 seconds. (Based on enchantment level)."
+        },
+        "icon": {
+            "item": "minecraft:diamond_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Echo:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Echo:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Echo:3}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
+    "parent": "cartographer_custom_enchantments:duelist"
+}

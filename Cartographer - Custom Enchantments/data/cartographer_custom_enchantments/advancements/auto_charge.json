@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{AutoCharge:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Auto Charge     ",
+            "color": "gray"
+        },
+        "description": {
+            "color": "white",
+            "text": "When empty and in your hotbar or offhand, this crossbow will automatically load itself (for free) when you kill a mob."
+        },
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_custom_enchantments:ranged_tree"
+}

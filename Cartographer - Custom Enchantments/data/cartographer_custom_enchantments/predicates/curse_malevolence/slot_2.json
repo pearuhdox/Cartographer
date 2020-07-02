@@ -1,0 +1,8 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "nbt": "{Inventory:[{Slot:2b,tag:{CurseMalevolence:1}}]}",
+    "player": {}
+  }
+}

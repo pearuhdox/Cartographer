@@ -1,0 +1,70 @@
+{
+    "display": {
+        "title": {
+            "text": "Surging Edge",
+            "color": "gray"
+        },
+        "description": {
+            "text": "Sprint attacks with this weapon are surge attacks. Thrust attacks deal 2 damage per level as well as hit enemies behind the target.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:stone_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{SurgingEdge:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{SurgingEdge:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{SurgingEdge:3}"
+                    }
+                ]
+            }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{SurgingEdge:4}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4"
+        ]
+    ],
+    "parent": "cartographer_custom_enchantments:stunning"
+}

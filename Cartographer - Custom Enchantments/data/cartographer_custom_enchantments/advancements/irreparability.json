@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{RepairLevel:60}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "color": "red",
+            "text": "Curse of Irreparability"
+        },
+        "description": {
+            "color": "white",
+            "text": "This item cannot be repaired."
+        },
+        "icon": {
+            "item": "minecraft:damaged_anvil"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_custom_enchantments:curse_tree"
+}

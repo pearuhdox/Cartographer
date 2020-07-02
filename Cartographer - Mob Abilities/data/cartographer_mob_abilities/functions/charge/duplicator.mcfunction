@@ -1,0 +1,7 @@
+execute unless entity @s[scores={ability_charge=1..2}] at @p[distance=..25] run playsound minecraft:entity.vindicator.celebrate hostile @a[distance=..16] ~ ~ ~ 3 1
+
+execute unless entity @s[scores={ability_charge=2}] run effect give @s glowing 1 0 true
+
+execute unless entity @s[scores={ability_charge=3}] run scoreboard players add @s ability_charge 1
+
+execute if entity @s[scores={ability_charge=3}] run function cartographer_mob_abilities:abilities/duplicator

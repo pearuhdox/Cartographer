@@ -1,0 +1,59 @@
+{
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{SecondWind:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{SecondWind:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{SecondWind:3}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "color": "gray",
+            "text": "Second Wind"
+        },
+        "description": {
+            "color": "white",
+            "text": "When damage is dodged by Evasion, the wearer or holder also heals 1 health per level, up to 4 health."
+        },
+        "icon": {
+            "item": "minecraft:pink_dye"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
+    "parent": "cartographer_custom_enchantments:evasion"
+}

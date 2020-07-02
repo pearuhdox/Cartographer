@@ -1,0 +1,15 @@
+function cartographer_custom_enchantments:loop/calc_enchant/reset
+
+function cartographer_custom_enchantments:loop/calc_enchant/head
+function cartographer_custom_enchantments:loop/calc_enchant/chest
+function cartographer_custom_enchantments:loop/calc_enchant/legs
+function cartographer_custom_enchantments:loop/calc_enchant/feet
+function cartographer_custom_enchantments:loop/calc_enchant/offhand
+function cartographer_custom_enchantments:loop/calc_enchant/mainhand
+function cartographer_custom_enchantments:loop/calc_enchant/set_max
+
+function cartographer_custom_enchantments:loop/calc_enchant/auto_charge
+
+function cartographer_custom_enchantments:loop/calc_enchant/curse_malevolence
+
+schedule function cartographer_custom_enchantments:loop/calc_enchant/base 5t

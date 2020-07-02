@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "legs": {
+        "nbt": "{Evasion:1}"
+      }
+    },
+    "player": {}
+  }
+}

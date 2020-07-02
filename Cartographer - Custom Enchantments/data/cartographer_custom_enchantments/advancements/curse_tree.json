@@ -1,0 +1,27 @@
+{
+    "display": {
+        "title": {
+            "text": "Curses          ",
+            "color": "red",
+            "bold": false
+        },
+        "description": {
+            "text": "A list of all custom Curse Enchantments you can find.",
+            "color": "white",
+            "bold": false
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "parent": "cartographer_custom_enchantments:root"
+}

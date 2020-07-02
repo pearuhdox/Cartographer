@@ -1,0 +1,1 @@
+execute if entity @s[scores={concealed=1}] run effect give @s invisibility 1 1 true

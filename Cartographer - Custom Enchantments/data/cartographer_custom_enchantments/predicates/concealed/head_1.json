@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "head": {
+        "nbt": "{Concealed:1}"
+      }
+    },
+    "player": {}
+  }
+}

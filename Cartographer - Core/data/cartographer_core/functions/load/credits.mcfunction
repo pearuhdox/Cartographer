@@ -1,0 +1,3 @@
+tellraw @a [{"text":"PearUhDox: ","color":"gold","bold":false,"italic":false},{"text":"Pack Creator","color":"white"}]
+#tellraw @a [{"text":"GavstarB: ","color":"gold","bold":false,"italic":false},{"text":"Function and Command Support for Revised Enchanted Books","color":"white"}]
+tellraw @a [{"text":"Team Monumenta: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments. Ability Ideas for Mob Abilities.","color":"white"}]

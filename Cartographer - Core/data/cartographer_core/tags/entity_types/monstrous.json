@@ -1,0 +1,12 @@
+{
+  "values":[
+	"minecraft:blaze",
+	"minecraft:creeper",
+	"minecraft:enderman",
+	"minecraft:guardian",
+	"minecraft:elder_guardian",
+	"minecraft:shulker",
+	"minecraft:piglin",
+	"minecraft:hoglin"
+  ]
+}
