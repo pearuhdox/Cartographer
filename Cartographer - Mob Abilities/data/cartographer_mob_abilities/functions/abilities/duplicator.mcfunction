@@ -48,13 +48,13 @@ execute as @e[tag=duplicate,distance=..1] at @s run data modify entity @s ArmorI
 
 execute as @e[tag=duplicate,distance=..1] at @s run data modify entity @s HandItems set from entity @e[tag=duplicator,distance=..1,limit=1] HandItems
 
-execute as @e[tag=duplicate,distance=..1] at @s run data modify entity @s Attributes set from entity @e[tag=duplicator,distance=..1,limit=1] Attributes
+#execute as @e[tag=duplicate,distance=..1] at @s run data modify entity @s Attributes set from entity @e[tag=duplicator,distance=..1,limit=1] Attributes
 
 execute as @e[tag=duplicate,distance=..1] at @s run data modify entity @s CustomName set from entity @e[tag=duplicator,distance=..1,limit=1] CustomName
 
 execute as @e[tag=duplicate,distance=..1] at @s run data modify entity @s Health set value 5
 
-scoreboard players set @e[tag=duplicate,distance=..1] cooldown 10
+scoreboard players set @e[tag=duplicate,distance=..2] cooldown 10
 
 playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..16] ~ ~ ~ 3 1.3
 

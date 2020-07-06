@@ -1,0 +1,2 @@
+Initial Release: Version Beta 1.0
+Established Changelog. All future changes to Cartographer, including additions, balance changes, and bug fixes, will be written here.

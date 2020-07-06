@@ -44,7 +44,7 @@ execute if entity @e[tag=magic_missile,tag=tokened,scores={cooldown=0}] run exec
 #Duplicate
 execute if entity @e[tag=duplicator,tag=tokened,scores={cooldown=0}] run execute as @e[tag=duplicator,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/duplicator
 
-execute if entity @e[tag=duplicate,tag=tokened,scores={cooldown=0}] run execute as @e[tag=duplicate,tag=tokened,scores={cooldown=0}] at @s run tp @s ~ -60 ~
+execute if entity @e[tag=duplicate,scores={cooldown=0}] run execute as @e[tag=duplicate,scores={cooldown=0}] at @s run tp @s ~ -60 ~
 
 #Traps will be reserved for 1.16 and new spreadplayers
 

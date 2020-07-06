@@ -13,7 +13,7 @@ execute if entity @e[tag=hook,type=area_effect_cloud] run execute as @e[tag=hook
 execute if entity @e[tag=magic_missile_projectile,type=armor_stand] run execute as @e[tag=magic_missile_projectile,type=armor_stand] at @s run function cartographer_mob_abilities:abilities/magic_missile_projectile
 
 #Fix Tags
-execute if entity @e[tag=has_active,tag=!ability_checked] run execute as @e[tag=has_active,tag=!ability_checked] at @s run function cartographer_mob_abilities:passive/ability_fix
+execute if entity @e[tag=has_active,tag=!ability_checked,tag=!duplicate] run execute as @e[tag=has_active,tag=!ability_checked,tag=!duplicate] at @s run function cartographer_mob_abilities:passive/ability_fix
 
 execute if entity @e[tag=parting_gift,tag=!death_checked] run execute as @e[tag=parting_gift,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 execute if entity @e[tag=corpse_crawler,tag=!death_checked] run execute as @e[tag=corpse_crawler,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
@@ -33,9 +33,8 @@ execute if entity @e[type=item,nbt={Item:{tag:{CorpseCrawler:1}}}] run execute a
 #Exalted
 execute if entity @e[type=item,nbt={Item:{tag:{Exalted:1}}}] run execute as @e[type=item,nbt={Item:{tag:{Exalted:1}}}] at @s run function cartographer_mob_abilities:passive/exalted
 
-#Exalted
+#Pyromania
 execute if entity @e[type=item,nbt={Item:{tag:{Pyromania:1}}}] run execute as @e[type=item,nbt={Item:{tag:{Pyromania:1}}}] at @s run function cartographer_mob_abilities:passive/pyromania
 
-#TODO: Add Pyromania
 
 schedule function cartographer_mob_abilities:loop/tick/base 1t
