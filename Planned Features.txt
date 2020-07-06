@@ -1,0 +1,30 @@
+This is a list of planned features for the first "official" non beta release.
+You can ask about what these features will look like, but I may not give clear answers, as development plans may eventually change.
+Everything on this list is subject to change.
+
+Custom Statuses:
+- Implementation of further damage over time (DoT) effects.
+- Implementation of "Vulnerability"
+
+Custom Enchantments:
+- Implementation of enchants that work with new custom statuses, for melee and ranged weapons.
+- Implementation of "Frost"
+- Implementation of "Tempo Theft"
+- Implementation of "Volatile"
+- Implementation of Punch and Flame working on Crossbows.
+- Implementation of "Trueshot" (Arrows have no gravity)
+- Implementation of "Evocation"
+- Implementation of "Energetic" (Frenzy but for Haste)
+- Implementation of "Spurs" (credit to GavstarB, destroys cobwebs you walk through)
+- Implementation of "Ricochet"
+- Implementation of "Hydraulic"
+
+Mob Abilities:
+- Implementation of "Soulfire Nova"
+- Implementation of "Traps"
+- Implementation of "Fireball"
+- Implementation of "Hybrid Fighter"
+- Implementation of "Spectral"
+- Implementation of "Avenger"
+
+- Continued Bug Fixing (as there will always be bugs).
