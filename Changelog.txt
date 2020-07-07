@@ -1,2 +1,15 @@
+Hotfix: Version Beta 1.0.1
+Bugs Fixed:
+- World automatically places Shulker Box at 0 0 0 and sets world spawn there.
+(Fixing all enchantments that rely on it, such as Auto Charge, Repeating, and Infinity.)
+- Fixed token system for mob abilities not applying statistics to players.
+(Active abilities should now work.)
+- Fixed Custom Enchantmemts not creating "helper_arrow_dmg" scoreboard on reload.
+(Sharpshot and Point Blank work again).
+
+Thanks to Matt_97 and Gizmo for finding these bugs!
+
+
+
 Initial Release: Version Beta 1.0
 Established Changelog. All future changes to Cartographer, including additions, balance changes, and bug fixes, will be written here.

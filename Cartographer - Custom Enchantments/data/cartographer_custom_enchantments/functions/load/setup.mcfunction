@@ -88,6 +88,7 @@ scoreboard objectives add helper_deathtime minecraft.custom:minecraft.time_since
 
 scoreboard objectives add helper_fire_bow minecraft.used:minecraft.bow
 scoreboard objectives add helper_fire_cbow minecraft.used:minecraft.crossbow
+scoreboard objectives add helper_arrow_dmg dummy
 scoreboard objectives add helper_trident minecraft.used:minecraft.trident
 
 scoreboard objectives add helper_splashpot minecraft.used:minecraft.splash_potion
