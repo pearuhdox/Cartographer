@@ -8,16 +8,18 @@ Custom Statuses:
 
 Custom Enchantments:
 - Implementation of enchants that work with new custom statuses, for melee and ranged weapons.
-- Implementation of "Frost"
-- Implementation of "Tempo Theft"
-- Implementation of "Volatile"
+- Implementation of "Frost" (???)
+- Implementation of "Tempo Theft" (???)
+- Implementation of "Volatile" (???)
 - Implementation of Punch and Flame working on Crossbows.
 - Implementation of "Trueshot" (Arrows have no gravity)
-- Implementation of "Evocation"
+- Implementation of "Evocation" (???)
 - Implementation of "Energetic" (Frenzy but for Haste)
 - Implementation of "Spurs" (credit to GavstarB, destroys cobwebs you walk through)
-- Implementation of "Ricochet"
-- Implementation of "Hydraulic"
+- Implementation of "Ricochet" (???)
+- Implementation of "Hydraulic" (???)
+- Implementation of "Vortex" (???)
+- Implementation of "Soulbound" (???)
 
 Mob Abilities:
 - Implementation of "Soulfire Nova"
