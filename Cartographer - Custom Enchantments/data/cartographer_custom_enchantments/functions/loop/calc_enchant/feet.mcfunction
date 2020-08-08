@@ -30,6 +30,10 @@ execute as @a[predicate=cartographer_custom_enchantments:evasion/feet_3] run sco
 execute as @a[predicate=cartographer_custom_enchantments:evasion/feet_4] run scoreboard players add @s evasion 4
 execute as @a[predicate=cartographer_custom_enchantments:evasion/feet_5] run scoreboard players add @s evasion 5
 
+execute as @a[predicate=cartographer_custom_enchantments:energetic/feet_1] run scoreboard players add @s energetic 1
+execute as @a[predicate=cartographer_custom_enchantments:energetic/feet_2] run scoreboard players add @s energetic 2
+execute as @a[predicate=cartographer_custom_enchantments:energetic/feet_3] run scoreboard players add @s energetic 3
+
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/feet_1] run scoreboard players add @s frenzy 1
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/feet_2] run scoreboard players add @s frenzy 2
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/feet_3] run scoreboard players add @s frenzy 3
@@ -49,6 +53,8 @@ execute as @a[predicate=cartographer_custom_enchantments:satiation/feet_3] run s
 execute as @a[predicate=cartographer_custom_enchantments:second_wind/feet_1] run scoreboard players add @s second_wind 1
 execute as @a[predicate=cartographer_custom_enchantments:second_wind/feet_2] run scoreboard players add @s second_wind 2
 execute as @a[predicate=cartographer_custom_enchantments:second_wind/feet_3] run scoreboard players add @s second_wind 3
+
+execute as @a[predicate=cartographer_custom_enchantments:spurs/feet_1] run scoreboard players set @s spurs 1
 
 execute as @a[predicate=cartographer_custom_enchantments:vengeance/feet_1] run scoreboard players add @s vengeance 1
 execute as @a[predicate=cartographer_custom_enchantments:vengeance/feet_2] run scoreboard players add @s vengeance 2

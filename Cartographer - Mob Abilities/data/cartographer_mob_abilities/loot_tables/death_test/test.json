@@ -120,6 +120,191 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
+              "tag": "{Spectral:1}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:alternative",
+                "terms": [
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:killed_by_player",
+                      "inverse": false
+                    }
+                  },
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                        "nbt": "{Tags:[\"spectral\"]}"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{BrutalBlood:1}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:alternative",
+                "terms": [
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:killed_by_player",
+                      "inverse": false
+                    }
+                  },
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                        "nbt": "{Tags:[\"brutal_blood\"]}"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{RelentlessBlood:1}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:alternative",
+                "terms": [
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:killed_by_player",
+                      "inverse": false
+                    }
+                  },
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                        "nbt": "{Tags:[\"relentless_blood\"]}"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{DeviousBlood:1}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:alternative",
+                "terms": [
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:killed_by_player",
+                      "inverse": false
+                    }
+                  },
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                        "nbt": "{Tags:[\"devious_blood\"]}"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SacrificialBlood:1}"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:alternative",
+                "terms": [
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:killed_by_player",
+                      "inverse": false
+                    }
+                  },
+                  {
+                    "condition": "minecraft:inverted",
+                    "term": {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                        "nbt": "{Tags:[\"sacrificial_blood\"]}"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
               "tag": "{Exalted:1}"
             }
           ],

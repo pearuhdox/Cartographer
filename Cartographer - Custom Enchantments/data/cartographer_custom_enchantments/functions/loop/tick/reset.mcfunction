@@ -6,6 +6,27 @@ scoreboard players set @a helper_spawner 0
 scoreboard players set @a helper_fire_bow 0
 scoreboard players set @a helper_fire_cbow 0
 scoreboard players set @a helper_trident 0
+scoreboard players set @a[scores={helper_sprint=5..}] helper_sprint 5
+scoreboard players remove @a[scores={helper_sprint=1..}] helper_sprint 1
+
+scoreboard players set @a helper_bbarrel 0
+scoreboard players set @a helper_boakdoor 0
+scoreboard players set @a helper_bsprdoor 0
+scoreboard players set @a helper_bbirdoor 0
+scoreboard players set @a helper_bjundoor 0
+scoreboard players set @a helper_bacadoor 0
+scoreboard players set @a helper_bdrkdoor 0
+scoreboard players set @a helper_bcridoor 0
+scoreboard players set @a helper_bwardoor 0
+scoreboard players set @a helper_boaktrap 0
+scoreboard players set @a helper_bsprtrap 0
+scoreboard players set @a helper_bbirtrap 0
+scoreboard players set @a helper_bjuntrap 0
+scoreboard players set @a helper_bacatrap 0
+scoreboard players set @a helper_bdrktrap 0
+scoreboard players set @a helper_bcritrap 0
+scoreboard players set @a helper_bwartrap 0
+
 scoreboard players set @a helper_potion 0
 scoreboard players set @a helper_splashpot 0
 scoreboard players set @a helper_lingerpot 0

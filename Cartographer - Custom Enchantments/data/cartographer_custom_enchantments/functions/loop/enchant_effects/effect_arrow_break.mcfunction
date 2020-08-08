@@ -1,0 +1,2 @@
+execute as @e[scores={helper_lifetime=1..},tag=effect_arrow,nbt={pickup:1b,inGround:1b}] at @s run summon item ~ ~0.3 ~ {Motion:[0.0,0.3,0.0],Item:{id:"minecraft:arrow",Count:1b}}
+execute as @e[scores={helper_lifetime=1..},tag=effect_arrow,nbt={inGround:1b}] run kill @s

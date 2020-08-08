@@ -26,14 +26,18 @@ execute if entity @s[scores={evasion=10,helper_evade=1..50}] run tag @s add evad
 # Take the amount the player was damaged for.
 # Scale it down by a factor of 10.
 
-execute if entity @s[scores={second_wind=1..,second_wind_cool=16..}] run scoreboard players operation @s second_wind_test = @s helper_damaged
+execute if entity @s[scores={second_wind=1..,second_wind_cool=11..}] run scoreboard players operation @s second_wind_test = @s helper_damaged
 
-execute if entity @s[scores={second_wind=1..,second_wind_cool=16..}] run scoreboard players operation @s second_wind_test /= SecondWindHelper second_wind
+execute if entity @s[scores={second_wind=1..,second_wind_cool=11..}] run scoreboard players operation @s second_wind_test /= SecondWindHelper second_wind
 # Subtract health of the player from it.
-execute if entity @s[scores={second_wind=1..,second_wind_cool=16..}] run scoreboard players operation @s second_wind_test -= @s player_health
+execute if entity @s[scores={second_wind=1..,second_wind_cool=11..}] run scoreboard players operation @s second_wind_test -= @s player_health
 # If the value is greater than or equal to zero, this means that the player does not have enough health to take an attack from that enemy again.
 # When this happens, we consider it a "lethal attack". Thus if the player has Second Wind, we prime Evasion regardless of chance.
-execute if entity @s[scores={second_wind=1..,second_wind_test=0..,second_wind_cool=16..}] run tag @s add evading
-execute if entity @s[scores={second_wind=1..,second_wind_test=0..,second_wind_cool=16..}] run tag @s add bracing
+execute if entity @s[scores={second_wind=1..,second_wind_test=0..,second_wind_cool=11..}] run tag @s add evading
+execute if entity @s[scores={second_wind=1..,second_wind_test=0..,second_wind_cool=11..}] run tag @s add bracing
 
-execute if entity @s[scores={second_wind=1..,second_wind_cool=16..}] run scoreboard players operation @s second_wind_test = @s helper_damaged
+execute if entity @s[scores={second_wind=1..,second_wind_cool=11..}] run scoreboard players operation @s second_wind_test = @s helper_damaged
+
+#If the Second Wind user's health is 4 or less, we will also consider the next attack as lethal.
+execute if entity @s[scores={second_wind=1..,player_health=1..4,second_wind_cool=11..}] run tag @s add evading
+execute if entity @s[scores={second_wind=1..,player_health=1..4,second_wind_cool=11..}] run tag @s add bracing

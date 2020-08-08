@@ -30,6 +30,10 @@ execute as @a[predicate=cartographer_custom_enchantments:evasion/chest_3] run sc
 execute as @a[predicate=cartographer_custom_enchantments:evasion/chest_4] run scoreboard players add @s evasion 4
 execute as @a[predicate=cartographer_custom_enchantments:evasion/chest_5] run scoreboard players add @s evasion 5
 
+execute as @a[predicate=cartographer_custom_enchantments:energetic/chest_1] run scoreboard players add @s energetic 1
+execute as @a[predicate=cartographer_custom_enchantments:energetic/chest_2] run scoreboard players add @s energetic 2
+execute as @a[predicate=cartographer_custom_enchantments:energetic/chest_3] run scoreboard players add @s energetic 3
+
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/chest_1] run scoreboard players add @s frenzy 1
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/chest_2] run scoreboard players add @s frenzy 2
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/chest_3] run scoreboard players add @s frenzy 3

@@ -12,6 +12,12 @@ execute if entity @e[tag=hook,type=area_effect_cloud] run execute as @e[tag=hook
 #Magic Missile Projectile
 execute if entity @e[tag=magic_missile_projectile,type=armor_stand] run execute as @e[tag=magic_missile_projectile,type=armor_stand] at @s run function cartographer_mob_abilities:abilities/magic_missile_projectile
 
+#Fireball Projectile
+execute if entity @e[tag=fireball_projectile,type=armor_stand] run execute as @e[tag=fireball_projectile,type=armor_stand] at @s run function cartographer_mob_abilities:abilities/fireball_projectile
+
+#Trap Projectile
+execute if entity @e[tag=trap_projectile,type=armor_stand] run execute as @e[tag=trap_projectile,type=armor_stand] at @s run function cartographer_mob_abilities:abilities/trapper_projectile
+
 #Fix Tags
 execute if entity @e[tag=has_active,tag=!ability_checked,tag=!duplicate] run execute as @e[tag=has_active,tag=!ability_checked,tag=!duplicate] at @s run function cartographer_mob_abilities:passive/ability_fix
 
@@ -19,6 +25,11 @@ execute if entity @e[tag=parting_gift,tag=!death_checked] run execute as @e[tag=
 execute if entity @e[tag=corpse_crawler,tag=!death_checked] run execute as @e[tag=corpse_crawler,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 execute if entity @e[tag=exalted,tag=!death_checked] run execute as @e[tag=exalted,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 execute if entity @e[tag=pyromania,tag=!death_checked] run execute as @e[tag=pyromania,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=spectral,tag=!death_checked] run execute as @e[tag=spectral,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=brutal_blood,tag=!death_checked] run execute as @e[tag=brutal_blood,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=relentless_blood,tag=!death_checked] run execute as @e[tag=relentless_blood,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=devious_blood,tag=!death_checked] run execute as @e[tag=devious_blood,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=sacrificial_blood,tag=!death_checked] run execute as @e[tag=sacrificial_blood,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 
 
 
@@ -35,6 +46,21 @@ execute if entity @e[type=item,nbt={Item:{tag:{Exalted:1}}}] run execute as @e[t
 
 #Pyromania
 execute if entity @e[type=item,nbt={Item:{tag:{Pyromania:1}}}] run execute as @e[type=item,nbt={Item:{tag:{Pyromania:1}}}] at @s run function cartographer_mob_abilities:passive/pyromania
+
+#Spectral
+execute if entity @e[type=item,nbt={Item:{tag:{Spectral:1}}}] run execute as @e[type=item,nbt={Item:{tag:{Spectral:1}}}] at @s run function cartographer_mob_abilities:passive/spectral
+
+#Brutal Blood
+execute if entity @e[type=item,nbt={Item:{tag:{BrutalBlood:1}}}] run execute as @e[type=item,nbt={Item:{tag:{BrutalBlood:1}}}] at @s run function cartographer_mob_abilities:passive/brutal_blood
+
+#Relentless Blood
+execute if entity @e[type=item,nbt={Item:{tag:{RelentlessBlood:1}}}] run execute as @e[type=item,nbt={Item:{tag:{RelentlessBlood:1}}}] at @s run function cartographer_mob_abilities:passive/relentless_blood
+
+#Devious Blood
+execute if entity @e[type=item,nbt={Item:{tag:{DeviousBlood:1}}}] run execute as @e[type=item,nbt={Item:{tag:{DeviousBlood:1}}}] at @s run function cartographer_mob_abilities:passive/devious_blood
+
+#Sacrificial Blood
+execute if entity @e[type=item,nbt={Item:{tag:{SacrificialBlood:1}}}] run execute as @e[type=item,nbt={Item:{tag:{SacrificialBlood:1}}}] at @s run function cartographer_mob_abilities:passive/sacrificial_blood
 
 
 schedule function cartographer_mob_abilities:loop/tick/base 1t

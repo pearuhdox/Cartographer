@@ -1,1 +1,0 @@
-effect give @s mining_fatigue 1 9 true

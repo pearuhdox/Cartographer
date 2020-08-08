@@ -1,28 +1,33 @@
-#Add Second Wind Charge points to the player. This checks when "Fight for your life" ends and when the effect could trigger again.
+#Get the player's absorption health.
+execute as @s store result score @s second_wind_abso run data get entity @s AbsorptionAmount
 
-#Runs all action bar info for Second Wind.
-execute if entity @s[scores={second_wind=1..,second_wind_cool=3}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"12 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=4}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"11 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=5}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"10 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=6}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"9 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=7}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"8 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=8}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"7 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=9}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"6 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=10}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"5 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=11}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"4 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=12}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"3 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=13}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"2 seconds ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
-execute if entity @s[scores={second_wind=1..,second_wind_cool=14}] run title @s actionbar [{"text":"Borrowed Time: ","color":"red"},{"text":"1 second ","color":"yellow"},{"text":"| ","color":"white","bold":true},{"text":"Debt Paid: "},{"score":{"name":"@p","objective":"second_wind_kill"},"color":"yellow"}]
+#If the health is 0, drop a firework on them based on "tier".
+execute if entity @s[scores={second_wind_abso=0,second_wind_cool=1..9,second_wind_tier=1}] run execute as @s at @s run summon firework_rocket ~ ~1 ~ {Silent:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;16772608]}]}}}}
+execute if entity @s[scores={second_wind_abso=0,second_wind_cool=1..9,second_wind_tier=2}] run execute as @s at @s run summon firework_rocket ~ ~1 ~ {Silent:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]}]}}}}
+execute if entity @s[scores={second_wind_abso=0,second_wind_cool=1..9,second_wind_tier=3}] run execute as @s at @s run summon firework_rocket ~ ~1 ~ {Silent:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]}]}}}}
+execute if entity @s[scores={second_wind_abso=0,second_wind_cool=1..9,second_wind_tier=4..}] run execute as @s at @s run summon firework_rocket ~ ~1 ~ {Silent:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]},{Type:0,Colors:[I;16772608]}]}}}}
 
+execute if entity @s[scores={second_wind_abso=0,second_wind_cool=1..9}] run execute as @s at @s run scoreboard players set @s second_wind_cool 10
 
-#Penalize the player if they fail to reach the mob count.
-execute if entity @s[scores={second_wind=1,second_wind_cool=15}] unless entity @s[scores={second_wind_kill=5..}] run title @s actionbar {"text":"Second Wind exacts a toll...","color":"red","bold":false,"italic":false}
+#Check if the player has killed a mob. If so, heal the player equal to their absorption shielding.
+#Increase the player's second wind "tier" by 1.
 
-execute if entity @s[scores={second_wind=1,second_wind_cool=15}] if entity @s[scores={second_wind_kill=5..}] run title @s actionbar {"text":"Escaped Death...","color":"aqua","bold":false,"italic":false}
+execute if entity @s[scores={second_wind_kill=1..,second_wind_abso=1}] run execute as @s at @s run function cartographer_core:helper/heal_player/1 
+execute if entity @s[scores={second_wind_kill=1..,second_wind_abso=2}] run execute as @s at @s run function cartographer_core:helper/heal_player/2 
+execute if entity @s[scores={second_wind_kill=1..,second_wind_abso=3}] run execute as @s at @s run function cartographer_core:helper/heal_player/3 
+execute if entity @s[scores={second_wind_kill=1..,second_wind_abso=4}] run execute as @s at @s run function cartographer_core:helper/heal_player/4 
+execute if entity @s[scores={second_wind_kill=1..,second_wind_abso=5}] run execute as @s at @s run function cartographer_core:helper/heal_player/5 
+execute if entity @s[scores={second_wind_kill=1..,second_wind_abso=6}] run execute as @s at @s run function cartographer_core:helper/heal_player/6 
+execute if entity @s[scores={second_wind_kill=1..,second_wind_abso=7}] run execute as @s at @s run function cartographer_core:helper/heal_player/7 
+execute if entity @s[scores={second_wind_kill=1..,second_wind_abso=8}] run execute as @s at @s run function cartographer_core:helper/heal_player/8 
 
-execute if entity @s[scores={second_wind=1,second_wind_cool=15}] unless entity @s[scores={second_wind_kill=5..}] run effect give @s instant_damage 1 1
+execute if entity @s[scores={second_wind_kill=1..}] run execute as @s at @s run effect clear @s absorption
+execute if entity @s[scores={second_wind_kill=1..}] run execute as @s at @s run scoreboard players set @s second_wind_cool 10
+execute if entity @s[scores={second_wind_kill=1..}] run execute as @s at @s run scoreboard players set @s second_wind_kill 0
 
-execute if entity @s[scores={second_wind=1,second_wind_cool=15}] run playsound minecraft:block.end_portal.spawn player @a[distance=..8] ~ ~ ~ 1 2 1
 
 #Add cooldown score to track time.
-execute if entity @s[scores={second_wind=1..16}] run scoreboard players add @s second_wind_cool 1
+execute if entity @s[scores={second_wind=1..,second_wind_cool=..180}] run scoreboard players add @s second_wind_cool 1
+
+#Reset tier if player's cooldown is 180 seconds.
+execute if entity @s[scores={second_wind=1..,second_wind_cool=180}] run scoreboard players set @s second_wind_tier 0

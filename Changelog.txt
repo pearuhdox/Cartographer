@@ -1,3 +1,142 @@
+Version Beta 1.1
+
+Additions:
+
+Custom Statuses:
+- Added Bleed: A status effect that deals damage over time depending on the level.
+  (Applying Bleed to an already Bleeding target increases the level, instead of refreshing the duration.)
+- Added Shock: A status effect that deals damage over time, but in a small area around the Shocked target.
+- Added Blindness support on enemies. Blindness reduces a mob's follow range by 90%.
+- Added Vulnerability. Replacing "Bad Omen" on enemies, Vulnerability increases the damage enemies take from all damage instances by 1 per level.
+- Added Rage. After a brief delay, this status effect aggros its victim on the nearest hostile enemy.
+
+Custom Enchantments:
+- There are now enchantments that offer compatibility with the new DoT effects in Custom Statuses.
+  - Vicious / Rend: Give your melee attacks / arrows the ability to inflict Bleed.
+  (Vicious has up to 3 levels, increasing the base duration of Bleed. Rend is single level, with a flat 5 second duration.)
+  - Shocking / Conductive: Give your melee attacks / arrows the ability to inflict Shocked.
+  (Shocking has up to 3 levels, increasing duration of Shocked. Conductive is single level, with a flat 5 second duration.)
+
+- Additionally, there are enchantments that offer compatibility with Vulnerability.
+  - Committed / Pin Down: Give your melee attacks / arrows Vulnerability.
+  (Committed has up to 3 levels, increasing the potency of Vulnerability. Pin Down is a single level, 5 second duration, at Vulnerability II.)
+
+- But that's not all. There are a couple of new melee specific Enchantments:
+  - Echo: Striking an enemy has a chance to increase your attack speed briefly by 100%.
+    (+20% chance per level to gain 1 second of faster attack speed).
+  - Evocation: Killing an enemy has the chance to evoke the wrath of mysterious forces, which claw up from the ground and damage nearby foes.
+    (25% increased chance per level, with a maximum of a 75% chance.)
+  - Surging Strike: Strike further away from you with a sprint attack, dealing AoE damage in a line past your initial target.
+    (+2 damage per level. Surging attacks strike foes that are up to 7 blocks away from the player.)
+
+- There are new general passive Enchantments:
+  - Energetic: When killing an enemy, grants Haste for 2 seconds per held/worn level. (Max of 12 seconds)
+  - Soulbound: When dropped on death (and not destroyed), this item is immediately returned to your inventory when you respawn.
+  - Spurs: When held or worn, walking into a cobweb instantly destroys it (Credit to GavstarB for this idea).
+
+- And a new tool Enchantment:
+  - Splintering: This Axe Enchantment causes barrels, doors, and trapdoors you break to stun nearby enemies!
+
+- Bow and Crossbow Enchantments have gotten some new additions, inspired by CTM Community suggestions and Minecraft Dungeons!
+  - Frost: Gives your arrows slowing properties.
+  - Tempo Theft: Gives your arrows speed stealing properties.
+  (Gain Speed when shooting a mob. Gain an increasingly more potent Haste effect at higher levels.)
+  - Trueshot: Gives your arrows no gravity.
+  - Volatile: Straps fireworks to your arrows to do AoE damage.
+
+- As one final Crossbow addition, Flame now works on Crossbows. Flame on! NOT DONE YET
+
+- Finally, Tridents have gotten their long needed lineup of Enchantments, besides "just Current".
+  - Hydraulic: Trade the long range capabilities of a trident for a close ranged AoE shove attack.
+  - Ricochet: Causes a stream of water to bounce from enemy to enemy.
+  (Increasing bounce count per level.)
+  - Tempest: Increases the damage of ranged throws per level.
+  (+3 damage per level.)
+
+Mob Abilities:
+- An army of new active attacks join the front lines:
+  - Fireball: After a brief channel, the mob creates and directs a fireball projectile towards the nearest player!
+  - Soulfire Nova: After a channel, the mob drains the health of all nearby players, healing itself!
+  - Trapper: After a brief channel, the mob throws out multiple snaring projectiles behind the player, which slow and hurt those who walk on them!
+
+- There are multiple new death triggering abilities:
+  - Spectral: Similar to Exalted foes, killing a Spectral enemy summons a shadowy guardian to take revenge!
+    - Spectres are lower (well, than Exalted at least) health assassin type mobs that spawn in with the "Ambush" ability.
+  - There are 4 new "Blood" effects. When an enemy with a Blood effect is killed, it applies a buff to nearby enemies!
+    - Brutal Blood: Slightly heal nearby foes, and improve their damage.
+    (Each slain Brutal foe applies +1 melee damage to nearby foes, up to +5 max)
+    - Relentless Blood: Slightly heal nearby foes, and improve their move speed.
+    (Each slain Relentless foe applies +10% speed to nearby foes, up to 50% max)
+    - Devious Blood: Slightly heal nearby foes, and reset their cooldowns.
+    (Enemies without cooldowns receive 10 seconds of Speed I instead)
+    - Sacrificial Blood: Slightly heal nearby foes, and give them an Absorption shield.
+    (Slain Sacrificial foes grant Absorption I for 60 seconds to nearby foes)
+  (All Blood effects heal affected mobs by 4 health)
+
+Changes:
+
+Custom Enchantments:
+
+- Current now gives a second of hidden Haste 10 when the trident returns to you.
+  (This will make the attack cooldown faster when your trident returns, making it easier to hit the mob dragged to you.)
+
+- Second Wind has been reworked (again, I swear one day I will get this enchant just right):
+  Developer Note: This description of Second Wind is verbose and detailed. The enchantment's new description and a TLDR can be found beneath this list.
+  - When you would take a lethal hit, force Evasion to trigger.
+  - Gain 8 Health in "Volatile Shielding" that lasts for 8 seconds.
+  - If you kill a mob, immediately heal for the total remaining shield health. (The shield health will vanish).
+  - If the shield health expires (runs out of time or is used up by attacks) it detonates, dealing damage to you and nearby mobs.
+  
+  - The more times this effect triggers in repeated instances, the less time Volatile Shielding lasts for. (Down to 2 seconds).
+  - The more times this effect triggers in repeated instances, the more damage the detonation will do. (Up to 18 damage).
+
+  - New Description:
+  With Evasion, If you would take a fatal hit, Evasion automatically triggers.
+  You are then granted a "Volatile Shield" of 8 health for 8 seconds.
+  If you lose that shielding, it detonates, hurting you.
+  If you kill a mob, the shielding is defused, and you heal equal to the shielding's total.
+  Repeated triggers of Second Wind make the shielding less effective, and more dangerous.
+
+  - TLDR: While the core idea of Second Wind (prolong your life by blocking lethal attack, in exchange for needing to kill mobs to avoid a penalty)
+  is the same, the enchant has been streamlined and simplified to make it more responsive and effective.
+  A penalty for repeated triggers has been added to prevent the enchantment from making a player immortal.
+
+- Two Handed has been reworked:
+  - No longer debuffs the player if an item is held in the offhand and mainhand.
+  - Now affects entire hotbar (the curse effect will trigger so long as the Two Handed item is in the hotbar)
+  - Two Handed now places an offhand item (while the Two Handed item is in the hotbar) in an "Item Knapsack".
+    - The Item Knapsack remains in the offhand. (but can be moved)
+    - When right clicked on the ground, the Item Knapsack is opened, placing the item it contains.
+    - Items placed by knapsacks Glow, are Indestructible, and don't Despawn (until they are picked up)
+    - While inside an Item Knapsack, an item has no effect on the player's stats. (Its enchants will not activate and its attributes will not change the player).
+  
+  - New Description:
+  "When worn or in the hotbar, this item packages and stores up any item placed in your offhand (rendering it ineffective)." 
+  
+  - TLDR: Two Handed no longer debuffs the player, and instead locks away any item placed in the offhand, preventing it from affecting your stats.
+
+- Curse of Shattering now works on Netherite Items (Tools, Weapons, and Armor).
+
+Mob Abilities:
+- Exalted now have properly set attributes. Their "new" stats are:
+  - 60 Health
+  - 0.26 Movement Speed (Slightly faster than a normal Zombie)
+  - 1 Knockback Resistance
+  - 12 Attack Damage
+  - 40 Follow Range (Same as a normal Zombie)
+  - (Exalted still have the "charge" ability).
+- Exalted spawn Slowness and Weakness duration reduced to 3 seconds (was 5).
+- 
+
+Bug Fixes:
+- Fixed Stunned enemies reducing the duration of stun on other stunned enemies.
+- Fixed Regeneration not working.
+- Fixed Eruption not working.
+- Fixed Current not removing drag tag on reeled in enemies. (Current will no longer push mobs away from you.)
+- The Shulker Box relied upon to do item manipulation has been moved to 4206900 0 4206900. The chunk containing those coordinates is now constantly loaded.
+  (Cartographer Core hopes everyone appreciates this nice meme.)
+- Exalted now have properly set attributes. They will be much harder to kill. >:D
+
 Hotfix: Version Beta 1.0.1
 Bugs Fixed:
 - World automatically places Shulker Box at 0 0 0 and sets world spawn there.

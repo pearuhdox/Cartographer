@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "offhand": {
+        "nbt": "{Energetic:2}"
+      }
+    },
+    "player": {}
+  }
+}

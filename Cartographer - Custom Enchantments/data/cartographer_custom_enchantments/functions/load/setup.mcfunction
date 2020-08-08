@@ -10,53 +10,57 @@ scoreboard objectives add f_cleansing dummy
 scoreboard objectives add w_cleansing dummy
 scoreboard objectives add p_cleansing dummy
 scoreboard objectives add wi_cleansing dummy
+scoreboard objectives add committed dummy
 scoreboard objectives add concealed dummy
+scoreboard objectives add conductive dummy
 scoreboard objectives add current dummy
 scoreboard objectives add decay dummy
 scoreboard objectives add deadeye dummy
 scoreboard objectives add despair_wave dummy
 scoreboard objectives add destruction_wave dummy
 scoreboard objectives add duelist dummy
+scoreboard objectives add echo dummy
+scoreboard objectives add evocation dummy
+scoreboard objectives add energetic dummy
 scoreboard objectives add eruption dummy
 scoreboard objectives add evasion dummy
 scoreboard objectives add frenzy dummy
+scoreboard objectives add frost dummy
 scoreboard objectives add frostbite dummy
 scoreboard objectives add hunter dummy
+scoreboard objectives add hydraulic dummy
 scoreboard objectives add infinity dummy
 scoreboard objectives add lifesteal dummy
+scoreboard objectives add pin_down dummy
 scoreboard objectives add point_blank dummy
 scoreboard objectives add repeating dummy
 scoreboard objectives add regeneration dummy
+scoreboard objectives add rend dummy
+scoreboard objectives add ricochet dummy
 scoreboard objectives add sapper dummy
 scoreboard objectives add satiation dummy
 scoreboard objectives add second_wind dummy
 scoreboard objectives add sharpshot dummy
+scoreboard objectives add shocking dummy
+scoreboard objectives add splintering dummy
+scoreboard objectives add spurs dummy
 scoreboard objectives add stunning dummy
+scoreboard objectives add surging_strike dummy
 scoreboard objectives add transfiguration dummy
+scoreboard objectives add tempest dummy
 scoreboard objectives add tempo_theft dummy
+scoreboard objectives add trueshot dummy
 scoreboard objectives add unbreakable dummy
 scoreboard objectives add vengeance dummy
+scoreboard objectives add vicious dummy
+scoreboard objectives add volatile dummy
 
-#vicious
-#shocking
-#echo
+
 #infernal
-#committed
-#surging_edge
-
-#volatile
-#frost
-#rend
-#conductive
-#pin_down
-#tempest
-
-#splintering
-
-#spurs
 
 scoreboard objectives add curse_malevolent dummy
-scoreboard objectives add curse_twohanded dummy
+scoreboard objectives add curse_regret dummy
+scoreboard objectives add curse_two_handed dummy
 
 #Setup dummy player score for Second Wind calculations.
 scoreboard players set SecondWindHelper second_wind 10
@@ -66,6 +70,8 @@ scoreboard objectives add second_wind_cool dummy
 scoreboard objectives add second_wind_test dummy
 scoreboard objectives add second_wind_save dummy
 scoreboard objectives add second_wind_kill totalKillCount
+scoreboard objectives add second_wind_abso dummy
+scoreboard objectives add second_wind_tier dummy
 
 #Setup all necessary helper scoreboards.
 
@@ -85,11 +91,31 @@ scoreboard objectives add helper_melee dummy
 scoreboard objectives add helper_spawner minecraft.mined:minecraft.spawner
 scoreboard objectives add helper_lifetime dummy
 scoreboard objectives add helper_deathtime minecraft.custom:minecraft.time_since_death
+scoreboard objectives add helper_sprint minecraft.custom:minecraft.sprint_one_cm
 
 scoreboard objectives add helper_fire_bow minecraft.used:minecraft.bow
 scoreboard objectives add helper_fire_cbow minecraft.used:minecraft.crossbow
 scoreboard objectives add helper_arrow_dmg dummy
 scoreboard objectives add helper_trident minecraft.used:minecraft.trident
+
+scoreboard objectives add helper_bbarrel minecraft.mined:minecraft.barrel
+scoreboard objectives add helper_boakdoor minecraft.mined:minecraft.oak_door
+scoreboard objectives add helper_bsprdoor minecraft.mined:minecraft.spruce_door
+scoreboard objectives add helper_bbirdoor minecraft.mined:minecraft.birch_door
+scoreboard objectives add helper_bjundoor minecraft.mined:minecraft.jungle_door
+scoreboard objectives add helper_bacadoor minecraft.mined:minecraft.acacia_door
+scoreboard objectives add helper_bdrkdoor minecraft.mined:minecraft.dark_oak_door
+scoreboard objectives add helper_bcridoor minecraft.mined:minecraft.crimson_door
+scoreboard objectives add helper_bwardoor minecraft.mined:minecraft.warped_door
+scoreboard objectives add helper_boaktrap minecraft.mined:minecraft.oak_trapdoor
+scoreboard objectives add helper_bsprtrap minecraft.mined:minecraft.spruce_trapdoor
+scoreboard objectives add helper_bbirtrap minecraft.mined:minecraft.birch_trapdoor
+scoreboard objectives add helper_bjuntrap minecraft.mined:minecraft.jungle_trapdoor
+scoreboard objectives add helper_bacatrap minecraft.mined:minecraft.acacia_trapdoor
+scoreboard objectives add helper_bdrktrap minecraft.mined:minecraft.dark_oak_trapdoor
+scoreboard objectives add helper_bcritrap minecraft.mined:minecraft.crimson_trapdoor
+scoreboard objectives add helper_bwartrap minecraft.mined:minecraft.warped_trapdoor
+
 
 scoreboard objectives add helper_splashpot minecraft.used:minecraft.splash_potion
 scoreboard objectives add helper_lingerpot minecraft.used:minecraft.lingering_potion

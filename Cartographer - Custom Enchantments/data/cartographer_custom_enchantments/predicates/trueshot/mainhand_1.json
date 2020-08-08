@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "nbt": "{Trueshot:1}"
+      }
+    },
+    "player": {}
+  }
+}

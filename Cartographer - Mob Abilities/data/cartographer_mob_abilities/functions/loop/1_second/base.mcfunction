@@ -14,6 +14,9 @@ execute if entity @e[tag=frost_nova,tag=tokened,scores={cooldown=0}] run execute
 #Venom Nova
 execute if entity @e[tag=venom_nova,tag=tokened,scores={cooldown=0}] run execute as @e[tag=venom_nova,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:charge/venom_nova
 
+#Soulfire Nova
+execute if entity @e[tag=soulfire_nova,tag=tokened,scores={cooldown=0}] run execute as @e[tag=soulfire_nova,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:charge/soulfire_nova
+
 #Ambush
 execute if entity @e[tag=ambush,tag=tokened,scores={cooldown=0}] run execute as @e[tag=ambush,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..25] run function cartographer_mob_abilities:charge/ambush
 
@@ -41,14 +44,16 @@ execute if entity @e[tag=sweep,tag=tokened,scores={cooldown=0}] run execute as @
 #Magic Missile
 execute if entity @e[tag=magic_missile,tag=tokened,scores={cooldown=0}] run execute as @e[tag=magic_missile,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..24] run function cartographer_mob_abilities:charge/magic_missile_cast
 
+#Fireball
+execute if entity @e[tag=fireball,tag=tokened,scores={cooldown=0}] run execute as @e[tag=fireball,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..24] run function cartographer_mob_abilities:charge/fireball_cast
+
+#Trapper
+execute if entity @e[tag=trapper,tag=tokened,scores={cooldown=0}] run execute as @e[tag=trapper,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/trapper_cast
+
 #Duplicate
 execute if entity @e[tag=duplicator,tag=tokened,scores={cooldown=0}] run execute as @e[tag=duplicator,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/duplicator
 
 execute if entity @e[tag=duplicate,scores={cooldown=0}] run execute as @e[tag=duplicate,scores={cooldown=0}] at @s run tp @s ~ -60 ~
-
-#Traps will be reserved for 1.16 and new spreadplayers
-
-#Fireball will be reserved for 1.16
 
 #Reduce Cooldowns on all enemies with cooldowns.
 scoreboard players remove @e[tag=has_active,scores={cooldown=1..}] cooldown 1
@@ -61,3 +66,7 @@ execute if entity @e[tag=reflect_melee] run execute as @e[tag=reflect_melee] at 
 execute as @a at @s run function cartographer_mob_abilities:token/token_player
 
 schedule function cartographer_mob_abilities:loop/1_second/base 1s
+
+#Run Stack Manager for Brutal and Relentless Stacks
+execute if entity @e[scores={brutal_stacks=1..}] run execute as @e[scores={brutal_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute if entity @e[scores={relent_stacks=1..}] run execute as @e[scores={relent_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager

@@ -1,5 +1,7 @@
 #Check if the player's health compared to the last damage taken. If that score is no longer accurate, then remove Evasion proc.
 
+#This does not run if the player in question is 4 health or less.
+
 #Save our original check first
 scoreboard players operation @s second_wind_save = @s second_wind_test
 
