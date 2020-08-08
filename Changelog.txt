@@ -44,7 +44,7 @@ Custom Enchantments:
   - Trueshot: Gives your arrows no gravity.
   - Volatile: Straps fireworks to your arrows to do AoE damage.
 
-- As one final Crossbow addition, Flame now works on Crossbows. Flame on! NOT DONE YET
+- As one final Crossbow addition, Flame now works on Crossbows. Flame on!
 
 - Finally, Tridents have gotten their long needed lineup of Enchantments, besides "just Current".
   - Hydraulic: Trade the long range capabilities of a trident for a close ranged AoE shove attack.
