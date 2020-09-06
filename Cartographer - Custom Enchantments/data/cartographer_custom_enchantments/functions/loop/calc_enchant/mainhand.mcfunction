@@ -136,9 +136,9 @@ execute as @a[predicate=cartographer_custom_enchantments:sharpshot/mainhand_1] r
 execute as @a[predicate=cartographer_custom_enchantments:sharpshot/mainhand_2] run scoreboard players add @s sharpshot 2
 execute as @a[predicate=cartographer_custom_enchantments:sharpshot/mainhand_3] run scoreboard players add @s sharpshot 3
 
-execute as @a[predicate=cartographer_custom_enchantments:shocking/mainhand_1] run scoreboard players add @s shocking 1
-execute as @a[predicate=cartographer_custom_enchantments:shocking/mainhand_2] run scoreboard players add @s shocking 2
-execute as @a[predicate=cartographer_custom_enchantments:shocking/mainhand_3] run scoreboard players add @s shocking 3
+execute as @a[predicate=cartographer_custom_enchantments:overload/mainhand_1] run scoreboard players add @s overload 1
+execute as @a[predicate=cartographer_custom_enchantments:overload/mainhand_2] run scoreboard players add @s overload 2
+execute as @a[predicate=cartographer_custom_enchantments:overload/mainhand_3] run scoreboard players add @s overload 3
 
 execute as @a[predicate=cartographer_custom_enchantments:splintering/mainhand_1] run scoreboard players set @s splintering 1
 

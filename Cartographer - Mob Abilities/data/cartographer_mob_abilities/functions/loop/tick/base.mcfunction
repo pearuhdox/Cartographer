@@ -3,8 +3,10 @@
 
 
 #Laser
-execute if entity @e[tag=laser,scores={cooldown=0}] run execute as @e[tag=laser,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/laser
+execute if entity @e[tag=laser,scores={cooldown=0},tag=tokened] run execute as @e[tag=laser,scores={cooldown=0},tag=tokened] at @s run execute if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/laser
 
+#Laser Animation Cancel
+execute if entity @e[tag=laser,tag=tokened,scores={cooldown=0}] run execute as @e[tag=laser,tag=tokened,scores={cooldown=0}] at @s run execute unless entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:token/cancel_ability
 
 #Hookshot Helper
 execute if entity @e[tag=hook,type=area_effect_cloud] run execute as @e[tag=hook,type=area_effect_cloud] at @s run function cartographer_mob_abilities:abilities/hook

@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Laser                    ",
+            "color": "white"
+        },
+        "description": {
+            "text": "The enemy becomes immobile and channels a laser at the nearest player. At the end of the channel, the laser deals 18 damage if it connects with a player, and knocks them back. The laser can be blocked by line of sight, but destroys terrain.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:end_rod"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"laser\"]}"
+                }
+            }
+        }
+    },
+    "parent": "cartographer_mob_abilities:fireball"
+}

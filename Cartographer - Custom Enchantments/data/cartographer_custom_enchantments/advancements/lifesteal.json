@@ -1,4 +1,28 @@
 {
+    "display": {
+        "title": {
+            "text": "Lifesteal      ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "When the holder or wearer kills a mob, restore 1 health per second for X seconds, where X is the level of Lifesteal, and up to 6 health total."
+        },
+        "icon": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -31,29 +55,5 @@
             }
         }
     },
-    "display": {
-        "title": {
-            "text": "Lifesteal     ",
-            "color": "gray"
-        },
-        "description": {
-            "color": "white",
-            "text": "When the holder or wearer kills a mob, restore 1 health per second for X seconds, where X is the level of Lifesteal, and up to 6 health total."
-        },
-        "icon": {
-            "item": "minecraft:wither_skeleton_skull"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3"
-        ]
-    ],
     "parent": "cartographer_custom_enchantments:frenzy"
 }

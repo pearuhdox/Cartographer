@@ -10,6 +10,8 @@ execute as @a[gamemode=survival,distance=..8] at @s run setblock ~ ~ ~ minecraft
 
 playsound minecraft:entity.wither.shoot hostile @a[distance=..16] ~ ~ ~ 2 0.5
 
+particle minecraft:flame ~ ~ ~ 4 0.2 4 0.1 250 normal @a
+
 particle minecraft:lava ~ ~1 ~ 0.5 0.5 0.5 1 10 normal @a
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.

@@ -1,12 +1,12 @@
 {
     "display": {
         "title": {
-            "text": "Pin Down",
-            "color": "gray"
+            "text": "Pin Down                 ",
+            "color": "white"
         },
         "description": {
-            "text": "Arrows from this weapon inflict Vulnerability 2 for 5 seconds.",
-            "color": "white"
+            "color": "white",
+            "text": "Arrows from this weapon inflict Vulnerability II for 5 seconds."
         },
         "icon": {
             "item": "minecraft:glowstone_dust"

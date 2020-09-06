@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Corpse Crawler           ",
+            "color": "white"
+        },
+        "description": {
+            "text": "When the enemy dies, 3 Corpse Crawler enemies are summoned where they die.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:zombie_head"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"corpse_crawler\"]}"
+                }
+            }
+        }
+    },
+    "parent": "cartographer_mob_abilities:death_abilities"
+}

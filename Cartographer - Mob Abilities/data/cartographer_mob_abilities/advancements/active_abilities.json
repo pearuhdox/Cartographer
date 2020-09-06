@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Active Abilities         ",
+            "color": "yellow",
+            "bold": false
+        },
+        "description": {
+            "bold": false,
+            "color": "white",
+            "text": "Custom mob attacks with a charge up attack or ability."
+        },
+        "icon": {
+            "item": "minecraft:netherite_axe"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "cartographer_mob_abilities:root"
+}

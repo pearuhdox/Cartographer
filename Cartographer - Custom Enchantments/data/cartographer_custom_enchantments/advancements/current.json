@@ -13,12 +13,12 @@
     },
     "display": {
         "title": {
-            "text": "Current          ",
-            "color": "gray"
+            "text": "Current                  ",
+            "color": "white"
         },
         "description": {
-            "color": "white",
-            "text": "When thrown, this trident will drag the hit mob to its current location, until it is retrieved, or returns to you."
+            "text": "When thrown, this trident will drag the hit mob to its current location, until it is retrieved, or returns to you. When it returns to you, its attack speed recharges faster.",
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:trident"

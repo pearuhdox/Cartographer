@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Frost Nova               ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy charges up, and after a delay, releases a burst of snow all around it. Players within the burst take 10 damage, and are inflicted with 3 seconds of Slowness III."
+        },
+        "icon": {
+            "item": "minecraft:snowball"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"frost_nova\"]}"
+                }
+            }
+        }
+    },
+    "parent": "cartographer_mob_abilities:flame_nova"
+}

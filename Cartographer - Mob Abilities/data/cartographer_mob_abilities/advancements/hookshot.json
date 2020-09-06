@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Hookshot                 ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy laughs, and winds up an attack. After a brief delay, the enemy launches a hook projectile. Players caught by the hook take 6 damage, and are dragged directly in front of the mob."
+        },
+        "icon": {
+            "item": "minecraft:fishing_rod"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"hookshot\"]}"
+                }
+            }
+        }
+    },
+    "parent": "cartographer_mob_abilities:laser"
+}

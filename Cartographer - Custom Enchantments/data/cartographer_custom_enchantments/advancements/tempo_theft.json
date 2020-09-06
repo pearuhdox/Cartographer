@@ -1,12 +1,12 @@
 {
     "display": {
         "title": {
-            "text": "Tempo Theft",
-            "color": "gray"
+            "text": "Tempo Theft              ",
+            "color": "white"
         },
         "description": {
-            "text": "Arrows that hit targets steal 5 seconds of Speed N, where N equals the enchantment level.",
-            "color": "white"
+            "color": "white",
+            "text": "Arrows that hit targets steal 8 seconds of Speed I. Additonal levels steal 8 seconds of Haste N (where N is equal to the current level - 1)."
         },
         "icon": {
             "item": "minecraft:scute"
@@ -55,5 +55,5 @@
             "find3"
         ]
     ],
-    "parent": "cartographer_custom_enchantments:sharpshot"
+    "parent": "cartographer_custom_enchantments:rend"
 }

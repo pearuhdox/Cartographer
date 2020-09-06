@@ -1,12 +1,12 @@
 {
     "display": {
         "title": {
-            "text": "Volatile",
-            "color": "gray"
+            "text": "Volatile                 ",
+            "color": "white"
         },
         "description": {
-            "text": "Arrows release fireworks when they hit enemies. Fireworks do 5 damage per level.",
-            "color": "white"
+            "color": "white",
+            "text": "Arrows release fireworks when they hit enemies. Fireworks do 5 damage, and deal an additional 2 damage per additional level."
         },
         "icon": {
             "item": "minecraft:firework_rocket"
@@ -55,5 +55,5 @@
             "find3"
         ]
     ],
-    "parent": "cartographer_custom_enchantments:tempo_theft"
+    "parent": "cartographer_custom_enchantments:trueshot"
 }

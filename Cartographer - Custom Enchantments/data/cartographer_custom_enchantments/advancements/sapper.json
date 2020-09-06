@@ -41,14 +41,22 @@
             }
         }
     },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4"
+        ]
+    ],
     "display": {
         "title": {
-            "text": "Sapper           ",
-            "color": "gray"
+            "text": "Sapper                   ",
+            "color": "white"
         },
         "description": {
-            "color": "white",
-            "text": "When you break a spawner with this tool, heal 1 health per level."
+            "text": "When you break a spawner with this tool, heal 1 health per level.",
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:gold_nugget"
@@ -58,13 +66,5 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3",
-            "find4"
-        ]
-    ],
     "parent": "cartographer_custom_enchantments:pickaxe_tree"
 }

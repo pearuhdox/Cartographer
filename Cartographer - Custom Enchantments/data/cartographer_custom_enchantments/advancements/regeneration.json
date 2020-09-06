@@ -33,12 +33,12 @@
     },
     "display": {
         "title": {
-            "color": "gray",
-            "text": "Regeneration"
+            "text": "Regeneration             ",
+            "color": "white"
         },
         "description": {
-            "color": "white",
-            "text": "Heals the holder or wearer 1 health per level every 3 seconds, up to 6 health."
+            "text": "Heals the holder or wearer 1 health per level every 3 seconds, up to 6 health.",
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:ghast_tear"
@@ -55,5 +55,5 @@
             "find3"
         ]
     ],
-    "parent": "cartographer_custom_enchantments:lifesteal"
+    "parent": "cartographer_custom_enchantments:cleansing"
 }

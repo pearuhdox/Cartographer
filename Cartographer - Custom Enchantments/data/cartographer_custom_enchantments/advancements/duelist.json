@@ -1,4 +1,30 @@
 {
+    "display": {
+        "title": {
+            "text": "Duelist                  ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "This weapon deals 2/5/7/10/12 (based on level) bonus damage to \"illager\" mobs: [Vindicator, Pillager, Evoker, Ravager, Vex, Witch]"
+        },
+        "icon": {
+            "item": "minecraft:iron_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4",
+            "find5"
+        ]
+    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -51,31 +77,5 @@
             }
         }
     },
-    "display": {
-        "title": {
-            "text": "Duelist          ",
-            "color": "gray"
-        },
-        "description": {
-            "color": "white",
-            "text": "This weapon deals 2/5/7/10/12 (based on level) bonus damage to \"illager\" mobs: [Vindicator, Pillager, Evoker, Ravager, Vex, Witch]"
-        },
-        "icon": {
-            "item": "minecraft:iron_sword"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3",
-            "find4",
-            "find5"
-        ]
-    ],
-    "parent": "cartographer_custom_enchantments:decay"
+    "parent": "cartographer_custom_enchantments:melee_tree"
 }

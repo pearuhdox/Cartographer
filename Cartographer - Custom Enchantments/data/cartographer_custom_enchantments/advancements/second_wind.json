@@ -31,23 +31,6 @@
             }
         }
     },
-    "display": {
-        "title": {
-            "color": "gray",
-            "text": "Second Wind"
-        },
-        "description": {
-            "color": "white",
-            "text": "When damage is dodged by Evasion, the wearer or holder also heals 1 health per level, up to 4 health."
-        },
-        "icon": {
-            "item": "minecraft:pink_dye"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
     "requirements": [
         [
             "find1",
@@ -55,5 +38,22 @@
             "find3"
         ]
     ],
+    "display": {
+        "title": {
+            "text": "Second Wind              ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "With Evasion, If you would take a fatal hit from a mob, Evasion automatically triggers. You are then granted a \"Volatile Shield\" of 8 health for 8 seconds. If you lose that shielding, it detonates, hurting you. If you kill a mob, the shielding is defused, and you heal equal to the shielding's total. Repeated triggers in succession of Second Wind make the shielding less effective, and more dangerous."
+        },
+        "icon": {
+            "item": "minecraft:yellow_dye"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
     "parent": "cartographer_custom_enchantments:evasion"
 }

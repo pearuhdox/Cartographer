@@ -1,28 +1,22 @@
 {
-    "display": {
-        "title": {
-            "text": "Repeater",
-            "color": "gray"
-        },
-        "description": {
-            "text": "This crossbow loads an additional arrow per reload per level.",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:crossbow"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4",
+            "find5",
+            "find6",
+            "find7"
+        ]
+    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Repeater:1}"
+                        "nbt": "{Repeating:1}"
                     }
                 ]
             }
@@ -32,17 +26,78 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Repeater:2}"
+                        "nbt": "{Repeating:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Repeating:3}"
+                    }
+                ]
+            }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Repeating:4}"
+                    }
+                ]
+            }
+        },
+        "find5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Repeating:5}"
+                    }
+                ]
+            }
+        },
+        "find6": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Repeating:6}"
+                    }
+                ]
+            }
+        },
+        "find7": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Repeating:7}"
                     }
                 ]
             }
         }
     },
-    "requirements": [
-        [
-            "find1",
-            "find2"
-        ]
-    ],
+    "display": {
+        "title": {
+            "text": "Repeating                ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "This crossbow loads an additional arrow per reload per level."
+        },
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
     "parent": "cartographer_custom_enchantments:auto_charge"
 }

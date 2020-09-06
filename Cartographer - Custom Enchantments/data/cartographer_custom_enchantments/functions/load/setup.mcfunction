@@ -41,7 +41,7 @@ scoreboard objectives add sapper dummy
 scoreboard objectives add satiation dummy
 scoreboard objectives add second_wind dummy
 scoreboard objectives add sharpshot dummy
-scoreboard objectives add shocking dummy
+scoreboard objectives add overload dummy
 scoreboard objectives add splintering dummy
 scoreboard objectives add spurs dummy
 scoreboard objectives add stunning dummy

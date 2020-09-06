@@ -37,7 +37,7 @@ scoreboard players set @a sapper 0
 scoreboard players set @a satiation 0
 scoreboard players set @a second_wind 0
 scoreboard players set @a sharpshot 0
-scoreboard players set @a shocking 0
+scoreboard players set @a overload 0
 scoreboard players set @a splintering 0
 scoreboard players set @a spurs 0
 scoreboard players set @a stunning 0

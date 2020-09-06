@@ -1,4 +1,13 @@
 {
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4",
+            "find5"
+        ]
+    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -53,12 +62,12 @@
     },
     "display": {
         "title": {
-            "text": "Evasion               ",
-            "color": "gray"
+            "text": "Evasion                  ",
+            "color": "white"
         },
         "description": {
-            "color": "white",
-            "text": "When held or worn, the player has a 5% chance to dodge an instance of damage per level, up to 50% chance. Damage cannot be dodged in succession. Dodging damage negates all damage that would be dealt from that instance."
+            "text": "When held or worn, the player has a 5% chance to dodge an instance of damage per level, up to 50% chance. Damage cannot be dodged in succession. Dodging damage negates all damage that would be dealt from that instance.",
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:feather"
@@ -68,14 +77,5 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3",
-            "find4",
-            "find5"
-        ]
-    ],
     "parent": "cartographer_custom_enchantments:passive_tree"
 }

@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Passive Abilities        ",
+            "color": "yellow"
+        },
+        "description": {
+            "text": "Enchantments that activate while held, or on armor.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:netherite_chestplate"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "parent": "cartographer_mob_abilities:root"
+}

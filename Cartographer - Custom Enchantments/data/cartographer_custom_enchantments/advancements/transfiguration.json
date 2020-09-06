@@ -1,4 +1,30 @@
 {
+    "display": {
+        "title": {
+            "text": "Transfiguration           ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "When you hit a hostile mob, this weapon has a 3% chance per level to turn that mob into a chicken."
+        },
+        "icon": {
+            "item": "minecraft:egg"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4",
+            "find5"
+        ]
+    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -51,31 +77,5 @@
             }
         }
     },
-    "display": {
-        "title": {
-            "color": "gray",
-            "text": "Transfiguration"
-        },
-        "description": {
-            "color": "white",
-            "text": "When you hit a hostile mob, this weapon has a 3% chance per level to turn that mob into a chicken."
-        },
-        "icon": {
-            "item": "minecraft:egg"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3",
-            "find4",
-            "find5"
-        ]
-    ],
-    "parent": "cartographer_custom_enchantments:surging_edge"
+    "parent": "cartographer_custom_enchantments:evocation"
 }

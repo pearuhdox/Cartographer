@@ -1,21 +1,4 @@
 {
-    "display": {
-        "title": {
-            "text": "Vicious",
-            "color": "gray"
-        },
-        "description": {
-            "text": "Applies a stack of bleeding to the target for N seconds, where N is the enchantment level.",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:redstone"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -46,25 +29,31 @@
                     }
                 ]
             }
-        },
-        "find4": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Vicious:4}"
-                    }
-                ]
-            }
         }
+    },
+    "display": {
+        "title": {
+            "text": "Vicious                  ",
+            "color": "white"
+        },
+        "description": {
+            "text": "When you hit a mob, this weapon inflicts Bleeding for 1 + 2*N seconds, where N is enchantment level. If the mob is already Bleeding, it adds 1 second, and increases the potency of Bleeding.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
     },
     "requirements": [
         [
             "find1",
             "find2",
-            "find3",
-            "find4"
+            "find3"
         ]
     ],
-    "parent": "cartographer_custom_enchantments:transfiguration"
+    "parent": "cartographer_custom_enchantments:stunning"
 }

@@ -1,0 +1,29 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"augmenter\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Augmenter                ",
+            "color": "white"
+        },
+        "description": {
+            "text": "The enemy charges up power, and after a delay, applies Speed I, Strength I, and Resistance I to the three closest mobs to it."
+        },
+        "icon": {
+            "item": "minecraft:lingering_potion"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_mob_abilities:active_abilities"
+}

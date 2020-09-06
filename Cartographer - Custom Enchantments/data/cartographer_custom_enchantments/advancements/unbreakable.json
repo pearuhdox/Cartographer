@@ -13,12 +13,12 @@
     },
     "display": {
         "title": {
-            "color": "gray",
-            "text": "Unbreakable"
+            "text": "Unbreakable              ",
+            "color": "white"
         },
         "description": {
-            "color": "white",
-            "text": "This item is unbreakable, and takes no durability damage."
+            "text": "This item is unbreakable, and takes no durability damage.",
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:anvil"

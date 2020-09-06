@@ -1,0 +1,59 @@
+{
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
+    "display": {
+        "title": {
+            "text": "Evocation                ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "Killing an enemy with this weapon has a 25% chance per level to evoke claws from the ground, which damage nearby foes."
+        },
+        "icon": {
+            "item": "minecraft:shears"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Evocation:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Evocation:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Evocation:3}"
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "cartographer_custom_enchantments:echo"
+}

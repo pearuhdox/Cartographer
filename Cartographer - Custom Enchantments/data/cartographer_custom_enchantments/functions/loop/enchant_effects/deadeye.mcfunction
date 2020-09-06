@@ -8,4 +8,4 @@ tp @e[tag=deadeye_aim,limit=1,sort=nearest] ~ ~ ~ facing entity @e[limit=1,type=
 
 scoreboard players set @e[tag=deadeye_aim,limit=1,sort=nearest] helper_raycast 10
 
-execute as @e[tag=deadeye_aim,limit=1,sort=nearest] at @s positioned ~ ~1 ~ run function cartographer_custom_enchantments:loop/enchant_effects/deadeye_raycast
+execute as @e[tag=deadeye_aim,limit=1,sort=nearest] at @s positioned ~ ~1.2 ~ run function cartographer_custom_enchantments:loop/enchant_effects/deadeye_raycast

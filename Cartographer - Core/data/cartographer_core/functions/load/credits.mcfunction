@@ -1,3 +1,7 @@
 tellraw @a [{"text":"PearUhDox: ","color":"gold","bold":false,"italic":false},{"text":"Pack Creator","color":"white"}]
 tellraw @a [{"text":"GavstarB: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments. Technical and command support.","color":"white"}]
-tellraw @a [{"text":"Team Monumenta: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments. Ability Ideas for Mob Abilities.","color":"white"}]
+tellraw @a [{"text":"Gizmo90704: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments. Ability Ideas for Mob Abilities. Bug and stress testing.","color":"white"}]
+tellraw @a [{"text":"Matt_97: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments. Bug Testing.","color":"white"}]
+tellraw @a [{"text":"RockNRed: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments.","color":"white"}]
+tellraw @a [{"text":"BeastMasterFTW: ","color":"gold","bold":false,"italic":false},{"text":"Ability Ideas for Mob Abilities.","color":"white"}]
+tellraw @a [{"text":"FirelordWeaponry: ","color":"gold","bold":false,"italic":false},{"text":"Ability Ideas for Mob Abilities.","color":"white"}]

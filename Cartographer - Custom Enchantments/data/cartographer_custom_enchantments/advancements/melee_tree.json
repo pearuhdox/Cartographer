@@ -1,7 +1,7 @@
 {
     "display": {
         "title": {
-            "text": "Melee          ",
+            "text": "Melee                    ",
             "color": "yellow"
         },
         "description": {
@@ -11,7 +11,7 @@
         "icon": {
             "item": "minecraft:iron_sword"
         },
-        "frame": "task",
+        "frame": "goal",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false

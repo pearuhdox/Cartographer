@@ -5,4 +5,6 @@ execute if entity @s[nbt={ActiveEffects:[{Id:9b,Amplifier:59b}]}] run scoreboard
 
 execute if entity @s[nbt={ActiveEffects:[{Id:9b,Amplifier:69b}]}] run scoreboard players add @s[type=#cartographer_core:hostile] effect_rage 20
 
-effect clear @s nausea
+#effect clear @s nausea
+
+say hi

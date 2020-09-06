@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Afflictions and Maladies",
+            "color": "yellow"
+        },
+        "description": {
+            "text": "Research notes from long ago. Detail unique statuses that can be afflicted to mobs.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:paper"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true,
+        "background": "minecraft:textures/block/bone_block_side.png"
+    }
+}

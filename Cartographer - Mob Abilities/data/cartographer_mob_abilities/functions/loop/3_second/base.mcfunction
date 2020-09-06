@@ -1,5 +1,6 @@
-#Give a random enemy close to a player an attack token.
-execute as @r at @s run execute as @e[sort=random,limit=1,type=#cartographer_core:hostile,tag=has_active,tag=!tokened,scores={cooldown=0}] at @s run function cartographer_mob_abilities:token/token_enemy
+#Give a random enemy close to a player an attack token. This is a nested function. Here, it runs a Line of Sight check.
+tag @r add los_target
+execute as @a[tag=los_target] at @s run execute as @e[sort=random,limit=1,type=#cartographer_core:hostile,tag=has_active,tag=!tokened,scores={cooldown=0}] at @s run function cartographer_mob_abilities:token/los_check
 
 #Run 3 Second Passives (Breaker)
 execute if entity @e[tag=breaker] run execute as @e[tag=breaker] at @s run function cartographer_mob_abilities:passive/breaker

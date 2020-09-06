@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"venom_nova\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Venom Nova               ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy charges up, and after a delay, releases a toxic cloud around it. Players within the burst take 8 damage and are inflicted with Poison for 15 seconds."
+        },
+        "icon": {
+            "item": "minecraft:slime_ball"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_mob_abilities:soulfire_nova"
+}

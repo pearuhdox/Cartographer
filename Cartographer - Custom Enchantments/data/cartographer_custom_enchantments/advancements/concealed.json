@@ -13,8 +13,8 @@
     },
     "display": {
         "title": {
-            "text": "Concealed     ",
-            "color": "gray"
+            "text": "Concealed                ",
+            "color": "white"
         },
         "description": {
             "color": "white",

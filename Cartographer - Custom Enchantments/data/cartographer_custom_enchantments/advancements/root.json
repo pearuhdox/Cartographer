@@ -6,12 +6,12 @@
     },
     "display": {
         "title": {
-            "text": "Enchantment Handbook",
-            "color": "yellow"
+            "color": "yellow",
+            "text": "Arcane Notes"
         },
         "description": {
-            "text": "A list of custom enchantments and their effects. When you find a new one, it will appear here.",
-            "color": "white"
+            "color": "white",
+            "text": "Whenever you find a mysterious enchantment, this book fills out, automatically adding its description to this index."
         },
         "icon": {
             "item": "minecraft:enchanted_book"

@@ -51,10 +51,19 @@
             }
         }
     },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4",
+            "find5"
+        ]
+    ],
     "display": {
         "title": {
-            "text": "Hunter          ",
-            "color": "gray"
+            "text": "Hunter                   ",
+            "color": "white"
         },
         "description": {
             "color": "white",
@@ -68,14 +77,5 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3",
-            "find4",
-            "find5"
-        ]
-    ],
-    "parent": "cartographer_custom_enchantments:frostbite"
+    "parent": "cartographer_custom_enchantments:duelist"
 }

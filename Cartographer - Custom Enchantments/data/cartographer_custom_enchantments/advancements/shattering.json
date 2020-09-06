@@ -13,8 +13,8 @@
     },
     "display": {
         "title": {
-            "color": "red",
-            "text": "Curse of Shattering"
+            "text": "Curse of Shattering      ",
+            "color": "red"
         },
         "description": {
             "color": "white",

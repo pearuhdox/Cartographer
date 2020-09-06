@@ -13,12 +13,12 @@
     },
     "display": {
         "title": {
-            "color": "red",
-            "text": "Curse of Irreparability"
+            "text": "Curse of Irreparability  ",
+            "color": "red"
         },
         "description": {
             "color": "white",
-            "text": "This item cannot be repaired."
+            "text": "This item cannot be repaired by an anvil."
         },
         "icon": {
             "item": "minecraft:damaged_anvil"
@@ -28,5 +28,5 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "cartographer_custom_enchantments:curse_tree"
+    "parent": "cartographer_custom_enchantments:shattering"
 }

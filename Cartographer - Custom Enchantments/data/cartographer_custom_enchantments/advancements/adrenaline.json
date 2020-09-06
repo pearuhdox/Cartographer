@@ -1,4 +1,21 @@
 {
+    "display": {
+        "title": {
+            "text": "Adrenaline               ",
+            "color": "white"
+        },
+        "description": {
+            "text": "When the holder or wearer kills a mob, they gain 2 seconds of Speed I per level, up to 12 seconds.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:sugar"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -30,23 +47,6 @@
                 ]
             }
         }
-    },
-    "display": {
-        "title": {
-            "text": "Adrenaline     ",
-            "color": "gray"
-        },
-        "description": {
-            "color": "white",
-            "text": "When the holder or wearer kills a mob, they gain 2 seconds of Speed I per level, up to 12 seconds."
-        },
-        "icon": {
-            "item": "minecraft:sugar"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
     },
     "requirements": [
         [

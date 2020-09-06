@@ -13,12 +13,12 @@
     },
     "display": {
         "title": {
-            "text": "Two-Handed     ",
+            "text": "Two-Handed               ",
             "color": "red"
         },
         "description": {
             "color": "white",
-            "text": "When this item is held, if the user also holds something in their offhand, they are inflicted with Slowness I and Weakness II."
+            "text": "When in the hotbar, this item packages and stores up any item placed in your offhand (rendering it ineffective)."
         },
         "icon": {
             "item": "minecraft:stone_axe"

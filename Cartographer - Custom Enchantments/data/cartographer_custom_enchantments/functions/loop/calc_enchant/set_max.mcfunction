@@ -33,7 +33,7 @@ execute as @a[scores={sapper=5..}] run scoreboard players set @s sapper 4
 execute as @a[scores={satiation=7..}] run scoreboard players set @s satiation 6
 execute as @a[scores={second_wind=5..}] run scoreboard players set @s second_wind 4
 execute as @a[scores={sharpshot=4..}] run scoreboard players set @s sharpshot 3
-execute as @a[scores={shocking=4..}] run scoreboard players set @s shocking 3
+execute as @a[scores={overload=4..}] run scoreboard players set @s overload 3
 execute as @a[scores={splintering=2..}] run scoreboard players set @s splintering 1
 execute as @a[scores={spurs=2..}] run scoreboard players set @s spurs 1
 execute as @a[scores={stunning=6..}] run scoreboard players set @s stunning 5

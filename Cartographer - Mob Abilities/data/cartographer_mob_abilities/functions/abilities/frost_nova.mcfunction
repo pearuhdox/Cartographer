@@ -10,6 +10,8 @@ execute as @a[gamemode=survival,distance=..8] at @s run effect give @s slowness 
 
 playsound minecraft:block.glass.break hostile @a[distance=..16] ~ ~ ~ 3 0.8
 
+particle minecraft:item_snowball ~ ~ ~ 4 0.2 4 0.1 250 normal @a
+
 particle minecraft:cloud ~ ~1 ~ 0.75 0.25 0.75 0.1 30 normal @a
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.

@@ -1,7 +1,12 @@
 {
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
     "display": {
         "title": {
-            "text": "Ranged          ",
+            "text": "Ranged                   ",
             "color": "yellow"
         },
         "description": {
@@ -11,15 +16,10 @@
         "icon": {
             "item": "minecraft:bow"
         },
-        "frame": "task",
+        "frame": "goal",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false
-    },
-    "criteria": {
-        "tick": {
-            "trigger": "minecraft:tick"
-        }
     },
     "parent": "cartographer_custom_enchantments:root"
 }

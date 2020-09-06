@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Rage                     ",
+            "color": "white"
+        },
+        "description": {
+            "text": "An enemy afflicted with Rage loses focus for 1 second. After which, it becomes angry at the enemy closest to it, and attacks it.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:orange_terracotta"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "cartographer_custom_statuses:root"
+}

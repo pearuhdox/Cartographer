@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Soulfire Nova            ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy charges up, and after a delay, releases a burst of soul fire around it. Players within the burst have 8 health stolen from them (and given to the casting mob)."
+        },
+        "icon": {
+            "item": "minecraft:soul_campfire"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"soulfire_nova\"]}"
+                }
+            }
+        }
+    },
+    "parent": "cartographer_mob_abilities:frost_nova"
+}

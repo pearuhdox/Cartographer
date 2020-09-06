@@ -10,6 +10,8 @@ execute as @a[gamemode=survival,distance=..8] at @s run effect give @s poison 15
 
 playsound minecraft:entity.spider.death hostile @a[distance=..16] ~ ~ ~ 2 0.5
 
+particle minecraft:item_slime ~ ~ ~ 4 0.2 4 0.1 250 normal @a
+
 particle minecraft:witch ~ ~1 ~ 0.5 0.5 0.5 1 30 normal @a
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.

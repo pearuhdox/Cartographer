@@ -1,0 +1,29 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"spectral\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Spectral                 ",
+            "color": "white"
+        },
+        "description": {
+            "text": "When the enemy dies, a Spectre is summoned where they die."
+        },
+        "icon": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_mob_abilities:exalted"
+}

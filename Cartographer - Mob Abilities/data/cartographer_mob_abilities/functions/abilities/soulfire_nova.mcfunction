@@ -10,8 +10,9 @@ execute if entity @a[gamemode=survival,distance=..8] run effect give @s[type=#ca
 execute if entity @a[gamemode=survival,distance=..8] run effect give @s[type=!#cartographer_core:undead] instant_health 1 1
 execute if entity @a[gamemode=survival,distance=..8] run particle minecraft:heart ~ ~1 ~ 0.5 0.5 0.5 0.05 10
 
-playsound minecraft:particle.soul_escape hostile @a[distance=..16] ~ ~ ~ 5 0.5
+playsound minecraft:entity.wither.shoot hostile @a[distance=..16] ~ ~ ~ 2 0.5
 
+particle minecraft:soul_fire_flame ~ ~ ~ 4 0.2 4 0.1 250 normal @a
 particle minecraft:soul ~ ~1 ~ 0.5 0.5 0.5 0.2 30 normal @a
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.

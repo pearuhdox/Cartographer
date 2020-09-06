@@ -1,0 +1,59 @@
+{
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Energetic:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Energetic:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Energetic:3}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Energetic                ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "When the holder or wearer kills a mob, they gain 2 seconds of Haste I per level, up to 12 seconds."
+        },
+        "icon": {
+            "item": "minecraft:honeycomb"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
+    "parent": "cartographer_custom_enchantments:adrenaline"
+}

@@ -1,8 +1,8 @@
 {
     "display": {
         "title": {
-            "text": "Conductive",
-            "color": "gray"
+            "text": "Conductive               ",
+            "color": "white"
         },
         "description": {
             "text": "Arrows from this weapon inflict 5 seconds of Shocked.",

@@ -1,8 +1,8 @@
 {
     "display": {
         "title": {
-            "text": "Frost",
-            "color": "gray"
+            "text": "Frost                    ",
+            "color": "white"
         },
         "description": {
             "text": "Arrows from this weapon inflict Slowness 2 for 5 seconds.",

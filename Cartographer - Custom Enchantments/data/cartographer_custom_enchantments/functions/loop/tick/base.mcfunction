@@ -55,7 +55,7 @@ execute if entity @a[scores={repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{
 execute if entity @a[scores={repeating=1..7,helper_fire_cbow=1..},nbt={SelectedItem:{tag:{Charged:0b}}}] as @a[scores={repeating=1..7,helper_fire_cbow=1..},nbt={SelectedItem:{tag:{Charged:0b}}}] at @s run scoreboard players set @s helper_repeat 3
 execute if entity @a[scores={repeating=11..17,helper_fire_cbow=1..},nbt={Inventory:[{Slot:-106b,tag:{Charged:0b}}]}] as @a[scores={repeating=11..17,helper_fire_cbow=1..},nbt={Inventory:[{Slot:-106b,tag:{Charged:0b}}]}] at @s run scoreboard players set @s helper_repeat 3
 
-execute if entity @a[scores={shocking=1..,helper_deal_dmg=1..}] as @a[scores={shocking=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/shocking
+execute if entity @a[scores={overload=1..,helper_deal_dmg=1..}] as @a[scores={overload=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/overload
 
 execute if entity @a[scores={vicious=1..,helper_deal_dmg=1..}] as @a[scores={vicious=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/vicious
 

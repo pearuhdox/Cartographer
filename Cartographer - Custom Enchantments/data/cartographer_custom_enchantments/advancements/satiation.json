@@ -1,4 +1,28 @@
 {
+    "display": {
+        "title": {
+            "text": "Satiation                ",
+            "color": "white"
+        },
+        "description": {
+            "text": "When the holder or wearer kills a mob, restores 1 hunger and saturation per level to the user, up to 6 saturation and hunger.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:golden_carrot"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -31,29 +55,5 @@
             }
         }
     },
-    "display": {
-        "title": {
-            "text": "Satiation     ",
-            "color": "gray"
-        },
-        "description": {
-            "text": "When the holder or wearer kills a mob, restores 1 hunger and saturation per level to the user, up to 6 saturation and hunger.",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:golden_carrot"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3"
-        ]
-    ],
-    "parent": "cartographer_custom_enchantments:passive_tree"
+    "parent": "cartographer_custom_enchantments:lifesteal"
 }

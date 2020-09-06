@@ -6,4 +6,6 @@ execute if entity @a[distance=..1.5] run scoreboard players set @s helper_raycas
 
 execute if entity @s[scores={helper_raycast=1..}] positioned ^ ^ ^1 if block ~ ~ ~ #cartographer_core:can_raycast run function cartographer_mob_abilities:abilities/laser_raycast
 
-execute if entity @a[distance=..2] as @a[distance=..2] run summon firework_rocket ~ ~ ~ {Silent:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;16777215]},{Type:0,Colors:[I;16777215]},{Type:0,Colors:[I;16777215]},{Type:0,Colors:[I;16777215]},{Type:0,Colors:[I;16777215]}]}}}}
+execute if entity @s[scores={helper_raycast=1..}] positioned ^ ^ ^1 unless block ~ ~ ~ #cartographer_core:can_raycast run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:1,ignited:1b,CustomName:'{"text":"thermal disencouragement"}'}
+
+execute if entity @a[distance=..2] as @a[distance=..2] run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:1,ignited:1b,CustomName:'{"text":"thermal disencouragement"}'}

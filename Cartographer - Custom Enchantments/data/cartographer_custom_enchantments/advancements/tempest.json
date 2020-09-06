@@ -1,11 +1,12 @@
 {
     "display": {
         "title": {
-            "text": "Tempest",
-            "color": "gray"
+            "text": "Tempest                  ",
+            "color": "white"
         },
         "description": {
-            "text": "This trident deals 2 additional damage per level on ranged throws."
+            "color": "white",
+            "text": "This trident deals 3 additional damage per level on ranged throws."
         },
         "icon": {
             "item": "minecraft:trident"
@@ -15,6 +16,15 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4",
+            "find5"
+        ]
+    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -45,14 +55,27 @@
                     }
                 ]
             }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Tempest:4}"
+                    }
+                ]
+            }
+        },
+        "find5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Tempest:5}"
+                    }
+                ]
+            }
         }
     },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3"
-        ]
-    ],
-    "parent": "cartographer_custom_enchantments:current"
+    "parent": "cartographer_custom_enchantments:ricochet"
 }

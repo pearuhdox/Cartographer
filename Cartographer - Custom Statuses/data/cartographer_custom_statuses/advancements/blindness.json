@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Blindness                ",
+            "color": "white"
+        },
+        "description": {
+            "text": "An enemy afflicted with Blindness has a greatly reduced follow and sight range.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:black_concrete"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "cartographer_custom_statuses:root"
+}

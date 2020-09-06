@@ -1,0 +1,92 @@
+{
+    "display": {
+        "title": {
+            "text": "Stunned                  ",
+            "color": "white"
+        },
+        "description": {
+            "text": "An enemy afflicted with Stunned cannot move, attack, or cast an active ability.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:yellow_concrete"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Stunning:1}"
+                    }
+                ]
+            }
+        },
+        "found2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Stunning:2}"
+                    }
+                ]
+            }
+        },
+        "found3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Stunning:3}"
+                    }
+                ]
+            }
+        },
+        "found4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Stunning:4}"
+                    }
+                ]
+            }
+        },
+        "found5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Stunning:5}"
+                    }
+                ]
+            }
+        },
+        "found6": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Splintering:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "found1",
+            "found2",
+            "found3",
+            "found4",
+            "found5",
+            "found6"
+        ]
+    ],
+    "parent": "cartographer_custom_statuses:root"
+}

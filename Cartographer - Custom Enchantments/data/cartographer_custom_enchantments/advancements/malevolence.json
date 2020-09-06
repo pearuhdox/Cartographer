@@ -1,4 +1,21 @@
 {
+    "display": {
+        "title": {
+            "text": "Curse of Malevolence     ",
+            "color": "red"
+        },
+        "description": {
+            "text": "When more than 1 of these items is held in the hotbar, offhand, or worn in an armor slot, the user is inflicted with Blindness.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:obsidian"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
     "criteria": {
         "found": {
             "trigger": "minecraft:inventory_changed",
@@ -10,23 +27,6 @@
                 ]
             }
         }
-    },
-    "display": {
-        "title": {
-            "color": "red",
-            "text": "Curse of Malevolence"
-        },
-        "description": {
-            "color": "white",
-            "text": "When more than 1 of these items is held in the hotbar, offhand, or worn in an armor slot, the user is inflicted with Blindness."
-        },
-        "icon": {
-            "item": "minecraft:obsidian"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
     },
     "parent": "cartographer_custom_enchantments:irreparability"
 }

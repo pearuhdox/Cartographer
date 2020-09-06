@@ -1,0 +1,44 @@
+{
+    "display": {
+        "title": {
+            "text": "Reflect                  ",
+            "color": "white"
+        },
+        "description": {
+            "text": "Based on players' positioning, holds up a reflective shield which greatly reduces damage taken, movement speed, knockback, and reflects attacks back at the attacker. Mobs with Reflect either bring the shield up when players are close, or when they are far away.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:shield"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found1": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"reflect_melee\"]}"
+                }
+            }
+        },
+        "found2": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"reflect_ranged\"]}"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "found1",
+            "found2"
+        ]
+    ],
+    "parent": "cartographer_mob_abilities:quiver"
+}

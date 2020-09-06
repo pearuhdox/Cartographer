@@ -12,6 +12,8 @@ execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run
 
 execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/9
 
+#execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run data merge entity @s {Fire:85}
+
 execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run scoreboard players set @s helper_raycast 0
 
 execute if entity @s[scores={helper_raycast=1..}] if block ~ ~ ~ #cartographer_core:can_raycast positioned ^ ^ ^1 run function cartographer_custom_enchantments:loop/enchant_effects/deadeye_raycast

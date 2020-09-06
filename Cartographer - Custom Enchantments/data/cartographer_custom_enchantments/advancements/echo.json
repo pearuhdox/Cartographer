@@ -1,20 +1,11 @@
 {
-    "display": {
-        "title": {
-            "text": "Echo",
-            "color": "gray"
-        },
-        "description": {
-            "text": "Attacking instantly recharges your attack cooldown. This can only happen every 6/5/4 seconds. (Based on enchantment level)."
-        },
-        "icon": {
-            "item": "minecraft:diamond_sword"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -47,12 +38,21 @@
             }
         }
     },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3"
-        ]
-    ],
-    "parent": "cartographer_custom_enchantments:duelist"
+    "display": {
+        "title": {
+            "text": "Echo                     ",
+            "color": "white"
+        },
+        "description": {
+            "text": "When you hit a mob, you have a +20% chance per level to recharge your attack considerably faster."
+        },
+        "icon": {
+            "item": "minecraft:diamond_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_custom_enchantments:melee_tree"
 }

@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Death Abilities          ",
+            "color": "yellow"
+        },
+        "description": {
+            "text": "Effects that occur when an enemy with them dies.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "cartographer_mob_abilities:root"
+}

@@ -6,6 +6,6 @@ execute if entity @s[scores={point_blank=3}] run scoreboard players set @e[type=
 
 execute as @e[type=arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] store result score @s helper_arrow_dmg run data get entity @s damage 10
 
-execute if entity @s[scores={point_blank=1}] as @e[type=arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] store result entity @s damage double 0.1 run scoreboard players add @s helper_arrow_dmg 24
-execute if entity @s[scores={point_blank=2}] as @e[type=arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] store result entity @s damage double 0.1 run scoreboard players add @s helper_arrow_dmg 48
-execute if entity @s[scores={point_blank=3}] as @e[type=arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] store result entity @s damage double 0.1 run scoreboard players add @s helper_arrow_dmg 72
+execute if entity @s[scores={point_blank=1}] as @e[type=arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] store result entity @s damage double 0.1 run scoreboard players add @s helper_arrow_dmg 14
+execute if entity @s[scores={point_blank=2}] as @e[type=arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] store result entity @s damage double 0.1 run scoreboard players add @s helper_arrow_dmg 28
+execute if entity @s[scores={point_blank=3}] as @e[type=arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] store result entity @s damage double 0.1 run scoreboard players add @s helper_arrow_dmg 42

@@ -1,4 +1,21 @@
 {
+    "display": {
+        "title": {
+            "text": "Sharpshot                ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "Arrows gain +50% damage per level per second they travel."
+        },
+        "icon": {
+            "item": "minecraft:bow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -31,23 +48,6 @@
             }
         }
     },
-    "display": {
-        "title": {
-            "text": "Sharpshot     ",
-            "color": "gray"
-        },
-        "description": {
-            "text": "Arrows gain 5% damage per level per tick they travel.",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:bow"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
     "requirements": [
         [
             "find1",
@@ -55,5 +55,5 @@
             "find3"
         ]
     ],
-    "parent": "cartographer_custom_enchantments:rend"
+    "parent": "cartographer_custom_enchantments:point_blank"
 }

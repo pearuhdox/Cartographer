@@ -13,8 +13,8 @@
     },
     "display": {
         "title": {
-            "color": "gray",
-            "text": "Aquadynamic"
+            "text": "Aquadynamic              ",
+            "color": "white"
         },
         "description": {
             "color": "white",
