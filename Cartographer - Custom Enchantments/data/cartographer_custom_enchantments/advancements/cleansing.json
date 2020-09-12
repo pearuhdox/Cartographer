@@ -14,7 +14,7 @@
             "color": "white"
         },
         "description": {
-            "text": "While held or worn, the user cannot be afflicted with the corresponding debuff. There is Slowness, Mining Fatigue, Weakness, Poison, and Wither Cleansing.",
+            "text": "While held or worn, the user is cleansed from the corresponding debuff, receiving 10 seconds of high Hunger. There is Slowness, Mining Fatigue, Weakness, Poison, and Wither Cleansing.",
             "color": "white"
         },
         "icon": {

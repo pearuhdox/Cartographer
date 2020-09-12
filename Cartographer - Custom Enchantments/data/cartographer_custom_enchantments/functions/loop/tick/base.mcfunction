@@ -15,7 +15,11 @@ execute if entity @a[scores={aquadynamic=1..}] as @a[scores={aquadynamic=1..}] a
 
 execute if entity @a[scores={concealed=1..}] as @a[scores={concealed=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/concealed
 
-execute if entity @a[scores={cleansing=1..}] as @a[scores={cleansing=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/cleansing
+execute if entity @a[scores={s_cleansing=1..}] as @a[scores={s_cleansing=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/cleansing
+execute if entity @a[scores={f_cleansing=1..}] as @a[scores={f_cleansing=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/cleansing
+execute if entity @a[scores={w_cleansing=1..}] as @a[scores={w_cleansing=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/cleansing
+execute if entity @a[scores={p_cleansing=1..}] as @a[scores={p_cleansing=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/cleansing
+execute if entity @a[scores={wi_cleansing=1..}] as @a[scores={wi_cleansing=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/cleansing
 
 execute if entity @a[scores={energetic=1..,helper_kill=1..}] as @a[scores={energetic=1..,helper_kill=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/energetic
 
