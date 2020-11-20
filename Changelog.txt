@@ -63,6 +63,10 @@ Custom Statuses:
 Changes:
 
 Core:
+- The reload message has received a rather hefty overhaul. Shoutouts to RockNRed for aesthetic ideas and assistance!
+- Cartographer's reload message now links to its Github page, and to an options menu.
+- Currently the only option that exists is to make the reload message less long. More to come soon!
+
 - Helper Healing functions have been reworked to all use area effect clouds instead of Regeneration effect commands. This makes healing immediate rather than very slightly delayed.
 - Helper clouds have received tweaks to ensure they are simultaneously more accurate, and don't have unintended behavior.
 - Helper clouds now scale in powers of 2, rather than having a command for each value up to 8. This means any value of healing can be cast on the player by combining the right values.
