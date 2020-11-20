@@ -1,3 +1,119 @@
+Cartographer, Patch 2020.11.0 - Divine Additions
+
+Alright lets start out with the announcements!
+
+First, I am no longer considering Cartographer in open beta! Any beta versions of Cartographer will be marked accordingly on github.
+
+There's a slight change to my naming format which might be a tad confusing, but the overall patch is going to go "Year.Month.Hotfix". So welcome to 2020.11.0!
+Individual modules will be named with version counts (V1.0 / V1.1 etc). This is to hopefully avoid confusion with modules of "version 1.0" but a patch of a later date.
+
+Cartographer is also updating to 1.16.3 and higher. Piglin Brutes have been added to all hostile tags necessary.
+This means the datapack will no longer work in versions before 1.16.2. Sorry anyone who was using those versions!
+
+We're moving up due to complications with security in 1.16.1. Additionally, the upcoming project I'm leading (more below) is going to be a 1.16.4 release!
+
+Now onto the update itself.
+
+This is an update to prepare Cartographer for use in an upcoming project I've been proud to help lead. As the first major map to use Cartographer, this is super exciting!
+A lot of these changes are being made with the balance of that project in mind, but also to improve features across the board.
+
+What's that new project? Well I'm not just gonna say it here, but surely someone will figure it out. ;)
+
+This doesn't mean no new content though. There are additions to Mob Abilities, Custom Statuses, and 2 new modules. (Repair Stations and Mimics)
+And now lets get into the details!
+
+Additions:
+
+Repair Stations bring an alternative to anvils, for maps that do not want to include anvils, but still have repairable gear.
+- Repair Stations can be summoned into the world with a structure block. See the wiki for more details.
+- Repair Stations can only repair items with durability, and items that aren't fully repaired.
+- Repair Stations will cost the user Experience Levels, Lapis Lazuli, and the material the item is made with.
+- When you repair an item, its experience and lapis cost will double. (Material cost is constant)
+- Items cannot be repaired over a cap. This cap is by default set to 50 Levels and 20 Lapis. If either is above the allowed threshold, the item is irreparable.
+- Default starter repair cost of items with no stats is 12 Levels, 4 Lapis. This will probably change based on user feedback.
+
+Mimics bring the stereotypical greedy player punisher to Minecraft. Warning, these Mimics aren't fooling around.
+- Mimics appear as trapped chests, and are placeable via structure blocks.
+- If a Mimic is opened, it will reveal itself, damaging the player for their foolishness, and stealing some of their hunger bar.
+- Mimics can be broken in dormant state, or shot with an arrow. Doing so will reveal them, and do some free damage to them.
+- When Mimics are threatened, they get angry. You won't like them when they're angry.
+- You might be able to loot a Mimic if you're invisible, or if you have some disguise (while it is in the dormant state).
+- Mapmakers can customize what loot mimics drop on death. Simply place the items in the chest in creative mode, or while the mimic is inactive.
+- Mimics scale their stats based on the armor value of the player opening them. The stronger the player, the stronger the Mimic.
+
+Mob Abilities:
+- 2 new active abilities have been added: Cloaker
+  - Cloaker works similarly to Healer and Augmenter. After a brief immobile delay, the mob with Cloaker will grant 12 seconds of "Cloaked" to nearby mobs.
+  - What is Cloaked? Read more about it in Custom Statuses!
+- The other new ability is Wither Storm:
+  - Wither Storm makes the mob blind and immobile while charging.
+  - Has a delay, after which, wither skulls are rained down around players.
+  - Very destructive!
+  - While creating the skull rain, mob is unable to attack or move.
+- A new passive ability has been added: Permacloak
+  - A permacloaked mob is permanently "Cloaked". (Cloak is re-applied every 5 seconds for 5 seconds.)
+
+Custom Statuses:
+- Added a new positive status effect for enemies: "Cloaked"
+  - Cloaked makes a mob invisible until the timer runs out.
+  - While Cloaked, the mob emits ash particles near its location.
+  - While Cloaked, the mob emits strange ghostly sounds around it. The louder they are, the more cloaked enemies there are nearby.
+  - While Cloaked, if the mob takes damage, the duration of Cloaked is reduced by 3 seconds.
+
+Changes:
+
+Core:
+- Helper Healing functions have been reworked to all use area effect clouds instead of Regeneration effect commands. This makes healing immediate rather than very slightly delayed.
+- Helper clouds have received tweaks to ensure they are simultaneously more accurate, and don't have unintended behavior.
+- Helper clouds now scale in powers of 2, rather than having a command for each value up to 8. This means any value of healing can be cast on the player by combining the right values.
+- Helper clouds exist for 1, 2, 4, 8, 16, and 32 healing.
+
+- Core has additional push functions for knockback events of varying degrees. These are very complex and hard to use outside of Cartographer (you're welcome to try) at least for now.
+- Used to apply knockback to a couple new things at different amounts.
+
+Custom Enchantments:
+
+- Eruption damage has been increased to 3/6/9/12/15 damage per level (was 2/4/6/8/10).
+- Eruption now inflicts a small amount of knockback.
+- Eruption radius reduced to 8. (was 10).
+
+- Adrenaline, Energetic, and Frenzy have adjusted scaling.
+  - The new scaling is 5 seconds for the first level, 5 seconds for the second level, and one less second per level of the enchant. (5/10/14/17/19/20 seconds)
+  - The intent is to make single levels of these enchants feel more impactful and useful, though keep their power level somewhat the same.
+  - Overall, scaling is adjusted to offer more buff duration uptime.
+
+- Hunter and Duelist scale equivalently to Smite and Bane of Arthropods (2.5/5/7.5/10/12.5, instead of 2/5/7/10/12)
+
+- Evocation has been reworked:
+  - Now guarantees fangs directed from the player towards nearby mobs.
+  - Each level adds one path of fangs from the player to a nearby hostile mob (within 10 blocks)
+  - Level still caps at 3 (3 paths of fangs to nearby mobs).
+
+- Regeneration now makes heart particle effects when it heals you.
+
+- Lifesteal makes heart particle effects when it heals you.
+- Lifesteal creates a sound when it triggers.
+
+Mob Abilities:
+- Helper Difficulty is now directly set based on the world's difficulty. The feature to set it to a custom value will likely return in the future.
+- This is to make using Cartographer a bit more user friendly. Gone are the days of setting a random score to a number which you have no idea what it does!
+
+- Charge now uses the player's location instead of simply moving the mob forward. This makes Charge more accurate to player position and improves interactions on some mobs.
+
+- Laser now uses an armor stand to track. This makes the skill more accurate and removes a couple bugs involving height differences between mobs and players.
+
+- Corpse Crawler now has variations for zombies, husks, drowned, piglins, zoglins, and bees. Each version's stats are near identical to each others.
+
+- Duplicator now works on Piglins, Pillagers, Creepers, Spiders, and Cave Spiders.
+
+- Breaker no longer breaks spawners.
+
+- Healer and Augmenter now apply Slowness VII (immobilizes ground based mobs) when charging.
+
+Bug Fixes:
+- New Shulker Boxes for Custom Enchantments to separate Repeating, Auto Charge, and Infinity further. This should eliminate (or at least drastically reduce) the chance of items being replaced improperly.
+- Fixed a bug where Repeating only fired the first round of bolts as Multishot, if a Crossbow also had Multishot.
+
 Version Beta 1.1 - The Shock and Awe Update (yeah I'm gonna give updates cutesy names, cause you know, why not)
 
 As an overview, this new version boasts:

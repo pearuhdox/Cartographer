@@ -7,6 +7,9 @@
 	"minecraft:elder_guardian",
 	"minecraft:shulker",
 	"minecraft:piglin",
+	"minecraft:piglin_brute",
+	"minecraft:slime",
+	"minecraft:magma_cube",
 	"minecraft:hoglin"
   ]
 }

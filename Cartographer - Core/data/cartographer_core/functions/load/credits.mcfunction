@@ -1,7 +1,14 @@
-tellraw @a [{"text":"PearUhDox: ","color":"gold","bold":false,"italic":false},{"text":"Pack Creator","color":"white"}]
-tellraw @a [{"text":"GavstarB: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments. Technical and command support.","color":"white"}]
-tellraw @a [{"text":"Gizmo90704: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments. Ability Ideas for Mob Abilities. Bug and stress testing.","color":"white"}]
-tellraw @a [{"text":"Matt_97: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments. Bug Testing.","color":"white"}]
-tellraw @a [{"text":"RockNRed: ","color":"gold","bold":false,"italic":false},{"text":"Enchantment Ideas for Custom Enchantments.","color":"white"}]
-tellraw @a [{"text":"BeastMasterFTW: ","color":"gold","bold":false,"italic":false},{"text":"Ability Ideas for Mob Abilities.","color":"white"}]
-tellraw @a [{"text":"FirelordWeaponry: ","color":"gold","bold":false,"italic":false},{"text":"Ability Ideas for Mob Abilities.","color":"white"}]
+execute as @p at @s run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 1 0.75
+
+tellraw @p [{"text":"❰","color":"gold"},{"text":" PearUhDox ","color":"#B33EE6","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Creator, Director, and Implementer.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" RockNRed ","color":"#FF004C","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration, ideas, and implementation assistance across Cartographer.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" Nava ","color":"#E65C00","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Original inspiration for Custom Enchantments and Cartographer.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" GavstarB ","color":"#3DFF1F","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration, ideas, and implementation assistance for Custom Enchantments.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" Gizmo90704 ","color":"#08A4FF","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Custom Enchantments and Mob Abilities. Beta testing and stress testing assistance.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" Matt_97 ","color":"#ACFF1C","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Beta testing and bug fixing assistance.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" ShadowVisions ","color":"#9B7DFF","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Custom Enchantments.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" BeastMasterFTW ","color":"#FF5E74","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Mob Abilities.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" FirelordWeaponry ","color":"#FF8800","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Mob Abilities.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" Combustible ","color":"#6EFFD3","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Mob Abilities.","color":"#FFE0A3","italic":true}]
+
+tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}

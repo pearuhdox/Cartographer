@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "This weapon deals 2/5/7/10/12 (based on level) bonus damage to \"illager\" mobs: [Vindicator, Pillager, Evoker, Ravager, Vex, Witch]"
+            "text": "This weapon deals 2.5 bonus damage per level to \"illager\" mobs: [Vindicator, Pillager, Evoker, Ravager, Vex, Witch]"
         },
         "icon": {
             "item": "minecraft:iron_sword"

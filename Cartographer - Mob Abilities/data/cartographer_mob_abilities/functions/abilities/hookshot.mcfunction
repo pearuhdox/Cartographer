@@ -13,5 +13,8 @@ data merge entity @s {NoAI:0}
 playsound minecraft:entity.elder_guardian.curse hostile @a[distance=..16] ~ ~ ~ 3 2
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
+
+kill @e[type=armor_stand,tag=hook_marker,distance=..1,limit=1]
+
 scoreboard players set @a[distance=..20] cooldown 3
 tag @s remove tokened

@@ -1,14 +1,30 @@
-tellraw @a {"text":"Cartographer: Beta 1.1 is installed!","color":"green","bold":false,"italic":false}
-tellraw @a {"text":"Installed Modules:","color":"yellow","bold":false,"italic":false}
+execute as @a at @s run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 1 0.75
 
-execute if entity @a[tag=custom_enchants] run function cartographer_custom_enchantments:load/load_message
-execute if entity @a[tag=mob_abilities] run function cartographer_mob_abilities:load/load_message
-execute if entity @a[tag=custom_statuses] run function cartographer_custom_statuses:load/load_message
+tellraw @a[tag=!minimal_reload] [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------------","color":"#FFE0A3","bold":true}]
+tellraw @a[tag=!minimal_reload] {"text":"A set of custom mechanics, made by mappers, for mappers.","color":"#FFE0A3","bold":false,"italic":true}
+tellraw @a[tag=!minimal_reload] {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 
-tellraw @a {"text":"[Credits]","color":"red","bold":false,"italic":false,"hoverEvent":{"action":"show_text","value":[{"text":"Click me for datapack credits!"}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/credits"}}
+tellraw @a[tag=minimal_reload] [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":" Installed!","color":"#FFE0A3","bold":false}]
+tellraw @a[tag=minimal_reload] {"text":"[Disable Minimal Reload]","color":"#54FFFF","bold":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Disables minimal reload, reverting back to the default reload message.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/disable_minimal_reload"}}
+
+tellraw @a[tag=!minimal_reload] [{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":"Core (V1.2)","color":"#F04FF0","hoverEvent":{"action":"show_text","contents":[{"text":"Cartographer's base mechanics. No module will work without  this one!","color":"#FFE0A3","italic":true}]}},{"text":" installed!","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
+tellraw @a[tag=!minimal_reload] {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
+
+execute if entity @a[tag=custom_enchants,tag=!minimal_reload] run function cartographer_custom_enchantments:load/load_message
+execute if entity @a[tag=custom_statuses,tag=!minimal_reload] run function cartographer_custom_statuses:load/load_message
+execute if entity @a[tag=mimics,tag=!minimal_reload] run function cartographer_mimics:load/load_message
+execute if entity @a[tag=mob_abilities,tag=!minimal_reload] run function cartographer_mob_abilities:load/load_message
+execute if entity @a[tag=repair_stations,tag=!minimal_reload] run function cartographer_repair_stations:load/load_message
+
+tellraw @a[tag=!minimal_reload] {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
+
+tellraw @a[tag=!minimal_reload] [{"text":"[Credits]","color":"#33FFF8","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to see who helped bring you Cartographer.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/credits"}},{"text":"    ","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"[Website]","color":"#E8E8E8","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to visit Cartographer's home on Github.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"open_url","value":"https://github.com/pearuhdox/Cartographer"}},{"text":"    ","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"[Options]","color":"#E8E86D","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to configure various options in Cartographer.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/options"}}]
+
+tellraw @a[tag=!minimal_reload] {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
+
 
 tag @a remove custom_enchants
 tag @a remove mob_abilities
-tag @a remove revised_books
 tag @a remove repair_stations
 tag @a remove custom_statuses
+tag @a remove mimics

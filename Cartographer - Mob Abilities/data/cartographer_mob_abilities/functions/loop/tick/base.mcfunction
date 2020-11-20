@@ -25,6 +25,12 @@ execute if entity @e[tag=has_active,tag=!ability_checked,tag=!duplicate] run exe
 
 execute if entity @e[tag=parting_gift,tag=!death_checked] run execute as @e[tag=parting_gift,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 execute if entity @e[tag=corpse_crawler,tag=!death_checked] run execute as @e[tag=corpse_crawler,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=corpse_crawler_bee,tag=!death_checked] run execute as @e[tag=corpse_crawler_bee,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=corpse_crawler_drowned,tag=!death_checked] run execute as @e[tag=corpse_crawler_drowned,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=corpse_crawler_drowned,tag=!death_checked] run execute as @e[tag=corpse_crawler_drowned,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=corpse_crawler_husk,tag=!death_checked] run execute as @e[tag=corpse_crawler_husk,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=corpse_crawler_piglin,tag=!death_checked] run execute as @e[tag=corpse_crawler_piglin,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
+execute if entity @e[tag=corpse_crawler_zoglin,tag=!death_checked] run execute as @e[tag=corpse_crawler_zoglin,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 execute if entity @e[tag=exalted,tag=!death_checked] run execute as @e[tag=exalted,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 execute if entity @e[tag=pyromania,tag=!death_checked] run execute as @e[tag=pyromania,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 execute if entity @e[tag=spectral,tag=!death_checked] run execute as @e[tag=spectral,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
@@ -33,7 +39,8 @@ execute if entity @e[tag=relentless_blood,tag=!death_checked] run execute as @e[
 execute if entity @e[tag=devious_blood,tag=!death_checked] run execute as @e[tag=devious_blood,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 execute if entity @e[tag=sacrificial_blood,tag=!death_checked] run execute as @e[tag=sacrificial_blood,tag=!death_checked] at @s run function cartographer_mob_abilities:passive/death_fix
 
-
+#Particle for Wither Storm Skulls
+execute if entity @e[tag=wither_storm_skull] run execute as @e[tag=wither_storm_skull] at @s run particle minecraft:large_smoke ~ ~ ~ 0.3 0.2 0.3 0.1 1 normal
 
 #Run On-Death Skills
 
@@ -42,6 +49,11 @@ execute if entity @e[type=item,nbt={Item:{tag:{PartingGift:1}}}] run execute as 
 
 #Corpse Crawler
 execute if entity @e[type=item,nbt={Item:{tag:{CorpseCrawler:1}}}] run execute as @e[type=item,nbt={Item:{tag:{CorpseCrawler:1}}}] at @s run function cartographer_mob_abilities:passive/corpse_crawler
+execute if entity @e[type=item,nbt={Item:{tag:{CorpseCrawlerBee:1}}}] run execute as @e[type=item,nbt={Item:{tag:{CorpseCrawlerBee:1}}}] at @s run function cartographer_mob_abilities:passive/corpse_crawler_bee
+execute if entity @e[type=item,nbt={Item:{tag:{CorpseCrawlerDrowned:1}}}] run execute as @e[type=item,nbt={Item:{tag:{CorpseCrawlerDrowned:1}}}] at @s run function cartographer_mob_abilities:passive/corpse_crawler_drowned
+execute if entity @e[type=item,nbt={Item:{tag:{CorpseCrawlerHusk:1}}}] run execute as @e[type=item,nbt={Item:{tag:{CorpseCrawlerHusk:1}}}] at @s run function cartographer_mob_abilities:passive/corpse_crawler_husk
+execute if entity @e[type=item,nbt={Item:{tag:{CorpseCrawlerPiglin:1}}}] run execute as @e[type=item,nbt={Item:{tag:{CorpseCrawlerPiglin:1}}}] at @s run function cartographer_mob_abilities:passive/corpse_crawler_piglin
+execute if entity @e[type=item,nbt={Item:{tag:{CorpseCrawlerZoglin:1}}}] run execute as @e[type=item,nbt={Item:{tag:{CorpseCrawlerZoglin:1}}}] at @s run function cartographer_mob_abilities:passive/corpse_crawler_zoglin
 
 #Exalted
 execute if entity @e[type=item,nbt={Item:{tag:{Exalted:1}}}] run execute as @e[type=item,nbt={Item:{tag:{Exalted:1}}}] at @s run function cartographer_mob_abilities:passive/exalted

@@ -5,6 +5,8 @@ scoreboard objectives add cooldown dummy
 scoreboard objectives add ability_charge dummy
 scoreboard objectives add brutal_stacks dummy
 scoreboard objectives add relent_stacks dummy
+scoreboard objectives add wither_storms dummy
+scoreboard objectives add storm_height dummy
 
 #Setup all necessary helper scoreboards.
 

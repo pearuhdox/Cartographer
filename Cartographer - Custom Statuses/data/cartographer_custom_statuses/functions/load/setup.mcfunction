@@ -12,10 +12,13 @@ scoreboard objectives add effect_bleed dummy
 scoreboard objectives add effect_vuln dummy
 scoreboard objectives add effect_rage dummy
 
+scoreboard objectives add effect_cloaked dummy
+
 #Start initial required looping to trigger enchant effects.
 
 function cartographer_custom_statuses:loop/tick/base
 function cartographer_custom_statuses:loop/1_second/base
+
 
 #Give the players a tag for the load message.
 

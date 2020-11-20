@@ -1,0 +1,26 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "item": "minecraft:air"
+      },
+      "offhand": {
+        "item": "minecraft:air"
+      },
+      "head": {
+        "item": "minecraft:air"
+      },
+      "chest": {
+        "item": "minecraft:air"
+      },
+      "legs": {
+        "item": "minecraft:air"
+      },
+      "feet": {
+        "item": "minecraft:air"
+      }
+    }
+  }
+}

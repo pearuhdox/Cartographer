@@ -2,6 +2,9 @@
 
 #Trigger all second timer attacks where enemies have been tokened.
 
+#Set the score of helper difficulty equal to Minecraft's current difficulty
+execute store result score @a helper_diff run difficulty
+
 #Charge
 execute if entity @e[tag=charge,tag=tokened,scores={cooldown=0}] run execute as @e[tag=charge,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:charge/charge
 
@@ -26,6 +29,9 @@ execute if entity @e[tag=healer,tag=tokened,scores={cooldown=0}] run execute as 
 #Augmenter
 execute if entity @e[tag=augmenter,tag=tokened,scores={cooldown=0}] run execute as @e[tag=augmenter,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..25] run function cartographer_mob_abilities:charge/augmenter
 
+#Cloaker
+execute if entity @e[tag=cloaker,tag=tokened,scores={cooldown=0}] run execute as @e[tag=cloaker,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..25] run function cartographer_mob_abilities:charge/cloaker
+
 #Hookshot
 execute if entity @e[tag=hookshot,tag=tokened,scores={cooldown=0}] run execute as @e[tag=hookshot,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/hookshot
 
@@ -47,6 +53,9 @@ execute if entity @e[tag=magic_missile,tag=tokened,scores={cooldown=0}] run exec
 #Fireball
 execute if entity @e[tag=fireball,tag=tokened,scores={cooldown=0}] run execute as @e[tag=fireball,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..24] run function cartographer_mob_abilities:charge/fireball_cast
 
+#Wither Storm
+execute if entity @e[tag=wither_storm,tag=tokened,scores={cooldown=0}] run execute as @e[tag=wither_storm,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..25] run function cartographer_mob_abilities:charge/wither_storm
+
 #Trapper
 execute if entity @e[tag=trapper,tag=tokened,scores={cooldown=0}] run execute as @e[tag=trapper,tag=tokened,scores={cooldown=0}] at @s run execute if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/trapper_cast
 
@@ -56,6 +65,7 @@ execute if entity @e[tag=duplicator,tag=tokened,scores={cooldown=0}] run execute
 execute if entity @e[tag=duplicate,scores={cooldown=0}] run execute as @e[tag=duplicate,scores={cooldown=0}] at @s run tp @s ~ -60 ~
 
 #Reduce Cooldowns on all enemies with cooldowns.
+#Reduce Cloak stacks on all enemies with cooldowns.
 scoreboard players remove @e[tag=has_active,scores={cooldown=1..}] cooldown 1
 
 #Run 1 Second Passives: (Reflect)
@@ -70,6 +80,9 @@ schedule function cartographer_mob_abilities:loop/1_second/base 1s
 #Run Stack Manager for Brutal and Relentless Stacks
 execute if entity @e[scores={brutal_stacks=1..}] run execute as @e[scores={brutal_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
 execute if entity @e[scores={relent_stacks=1..}] run execute as @e[scores={relent_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+
+#Remove Hookshot tag from mob
+execute if entity @e[tag=is_hooking,scores={cooldown=6}] run execute as @e[tag=is_hooking,scores={cooldown=6}] at @s run tag @s remove is_hooking
 
 #Run Ability Canceling
 execute if entity @e[tag=charge,tag=tokened,scores={cooldown=0}] run execute as @e[tag=charge,tag=tokened,scores={cooldown=0}] at @s run execute unless entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:token/cancel_ability

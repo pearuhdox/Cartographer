@@ -5,9 +5,11 @@
 	"minecraft:chain_command_block",
 	"minecraft:repeating_command_block",
 	"minecraft:structure_block",
+	"minecraft:structure_void",
 	"minecraft:barrier",
     "minecraft:obsidian",
-    "minecraft:water",
+	"minecraft:water",
+	"minecraft:spawner",
     "minecraft:chest"
   ]
 }

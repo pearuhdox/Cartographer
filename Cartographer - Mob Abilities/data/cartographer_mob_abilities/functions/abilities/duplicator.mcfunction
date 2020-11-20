@@ -36,6 +36,10 @@ execute if entity @s[type=zombified_piglin] run summon zombified_piglin ~ ~ ~ {D
 
 execute if entity @s[type=zombified_piglin] run summon zombified_piglin ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
 
+execute if entity @s[type=piglin] run summon piglin ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
+
+execute if entity @s[type=piglin] run summon piglin ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
+
 execute if entity @s[type=vindicator] run summon vindicator ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
 
 execute if entity @s[type=vindicator] run summon vindicator ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
@@ -43,6 +47,18 @@ execute if entity @s[type=vindicator] run summon vindicator ~ ~ ~ {DeathLootTabl
 execute if entity @s[type=pillager] run summon pillager ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
 
 execute if entity @s[type=pillager] run summon pillager ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
+
+execute if entity @s[type=creeper] run summon creeper ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
+
+execute if entity @s[type=creeper] run summon creeper ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
+
+execute if entity @s[type=spider] run summon spider ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
+
+execute if entity @s[type=spider] run summon spider ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
+
+execute if entity @s[type=pillager] run summon cave_spider ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
+
+execute if entity @s[type=pillager] run summon cave_spider ~ ~ ~ {DeathLootTable:"nothing",Tags:["duplicate","has_active"]}
 
 execute as @e[tag=duplicate,distance=..1] at @s run data modify entity @s ArmorItems set from entity @e[tag=duplicator,distance=..1,limit=1] ArmorItems
 

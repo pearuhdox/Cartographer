@@ -1,1 +1,1 @@
-tellraw @a {"text":" - Custom Enchantments (v1.1)","color":"aqua","bold":false,"italic":false,"hoverEvent":{"action":"show_text","value":[{"text":"Adds over 20 custom enchantments for weapons, armor, and held items."}]}}
+tellraw @a [{"text":"❱ ","color":"#FFE0A3"},{"text":"Custom Enchantments (V1.2)","color":"#8AFFEB","hoverEvent":{"action":"show_text","contents":[{"text":"Adds over 50 new custom enchantments for weapons, tools, armor, and more!","color":"#FFE0A3","italic":true}]}},{"text":" installed!","color":"#FFE0A3"}]

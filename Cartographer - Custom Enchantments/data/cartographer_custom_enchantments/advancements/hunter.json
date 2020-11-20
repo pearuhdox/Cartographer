@@ -67,7 +67,7 @@
         },
         "description": {
             "color": "white",
-            "text": "This weapon deals 2/5/7/10/12 (based on level) bonus damage to \"monstrous\" mobs: [Creeper, Blaze, Enderman, Guardian, Elder Guardian]"
+            "text": "This weapon deals 2.5 bonus damage per level to \"monstrous\" mobs: [Blaze, Creeper, Enderman, Piglin, Guardian, Elder Guardian, Shulker]"
         },
         "icon": {
             "item": "minecraft:creeper_head"

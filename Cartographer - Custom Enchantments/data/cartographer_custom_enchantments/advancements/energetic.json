@@ -38,7 +38,7 @@
         },
         "description": {
             "color": "white",
-            "text": "When the holder or wearer kills a mob, they gain 2 seconds of Haste I per level, up to 12 seconds."
+            "text": "When the holder or wearer kills a mob, they gain Haste I. For up to 2 levels of Energetic, receive 5 seconds per level. Each additional level provides 1 less second (Capping at 20 seconds)."
         },
         "icon": {
             "item": "minecraft:honeycomb"

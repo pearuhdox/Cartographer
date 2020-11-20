@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When you break a spawner with this tool, deal 2 damage per level to enemies within 10 blocks.",
+            "text": "When you break a spawner with this tool, deal 3 damage per level to enemies within 8 blocks.",
             "color": "white"
         },
         "icon": {

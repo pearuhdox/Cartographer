@@ -1,0 +1,11 @@
+summon armor_stand ^ ^ ^0.5 {Tags:["vector"],NoGravity:1,Invisible:1,Marker:1,Small:1}
+execute as @e[type=armor_stand,tag=vector,limit=1,sort=nearest] at @s run tp @s ~ ~-0.3 ~
+
+# Pushes a mob based on a given existing vector armor stand.
+execute as @s at @s run function cartographer_core:helper/vector
+
+execute store result entity @s Motion[0] double 0.1 run scoreboard players get @s vectorX
+execute store result entity @s Motion[1] double 0.1 run scoreboard players get @s vectorY
+execute store result entity @s Motion[2] double 0.1 run scoreboard players get @s vectorZ
+
+kill @e[type=armor_stand,tag=vector]

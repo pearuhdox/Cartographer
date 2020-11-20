@@ -13,7 +13,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Killing an enemy with this weapon has a 25% chance per level to evoke claws from the ground, which damage nearby foes."
+            "text": "Killing an enemy with this weapon creates fangs which seek out mobs. Each level grants one additional path of fangs (max of 3 paths)."
         },
         "icon": {
             "item": "minecraft:shears"

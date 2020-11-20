@@ -13,3 +13,5 @@ execute as @a[distance=..16] at @s run playsound minecraft:entity.ender_dragon.g
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 scoreboard players set @a[distance=..20] cooldown 3
 tag @s remove tokened
+
+kill @e[type=armor_stand,tag=charge_marker]

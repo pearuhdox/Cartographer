@@ -2,5 +2,7 @@ execute if entity @e[scores={effect_bleed=1..}] run execute as @e[scores={effect
 
 execute if entity @e[scores={effect_shocked=1..}] run execute as @e[scores={effect_shocked=1..}] at @s run function cartographer_custom_statuses:effects/shocked
 
+execute if entity @e[scores={effect_cloaked=1..}] run execute as @e[scores={effect_cloaked=1..}] at @s run function cartographer_custom_statuses:effects/cloaked
+
 
 schedule function cartographer_custom_statuses:loop/1_second/base 1s

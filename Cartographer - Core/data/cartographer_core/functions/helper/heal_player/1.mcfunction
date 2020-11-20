@@ -1,1 +1,1 @@
-effect give @s minecraft:regeneration 1 2 true
+summon area_effect_cloud ~ ~ ~ {Particle:"ash",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0f,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:10b,Amplifier:7b,Duration:1}]}
