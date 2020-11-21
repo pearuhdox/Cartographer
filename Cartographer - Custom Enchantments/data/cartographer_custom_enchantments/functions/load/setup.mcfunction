@@ -165,10 +165,10 @@ scoreboard players set @a helper_inf_cool 0
 #Place extra shulker boxes for Custom Enchantments
 
 #Auto Charge
-setblock 4206901 0 4206900 shulker_box
+setblock 4206901 0 4206900 purple_shulker_box
 
 #Repeating
-setblock 4206900 0 4206901 shulker_box
+setblock 4206900 0 4206901 purple_shulker_box
 
 #Start the initial run to calculate what custom enchantments the player has.
 
