@@ -75,6 +75,8 @@ Core:
 - Core has additional push functions for knockback events of varying degrees. These are very complex and hard to use outside of Cartographer (you're welcome to try) at least for now.
 - Used to apply knockback to a couple new things at different amounts.
 
+- Cartographer now uses Purple Shulker Boxes for its Shulker Box trick mechanics. This is to help prevent it from causing issues with other mechanics in maps made by other mappers.
+
 Custom Enchantments:
 
 - Eruption damage has been increased to 3/6/9/12/15 damage per level (was 2/4/6/8/10).
