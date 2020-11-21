@@ -19,5 +19,6 @@ execute if entity @e[tag=active_mimic,tag=!enraged,scores={mimic_health=..60}] r
 execute if entity @e[type=item,nbt={Item:{tag:{MimicDeath:1}}}] run execute as @e[type=item,nbt={Item:{tag:{MimicDeath:1}}}] at @s run function cartographer_mimics:mimic/death
 
 execute as @e[type=armor_stand,tag=mimic_loot_tracker] at @s run data merge block ~1 ~-1 ~ {TransferCooldown:0}
+execute as @e[type=armor_stand,tag=mimic_loot_tracker] at @s run data merge block ~1 ~-2 ~ {TransferCooldown:32767}
 
 schedule function cartographer_mimics:loop/tick/base 1t
