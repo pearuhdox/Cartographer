@@ -74,9 +74,10 @@ Core:
 
 - Core has additional push functions for knockback events of varying degrees. These are very complex and hard to use outside of Cartographer (you're welcome to try) at least for now.
 - Used to apply knockback to a couple new things at different amounts.
+- Core now has a "projectile" tag. Currently contains arrows and tridents, and is used to help optimize some functions.
 
 - Cartographer now uses Purple Shulker Boxes for its Shulker Box trick mechanics. This is to help prevent it from causing issues with other mechanics in maps made by other mappers.
-
+  - This change is automatically made on reload. A user should not have to do anything.
 Custom Enchantments:
 
 - Eruption damage has been increased to 3/6/9/12/15 damage per level (was 2/4/6/8/10).
@@ -101,6 +102,10 @@ Custom Enchantments:
 - Lifesteal creates a sound when it triggers.
 
 Mob Abilities:
+- All mob abilities only work on hostile mobs. While this is a somewhat of a restrictive change, it is being done for performance reasons.
+  - All mobs that can use mob abilities are controlled directly by Core's hostile mob tag.
+  - You can modify this tag to extend abilities to other mobs, be warned that all Cartographer systems will count them as "hostile".
+
 - Helper Difficulty is now directly set based on the world's difficulty. The feature to set it to a custom value will likely return in the future.
 - This is to make using Cartographer a bit more user friendly. Gone are the days of setting a random score to a number which you have no idea what it does!
 
@@ -116,9 +121,13 @@ Mob Abilities:
 
 - Healer and Augmenter now apply Slowness VII (immobilizes ground based mobs) when charging.
 
-Bug Fixes:
+Bug Fixes and Optimizations:
 - New Shulker Boxes for Custom Enchantments to separate Repeating, Auto Charge, and Infinity further. This should eliminate (or at least drastically reduce) the chance of items being replaced improperly.
 - Fixed a bug where Repeating only fired the first round of bolts as Multishot, if a Crossbow also had Multishot.
+- About 50% of the @e calls have been removed from the pack. (Ballparking 100 separate calls)
+  - What does this mean? The pack should perform better under high stress environments.
+  - This likely won't be noticeable for casual use, but it should hopefully mean that in extreme cases, Cartographer doesn't affect your tps.
+  - This isn't a guarantee Cartographer cannot affect tps, all large datapacks can. But this will help edge cases a bit.
 
 Version Beta 1.1 - The Shock and Awe Update (yeah I'm gonna give updates cutesy names, cause you know, why not)
 

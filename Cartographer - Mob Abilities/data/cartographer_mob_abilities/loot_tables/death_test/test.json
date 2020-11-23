@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{PartingGift:1}"
+              "tag": "{PartingGift:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -46,7 +46,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CorpseCrawler:1}"
+              "tag": "{CorpseCrawler:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -83,7 +83,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CorpseCrawlerHusk:1}"
+              "tag": "{CorpseCrawlerHusk:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -120,7 +120,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CorpseCrawlerDrowned:1}"
+              "tag": "{CorpseCrawlerDrowned:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -157,7 +157,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CorpseCrawlerPiglin:1}"
+              "tag": "{CorpseCrawlerPiglin:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -194,7 +194,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CorpseCrawlerZoglin:1}"
+              "tag": "{CorpseCrawlerZoglin:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -231,7 +231,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CorpseCrawlerBee:1}"
+              "tag": "{CorpseCrawlerBee:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -268,7 +268,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Pyromania:1}"
+              "tag": "{Pyromania:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -305,7 +305,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Spectral:1}"
+              "tag": "{Spectral:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -342,7 +342,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{BrutalBlood:1}"
+              "tag": "{BrutalBlood:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -379,7 +379,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{RelentlessBlood:1}"
+              "tag": "{RelentlessBlood:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -416,7 +416,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{DeviousBlood:1}"
+              "tag": "{DeviousBlood:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -453,7 +453,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{SacrificialBlood:1}"
+              "tag": "{SacrificialBlood:1,DeathEffect:1}"
             }
           ],
           "conditions": [
@@ -490,7 +490,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Exalted:1}"
+              "tag": "{Exalted:1,DeathEffect:1}"
             }
           ],
           "conditions": [

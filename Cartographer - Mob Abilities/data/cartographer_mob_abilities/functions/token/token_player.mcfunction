@@ -5,15 +5,12 @@
 #If an enemy is holding a token within 20 blocks (tag=tokened) then players cannot regenerate tokens.
 
 #Easy
-execute unless entity @e[distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..0,helper_diff=1}] helper_tokens 1
+execute unless entity @e[type=#cartographer_core:hostile,distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..0,helper_diff=1}] helper_tokens 1
 #Normal
-execute unless entity @e[distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..1,helper_diff=2}] helper_tokens 2
+execute unless entity @e[type=#cartographer_core:hostile,distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..1,helper_diff=2}] helper_tokens 2
 #Hard
-execute unless entity @e[distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..2,helper_diff=3}] helper_tokens 3
+execute unless entity @e[type=#cartographer_core:hostile,distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..2,helper_diff=3}] helper_tokens 3
 #Expert
-execute unless entity @e[distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..3,helper_diff=4}] helper_tokens 4
+execute unless entity @e[type=#cartographer_core:hostile,distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..3,helper_diff=4}] helper_tokens 4
 #Nightmare
-execute unless entity @e[distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..4,helper_diff=5}] helper_tokens 5
-
-#Remove a cooldown point from the player.
-scoreboard players remove @s[scores={cooldown=1..}] cooldown 1
+execute unless entity @e[type=#cartographer_core:hostile,distance=..20,tag=tokened] run scoreboard players set @s[scores={cooldown=0,helper_tokens=..4,helper_diff=5}] helper_tokens 5

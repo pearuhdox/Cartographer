@@ -165,21 +165,18 @@ scoreboard players set @a helper_inf_cool 0
 #Place extra shulker boxes for Custom Enchantments
 
 #Auto Charge
-setblock 4206901 0 4206900 purple_shulker_box
+setblock 4206901 0 4206900 purple_shulker_box replace
 
 #Repeating
-setblock 4206900 0 4206901 purple_shulker_box
+setblock 4206900 0 4206901 purple_shulker_box replace
 
 #Start the initial run to calculate what custom enchantments the player has.
-
 function cartographer_custom_enchantments:loop/calc_enchant/base
 
-#Start initial required looping to trigger enchant effects.
-
+#Start initial required looping to trigger enchant effects. Offset 1 second effects by 30 ticks.
 function cartographer_custom_enchantments:loop/tick/base
 schedule function cartographer_custom_enchantments:loop/1_second/base 30t
 schedule function cartographer_custom_enchantments:loop/3_second/base 30t
 
 #Give the players a tag for the load message.
-
 tag @a add custom_enchants

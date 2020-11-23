@@ -11,7 +11,7 @@ scoreboard players set @s randomSalt 100
 
 #Place Shulker Boxes needed for Shulker Box trick.
 forceload add 4206900 4206900
-setblock 4206900 0 4206900 purple_shulker_box
+setblock 4206900 0 4206900 purple_shulker_box replace
 
 #Create vector related scoreboards
 scoreboard objectives add vectorX dummy
