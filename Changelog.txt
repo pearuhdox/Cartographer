@@ -64,7 +64,7 @@ Changes:
 
 Core:
 - The reload message has received a rather hefty overhaul. Shoutouts to RockNRed for aesthetic ideas and assistance!
-- Cartographer's reload message now links to its Github page, and to an options menu.
+- Cartographer's reload message now links to its Github page, wiki, and to an options menu.
 - Currently the only option that exists is to make the reload message less long. More to come soon!
 
 - Helper Healing functions have been reworked to all use area effect clouds instead of Regeneration effect commands. This makes healing immediate rather than very slightly delayed.
@@ -78,6 +78,7 @@ Core:
 
 - Cartographer now uses Purple Shulker Boxes for its Shulker Box trick mechanics. This is to help prevent it from causing issues with other mechanics in maps made by other mappers.
   - This change is automatically made on reload. A user should not have to do anything.
+
 Custom Enchantments:
 
 - Eruption damage has been increased to 3/6/9/12/15 damage per level (was 2/4/6/8/10).
@@ -97,28 +98,31 @@ Custom Enchantments:
   - Level still caps at 3 (3 paths of fangs to nearby mobs).
 
 - Regeneration now makes heart particle effects when it heals you.
-
 - Lifesteal makes heart particle effects when it heals you.
 - Lifesteal creates a sound when it triggers.
+
+- Point Blank creates sound and particles when fired.
+- Sharpshot creates sound and particles when fired.
 
 Mob Abilities:
 - All mob abilities only work on hostile mobs. While this is a somewhat of a restrictive change, it is being done for performance reasons.
   - All mobs that can use mob abilities are controlled directly by Core's hostile mob tag.
   - You can modify this tag to extend abilities to other mobs, be warned that all Cartographer systems will count them as "hostile".
 
+- The exception to this is Quiver, which now only works on skeleton variants (controlled by the minecraft:skeletons tag)
+  - Pillagers and Piglins behave... weirdly with tipped arrows.
+  - This is also to help with performance.
+  - This will likely be unrestricted when Piglins and Pillagers properly interact with singular tipped arrows.
+
 - Helper Difficulty is now directly set based on the world's difficulty. The feature to set it to a custom value will likely return in the future.
-- This is to make using Cartographer a bit more user friendly. Gone are the days of setting a random score to a number which you have no idea what it does!
+  - This is to make using Cartographer a bit more user friendly.
+  - Gone are the days of setting a random score to a number which you have no idea what it does!
 
 - Charge now uses the player's location instead of simply moving the mob forward. This makes Charge more accurate to player position and improves interactions on some mobs.
-
 - Laser now uses an armor stand to track. This makes the skill more accurate and removes a couple bugs involving height differences between mobs and players.
-
 - Corpse Crawler now has variations for zombies, husks, drowned, piglins, zoglins, and bees. Each version's stats are near identical to each others.
-
 - Duplicator now works on Piglins, Pillagers, Creepers, Spiders, and Cave Spiders.
-
 - Breaker no longer breaks spawners.
-
 - Healer and Augmenter now apply Slowness VII (immobilizes ground based mobs) when charging.
 
 Bug Fixes and Optimizations:
