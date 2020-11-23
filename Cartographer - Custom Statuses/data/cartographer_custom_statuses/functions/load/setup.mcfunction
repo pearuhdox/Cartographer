@@ -17,7 +17,7 @@ scoreboard objectives add effect_cloaked dummy
 #Start initial required looping to trigger enchant effects.
 
 function cartographer_custom_statuses:loop/tick/base
-function cartographer_custom_statuses:loop/1_second/base
+schedule function cartographer_custom_statuses:loop/1_second/base 30t
 
 
 #Give the players a tag for the load message.

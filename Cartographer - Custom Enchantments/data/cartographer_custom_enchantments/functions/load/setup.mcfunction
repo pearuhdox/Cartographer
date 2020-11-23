@@ -177,8 +177,8 @@ function cartographer_custom_enchantments:loop/calc_enchant/base
 #Start initial required looping to trigger enchant effects.
 
 function cartographer_custom_enchantments:loop/tick/base
-function cartographer_custom_enchantments:loop/1_second/base
-function cartographer_custom_enchantments:loop/3_second/base
+schedule function cartographer_custom_enchantments:loop/1_second/base 30t
+schedule function cartographer_custom_enchantments:loop/3_second/base 30t
 
 #Give the players a tag for the load message.
 
