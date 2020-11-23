@@ -201,20 +201,17 @@ function cartographer_custom_enchantments:loop/tick/reset
 
 # PROJECTILE SCORE UPDATES
 
-scoreboard players add @e[scores={helper_lifetime=1..},type=arrow,nbt=!{inGround:1b}] helper_lifetime 1
+scoreboard players add @e[type=arrow,scores={helper_lifetime=1..},nbt=!{inGround:1b}] helper_lifetime 1
+scoreboard players add @e[type=trident,scores={helper_lifetime=1..},nbt=!{inGround:1b}] helper_lifetime 1
+
 scoreboard players add @e[scores={helper_lifetime=1..},type=armor_stand,tag=hydraul_stopper] helper_lifetime 1
-execute as @e[type=arrow,scores={point_blank=1..,helper_lifetime=2..}] run function cartographer_custom_enchantments:loop/enchant_effects/point_blank_arrow
-execute as @e[type=trident,scores={tempest=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/tempest_trident
-execute as @e[type=trident,scores={ricochet=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/ricochet_trident
-execute as @e[type=arrow,scores={sharpshot=1..,helper_lifetime=2..}] run function cartographer_custom_enchantments:loop/enchant_effects/sharpshot_arrow
-execute as @e[type=trident,scores={current=1}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/current_trident
 
-execute as @e[type=arrow,scores={helper_lifetime=1..},nbt={inGround:1b,CustomPotionEffects:[{Id:30b}]},tag=effect_arrow] at @s run function cartographer_custom_enchantments:loop/enchant_effects/effect_arrow_volatile
-execute as @e[type=arrow,scores={helper_lifetime=1..},nbt={inGround:1b},tag=effect_arrow] run function cartographer_custom_enchantments:loop/enchant_effects/effect_arrow_break
+execute as @e[type=arrow,scores={helper_lifetime=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/process_projectile
+execute as @e[type=trident,scores={helper_lifetime=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/process_projectile
 
-kill @e[tag=hydraul_stopper,type=armor_stand,scores={helper_lifetime=3..}]
+execute as @a at @s run kill @e[type=armor_stand,distance=..3,tag=hydraul_stopper,scores={helper_lifetime=3..}]
 tag @e[tag=bounce] remove bounce
-execute as @e[tag=current_drag] at @s run execute unless entity @e[type=trident,scores={current=1},distance=..5] run tag @s remove current_drag
+execute as @e[type=#cartographer_core:hostile,tag=current_drag] at @s run execute unless entity @e[type=trident,scores={current=1},distance=..5] run tag @s remove current_drag
 
 
 schedule function cartographer_custom_enchantments:loop/tick/base 1t
