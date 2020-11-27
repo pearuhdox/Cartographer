@@ -15,7 +15,8 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy pauses, and after a delay, launches a fireball at the player. The fireball does up to 10 damage in a small explosion."
+            "text": "The enemy pauses, and after a delay, launches a fireball at the player. The fireball does up to 10 damage in a small explosion.",
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:fire_charge"
@@ -25,5 +26,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/fireball"
+      },
     "parent": "cartographer_mob_abilities:active_abilities"
 }

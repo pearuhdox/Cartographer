@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Arrows gain +50% damage per level per second they travel."
+            "text": "Arrows fired from this weapon gain +50% damage per level per second they travel."
         },
         "icon": {
             "item": "minecraft:bow"
@@ -55,5 +55,8 @@
             "find3"
         ]
     ],
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/sharpshot"
+      },
     "parent": "cartographer_custom_enchantments:point_blank"
 }

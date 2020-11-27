@@ -54,5 +54,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/echo"
+      },
     "parent": "cartographer_custom_enchantments:melee_tree"
 }

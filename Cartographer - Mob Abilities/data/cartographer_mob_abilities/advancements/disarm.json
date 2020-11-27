@@ -26,5 +26,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/disarm"
+      },
     "parent": "cartographer_mob_abilities:charge"
 }

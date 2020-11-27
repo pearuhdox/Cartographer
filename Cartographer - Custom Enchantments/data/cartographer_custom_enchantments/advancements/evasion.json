@@ -77,5 +77,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/evasion"
+      },
     "parent": "cartographer_custom_enchantments:passive_tree"
 }

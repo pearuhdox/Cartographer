@@ -1,0 +1,62 @@
+{
+    "display": {
+        "title": {
+            "text": "Executioner              ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "If a melee attack from this weapon would leave a mob at 10% health, it finishes them off. Additional levels increase the threshold by 7.5%."
+        },
+        "icon": {
+            "item": "minecraft:netherite_axe"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Executioner:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Executioner:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Executioner:3}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/executioner"
+      },
+    "parent": "cartographer_custom_enchantments:duelist"
+}

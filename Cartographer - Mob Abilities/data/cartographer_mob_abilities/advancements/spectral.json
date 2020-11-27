@@ -15,7 +15,8 @@
             "color": "white"
         },
         "description": {
-            "text": "When the enemy dies, a Spectre is summoned where they die."
+            "text": "When the enemy dies, a Spectre is summoned where they die.",
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:wither_skeleton_skull"
@@ -25,5 +26,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/spectral"
+      },
     "parent": "cartographer_mob_abilities:exalted"
 }

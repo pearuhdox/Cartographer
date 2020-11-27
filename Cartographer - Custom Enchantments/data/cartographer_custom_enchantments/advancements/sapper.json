@@ -55,7 +55,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When you break a spawner with this tool, heal 1 health per level.",
+            "text": "When the holder breaks a spawner with this tool, heal 1 health per level.",
             "color": "white"
         },
         "icon": {
@@ -66,5 +66,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/sapper"
+      },
     "parent": "cartographer_custom_enchantments:pickaxe_tree"
 }

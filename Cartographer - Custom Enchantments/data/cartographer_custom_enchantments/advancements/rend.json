@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Arrows from this weapon inflict Bleeding for 5 seconds. If the target is already Bleeding, the duration is increased by 1 second, and the potency is increased."
+            "text": "Normal arrows from this weapon inflict Bleeding for 5 seconds. If the target is already Bleeding, the duration is increased by 1 second, and the potency is increased."
         },
         "icon": {
             "item": "minecraft:redstone"
@@ -28,5 +28,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/rend"
+      },
     "parent": "cartographer_custom_enchantments:pin_down"
 }

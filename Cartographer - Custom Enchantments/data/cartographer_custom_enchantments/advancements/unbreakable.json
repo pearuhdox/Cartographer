@@ -28,5 +28,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/unbreakable"
+      },
     "parent": "cartographer_custom_enchantments:infinity"
 }

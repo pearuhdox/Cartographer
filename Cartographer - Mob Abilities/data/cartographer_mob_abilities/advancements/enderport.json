@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Enderport                   ",
+            "color": "white"
+        },
+        "description": {
+            "text": "When near a flying projectile, this mob will teleport away, gaining 8 seconds of Speed II and Strength I.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:ender_pearl"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"enderport\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/enderport"
+      },
+    "parent": "cartographer_mob_abilities:breaker"
+}

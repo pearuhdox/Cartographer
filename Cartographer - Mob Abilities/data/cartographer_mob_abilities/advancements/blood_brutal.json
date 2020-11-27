@@ -26,5 +26,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/brutal_blood"
+      },
     "parent": "cartographer_mob_abilities:death_abilities"
 }

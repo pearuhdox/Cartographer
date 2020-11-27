@@ -28,5 +28,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/current"
+      },
     "parent": "cartographer_custom_enchantments:ranged_tree"
 }

@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Cloaker                   ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy charges up, and after a long delay, shrouds nearby enemies with 12 seconds of Cloaked."
+        },
+        "icon": {
+            "item": "minecraft:phantom_membrane"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"cloaker\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/cloaker"
+      },
+    "parent": "cartographer_mob_abilities:augmenter"
+}

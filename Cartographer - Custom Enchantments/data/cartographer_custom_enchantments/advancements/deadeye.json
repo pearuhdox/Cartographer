@@ -1,0 +1,40 @@
+{
+    "requirements": [
+        [
+            "find"
+        ]
+    ],
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Deadeye:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Deadeye                ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "This crossbow fires instant traveling bolts that auto lock on nearby enemies instead of arrows, doing 10 damage."
+        },
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/deadeye"
+      },
+    "parent": "cartographer_custom_enchantments:repeater"
+}

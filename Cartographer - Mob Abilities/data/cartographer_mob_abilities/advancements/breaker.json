@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "Periodically, this mob breaks blocks around it. It cannot break indestructible blocks.",
+            "text": "Periodically, this mob breaks blocks around it. It cannot break indestructible blocks or mob spawners.",
             "color": "white"
         },
         "icon": {
@@ -26,5 +26,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/breaker"
+      },
     "parent": "cartographer_mob_abilities:passive_abilities"
 }

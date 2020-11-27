@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "When you hit a mob, this weapon inflicts Shocked for 2*N + 1 seconds (where N is enchantment level)."
+            "text": "When you hit a mob, this weapon inflicts Shocked for 3 seconds. Each additional level increases the duration by 2 seconds."
         },
         "icon": {
             "item": "minecraft:soul_lantern"
@@ -55,5 +55,8 @@
             "find3"
         ]
     ],
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/overload"
+      },
     "parent": "cartographer_custom_enchantments:frostbite"
 }

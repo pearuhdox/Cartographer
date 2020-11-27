@@ -20,7 +20,7 @@ scoreboard objectives add vectorZ dummy
 
 #Schedule the loading message.
 
-schedule function cartographer_core:load/load_message 1t
+schedule function cartographer_core:load/load_message 5t
 schedule function cartographer_core:load/force_load 1t
 
 #Schedule core tick clock.

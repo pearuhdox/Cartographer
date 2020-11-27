@@ -26,5 +26,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/webshot"
+      },
     "parent": "cartographer_mob_abilities:trapper"
 }

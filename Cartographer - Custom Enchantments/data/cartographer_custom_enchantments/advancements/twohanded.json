@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "When in the hotbar, this item packages and stores up any item placed in your offhand (rendering it ineffective)."
+            "text": "When in the hotbar, this item packages and stores up any item placed in your offhand (rendering it ineffective). The package can be opened by right clicking it on the ground."
         },
         "icon": {
             "item": "minecraft:stone_axe"
@@ -28,5 +28,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/two_handed"
+      },
     "parent": "cartographer_custom_enchantments:curse_tree"
 }

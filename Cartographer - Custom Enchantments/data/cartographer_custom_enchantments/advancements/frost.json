@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "Arrows from this weapon inflict Slowness 2 for 5 seconds.",
+            "text": "Normal arrows from this weapon inflict Slowness 2 for 5 seconds.",
             "color": "white"
         },
         "icon": {
@@ -28,5 +28,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/frost"
+      },
     "parent": "cartographer_custom_enchantments:conductive"
 }

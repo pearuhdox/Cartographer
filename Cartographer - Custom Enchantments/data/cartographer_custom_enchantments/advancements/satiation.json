@@ -55,5 +55,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/satiation"
+      },
     "parent": "cartographer_custom_enchantments:lifesteal"
 }

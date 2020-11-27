@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When the enemy dies, 3 Corpse Crawler enemies are summoned where they die.",
+            "text": "When the enemy dies, 3 Corpse Crawler enemies are summoned where they die. [Either Zombie, Husk, Drowned, Piglin, Hoglin, or Bees]",
             "color": "white"
         },
         "icon": {
@@ -26,5 +26,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/oorpse_crawler"
+      },
     "parent": "cartographer_mob_abilities:death_abilities"
 }

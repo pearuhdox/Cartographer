@@ -50,8 +50,11 @@ Mob Abilities:
   - Has a delay, after which, wither skulls are rained down around players.
   - Very destructive!
   - While creating the skull rain, mob is unable to attack or move.
-- A new passive ability has been added: Permacloak
+- 2 new passive abilities have been added: Permacloak
   - A permacloaked mob is permanently "Cloaked". (Cloak is re-applied every 5 seconds for 5 seconds.)
+- The other is Enderport:
+  - When an arrow or trident passes near the mob, it warps out of the way to safety.
+  - It gains Speed 2 and Strength 1 for 8 seconds when it does, to catch back up to you!
 
 Custom Statuses:
 - Added a new positive status effect for enemies: "Cloaked"

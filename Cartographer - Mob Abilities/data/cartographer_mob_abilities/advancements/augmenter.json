@@ -15,7 +15,8 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy charges up power, and after a delay, applies Speed I, Strength I, and Resistance I to the three closest mobs to it."
+            "text": "The enemy charges up power, and after a delay, applies Speed I, Strength I, and Resistance I to the three closest mobs to it.",
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:lingering_potion"
@@ -25,5 +26,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/augmenter"
+      },
     "parent": "cartographer_mob_abilities:active_abilities"
 }

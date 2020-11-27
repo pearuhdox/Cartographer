@@ -28,5 +28,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/malevolence"
+      },
     "parent": "cartographer_custom_enchantments:irreparability"
 }

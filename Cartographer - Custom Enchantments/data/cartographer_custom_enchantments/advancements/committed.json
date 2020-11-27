@@ -55,7 +55,7 @@
             "color": "white"
         },
         "description": {
-            "text": "This weapon inflicts Vulnerability N for 3 seconds, where N is the enchantment level.",
+            "text": "This weapon inflicts Vulnerability for 3 seconds on melee attacks. The Vulnerability potency is equal to the enchantment level.",
             "color": "white"
         },
         "icon": {
@@ -66,5 +66,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/committed"
+      },
     "parent": "cartographer_custom_enchantments:melee_tree"
 }

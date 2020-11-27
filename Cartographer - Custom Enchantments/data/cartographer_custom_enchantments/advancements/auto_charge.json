@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "When empty and in your hotbar or offhand, this crossbow will automatically load itself (for free) when you kill a mob."
+            "text": "When empty and in your hotbar or offhand, this crossbow will automatically load itself (for free) with a normal arrow when you kill a mob."
         },
         "icon": {
             "item": "minecraft:crossbow"
@@ -28,5 +28,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/auto_charge"
+      },
     "parent": "cartographer_custom_enchantments:ranged_tree"
 }

@@ -55,5 +55,8 @@
             "find3"
         ]
     ],
+    "rewards": {
+      "function": "cartographer_custom_enchantments:descriptions/adrenaline"
+    },
     "parent": "cartographer_custom_enchantments:passive_tree"
 }

@@ -71,6 +71,10 @@ execute as @a[predicate=cartographer_custom_enchantments:energetic/mainhand_1] r
 execute as @a[predicate=cartographer_custom_enchantments:energetic/mainhand_2] run scoreboard players add @s energetic 2
 execute as @a[predicate=cartographer_custom_enchantments:energetic/mainhand_3] run scoreboard players add @s energetic 3
 
+execute as @a[predicate=cartographer_custom_enchantments:executioner/mainhand_1] run scoreboard players add @s executioner 1
+execute as @a[predicate=cartographer_custom_enchantments:executioner/mainhand_2] run scoreboard players add @s executioner 2
+execute as @a[predicate=cartographer_custom_enchantments:executioner/mainhand_3] run scoreboard players add @s executioner 3
+
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/mainhand_1] run scoreboard players add @s frenzy 1
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/mainhand_2] run scoreboard players add @s frenzy 2
 execute as @a[predicate=cartographer_custom_enchantments:frenzy/mainhand_3] run scoreboard players add @s frenzy 3
@@ -100,6 +104,13 @@ execute as @a[predicate=cartographer_custom_enchantments:pin_down/mainhand_1] ru
 execute as @a[predicate=cartographer_custom_enchantments:point_blank/mainhand_1] run scoreboard players add @s point_blank 1
 execute as @a[predicate=cartographer_custom_enchantments:point_blank/mainhand_2] run scoreboard players add @s point_blank 2
 execute as @a[predicate=cartographer_custom_enchantments:point_blank/mainhand_3] run scoreboard players add @s point_blank 3
+
+execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_1] run scoreboard players set @s regicide 1
+execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_2] run scoreboard players set @s regicide 2
+execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_3] run scoreboard players set @s regicide 3
+execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_4] run scoreboard players set @s regicide 4
+execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_5] run scoreboard players set @s regicide 5
+
 
 execute as @a[predicate=cartographer_custom_enchantments:repeating/mainhand_1] run scoreboard players set @s repeating 1
 execute as @a[predicate=cartographer_custom_enchantments:repeating/mainhand_2] run scoreboard players set @s repeating 2

@@ -15,10 +15,6 @@ fill 4206906 0 4206905 4206906 255 4206905 air
 kill @e[tag=mimic_loot_tracker]
 summon armor_stand 4206905 0.5 4206905 {NoGravity:1b,Small:0b,Tags:["mimic_loot_tracker"]}
 
-#Schedule the loading message.
-
-tag @a add mimics
-
 #Run loops
 function cartographer_mimics:loop/tick/base
 function cartographer_mimics:loop/6_second/base

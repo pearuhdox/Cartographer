@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When you hit a mob, this weapon inflicts 5 seconds of Slowness X, where X is the level.",
+            "text": "This weapon inflicts 5 seconds of Slowness on melee attacks. The Slowness potency is equal to the enchant level.",
             "color": "white"
         },
         "icon": {
@@ -77,5 +77,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/frostbite"
+      },
     "parent": "cartographer_custom_enchantments:decay"
 }

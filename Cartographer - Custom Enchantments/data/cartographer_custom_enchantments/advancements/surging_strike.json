@@ -55,5 +55,8 @@
             "find3"
         ]
     ],
-    "parent": "cartographer_custom_enchantments:hunter"
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/surging_strike"
+      },
+    "parent": "cartographer_custom_enchantments:regicide"
 }

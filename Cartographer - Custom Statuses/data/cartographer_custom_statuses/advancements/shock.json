@@ -65,6 +65,8 @@
             "find3",
             "find4"
         ]
-    ],
+    ],"rewards": {
+        "function": "cartographer_custom_statuses:descriptions/shocked"
+      },
     "parent": "cartographer_custom_statuses:root"
 }

@@ -1,0 +1,59 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:gray_concrete"
+      },
+      "title": {
+        "text": "Cloaked                ",
+        "color": "white"
+      },
+      "description": {
+        "text": "An enemy with Cloaked is invisible. Additionally, they create haunting noises and particles to hint their presence. When a Cloaked enemy takes damage, Cloak duration is reduced by 3 seconds.",
+        "color": "white"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_custom_statuses:root",
+    "criteria": {
+      "found": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"permacloak\"]}"
+              }
+            }
+          ]
+        }
+      },
+      "find1": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"cloaker\"]}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "find1",
+        "found"
+      ]
+    ],
+    "rewards": {
+      "function": "cartographer_custom_statuses:descriptions/cloaked"
+    }
+  }

@@ -45,7 +45,7 @@
         },
         "description": {
             "color": "white",
-            "text": "With Evasion, If you would take a fatal hit from a mob, Evasion automatically triggers. You are then granted a \"Volatile Shield\" of 8 health for 8 seconds. If you lose that shielding, it detonates, hurting you. If you kill a mob, the shielding is defused, and you heal equal to the shielding's total. Repeated triggers in succession of Second Wind make the shielding less effective, and more dangerous."
+            "text": "With Evasion, if you would take a fatal hit from a mob, Evasion automatically triggers. You are then granted a \"Volatile Shield\" of 8 health for 8 seconds. If you lose that shielding, it detonates, hurting you. If you kill a mob, the shielding is defused, and you heal equal to the shielding's total. Repeated triggers in succession of Second Wind make the shielding less effective, and more dangerous."
         },
         "icon": {
             "item": "minecraft:yellow_dye"
@@ -55,5 +55,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/second_wind"
+      },
     "parent": "cartographer_custom_enchantments:evasion"
 }

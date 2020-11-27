@@ -37,7 +37,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When you hit a mob, this weapon inflicts Bleeding for 1 + 2*N seconds, where N is enchantment level. If the mob is already Bleeding, it adds 1 second, and increases the potency of Bleeding.",
+            "text": "Melee attacks with this weapon inflicts Bleeding for 1 + 2*N seconds, where N is enchantment level. If the mob is already Bleeding, it adds 1 second, and increases the potency of Bleeding.",
             "color": "white"
         },
         "icon": {
@@ -55,5 +55,8 @@
             "find3"
         ]
     ],
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/vicious"
+      },
     "parent": "cartographer_custom_enchantments:stunning"
 }

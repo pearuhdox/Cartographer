@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "When the holder or wearer kills a mob, restore 1 health per second for X seconds, where X is the level of Lifesteal, and up to 6 health total."
+            "text": "When the holder or wearer kills a mob, instantly restore health equal to your total levels of Lifesteal (up to 6 health total)."
         },
         "icon": {
             "item": "minecraft:wither_skeleton_skull"
@@ -55,5 +55,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/lifesteal"
+      },
     "parent": "cartographer_custom_enchantments:frenzy"
 }

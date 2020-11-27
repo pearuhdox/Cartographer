@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Arrows that hit targets steal 8 seconds of Speed I. Additonal levels steal 8 seconds of Haste N (where N is equal to the current level - 1)."
+            "text": "Arrows that hit targets steal 8 seconds of Speed I. Additonal levels grant Haste for 8 seconds with potency equal to enchant level - 1."
         },
         "icon": {
             "item": "minecraft:scute"
@@ -55,5 +55,8 @@
             "find3"
         ]
     ],
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/tempo_theft"
+      },
     "parent": "cartographer_custom_enchantments:rend"
 }

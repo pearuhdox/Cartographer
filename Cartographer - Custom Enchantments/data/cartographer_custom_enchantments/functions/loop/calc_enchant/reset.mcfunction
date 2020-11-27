@@ -20,6 +20,7 @@ scoreboard players set @a echo 0
 scoreboard players set @a eruption 0
 scoreboard players set @a evasion 0
 scoreboard players set @a evocation 0
+scoreboard players set @a executioner 0
 scoreboard players set @a energetic 0
 scoreboard players set @a frenzy 0
 scoreboard players set @a frostbite 0
@@ -30,6 +31,7 @@ scoreboard players set @a lifesteal 0
 scoreboard players set @a point_blank 0
 scoreboard players set @a pin_down 0
 scoreboard players set @a regeneration 0
+scoreboard players set @a regicide 0
 scoreboard players set @a repeating 0
 scoreboard players set @a rend 0
 scoreboard players set @a[scores={helper_trident=0}] ricochet 0

@@ -77,5 +77,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/tempest"
+      },
     "parent": "cartographer_custom_enchantments:ricochet"
 }

@@ -55,5 +55,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/evocation"
+      },
     "parent": "cartographer_custom_enchantments:echo"
 }

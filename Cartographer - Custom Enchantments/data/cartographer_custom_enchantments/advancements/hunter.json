@@ -67,7 +67,7 @@
         },
         "description": {
             "color": "white",
-            "text": "This weapon deals 2.5 bonus damage per level to \"monstrous\" mobs: [Blaze, Creeper, Enderman, Piglin, Guardian, Elder Guardian, Shulker]"
+            "text": "This weapon deals 2.5 bonus damage per level to \"monstrous\" mobs: [Blaze, Creeper, Enderman, Piglin, Guardian, Elder Guardian, Hoglin, Magma Cube, Slime, Shulker]"
         },
         "icon": {
             "item": "minecraft:creeper_head"
@@ -77,5 +77,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "cartographer_custom_enchantments:duelist"
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/hunter"
+      },
+    "parent": "cartographer_custom_enchantments:executioner"
 }

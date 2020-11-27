@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Permacloak                   ",
+            "color": "white"
+        },
+        "description": {
+            "text": "This mob gains and refreshes Cloaked every 5 seconds.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:phantom_membrane"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"enderport\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/permacloak"
+      },
+    "parent": "cartographer_mob_abilities:enderport"
+}

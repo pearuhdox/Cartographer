@@ -21,7 +21,3 @@ function cartographer_mob_abilities:loop/tick/base
 function cartographer_mob_abilities:loop/1_second/base
 function cartographer_mob_abilities:loop/3_second/base
 function cartographer_mob_abilities:loop/5_second/base
-
-#Give the players a tag for the load message.
-
-tag @a add mob_abilities

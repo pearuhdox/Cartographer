@@ -66,7 +66,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When you hit a mob, this weapon has a 10% chance per level to stun the target for 1 second.",
+            "text": "Melee attacks with this weapon have a 10% chance per level to stun the target for 1 second.",
             "color": "white"
         },
         "icon": {
@@ -77,5 +77,8 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/stunning"
+      },
     "parent": "cartographer_custom_enchantments:overload"
 }

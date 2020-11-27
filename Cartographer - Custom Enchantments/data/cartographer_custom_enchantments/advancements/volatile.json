@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Arrows release fireworks when they hit enemies. Fireworks do 5 damage, and deal an additional 2 damage per additional level."
+            "text": "Normal arrows release fireworks when they hit enemies. Fireworks do 5 damage, and deal an additional 1.5 damage per additional level."
         },
         "icon": {
             "item": "minecraft:firework_rocket"
@@ -55,5 +55,8 @@
             "find3"
         ]
     ],
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/volatile"
+      },
     "parent": "cartographer_custom_enchantments:trueshot"
 }

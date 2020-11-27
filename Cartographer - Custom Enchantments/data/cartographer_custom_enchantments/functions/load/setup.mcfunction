@@ -24,6 +24,7 @@ scoreboard objectives add evocation dummy
 scoreboard objectives add energetic dummy
 scoreboard objectives add eruption dummy
 scoreboard objectives add evasion dummy
+scoreboard objectives add executioner dummy
 scoreboard objectives add frenzy dummy
 scoreboard objectives add frost dummy
 scoreboard objectives add frostbite dummy
@@ -33,6 +34,7 @@ scoreboard objectives add infinity dummy
 scoreboard objectives add lifesteal dummy
 scoreboard objectives add pin_down dummy
 scoreboard objectives add point_blank dummy
+scoreboard objectives add regicide dummy
 scoreboard objectives add repeating dummy
 scoreboard objectives add regeneration dummy
 scoreboard objectives add rend dummy
@@ -92,6 +94,9 @@ scoreboard objectives add helper_spawner minecraft.mined:minecraft.spawner
 scoreboard objectives add helper_lifetime dummy
 scoreboard objectives add helper_deathtime minecraft.custom:minecraft.time_since_death
 scoreboard objectives add helper_sprint minecraft.custom:minecraft.sprint_one_cm
+
+scoreboard objectives add helper_exec_low dummy
+scoreboard objectives add helper_exec_max dummy
 
 scoreboard objectives add helper_fire_bow minecraft.used:minecraft.bow
 scoreboard objectives add helper_fire_cbow minecraft.used:minecraft.crossbow
@@ -177,6 +182,3 @@ function cartographer_custom_enchantments:loop/calc_enchant/base
 function cartographer_custom_enchantments:loop/tick/base
 schedule function cartographer_custom_enchantments:loop/1_second/base 30t
 schedule function cartographer_custom_enchantments:loop/3_second/base 30t
-
-#Give the players a tag for the load message.
-tag @a add custom_enchants

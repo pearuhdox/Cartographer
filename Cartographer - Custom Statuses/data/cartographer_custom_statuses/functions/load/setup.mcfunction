@@ -18,8 +18,3 @@ scoreboard objectives add effect_cloaked dummy
 
 function cartographer_custom_statuses:loop/tick/base
 schedule function cartographer_custom_statuses:loop/1_second/base 30t
-
-
-#Give the players a tag for the load message.
-
-tag @a add custom_statuses

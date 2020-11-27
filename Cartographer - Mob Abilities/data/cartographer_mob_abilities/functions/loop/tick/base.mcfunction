@@ -20,6 +20,9 @@ execute as @e[type=armor_stand,tag=fireball_projectile] at @s run function carto
 #Trap Projectile
 execute as @e[type=armor_stand,tag=trap_projectile] at @s run function cartographer_mob_abilities:abilities/trapper_projectile
 
+#Ender-Port Test
+execute as @e[type=#cartographer_core:hostile,tag=enderport] at @s run execute if entity @e[type=#cartographer_core:projectile,distance=..5,nbt=!{inGround:1b}] run function cartographer_mob_abilities:passive/enderport
+
 #Fix Tags
 execute as @e[type=#cartographer_core:hostile,tag=has_active,tag=!ability_checked,tag=!duplicate] at @s run function cartographer_mob_abilities:passive/ability_fix
 

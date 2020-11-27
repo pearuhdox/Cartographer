@@ -77,5 +77,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/duelist"
+      },
     "parent": "cartographer_custom_enchantments:melee_tree"
 }

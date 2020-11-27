@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Arrows from this weapon inflict Vulnerability II for 5 seconds."
+            "text": "Normal arrows from this weapon inflict Vulnerability II for 5 seconds."
         },
         "icon": {
             "item": "minecraft:glowstone_dust"
@@ -28,5 +28,8 @@
             }
         }
     },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/pin_down"
+      },
     "parent": "cartographer_custom_enchantments:frost"
 }

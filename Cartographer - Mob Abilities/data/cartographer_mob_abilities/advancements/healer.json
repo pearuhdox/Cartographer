@@ -26,5 +26,8 @@
             }
         }
     },
-    "parent": "cartographer_mob_abilities:augmenter"
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/healer"
+      },
+    "parent": "cartographer_mob_abilities:cloaker"
 }
