@@ -15,7 +15,7 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy charges up power, and after a delay, applies Speed I, Strength I, and Resistance I to the three closest mobs to it.",
+            "text": "The enemy charges up power, and after a delay, applies Speed II, Strength II, and Resistance II to the three closest mobs to it (for 12 seconds).",
             "color": "white"
         },
         "icon": {

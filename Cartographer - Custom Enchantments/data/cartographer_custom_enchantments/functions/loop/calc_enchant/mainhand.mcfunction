@@ -105,11 +105,11 @@ execute as @a[predicate=cartographer_custom_enchantments:point_blank/mainhand_1]
 execute as @a[predicate=cartographer_custom_enchantments:point_blank/mainhand_2] run scoreboard players add @s point_blank 2
 execute as @a[predicate=cartographer_custom_enchantments:point_blank/mainhand_3] run scoreboard players add @s point_blank 3
 
-execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_1] run scoreboard players set @s regicide 1
-execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_2] run scoreboard players set @s regicide 2
-execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_3] run scoreboard players set @s regicide 3
-execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_4] run scoreboard players set @s regicide 4
-execute as @a[predicate=cartographer_custom_enchantments:regicide/mainhand_5] run scoreboard players set @s regicide 5
+execute as @a[predicate=cartographer_custom_enchantments:vanquisher/mainhand_1] run scoreboard players set @s vanquisher 1
+execute as @a[predicate=cartographer_custom_enchantments:vanquisher/mainhand_2] run scoreboard players set @s vanquisher 2
+execute as @a[predicate=cartographer_custom_enchantments:vanquisher/mainhand_3] run scoreboard players set @s vanquisher 3
+execute as @a[predicate=cartographer_custom_enchantments:vanquisher/mainhand_4] run scoreboard players set @s vanquisher 4
+execute as @a[predicate=cartographer_custom_enchantments:vanquisher/mainhand_5] run scoreboard players set @s vanquisher 5
 
 
 execute as @a[predicate=cartographer_custom_enchantments:repeating/mainhand_1] run scoreboard players set @s repeating 1

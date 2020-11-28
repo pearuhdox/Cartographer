@@ -4,7 +4,7 @@ scoreboard players set @s ability_charge 0
 
 scoreboard players set @e[distance=0.5..15,type=#cartographer_core:hostile] effect_cloaked 12
 
-particle minecraft:large_smoke ~ ~1 ~ 0.75 0.1 0.75 0.2 40
+particle minecraft:dust 0.5 0 1 1 ~ ~1.5 ~ 5 1 5 0.1 700 normal @a
 
 playsound minecraft:block.respawn_anchor.deplete hostile @a[distance=..16] ~ ~ ~ 2 0.8
 

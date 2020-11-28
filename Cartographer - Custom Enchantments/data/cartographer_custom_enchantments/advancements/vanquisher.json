@@ -1,7 +1,7 @@
 {
     "display": {
         "title": {
-            "text": "Regicide                ",
+            "text": "Vanquisher                ",
             "color": "white"
         },
         "description": {
@@ -31,7 +31,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Regicide:1}"
+                        "nbt": "{Vanquisher:1}"
                     }
                 ]
             }
@@ -41,7 +41,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Regicide:2}"
+                        "nbt": "{Vanquisher:2}"
                     }
                 ]
             }
@@ -51,7 +51,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Regicide:3}"
+                        "nbt": "{Vanquisher:3}"
                     }
                 ]
             }
@@ -61,7 +61,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Regicide:4}"
+                        "nbt": "{Vanquisher:4}"
                     }
                 ]
             }
@@ -71,14 +71,14 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Regicide:5}"
+                        "nbt": "{Vanquisher:5}"
                     }
                 ]
             }
         }
     },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/regicide"
+        "function": "cartographer_custom_enchantments:descriptions/vanquisher"
       },
     "parent": "cartographer_custom_enchantments:hunter"
 }

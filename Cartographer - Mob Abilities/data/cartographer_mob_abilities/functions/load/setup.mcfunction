@@ -14,6 +14,7 @@ scoreboard objectives add helper_raycast dummy
 scoreboard objectives add helper_random dummy
 scoreboard objectives add helper_tokens dummy
 scoreboard objectives add helper_diff dummy
+scoreboard objectives add helper_lifetime dummy
 
 #Start initial required looping to trigger enchant effects.
 

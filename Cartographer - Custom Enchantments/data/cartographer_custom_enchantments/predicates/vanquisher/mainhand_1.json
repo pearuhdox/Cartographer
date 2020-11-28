@@ -4,7 +4,7 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "nbt": "{Regicide:5}"
+        "nbt": "{Vanquisher:1}"
       }
     },
     "player": {}

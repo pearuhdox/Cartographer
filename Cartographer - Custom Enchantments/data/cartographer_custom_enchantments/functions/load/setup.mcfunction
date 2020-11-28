@@ -34,7 +34,7 @@ scoreboard objectives add infinity dummy
 scoreboard objectives add lifesteal dummy
 scoreboard objectives add pin_down dummy
 scoreboard objectives add point_blank dummy
-scoreboard objectives add regicide dummy
+scoreboard objectives add vanquisher dummy
 scoreboard objectives add repeating dummy
 scoreboard objectives add regeneration dummy
 scoreboard objectives add rend dummy

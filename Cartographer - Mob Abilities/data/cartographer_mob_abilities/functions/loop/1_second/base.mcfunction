@@ -22,8 +22,12 @@ execute as @a at @s run function cartographer_mob_abilities:token/token_player
 schedule function cartographer_mob_abilities:loop/1_second/base 1s
 
 #Run Stack Manager for Brutal and Relentless Stacks
-execute if entity @e[scores={brutal_stacks=1..}] run execute as @e[scores={brutal_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
-execute if entity @e[scores={relent_stacks=1..}] run execute as @e[scores={relent_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute as @e[scores={brutal_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute as @e[scores={relent_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
 
 #Remove Hookshot tag from mob
 execute if entity @e[tag=is_hooking,scores={cooldown=6}] run execute as @e[tag=is_hooking,scores={cooldown=6}] at @s run tag @s remove is_hooking
+
+#Add lifetime to ability markers. Kill them if they are too old.
+execute as @e[type=armor_stand,tag=ability_marker] at @s run scoreboard players add @s helper_lifetime 1
+kill @e[type=armor_stand,tag=ability_marker,scores={helper_lifetime=11..}]

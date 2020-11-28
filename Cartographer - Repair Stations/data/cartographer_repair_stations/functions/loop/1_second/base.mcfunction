@@ -1,3 +1,5 @@
+execute as @e[tag=repair_sign,type=item_frame] at @s run execute unless entity @e[type=item_frame,tag=repair_input,distance=..3] run execute unless entity @e[type=armor_stand,tag=repair_display,distance=..3] run summon item_frame ~ ~1 ~1 {Glowing:1b,Facing:1b,Invisible:1b,Tags:["repair_input"],Item:{}}
+
 execute as @e[tag=repair_input,type=item_frame,tag=empty] at @s run execute if entity @a[distance=..7] run data modify entity @s Invisible set value 0
 
 execute as @e[tag=repair_input,type=item_frame,tag=empty] at @s run execute unless entity @a[distance=..7] run data modify entity @s Invisible set value 1

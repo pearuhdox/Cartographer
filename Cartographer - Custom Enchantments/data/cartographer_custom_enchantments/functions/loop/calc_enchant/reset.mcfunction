@@ -31,7 +31,7 @@ scoreboard players set @a lifesteal 0
 scoreboard players set @a point_blank 0
 scoreboard players set @a pin_down 0
 scoreboard players set @a regeneration 0
-scoreboard players set @a regicide 0
+scoreboard players set @a vanquisher 0
 scoreboard players set @a repeating 0
 scoreboard players set @a rend 0
 scoreboard players set @a[scores={helper_trident=0}] ricochet 0

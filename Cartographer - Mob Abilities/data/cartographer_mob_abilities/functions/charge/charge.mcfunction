@@ -6,7 +6,7 @@ execute unless entity @s[scores={ability_charge=1..2}] run tp @s ~ ~ ~ facing en
 
 execute unless entity @s[scores={ability_charge=1..2}] run data merge entity @s {NoAI:1}
 
-execute unless entity @s[scores={ability_charge=1..2}] run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["charge_marker"]}
+execute unless entity @s[scores={ability_charge=1..2}] run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["charge_marker","ability_marker"]}
 
 execute unless entity @s[scores={ability_charge=1..2}] run execute as @e[tag=charge_marker,distance=..2,limit=1] at @s run tp @s ~ ~ ~ facing entity @p feet
 

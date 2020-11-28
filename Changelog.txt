@@ -41,6 +41,15 @@ Mimics bring the stereotypical greedy player punisher to Minecraft. Warning, the
 - Mapmakers can customize what loot mimics drop on death. Simply place the items in the chest in creative mode, or while the mimic is inactive.
 - Mimics scale their stats based on the armor value of the player opening them. The stronger the player, the stronger the Mimic.
 
+Custom Enchantments:
+- 2 New Enchantments join the fight!
+  - Executioner: When a mob is attacked by this *melee* weapon, if the attack would leave them below 10% of their health, they are immediately killed instead.
+    - Additional Levels increase this threshold by 7.5%.
+    - Max of 3 levels. (total of 25% threshold)
+  - Vanquisher: Elite enemies attacked by this *melee* weapon take 2.5 more damage per level.
+    - Max of 5 levels. (+12.5 damage)
+    - any "elite" enemy is a hostile mob with the tag "elite"
+
 Mob Abilities:
 - 2 new active abilities have been added: Cloaker
   - Cloaker works similarly to Healer and Augmenter. After a brief immobile delay, the mob with Cloaker will grant 12 seconds of "Cloaked" to nearby mobs.
@@ -121,12 +130,16 @@ Mob Abilities:
   - This is to make using Cartographer a bit more user friendly.
   - Gone are the days of setting a random score to a number which you have no idea what it does!
 
+- Augmenter and Healer have improved sound and visual effects, to better telegraph them.
+
 - Charge now uses the player's location instead of simply moving the mob forward. This makes Charge more accurate to player position and improves interactions on some mobs.
 - Laser now uses an armor stand to track. This makes the skill more accurate and removes a couple bugs involving height differences between mobs and players.
 - Corpse Crawler now has variations for zombies, husks, drowned, piglins, zoglins, and bees. Each version's stats are near identical to each others.
 - Duplicator now works on Piglins, Pillagers, Creepers, Spiders, and Cave Spiders.
 - Breaker no longer breaks spawners.
 - Healer and Augmenter now apply Slowness VII (immobilizes ground based mobs) when charging.
+
+- Fixed erroneous description of Augmenter. (It applies level 2 effects, not level 1 effects)
 
 Bug Fixes and Optimizations:
 - New Shulker Boxes for Custom Enchantments to separate Repeating, Auto Charge, and Infinity further. This should eliminate (or at least drastically reduce) the chance of items being replaced improperly.
