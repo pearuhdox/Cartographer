@@ -30,7 +30,8 @@ scoreboard objectives add frost dummy
 scoreboard objectives add frostbite dummy
 scoreboard objectives add hunter dummy
 scoreboard objectives add hydraulic dummy
-scoreboard objectives add infinity dummy
+scoreboard objectives add infinity_m dummy
+scoreboard objectives add infinity_o dummy
 scoreboard objectives add lifesteal dummy
 scoreboard objectives add pin_down dummy
 scoreboard objectives add point_blank dummy
@@ -131,6 +132,8 @@ scoreboard objectives add helper_eye minecraft.used:minecraft.ender_eye
 scoreboard objectives add helper_bread minecraft.used:minecraft.bread
 scoreboard objectives add helper_m_soup minecraft.used:minecraft.mushroom_stew
 scoreboard objectives add helper_apple minecraft.used:minecraft.apple
+scoreboard objectives add helper_g_apple minecraft.used:minecraft.golden_apple
+scoreboard objectives add helper_eg_apple minecraft.used:minecraft.enchanted_golden_apple
 scoreboard objectives add helper_fish minecraft.used:minecraft.cod
 scoreboard objectives add helper_c_fish minecraft.used:minecraft.cooked_cod
 scoreboard objectives add helper_salmon minecraft.used:minecraft.salmon
@@ -163,10 +166,6 @@ scoreboard objectives add helper_s_eye minecraft.used:minecraft.spider_eye
 scoreboard objectives add helper_honey minecraft.used:minecraft.honey_bottle
 scoreboard objectives add helper_milk minecraft.used:minecraft.milk_bucket
 
-scoreboard objectives add helper_inf_cool dummy
-
-scoreboard players set @a helper_inf_cool 0
-
 #Place extra shulker boxes for Custom Enchantments
 
 #Auto Charge
@@ -174,6 +173,13 @@ setblock 4206901 0 4206900 purple_shulker_box replace
 
 #Repeating
 setblock 4206900 0 4206901 purple_shulker_box replace
+
+#Infinity Mainhand
+setblock 4206899 0 4206900 purple_shulker_box replace
+
+#Infinity Offhand
+setblock 4206900 0 4206899 purple_shulker_box replace
+
 
 #Start the initial run to calculate what custom enchantments the player has.
 function cartographer_custom_enchantments:loop/calc_enchant/base

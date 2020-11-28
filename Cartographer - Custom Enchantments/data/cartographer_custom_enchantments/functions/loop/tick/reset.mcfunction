@@ -36,6 +36,8 @@ scoreboard players set @a helper_eye 0
 scoreboard players set @a helper_bread 0
 scoreboard players set @a helper_m_soup 0
 scoreboard players set @a helper_apple 0
+scoreboard players set @a helper_g_apple 0
+scoreboard players set @a helper_eg_apple 0
 scoreboard players set @a helper_fish 0
 scoreboard players set @a helper_c_fish 0 
 scoreboard players set @a helper_salmon 0
@@ -68,7 +70,7 @@ scoreboard players set @a helper_s_eye 0
 scoreboard players set @a helper_honey 0
 scoreboard players set @a helper_milk 0
 
-scoreboard players set @a infinity 0
-scoreboard players remove @a[scores={helper_inf_cool=1..}] helper_inf_cool 1
+scoreboard players set @a[predicate=!cartographer_custom_enchantments:infinity/mainhand_1] infinity_m 0
+scoreboard players set @a[predicate=!cartographer_custom_enchantments:infinity/offhand_1] infinity_o 0
 
 scoreboard players remove @a[scores={helper_repeat=2..}] helper_repeat 1

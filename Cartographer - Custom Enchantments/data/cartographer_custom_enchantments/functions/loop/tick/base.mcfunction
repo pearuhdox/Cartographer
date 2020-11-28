@@ -2,8 +2,8 @@
 
 # INFINITY TESTS MUST BE DONE IN THIS FILE INSTEAD
 
-execute as @a[predicate=cartographer_custom_enchantments:infinity/offhand_1] run scoreboard players set @s infinity 2
-execute as @a[predicate=cartographer_custom_enchantments:infinity/mainhand_1] run scoreboard players set @s infinity 1
+execute as @a[predicate=cartographer_custom_enchantments:infinity/offhand_1] run scoreboard players set @s infinity_o 1
+execute as @a[predicate=cartographer_custom_enchantments:infinity/mainhand_1] run scoreboard players set @s infinity_m 1
 
 # ENCHANT EFFECTS THAT MUST ACTIVATE EVERY TICK
 
@@ -139,52 +139,10 @@ execute as @a[scores={trueshot=1..,helper_fire_cbow=1..}] at @s run function car
 execute as @a[scores={volatile=1..,helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/volatile
 execute as @a[scores={volatile=1..,helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/volatile
 
-execute as @a[tag=infinity_storing,scores={helper_potion=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_splashpot=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_lingerpot=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_pearl=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_eye=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
+execute as @a[scores={infinity_m=1}] at @s run execute positioned ~ -1 ~ run function cartographer_custom_enchantments:loop/enchant_effects/infinity_handler
+execute as @a[scores={infinity_o=1}] at @s run execute positioned ~ -1 ~ run function cartographer_custom_enchantments:loop/enchant_effects/infinity_handler
 
-execute as @a[tag=infinity_storing,scores={helper_bread=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_m_soup=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_apple=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_fish=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_c_fish=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger 
-execute as @a[tag=infinity_storing,scores={helper_salmon=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_c_salmon=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_kelp=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_pork=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_c_pork=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_beef=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_c_beef=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_chicken=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_c_chicken=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_mutton=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_c_mutton=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_rabbit=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_c_rabbit=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_cookie=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_melon=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_pie=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_carrot=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_g_carrot=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_p_potato=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_potato=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_c_potato=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_chorus=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_beet=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_b_soup=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_r_soup=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_flesh=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_s_eye=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_honey=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-execute as @a[tag=infinity_storing,scores={helper_milk=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_trigger
-
-execute as @a[tag=infinity_storing] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity
-
-execute as @a[scores={infinity=0}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_clear
-
-execute as @a[scores={infinity=1..,helper_inf_cool=0},tag=!infinity_storing] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_store
+execute as @a[scores={infinity=1..}] at @s run execute positioned ~ -1 ~ run function cartographer_custom_enchantments:loop/enchant_effects/infinity_storing
 
 execute as @a[scores={curse_malevolent=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_malevolence
 
@@ -199,7 +157,6 @@ execute as @a[scores={helper_deathtime=0}] at @s run scoreboard players set @s s
 execute as @a[scores={helper_deathtime=0}] at @s run scoreboard players set @s second_wind_tier 0
 
 function cartographer_custom_enchantments:loop/tick/reset
-
 
 # PROJECTILE SCORE UPDATES
 
