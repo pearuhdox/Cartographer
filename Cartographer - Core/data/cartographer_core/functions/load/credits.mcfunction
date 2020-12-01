@@ -1,10 +1,20 @@
-execute as @p at @s run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 1 0.75
+execute as @p run function cartographer_core:load/spacer
+
+execute store result score $cart_cmd_fdbk global_options run gamerule sendCommandFeedback
+execute if score $cart_cmd_fdbk global_options matches 1 run gamerule sendCommandFeedback false
+
+execute as @p at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
+tellraw @p [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------------","color":"#FFE0A3","bold":true}]
+tellraw @p {"text":"A list of those who brought you what you're using.","color":"#FFE0A3","bold":false,"italic":true}
+tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 
 tellraw @p [{"text":"❰","color":"gold"},{"text":" PearUhDox ","color":"#B33EE6","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Creator, Director, and Implementer.","color":"#FFE0A3","italic":true}]
 tellraw @p [{"text":"❰","color":"gold"},{"text":" RockNRed ","color":"#FF004C","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration, ideas, and implementation assistance across Cartographer.","color":"#FFE0A3","italic":true}]
 tellraw @p [{"text":"❰","color":"gold"},{"text":" Nava ","color":"#E65C00","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Original inspiration for Custom Enchantments and Cartographer.","color":"#FFE0A3","italic":true}]
-tellraw @p [{"text":"❰","color":"gold"},{"text":" GavstarB ","color":"#3DFF1F","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration, ideas, and implementation assistance for Custom Enchantments.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" Asometric ","color":"#817DFF","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Optimization Assistance and Bugfixing.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" Suso ","color":"#55FF17","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Optimization Assistance and Bugfixing.","color":"#FFE0A3","italic":true}]
 tellraw @p [{"text":"❰","color":"gold"},{"text":" Gizmo90704 ","color":"#08A4FF","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Custom Enchantments and Mob Abilities. Beta testing and stress testing assistance.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" GavstarB ","color":"#3DFF1F","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration, ideas, and implementation assistance for Custom Enchantments.","color":"#FFE0A3","italic":true}]
 tellraw @p [{"text":"❰","color":"gold"},{"text":" Matt_97 ","color":"#ACFF1C","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Beta testing and bug fixing assistance.","color":"#FFE0A3","italic":true}]
 tellraw @p [{"text":"❰","color":"gold"},{"text":" ShadowVisions ","color":"#9B7DFF","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Custom Enchantments.","color":"#FFE0A3","italic":true}]
 tellraw @p [{"text":"❰","color":"gold"},{"text":" BeastMasterFTW ","color":"#FF5E74","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Mob Abilities.","color":"#FFE0A3","italic":true}]
@@ -12,3 +22,7 @@ tellraw @p [{"text":"❰","color":"gold"},{"text":" FirelordWeaponry ","color":"
 tellraw @p [{"text":"❰","color":"gold"},{"text":" Combustible ","color":"#6EFFD3","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Mob Abilities.","color":"#FFE0A3","italic":true}]
 
 tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
+tellraw @p [{"text":"[Return]","color":"#33FFF8","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return to the reload panel.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/reload_panel"}}]
+tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
+
+schedule function cartographer_core:load/command_feedback 1t

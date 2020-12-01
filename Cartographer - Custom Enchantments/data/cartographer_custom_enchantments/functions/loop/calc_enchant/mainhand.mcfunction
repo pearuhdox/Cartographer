@@ -126,9 +126,9 @@ execute as @a[predicate=cartographer_custom_enchantments:regeneration/mainhand_3
 
 execute as @a[predicate=cartographer_custom_enchantments:rend/mainhand_1] run scoreboard players set @s rend 1
 
-execute as @a[predicate=cartographer_custom_enchantments:ricochet/mainhand_1] run scoreboard players add @s ricochet 1
-execute as @a[predicate=cartographer_custom_enchantments:ricochet/mainhand_2] run scoreboard players add @s ricochet 2
-execute as @a[predicate=cartographer_custom_enchantments:ricochet/mainhand_3] run scoreboard players add @s ricochet 3
+execute as @a[predicate=cartographer_custom_enchantments:ricochet/mainhand_1] run scoreboard players set @s ricochet 1
+execute as @a[predicate=cartographer_custom_enchantments:ricochet/mainhand_2] run scoreboard players set @s ricochet 2
+execute as @a[predicate=cartographer_custom_enchantments:ricochet/mainhand_3] run scoreboard players set @s ricochet 3
 
 execute as @a[predicate=cartographer_custom_enchantments:sapper/mainhand_1] run scoreboard players add @s sapper 1
 execute as @a[predicate=cartographer_custom_enchantments:sapper/mainhand_2] run scoreboard players add @s sapper 2

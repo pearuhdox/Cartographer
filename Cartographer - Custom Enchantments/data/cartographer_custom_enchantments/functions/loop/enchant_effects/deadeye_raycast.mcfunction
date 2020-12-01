@@ -12,6 +12,10 @@ execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run
 
 execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/9
 
+execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run tp @s ~ ~ ~ facing entity @p[scores={deadeye=1..}] feet
+
+execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/push_half
+
 #execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run data merge entity @s {Fire:85}
 
 execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run scoreboard players set @s helper_raycast 0

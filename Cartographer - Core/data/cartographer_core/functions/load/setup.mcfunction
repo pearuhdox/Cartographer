@@ -18,6 +18,10 @@ scoreboard objectives add vectorX dummy
 scoreboard objectives add vectorY dummy
 scoreboard objectives add vectorZ dummy
 
+#Create the global option scoreboard.
+scoreboard objectives add global_options dummy
+
+
 #Schedule the loading message.
 
 schedule function cartographer_core:load/load_message 5t

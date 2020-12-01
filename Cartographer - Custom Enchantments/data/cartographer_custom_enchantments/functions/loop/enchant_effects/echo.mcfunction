@@ -1,15 +1,10 @@
-function cartographer_core:helper/randomize
+execute if entity @s[scores={echo=1..,echo_charges=1..}] run execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run particle minecraft:cloud ~ ~1 ~ 0 0 0 0.15 5 normal
 
-scoreboard players operation @s helper_melee = @s random
+execute if entity @s[scores={echo=1..,echo_charges=1..}] run playsound minecraft:entity.player.attack.sweep player @s ~ ~ ~ 1 0.5
+execute if entity @s[scores={echo=1..,echo_charges=1..}] run playsound minecraft:entity.player.attack.sweep player @s ~ ~ ~ 1 1
+execute if entity @s[scores={echo=1..,echo_charges=1..}] run playsound minecraft:entity.player.attack.sweep player @s ~ ~ ~ 2 2
 
-execute if entity @s[scores={echo=1,helper_melee=..20}] run particle minecraft:enchant ^ ^1 ^1 0.25 0.25 0.25 1 30 normal
-execute if entity @s[scores={echo=2,helper_melee=..40}] run particle minecraft:enchant ^ ^1 ^1 0.25 0.25 0.25 1 30 normal
-execute if entity @s[scores={echo=3,helper_melee=..60}] run particle minecraft:enchant ^ ^1 ^1 0.25 0.25 0.25 1 30 normal
+execute if entity @s[scores={echo=1..,echo_charges=1..}] run scoreboard players remove @s echo_charges 1
+execute if entity @s[scores={echo=1..,echo_charges=0}] run playsound minecraft:entity.player.attack.sweep player @s ~ ~ ~ 2 0.5
 
-execute if entity @s[scores={echo=1,helper_melee=..20}] run playsound minecraft:block.enchantment_table.use player @p ~ ~ ~ 1 2
-execute if entity @s[scores={echo=2,helper_melee=..40}] run playsound minecraft:block.enchantment_table.use player @p ~ ~ ~ 1 2
-execute if entity @s[scores={echo=3,helper_melee=..60}] run playsound minecraft:block.enchantment_table.use player @p ~ ~ ~ 1 2
-
-execute if entity @s[scores={echo=1,helper_melee=..20}] run effect give @s haste 1 9 true
-execute if entity @s[scores={echo=2,helper_melee=..40}] run effect give @s haste 1 9 true
-execute if entity @s[scores={echo=3,helper_melee=..60}] run effect give @s haste 1 9 true
+tag @a[scores={ui_location=1,echo=1..}] remove showing_echo

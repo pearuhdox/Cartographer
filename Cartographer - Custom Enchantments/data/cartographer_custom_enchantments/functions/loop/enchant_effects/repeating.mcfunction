@@ -25,7 +25,7 @@ execute if entity @s[scores={repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{
 execute if entity @s[scores={repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:0b,Ammo:8}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:7,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b},{},{}],Charged:1b}
 
 #Fix Multishot
-execute unless block 4206900 0 4206901 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run execute if block 4206900 0 4206901 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag merge value {ChargedProjectiles:[{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b}],Charged:1b}
+execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run execute if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag merge value {ChargedProjectiles:[{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b}],Charged:1b}
 
 
 #Place item in player hand
@@ -35,3 +35,6 @@ execute if entity @s[scores={repeating=11..17}] run loot replace entity @s weapo
 execute at @s run playsound minecraft:item.crossbow.loading_end player @a[distance=..8] ~ ~ ~ 10 2
 
 scoreboard players set @s helper_repeat 0
+
+#Run display for subtitle
+tag @a[scores={ui_location=1}] remove showing_repeating

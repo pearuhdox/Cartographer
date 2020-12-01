@@ -5,6 +5,15 @@
 execute as @a[predicate=cartographer_custom_enchantments:infinity/offhand_1] run scoreboard players set @s infinity_o 1
 execute as @a[predicate=cartographer_custom_enchantments:infinity/mainhand_1] run scoreboard players set @s infinity_m 1
 
+#Reset attack speed and kbr on Echo users
+execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.attack_speed base set 1024
+execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.attack_speed base set 4
+execute as @a[scores={echo=0}] run attribute @s minecraft:generic.attack_speed base set 4
+
+execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance base set 1
+execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.knockback_resistance base set 0
+execute as @a[scores={echo=0}] run attribute @s minecraft:generic.knockback_resistance base set 0
+
 # ENCHANT EFFECTS THAT MUST ACTIVATE EVERY TICK
 
 execute as @a[scores={adrenaline=1..,helper_kill=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/adrenaline
@@ -68,6 +77,7 @@ execute as @a[scores={vicious=1..,helper_deal_dmg=1..}] at @s run function carto
 execute as @a[scores={stunning=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/stunning
 
 execute as @a[scores={echo=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/echo
+execute as @a[scores={helper_kill=1..}] at @s run execute as @a[scores={echo=1..},distance=..12] at @s run function cartographer_custom_enchantments:loop/enchant_effects/echo_restore
 
 execute as @a[scores={surging_strike=1..,helper_deal_dmg=1..,helper_sprint=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/surging_strike
 
@@ -131,7 +141,7 @@ execute as @a[scores={hydraulic=1..,helper_trident=1..}] at @s run function cart
 
 execute as @a[scores={tempest=1..,helper_trident=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/tempest
 
-execute as @a[scores={ricochet=1..,helper_trident=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/ricochet
+execute as @a[scores={ricochet=1..,helper_trident=1..}] at @s run execute as @e[type=trident,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:loop/enchant_effects/ricochet
 
 execute as @a[scores={trueshot=1..,helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/trueshot
 execute as @a[scores={trueshot=1..,helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/trueshot
@@ -172,5 +182,89 @@ execute as @a at @s run kill @e[type=armor_stand,distance=..3,tag=hydraul_stoppe
 tag @e[tag=bounce] remove bounce
 execute as @e[type=#cartographer_core:hostile,tag=current_drag] at @s run execute unless entity @e[type=trident,scores={current=1},distance=..5] run tag @s remove current_drag
 
+#Action bar indicators for Repeating and Echo
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:8}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"8","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:7}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"7","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:6}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"6","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:5}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"5","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:4}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"4","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:3}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"3","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:2}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"2","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:1}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"1","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:0}}}] actionbar [{"text":"🏹 <","color":"red","italic":false},{"text":"0","color":"dark_gray","bold":true,"italic":false},{"text":"> 🏹","color":"red","italic":false}]
+
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:8}}]}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"8","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:7}}]}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"7","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:6}}]}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"6","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:5}}]}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"5","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:4}}]}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"4","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:3}}]}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"3","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:2}}]}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"2","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:1}}]}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"1","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:0}}]}] actionbar [{"text":"🏹 <","color":"red","italic":false},{"text":"0","color":"dark_gray","bold":true,"italic":false},{"text":"> 🏹","color":"red","italic":false}]
+
+title @a[tag=showing_repeating,scores={ui_location=0,repeating=0}] actionbar {"text":" ","color":"yellow","italic":false}
+
+title @a[scores={ui_location=0,echo=1..,echo_charges=6}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"6","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,echo=1..,echo_charges=5}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"5","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,echo=1..,echo_charges=4}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"4","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,echo=1..,echo_charges=3}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"3","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,echo=1..,echo_charges=2}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"2","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,echo=1..,echo_charges=1}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"1","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @a[scores={ui_location=0,echo=1..,echo_charges=0}] actionbar [{"text":"⚔ <","color":"red","italic":false},{"text":"0","color":"dark_gray","bold":true,"italic":false},{"text":"> ⚔","color":"red","italic":false}]
+
+title @a[tag=showing_echo,scores={ui_location=0,echo=0}] actionbar {"text":" ","color":"yellow","italic":false}
+
+#Subtitle Indicators for Repeating and Echo
+
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7}] times 0 55 5
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17}] times 0 55 5
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7}] title {"text":" "}
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17}] title {"text":" "}
+
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:8}}}] subtitle [{"text":",","color":"yellow"},{"text":"________","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:7}}}] subtitle [{"text":",","color":"yellow"},{"text":"_______","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:6}}}] subtitle [{"text":",","color":"yellow"},{"text":"______","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:5}}}] subtitle [{"text":",","color":"yellow"},{"text":"_____","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:4}}}] subtitle [{"text":",","color":"yellow"},{"text":"____","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:3}}}] subtitle [{"text":",","color":"yellow"},{"text":"___","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:2}}}] subtitle [{"text":",","color":"yellow"},{"text":"__","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:1}}}] subtitle [{"text":",","color":"yellow"},{"text":"_","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:0}}}] subtitle [{"text":",","color":"red"},{"text":".","color":"dark_gray","italic":false},{"text":",","color":"red"}]
+
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:8}}]}] subtitle [{"text":",","color":"yellow"},{"text":"________","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:7}}]}] subtitle [{"text":",","color":"yellow"},{"text":"_______","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:6}}]}] subtitle [{"text":",","color":"yellow"},{"text":"______","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:5}}]}] subtitle [{"text":",","color":"yellow"},{"text":"_____","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:4}}]}] subtitle [{"text":",","color":"yellow"},{"text":"____","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:3}}]}] subtitle [{"text":",","color":"yellow"},{"text":"___","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:2}}]}] subtitle [{"text":",","color":"yellow"},{"text":"__","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:1}}]}] subtitle [{"text":",","color":"yellow"},{"text":"_","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_repeating,scores={ui_location=1,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Ammo:0}}]}] subtitle [{"text":",","color":"red"},{"text":".","color":"dark_gray","italic":false},{"text":",","color":"red"}]
+
+
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..}] times 0 45 5
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..}] times 0 45 5
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..}] title {"text":" "}
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..}] title {"text":" "}
+
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..,echo_charges=6}] subtitle [{"text":",","color":"yellow"},{"text":"______","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..,echo_charges=5}] subtitle [{"text":",","color":"yellow"},{"text":"_____","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..,echo_charges=4}] subtitle [{"text":",","color":"yellow"},{"text":"____","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..,echo_charges=3}] subtitle [{"text":",","color":"yellow"},{"text":"___","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..,echo_charges=2}] subtitle [{"text":",","color":"yellow"},{"text":"__","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..,echo_charges=1}] subtitle [{"text":",","color":"yellow"},{"text":"_","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @a[tag=!showing_echo,scores={ui_location=1,echo=1..,echo_charges=0}] subtitle [{"text":",","color":"red"},{"text":".","color":"dark_gray","italic":false},{"text":",","color":"red"}]
+
+
+tag @a[scores={repeating=1..}] add showing_repeating
+tag @a[scores={repeating=0}] remove showing_repeating
+
+tag @a[scores={echo=1..}] add showing_echo
+tag @a[scores={echo=0}] remove showing_echo
+
+scoreboard players remove @e[scores={ricochet_cool=1..}] ricochet_cool 1
+
+execute as @e[type=armor_stand,tag=ricochet_projectile] at @s run function cartographer_custom_enchantments:loop/enchant_effects/ricochet_projectile
 
 schedule function cartographer_custom_enchantments:loop/tick/base 1t

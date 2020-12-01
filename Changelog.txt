@@ -42,13 +42,16 @@ Mimics bring the stereotypical greedy player punisher to Minecraft. Warning, the
 - Mimics scale their stats based on the armor value of the player opening them. The stronger the player, the stronger the Mimic.
 
 Custom Enchantments:
-- 2 New Enchantments join the fight!
+- 2 (technically 3) New Enchantments to brawl with!
   - Executioner: When a mob is attacked by this *melee* weapon, if the attack would leave them below 10% of their health, they are immediately killed instead.
     - Additional Levels increase this threshold by 7.5%.
     - Max of 3 levels. (total of 25% threshold)
   - Vanquisher: Elite enemies attacked by this *melee* weapon take 2.5 more damage per level.
     - Max of 5 levels. (+12.5 damage)
     - any "elite" enemy is a hostile mob with the tag "elite"
+  - Deadeye: This crossbow fires instant traveling bolts that auto lock on nearby enemies instead of arrows, doing 10 damage.
+    - Single Level
+    - This enchant has technically existed and worked for a while, but now it is "properly" introduced, and will have entries in Cartographer.
 
 Mob Abilities:
 - 2 new active abilities have been added: Cloaker
@@ -77,7 +80,9 @@ Changes:
 Core:
 - The reload message has received a rather hefty overhaul. Shoutouts to RockNRed for aesthetic ideas and assistance!
 - Cartographer's reload message now links to its Github page, wiki, and to an options menu.
-- Currently the only option that exists is to make the reload message less long. More to come soon!
+- New Option: Minimal Reload 
+  - Makes the reload message much smaller and condensed, hiding various bits of information.
+  - Set on a per player basis.
 
 - Helper Healing functions have been reworked to all use area effect clouds instead of Regeneration effect commands. This makes healing immediate rather than very slightly delayed.
 - Helper clouds have received tweaks to ensure they are simultaneously more accurate, and don't have unintended behavior.
@@ -97,6 +102,10 @@ Custom Enchantments:
 - Eruption now inflicts a small amount of knockback.
 - Eruption radius reduced to 8. (was 10).
 
+- Deadeye inflicts a small amount of knockback. (In its hidden version, it did not).
+
+- Repeating now displays the current ammo total stored in the crossbow in your actionbar when held.
+
 - Adrenaline, Energetic, and Frenzy have adjusted scaling.
   - The new scaling is 5 seconds for the first level, 5 seconds for the second level, and one less second per level of the enchant. (5/10/14/17/19/20 seconds)
   - The intent is to make single levels of these enchants feel more impactful and useful, though keep their power level somewhat the same.
@@ -104,10 +113,20 @@ Custom Enchantments:
 
 - Hunter and Duelist scale equivalently to Smite and Bane of Arthropods (2.5/5/7.5/10/12.5, instead of 2/5/7/10/12)
 
+- Echo has been reworked:
+  - No longer chance based
+  - Based on level, store a number of "Echo Charges" (displayed in your action bar) [2 Charges Per Level]
+  - When you attack an enemy, consume a charge. [Missed attacks do not count]
+  - While you have charges (and holding the Echo weapon), your Attack Speed is 1024 (instant) and you have 1 Knockback Resistance.
+  - When you kill a mob, restore half the charges you can hold.
+  - When out of combat, every 3 seconds, restore half the charges you can hold.
+
 - Evocation has been reworked:
   - Now guarantees fangs directed from the player towards nearby mobs.
   - Each level adds one path of fangs from the player to a nearby hostile mob (within 10 blocks)
   - Level still caps at 3 (3 paths of fangs to nearby mobs).
+
+- Ricochet now creates actual projectiles when it hits an enemy. The projectiles fan out towards nearby mobs, dealing 7 damage each.
 
 - Regeneration now makes heart particle effects when it heals you.
 - Lifesteal makes heart particle effects when it heals you.
@@ -115,6 +134,11 @@ Custom Enchantments:
 
 - Point Blank creates sound and particles when fired.
 - Sharpshot creates sound and particles when fired.
+
+- New Option: Toggle Charge Info 
+  - Changes the position of enchantment charge/ammo count information (for Echo and Repeating).
+  - Can be set to the actionbar, subtitle, or entirely invisible.
+  - Set on a per player basis.
 
 Mob Abilities:
 - All mob abilities only work on hostile mobs. While this is a somewhat of a restrictive change, it is being done for performance reasons.
@@ -140,6 +164,10 @@ Mob Abilities:
 - Healer and Augmenter now apply Slowness VII (immobilizes ground based mobs) when charging.
 
 - Fixed erroneous description of Augmenter. (It applies level 2 effects, not level 1 effects)
+
+- New Option: Independent Difficulty
+  - When enabled, unties helper_diff from the world difficulty, allowing it to be set to any value between 1 and 5.
+  - Set on a global (affects the entire world) basis.
 
 Bug Fixes and Optimizations:
 - New Shulker Boxes for Custom Enchantments to separate Repeating, Auto Charge, and Infinity further. This should eliminate (or at least drastically reduce) the chance of items being replaced improperly.

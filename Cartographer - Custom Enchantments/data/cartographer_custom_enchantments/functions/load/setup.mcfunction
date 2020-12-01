@@ -95,6 +95,9 @@ scoreboard objectives add helper_spawner minecraft.mined:minecraft.spawner
 scoreboard objectives add helper_lifetime dummy
 scoreboard objectives add helper_deathtime minecraft.custom:minecraft.time_since_death
 scoreboard objectives add helper_sprint minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add helper_echo dummy
+scoreboard objectives add echo_charges dummy
+scoreboard objectives add ricochet_cool dummy
 
 scoreboard objectives add helper_exec_low dummy
 scoreboard objectives add helper_exec_max dummy
@@ -166,6 +169,8 @@ scoreboard objectives add helper_s_eye minecraft.used:minecraft.spider_eye
 scoreboard objectives add helper_honey minecraft.used:minecraft.honey_bottle
 scoreboard objectives add helper_milk minecraft.used:minecraft.milk_bucket
 
+scoreboard objectives add ui_location dummy
+
 #Place extra shulker boxes for Custom Enchantments
 
 #Auto Charge
@@ -179,7 +184,6 @@ setblock 4206899 0 4206900 purple_shulker_box replace
 
 #Infinity Offhand
 setblock 4206900 0 4206899 purple_shulker_box replace
-
 
 #Start the initial run to calculate what custom enchantments the player has.
 function cartographer_custom_enchantments:loop/calc_enchant/base

@@ -16,6 +16,9 @@ scoreboard objectives add helper_tokens dummy
 scoreboard objectives add helper_diff dummy
 scoreboard objectives add helper_lifetime dummy
 
+#Set default of independent difficulty.
+execute unless score $cart_ind_diff global_options matches 0.. run scoreboard players set $cart_ind_diff global_options 0
+
 #Start initial required looping to trigger enchant effects.
 
 function cartographer_mob_abilities:loop/tick/base

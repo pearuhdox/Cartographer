@@ -3,7 +3,7 @@
 #Trigger all second timer attacks where enemies have been tokened.
 
 #Set the score of helper difficulty equal to Minecraft's current difficulty
-execute store result score @a helper_diff run difficulty
+execute if score $cart_ind_diff global_options matches 0 run execute store result score @a helper_diff run difficulty
 
 #Run all actives
 execute as @e[type=#cartographer_core:hostile,tag=tokened,scores={cooldown=0}] at @s run function cartographer_mob_abilities:loop/1_second/run_actives

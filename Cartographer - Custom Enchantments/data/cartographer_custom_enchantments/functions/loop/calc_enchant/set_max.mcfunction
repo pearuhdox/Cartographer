@@ -26,7 +26,8 @@ execute as @a[scores={lifesteal=7..}] run scoreboard players set @s lifesteal 6
 execute as @a[scores={pin_down=2..}] run scoreboard players set @s pin_down 1
 execute as @a[scores={point_blank=4..}] run scoreboard players set @s point_blank 3
 execute as @a[scores={regeneration=7..}] run scoreboard players set @s regeneration 6
-execute as @a[scores={repeating=8..}] run scoreboard players set @s repeating 7
+execute as @a[scores={repeating=8..10}] run scoreboard players set @s repeating 7
+execute as @a[scores={repeating=18..}] run scoreboard players set @s repeating 17
 execute as @a[scores={rend=2..}] run scoreboard players set @s rend 1
 execute as @a[scores={ricochet=4..}] run scoreboard players set @s ricochet 3
 execute as @a[scores={sapper=5..}] run scoreboard players set @s sapper 4

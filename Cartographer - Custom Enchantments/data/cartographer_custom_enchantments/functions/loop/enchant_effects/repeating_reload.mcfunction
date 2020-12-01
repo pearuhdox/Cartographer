@@ -14,13 +14,13 @@ execute if entity @s[scores={repeating=6},nbt={SelectedItem:{tag:{Charged:1b,Amm
 execute if entity @s[scores={repeating=7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run clear @s arrow 7
 
 
-execute if entity @s[scores={repeating=11},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run clear @s arrow 1
-execute if entity @s[scores={repeating=12},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run clear @s arrow 2
-execute if entity @s[scores={repeating=13},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run clear @s arrow 3
-execute if entity @s[scores={repeating=14},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run clear @s arrow 4
-execute if entity @s[scores={repeating=15},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run clear @s arrow 5
-execute if entity @s[scores={repeating=16},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run clear @s arrow 6
-execute if entity @s[scores={repeating=17},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run clear @s arrow 7
+execute if entity @s[scores={repeating=11},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run clear @s arrow 1
+execute if entity @s[scores={repeating=12},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run clear @s arrow 2
+execute if entity @s[scores={repeating=13},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run clear @s arrow 3
+execute if entity @s[scores={repeating=14},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run clear @s arrow 4
+execute if entity @s[scores={repeating=15},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run clear @s arrow 5
+execute if entity @s[scores={repeating=16},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run clear @s arrow 6
+execute if entity @s[scores={repeating=17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run clear @s arrow 7
 
 #Fix Crossbow
 execute if entity @s[scores={repeating=1},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:2,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b},{},{}],Charged:1b}
@@ -41,9 +41,12 @@ execute if entity @s[scores={repeating=17},nbt={Inventory:[{Slot:-106b,tag:{Char
 
 
 #Fix Multishot
-execute if block 4206900 0 4206901 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag merge value {ChargedProjectiles:[{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b}],Charged:1b}
+execute if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag merge value {ChargedProjectiles:[{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b}],Charged:1b}
 
 execute if entity @s[scores={repeating=1..7}] run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
 execute if entity @s[scores={repeating=11..17}] run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
 
 execute at @s run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
+
+#Run display for subtitle
+tag @a[scores={ui_location=1}] remove showing_repeating

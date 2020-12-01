@@ -56,7 +56,7 @@
         ]
     ],
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/hydraulic"
+        "function": "cartographer_custom_enchantments:descriptions/ricochet"
       },
     "parent": "cartographer_custom_enchantments:hydraulic"
 }
