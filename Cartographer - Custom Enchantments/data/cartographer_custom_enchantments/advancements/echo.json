@@ -44,7 +44,8 @@
             "color": "white"
         },
         "description": {
-            "text": "When you hit a mob, you have a +20% chance per level to recharge your attack considerably faster."
+            "text": "When you hit a mob, you have a +20% chance per level to recharge your attack considerably faster.",
+            "color": "white" 
         },
         "icon": {
             "item": "minecraft:diamond_sword"

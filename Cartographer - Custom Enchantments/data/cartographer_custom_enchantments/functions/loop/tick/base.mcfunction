@@ -46,6 +46,8 @@ execute as @a[scores={satiation=1..,helper_kill=1..}] at @s run function cartogr
 
 execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~ ~ cobweb run function cartographer_custom_enchantments:loop/enchant_effects/spurs
 execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~1 ~ cobweb run function cartographer_custom_enchantments:loop/enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~ ~ sweet_berry_bush run function cartographer_custom_enchantments:loop/enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~1 ~ sweet_berry_bush run function cartographer_custom_enchantments:loop/enchant_effects/spurs
 
 execute as @a[scores={decay=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/decay
 

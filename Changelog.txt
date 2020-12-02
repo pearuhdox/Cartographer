@@ -126,6 +126,8 @@ Custom Enchantments:
   - Each level adds one path of fangs from the player to a nearby hostile mob (within 10 blocks)
   - Level still caps at 3 (3 paths of fangs to nearby mobs).
 
+- Spurs now breaks Berry Bushes in addition to Cobwebs.
+
 - Ricochet now creates actual projectiles when it hits an enemy. The projectiles fan out towards nearby mobs, dealing 7 damage each.
 
 - Regeneration now makes heart particle effects when it heals you.

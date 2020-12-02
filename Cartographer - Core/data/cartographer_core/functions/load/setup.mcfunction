@@ -20,7 +20,9 @@ scoreboard objectives add vectorZ dummy
 
 #Create the global option scoreboard.
 scoreboard objectives add global_options dummy
+scoreboard objectives add no_hndbk_pmpt dummy
 
+execute as @p at @s run execute unless entity @s[scores={no_hndbk_pmpt=0..}] run scoreboard players set @s no_hndbk_pmpt 0
 
 #Schedule the loading message.
 
