@@ -158,7 +158,7 @@ Mob Abilities:
 
 - Augmenter and Healer have improved sound and visual effects, to better telegraph them.
 
-- Charge now uses the player's location instead of simply moving the mob forward. This makes Charge more accurate to player position and improves interactions on some mobs.
+- Charge and Webshot now use the player's location instead of simply moving the mob forward. This makes Charge more accurate to player position and improves interactions on some mobs.
 - Laser now uses an armor stand to track. This makes the skill more accurate and removes a couple bugs involving height differences between mobs and players.
 - Corpse Crawler now has variations for zombies, husks, drowned, piglins, zoglins, and bees. Each version's stats are near identical to each others.
 - Duplicator now works on Piglins, Pillagers, Creepers, Spiders, and Cave Spiders.
