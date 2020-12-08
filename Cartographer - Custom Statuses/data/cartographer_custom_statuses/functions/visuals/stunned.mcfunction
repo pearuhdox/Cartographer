@@ -6,7 +6,7 @@ execute as @s[scores={effect_stunned=1}] run data merge entity @s {NoAI:0}
 
 execute as @s[scores={effect_stunned=2..}] at @s if block ~ ~-0.1 ~ air run tp @s ~ ~-0.1 ~
 
-execute if entity @e[tag=tokened,scores={cooldown=0,effect_stunned=1..}] run execute as @e[tag=tokened,scores={cooldown=0,effect_stunned=1..}] at @s run function cartographer_mob_abilities:token/cancel_ability
+execute as @e[tag=tokened,scores={cooldown=0,effect_stunned=1..}] at @s run function cartographer_mob_abilities:token/cancel_ability
 
 scoreboard players add @s[scores={effect_stunned=1..}] helper_stun_show 1
 

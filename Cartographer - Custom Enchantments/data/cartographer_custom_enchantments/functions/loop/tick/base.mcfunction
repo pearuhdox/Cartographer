@@ -175,14 +175,14 @@ function cartographer_custom_enchantments:loop/tick/reset
 scoreboard players add @e[type=arrow,scores={helper_lifetime=1..},nbt=!{inGround:1b}] helper_lifetime 1
 scoreboard players add @e[type=trident,scores={helper_lifetime=1..},nbt=!{inGround:1b}] helper_lifetime 1
 
-scoreboard players add @e[scores={helper_lifetime=1..},type=armor_stand,tag=hydraul_stopper] helper_lifetime 1
+scoreboard players add @e[type=armor_stand,tag=hydraul_stopper,scores={helper_lifetime=1..}] helper_lifetime 1
 
 execute as @e[type=arrow,scores={helper_lifetime=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/process_projectile
 execute as @e[type=trident,scores={helper_lifetime=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/process_projectile
 
-execute as @a at @s run kill @e[type=armor_stand,distance=..3,tag=hydraul_stopper,scores={helper_lifetime=3..}]
+execute as @a at @s run kill @e[type=armor_stand,tag=hydraul_stopper,distance=..3,scores={helper_lifetime=3..}]
 tag @e[tag=bounce] remove bounce
-execute as @e[type=#cartographer_core:hostile,tag=current_drag] at @s run execute unless entity @e[type=trident,scores={current=1},distance=..5] run tag @s remove current_drag
+execute as @e[type=#cartographer_core:hostile,tag=current_drag] at @s unless entity @e[type=trident,scores={current=1},distance=..5] run tag @s remove current_drag
 
 #Action bar indicators for Repeating and Echo
 title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:8}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"8","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]
