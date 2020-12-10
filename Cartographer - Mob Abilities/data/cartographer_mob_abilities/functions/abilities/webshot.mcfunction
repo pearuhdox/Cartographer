@@ -15,3 +15,5 @@ playsound minecraft:entity.spider.death hostile @a[distance=..16] ~ ~ ~ 2 0.5
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 scoreboard players set @a[distance=..20] cooldown 2
 tag @s remove tokened
+
+schedule function cartographer_mob_abilities:helper/attacked_reset 10t

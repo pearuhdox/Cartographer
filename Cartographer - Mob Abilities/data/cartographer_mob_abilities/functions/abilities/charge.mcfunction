@@ -15,3 +15,5 @@ scoreboard players set @a[distance=..20] cooldown 3
 tag @s remove tokened
 
 kill @e[type=armor_stand,tag=charge_marker]
+
+schedule function cartographer_mob_abilities:helper/attacked_reset 10t

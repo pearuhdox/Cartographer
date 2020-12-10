@@ -22,7 +22,14 @@ scoreboard objectives add vectorZ dummy
 scoreboard objectives add global_options dummy
 scoreboard objectives add no_hndbk_pmpt dummy
 
+#Create scores for player damage
+scoreboard objectives add damage_queue dummy
+scoreboard objectives add custom_death deathCount
+
 execute as @p at @s run execute unless entity @s[scores={no_hndbk_pmpt=0..}] run scoreboard players set @s no_hndbk_pmpt 0
+
+#Create the team to hide death messages for core player damage.
+team add hide_msg
 
 #Schedule the loading message.
 

@@ -10,7 +10,9 @@ execute if entity @a[distance=..1.5] run scoreboard players set @s helper_raycas
 
 execute if entity @a[distance=..1.5] if block ~ ~ ~ #cartographer_core:can_raycast positioned ^ ^ ^1 run function cartographer_mob_abilities:abilities/hookshot_raycast
 
-execute if entity @a[distance=..2] as @a[distance=..2] run summon firework_rocket ~ ~ ~ {Silent:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,FadeColors:[I;4868682]}]}}}}
+execute as @a[distance=..2,tag=!hooked] at @s run scoreboard players set @s damage_queue 7
+execute as @a[distance=..2,tag=!hooked] at @s run function cartographer_core:helper/hurt_player/by_score
+execute as @a[distance=..2,tag=!hooked] at @s run tag @s add hooked
 
 execute if entity @a[distance=..2] as @a[distance=..2] run effect give @a[distance=..2] nausea 1 99 true
 

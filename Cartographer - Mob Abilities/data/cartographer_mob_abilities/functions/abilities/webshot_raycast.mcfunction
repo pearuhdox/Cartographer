@@ -4,7 +4,9 @@ scoreboard players remove @s[scores={helper_raycast=1..}] helper_raycast 1
 
 execute if entity @a[distance=..1.5] if block ~ ~ ~ #cartographer_core:can_raycast positioned ^ ^ ^1 run function cartographer_mob_abilities:abilities/webshot_raycast
 
-execute if entity @a[distance=..2] as @a[distance=..2] run summon firework_rocket ~ ~ ~ {Silent:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;16777215]}]}}}}
+execute as @a[distance=..2,tag=!webbed] run scoreboard players set @s damage_queue 6
+execute as @a[distance=..2,tag=!webbed] run function cartographer_core:helper/hurt_player/by_score
+execute as @a[distance=..2,tag=!webbed] run tag @s add webbed
 
 execute if entity @a[distance=..2] as @a[distance=..2] at @s run setblock ~ ~ ~ minecraft:cobweb keep
 

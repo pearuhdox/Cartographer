@@ -18,3 +18,5 @@ kill @e[type=armor_stand,tag=hook_marker,distance=..1,limit=1]
 
 scoreboard players set @a[distance=..20] cooldown 3
 tag @s remove tokened
+
+schedule function cartographer_mob_abilities:helper/attacked_reset 10t

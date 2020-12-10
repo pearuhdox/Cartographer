@@ -160,13 +160,17 @@ execute as @a[scores={curse_malevolent=2..}] at @s run function cartographer_cus
 
 execute as @a[scores={curse_regret=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_regret
 
-execute as @a[scores={helper_deathtime=0}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_shattering
+#Commented out, because moved into DE graves.
 
-execute as @a[scores={helper_deathtime=1..2}] at @s run tp @e[type=item,nbt={Item:{tag:{Soulbound:1}}}] @s
+#execute as @a[scores={helper_deathtime=0}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_shattering
 
-#End the Second Wind effect if a player dies. Also reset their tier.
+#execute as @a[scores={helper_deathtime=1..2}] at @s run tp @e[type=item,nbt={Item:{tag:{Soulbound:1}}}] @s
+
+#End the Second Wind effect if a player dies. Also reset their tier and remove second wind triggers.
 execute as @a[scores={helper_deathtime=0}] at @s run scoreboard players set @s second_wind_cool 181
 execute as @a[scores={helper_deathtime=0}] at @s run scoreboard players set @s second_wind_tier 0
+execute as @a[scores={helper_deathtime=0}] at @s run tag @s remove bracing
+execute as @a[scores={helper_deathtime=0}] at @s run tag @s remove evading
 
 function cartographer_custom_enchantments:loop/tick/reset
 

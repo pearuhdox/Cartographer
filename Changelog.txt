@@ -41,6 +41,12 @@ Mimics bring the stereotypical greedy player punisher to Minecraft. Warning, the
 - Mapmakers can customize what loot mimics drop on death. Simply place the items in the chest in creative mode, or while the mimic is inactive.
 - Mimics scale their stats based on the armor value of the player opening them. The stronger the player, the stronger the Mimic.
 
+Core:
+- Core now features a very heftily overhauled reload message.
+  - Message now features buttons to configure various Cartographer options, see a list of credits, and access the wiki and download pages.
+  - Every module in Cartographer with handbook advancements now features chat prompts which help draw attention to custom effects.
+  - Both the reload message can be turned off (into a more minimal version) and so can handbook chat prompts.
+
 Custom Enchantments:
 - 2 (technically 3) New Enchantments to brawl with!
   - Executioner: When a mob is attacked by this *melee* weapon, if the attack would leave them below 10% of their health, they are immediately killed instead.
@@ -52,6 +58,11 @@ Custom Enchantments:
   - Deadeye: This crossbow fires instant traveling bolts that auto lock on nearby enemies instead of arrows, doing 10 damage.
     - Single Level
     - This enchant has technically existed and worked for a while, but now it is "properly" introduced, and will have entries in Cartographer.
+
+- New Option: Toggle Charge Info 
+  - Changes the position of enchantment charge/ammo count information (for Echo and Repeating, see below).
+  - Can be set to the actionbar, subtitle, or entirely invisible.
+  - Set on a per player basis.
 
 Mob Abilities:
 - 2 new active abilities have been added: Cloaker
@@ -75,15 +86,13 @@ Custom Statuses:
   - While Cloaked, the mob emits strange ghostly sounds around it. The louder they are, the more cloaked enemies there are nearby.
   - While Cloaked, if the mob takes damage, the duration of Cloaked is reduced by 3 seconds.
 
+- New Option: Independent Difficulty
+  - When disabled, (default) Mob Abilities will use the world difficulty to set helper_diff on all players.
+  - When enabled, Mob Abilities will ignore world difficulty, allowing a custom value between 1 and 5 to be set.
+
 Changes:
 
 Core:
-- The reload message has received a rather hefty overhaul. Shoutouts to RockNRed for aesthetic ideas and assistance!
-- Cartographer's reload message now links to its Github page, wiki, and to an options menu.
-- New Option: Minimal Reload 
-  - Makes the reload message much smaller and condensed, hiding various bits of information.
-  - Set on a per player basis.
-
 - Helper Healing functions have been reworked to all use area effect clouds instead of Regeneration effect commands. This makes healing immediate rather than very slightly delayed.
 - Helper clouds have received tweaks to ensure they are simultaneously more accurate, and don't have unintended behavior.
 - Helper clouds now scale in powers of 2, rather than having a command for each value up to 8. This means any value of healing can be cast on the player by combining the right values.
@@ -98,51 +107,89 @@ Core:
 
 Custom Enchantments:
 
-- Eruption damage has been increased to 3/6/9/12/15 damage per level (was 2/4/6/8/10).
-- Eruption now inflicts a small amount of knockback.
-- Eruption radius reduced to 8. (was 10).
+- Adrenaline:
+  - Scaling has been adjusted.
+    - New scaling is 5 seconds for the first level, 5 seconds for the second level, and one less second per additional level of the enchant.
+    - TLDR (5/10/14/17/19/20 seconds) per level.
 
-- Deadeye inflicts a small amount of knockback. (In its hidden version, it did not).
+- Deadeye:
+  - Inflicts small amount of knockback (its hidden version did not)
 
-- Repeating now displays the current ammo total stored in the crossbow in your actionbar when held.
+- Duelist:
+  - Scaling is now equivalent to Smite and Bane of Arthropods.
+  - This means each level provides +2.5 damage to Illager mobs. (2.5/5/7.5/10/12.5)
 
-- Adrenaline, Energetic, and Frenzy have adjusted scaling.
-  - The new scaling is 5 seconds for the first level, 5 seconds for the second level, and one less second per level of the enchant. (5/10/14/17/19/20 seconds)
-  - The intent is to make single levels of these enchants feel more impactful and useful, though keep their power level somewhat the same.
-  - Overall, scaling is adjusted to offer more buff duration uptime.
+- Echo:
+  - Reworked!
+    - Per level, now stores charges of instant attacks.
+    - When you hit a mob with an echo weapon, decrease 1 charge.
+    - While you have charges, your weapon recharges instantly, and you are fully knockback immune.
+    - Gain charges back when out of combat.
+    - Or gain half of them back when you kill a mob.
+    - Each level of Echo gives +2 charges. (2/4/6 Echo attacks)
+    - Echo charges can be seen in the subtitle space, actionbar space, or hidden entirely.
 
-- Hunter and Duelist scale equivalently to Smite and Bane of Arthropods (2.5/5/7.5/10/12.5, instead of 2/5/7/10/12)
+- Energetic:
+  - Scaling has been adjusted.
+    - New scaling is 5 seconds for the first level, 5 seconds for the second level, and one less second per additional level of the enchant.
+    - TLDR (5/10/14/17/19/20 seconds) per level.
 
-- Echo has been reworked:
-  - No longer chance based
-  - Based on level, store a number of "Echo Charges" (displayed in your action bar) [2 Charges Per Level]
-  - When you attack an enemy, consume a charge. [Missed attacks do not count]
-  - While you have charges (and holding the Echo weapon), your Attack Speed is 1024 (instant) and you have 1 Knockback Resistance.
-  - When you kill a mob, restore half the charges you can hold.
-  - When out of combat, every 3 seconds, restore half the charges you can hold.
+- Eruption:
+  - Damage increased to 3 per level. (Scales 3/6/9/12/15)
+  - Radius reduced to 8 (was 10).
+  - Now inflicts a small amount of knockback.
 
-- Evocation has been reworked:
-  - Now guarantees fangs directed from the player towards nearby mobs.
-  - Each level adds one path of fangs from the player to a nearby hostile mob (within 10 blocks)
-  - Level still caps at 3 (3 paths of fangs to nearby mobs).
+- Evocation:
+  - Reworked!
+    - Per level, when you kill a mob, create rows of fangs at nearby mobs.
+    - Each level creates 1 additional row of fangs at different nearby mobs. (Max of 3 rows of fangs)
 
-- Spurs now breaks Berry Bushes in addition to Cobwebs.
+- Frenzy:
+  - Scaling has been adjusted.
+    - New scaling is 5 seconds for the first level, 5 seconds for the second level, and one less second per additional level of the enchant.
+    - TLDR (5/10/14/17/19/20 seconds) per level.
 
-- Ricochet now creates actual projectiles when it hits an enemy. The projectiles fan out towards nearby mobs, dealing 7 damage each.
+- Hunter:
+  - Scaling is now equivalent to Smite and Bane of Arthropods.
+  - This means each level provides +2.5 damage to Monstrous mobs. (2.5/5/7.5/10/12.5)
 
-- Regeneration now makes heart particle effects when it heals you.
-- Lifesteal makes heart particle effects when it heals you.
-- Lifesteal creates a sound when it triggers.
+- Infinity:
+  - Has been recoded from the ground up behind the scenes.
+  - No effective change to the enchant, but hopefully less bugs and weird interactions.
 
-- Point Blank creates sound and particles when fired.
-- Sharpshot creates sound and particles when fired.
+- Lifesteal:
+  - Creates sfx and vfx when it triggers.
 
-- New Option: Toggle Charge Info 
-  - Changes the position of enchantment charge/ammo count information (for Echo and Repeating).
-  - Can be set to the actionbar, subtitle, or entirely invisible.
-  - Set on a per player basis.
+- Point Blank:
+  - Creates sfx and vfx when fired.
+
+- Regeneration:
+  - Creates vfx when it triggers.
+
+- Repeating:
+  - Ammo can be seen in the subtitle space, actionbar space, or hidden entirely.
+
+- Ricochet:
+  - Creates actual projectiles which fan out from the base mob, hitting other mobs.
+  - Projectiles deal 7 damage each.
+  - Projectiles can target and hit the same enemy (and will if there are no other nearby enemies).
+
+- Second Wind:
+  - Deals 10 damage to the player. (instead of fireworks)
+  - Repeated triggers increase the damage by 10. (10/20/30..)
+  - 4th and higher triggers do 50 damage. (10/20/30/50/50..)
+
+- Sharpshot:
+  - Creates sfx and vfx when fired.
+
+Developer Commentary: Adrenaline, Energetic, and Frenzy have all received scaling adjustments to make lower levels feel much more useful.
+Eruption damage has been buffed to make it feel more useful, with a slight nerf to its range, and the introduction of knockback to make
+its damage feel more normal. Second Wind has been made much harsher in its scaling, to prevent it from being powerful when combined with
+high defense armor.
 
 Mob Abilities:
+
+Global Overall Changes:
 - All mob abilities only work on hostile mobs. While this is a somewhat of a restrictive change, it is being done for performance reasons.
   - All mobs that can use mob abilities are controlled directly by Core's hostile mob tag.
   - You can modify this tag to extend abilities to other mobs, be warned that all Cartographer systems will count them as "hostile".
@@ -152,32 +199,77 @@ Mob Abilities:
   - This is also to help with performance.
   - This will likely be unrestricted when Piglins and Pillagers properly interact with singular tipped arrows.
 
-- Helper Difficulty is now directly set based on the world's difficulty. The feature to set it to a custom value will likely return in the future.
-  - This is to make using Cartographer a bit more user friendly.
-  - Gone are the days of setting a random score to a number which you have no idea what it does!
+Augmenter:
+  - Improved sfx and vfx.
+  - Handbook description no longer incorrectly labels Augmenter buffs as level 1, and now properly labels them as level 2.
+  - Augmenter now places Slowness 7 on the mob while charging. (ground based mobs cannot move)
 
-- Augmenter and Healer have improved sound and visual effects, to better telegraph them.
+Breaker:
+  - No longer breaks spawners.
 
-- Charge and Webshot now use the player's location instead of simply moving the mob forward. This makes Charge more accurate to player position and improves interactions on some mobs.
-- Laser now uses an armor stand to track. This makes the skill more accurate and removes a couple bugs involving height differences between mobs and players.
-- Corpse Crawler now has variations for zombies, husks, drowned, piglins, zoglins, and bees. Each version's stats are near identical to each others.
-- Duplicator now works on Piglins, Pillagers, Creepers, Spiders, and Cave Spiders.
-- Breaker no longer breaks spawners.
-- Healer and Augmenter now apply Slowness VII (immobilizes ground based mobs) when charging.
+Charge:
+  - Uses player location to aim instead of direct forward motion.
+  - Deals 10 damage. (Instead of fireworks)
 
-- Fixed erroneous description of Augmenter. (It applies level 2 effects, not level 1 effects)
+Corpse Crawler:
+  - Has variants for zombies, husks, drowned, piglins, zoglins, and bees.
 
-- New Option: Independent Difficulty
-  - When enabled, unties helper_diff from the world difficulty, allowing it to be set to any value between 1 and 5.
-  - Set on a global (affects the entire world) basis.
+Disarm:
+  - Deals 7 damage (instead of using fireworks).
+
+Duplicator:
+  - Now works on Piglins, Pillagers, Creepers, Spiders, and Cave Spiders.
+
+Flame Nova:
+  - Deals 8 damage. (Instead of fireworks)
+
+Frost Nova:
+  - Deals 8 damage. (Instead of fireworks)
+
+Healer:
+  - Improved sfx and vfx.
+  - Places Slowness 7 on the mob while charging. (ground based mobs cannot move)
+
+Hookshot:
+  - Deals 7 damage. (Instead of fireworks)
+
+Laser:
+  - Tracks player location using an armor stand rather than look direction.
+  - Laser is more accurate on non-bipedal mobs.
+  - Improved vfx and sfx.
+
+Smash:
+  - Deals 10 damage. (Instead of fireworks)
+
+Soulfire Nova:
+  - Deals 8 damage. (Instead of fireworks)
+
+Sweep:
+  - Deals 8 damage. (Instead of fireworks)
+
+Trapper:
+  - Clouds now display a unique death message if you die to them.
+
+Venom Nova:
+  - Deals 8 damage. (Instead of fireworks)
+
+Webshot:
+  - Uses player location to aim instead of direct forward motion.
+  - Deals 6 damage. (Instead of fireworks)
 
 Bug Fixes and Optimizations:
 - New Shulker Boxes for Custom Enchantments to separate Repeating, Auto Charge, and Infinity further. This should eliminate (or at least drastically reduce) the chance of items being replaced improperly.
 - Fixed a bug where Repeating only fired the first round of bolts as Multishot, if a Crossbow also had Multishot.
-- About 50% of the @e calls have been removed from the pack. (Ballparking 100 separate calls)
+- Fixed potential bugs with Second Wind mis-activating on a newly respawned player.
+- Fixed a bug where Infinity did not work on Golden Apples.
+
+- About 60 or 70% of the @e calls have been removed from the pack. (Ballparking 130 separate calls)
   - What does this mean? The pack should perform better under high stress environments.
   - This likely won't be noticeable for casual use, but it should hopefully mean that in extreme cases, Cartographer doesn't affect your tps.
-  - This isn't a guarantee Cartographer cannot affect tps, all large datapacks can. But this will help edge cases a bit.
+  - This isn't a guarantee Cartographer cannot affect tps; all large datapacks can. But this will help edge cases a bit.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Version Beta 1.1 - The Shock and Awe Update (yeah I'm gonna give updates cutesy names, cause you know, why not)
 

@@ -2,7 +2,11 @@ particle minecraft:smoke ~ ~ ~ 0.75 0.75 0.75 0.05 50 normal
 
 scoreboard players remove @s[scores={helper_raycast=1..}] helper_raycast 1
 
-execute if entity @a[distance=..2] as @a[distance=..2] run summon firework_rocket ~ ~ ~ {Silent:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;0]},{Type:0,Colors:[I;0]},{Type:0,Colors:[I;0]}]}}}}
+execute as @a[distance=..2,tag=!ran_over] at @s run scoreboard players set @s damage_queue 10
+execute as @a[distance=..2,tag=!ran_over] at @s run function cartographer_core:helper/hurt_player/by_score
+execute as @a[distance=..2,tag=!ran_over] at @s run tag @s add ran_over
+
+execute if entity @a[scores={custom_death=1..}] at @s run say hi
 
 tp @s ^ ^ ^1
 
