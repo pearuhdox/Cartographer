@@ -115,6 +115,9 @@ Custom Enchantments:
 - Deadeye:
   - Inflicts small amount of knockback (its hidden version did not)
 
+- Decay:
+  - Now has particle effects for hits.
+
 - Duelist:
   - Scaling is now equivalent to Smite and Bane of Arthropods.
   - This means each level provides +2.5 damage to Illager mobs. (2.5/5/7.5/10/12.5)
@@ -137,7 +140,19 @@ Custom Enchantments:
 - Eruption:
   - Damage increased to 3 per level. (Scales 3/6/9/12/15)
   - Radius reduced to 8 (was 10).
+  - Radius is now centered around the spawner.
   - Now inflicts a small amount of knockback.
+  - Now inflicts on hit enchantments when triggered (Fire Aspect, Frostbite, Decay, Overload, Vicious, Committed, Stunning). Thanks ShadowVisions for this idea!
+  - Improved vfx
+
+- Evasion:
+  - When Evasion triggers, enemies within 8 blocks are blinded for 3 seconds.
+  - When Evasion triggers, enemies within 8 blocks are knocked back a short distance.
+  - Now features a "bias against expectation" system.
+    - Each failed trigger of evasion raises the chance of it triggering by 5%. (Capping at 30% additional chance)
+    - When Evasion triggers, this counter is reset.
+    - You only gain "Evasion Bias" when wearing Evasion gear.
+    - This does not increase your Evasion level, it only increases the chance of Evasion successfully triggering over time.
 
 - Evocation:
   - Reworked!
@@ -148,6 +163,9 @@ Custom Enchantments:
   - Scaling has been adjusted.
     - New scaling is 5 seconds for the first level, 5 seconds for the second level, and one less second per additional level of the enchant.
     - TLDR (5/10/14/17/19/20 seconds) per level.
+
+- Frostbite:
+  - Slowness duration reduced to 4 seconds. (from 5)
 
 - Hunter:
   - Scaling is now equivalent to Smite and Bane of Arthropods.
@@ -176,16 +194,23 @@ Custom Enchantments:
 
 - Second Wind:
   - Deals 10 damage to the player. (instead of fireworks)
-  - Repeated triggers increase the damage by 10. (10/20/30..)
-  - 4th and higher triggers do 50 damage. (10/20/30/50/50..)
+  - 2nd and 3rd triggers increase the damage by 5. (10/15/20..)
+  - 4th and higher triggers do 30 damage. (10/15/20/30/30..)
+  - Repeated triggers inflict debuffs. (No Debuff / Slowness I / Slowness I Mining Fatigue I / Slowness I Mining Fatigue I Weakness I...)
+  - Second Wind no longer blinds nearby enemies when triggered. (The Evasion hit still does though.)
+  - When an enemy is killed, and the user is out of absorption hearts, but have not been killed, the system will instead skip the damage event.
+    - This is to prevent awkward interactions where you "killed" an enemy before death, but were still punished for it anyways.
+  - Reworked vfx and sfx
 
 - Sharpshot:
   - Creates sfx and vfx when fired.
 
 Developer Commentary: Adrenaline, Energetic, and Frenzy have all received scaling adjustments to make lower levels feel much more useful.
 Eruption damage has been buffed to make it feel more useful, with a slight nerf to its range, and the introduction of knockback to make
-its damage feel more normal. Second Wind has been made much harsher in its scaling, to prevent it from being powerful when combined with
-high defense armor.
+its damage feel more normal. Evasion has received multiple changes to help it feel more impactful.
+Second Wind has been given harsher scaling, to prevent it from being powerful when combined with
+high defense armor. Now the damage dealt by Second Wind's 4th tier should always execute the player
+should they be under 6 health. (assuming unenchanted Diamond or Netherite gear)
 
 Mob Abilities:
 

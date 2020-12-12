@@ -65,6 +65,9 @@ scoreboard objectives add curse_malevolent dummy
 scoreboard objectives add curse_regret dummy
 scoreboard objectives add curse_two_handed dummy
 
+#Setup evasion bias score.
+scoreboard objectives add evasion_bias dummy
+
 #Setup dummy player score for Second Wind calculations.
 scoreboard players set SecondWindHelper second_wind 10
 

@@ -66,7 +66,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When held or worn, the player has a 5% chance to dodge an instance of damage per level, up to 50% chance. Damage cannot be dodged in succession. Dodging damage negates all damage that would be dealt from that instance.",
+            "text": "When held or worn, the player has a 5% chance to negate an instance of damage per level, up to 50% chance. Damage cannot be negated in succession. When Evasion triggers, nearby mobs are blinded and knocked back.",
             "color": "white"
         },
         "icon": {

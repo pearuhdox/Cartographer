@@ -1,6 +1,9 @@
 function cartographer_core:helper/randomize
 
 scoreboard players operation @s helper_evade = @s random
+scoreboard players operation @s helper_evade -= @s evasion_bias
+
+scoreboard players set @s[scores={helper_evade=..0}] helper_evade 1
 
 execute if entity @s[scores={evasion=1,helper_evade=1..5}] run tag @s add evading
 
@@ -21,6 +24,10 @@ execute if entity @s[scores={evasion=8,helper_evade=1..40}] run tag @s add evadi
 execute if entity @s[scores={evasion=9,helper_evade=1..45}] run tag @s add evading
 
 execute if entity @s[scores={evasion=10,helper_evade=1..50}] run tag @s add evading
+
+execute unless entity @s[tag=evading] run scoreboard players add @s evasion_bias 5
+execute unless entity @s[tag=evading] run scoreboard players set @s[scores={evasion_bias=30..}] evasion_bias 30
+execute if entity @s[tag=evading] run scoreboard players set @s evasion_bias 0
 
 # Second Wind Dramatic Trigger
 # Take the amount the player was damaged for.

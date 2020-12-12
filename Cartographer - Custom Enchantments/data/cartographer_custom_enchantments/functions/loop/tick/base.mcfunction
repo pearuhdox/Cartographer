@@ -172,6 +172,7 @@ execute as @a[scores={helper_deathtime=0}] at @s run scoreboard players set @s s
 execute as @a[scores={helper_deathtime=0}] at @s run tag @s remove bracing
 execute as @a[scores={helper_deathtime=0}] at @s run tag @s remove evading
 
+
 function cartographer_custom_enchantments:loop/tick/reset
 
 # PROJECTILE SCORE UPDATES
