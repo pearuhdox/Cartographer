@@ -5,3 +5,4 @@ execute if entity @e[type=trident,distance=..3] run execute if entity @s[scores=
 execute if entity @e[type=trident,distance=..3] run execute if entity @s[scores={tempest=5}] run tag @e[type=trident,distance=..3,limit=1] add tempest_5
 
 execute if entity @e[type=trident,distance=..3] run execute if entity @s[scores={tempest=1..}] run scoreboard players set @e[type=trident,distance=..3,limit=1] tempest 1
+execute if entity @e[type=trident,distance=..3] run execute if entity @s[scores={tempest=1..}] run scoreboard players set @e[type=trident,distance=..3,limit=1] helper_lifetime 1

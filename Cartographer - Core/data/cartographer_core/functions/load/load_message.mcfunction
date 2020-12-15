@@ -19,6 +19,7 @@ execute if entity @a[tag=!minimal_reload] run function cartographer_custom_encha
 execute if entity @a[tag=!minimal_reload] run function cartographer_custom_statuses:load/load_message
 execute if entity @a[tag=!minimal_reload] run function cartographer_mimics:load/load_message
 execute if entity @a[tag=!minimal_reload] run function cartographer_mob_abilities:load/load_message
+execute if entity @a[tag=!minimal_reload] run function cartographer_pot_injector:load/load_message
 execute if entity @a[tag=!minimal_reload] run function cartographer_repair_stations:load/load_message
 
 tellraw @a[tag=!minimal_reload] {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
