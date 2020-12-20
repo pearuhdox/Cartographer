@@ -6,13 +6,13 @@ execute as @a[predicate=cartographer_custom_enchantments:infinity/offhand_1] run
 execute as @a[predicate=cartographer_custom_enchantments:infinity/mainhand_1] run scoreboard players set @s infinity_m 1
 
 #Reset attack speed and kbr on Echo users
-execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.attack_speed base set 1024
-execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.attack_speed base set 4
-execute as @a[scores={echo=0}] run attribute @s minecraft:generic.attack_speed base set 4
+execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 echo_effect_spd 1024 add
+execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
+execute as @a[scores={echo=0}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
 
-execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance base set 1
-execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.knockback_resistance base set 0
-execute as @a[scores={echo=0}] run attribute @s minecraft:generic.knockback_resistance base set 0
+execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance modifier add 5-3-8-15-180504192124 echo_effect_kbr 10 add
+execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
+execute as @a[scores={echo=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
 
 # ENCHANT EFFECTS THAT MUST ACTIVATE EVERY TICK
 
