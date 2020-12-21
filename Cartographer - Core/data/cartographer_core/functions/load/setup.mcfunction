@@ -28,9 +28,6 @@ scoreboard objectives add custom_death deathCount
 
 execute as @p at @s run execute unless entity @s[scores={no_hndbk_pmpt=0..}] run scoreboard players set @s no_hndbk_pmpt 0
 
-#Create the team to hide death messages for core player damage.
-team add hide_msg
-
 #Schedule the loading message.
 
 schedule function cartographer_core:load/load_message 5t
