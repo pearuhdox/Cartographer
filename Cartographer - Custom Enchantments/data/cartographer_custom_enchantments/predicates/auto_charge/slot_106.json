@@ -4,7 +4,7 @@
   "predicate": {
     "equipment": {
       "offhand": {
-        "nbt": "{AutoCharge:1}"
+        "nbt": "{Charged:0b,AutoCharge:1}"
       }
     },
     "player": {}

@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "Sprint attacks with this weapon are thrust attacks. Thrust attacks deal 2 damage per level as well as hit enemies behind the target.",
+            "text": "Sprint attacks with this weapon are thrust attacks. Thrust attacks deal 2 additional damage per level as well as hit enemies behind the target.",
             "color": "white"
         },
         "icon": {

@@ -1,0 +1,10 @@
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_0] run scoreboard players set @s infinity 1
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_1] run scoreboard players set @s infinity 2
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_2] run scoreboard players set @s infinity 3
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_3] run scoreboard players set @s infinity 4
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_4] run scoreboard players set @s infinity 5
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_5] run scoreboard players set @s infinity 6
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_6] run scoreboard players set @s infinity 7
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_7] run scoreboard players set @s infinity 8
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_8] run scoreboard players set @s infinity 9
+execute as @a[predicate=cartographer_custom_enchantments:infinity/slot_106] run scoreboard players set @s infinity 10

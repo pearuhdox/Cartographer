@@ -1,1 +1,1 @@
-effect give @s[tag=evading] resistance 1 4 true
+execute as @s[tag=evading] at @s run summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:11b,Amplifier:4b,Duration:2,ShowParticles:0b}]}

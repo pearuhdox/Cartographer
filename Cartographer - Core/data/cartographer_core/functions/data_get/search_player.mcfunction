@@ -1,0 +1,2 @@
+execute if score $i ca.pldata.var = @s ca.pldata.id run data modify storage cartographer_core:pldata working_data set from storage cartographer_core:pldata working_arr[0]
+execute unless score $i ca.pldata.var = @s ca.pldata.id run function cartographer_core:data_get/search_player2

@@ -1,18 +1,17 @@
 
-
-# INFINITY TESTS MUST BE DONE IN THIS FILE INSTEAD
-
-execute as @a[predicate=cartographer_custom_enchantments:infinity/offhand_1] run scoreboard players set @s infinity_o 1
-execute as @a[predicate=cartographer_custom_enchantments:infinity/mainhand_1] run scoreboard players set @s infinity_m 1
-
 #Reset attack speed and kbr on Echo users
-execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 echo_effect_spd 1024 add
-execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
+execute as @a[scores={echo=1..,echo_charges=0..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 echo_effect_spd 1024 add
+execute as @a[scores={echo=1..,echo_charges=..-1}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
 execute as @a[scores={echo=0}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
 
-execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance modifier add 5-3-8-15-180504192124 echo_effect_kbr 10 add
+execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance modifier add 5-3-8-15-180504192124 echo_effect_kbr 0.15 add
 execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
 execute as @a[scores={echo=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
+
+#Current recharge attack meter
+execute as @a[scores={ca.ce.cur_spd=2..}] run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 current_effect_spd 1024 add
+execute as @a[scores={ca.ce.cur_spd=1}] run attribute @s minecraft:generic.attack_speed modifier remove 31-321-1818-514-20
+scoreboard players remove @a[scores={ca.ce.cur_spd=1..}] ca.ce.cur_spd 1
 
 # ENCHANT EFFECTS THAT MUST ACTIVATE EVERY TICK
 
@@ -145,20 +144,26 @@ execute as @a[scores={tempest=1..,helper_trident=1..}] at @s run function cartog
 
 execute as @a[scores={ricochet=1..,helper_trident=1..}] at @s run execute as @e[type=trident,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:loop/enchant_effects/ricochet
 
-execute as @a[scores={trueshot=1..,helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/trueshot
-execute as @a[scores={trueshot=1..,helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/trueshot
+execute as @a[scores={trueshot=1..,helper_fire_bow=1..}] at @s run execute as @e[type=arrow,sort=nearest,limit=3,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/trueshot
+execute as @a[scores={trueshot=1..,helper_fire_cbow=1..}] at @s run execute as @e[type=arrow,sort=nearest,limit=3,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/trueshot
 
 execute as @a[scores={volatile=1..,helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/volatile
 execute as @a[scores={volatile=1..,helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/volatile
 
-execute as @a[scores={infinity_m=1}] at @s run execute positioned ~ -1 ~ run function cartographer_custom_enchantments:loop/enchant_effects/infinity_handler
-execute as @a[scores={infinity_o=1}] at @s run execute positioned ~ -1 ~ run function cartographer_custom_enchantments:loop/enchant_effects/infinity_handler
-
-execute as @a[scores={infinity=1..}] at @s run execute positioned ~ -1 ~ run function cartographer_custom_enchantments:loop/enchant_effects/infinity_storing
+execute as @a[scores={infinity=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_handler
+execute as @a[scores={infinity=1..},tag=!doing_infinity] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_storage
 
 execute as @a[scores={curse_malevolent=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_malevolence
 
 execute as @a[scores={curse_regret=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_regret
+
+execute as @a[scores={curse_two_handed=1}] at @s unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{Knapsack:1}}]}] run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed
+
+execute as @a[scores={curse_two_handed=3}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_knapsack
+execute as @a[scores={curse_two_handed=3}] at @s unless entity @s[nbt={SelectedItem:{tag:{CurseTwoHanded:1}}}] run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_unpack
+
+execute as @a[scores={curse_two_handed=2}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_disarm
+
 
 #Commented out, because moved into DE graves.
 
@@ -185,7 +190,7 @@ scoreboard players add @e[type=armor_stand,tag=hydraul_stopper,scores={helper_li
 execute as @e[type=arrow,scores={helper_lifetime=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/process_projectile
 execute as @e[type=trident,scores={helper_lifetime=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/process_projectile
 
-execute as @a at @s run kill @e[type=armor_stand,tag=hydraul_stopper,distance=..3,scores={helper_lifetime=3..}]
+kill @e[type=armor_stand,tag=hydraul_stopper,scores={helper_lifetime=3..}]
 tag @e[tag=bounce] remove bounce
 execute as @e[type=#cartographer_core:hostile,tag=current_drag] at @s unless entity @e[type=trident,scores={current=1},distance=..5] run tag @s remove current_drag
 
@@ -273,5 +278,11 @@ tag @a[scores={echo=0}] remove showing_echo
 scoreboard players remove @e[scores={ricochet_cool=1..}] ricochet_cool 1
 
 execute as @e[type=armor_stand,tag=ricochet_projectile] at @s run function cartographer_custom_enchantments:loop/enchant_effects/ricochet_projectile
+
+
+#Calculate and reset Infinity here so we don't screw up the mech.
+scoreboard players set @a[scores={infinity=1..}] infinity 0
+
+function cartographer_custom_enchantments:loop/calc_enchant/infinity
 
 schedule function cartographer_custom_enchantments:loop/tick/base 1t

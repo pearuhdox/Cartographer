@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Arrows fired from this weapon are unaffected by gravity."
+            "text": "Arrows fired from this weapon are unaffected by gravity and move twice as fast."
         },
         "icon": {
             "item": "minecraft:spectral_arrow"

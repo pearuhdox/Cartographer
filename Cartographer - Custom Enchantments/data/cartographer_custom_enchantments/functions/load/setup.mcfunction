@@ -79,6 +79,10 @@ scoreboard objectives add second_wind_kill totalKillCount
 scoreboard objectives add second_wind_abso dummy
 scoreboard objectives add second_wind_tier dummy
 
+#Set all needed constants.
+scoreboard players set $custom_enchant.TrueshotDouble ca.CONSTANT 2
+scoreboard players set $custom_enchant.TrueshotApprox ca.CONSTANT 18
+
 #Setup all necessary helper scoreboards.
 
 scoreboard objectives add player_health health
@@ -98,9 +102,10 @@ scoreboard objectives add helper_spawner minecraft.mined:minecraft.spawner
 scoreboard objectives add helper_lifetime dummy
 scoreboard objectives add helper_deathtime minecraft.custom:minecraft.time_since_death
 scoreboard objectives add helper_sprint minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add helper_echo dummy
+scoreboard objectives add helper_evoke dummy
 scoreboard objectives add echo_charges dummy
 scoreboard objectives add ricochet_cool dummy
+scoreboard objectives add helper_ammo dummy
 
 scoreboard objectives add helper_exec_low dummy
 scoreboard objectives add helper_exec_max dummy
@@ -172,7 +177,17 @@ scoreboard objectives add helper_s_eye minecraft.used:minecraft.spider_eye
 scoreboard objectives add helper_honey minecraft.used:minecraft.honey_bottle
 scoreboard objectives add helper_milk minecraft.used:minecraft.milk_bucket
 
+scoreboard objectives add ca.ce.true_x dummy
+scoreboard objectives add ca.ce.true_y dummy
+scoreboard objectives add ca.ce.true_z dummy
+scoreboard objectives add ca.ce.true_dmg dummy
+
+scoreboard objectives add ca.ce.cur_spd dummy
+
 scoreboard objectives add ui_location dummy
+
+#Set all needed player constants.
+execute as @a unless entity @s[scores={echo_charges=-1..}] run scoreboard players set @a echo_charges 0
 
 #Place extra shulker boxes for Custom Enchantments
 
@@ -182,7 +197,7 @@ setblock 4206901 0 4206900 purple_shulker_box replace
 #Repeating
 setblock 4206900 0 4206901 purple_shulker_box replace
 
-#Infinity Mainhand
+#Infinity Hotbar
 setblock 4206899 0 4206900 purple_shulker_box replace
 
 #Infinity Offhand

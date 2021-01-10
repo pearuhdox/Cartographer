@@ -44,7 +44,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When you hit a mob, you have a +20% chance per level to recharge your attack considerably faster.",
+            "text": "You can store (Level + 1) Echo charges. When you attack, consume an Echo charge to instantly refill your attack meter. Echo charges are refunded on mob kills, and out of combat while holding the weapon.",
             "color": "white" 
         },
         "icon": {

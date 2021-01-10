@@ -2,7 +2,11 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{Slot:6b,tag:{CurseTwoHanded:1}}]}",
+    "equipment": {
+      "mainhand": {
+        "nbt": "{CurseTwoHanded:1}"
+      }
+    },
     "player": {}
   }
 }

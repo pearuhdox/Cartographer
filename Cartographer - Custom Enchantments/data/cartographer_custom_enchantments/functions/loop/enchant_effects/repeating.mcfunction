@@ -1,9 +1,11 @@
 #Grab and store item from player hand
-execute if entity @s[scores={repeating=1..7}] run data modify storage item:repeater path set from entity @s SelectedItem
-execute if entity @s[scores={repeating=11..17}] run data modify storage item:repeater path set from entity @s Inventory[{Slot:-106b}]
+function cartographer_core:data_get/do
 
-data modify storage item:repeater path.Slot set value 0b
-data modify block 4206900 0 4206901 Items append from storage item:repeater path
+execute if entity @s[scores={repeating=1..7}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s SelectedItem
+execute if entity @s[scores={repeating=11..17}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s Inventory[{Slot:-106b}]
+
+data modify storage cartographer_core:pldata working_data.repeating.Slot set value 0b
+data modify block 4206900 0 4206901 Items append from storage cartographer_core:pldata working_data.repeating
 
 #Adjust ammo count
 execute if entity @s[scores={repeating=1..7},nbt={SelectedItem:{tag:{Charged:0b,Ammo:1}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:0}
@@ -27,6 +29,8 @@ execute if entity @s[scores={repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{
 #Fix Multishot
 execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run execute if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag merge value {ChargedProjectiles:[{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b},{id:"minecraft:arrow",Count:1b}],Charged:1b}
 
+#Save the data back to the player array
+function cartographer_core:data_put/do
 
 #Place item in player hand
 execute if entity @s[scores={repeating=1..7}] run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}

@@ -2,7 +2,7 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "nbt": "{Inventory:[{Slot:7b,tag:{AutoCharge:1}}]}",
+    "nbt": "{Inventory:[{Slot:7b,tag:{Charged:0b,AutoCharge:1}}]}",
     "player": {}
   }
 }

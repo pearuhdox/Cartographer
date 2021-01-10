@@ -1,13 +1,13 @@
-
-
-
-#Setup all necessary helper scoreboards for the randomize function
-
+#Create Randomizer scoreboards
 scoreboard objectives add randomSalt dummy                
 scoreboard objectives add random dummy
 scoreboard players set Random3 randomSalt 100011001
 scoreboard players set Random1 randomSalt 100 
 scoreboard players set @s randomSalt 100 
+
+#Create player ID scores
+scoreboard objectives add ca.pldata.id dummy
+scoreboard objectives add ca.pldata.var dummy
 
 #Place Shulker Boxes needed for Shulker Box trick.
 forceload add 4206900 4206900
@@ -27,6 +27,9 @@ scoreboard objectives add damage_queue dummy
 scoreboard objectives add custom_death deathCount
 
 execute as @p at @s run execute unless entity @s[scores={no_hndbk_pmpt=0..}] run scoreboard players set @s no_hndbk_pmpt 0
+
+#Setup a score for any and all constant values.
+scoreboard objectives add ca.CONSTANT dummy
 
 #Schedule the loading message.
 

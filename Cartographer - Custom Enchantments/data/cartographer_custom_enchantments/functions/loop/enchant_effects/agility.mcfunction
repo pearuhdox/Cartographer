@@ -1,5 +1,5 @@
-execute if entity @s[scores={agility=1}] run effect give @s jump_boost 1 1 true
-execute if entity @s[scores={agility=2}] run effect give @s jump_boost 1 2 true
-execute if entity @s[scores={agility=3}] run effect give @s jump_boost 1 3 true
-execute if entity @s[scores={agility=4}] run effect give @s jump_boost 1 4 true
-execute if entity @s[scores={agility=5}] run effect give @s jump_boost 1 5 true
+execute if entity @s[scores={agility=1}] run summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:8b,Amplifier:1b,Duration:2,ShowParticles:0b}]}
+execute if entity @s[scores={agility=2}] run summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:8b,Amplifier:2b,Duration:2,ShowParticles:0b}]}
+execute if entity @s[scores={agility=3}] run summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:8b,Amplifier:3b,Duration:2,ShowParticles:0b}]}
+execute if entity @s[scores={agility=4}] run summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:8b,Amplifier:4b,Duration:2,ShowParticles:0b}]}
+execute if entity @s[scores={agility=5}] run summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:8b,Amplifier:5b,Duration:2,ShowParticles:0b}]}

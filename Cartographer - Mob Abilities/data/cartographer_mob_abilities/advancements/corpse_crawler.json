@@ -1,33 +1,73 @@
 {
     "display": {
-        "title": {
-            "text": "Corpse Crawler           ",
-            "color": "white"
-        },
-        "description": {
-            "text": "When the enemy dies, 3 Corpse Crawler enemies are summoned where they die. [Either Zombie, Husk, Drowned, Piglin, Hoglin, or Bees]",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:zombie_head"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
+      "icon": {
+        "item": "minecraft:zombie_head"
+      },
+      "title": {
+        "text": "Corpse Crawler           ",
+        "color": "white"
+      },
+      "description": {
+        "text": "When the enemy dies, 3 Corpse Crawler enemies are summoned where they die. [Either Zombie, Husk, Drowned, Piglin, Hoglin, or Bees]",
+        "color": "white"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
     },
+    "parent": "cartographer_mob_abilities:death_abilities",
     "criteria": {
-        "found": {
-            "trigger": "minecraft:player_killed_entity",
-            "conditions": {
-                "entity": {
-                    "nbt": "{Tags:[\"corpse_crawler\"]}"
-                }
-            }
+      "found": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"corpse_crawler\"]}"
+          }
         }
+      },
+      "found_2": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"corpse_crawler_husk\"]}"
+          }
+        }
+      },
+      "found_3": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"corpse_crawler_drowned\"]}"
+          }
+        }
+      },
+      "found_4": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"corpse_crawler_piglin\"]}"
+          }
+        }
+      },
+      "found_5": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"corpse_crawler_hoglin\"]}"
+          }
+        }
+      },
+      "found_6": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"corpse_crawler_bee\"]}"
+          }
+        }
+      }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/oorpse_crawler"
-      },
-    "parent": "cartographer_mob_abilities:death_abilities"
-}
+      "function": "cartographer_mob_abilities:descriptions/corpse_crawler"
+    }
+  }

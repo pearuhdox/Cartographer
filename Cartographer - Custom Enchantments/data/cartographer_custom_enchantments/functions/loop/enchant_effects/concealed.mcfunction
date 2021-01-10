@@ -1,1 +1,1 @@
-execute if entity @s[scores={concealed=1}] run effect give @s invisibility 1 1 true
+execute if entity @s[scores={concealed=1}] run summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:14b,Amplifier:1b,Duration:2,ShowParticles:0b}]}

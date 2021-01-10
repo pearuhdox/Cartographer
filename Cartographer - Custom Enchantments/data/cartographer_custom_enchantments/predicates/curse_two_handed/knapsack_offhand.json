@@ -3,8 +3,8 @@
   "entity": "this",
   "predicate": {
     "equipment": {
-      "mainhand": {
-        "nbt": "{Infinity:1}"
+      "offhand": {
+        "nbt": "{Knapsack:1}"
       }
     },
     "player": {}
