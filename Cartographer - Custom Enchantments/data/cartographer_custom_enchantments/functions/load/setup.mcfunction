@@ -30,8 +30,7 @@ scoreboard objectives add frost dummy
 scoreboard objectives add frostbite dummy
 scoreboard objectives add hunter dummy
 scoreboard objectives add hydraulic dummy
-scoreboard objectives add infinity_m dummy
-scoreboard objectives add infinity_o dummy
+scoreboard objectives add infinity dummy
 scoreboard objectives add lifesteal dummy
 scoreboard objectives add pin_down dummy
 scoreboard objectives add point_blank dummy
