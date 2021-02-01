@@ -5,6 +5,7 @@ execute as @a[predicate=cartographer_custom_enchantments:empty_slots/empty_legs]
 execute as @a[predicate=cartographer_custom_enchantments:empty_slots/empty_chest] at @s unless entity @s[nbt={Inventory:[{Slot:102b}]}] run replaceitem entity @s armor.chest minecraft:air
 execute as @a[predicate=cartographer_custom_enchantments:empty_slots/empty_head] at @s unless entity @s[nbt={Inventory:[{Slot:103b}]}] run replaceitem entity @s armor.head minecraft:air
 execute as @a[predicate=cartographer_custom_enchantments:empty_slots/empty_offhand] at @s unless entity @s[nbt={Inventory:[{Slot:-106b}]}] run replaceitem entity @s weapon.offhand minecraft:air
+execute as @a[predicate=cartographer_custom_enchantments:empty_slots/empty_mainhand] at @s unless entity @s[nbt={SelectedItem:{}}] run replaceitem entity @s weapon.mainhand minecraft:air
 
 #Specific to Divinity's End (this will be removed in the next version) do the babylon armor calculation.
 execute as @a[predicate=de_pear:items/babylon_head] run execute as @s[predicate=de_pear:items/babylon_chest] run execute as @s[predicate=de_pear:items/babylon_legs] run execute as @s[predicate=de_pear:items/babylon_feet] run scoreboard players set @s evasion 2
