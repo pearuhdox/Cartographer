@@ -1,5 +1,6 @@
-execute store result score $cart_cmd_fdbk global_options run gamerule sendCommandFeedback
-execute if score $cart_cmd_fdbk global_options matches 1 run gamerule sendCommandFeedback false 
+gamerule sendCommandFeedback false
+schedule function cartographer_core:load/fix_gamerules 2t
+schedule function cartographer_core:load/gamerule_states 3t
 
 execute as @p at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.5 2
 tag @p remove minimal_reload

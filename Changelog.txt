@@ -1,4 +1,4 @@
-Cartographer, Patch 2020.11.0 - Divine Additions
+Cartographer, Patch 2021.2.0 - Divine Additions
 
 Alright lets start out with the announcements!
 
@@ -7,17 +7,16 @@ First, I am no longer considering Cartographer in open beta! Any beta versions o
 There's a slight change to my naming format which might be a tad confusing, but the overall patch is going to go "Year.Month.Hotfix". So welcome to 2020.11.0!
 Individual modules will be named with version counts (V1.0 / V1.1 etc). This is to hopefully avoid confusion with modules of "version 1.0" but a patch of a later date.
 
-Cartographer is also updating to 1.16.3 and higher. Piglin Brutes have been added to all hostile tags necessary.
+Cartographer is also updating to 1.16.5 and higher. Piglin Brutes have been added to all hostile tags necessary.
 This means the datapack will no longer work in versions before 1.16.2. Sorry anyone who was using those versions!
 
-We're moving up due to complications with security in 1.16.1. Additionally, the upcoming project I'm leading (more below) is going to be a 1.16.4 release!
+We're moving up due to complications with security in 1.16.1. Additionally, the upcoming project I'm leading (more below) is going to be a 1.16.5 release!
 
 Now onto the update itself.
 
-This is an update to prepare Cartographer for use in an upcoming project I've been proud to help lead. As the first major map to use Cartographer, this is super exciting!
-A lot of these changes are being made with the balance of that project in mind, but also to improve features across the board.
-
-What's that new project? Well I'm not just gonna say it here, but surely someone will figure it out. ;)
+This is an update to prepare Cartographer for use in an upcoming project I've been proud to help lead: Divinity's End.
+As the first major map to use Cartographer, this is super exciting! A lot of these changes are being made with the balance
+of that project in mind, but also to improve features across the board.
 
 This doesn't mean no new content though. There are additions to Mob Abilities, Custom Statuses, and 2 new modules. (Repair Stations and Mimics)
 And now lets get into the details!
@@ -46,6 +45,10 @@ Core:
   - Message now features buttons to configure various Cartographer options, see a list of credits, and access the wiki and download pages.
   - Every module in Cartographer with handbook advancements now features chat prompts which help draw attention to custom effects.
   - Both the reload message can be turned off (into a more minimal version) and so can handbook chat prompts.
+  - Core now features player array data storage and manipulation, used across the board for enchants that affect the player's inventory.
+
+- Core now features a robust multiplayer array player modification system, courtesy of Suso!
+  This has been integrated into many player modifying effects to hopefully make them smoother.
 
 Custom Enchantments:
 - 2 (technically 3) New Enchantments to brawl with!
@@ -65,24 +68,31 @@ Custom Enchantments:
   - Set on a per player basis.
 
 Mob Abilities:
-- 2 new active abilities have been added: Cloaker
+- 3 new active abilities have been added: Cloaker
   - Cloaker works similarly to Healer and Augmenter. After a brief immobile delay, the mob with Cloaker will grant 12 seconds of "Cloaked" to nearby mobs.
   - What is Cloaked? Read more about it in Custom Statuses!
+- Next up: Wind Nova
+  - Very similar to existing nova attacks, but when hit, you are launched into the air instead!
+  - No guaranteed fall protection. Better grab some feather falling!
 - The other new ability is Wither Storm:
   - Wither Storm makes the mob blind and immobile while charging.
   - Has a delay, after which, wither skulls are rained down around players.
   - Very destructive!
   - While creating the skull rain, mob is unable to attack or move.
+
 - 2 new passive abilities have been added: Permacloak
   - A permacloaked mob is permanently "Cloaked". (Cloak is re-applied every 5 seconds for 5 seconds.)
 - The other is Enderport:
   - When an arrow or trident passes near the mob, it warps out of the way to safety.
   - It gains Speed 2 and Strength 1 for 8 seconds when it does, to catch back up to you!
 
+- Finally, mobs with Resistance 5 will create "Invulnerable" pop-ups when attacked, as well as create unique sfx.
+
+
 Custom Statuses:
 - Added a new positive status effect for enemies: "Cloaked"
   - Cloaked makes a mob invisible until the timer runs out.
-  - While Cloaked, the mob emits ash particles near its location.
+  - While Cloaked, the mob emits vibrant purple particles around its location.
   - While Cloaked, the mob emits strange ghostly sounds around it. The louder they are, the more cloaked enemies there are nearby.
   - While Cloaked, if the mob takes damage, the duration of Cloaked is reduced by 3 seconds.
 
@@ -98,6 +108,10 @@ Core:
 - Helper clouds now scale in powers of 2, rather than having a command for each value up to 8. This means any value of healing can be cast on the player by combining the right values.
 - Helper clouds exist for 1, 2, 4, 8, 16, and 32 healing.
 
+- Helper mob damage now uses a score to deal the damage. Set "damage_queue" equal to the damage you want to deal, and then run the damage command.
+- Helper mob damage now takes Absorption into account, and will damage Absorption health first.
+- Helper mob damage now takes Resistance 5 into account, and will not do damage if the mob has it.
+
 - Core has additional push functions for knockback events of varying degrees. These are very complex and hard to use outside of Cartographer (you're welcome to try) at least for now.
 - Used to apply knockback to a couple new things at different amounts.
 - Core now has a "projectile" tag. Currently contains arrows and tridents, and is used to help optimize some functions.
@@ -111,6 +125,13 @@ Custom Enchantments:
   - Scaling has been adjusted.
     - New scaling is 5 seconds for the first level, 5 seconds for the second level, and one less second per additional level of the enchant.
     - TLDR (5/10/14/17/19/20 seconds) per level.
+
+- Auto Charge:
+  - If an Auto Charge Crossbow is already loaded, it will look to load the next one in your hotbar or offhand.
+
+- Current:
+  - Instantly recharges your attack time instead of giving Haste 10 for 1 second (on return)
+  - Current applies "Stunned" to mobs it is carrying.
 
 - Deadeye:
   - Inflicts small amount of knockback (its hidden version did not)
@@ -126,10 +147,10 @@ Custom Enchantments:
   - Reworked!
     - Per level, now stores charges of instant attacks.
     - When you hit a mob with an echo weapon, decrease 1 charge.
-    - While you have charges, your weapon recharges instantly, and you are fully knockback immune.
+    - While you have charges, your weapon recharges instantly, and you gain a small amount of knockback resistance.
     - Gain charges back when out of combat.
-    - Or gain half of them back when you kill a mob.
-    - Each level of Echo gives +2 charges. (2/4/6 Echo attacks)
+    - Or gain 1 of them back when you kill a mob.
+    - Each level of Echo gives +1 charge. Echo I starts at 2 charges (2/3/4 Echo attacks)
     - Echo charges can be seen in the subtitle space, actionbar space, or hidden entirely.
 
 - Energetic:
@@ -142,7 +163,7 @@ Custom Enchantments:
   - Radius reduced to 8 (was 10).
   - Radius is now centered around the spawner.
   - Now inflicts a small amount of knockback.
-  - Now inflicts on hit enchantments when triggered (Fire Aspect, Frostbite, Decay, Overload, Vicious, Committed, Stunning). Thanks ShadowVisions for this idea!
+  - Now inflicts on hit enchantments when triggered (Fire Aspect, Frostbite, Decay, Overload, Vicious, Committed, Stunning). Thanks ShadowVisions for this suggestion!
   - Improved vfx
 
 - Evasion:
@@ -172,7 +193,7 @@ Custom Enchantments:
   - This means each level provides +2.5 damage to Monstrous mobs. (2.5/5/7.5/10/12.5)
 
 - Infinity:
-  - Has been recoded from the ground up behind the scenes.
+  - Has been recoded from the ground up behind the scenes. (Twice actually)
   - No effective change to the enchant, but hopefully less bugs and weird interactions.
 
 - Lifesteal:
@@ -180,6 +201,9 @@ Custom Enchantments:
 
 - Point Blank:
   - Creates sfx and vfx when fired.
+
+- Repeating:
+  - No longer duplicates arrows. Consumes and loads only the exact amount of arrows you have in your inventory (or the max it can load)
 
 - Regeneration:
   - Creates vfx when it triggers.
@@ -205,12 +229,21 @@ Custom Enchantments:
 - Sharpshot:
   - Creates sfx and vfx when fired.
 
-Developer Commentary: Adrenaline, Energetic, and Frenzy have all received scaling adjustments to make lower levels feel much more useful.
+- Two Handed:
+  - Only affects the mainhand item, rather than the hotbar.
+  - Item is unbundled when you are no longer holding the Two Handed weapon in your mainhand.
+  - Two Handed items can no longer be placed in the offhand.
+
+Developer Commentary:
+Adrenaline, Energetic, and Frenzy have all received scaling adjustments to make lower levels feel much more useful.
 Eruption damage has been buffed to make it feel more useful, with a slight nerf to its range, and the introduction of knockback to make
-its damage feel more normal. Evasion has received multiple changes to help it feel more impactful.
+its damage feel more normal.
+Evasion has received multiple changes to help it feel more impactful.
 Second Wind has been given harsher scaling, to prevent it from being powerful when combined with
 high defense armor. Now the damage dealt by Second Wind's 4th tier should always execute the player
 should they be under 6 health. (assuming unenchanted Diamond or Netherite gear)
+Two Handed is intended as a curse effect that denies an inventory slot. In order to make it feel less detrimental, clunky, and restrictive,
+it now only applies in your main hand. Additionally, it auto-unbundles items in your offhand when you stop holding it.
 
 Mob Abilities:
 
@@ -231,6 +264,7 @@ Augmenter:
 
 Breaker:
   - No longer breaks spawners.
+  - Reworked sfx.
 
 Charge:
   - Uses player location to aim instead of direct forward motion.
@@ -256,7 +290,10 @@ Healer:
   - Places Slowness 7 on the mob while charging. (ground based mobs cannot move)
 
 Hookshot:
-  - Deals 7 damage. (Instead of fireworks)
+  - Deals 2 damage. (Instead of fireworks)
+  - Recoded. Now acts as a projectile.
+  - Projectile instantly retracts when it fails to catch a player.
+  - When the projectile catches a player, after a brief delay, they are dragged back towards the caster.
 
 Laser:
   - Tracks player location using an armor stand rather than look direction.
@@ -282,13 +319,34 @@ Webshot:
   - Uses player location to aim instead of direct forward motion.
   - Deals 6 damage. (Instead of fireworks)
 
+Custom Statuses:
+
+Bleeding:
+  - Bleeding now only triggers if the mob has no invulnerability frames.
+  - Likewise, its duration only decreases if the mob has no invulnerability frames.
+
+Shocked:
+  - Shocking only triggers if the mob has no invulnerability frames.
+  - Likewise, its duration only decreases if the mob has no invulnerability frames.
+
+Developer Commentary:
+Under the new damage system, when multiple damage effects can trigger at the same time, unintended behavior can follow. 
+This change is to limit and fix that unintended behavior. Effectively, this also prevents bleed and shocked from
+interfering with vanilla minecraft invulnerability frames. 
+
 Bug Fixes and Optimizations:
 - New Shulker Boxes for Custom Enchantments to separate Repeating, Auto Charge, and Infinity further. This should eliminate (or at least drastically reduce) the chance of items being replaced improperly.
 - Fixed a bug where Repeating only fired the first round of bolts as Multishot, if a Crossbow also had Multishot.
 - Fixed potential bugs with Second Wind mis-activating on a newly respawned player.
 - Fixed a bug where Infinity did not work on Golden Apples.
+- Fixed a bug where Infinity returned the wrong items and overwrote other inventory slots.
+- Fixed a bug where Conductive and Rend didn't work more than 160 blocks from 0,0.
+- Fixed a bug where Hydraulic left behind permanent marker Armor Stands.
+- Fixed a bug where items that were used or broken with Custom Enchantments still "existed" on the player, providing their effects.
+- Fixed a bug where custom damage effects did less damage to Wither Skeletons and did not make the damage flash.
+- Fixed a bug where multiplayer token systems could cause more than 1 ability to activate at a time.
 
-- About 60 or 70% of the @e calls have been removed from the pack. (Ballparking 130 separate calls)
+- About 60 or 70% of the @e calls have been removed from the pack. (Ballparking ~200 separate calls)
   - What does this mean? The pack should perform better under high stress environments.
   - This likely won't be noticeable for casual use, but it should hopefully mean that in extreme cases, Cartographer doesn't affect your tps.
   - This isn't a guarantee Cartographer cannot affect tps; all large datapacks can. But this will help edge cases a bit.

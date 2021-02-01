@@ -28,7 +28,6 @@ execute as @e[scores={relent_stacks=1..}] run function cartographer_mob_abilitie
 #Remove Hookshot tag from mob
 execute as @e[tag=is_hooking,scores={cooldown=6}] at @s run tag @s remove is_hooking
 
-#Add lifetime to ability markers. Kill them if they are too old.
+#Add lifetime to ability markers. Kill them if they are too old. Remove old Invulnerable notices.
 execute as @e[type=armor_stand,tag=ability_marker] run function cartographer_mob_abilities:loop/1_second/ability_marker_branch
-
-schedule function cartographer_mob_abilities:loop/1_second/base 1s
+execute as @e[type=armor_stand,tag=invulnerable_notice] at @s run function cartographer_mob_abilities:passive/purge_notices

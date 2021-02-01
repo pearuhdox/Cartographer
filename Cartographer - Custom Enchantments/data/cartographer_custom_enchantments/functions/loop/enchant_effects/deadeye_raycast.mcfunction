@@ -8,9 +8,9 @@ scoreboard players remove @s[scores={helper_raycast=1..}] helper_raycast 1
 
 tp @s ^ ^ ^1
 
-execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run effect give @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] wither 1 1 true
-
-execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/9
+execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 10
+execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/by_score
+execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/invulnerable_tick
 
 execute if entity @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] run execute as @e[limit=1,type=#cartographer_core:hostile,distance=..1.5] at @s run tp @s ~ ~ ~ facing entity @p[scores={deadeye=1..}] feet
 

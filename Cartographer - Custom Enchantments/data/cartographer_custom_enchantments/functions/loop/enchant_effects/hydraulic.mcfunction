@@ -12,6 +12,8 @@ execute if entity @e[type=trident,distance=..3] run execute as @s at @s position
 
 execute if entity @e[type=trident,distance=..3] run execute as @s at @s positioned ^ ^ ^4 run execute as @e[type=#cartographer_core:hostile,distance=..4] at @s run function cartographer_core:helper/push
 
-execute if entity @e[type=trident,distance=..3] run execute as @s at @s positioned ^ ^ ^4 run execute as @e[type=#cartographer_core:hostile,distance=..4] at @s run effect give @s wither 1 1 true
+execute if entity @e[type=trident,distance=..3] run execute as @s at @s positioned ^ ^ ^4 run execute as @e[type=#cartographer_core:hostile,distance=..4] at @s run scoreboard players set @s damage_queue 6
 
-execute if entity @e[type=trident,distance=..3] run execute as @s at @s positioned ^ ^ ^4 run execute as @e[type=#cartographer_core:hostile,distance=..4] at @s run function cartographer_core:helper/deal_damage/5
+execute if entity @e[type=trident,distance=..3] run execute as @s at @s positioned ^ ^ ^4 run execute as @e[type=#cartographer_core:hostile,distance=..4] at @s run function cartographer_core:helper/deal_damage/by_score
+
+execute if entity @e[type=trident,distance=..3] run execute as @s at @s positioned ^ ^ ^4 run execute as @e[type=#cartographer_core:hostile,distance=..4] at @s run function cartographer_core:helper/deal_damage/invulnerable_tick

@@ -1,5 +1,14 @@
-execute store result score $cart_cmd_fdbk global_options run gamerule sendCommandFeedback
-execute if score $cart_cmd_fdbk global_options matches 1 run gamerule sendCommandFeedback false
+########################################
+# File: Cartographer Core - Load / Reload Panel
+#
+# Author: PearUhDox | Date: 1/11/2021
+#
+# Description: Reruns the reload panel chat popup.
+########################################
+
+gamerule sendCommandFeedback false
+schedule function cartographer_core:load/fix_gamerules 2t
+schedule function cartographer_core:load/gamerule_states 3t
 
 execute as @p at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 

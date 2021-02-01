@@ -1,3 +1,15 @@
+########################################
+# File: Cartographer Core - Load / Load Message
+#
+# Author: PearUhDox | Date: 1/11/2021
+#
+# Description: The initial load message created by Cartographer on reload.
+########################################
+
+gamerule sendCommandFeedback false
+schedule function cartographer_core:load/fix_gamerules 2t
+schedule function cartographer_core:load/gamerule_states 3t
+
 execute as @a at @s run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 1 0.75
 
 execute as @a[tag=!minimal_reload] run function cartographer_core:load/spacer

@@ -1,1 +1,0 @@
-loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206900 air{drop_contents:1b}

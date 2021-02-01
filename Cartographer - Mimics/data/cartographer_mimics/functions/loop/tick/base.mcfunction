@@ -12,5 +12,3 @@ execute as @e[type=wither_skeleton,tag=active_mimic] at @s run function cartogra
 execute as @e[type=item,nbt={Item:{tag:{MimicDeath:1}}}] at @s run function cartographer_mimics:mimic/death
 
 execute as @e[type=armor_stand,tag=mimic_loot_tracker] at @s run function cartographer_mimics:loot_tracker/hopper_fix
-
-schedule function cartographer_mimics:loop/tick/base 1t

@@ -279,10 +279,9 @@ scoreboard players remove @e[scores={ricochet_cool=1..}] ricochet_cool 1
 
 execute as @e[type=armor_stand,tag=ricochet_projectile] at @s run function cartographer_custom_enchantments:loop/enchant_effects/ricochet_projectile
 
+execute as @e[tag=volatile_firework,type=firework_rocket] at @s run execute positioned as @e[type=#cartographer_core:hostile,distance=..2,limit=1,sort=nearest] run tp @s ~ ~1 ~
 
 #Calculate and reset Infinity here so we don't screw up the mech.
 scoreboard players set @a[scores={infinity=1..}] infinity 0
 
 function cartographer_custom_enchantments:loop/calc_enchant/infinity
-
-schedule function cartographer_custom_enchantments:loop/tick/base 1t

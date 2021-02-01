@@ -10,5 +10,3 @@ kill @e[type=armor_stand,tag=repair_display,predicate=cartographer_repair_statio
 execute as @e[tag=repair_display,type=armor_stand,tag=!calculated] at @s run function cartographer_repair_stations:repair/calculate
 
 execute as @e[tag=repair_display,type=armor_stand,tag=!calculated] at @s run function cartographer_repair_stations:repair/expensive
-
-schedule function cartographer_repair_stations:loop/1_second/base 1s

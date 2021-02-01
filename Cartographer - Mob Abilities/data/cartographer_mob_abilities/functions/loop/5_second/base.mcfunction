@@ -5,6 +5,3 @@ execute as @e[type=#minecraft:skeletons,tag=quiver] at @s run execute if entity 
 
 #Permacloak
 execute as @e[type=#cartographer_core:hostile,tag=permacloak] at @s run scoreboard players set @s effect_cloaked 5
-
-
-schedule function cartographer_mob_abilities:loop/5_second/base 5s

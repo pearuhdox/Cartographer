@@ -1,5 +1,14 @@
-execute store result score $cart_cmd_fdbk global_options run gamerule sendCommandFeedback
-execute if score $cart_cmd_fdbk global_options matches 1 run gamerule sendCommandFeedback false 
+########################################
+# File: Cartographer Core - Load / Options
+#
+# Author: PearUhDox | Date: 1/11/2021
+#
+# Description: Runs the dialogue box for options.
+########################################
+
+gamerule sendCommandFeedback false
+schedule function cartographer_core:load/fix_gamerules 2t
+schedule function cartographer_core:load/gamerule_states 3t
 
 execute as @p at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
@@ -13,11 +22,11 @@ tellraw @p [{"text":"Core Options: ","color":"#FFE0A3","italic":false},{"text":"
 tellraw @p {"text":" ","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}}
 
 execute if entity @p run function cartographer_custom_enchantments:load/options
-execute if entity @p run function cartographer_custom_statuses:load/options
-execute if entity @p run function cartographer_mimics:load/options
+#execute if entity @p run function cartographer_custom_statuses:load/options
+#execute if entity @p run function cartographer_mimics:load/options
 execute if entity @p run function cartographer_mob_abilities:load/options
-execute if entity @p run function cartographer_pot_injector:load/options
-execute if entity @p run function cartographer_repair_stations:load/options
+#execute if entity @p run function cartographer_pot_injector:load/options
+#execute if entity @p run function cartographer_repair_stations:load/options
 
 tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 tellraw @p [{"text":"[Return]","color":"#33FFF8","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return to the reload panel.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/reload_panel"}}]

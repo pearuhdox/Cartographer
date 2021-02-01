@@ -13,5 +13,3 @@ execute as @a[tag=!echo_restored,scores={echo=3,echo_charges=..3}] at @s run exe
 tag @a remove echo_restored
 
 function cartographer_custom_enchantments:loop/1_second/reset
-
-schedule function cartographer_custom_enchantments:loop/1_second/base 1s

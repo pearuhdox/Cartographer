@@ -89,7 +89,6 @@ scoreboard objectives add player_health health
 
 scoreboard objectives add helper_tempo dummy
 scoreboard objectives add helper_repeat dummy
-scoreboard objectives add helper_health dummy
 scoreboard objectives add helper_kill totalKillCount
 scoreboard objectives add helper_evade dummy
 scoreboard objectives add helper_damaged minecraft.custom:minecraft.damage_taken

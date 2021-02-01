@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"wind_nova\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Venom Nova               ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy charges up, and after a delay, releases a windy cloud around it. Players within the burst take 8 damage and are thrown into the air."
+        },
+        "icon": {
+            "item": "minecraft:feather"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/wind_nova"
+      },
+    "parent": "cartographer_mob_abilities:venom_nova"
+}

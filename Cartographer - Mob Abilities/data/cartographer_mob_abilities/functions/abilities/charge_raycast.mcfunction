@@ -6,7 +6,7 @@ execute as @a[distance=..2,tag=!ran_over] at @s run scoreboard players set @s da
 execute as @a[distance=..2,tag=!ran_over] at @s run function cartographer_core:helper/hurt_player/by_score
 execute as @a[distance=..2,tag=!ran_over] at @s run tag @s add ran_over
 
-execute if entity @a[scores={custom_death=1..}] at @s run say hi
+#execute if entity @a[scores={custom_death=1..}] at @s run say hi
 
 tp @s ^ ^ ^1
 

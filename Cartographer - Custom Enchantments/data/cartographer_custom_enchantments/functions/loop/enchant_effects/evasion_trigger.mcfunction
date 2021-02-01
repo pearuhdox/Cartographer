@@ -12,5 +12,10 @@ execute if entity @s[scores={second_wind=1..,second_wind_cool=..240},tag=!bracin
 
 effect clear @s resistance
 
+#For DE, Resolved's Bonus Item - Removed in next patch.
+execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Hivemind:1}}]}] run effect clear @e[type=#cartographer_core:hostile,distance=..8,sort=nearest,limit=1] blindness
+execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Hivemind:1}}]}] run team leave @e[type=#cartographer_core:hostile,distance=..12]
+execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Hivemind:1}}]}] run scoreboard players set @e[type=#cartographer_core:hostile,distance=..8,sort=nearest,limit=1] effect_rage 21
+
 tag @s remove evading
 tag @s remove bracing

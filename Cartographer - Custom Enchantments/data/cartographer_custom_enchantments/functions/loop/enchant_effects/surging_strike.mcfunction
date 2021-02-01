@@ -18,23 +18,34 @@ execute as @s at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_co
 execute as @s at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run tp @s ~ ~ ~ facing entity @p feet
 execute as @s at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/push
 
-execute as @s at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run effect give @s wither 1 1 true
-execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/1
-execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/3
-execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/5
-execute as @s at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run effect give @s wither 1 1 true
-execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/1
-execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/3
-execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/5
-execute as @s at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run effect give @s wither 1 1 true
-execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/1
-execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/3
-execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/5
-execute as @s at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run effect give @s wither 1 1 true
-execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/1
-execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/3
-execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/5
-execute as @s at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run effect give @s wither 1 1 true
-execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/1
-execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/3
-execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/5
+execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 2
+execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 4
+execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 6
+
+execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 2
+execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 4
+execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 6
+
+execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 2
+execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 4
+execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 6
+
+execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 2
+execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 4
+execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 6
+
+execute as @s[scores={surging_strike=1}] at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 2
+execute as @s[scores={surging_strike=2}] at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 4
+execute as @s[scores={surging_strike=3}] at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run scoreboard players set @s damage_queue 6
+
+execute as @s[scores={surging_strike=1..}] at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/by_score
+execute as @s[scores={surging_strike=1..}] at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/by_score
+execute as @s[scores={surging_strike=1..}] at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/by_score
+execute as @s[scores={surging_strike=1..}] at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/by_score
+execute as @s[scores={surging_strike=1..}] at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/by_score
+
+execute as @s at @s positioned ^ ^1.5 ^3 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/invulnerable_tick
+execute as @s at @s positioned ^ ^1.5 ^4 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/invulnerable_tick
+execute as @s at @s positioned ^ ^1.5 ^5 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/invulnerable_tick
+execute as @s at @s positioned ^ ^1.5 ^6 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/invulnerable_tick
+execute as @s at @s positioned ^ ^1.5 ^7 run execute as @e[type=#cartographer_core:hostile,distance=..1.5] at @s run function cartographer_core:helper/deal_damage/invulnerable_tick

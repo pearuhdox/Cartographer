@@ -1,8 +1,13 @@
-##############################################################################################################
-# Author: Jragon [ORIGINAL BY RUBISK. THIS HAS BEEN MODIFIED FOR MINECRAFT 1.12]
-# Date: May 20th 2017
-# Description: Generates a random number between 1 and 100.
-################################################################################################################
+########################################
+# File: Cartographer Core - Helper / Random
+#
+# Author: PearUhDox, Jragon, Rubisk | Date: 1/11/2021
+#
+# Description: Returns a random number between 1 and 100.
+# The number is saved to "random".
+########################################
+
+
 scoreboard players set @s randomSalt 100
 scoreboard players add @s random 0
 

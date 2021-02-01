@@ -1,3 +1,12 @@
+########################################
+# File: Cartographer Core - Helper / Push Half
+#
+# Author: PearUhDox | Date: 1/11/2021
+#
+# Description: Based on a derived vector, pushes the mob opposite its facing direction.
+# The push is one half the magnitude of Push.
+########################################
+
 summon armor_stand ^ ^ ^0.5 {Tags:["vector"],NoGravity:1,Invisible:1,Marker:1,Small:1}
 execute as @e[type=armor_stand,tag=vector,limit=1,sort=nearest] at @s run tp @s ~ ~-0.3 ~
 

@@ -4,5 +4,3 @@ execute if entity @a[scores={second_wind=1..,player_health=5..},tag=bracing] as 
 execute as @a run execute unless entity @s[scores={ui_location=0..}] run scoreboard players set @s ui_location 0
 
 function cartographer_custom_enchantments:loop/3_second/reset
-
-schedule function cartographer_custom_enchantments:loop/3_second/base 3s

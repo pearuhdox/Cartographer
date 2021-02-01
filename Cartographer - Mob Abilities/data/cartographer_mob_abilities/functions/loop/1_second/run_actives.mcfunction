@@ -10,6 +10,9 @@ execute if entity @s[tag=frost_nova,tag=tokened,scores={cooldown=0}] run execute
 #Venom Nova
 execute if entity @s[tag=venom_nova,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:charge/venom_nova
 
+#Wind Nova
+execute if entity @s[tag=wind_nova,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:charge/wind_nova
+
 #Soulfire Nova
 execute if entity @s[tag=soulfire_nova,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:charge/soulfire_nova
 

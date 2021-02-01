@@ -1,7 +1,16 @@
-execute as @p run function cartographer_core:load/spacer
+########################################
+# File: Cartographer Core - Load / Setup
+#
+# Author: PearUhDox | Date: 1/11/2021
+#
+# Description: The dialogue box for displaying credits.
+########################################
 
-execute store result score $cart_cmd_fdbk global_options run gamerule sendCommandFeedback
-execute if score $cart_cmd_fdbk global_options matches 1 run gamerule sendCommandFeedback false
+gamerule sendCommandFeedback false
+schedule function cartographer_core:load/fix_gamerules 2t
+schedule function cartographer_core:load/gamerule_states 3t
+
+execute as @p run function cartographer_core:load/spacer
 
 execute as @p at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 tellraw @p [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------------","color":"#FFE0A3","bold":true}]
