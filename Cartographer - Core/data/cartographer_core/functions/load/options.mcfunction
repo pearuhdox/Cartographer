@@ -23,6 +23,7 @@ tellraw @p {"text":" ","hoverEvent":{"action":"show_text","contents":[{"text":""
 
 execute if entity @p run function cartographer_custom_enchantments:load/options
 #execute if entity @p run function cartographer_custom_statuses:load/options
+#execute if entity @p run function cartographer_loot_additions:load/options
 #execute if entity @p run function cartographer_mimics:load/options
 execute if entity @p run function cartographer_mob_abilities:load/options
 #execute if entity @p run function cartographer_pot_injector:load/options

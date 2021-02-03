@@ -9,6 +9,7 @@ execute as @s[tag=reflect_ranged] at @s run execute unless entity @a[distance=..
 execute as @s[tag=reflect_ranged] at @s run execute if entity @s[nbt={HandItems:[{},{id:"minecraft:shield",Count:1b}]}] run execute if entity @a[distance=..6] run playsound minecraft:entity.bat.takeoff hostile @a[distance=..16] ~ ~ ~ 0.5 0.75
 
 execute as @s[tag=reflect_ranged] at @s run execute if entity @a[distance=..6] run replaceitem entity @s weapon.offhand minecraft:air 1
+execute as @s[tag=reflect_ranged] at @s run execute if entity @a[distance=..6] run data modify entity @s HandDropChances[1] set value -327.67F
 
 execute as @s[tag=reflect_ranged] at @s run execute if entity @s[nbt={HandItems:[{},{id:"minecraft:shield",Count:1b}]}] run execute unless entity @a[distance=..6] run particle minecraft:firework ^1 ^1.5 ^1 0 0.5 0 0.01 10 normal
 execute as @s[tag=reflect_ranged] at @s run execute if entity @s[nbt={HandItems:[{},{id:"minecraft:shield",Count:1b}]}] run execute unless entity @a[distance=..6] run particle minecraft:firework ^ ^1.5 ^1.5 0 0.5 0 0.01 10 normal
@@ -23,6 +24,7 @@ execute as @s[tag=reflect_melee] at @s run execute if entity @a[distance=..6] ru
 execute as @s[tag=reflect_melee] at @s run execute if entity @s[nbt={HandItems:[{},{id:"minecraft:shield",Count:1b}]}] run execute unless entity @a[distance=..6] run playsound minecraft:entity.bat.takeoff hostile @a[distance=..16] ~ ~ ~ 0.5 0.75
 
 execute as @s[tag=reflect_melee] at @s run execute unless entity @a[distance=..6] run replaceitem entity @s weapon.offhand minecraft:air 1
+execute as @s[tag=reflect_melee] at @s run execute unless entity @a[distance=..6] run data modify entity @s HandDropChances[1] set value -327.67F
 
 execute as @s[tag=reflect_melee] at @s run execute if entity @s[nbt={HandItems:[{},{id:"minecraft:shield",Count:1b}]}] run execute if entity @a[distance=..6] run particle minecraft:firework ^1 ^1.5 ^1 0 0.5 0 0.01 10 normal
 execute as @s[tag=reflect_melee] at @s run execute if entity @s[nbt={HandItems:[{},{id:"minecraft:shield",Count:1b}]}] run execute if entity @a[distance=..6] run particle minecraft:firework ^ ^1.5 ^1.5 0 0.5 0 0.01 10 normal

@@ -18,6 +18,7 @@ execute as @a[tag=ca.pldata.id] unless score @s ca.pldata.id matches 1.. run fun
 #Run all Cartographer Effects from Core Timers.
 schedule function cartographer_custom_enchantments:loop/tick/base 1t
 schedule function cartographer_custom_statuses:loop/tick/base 1t
+schedule function cartographer_loot_additions:loop/tick/base 1t
 schedule function cartographer_mimics:loop/tick/base 1t
 schedule function cartographer_mob_abilities:loop/tick/base 1t
 schedule function cartographer_pot_injector:loop/tick/base 1t
