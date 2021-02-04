@@ -1,0 +1,1 @@
+scoreboard players set @s ca.conceal_time 79

@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "While held or worn, the user gains Invisibility I."
+            "text": "When held or worn, you gain stealth when out of combat or when you kill a mob. While stealthed, you are Invisible, and your next melee attack will do 50% additional damage. Taking damage or dealing damage removes you from Stealth."
         },
         "icon": {
             "item": "minecraft:oak_leaves"

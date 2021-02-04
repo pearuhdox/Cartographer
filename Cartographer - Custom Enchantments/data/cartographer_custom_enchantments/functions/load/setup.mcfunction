@@ -104,6 +104,7 @@ scoreboard objectives add helper_evoke dummy
 scoreboard objectives add echo_charges dummy
 scoreboard objectives add ricochet_cool dummy
 scoreboard objectives add helper_ammo dummy
+scoreboard objectives add ca.conceal_time dummy
 
 scoreboard objectives add helper_exec_low dummy
 scoreboard objectives add helper_exec_max dummy
@@ -186,6 +187,7 @@ scoreboard objectives add ui_location dummy
 
 #Set all needed player constants.
 execute as @a unless entity @s[scores={echo_charges=-1..}] run scoreboard players set @a echo_charges 0
+execute as @a unless entity @s[scores={ca.conceal_time=0..}] run scoreboard players set @a ca.conceal_time 0
 
 #Place extra shulker boxes for Custom Enchantments
 
