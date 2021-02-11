@@ -159,19 +159,19 @@ execute as @a[scores={trueshot=1..,helper_fire_cbow=1..}] at @s run execute as @
 execute as @a[scores={volatile=1..,helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/volatile
 execute as @a[scores={volatile=1..,helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/volatile
 
-execute as @a[scores={infinity=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_handler
+execute as @a[scores={infinity=1..},tag=holding_infinity] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_handler
 execute as @a[scores={infinity=1..},tag=!doing_infinity] at @s run function cartographer_custom_enchantments:loop/enchant_effects/infinity_storage
 
 execute as @a[scores={curse_malevolent=2..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_malevolence
 
 execute as @a[scores={curse_regret=1..,helper_deal_dmg=1..}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_regret
 
-execute as @a[scores={curse_two_handed=1}] at @s unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{Knapsack:1}}]}] run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed
+execute as @a[scores={ca.death_time=21..,curse_two_handed=1}] at @s unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{Knapsack:1}}]}] run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed
 
-execute as @a[scores={curse_two_handed=3}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_knapsack
-execute as @a[scores={curse_two_handed=3}] at @s unless entity @s[nbt={SelectedItem:{tag:{CurseTwoHanded:1}}}] run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_unpack
+execute as @a[scores={ca.death_time=21..,curse_two_handed=3}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_knapsack
+execute as @a[scores={ca.death_time=21..,curse_two_handed=3}] at @s unless entity @s[nbt={SelectedItem:{tag:{CurseTwoHanded:1}}}] run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_unpack
 
-execute as @a[scores={curse_two_handed=2}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_disarm
+execute as @a[scores={ca.death_time=21..,curse_two_handed=2}] at @s run function cartographer_custom_enchantments:loop/enchant_effects/curse_two_handed_disarm
 
 
 #Commented out, because moved into DE graves.

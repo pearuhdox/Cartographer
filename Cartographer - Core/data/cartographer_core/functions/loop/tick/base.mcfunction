@@ -15,6 +15,9 @@ execute if score #current ca.pldata.id matches 0.. as @a[tag=!ca.pldata.id] run 
 #Recover id on name change
 execute as @a[tag=ca.pldata.id] unless score @s ca.pldata.id matches 1.. run function cartographer_core:data_ids/recover_id
 
+#Set the world difficulty to this constant.
+execute store result score $core.difficulty ca.CONSTANT run difficulty
+
 #Run all Cartographer Effects from Core Timers.
 schedule function cartographer_custom_enchantments:loop/tick/base 1t
 schedule function cartographer_custom_statuses:loop/tick/base 1t

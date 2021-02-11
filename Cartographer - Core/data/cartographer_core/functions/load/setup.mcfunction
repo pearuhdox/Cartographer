@@ -36,6 +36,9 @@ scoreboard objectives add custom_death deathCount
 scoreboard objectives add ca.invul_abs dummy
 scoreboard objectives add helper_health dummy
 scoreboard objectives add helper_abs dummy
+scoreboard objectives add ca.death_time minecraft.custom:minecraft.time_since_death
+
+#Add score for difficulty
 
 execute as @p at @s run execute unless entity @s[scores={no_hndbk_pmpt=0..}] run scoreboard players set @s no_hndbk_pmpt 0
 
@@ -44,6 +47,7 @@ scoreboard objectives add ca.CONSTANT dummy
 
 scoreboard players set $core.100x ca.CONSTANT 100
 scoreboard players set $core.negative_1 ca.CONSTANT -1
+scoreboard players set $core.difficulty ca.CONSTANT 0
 
 #Schedule the loading message.
 

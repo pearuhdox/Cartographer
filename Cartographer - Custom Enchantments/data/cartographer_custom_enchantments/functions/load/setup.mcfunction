@@ -78,9 +78,26 @@ scoreboard objectives add second_wind_kill totalKillCount
 scoreboard objectives add second_wind_abso dummy
 scoreboard objectives add second_wind_tier dummy
 
+scoreboard objectives add danger_lvl dummy
+scoreboard objectives add threat_lvl dummy
+
 #Set all needed constants.
 scoreboard players set $custom_enchant.TrueshotDouble ca.CONSTANT 2
 scoreboard players set $custom_enchant.TrueshotApprox ca.CONSTANT 18
+scoreboard players set $custom_enchant.Reflect_I ca.CONSTANT 200
+scoreboard players set $custom_enchant.Reflect_II ca.CONSTANT 100
+scoreboard players set $custom_enchant.Reflect_III ca.CONSTANT 6
+scoreboard players set $custom_enchant.Reflect_IV ca.CONSTANT 4
+scoreboard players set $custom_enchant.Reflect_V ca.CONSTANT 3
+scoreboard players set $custom_enchant.Reflect_VI ca.CONSTANT 3
+scoreboard players set $custom_enchant.Reflect_VII ca.CONSTANT 3
+scoreboard players set $custom_enchant.Reflect_VIII ca.CONSTANT 3
+scoreboard players set $custom_enchant.Reflect_IX ca.CONSTANT 3
+scoreboard players set $custom_enchant.Reflect_X ca.CONSTANT 20
+scoreboard players set $custom_enchant.Hard_MX ca.CONSTANT 15
+scoreboard players set $custom_enchant.Easy_MX ca.CONSTANT 7
+scoreboard players set $custom_enchant.10_MX ca.CONSTANT 10
+
 
 #Setup all necessary helper scoreboards.
 
@@ -182,6 +199,8 @@ scoreboard objectives add ca.ce.true_z dummy
 scoreboard objectives add ca.ce.true_dmg dummy
 
 scoreboard objectives add ca.ce.cur_spd dummy
+
+scoreboard objectives add ca.reflect_v dummy
 
 scoreboard objectives add ui_location dummy
 
