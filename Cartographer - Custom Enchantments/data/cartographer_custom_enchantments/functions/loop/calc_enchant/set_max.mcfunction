@@ -46,3 +46,4 @@ execute as @a[scores={trueshot=1..}] run scoreboard players set @s trueshot 1
 execute as @a[scores={vengeance=6..}] run scoreboard players set @s vengeance 5
 execute as @a[scores={vicious=4..}] run scoreboard players set @s vicious 3
 execute as @a[scores={volatile=4..}] run scoreboard players set @s volatile 3
+execute as @a[scores={thorns=20..}] run scoreboard players set @s thorns 20

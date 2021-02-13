@@ -57,3 +57,14 @@ execute as @a[predicate=cartographer_custom_enchantments:second_wind/chest_3] ru
 execute as @a[predicate=cartographer_custom_enchantments:vengeance/chest_1] run scoreboard players add @s vengeance 1
 execute as @a[predicate=cartographer_custom_enchantments:vengeance/chest_2] run scoreboard players add @s vengeance 2
 execute as @a[predicate=cartographer_custom_enchantments:vengeance/chest_3] run scoreboard players add @s vengeance 3
+
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_1] run scoreboard players add @s thorns 1
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_2] run scoreboard players add @s thorns 2
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_3] run scoreboard players add @s thorns 3
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_4] run scoreboard players add @s thorns 4
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_5] run scoreboard players add @s thorns 5
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_6] run scoreboard players add @s thorns 6
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_7] run scoreboard players add @s thorns 7
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_8] run scoreboard players add @s thorns 8
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_9] run scoreboard players add @s thorns 9
+execute as @a[predicate=cartographer_custom_enchantments:thorns/chest_10] run scoreboard players add @s thorns 10

@@ -56,13 +56,21 @@ scoreboard objectives add unbreakable dummy
 scoreboard objectives add vengeance dummy
 scoreboard objectives add vicious dummy
 scoreboard objectives add volatile dummy
+scoreboard objectives add thorns dummy
 
+scoreboard objectives add t_fire dummy
+scoreboard objectives add t_frost dummy
+scoreboard objectives add t_stun dummy
+scoreboard objectives add t_bleed dummy
+scoreboard objectives add t_shock dummy
+scoreboard objectives add t_vuln dummy
 
 #infernal
 
 scoreboard objectives add curse_malevolent dummy
 scoreboard objectives add curse_regret dummy
 scoreboard objectives add curse_two_handed dummy
+scoreboard objectives add curse_encumber dummy
 
 #Setup evasion bias score.
 scoreboard objectives add evasion_bias dummy

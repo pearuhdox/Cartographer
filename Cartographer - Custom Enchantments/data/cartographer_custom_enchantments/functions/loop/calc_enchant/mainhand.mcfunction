@@ -196,3 +196,16 @@ execute as @a[predicate=cartographer_custom_enchantments:volatile/mainhand_2] ru
 execute as @a[predicate=cartographer_custom_enchantments:volatile/mainhand_3] run scoreboard players add @s volatile 3
 
 execute as @a[predicate=cartographer_custom_enchantments:curse_regret/mainhand_1] run scoreboard players set @s curse_regret 1
+
+execute as @a[predicate=cartographer_custom_enchantments:curse_encumbering/mainhand_1] run scoreboard players set @s curse_encumber 1
+
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_1] run scoreboard players add @s thorns 1
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_2] run scoreboard players add @s thorns 2
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_3] run scoreboard players add @s thorns 3
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_4] run scoreboard players add @s thorns 4
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_5] run scoreboard players add @s thorns 5
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_6] run scoreboard players add @s thorns 6
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_7] run scoreboard players add @s thorns 7
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_8] run scoreboard players add @s thorns 8
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_9] run scoreboard players add @s thorns 9
+execute as @a[predicate=cartographer_custom_enchantments:thorns/mainhand_10] run scoreboard players add @s thorns 10

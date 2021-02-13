@@ -52,7 +52,9 @@ scoreboard players set @a unbreakable 0
 scoreboard players set @a vengeance 0
 scoreboard players set @a vicious 0
 scoreboard players set @a volatile 0
+scoreboard players set @a thorns 0
 
 scoreboard players set @a curse_malevolent 0
 scoreboard players set @a curse_two_handed 0
 scoreboard players set @a curse_regret 0
+scoreboard players set @a curse_encumber 0
