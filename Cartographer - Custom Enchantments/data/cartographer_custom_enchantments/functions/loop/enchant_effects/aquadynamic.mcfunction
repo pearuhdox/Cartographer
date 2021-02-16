@@ -1,1 +1,4 @@
-execute if entity @s[scores={aquadynamic=1}] run summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:20,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-1f,Duration:100,DurationOnUse:0,Age:0,WaitTime:0,Tags:["helper_cloud"],Potion:"minecraft:mundane",Effects:[{Id:30b,Amplifier:1b,Duration:2,ShowParticles:0b}]}
+execute if entity @s[scores={aquadynamic=1,ca.swim=0}] if block ~ ~ ~ water run effect give @s conduit_power 8 0 true
+execute if entity @s[scores={aquadynamic=1,ca.swim=1..}] if block ~ ~ ~ water run effect give @s dolphins_grace 8 0 true
+
+execute if entity @s[scores={aquadynamic=1}] unless block ~ ~ ~ water run effect give @s dolphins_grace 8 0 true

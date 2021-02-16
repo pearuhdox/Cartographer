@@ -208,6 +208,9 @@ scoreboard objectives add ca.ce.true_dmg dummy
 
 scoreboard objectives add ca.ce.cur_spd dummy
 
+scoreboard objectives add ca.swim minecraft.custom:minecraft.swim_one_cm
+scoreboard objectives add ca.water_walk minecraft.custom:minecraft.walk_under_water_one_cm
+
 scoreboard objectives add ca.reflect_v dummy
 
 scoreboard objectives add ui_location dummy

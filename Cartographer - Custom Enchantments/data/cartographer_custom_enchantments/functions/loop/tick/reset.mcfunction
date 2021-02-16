@@ -8,6 +8,9 @@ scoreboard players set @a helper_fire_cbow 0
 scoreboard players set @a helper_trident 0
 scoreboard players set @a[scores={helper_sprint=5..}] helper_sprint 5
 scoreboard players remove @a[scores={helper_sprint=1..}] helper_sprint 1
+scoreboard players set @a[scores={ca.swim=1..}] ca.swim 0
+scoreboard players set @a[scores={ca.water_walk=201..}] ca.water_walk 200
+scoreboard players remove @a[scores={ca.water_walk=5..}] ca.water_walk 5
 
 scoreboard players set @a helper_bbarrel 0
 scoreboard players set @a helper_boakdoor 0
