@@ -36,6 +36,10 @@ scoreboard players set @a helper_lingerpot 0
 scoreboard players set @a helper_pearl 0
 scoreboard players set @a helper_eye 0
 
+scoreboard players set @a helper_tnt 0
+scoreboard players set @a helper_torch 0
+scoreboard players set @a helper_glass 0
+
 scoreboard players set @a helper_bread 0
 scoreboard players set @a helper_m_soup 0
 scoreboard players set @a helper_apple 0

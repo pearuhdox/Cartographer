@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "While held or worn, the user enters water with 8 seconds of Dolphins Grace. When not spring swimming, the user gains 8 seconds of Conduit Power. When sprint swimming, they gain 8 seconds of Dolphins Grace."
+            "text": "While held or worn, the user enters water with 8 seconds of Dolphins Grace. When not sprint swimming, the user gains 8 seconds of Conduit Power. When sprint swimming, they gain 8 seconds of Dolphins Grace."
         },
         "icon": {
             "item": "minecraft:heart_of_the_sea"

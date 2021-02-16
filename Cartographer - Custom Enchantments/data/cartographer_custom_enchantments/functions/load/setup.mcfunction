@@ -200,6 +200,9 @@ scoreboard objectives add helper_flesh minecraft.used:minecraft.rotten_flesh
 scoreboard objectives add helper_s_eye minecraft.used:minecraft.spider_eye
 scoreboard objectives add helper_honey minecraft.used:minecraft.honey_bottle
 scoreboard objectives add helper_milk minecraft.used:minecraft.milk_bucket
+scoreboard objectives add helper_tnt minecraft.used:minecraft.tnt
+scoreboard objectives add helper_torch minecraft.used:minecraft.torch
+scoreboard objectives add helper_glass minecraft.used:minecraft.glass
 
 scoreboard objectives add ca.ce.true_x dummy
 scoreboard objectives add ca.ce.true_y dummy

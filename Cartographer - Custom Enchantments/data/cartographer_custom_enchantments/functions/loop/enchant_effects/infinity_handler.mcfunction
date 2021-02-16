@@ -41,6 +41,9 @@ execute if entity @s[scores={infinity=1..,helper_s_eye=1..}] run tag @s add doin
 execute if entity @s[scores={infinity=1..,helper_honey=1..}] run tag @s add doing_infinity
 execute if entity @s[scores={infinity=1..,helper_milk=1..}] run tag @s add doing_infinity
 
+execute if entity @s[scores={infinity=1..,helper_tnt=1..}] run tag @s add doing_infinity
+execute if entity @s[scores={infinity=1..,helper_torch=1..}] run tag @s add doing_infinity
+execute if entity @s[scores={infinity=1..,helper_glass=1..}] run tag @s add doing_infinity
 
 execute if entity @s[scores={infinity=1..,helper_potion=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
 execute if entity @s[scores={infinity=1..,helper_splashpot=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
@@ -54,7 +57,7 @@ execute if entity @s[scores={infinity=1..,helper_apple=1..}] run function cartog
 execute if entity @s[scores={infinity=1..,helper_g_apple=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
 execute if entity @s[scores={infinity=1..,helper_eg_apple=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
 execute if entity @s[scores={infinity=1..,helper_fish=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
-execute if entity @s[scores={infinity=1..,helper_c_fish=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity 
+execute if entity @s[scores={infinity=1..,helper_c_fish=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
 execute if entity @s[scores={infinity=1..,helper_salmon=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
 execute if entity @s[scores={infinity=1..,helper_c_salmon=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
 execute if entity @s[scores={infinity=1..,helper_kelp=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
@@ -84,3 +87,7 @@ execute if entity @s[scores={infinity=1..,helper_flesh=1..}] run function cartog
 execute if entity @s[scores={infinity=1..,helper_s_eye=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
 execute if entity @s[scores={infinity=1..,helper_honey=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
 execute if entity @s[scores={infinity=1..,helper_milk=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
+
+execute if entity @s[scores={infinity=1..,helper_tnt=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
+execute if entity @s[scores={infinity=1..,helper_torch=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
+execute if entity @s[scores={infinity=1..,helper_glass=1..}] run function cartographer_custom_enchantments:loop/enchant_effects/infinity
