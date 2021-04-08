@@ -1,11 +1,11 @@
 {
     "display": {
         "title": {
-            "text": "Passive Abilities        ",
+            "text": "Traits                   ",
             "color": "yellow"
         },
         "description": {
-            "text": "Enchantments that activate while held, or on armor.",
+            "text": "Passive effects mobs can constantly have.",
             "color": "white"
         },
         "icon": {

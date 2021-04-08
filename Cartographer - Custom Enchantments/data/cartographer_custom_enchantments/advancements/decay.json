@@ -34,10 +34,10 @@
     "display": {
         "title": {
             "text": "Decay                    ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "This weapon inflicts 5 seconds of Wither on melee attacks. The Wither potency is equal to the enchant level.",
+            "text": "Melee attacks with this weapon inflict Infection.",
             "color": "white"
         },
         "icon": {

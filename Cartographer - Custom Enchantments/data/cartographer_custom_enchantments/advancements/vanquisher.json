@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Vanquisher                ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "This weapon deals 2.5 bonus damage per level to elite mobs. (Enemies with colored names)"
+            "text": "Melee attacks with this weapon do additional damage to \"Elite\" mobs. (Mobs with red colored nameplates.)"
         },
         "icon": {
             "item": "minecraft:netherite_sword"
@@ -80,5 +80,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/vanquisher"
       },
-    "parent": "cartographer_custom_enchantments:hunter"
+    "parent": "cartographer_custom_enchantments:transfiguration"
 }

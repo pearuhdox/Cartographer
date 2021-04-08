@@ -5,7 +5,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{RepairLevel:60}"
+                        "nbt": "{RepairCost:60}"
                     }
                 ]
             }
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/irreparability"
       },
-    "parent": "cartographer_custom_enchantments:shattering"
+    "parent": "cartographer_custom_enchantments:encumbering"
 }

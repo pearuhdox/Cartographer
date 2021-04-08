@@ -1,3 +1,264 @@
+THE BIG TODO LIST:
+- Make Shattering only take 50% of an item's remaining durability.
+- Toggles for Global options of personal stuff. (Aka defaults)
+- Toggle for Placed Lexica behavior. (either open menu or give you a Lexica)
+- Deadeye only targets enemies in front of you.
+
+Cartographer, Patch TBD - Wrath of the Podiatrist, Part 1
+
+This is the first in a set of optimization and clean up patches. The goal of these series of patches is to re-optimize many sections of the pack
+(creating a more fluid and fresh experience, with less lag) address a couple balance issues, and patch some holes in each module.
+
+Overall, this still means a couple new features, but also a *ton* of reworks. Reworks, reworks, and more reworks. Many things are getting reworked!
+
+Despite reworks, the goal is to expand on what the pack offers while also minimizing the content it offers that is similar to something offered by Vanilla
+or elsewhere in Cartographer.
+
+And with that, let's get on with the updates!
+
+Additions:
+
+Core:
+ - A new feature has been added to Core: The Lexica Cartographia
+    - The Lexica is an in game holdable manual item. It serves as the new home for full and verbose descriptions of Cartographer effects.
+    - There is a placeable variant via a structure block structure.
+    - Lexica entries only show up if you've discovered them (like Advancements)
+    - Advancement and Tellraw entries have been shortened and simplified drastically.
+      - Overall, they should still provide a basic understanding of the enchantment, but have less complex details and simplify understanding.
+
+ - All entity hit detection in the entire pack has been moved to Gibbsly's Entity Hit Detection and ID system.
+ - A slightly modified version of Gibbsly's system is now included as a separate "Core" datapack. This must now be installed in order for Cartographer to work.
+    - This is labeled as "Cartographer - Core - Entity Hit Detection". Install this datapack with everything else in Cartographer.
+      - Functionality wise, this is identical to Gibbsly's EHID system. If you are already using it for some other system, you do not need to install this datapack.
+      - TLDR - If you have no idea what I am talking about and are not using Gibbsly's Custom Shields, install this datapack. :)
+
+Custom Enchantments:
+ - Thorns 2.0 is a custom enchantment in Cartographer which serves as an improvement to the vanilla Thorns enchant. [Custom Tag: {Thorns:1}]
+    - Description: When attacked, deal damage back to the enemy equal to the level of Thorns you have.
+    - Additionally, on hit melee enchants on items with Thorns will also apply their effects (like Fire Aspect)
+    - Only if an item has both an on hit enchantment and Thorns will this apply (so Fire Aspect and Thorns on the same item)
+    - No additional armor durability loss, or annoying chance based effects!
+
+ - Loyalty 2.0 is a custom enchantment in Cartographer which serves as an improvement to the vanilla Loyalty enchantment. [Custom Tag: {Loyalty:1}]
+    - Description: When thrown, this trident creates a "Prismarine Conch" in the slot it was occupying. When
+    it lands, the trident will travel back to and return to your inventory, replacing the Conch when it reaches you.
+    - Just like the vanilla version, higher levels of Loyalty increase the travel time.
+    - Just like the vanilla version, hitting an enemy with the Loyalty trident makes it return faster.
+    - Loyalty 2.0 times have been designed so that the approximate time to return is the same as vanilla Loyalty.
+    - Loyalty 2.0 has a max level of 10.
+
+ - Power and Punch have been brought to Crossbows with Custom Enchantments, with maximum levels of 10 and 5, respectively.
+    - Simply apply the vanilla enchants to crossbows. No custom tags needed.
+
+ - A couple new bow enchantments:
+    - Putrefy: Inflicts the new Infection debuff in Custom Statuses (see below) for 5 seconds. [Custom Tag: {Putrefy:1}]
+    - Flash: Inflicts Stunned on the hit target. [Custom Tag: {Flash:1}]
+      - Stun duration and chance to stun are dependent on how charged the arrow shot is.
+      - Maxes at 1 second and 70% chance, respectively.
+ 
+ - And a new curse enchantment (this has been in the code for a while but not fully implemented or finished):
+    - Curse of Regret: Using the item inflicts 2 damage per level of Curse of Regret. (Maximum level is 5) [Custom Tag: {CurseRegret:1}]
+      - Damage is negated by all sources of damage resistance.
+ 
+Custom Statuses:
+ - New Effect: Infection
+    - Deals 2 damage per second to the afflicted mob.
+    - Afflicted mob is affected by a percent loss of movement speed and melee damage based on how close to death they are.
+      - The closer to death, the more debilitating the effect.
+    - When an Infected mob dies, it spreads the effect (with it's remaining duration) to 2 nearby targets (not Infected, within 6 blocks).
+    - If it cannot spread the effect, it deals 6 damage in a small AoE instead.
+      - AoE is half the radius of the spread distance. (3 Blocks)
+
+ - All Status effects can be inflicted now via vanilla potions with custom Nausea effects.
+    - Nausea 10 = Stunning
+    - Nausea 11 = Shocked
+    - Nausea 12 = Infection
+    - Nausea 13 = Bleeding (only level 1, duration max = 10 seconds)
+    - Nausea 14 = Cloaked (for use on enemy potion drops wink)
+
+Changes:
+
+- Core now overwrites every vanilla mob loot table in the game for death detection systems.
+  - You will nowhave to extend this to custom loot tables if you want death effects (abilities and Infection) to work on enemies.
+  - You will now have to modify *these* loot tables if you want to edit the vanilla mob drops in the map.
+  - More details can be found on the wiki's Core page.
+  - It overall is a bit more of a hassle, but this will save on some performance, and allow enemies with death effects to drop their items.
+
+Custom Enchantments:
+
+ - Spectral Arrows now work with all Cartographer Bow and Crossbow enchantments.
+
+ - The following enchantments now apply to Trident projectiles as if they were melee attacks.
+    - Duelist
+    - Hunter
+    - Fire Aspect
+    - Frostbite
+    - Committed
+    - Stunning
+    - Vicious
+    - Overload
+    - Decay
+
+  Developer Commentary: In order to make Duelist and Hunter more consistent with Smite and Bane of Arthropods, they now deal their increased damage on ranged attacks.
+  To extend the general usefulness and item space for trident design, the above melee on hit effects will also work on ranged attacks.
+
+ - Adrenaline, Energetic, and Frenzy have all received a scaling tweak.
+    - Each level increases your move speed, mining speed, or attack damage by 20% per level.
+    - The effect duration lasts 10 seconds, and each second the effect decreases in potency by 2% (per level).
+    - TLDR: Higher levels of the enchants give a bigger potency, but in a burst that decays at a higher rate.
+    - Time buffed is constant at all levels.
+    - Revamped sfx and vfx for all 3 enchantments.
+
+  Developer Commentary: While v2 of the scaling was better than v1, it left a lot to be desired where now higher levels of the enchant felt progressively less useful.
+  v3 of the scaling attempts to solve this problem, by allowing a potency increase (shudder) but capping the duration at 10 seconds, and increasing how fast the buff
+  drains over time. Hopefully, this will be the last scaling rework.
+
+ - Auto Charge and Repeating:
+    - Auto Charge will now trigger on Repeating Crossbows, reloading 1 Ammo per activation.
+    - Repeating will now work with Spectral and Tipped Arrows.
+      - Tipped Arrows *always* have priority on additional shot. Spectral comes next, then normals.
+      - First arrow follows conventional vanilla priority (arrow in "lowest" inventory slot)
+      - Auto Charge reload will load a copy of the current "next shot" (so if your next shot will be a Poison Arrow, Auto Charge will copy the Poison Arrow instead)
+      - All new effects work with Multishot
+
+ - Committed:
+    - Duration increased to 4 seconds (from 3) to be consistent with other effects that inflict constant time potency debuffs. (Frostbite)
+
+ - Curse of Shattering:
+    - Now takes 50% of the item's remaining durability, rather than reducing it to 1 durability.
+
+  Developer Commentary: Removing from remaining durability serves as a less punishing effect that doesn't necessarily force a player into immediate downtime, but will still punish
+  a player more for dying while holding the item.
+
+ - Decay:
+    - Now uses the Custom Status "Infection" instead of Wither.
+    - Inflicts 3/5/7 seconds of Infection, based on level.
+
+  Developer: The introduction of Infection is to move Decay away from Wither. Wither in the past acted like a "different flavor" of Fire Aspect. In an effort to
+  make the enchant more useful and unique, it has been given an entirely custom effect.
+
+ - Deadeye:
+    - Now inflicts on hit ranged enchantments (currently not including Punch).
+    - Improved vfx and sfx.
+
+ - Eruption:
+    - Knockback is now counted as an "on hit melee" enchantment.
+
+  Developer Commentary: With the introduction of Thorns 2.0 and counting Knockback as one of its effects, it made sense to retroactively also include it on Eruption.
+
+ - Evocation:
+    - Reworked!
+      - Evocation: "Special Attacks" (Sprint, Crits, and Sneak Attacks) with this weapon create Evoker Fangs.
+      - Fangs are created at the cost of -70/-50/-30% Attack Speed for your next hit.
+      - On hit effects (such as Fire Aspect) are applied to the fangs.
+        - As an extra mention, this does work with Knockback. Fangs will apply vertical momentum instead of horizontal momentum.
+      - Pattern of the fangs is dependent on the special attack used.
+      - Cannot be used below 50% attack timer.
+      - Fangs from Evocation are killed if the player walks over them.
+
+  Developer Commentary: Evocation sat in a position where it wasn't too useful in a fight, and could still hurt the user. Since the effect only triggered on a mob's death,
+  the effect only saved you time in cleaning up an already finished fight. This new rework offers it as a powerful "super attack" on the weapon, at the cost of some recharge
+  speed. It has also received the on hit synergy treatment, to open up more potential combos.
+
+ - Evasion:
+    - Individual dodge chance per level decreased to 4% (from 5%).
+    - Increased level cap to 20 (from 10). [Now a total of 80% attainable dodge chance]
+    - Pity math slightly nerfed to compensate higher stackability. (Maxes at 20% additional chance instead of 30% additional chance.)
+
+  Developer Commentary: Evasion is an interesting enchant that in its previous scaling, was poised to be a "core" defense enchantment, but didn't scale the same as Protection.
+  The above changes are to modify the scaling so that it has effectively the exact same scaling as Protection. While still offering its own other upsides, this will help Evasion
+  and Protection levels feel more "equal" in worth. (And mathematically, a full 20 levels of Evasion will equal a full 20 levels of protection, either negating 80% of attacks,
+  or 80% of the damage from attacks)
+
+ - Hydraulic:
+    - Tempest now increases the damage of Hydraulic shoves.
+
+ - Ricochet:
+    - No longer creates a projectile, instantly targets nearby entities instead.
+    - Tempest now increases the damage of Ricochet bounces.
+
+ - Sapper:
+    - If a Sapper pickaxe has Adrenaline, Frenzy, or Energetic, those enchantments will activate when you break a spawner.
+      - Like Thorns 2.0, the pickaxe must have the enchantment.
+
+  Developer Commentary: With synergies being added across the board, they are also being added to Sapper to allow more diverse item creation.
+
+ - Satiation:
+    - Reworked: Now provides 15 seconds of Absorption (with potency equal to your level) whenever you eat food (or drink a potion).
+    - Additionally, provides 5 seconds of Resistance 1 when you eat food.
+    - New level cap is 3 (from 6).
+    - Not a feature, but worth noting this can be applied to and works on the actual food item itself.
+
+  Developer Commentary: Satiation prior to this acted as a "different flavor of Lifesteal" that was potentially more powerful, but more frustrating to use than Lifesteal.
+  In an effort to make effects more unique, the enchant has been turned into a new effect which allows one to use consumables more readily in combat. It can also be applied
+  to the food items themselves, allowing you to create food that provides Absorption/Resistance.
+
+ - Surging Strike:
+    - Now deals 50/66/75% of the attack's base damage rather than 2/4/6 flat damage. (Equivalent to Sweeping Edge)
+    - Now triggers on mobs up to 4 blocks away without the sprint attack. Sprint attack still allows hitting mobs up to 7 blocks away.
+    - Knockback reduced by 50%.
+    - On hit effect enchantments apply to enemies hit by the thrust attack.
+
+  Developer Commentary: Scaling adjusted to work with Sweeping Edge so these two parallel effects are consistent. Additionally, it has been given an additional "grace"
+  trigger, and can be activated without sprint hits (but the maximum value is still with sprint hits). As compensation for the easier to use trigger and potential higher damage
+  on larger scaling weapons, its knockback has been reduced.
+
+ - Splintering:
+    - Now deals 3 damage to all hit mobs.
+    - Stun duration reduced to 2 seconds (from 3).
+
+  Developer Commentary: Damage has been added to Splintering to make it feel more impactful in use. Stun duration has been reduced in an effort to reduce the amount of potent hard
+  CC effects players can use on mobs.
+
+ - Soulbound:
+    - Now protects the item when you die from anything that would destroy it.
+
+ - Tempo Theft:
+    - No longer provies Haste at any level.
+    - Reworked effect: Steal 10% Movement Speed from an attacked mob for 10 seconds per level.
+      - Steal applies a slowing effect to the mob equivalent to the speed you temporarily gain.
+
+  Developer Commentary: This was always intended to be the ideal version of Tempo Theft (i.e. the exact effect from Minecraft Dungeons) but 1.15.2 did not have the attribute command.
+  The effect has been reworked to use the attribute command, adding the speed stealing bonus. The haste has been removed and the speed tuned to compensate for an on demand potent
+  slowing ranged attack.
+
+ - Two Handed:
+    - Item is now a "Compressed Item" not in a Knapsack. Can no longer be placed.
+    - Compressed Items in your inventory or offhand when not holding a Two Handed item are automatically uncompressed.
+    - An item takes 1 second to uncompress after you stop holding a Two Handed item.
+
+  Developer Commentary: Two Handed no longer has Knapsack functionality as it was the source of many unfixable duplication bugs. As compensation, Compressed Items
+  are even smoother, and auto uncompress in your inventory. Your offhand item takes a bit longer to uncompress in order to increase the impact of the Two Handed enchant
+  mid combat, ensuring the effects are felt more in general, and not rarely when you use the item.
+
+ - Volatile:
+    - Level cap reduced to 1 (from 3).
+    - Firework now deals damage equivalent to the damage the arrow deals. (Approximately)
+    - Volatile explosions now also inflict on hit ranged enchantments (like Flame) to enemies caught within the blast.
+      - As an extra mention, this *does* work with Punch.
+    - Volatile arrows should create explosions even if they kill their targets.
+    - Volatile arrows no longer create explosions when they hit blocks.
+
+  Developer Commentary: Volatile has lost level scaling in exchange for scaling with the direct power of the arrow. Additionally, it now serves as the Bow/Crossbow's
+  propogation effect, allowing splash debuffs of custom enchantment effects. Explosions have been removed from block hits to make the enchant consistent with other
+  Bow effects, and because it was causing performance issues.
+
+Custom Statuses:
+
+ - Shocked:
+    - Chance of knock back when damage tick received reduced to 20% (from 100%)
+    - Chance of "mini stun" when damage tick received increased to 20% (from 0%)
+    - (Mini stun and knock back are mutually exclusive events. Only one can activate per tick)
+    - RNG pity system implemented to make chance more consistent.
+
+  Developer Commentary: Proper uses of past Shocked could easily prevent hordes of enemies from ever getting close to the player. In an effort to reduce this effect,
+  the chance of Knockback has been reduced severely. As a side grade, Shocked can now mini stun the crowd, which will slow them down briefly, but also cancel any
+  active attacks or abilities. As with Evasion, a pity system has been built in to help ensure you get at least one activation out of the CC.
+
+ - Vulnerability:
+    - Is now called "Exposed" since the mechanic works and functions differently from Resistance (and thus should follow a more unique naming scheme)
+
+
 Cartographer, Patch 2021.2.0 - Divine Additions
 
 Alright lets start out with the announcements!

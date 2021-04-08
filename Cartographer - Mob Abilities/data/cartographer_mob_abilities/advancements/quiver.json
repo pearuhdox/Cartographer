@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "This ranged mob swaps between a variety of tipped arrows and normal arrows periodically.",
+            "text": "Randomly swaps between preset tipped arrows.",
             "color": "white"
         },
         "icon": {

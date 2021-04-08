@@ -14,11 +14,11 @@
     "display": {
         "title": {
             "text": "Auto Charge               ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When empty and in your hotbar or offhand, this crossbow will automatically load itself (for free) with a normal arrow when you kill a mob."
+            "text": "When you kill a mob, the crossbow automatically reloads a free shot. (It must be on your hotbar)"
         },
         "icon": {
             "item": "minecraft:crossbow"

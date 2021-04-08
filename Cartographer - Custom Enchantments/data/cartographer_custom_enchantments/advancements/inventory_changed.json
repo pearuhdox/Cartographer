@@ -1,0 +1,10 @@
+{
+    "rewards": {
+      "function": "cartographer_custom_enchantments:inventory_changed"
+    },
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed"
+      }
+    }
+  }

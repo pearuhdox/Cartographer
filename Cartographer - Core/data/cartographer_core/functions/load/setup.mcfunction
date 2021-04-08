@@ -21,6 +21,9 @@ scoreboard objectives add ca.pldata.var dummy
 forceload add 4206900 4206900
 setblock 4206900 0 4206900 purple_shulker_box replace
 
+kill @e[type=armor_stand,tag=vector]
+summon armor_stand 4206900 256 4206900 {Tags:["vector"],NoGravity:1,Invisible:1,Marker:1,Small:1}
+
 #Create vector related scoreboards
 scoreboard objectives add vectorX dummy
 scoreboard objectives add vectorY dummy
@@ -38,16 +41,33 @@ scoreboard objectives add helper_health dummy
 scoreboard objectives add helper_abs dummy
 scoreboard objectives add ca.death_time minecraft.custom:minecraft.time_since_death
 
-#Add score for difficulty
+scoreboard objectives add ca.crit_y dummy
+scoreboard objectives add ca.crit_y_past dummy
+scoreboard objectives add ca.crit_y_comp dummy
 
+scoreboard objectives add ca.atk_spd_val dummy
+scoreboard objectives add ca.atk_time dummy
+
+#Add score for difficulty
 execute as @p at @s run execute unless entity @s[scores={no_hndbk_pmpt=0..}] run scoreboard players set @s no_hndbk_pmpt 0
 
 #Setup a score for any and all constant values.
 scoreboard objectives add ca.CONSTANT dummy
 
 scoreboard players set $core.100x ca.CONSTANT 100
-scoreboard players set $core.negative_1 ca.CONSTANT -1
+scoreboard players set $core.-1 ca.CONSTANT -1
+scoreboard players set $core.1 ca.CONSTANT 1
+scoreboard players set $core.20 ca.CONSTANT 20
+scoreboard players set $core.2 ca.CONSTANT 2
 scoreboard players set $core.difficulty ca.CONSTANT 0
+
+#Create the Lexica score.
+scoreboard objectives add use_lexica minecraft.used:minecraft.knowledge_book
+scoreboard objectives add lexica_time dummy
+scoreboard objectives add lexica_sneak minecraft.custom:sneak_time
+
+#Give all players the dummy recipe for Lexica.
+recipe give @a cartographer_core:lexica_dummy
 
 #Schedule the loading message.
 

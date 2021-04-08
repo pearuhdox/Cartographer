@@ -14,11 +14,11 @@
     "display": {
         "title": {
             "text": "Spurs                    ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When held or worn, walking into a cobweb instantly destroys it."
+            "text": "The user breaks nearby flora, webs, and berry bushes."
         },
         "icon": {
             "item": "minecraft:cobweb"
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/spurs"
       },
-    "parent": "cartographer_custom_enchantments:regeneration"
+    "parent": "cartographer_custom_enchantments:second_wind"
 }

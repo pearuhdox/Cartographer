@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When the enemy dies, nearby enemies are healed slightly, and their cooldowns are reset. Enemies without cooldowns gain Speed I for 10 seconds.",
+            "text": "On death, nearby enemies are healed slightly and their cooldowns are reset.",
             "color": "white"
         },
         "icon": {
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/devious_blood"
       },
-    "parent": "cartographer_mob_abilities:blood_relentless"
+    "parent": "cartographer_mob_abilities:blood_brutal"
 }

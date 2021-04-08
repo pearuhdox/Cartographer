@@ -15,7 +15,7 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy shouts, and after a brief delay, creates 2 copies of itself. The copies replicate held items and armor. Copies are spawned with 5 health and vanish after existing for 10 seconds.",
+            "text": "The enemy can create copies of itself. Copies have low health and vanish after a short time.",
             "color": "white"
         },
         "icon": {
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/duplicator"
       },
-    "parent": "cartographer_mob_abilities:ambush"
+    "parent": "cartographer_mob_abilities:disarm"
 }

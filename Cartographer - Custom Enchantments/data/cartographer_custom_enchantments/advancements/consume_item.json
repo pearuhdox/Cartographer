@@ -1,0 +1,10 @@
+{
+  "rewards": {
+    "function": "cartographer_custom_enchantments:enchant_calls/when_consume_item"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item"
+    }
+  }
+}

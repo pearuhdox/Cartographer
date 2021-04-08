@@ -52,10 +52,10 @@
     "display": {
         "title": {
             "text": "Committed                ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "This weapon inflicts Vulnerability for 3 seconds on melee attacks. The Vulnerability potency is equal to the enchantment level.",
+            "text": "Melee attacks with this weapon inflict Exposed.",
             "color": "white"
         },
         "icon": {

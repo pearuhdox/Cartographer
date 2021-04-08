@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Transfiguration           ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When you hit a hostile mob, this weapon has a 3% chance per level to turn that mob into a chicken."
+            "text": "When you hit a hostile mob, this weapon has a small chance to turn that mob into a chicken."
         },
         "icon": {
             "item": "minecraft:egg"
@@ -80,5 +80,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/transfiguration"
       },
-    "parent": "cartographer_custom_enchantments:evocation"
+    "parent": "cartographer_custom_enchantments:surging_strike"
 }

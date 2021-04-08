@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Adrenaline               ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "When the holder or wearer kills a mob, they gain Speed I. For up to 2 levels of Adrenaline, receive 5 seconds per level. Each additional level provides 1 less second (Capping at 20 seconds).",
+            "text": "When the user slays a mob, they gain a speed boost that shrinks over time.",
             "color": "white"
         },
         "icon": {
@@ -46,13 +46,46 @@
                     }
                 ]
             }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Adrenaline:4}"
+                    }
+                ]
+            }
+        },
+        "find5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Adrenaline:5}"
+                    }
+                ]
+            }
+        },
+        "find6": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Adrenaline:6}"
+                    }
+                ]
+            }
         }
     },
     "requirements": [
         [
             "find1",
             "find2",
-            "find3"
+            "find3",
+            "find4",
+            "find5",
+            "find6"
         ]
     ],
     "rewards": {

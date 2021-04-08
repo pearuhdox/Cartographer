@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Stunned                  ",
-            "color": "white"
+            "color": "#CC73FF"
         },
         "description": {
-            "text": "An enemy afflicted with Stunned cannot move, attack, or cast an active ability. In progress abilities are canceled.",
+            "text": "Afflicted cannot move, attack, or use skills. In progress channeled skills are interrupted.",
             "color": "white"
         },
         "icon": {
@@ -76,19 +76,30 @@
                     }
                 ]
             }
+        },
+        "found7": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:10b}]}"
+              }
+            ]
+          }
         }
-    },
-    "requirements": [
+      },
+      "requirements": [
         [
-            "found1",
-            "found2",
-            "found3",
-            "found4",
-            "found5",
-            "found6"
+          "found1",
+          "found2",
+          "found3",
+          "found4",
+          "found5",
+          "found6",
+          "found7"
         ]
-    ],"rewards": {
+      ],"rewards": {
         "function": "cartographer_custom_statuses:descriptions/stunned"
       },
-    "parent": "cartographer_custom_statuses:root"
+    "parent": "cartographer_custom_statuses:shock"
 }

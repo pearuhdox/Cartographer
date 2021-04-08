@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When the enemy dies, an Exalted is spawned where they die.",
+            "text": "On death, an Exalted spawns. Exalted are powerful undead bulky spirits.",
             "color": "white"
         },
         "icon": {

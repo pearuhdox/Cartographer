@@ -37,7 +37,7 @@
             "color": "white"
         },
         "description": {
-            "text": "The holder/wearer passively regenerates health. The rate is faster the more levels the user wears/holds. (Health is regenerated at 1 health per 3 seconds at level 1. Health is regenerated 0.4 seconds faster per additional level, capping at 1 health per second).",
+            "text": "The user slowly regenerates health.",
             "color": "white"
         },
         "icon": {
@@ -58,5 +58,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/regeneration"
       },
-    "parent": "cartographer_custom_enchantments:cleansing"
+    "parent": "cartographer_custom_enchantments:lifesteal"
 }

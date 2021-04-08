@@ -25,6 +25,7 @@ scoreboard objectives add energetic dummy
 scoreboard objectives add eruption dummy
 scoreboard objectives add evasion dummy
 scoreboard objectives add executioner dummy
+scoreboard objectives add flash dummy
 scoreboard objectives add frenzy dummy
 scoreboard objectives add frost dummy
 scoreboard objectives add frostbite dummy
@@ -34,6 +35,7 @@ scoreboard objectives add infinity dummy
 scoreboard objectives add lifesteal dummy
 scoreboard objectives add pin_down dummy
 scoreboard objectives add point_blank dummy
+scoreboard objectives add putrefy dummy
 scoreboard objectives add vanquisher dummy
 scoreboard objectives add repeating dummy
 scoreboard objectives add regeneration dummy
@@ -64,6 +66,18 @@ scoreboard objectives add t_stun dummy
 scoreboard objectives add t_bleed dummy
 scoreboard objectives add t_shock dummy
 scoreboard objectives add t_vuln dummy
+scoreboard objectives add t_decay dummy
+scoreboard objectives add t_knock dummy
+
+scoreboard objectives add s_adrenaline dummy
+scoreboard objectives add s_frenzy dummy
+scoreboard objectives add s_energetic dummy
+
+scoreboard objectives add loyalty dummy
+scoreboard objectives add fire_aspect dummy
+scoreboard objectives add knockback dummy
+
+scoreboard objectives add loyalty_slot dummy
 
 #infernal
 
@@ -106,6 +120,9 @@ scoreboard players set $custom_enchant.Hard_MX ca.CONSTANT 15
 scoreboard players set $custom_enchant.Easy_MX ca.CONSTANT 7
 scoreboard players set $custom_enchant.10_MX ca.CONSTANT 10
 
+scoreboard players set $custom_enchant.2 ca.CONSTANT 2
+scoreboard players set $custom_enchant.3 ca.CONSTANT 3
+scoreboard players set $custom_enchant.4 ca.CONSTANT 4
 
 #Setup all necessary helper scoreboards.
 
@@ -130,6 +147,7 @@ scoreboard objectives add echo_charges dummy
 scoreboard objectives add ricochet_cool dummy
 scoreboard objectives add helper_ammo dummy
 scoreboard objectives add ca.conceal_time dummy
+scoreboard objectives add ca.evo_burn dummy
 
 scoreboard objectives add helper_exec_low dummy
 scoreboard objectives add helper_exec_max dummy
@@ -138,6 +156,7 @@ scoreboard objectives add helper_fire_bow minecraft.used:minecraft.bow
 scoreboard objectives add helper_fire_cbow minecraft.used:minecraft.crossbow
 scoreboard objectives add helper_arrow_dmg dummy
 scoreboard objectives add helper_trident minecraft.used:minecraft.trident
+scoreboard objectives add helper_trident2 minecraft.used:minecraft.trident
 
 scoreboard objectives add helper_bbarrel minecraft.mined:minecraft.barrel
 scoreboard objectives add helper_boakdoor minecraft.mined:minecraft.oak_door
@@ -157,53 +176,6 @@ scoreboard objectives add helper_bdrktrap minecraft.mined:minecraft.dark_oak_tra
 scoreboard objectives add helper_bcritrap minecraft.mined:minecraft.crimson_trapdoor
 scoreboard objectives add helper_bwartrap minecraft.mined:minecraft.warped_trapdoor
 
-
-scoreboard objectives add helper_splashpot minecraft.used:minecraft.splash_potion
-scoreboard objectives add helper_lingerpot minecraft.used:minecraft.lingering_potion
-scoreboard objectives add helper_potion minecraft.used:minecraft.potion
-scoreboard objectives add helper_pearl minecraft.used:minecraft.ender_pearl
-scoreboard objectives add helper_eye minecraft.used:minecraft.ender_eye
-
-scoreboard objectives add helper_bread minecraft.used:minecraft.bread
-scoreboard objectives add helper_m_soup minecraft.used:minecraft.mushroom_stew
-scoreboard objectives add helper_apple minecraft.used:minecraft.apple
-scoreboard objectives add helper_g_apple minecraft.used:minecraft.golden_apple
-scoreboard objectives add helper_eg_apple minecraft.used:minecraft.enchanted_golden_apple
-scoreboard objectives add helper_fish minecraft.used:minecraft.cod
-scoreboard objectives add helper_c_fish minecraft.used:minecraft.cooked_cod
-scoreboard objectives add helper_salmon minecraft.used:minecraft.salmon
-scoreboard objectives add helper_c_salmon minecraft.used:minecraft.cooked_salmon
-scoreboard objectives add helper_kelp minecraft.used:minecraft.dried_kelp
-scoreboard objectives add helper_pork minecraft.used:minecraft.porkchop
-scoreboard objectives add helper_c_pork minecraft.used:minecraft.cooked_porkchop
-scoreboard objectives add helper_beef minecraft.used:minecraft.beef
-scoreboard objectives add helper_c_beef minecraft.used:minecraft.cooked_beef
-scoreboard objectives add helper_chicken minecraft.used:minecraft.chicken
-scoreboard objectives add helper_c_chicken minecraft.used:minecraft.cooked_chicken
-scoreboard objectives add helper_mutton minecraft.used:minecraft.mutton
-scoreboard objectives add helper_c_mutton minecraft.used:minecraft.cooked_mutton
-scoreboard objectives add helper_rabbit minecraft.used:minecraft.rabbit
-scoreboard objectives add helper_c_rabbit minecraft.used:minecraft.cooked_rabbit
-scoreboard objectives add helper_cookie minecraft.used:minecraft.cookie
-scoreboard objectives add helper_melon minecraft.used:minecraft.melon_slice
-scoreboard objectives add helper_pie minecraft.used:minecraft.pumpkin_pie
-scoreboard objectives add helper_carrot minecraft.used:minecraft.carrot
-scoreboard objectives add helper_g_carrot minecraft.used:minecraft.golden_carrot
-scoreboard objectives add helper_p_potato minecraft.used:minecraft.poisonous_potato
-scoreboard objectives add helper_potato minecraft.used:minecraft.potato
-scoreboard objectives add helper_c_potato minecraft.used:minecraft.baked_potato
-scoreboard objectives add helper_chorus minecraft.used:minecraft.chorus_fruit
-scoreboard objectives add helper_beet minecraft.used:minecraft.beetroot
-scoreboard objectives add helper_b_soup minecraft.used:minecraft.beetroot_soup
-scoreboard objectives add helper_r_soup minecraft.used:minecraft.rabbit_stew
-scoreboard objectives add helper_flesh minecraft.used:minecraft.rotten_flesh
-scoreboard objectives add helper_s_eye minecraft.used:minecraft.spider_eye
-scoreboard objectives add helper_honey minecraft.used:minecraft.honey_bottle
-scoreboard objectives add helper_milk minecraft.used:minecraft.milk_bucket
-scoreboard objectives add helper_tnt minecraft.used:minecraft.tnt
-scoreboard objectives add helper_torch minecraft.used:minecraft.torch
-scoreboard objectives add helper_glass minecraft.used:minecraft.glass
-
 scoreboard objectives add ca.ce.true_x dummy
 scoreboard objectives add ca.ce.true_y dummy
 scoreboard objectives add ca.ce.true_z dummy
@@ -218,26 +190,51 @@ scoreboard objectives add ca.reflect_v dummy
 
 scoreboard objectives add ui_location dummy
 
+scoreboard objectives add ca.susu dummy
+scoreboard objectives add ca.selecteditem dummy
+scoreboard objectives add ca.food food
+
+scoreboard objectives add ca.attack_val dummy
+scoreboard objectives add ca.vol_dmg dummy
+scoreboard objectives add ca.temp_warp dummy
+
+scoreboard objectives add i.var dummy
+
+scoreboard objectives add ca.loyal_check dummy
+
+scoreboard objectives add ca.two_hand_del dummy
+
+scoreboard objectives add ca.dummy dummy
+scoreboard objectives add c.var dummy
+
+scoreboard objectives add ca.adren_time dummy
+scoreboard objectives add ca.frenz_time dummy
+scoreboard objectives add ca.energ_time dummy
+
+scoreboard objectives add ca.cur_dmg dummy
+scoreboard objectives add ca.max_dmg dummy
+scoreboard objectives add ca.dmg_to_deal dummy
+
+
 #Set all needed player constants.
 execute as @a unless entity @s[scores={echo_charges=-1..}] run scoreboard players set @a echo_charges 0
 execute as @a unless entity @s[scores={ca.conceal_time=0..}] run scoreboard players set @a ca.conceal_time 0
 
 #Place extra shulker boxes for Custom Enchantments
-
 #Auto Charge
 setblock 4206901 0 4206900 purple_shulker_box replace
 
 #Repeating
 setblock 4206900 0 4206901 purple_shulker_box replace
 
-#Infinity Hotbar
+#Infinity
 setblock 4206899 0 4206900 purple_shulker_box replace
 
-#Infinity Offhand
-setblock 4206900 0 4206899 purple_shulker_box replace
+#Two Handed
+setblock 4206900 1 4206900 purple_shulker_box replace
 
-#Start the initial run to calculate what custom enchantments the player has.
-function cartographer_custom_enchantments:loop/calc_enchant/base
+#Loyalty Ghost
+setblock 4206900 0 4206899 purple_shulker_box replace
 
 #Start initial required looping to trigger enchant effects. Offset 1 second effects by 30 ticks.
 function cartographer_custom_enchantments:loop/tick/base

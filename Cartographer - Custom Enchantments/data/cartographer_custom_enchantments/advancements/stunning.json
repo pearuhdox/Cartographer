@@ -63,10 +63,10 @@
     "display": {
         "title": {
             "text": "Stunning                 ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "Melee attacks with this weapon have a 10% chance per level to stun the target for 1 second.",
+            "text": "Melee attacks with this weapon have a chance per level to stun the target.",
             "color": "white"
         },
         "icon": {

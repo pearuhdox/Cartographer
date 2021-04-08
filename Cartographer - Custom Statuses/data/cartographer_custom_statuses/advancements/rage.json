@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Rage                     ",
-            "color": "white"
+            "color": "#CC73FF"
         },
         "description": {
-            "text": "An enemy afflicted with Rage loses focus for 1 second. After which, it becomes angry at the enemy closest to it, and attacks it.",
+            "text": "Afflicted is blind while Rage is active. When Rage ends, the enemy attacks the nearest other enemy to it.",
             "color": "white"
         },
         "icon": {
@@ -23,5 +23,5 @@
     },"rewards": {
         "function": "cartographer_custom_statuses:descriptions/rage"
       },
-    "parent": "cartographer_custom_statuses:root"
+    "parent": "cartographer_custom_statuses:infected"
 }

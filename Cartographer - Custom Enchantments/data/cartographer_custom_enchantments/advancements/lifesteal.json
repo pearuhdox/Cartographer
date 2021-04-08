@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Lifesteal      ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When the holder or wearer kills a mob, instantly restore health equal to your total levels of Lifesteal (up to 6 health total)."
+            "text": "Restores health when the user kills a mob."
         },
         "icon": {
             "item": "minecraft:wither_skeleton_skull"

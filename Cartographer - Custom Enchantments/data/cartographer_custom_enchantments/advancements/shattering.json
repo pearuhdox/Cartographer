@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "When the user dies and drops this item, it is reduced to 1 durability."
+            "text": "When the user dies and drops this item, it loses a portion of remaining durability."
         },
         "icon": {
             "item": "minecraft:glass"
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/shattering"
       },
-    "parent": "cartographer_custom_enchantments:twohanded"
+    "parent": "cartographer_custom_enchantments:regret"
 }

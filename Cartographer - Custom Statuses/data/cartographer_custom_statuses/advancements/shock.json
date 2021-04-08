@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Shocked                   ",
-            "color": "white"
+            "color": "#CC73FF"
         },
         "description": {
-            "text": "A Shocked enemy takes damage every second, and deals damage to all enemies near them when it does. Shocked does not have levels of increased potency.",
+            "text": "Afflicted takes damage every second, also dealing (less) damage every second to nearby enemies, with a chance of disrupting them.",
             "color": "white"
         },
         "icon": {
@@ -56,17 +56,28 @@
                     }
                 ]
             }
+        },
+        "find5": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:11b}]}"
+              }
+            ]
+          }
         }
-    },
-    "requirements": [
+      },
+      "requirements": [
         [
-            "find1",
-            "find2",
-            "find3",
-            "find4"
+          "find1",
+          "find2",
+          "find3",
+          "find4",
+          "find5"
         ]
-    ],"rewards": {
+      ],"rewards": {
         "function": "cartographer_custom_statuses:descriptions/shocked"
       },
-    "parent": "cartographer_custom_statuses:root"
+    "parent": "cartographer_custom_statuses:rage"
 }

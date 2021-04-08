@@ -11,10 +11,10 @@
     "display": {
         "title": {
             "text": "Cleansing                ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "While held or worn, the user is cleansed from the corresponding debuff, receiving 10 seconds of high Hunger. There is Slowness, Mining Fatigue, Weakness, Poison, and Wither Cleansing.",
+            "text": "While using, cleanses the specified debuff from the player, in exchange for temporary Hunger.",
             "color": "white"
         },
         "icon": {
@@ -80,5 +80,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/cleansing"
       },
-    "parent": "cartographer_custom_enchantments:concealed"
+    "parent": "cartographer_custom_enchantments:aquadynamic"
 }

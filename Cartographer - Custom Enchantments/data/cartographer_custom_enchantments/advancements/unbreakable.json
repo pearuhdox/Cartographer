@@ -14,10 +14,10 @@
     "display": {
         "title": {
             "text": "Unbreakable              ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "This item is unbreakable, and takes no durability damage.",
+            "text": "This equipment does not have durability.",
             "color": "white"
         },
         "icon": {
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/unbreakable"
       },
-    "parent": "cartographer_custom_enchantments:infinity"
+    "parent": "cartographer_custom_enchantments:soulbound"
 }

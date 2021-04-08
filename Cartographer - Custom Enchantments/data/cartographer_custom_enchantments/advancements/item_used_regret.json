@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "player": [],
+        "durability": {
+          "min": 1
+        },
+        "item": {
+          "nbt": "{CurseRegret:1}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "cartographer_custom_enchantments:enchant_calls/when_item_used"
+  }
+}

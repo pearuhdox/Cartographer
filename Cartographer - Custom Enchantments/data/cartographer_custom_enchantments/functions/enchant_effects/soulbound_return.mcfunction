@@ -1,0 +1,1 @@
+execute as @p at @s run tp @e[type=item,nbt={Item:{tag:{Soulbound:1}}}] @s

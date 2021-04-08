@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Executioner              ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "If a melee attack from this weapon would leave a mob at 10% health, it finishes them off. Additional levels increase the threshold by 7.5%."
+            "text": "Melee attacks from this weapon finish off enemies left at low health."
         },
         "icon": {
             "item": "minecraft:netherite_axe"
@@ -58,5 +58,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/executioner"
       },
-    "parent": "cartographer_custom_enchantments:duelist"
+    "parent": "cartographer_custom_enchantments:evocation"
 }

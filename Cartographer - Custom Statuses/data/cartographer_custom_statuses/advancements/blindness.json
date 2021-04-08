@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Blindness                ",
-            "color": "white"
+            "color": "#CC73FF"
         },
         "description": {
-            "text": "An enemy afflicted with Blindness has a greatly reduced follow and sight range.",
+            "text": "Afflicted has a greatly reduced follow and sight range.",
             "color": "white"
         },
         "icon": {
@@ -17,12 +17,24 @@
         "hidden": true
     },
     "criteria": {
-        "found": {
-            "trigger": "minecraft:impossible"
+        "find5": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "nbt": "{CustomPotionEffects:[{Id:15b,Amplifier:0b}]}"
+              }
+            ]
+          }
         }
-    },
+      },
+      "requirements": [
+        [
+          "find5"
+        ]
+      ],
     "rewards": {
       "function": "cartographer_custom_statuses:descriptions/blindness"
     },
-    "parent": "cartographer_custom_statuses:root"
+    "parent": "cartographer_custom_statuses:bleed"
 }

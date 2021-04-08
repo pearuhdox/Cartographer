@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy charges up, and after a long delay, shrouds nearby enemies with 12 seconds of Cloaked."
+            "text": "The enemy can charge up power and conceal nearby enemies with the Cloaked effect."
         },
         "icon": {
             "item": "minecraft:phantom_membrane"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/cloaker"
       },
-    "parent": "cartographer_mob_abilities:augmenter"
+    "parent": "cartographer_mob_abilities:charge"
 }

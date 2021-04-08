@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Volatile                 ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "Normal arrows release fireworks when they hit enemies. Fireworks do 5 damage, and deal an additional 1.5 damage per additional level."
+            "text": "Arrows fired from this weapon explode when they hit enemies. Effects the arrows would gain from enchants are spread to hit enemies."
         },
         "icon": {
             "item": "minecraft:firework_rocket"
@@ -26,33 +26,11 @@
                     }
                 ]
             }
-        },
-        "find2": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Volatile:2}"
-                    }
-                ]
-            }
-        },
-        "find3": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Volatile:3}"
-                    }
-                ]
-            }
         }
     },
     "requirements": [
         [
-            "find1",
-            "find2",
-            "find3"
+            "find1"
         ]
     ],
     "rewards": {

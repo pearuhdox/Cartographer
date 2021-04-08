@@ -16,7 +16,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy pauses and readies an attack. After a brief delay, it slashes a wide arc in front and around it, dealing 8 damage, and inflicting Weakness III for 5 seconds."
+            "text": "The enemy can slice in an arc in front of it, hurting and weakening players."
         },
         "icon": {
             "item": "minecraft:iron_sword"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/sweep"
       },
-    "parent": "cartographer_mob_abilities:smash"
+    "parent": "cartographer_mob_abilities:soulfire_nova"
 }

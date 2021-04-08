@@ -9,11 +9,11 @@
     "display": {
         "title": {
             "text": "Evocation                ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "Killing an enemy with this weapon creates fangs which seek out mobs. Each level grants one additional path of fangs (max of 3 paths)."
+            "text": "Crit, sneaking, and sprint attacks create Evoker fangs when you attack the mobs, at the cost of a longer attack cooldown."
         },
         "icon": {
             "item": "minecraft:shears"

@@ -11,8 +11,16 @@ scoreboard objectives add effect_shocked dummy
 scoreboard objectives add effect_bleed dummy
 scoreboard objectives add effect_vuln dummy
 scoreboard objectives add effect_rage dummy
+scoreboard objectives add effect_infect dummy
 
 scoreboard objectives add effect_cloaked dummy
+
+scoreboard objectives add time_convert dummy
+
+scoreboard objectives add ca.decay_min dummy
+scoreboard objectives add ca.decay_max dummy
+
+scoreboard objectives add ca.pity_shock dummy
 
 #Start initial required looping to trigger enchant effects.
 

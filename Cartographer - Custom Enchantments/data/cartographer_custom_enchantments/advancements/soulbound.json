@@ -14,11 +14,11 @@
     "display": {
         "title": {
             "text": "Soulbound                ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When dropped on death (and not destroyed), this item is immediately returned to your inventory when you respawn."
+            "text": "This item is not dropped on death."
         },
         "icon": {
             "item": "minecraft:nether_star"
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/soulbound"
       },
-    "parent": "cartographer_custom_enchantments:passive_tree"
+    "parent": "cartographer_custom_enchantments:infinity"
 }

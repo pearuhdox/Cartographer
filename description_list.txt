@@ -1,0 +1,352 @@
+#MODULE: Cartographer - Custom Enchantments
+#path:
+
+adrenaline:
+  Lexica:
+
+    Advancement:
+
+      Tellraw:
+
+agility:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+aquadynamic:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+auto Charge:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+committed:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+concealed:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+conductive:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+cleansing:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+current:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+curse of Malevolence:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+curse of Shattering:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+deadeye:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+decay:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+duelist:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+echo:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+energetic:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+eruption:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+evasion:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+evocation:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+executioner:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+frost:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+frenzy:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+frostbite:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+hunter:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+hydraulic:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+infinity:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+lifesteal:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+overload:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+pin_down:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+point_Blank:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+regeneration:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+repeating:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+rend:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+ricochet:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+satiation:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+sapper:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+second_wind:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+sharpshot:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+soulbound:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+splintering:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+spurs:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+stunning:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+tempest:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+tempo_theft:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+transfiguration:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+trueshot:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+two_handed:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+vanquisher:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+volatile:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:
+
+vicious:
+  Lexica:
+
+  Advancement:
+
+  Tellraw:

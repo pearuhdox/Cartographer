@@ -26,7 +26,7 @@ execute as @s unless entity @s[tag=invulnerable_check] if entity @s[scores={help
 execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=absorbed] store result score @s helper_abs run data get entity @s AbsorptionAmount 100
 execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=absorbed] store result entity @s AbsorptionAmount float 0.01 run scoreboard players operation @s helper_abs -= @s damage_queue
 
-execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=not_absorbed] run scoreboard players operation @s helper_abs *= $core.negative_1 ca.CONSTANT
+execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=not_absorbed] run scoreboard players operation @s helper_abs *= $core.-1 ca.CONSTANT
 execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=not_absorbed] run data modify entity @s AbsorptionAmount set value 0
 execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=not_absorbed] store result entity @s Health float 0.01 run scoreboard players operation @s helper_health -= @s helper_abs
 

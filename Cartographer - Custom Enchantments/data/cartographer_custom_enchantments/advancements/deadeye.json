@@ -19,11 +19,11 @@
     "display": {
         "title": {
             "text": "Deadeye                ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "This crossbow fires instant traveling bolts that auto lock on nearby enemies instead of arrows, doing 10 damage."
+            "text": "Instead of arrows, the weapon fires instant traveling bullets dealing high damage. Bullets are aimed at random enemies within range."
         },
         "icon": {
             "item": "minecraft:crossbow"
@@ -36,5 +36,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/deadeye"
       },
-    "parent": "cartographer_custom_enchantments:repeater"
+    "parent": "cartographer_custom_enchantments:current"
 }

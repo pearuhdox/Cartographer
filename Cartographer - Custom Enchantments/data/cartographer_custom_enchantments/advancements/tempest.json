@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Tempest                  ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "This trident deals 3 additional damage per level on ranged throws."
+            "text": "Trident throws deal additional damage."
         },
         "icon": {
             "item": "minecraft:trident"
@@ -80,5 +80,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/tempest"
       },
-    "parent": "cartographer_custom_enchantments:ricochet"
+    "parent": "cartographer_custom_enchantments:sharpshot"
 }

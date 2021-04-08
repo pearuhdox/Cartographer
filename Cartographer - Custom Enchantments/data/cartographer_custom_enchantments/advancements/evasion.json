@@ -63,10 +63,10 @@
     "display": {
         "title": {
             "text": "Evasion                  ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "When held or worn, the player has a 5% chance to negate an instance of damage per level, up to 50% chance. Damage cannot be negated in succession. When Evasion triggers, nearby mobs are blinded and knocked back.",
+            "text": "Grants a small chance (per level) to dodge an attack, negating it entirely. When you dodge, blind nearby enemies.",
             "color": "white"
         },
         "icon": {
@@ -80,5 +80,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/evasion"
       },
-    "parent": "cartographer_custom_enchantments:passive_tree"
+    "parent": "cartographer_custom_enchantments:energetic"
 }

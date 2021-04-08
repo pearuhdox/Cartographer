@@ -1,28 +1,4 @@
 {
-    "display": {
-        "title": {
-            "text": "Satiation                ",
-            "color": "white"
-        },
-        "description": {
-            "text": "When the holder or wearer kills a mob, restores 1 hunger and saturation per level to the user, up to 6 saturation and hunger.",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:golden_carrot"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
-    "requirements": [
-        [
-            "find1",
-            "find2",
-            "find3"
-        ]
-    ],
     "criteria": {
         "find1": {
             "trigger": "minecraft:inventory_changed",
@@ -55,8 +31,32 @@
             }
         }
     },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3"
+        ]
+    ],
+    "display": {
+        "title": {
+            "text": "Satiation                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When the user consumes food, gain a brief Absorption shield.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:golden_carrot"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/satiation"
       },
-    "parent": "cartographer_custom_enchantments:lifesteal"
+    "parent": "cartographer_custom_enchantments:regeneration"
 }

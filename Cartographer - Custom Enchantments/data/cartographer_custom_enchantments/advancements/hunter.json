@@ -63,11 +63,11 @@
     "display": {
         "title": {
             "text": "Hunter                   ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "This weapon deals 2.5 bonus damage per level to \"monstrous\" mobs: [Blaze, Creeper, Enderman, Piglin, Guardian, Elder Guardian, Hoglin, Magma Cube, Slime, Shulker]"
+            "text": "Melee attacks with this weapon do additional damage to \"monstrous\" mobs (such as Creepers, Blazes, normal Piglins, and Endermen)."
         },
         "icon": {
             "item": "minecraft:creeper_head"
@@ -80,5 +80,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/hunter"
       },
-    "parent": "cartographer_custom_enchantments:executioner"
+    "parent": "cartographer_custom_enchantments:frostbite"
 }

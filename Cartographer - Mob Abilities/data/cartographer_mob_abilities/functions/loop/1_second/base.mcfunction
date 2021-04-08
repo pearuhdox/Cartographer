@@ -14,7 +14,7 @@ scoreboard players remove @e[tag=has_active,scores={cooldown=1..}] cooldown 1
 
 #Run 1 Second Passives: (Reflect)
 execute as @e[tag=reflect_ranged] at @s run function cartographer_mob_abilities:passive/reflect
-execute as @e[tag=reflect_melee] at @s run function cartographer_mob_abilities:passive/reflect
+execute as @e[tag=reflect_active] at @s run function cartographer_mob_abilities:passive/reflect
 
 #Give players tokens back.
 execute as @a at @s run function cartographer_mob_abilities:token/token_player

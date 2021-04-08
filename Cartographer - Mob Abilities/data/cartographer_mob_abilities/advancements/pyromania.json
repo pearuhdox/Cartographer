@@ -16,7 +16,7 @@
         },
         "description": {
             "color": "white",
-            "text": "When the enemy dies, they drop a lava source block where they die."
+            "text": "On death, the enemy drops a lava source."
         },
         "icon": {
             "item": "minecraft:campfire"

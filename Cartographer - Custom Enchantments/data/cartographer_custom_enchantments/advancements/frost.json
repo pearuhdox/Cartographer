@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Frost                    ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "Normal arrows from this weapon inflict Slowness 2 for 5 seconds.",
+            "text": "Arrows fired from this weapon inflict Slowness on enemies.",
             "color": "white"
         },
         "icon": {
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/frost"
       },
-    "parent": "cartographer_custom_enchantments:conductive"
+    "parent": "cartographer_custom_enchantments:flash"
 }

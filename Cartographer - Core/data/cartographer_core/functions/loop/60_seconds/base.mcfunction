@@ -9,6 +9,9 @@
 
 #Run all Cartographer Effects from Core Timers.
 
+#Give dummy lexica recipe to all players.
+recipe give @a cartographer_core:lexica_dummy
+
 #Add any extra functions here!
 
 

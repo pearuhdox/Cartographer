@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Conductive               ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "Normal arrows from this weapon inflict 5 seconds of Shocked.",
+            "text": "Arrows fired from this weapon inflict Shocked on enemies.",
             "color": "white"
         },
         "icon": {
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/conductive"
       },
-    "parent": "cartographer_custom_enchantments:ranged_tree"
+    "parent": "cartographer_custom_enchantments:auto_charge"
 }

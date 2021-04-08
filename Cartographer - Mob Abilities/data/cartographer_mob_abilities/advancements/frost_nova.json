@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy charges up, and after a delay, releases a burst of snow all around it. Players within the burst take 10 damage, and are inflicted with 3 seconds of Slowness III."
+            "text": "The enemy can release a burst of flames around it, dealing damage and briefly slowing players."
         },
         "icon": {
             "item": "minecraft:snowball"

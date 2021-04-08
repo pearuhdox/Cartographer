@@ -14,11 +14,11 @@
     "display": {
         "title": {
             "text": "Concealed                ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When held or worn, you gain stealth when out of combat or when you kill a mob. While stealthed, you are Invisible, and your next melee attack will do 50% additional damage. Taking damage or dealing damage removes you from Stealth."
+            "text": "When used, grants you Stealth. Stealth is removed when you take damage or deal damage, makes you invisible, and gives you bonus melee attack damage."
         },
         "icon": {
             "item": "minecraft:oak_leaves"
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/concealed"
       },
-    "parent": "cartographer_custom_enchantments:aquadynamic"
+    "parent": "cartographer_custom_enchantments:cleansing"
 }

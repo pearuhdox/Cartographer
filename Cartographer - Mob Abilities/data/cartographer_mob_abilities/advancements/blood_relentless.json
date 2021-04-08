@@ -15,7 +15,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When the enemy dies, nearby enemies are healed slightly, and gain slightly increased movement speed. This effect can stack.",
+            "text": "On death, nearby enemies are healed slightly and gain stacking speed improvements.",
             "color": "white"
         },
         "icon": {
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/relentless_blood"
       },
-    "parent": "cartographer_mob_abilities:blood_brutal"
+    "parent": "cartographer_mob_abilities:blood_devious"
 }

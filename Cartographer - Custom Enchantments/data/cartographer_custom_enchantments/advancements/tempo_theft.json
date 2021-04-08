@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Tempo Theft              ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "Arrows that hit targets steal 8 seconds of Speed I. Additonal levels grant Haste for 8 seconds with potency equal to enchant level - 1."
+            "text": "Arrows fired from this weapon temporarily steal movement speed from enemies."
         },
         "icon": {
             "item": "minecraft:scute"
@@ -58,5 +58,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/tempo_theft"
       },
-    "parent": "cartographer_custom_enchantments:rend"
+    "parent": "cartographer_custom_enchantments:tempest"
 }

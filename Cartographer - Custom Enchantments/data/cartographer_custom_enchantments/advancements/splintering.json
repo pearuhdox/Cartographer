@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Splintering              ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When you break a door, trapdoor, or barrel, with this tool, mobs within 6 blocks are stunned for 3 seconds."
+            "text": "When you break a door, trapdoor, or barrel with this tool, nearby mobs are damaged and stunned."
         },
         "icon": {
             "item": "minecraft:oak_door"
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/splintering"
       },
-    "parent": "cartographer_custom_enchantments:eruption"
+    "parent": "cartographer_custom_enchantments:sapper"
 }
