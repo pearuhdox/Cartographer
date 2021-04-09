@@ -76,10 +76,10 @@ scoreboard objectives add s_energetic dummy
 scoreboard objectives add loyalty dummy
 scoreboard objectives add fire_aspect dummy
 scoreboard objectives add knockback dummy
+scoreboard objectives add punch dummy
+scoreboard objectives add flame dummy
 
 scoreboard objectives add loyalty_slot dummy
-
-#infernal
 
 scoreboard objectives add curse_malevolent dummy
 scoreboard objectives add curse_regret dummy

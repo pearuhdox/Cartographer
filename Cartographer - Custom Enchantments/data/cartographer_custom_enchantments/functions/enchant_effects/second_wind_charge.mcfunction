@@ -37,26 +37,16 @@ tag @s[tag=bypass_sw] remove bypass_sw
 
 #Check if the player has killed a mob. If so, heal the player equal to their absorption shielding.
 #Increase the player's second wind "tier" by 1.
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=1}] run execute as @s at @s run function cartographer_core:helper/heal_player/1
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=1}] run execute as @s at @s run scoreboard players set @s heal_queue 1
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=2}] run execute as @s at @s run scoreboard players set @s heal_queue 2
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=3}] run execute as @s at @s run scoreboard players set @s heal_queue 3
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=4}] run execute as @s at @s run scoreboard players set @s heal_queue 4
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=5}] run execute as @s at @s run scoreboard players set @s heal_queue 5
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=6}] run execute as @s at @s run scoreboard players set @s heal_queue 6
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=7}] run execute as @s at @s run scoreboard players set @s heal_queue 7
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=8}] run execute as @s at @s run scoreboard players set @s heal_queue 8
 
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=2}] run execute as @s at @s run function cartographer_core:helper/heal_player/2
-
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=3}] run execute as @s at @s run function cartographer_core:helper/heal_player/2
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=3}] run execute as @s at @s run function cartographer_core:helper/heal_player/1
-
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=4}] run execute as @s at @s run function cartographer_core:helper/heal_player/4
-
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=5}] run execute as @s at @s run function cartographer_core:helper/heal_player/4
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=5}] run execute as @s at @s run function cartographer_core:helper/heal_player/1
-
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=6}] run execute as @s at @s run function cartographer_core:helper/heal_player/2
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=6}] run execute as @s at @s run function cartographer_core:helper/heal_player/4 
-
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=7}] run execute as @s at @s run function cartographer_core:helper/heal_player/4
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=7}] run execute as @s at @s run function cartographer_core:helper/heal_player/2
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=7}] run execute as @s at @s run function cartographer_core:helper/heal_player/1
-
-execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=8}] run execute as @s at @s run function cartographer_core:helper/heal_player/8
+execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=1..}] run execute as @s at @s run function cartographer_core:helper/heal_player/by_score
 
 execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=1..}] run playsound minecraft:block.respawn_anchor.charge player @a[distance=..8] ~ ~ ~ 10 2
 execute if entity @s[tag=life_fight,scores={second_wind=1,second_wind_kill=1..,second_wind_abso=1..}] run playsound minecraft:block.respawn_anchor.set_spawn player @a[distance=..8] ~ ~ ~ 2 2

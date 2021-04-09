@@ -24,6 +24,16 @@ setblock 4206900 0 4206900 purple_shulker_box replace
 kill @e[type=armor_stand,tag=vector]
 summon armor_stand 4206900 256 4206900 {Tags:["vector"],NoGravity:1,Invisible:1,Marker:1,Small:1}
 
+#Place the Susile Pincushions for proper abuse.
+kill @e[type=giant,tag=susile_pincushion]
+kill @e[type=area_effect_cloud,tag=susile_healer]
+
+schedule function cartographer_core:load/pincushion_creation 30t
+
+scoreboard objectives add susile_count dummy 
+scoreboard players set $giant_count susile_count 0
+scoreboard players set $heal_count susile_count 0
+
 #Create vector related scoreboards
 scoreboard objectives add vectorX dummy
 scoreboard objectives add vectorY dummy
@@ -35,6 +45,7 @@ scoreboard objectives add no_hndbk_pmpt dummy
 
 #Create scores for custom damage
 scoreboard objectives add damage_queue dummy
+scoreboard objectives add heal_queue dummy
 scoreboard objectives add custom_death deathCount
 scoreboard objectives add ca.invul_abs dummy
 scoreboard objectives add helper_health dummy

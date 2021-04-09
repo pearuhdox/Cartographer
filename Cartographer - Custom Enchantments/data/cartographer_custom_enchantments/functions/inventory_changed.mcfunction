@@ -27,7 +27,7 @@ function cartographer_custom_enchantments:calc_enchant/curse_malevolence
 function cartographer_custom_enchantments:calc_enchant/has_passive
 
 #Run Two Handed Here
-execute if entity @s[scores={helper_deathtime=41..},tag=!processed_two_handed] run function cartographer_custom_enchantments:enchant_effects/curse_two_handed_branch
+execute if entity @s[scores={helper_deathtime=41..},tag=!processed_two_handed] run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/branch
 
 advancement revoke @s only cartographer_custom_enchantments:inventory_changed
 

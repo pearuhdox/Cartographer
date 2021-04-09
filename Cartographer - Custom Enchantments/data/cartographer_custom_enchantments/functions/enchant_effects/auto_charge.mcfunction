@@ -97,3 +97,6 @@ execute if entity @s[scores={auto_charge=10}] run loot replace entity @s weapon.
 
 #Remove the repeating tag so it shows an updated ammo count.
 tag @s remove showing_repeating
+
+scoreboard players set $auto_repeat repeating 0
+scoreboard players set $auto_repeat auto_charge 0

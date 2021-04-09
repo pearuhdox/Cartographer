@@ -54,7 +54,7 @@ execute as @a[scores={helper_deathtime=2..20}] at @s run function cartographer_c
 
 #Custom Projectile Ticks
 execute as @e[type=#cartographer_core:arrow,tag=custom_arrow] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_visuals
-execute as @e[type=#cartographer_core:arrow,tag=custom_arrow] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
+#execute as @e[type=#cartographer_core:arrow,tag=custom_arrow] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
 execute as @e[type=trident,tag=custom_trident] at @s run function cartographer_custom_enchantments:enchant_effects/trident_visuals
 execute as @e[type=trident,tag=custom_trident] at @s run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag
 
@@ -75,8 +75,8 @@ execute as @e[type=#cartographer_core:hostile,tag=current_drag] at @s run functi
 execute as @a[scores={splintering=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_branch
 
 #Remove Two Handed Processed Tag - Fix Inventory Two Handed Bundled Items
-execute as @a[scores={ca.two_hand_del=1}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed_return_offhand
-execute as @a[scores={curse_two_handed=0},tag=!processed_two_handed] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed_inv_fix
+execute as @a[scores={ca.two_hand_del=1}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/return_offhand
+execute as @a[scores={curse_two_handed=0},tag=!processed_two_handed] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/inv_fix
 tag @a[tag=processed_two_handed] remove processed_two_handed
 scoreboard players remove @a[scores={ca.two_hand_del=1..}] ca.two_hand_del 1
 
@@ -114,8 +114,8 @@ execute as @e[type=trident,tag=loyalty] at @s run execute if entity @s[nbt={inGr
 execute as @e[type=armor_stand,tag=loyalty_projectile] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty_projectile
 
 #Evoker Fangs from Evocation - Kill them if they stay alive too long, and "trample" them, increasing their warmup tags as long as a player stands on it.
-execute as @e[type=evoker_fangs,tag=from_evocation] at @s run function cartographer_custom_enchantments:enchant_effects/evocation_purge
-execute as @a at @s run execute as @e[type=evoker_fangs,tag=from_evocation,distance=..1.25] at @s run function cartographer_custom_enchantments:enchant_effects/evocation_trample
+execute as @e[type=evoker_fangs,tag=from_evocation] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/purge
+execute as @a at @s run execute as @e[type=evoker_fangs,tag=from_evocation,distance=..1.25] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/trample
 
 #Action bar indicators for Repeating and Echo
 title @a[scores={ui_location=0,repeating=1..7},nbt={SelectedItem:{tag:{Ammo:8}}}] actionbar [{"text":"🏹 <","color":"yellow","italic":false},{"text":"8","color":"green","bold":true,"italic":false},{"text":"> 🏹","color":"yellow","italic":false}]

@@ -1,6 +1,6 @@
-execute if entity @s[scores={ca.atk_time=0,evocation=1..,helper_sprint=0..,helper_sneak=0},tag=can_crit] run function cartographer_custom_enchantments:enchant_effects/evocation_cage
-execute if entity @s[scores={ca.atk_time=0,evocation=1..,helper_sprint=1..,helper_sneak=0},tag=!can_crit] run function cartographer_custom_enchantments:enchant_effects/evocation_spear
-execute if entity @s[scores={ca.atk_time=0,evocation=1..,helper_sneak=1..}] run function cartographer_custom_enchantments:enchant_effects/evocation_wave
+execute if entity @s[scores={ca.atk_time=0,evocation=1..,helper_sprint=0..,helper_sneak=0},tag=can_crit] run function cartographer_custom_enchantments:enchant_effects/evocation/cage
+execute if entity @s[scores={ca.atk_time=0,evocation=1..,helper_sprint=1..,helper_sneak=0},tag=!can_crit] run function cartographer_custom_enchantments:enchant_effects/evocation/spear
+execute if entity @s[scores={ca.atk_time=0,evocation=1..,helper_sneak=1..}] run function cartographer_custom_enchantments:enchant_effects/evocation/wave
 
 execute if entity @s[scores={ca.atk_time=0,evocation=1..},tag=can_crit] run playsound minecraft:entity.evoker.prepare_attack player @a[distance=..8] ~ ~ ~ 0.5 2
 execute if entity @s[scores={ca.atk_time=0,evocation=1..,helper_sprint=1..},tag=!can_crit] run playsound minecraft:entity.evoker.prepare_attack player @a[distance=..8] ~ ~ ~ 0.5 2

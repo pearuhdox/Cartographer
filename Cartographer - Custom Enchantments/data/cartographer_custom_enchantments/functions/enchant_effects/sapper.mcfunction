@@ -1,12 +1,9 @@
-execute if entity @s[scores={sapper=1}] as @s at @s run function cartographer_core:helper/heal_player/1
+execute if entity @s[scores={sapper=1}] as @s at @s run scoreboard players set @s heal_queue 1
+execute if entity @s[scores={sapper=2}] as @s at @s run scoreboard players set @s heal_queue 2
+execute if entity @s[scores={sapper=3}] as @s at @s run scoreboard players set @s heal_queue 3
+execute if entity @s[scores={sapper=4}] as @s at @s run scoreboard players set @s heal_queue 4
 
-execute if entity @s[scores={sapper=2}] as @s at @s run function cartographer_core:helper/heal_player/2
-
-execute if entity @s[scores={sapper=3}] as @s at @s run function cartographer_core:helper/heal_player/2
-execute if entity @s[scores={sapper=3}] as @s at @s run function cartographer_core:helper/heal_player/1
-
-execute if entity @s[scores={sapper=4}] as @s at @s run function cartographer_core:helper/heal_player/4
-
+execute if entity @s[scores={sapper=1..}] as @s at @s run function cartographer_core:helper/heal_player/by_score
 
 execute if entity @s[scores={s_adrenaline=1..,ca.adren_time=0}] at @s run playsound minecraft:entity.illusioner.prepare_blindness player @s ~ ~ ~ 2 1.2
 execute if entity @s[scores={s_energetic=1..,ca.energ_time=0}] at @s run playsound minecraft:entity.illusioner.prepare_blindness player @s ~ ~ ~ 2 1.2

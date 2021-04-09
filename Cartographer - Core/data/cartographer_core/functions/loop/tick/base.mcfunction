@@ -1,6 +1,10 @@
-execute as @a at @s run tp @e[distance=..2,type=area_effect_cloud,tag=helper_cloud] @s
+#Reset the susile_count counter.
+scoreboard players set $giant_count susile_count 0
+scoreboard players set $heal_count susile_count 0
 
-execute as @e[type=area_effect_cloud,tag=helper_cloud_entity] at @s run tp @s @e[type=!area_effect_cloud,sort=nearest,limit=1]
+#Return heal clouds to proper location
+function cartographer_core:helper/heal_player/cloud_follow
+function cartographer_core:helper/heal_player/return_cloud
 
 execute as @a[nbt=!{HurtTime:0s}] at @s run function cartographer_core:helper/hurt_player/disguise
 
@@ -44,19 +48,13 @@ scoreboard players remove @a[scores={lexica_time=1..}] lexica_time 1
 scoreboard players set @a lexica_sneak 0
 
 #Run in world lexicas
-execute as @e[type=armor_stand,tag=placed_lexica] at @s run particle dust 0.627 1 0.627 0.5 ~ ~1.1 ~ 0.25 0.1 0.25 0 2 normal
-execute as @e[type=armor_stand,tag=placed_lexica] at @s run particle dust 0.627 1 0.627 0.5 ~ ~1.2 ~ 0.1 0.2 0.1 0 2 normal
-execute as @e[type=armor_stand,tag=placed_lexica] at @s run execute if entity @a[scores={ca.use_lectern=1..},distance=..5] run clone ~ ~ ~ ~ ~ ~ ~ ~ ~ replace force
-execute as @e[type=armor_stand,tag=placed_lexica] at @s run execute as @a[scores={ca.use_lectern=1..},distance=..5] at @s run execute if entity @s[scores={lexica_sneak=0}] run function cartographer_core:lexica/manual
-
+execute as @e[type=armor_stand,tag=placed_lexica] at @s run function cartographer_core:lexica/placed
 scoreboard players set @a ca.use_lectern 0
 
-execute as @e[type=armor_stand,tag=placed_lexica] at @s if block ~ ~ ~ air run kill @s
-
 #Add anything else to run per tick here!
-
-
-
+#
+#
+#
 #Add anything else to run per tick above.
 
 schedule function cartographer_core:loop/tick/base 1t
