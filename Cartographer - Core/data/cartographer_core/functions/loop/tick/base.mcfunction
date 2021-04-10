@@ -51,6 +51,11 @@ scoreboard players set @a lexica_sneak 0
 execute as @e[type=armor_stand,tag=placed_lexica] at @s run function cartographer_core:lexica/placed
 scoreboard players set @a ca.use_lectern 0
 
+#Reset and Run Lexica Trigger
+gamerule sendCommandFeedback false
+execute as @a unless score @s lexica_trig matches 1.. run scoreboard players set @s lexica_trig 0
+execute as @a at @s if score @s lexica_trig matches 1.. run function cartographer_core:lexica/trigger
+gamerule sendCommandFeedback true
 #Add anything else to run per tick here!
 #
 #

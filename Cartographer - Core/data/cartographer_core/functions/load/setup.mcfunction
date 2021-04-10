@@ -77,6 +77,8 @@ scoreboard objectives add use_lexica minecraft.used:minecraft.knowledge_book
 scoreboard objectives add lexica_time dummy
 scoreboard objectives add lexica_sneak minecraft.custom:sneak_time
 
+scoreboard objectives add lexica_trig trigger
+
 #Give all players the dummy recipe for Lexica.
 recipe give @a cartographer_core:lexica_dummy
 
