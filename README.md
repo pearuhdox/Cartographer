@@ -13,3 +13,4 @@ To get started, you can refer to the documentation wiki for Cartographer, which 
 https://github.com/pearuhdox/Cartographer/wiki/Installation-and-Licensing
 
 If you have any further questions not covered by the wiki, or suggestions for the datapack, you can find me on Twitter (@PearUhDox) and on Discord (PearUhDox#0002).
+You can also reach out to my business email, pearuhdox@gmail.com.
