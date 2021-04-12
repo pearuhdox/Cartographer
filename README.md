@@ -10,6 +10,7 @@ Custom Statuses - Additional status effects which can be used on mobs. Currently
 Mob Abilities - An addition of over 20 new custom ability attacks which can be given to all hostile mobs. Includes active telegraphed attacks with fancy particles, passive traits that can be applied to mobs, and traits that trigger when a mob dies.
 
 To get started, you can refer to the documentation wiki for Cartographer, which can be found here.
-https://github.com/pearuhdox/Cartographer/wiki/Installation-and-Licensing
+https://github.com/pearuhdox/Cartographer/wiki/Installation,-Licensing,-Credits
 
 If you have any further questions not covered by the wiki, or suggestions for the datapack, you can find me on Twitter (@PearUhDox) and on Discord (PearUhDox#0002).
+You can also reach out to my business email, pearuhdox@gmail.com.
