@@ -78,6 +78,7 @@ scoreboard objectives add fire_aspect dummy
 scoreboard objectives add knockback dummy
 scoreboard objectives add punch dummy
 scoreboard objectives add flame dummy
+scoreboard objectives add power dummy
 
 scoreboard objectives add loyalty_slot dummy
 
@@ -215,6 +216,7 @@ scoreboard objectives add ca.cur_dmg dummy
 scoreboard objectives add ca.max_dmg dummy
 scoreboard objectives add ca.dmg_to_deal dummy
 
+scoreboard objectives add ca.rotation dummy
 
 #Set all needed player constants.
 execute as @a unless entity @s[scores={echo_charges=-1..}] run scoreboard players set @a echo_charges 0

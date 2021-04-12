@@ -177,5 +177,11 @@ scoreboard players operation @s fire_aspect += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:knockback"}].lvl
 scoreboard players operation @s knockback += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:flame"}].lvl
+scoreboard players operation @s flame += $temp ca.susu
+
+execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:power"}].lvl
+scoreboard players operation @s power += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.CurseTwoHanded
 scoreboard players operation @s curse_two_handed += $temp ca.susu

@@ -12,7 +12,7 @@ execute if score @s flash matches 51.. if score @s ca.dummy matches ..70 run sco
 particle minecraft:flash ~ ~1 ~ 0 0 0 0 1 force
 playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 4 1.5
 
-tag @e[type=#cartographer_core:hostile,tag=is_flash,distance=..12] remove is_flash
+tag @s[type=#cartographer_core:hostile,tag=is_flash] remove is_flash
 
 #Debug Message
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Flash.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

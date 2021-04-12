@@ -59,6 +59,8 @@ scoreboard players set @s thorns 0
 scoreboard players set @s loyalty 0
 scoreboard players set @s fire_aspect 0
 scoreboard players set @s knockback 0
+scoreboard players set @s flame 0
+scoreboard players set @s power 0
 
 scoreboard players set @s curse_malevolent 0
 scoreboard players set @s curse_two_handed 0

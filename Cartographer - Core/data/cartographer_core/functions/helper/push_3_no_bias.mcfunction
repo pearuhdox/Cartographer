@@ -7,11 +7,13 @@
 # The push is three times the magnitude of Push.
 ########################################
 
-execute as @s at @s run tp @e[type=armor_stand,tag=vector] ^ ^ ^3
-execute as @e[type=armor_stand,tag=vector,limit=1,sort=nearest] at @s run tp @s ~ ~-0.15 ~
+execute as @s at @s run tp @e[type=armor_stand,tag=vector] ^ ^ ^4
+execute as @e[type=armor_stand,tag=vector,limit=1,sort=nearest] at @s run tp @s ~ ~-0.4 ~
 
 # Pushes a mob based on a given existing vector armor stand.
 execute as @s at @s run function cartographer_core:helper/vector
+
+scoreboard players add @s vectorY 5
 
 execute store result entity @s Motion[0] double 0.1 run scoreboard players get @s vectorX
 execute store result entity @s Motion[1] double 0.1 run scoreboard players get @s vectorY

@@ -41,14 +41,8 @@ execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,tag=p_cross,sc
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,tag=p_cross,scores={punch=4}] run tag @s add is_punch_4
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,tag=p_cross,scores={punch=5}] run tag @s add is_punch_5
 
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=1}] run execute as @s at @s run tp @s ~ ~ ~ facing entity @e[type=arrow,distance=..6,tag=punch_1,tag=custom_arrow,limit=1] feet
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=2}] run execute as @s at @s run tp @s ~ ~ ~ facing entity @e[type=arrow,distance=..6,tag=punch_2,tag=custom_arrow,limit=1] feet
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=3}] run execute as @s at @s run tp @s ~ ~ ~ facing entity @e[type=arrow,distance=..6,tag=punch_3,tag=custom_arrow,limit=1] feet
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=4}] run execute as @s at @s run tp @s ~ ~ ~ facing entity @e[type=arrow,distance=..6,tag=punch_4,tag=custom_arrow,limit=1] feet
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=5}] run execute as @s at @s run tp @s ~ ~ ~ facing entity @e[type=arrow,distance=..6,tag=punch_5,tag=custom_arrow,limit=1] feet
-
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=1}] run execute as @s at @s run tp @s ~ ~ ~ ~ 0
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=2}] run execute as @s at @s run tp @s ~ ~ ~ ~ 0
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=3}] run execute as @s at @s run tp @s ~ ~ ~ ~ 0
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=4}] run execute as @s at @s run tp @s ~ ~ ~ ~ 0
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={punch=5}] run execute as @s at @s run tp @s ~ ~ ~ ~ 0
+execute if entity @s[tag=is_punch_1] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing entity @e[distance=..7,type=arrow,limit=1,sort=nearest] feet
+execute if entity @s[tag=is_punch_2] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing entity @e[distance=..7,type=arrow,limit=1,sort=nearest] feet
+execute if entity @s[tag=is_punch_3] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing entity @e[distance=..7,type=arrow,limit=1,sort=nearest] feet
+execute if entity @s[tag=is_punch_4] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing entity @e[distance=..7,type=arrow,limit=1,sort=nearest] feet
+execute if entity @s[tag=is_punch_5] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing entity @e[distance=..7,type=arrow,limit=1,sort=nearest] feet

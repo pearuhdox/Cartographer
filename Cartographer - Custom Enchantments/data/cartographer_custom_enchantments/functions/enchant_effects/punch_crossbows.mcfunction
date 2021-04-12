@@ -1,17 +1,8 @@
-scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] helper_lifetime 1
+scoreboard players operation $ranged punch = @s punch
 
-#Apply Punch tags to the arrow.
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}}}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_1
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch",lvl:2s}]}}}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_2
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}}}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_3
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch",lvl:4s}]}}}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_4
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}}}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_5
+execute if score @s punch matches 1.. as @e[type=arrow,limit=3,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/punch_crossbows_branch
 
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}}]}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_1
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch",lvl:2s}]}}]}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_2
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}}]}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_3
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch",lvl:4s}]}}]}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_4
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch",lvl:5s}]}}]}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add punch_5
+scoreboard players set $ranged punch 0
 
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch"}]}}}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add custom_arrow
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch"}]}}]}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] add custom_arrow
+#Debug Message
+tellraw @a[tag=debug,scores={punch=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Punch (crossbow).","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

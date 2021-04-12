@@ -47,13 +47,13 @@ execute if score $auto_repeat auto_charge matches 7 run data modify block 420690
 execute if score $auto_repeat auto_charge matches 8 run data modify block 4206901 0 4206900 Items[0].tag.Ammo set value 8
 
 #Repeating Ammo Full SFX
-execute if score $auto_repeat repeating matches 1 if score $auto_repeat auto_charge matches 2 run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
-execute if score $auto_repeat repeating matches 2 if score $auto_repeat auto_charge matches 3 run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
-execute if score $auto_repeat repeating matches 3 if score $auto_repeat auto_charge matches 4 run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
-execute if score $auto_repeat repeating matches 4 if score $auto_repeat auto_charge matches 5 run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
-execute if score $auto_repeat repeating matches 5 if score $auto_repeat auto_charge matches 6 run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
-execute if score $auto_repeat repeating matches 6 if score $auto_repeat auto_charge matches 7 run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
-execute if score $auto_repeat repeating matches 7 if score $auto_repeat auto_charge matches 8 run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
+execute if score $auto_repeat repeating matches 1 if score $auto_repeat auto_charge matches 2 if score @s auto_charge matches 1.. run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
+execute if score $auto_repeat repeating matches 2 if score $auto_repeat auto_charge matches 3 if score @s auto_charge matches 1.. run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
+execute if score $auto_repeat repeating matches 3 if score $auto_repeat auto_charge matches 4 if score @s auto_charge matches 1.. run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
+execute if score $auto_repeat repeating matches 4 if score $auto_repeat auto_charge matches 5 if score @s auto_charge matches 1.. run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
+execute if score $auto_repeat repeating matches 5 if score $auto_repeat auto_charge matches 6 if score @s auto_charge matches 1.. run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
+execute if score $auto_repeat repeating matches 6 if score $auto_repeat auto_charge matches 7 if score @s auto_charge matches 1.. run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
+execute if score $auto_repeat repeating matches 7 if score $auto_repeat auto_charge matches 8 if score @s auto_charge matches 1.. run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
 
 #If there is NO Repeating
 execute if score $auto_repeat repeating matches ..1 run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles set value [{id:"minecraft:arrow",Count:1b}]

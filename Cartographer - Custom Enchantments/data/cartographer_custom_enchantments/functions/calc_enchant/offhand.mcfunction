@@ -124,6 +124,12 @@ execute if score @s loyalty matches 1..5 run scoreboard players add @s loyalty 1
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
 scoreboard players operation @s fire_aspect += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:flame"}].lvl
+scoreboard players operation @s flame += $temp ca.susu
+
+execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:power"}].lvl
+scoreboard players operation @s power += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.CurseTwoHanded
 execute if data storage ca.susu:enchants temp_item.tag.CurseTwoHanded run scoreboard players add @s curse_two_handed 1
 scoreboard players operation @s curse_two_handed += $temp ca.susu

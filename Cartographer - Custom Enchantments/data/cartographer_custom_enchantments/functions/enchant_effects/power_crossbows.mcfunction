@@ -1,24 +1,8 @@
-scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] helper_lifetime 1
+scoreboard players operation $ranged power = @s power
 
-#Apply Power data to the arrow.
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:1s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 3.0
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:2s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 3.5
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:3s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 4.0
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:4s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 4.5
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:5s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 5.0
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:6s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 5.5
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:7s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 6.0
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:8s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 6.5
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:9s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 7.0
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:power",lvl:10s}]}}}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 7.5
+execute if score @s power matches 1.. as @e[type=arrow,limit=3,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/power_crossbows_branch
 
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:1s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 3.0
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:2s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 3.5
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:3s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 4.0
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:4s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 4.5
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:5s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 5.0
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:6s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 5.5
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:7s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 6.0
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:8s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 6.5
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:9s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 7.0
-execute if entity @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:power",lvl:10s}]}}]}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] at @s run data modify entity @s damage set value 7.5
+scoreboard players set $ranged power 0
+
+#Debug Message
+tellraw @a[tag=debug,scores={power=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Power (crossbow).","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

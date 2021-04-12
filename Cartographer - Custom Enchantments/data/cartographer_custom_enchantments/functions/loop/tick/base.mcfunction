@@ -92,7 +92,7 @@ execute as @a[scores={ca.energ_time=1..},tag=!kill_buff_checked] at @s run funct
 tag @a remove kill_buff_checked
 
 #Check if a player has a Loyalty Placeholder
-execute as @a at @s run function cartographer_custom_enchantments:enchant_effects/loyalty_player_track
+execute as @a at @s run function cartographer_custom_enchantments:enchant_effects/loyalty/player_track
 
 #Reset Function for scores
 function cartographer_custom_enchantments:loop/tick/reset
@@ -110,8 +110,8 @@ execute as @e[type=trident,scores={helper_lifetime=2..}] at @s run function cart
 kill @e[type=armor_stand,tag=hydraul_stopper,scores={helper_lifetime=3..}]
 tag @e[tag=bounce] remove bounce
 
-execute as @e[type=trident,tag=loyalty] at @s run execute if entity @s[nbt={inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/loyalty_convert
-execute as @e[type=armor_stand,tag=loyalty_projectile] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty_projectile
+execute as @e[type=trident,tag=loyalty] at @s run execute if entity @s[nbt={inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/loyalty/convert
+execute as @e[type=armor_stand,tag=loyalty_projectile] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty/projectile
 
 #Evoker Fangs from Evocation - Kill them if they stay alive too long, and "trample" them, increasing their warmup tags as long as a player stands on it.
 execute as @e[type=evoker_fangs,tag=from_evocation] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/purge

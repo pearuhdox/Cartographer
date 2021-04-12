@@ -103,4 +103,4 @@ execute if entity @s[tag=is_vicious_3] at @s run function cartographer_custom_en
 
 #Loyalty - Hits entity
 execute as @e[tag=loyalty] at @s run tag @s add hit_entity
-execute as @e[tag=loyalty] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty_convert
+execute as @e[tag=loyalty] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty/convert
