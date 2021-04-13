@@ -1,6 +1,7 @@
 #These effects will activate from the entity itself before the player call.
 
 execute at @s if entity @e[distance=..7,type=arrow,limit=1,sort=nearest] run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
+execute at @s if entity @e[distance=..7,type=trident,limit=1,sort=nearest] run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag
 
 #Conductive
 execute if entity @s[tag=is_conductive] run function cartographer_custom_enchantments:enchant_effects/conductive
