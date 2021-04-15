@@ -1,10 +1,6 @@
-execute if entity @s[scores={sharpshot=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..3,sort=nearest] helper_lifetime 1
+scoreboard players operation $ranged sharpshot = @s sharpshot
 
-execute if entity @s[scores={sharpshot=1}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] sharpshot 1
-execute if entity @s[scores={sharpshot=2}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] sharpshot 2
-execute if entity @s[scores={sharpshot=3}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,sort=nearest,scores={helper_lifetime=1}] sharpshot 3
-
-execute if entity @s[scores={sharpshot=1}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest,scores={helper_lifetime=1}] add custom_arrow
+execute as @e[type=arrow,sort=nearest,limit=3,distance=..5] at @s run function cartographer_custom_enchantments:enchant_effects/sharpshot_branch
 
 execute if entity @s[type=player,scores={sharpshot=1..}] run playsound minecraft:entity.arrow.hit_player player @a[distance=..10] ~ ~ ~ 0.2 1
 execute if entity @s[type=player,scores={sharpshot=1..}] run execute positioned ~ ~1.4 ~ run particle minecraft:composter ^ ^ ^1 0.2 0.2 0.2 0.02 5 normal

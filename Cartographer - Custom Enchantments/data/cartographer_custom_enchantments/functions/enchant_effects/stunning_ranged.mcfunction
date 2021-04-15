@@ -8,11 +8,11 @@ scoreboard players set @s[tag=is_stunning_3,scores={helper_melee=..30}] effect_s
 scoreboard players set @s[tag=is_stunning_4,scores={helper_melee=..40}] effect_stunned 21
 scoreboard players set @s[tag=is_stunning_5,scores={helper_melee=..50}] effect_stunned 21
 
-tag @e[type=#cartographer_core:hostile,tag=is_stunning_1,distance=..12] remove is_stunning_1
-tag @e[type=#cartographer_core:hostile,tag=is_stunning_2,distance=..12] remove is_stunning_2
-tag @e[type=#cartographer_core:hostile,tag=is_stunning_3,distance=..12] remove is_stunning_3
-tag @e[type=#cartographer_core:hostile,tag=is_stunning_3,distance=..12] remove is_stunning_4
-tag @e[type=#cartographer_core:hostile,tag=is_stunning_3,distance=..12] remove is_stunning_5
+tag @s[type=#cartographer_core:hostile,tag=is_stunning_1] remove is_stunning_1
+tag @s[type=#cartographer_core:hostile,tag=is_stunning_2] remove is_stunning_2
+tag @s[type=#cartographer_core:hostile,tag=is_stunning_3] remove is_stunning_3
+tag @s[type=#cartographer_core:hostile,tag=is_stunning_3] remove is_stunning_4
+tag @s[type=#cartographer_core:hostile,tag=is_stunning_3] remove is_stunning_5
 
 #Debug Message
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Stunning (ranged).","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

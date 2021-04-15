@@ -1,73 +1,17 @@
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:barrel",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:barrel",Count:1b}}] at @s run particle minecraft:block minecraft:oak_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:barrel",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:oak_door",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:oak_door",Count:1b}}] at @s run particle minecraft:block minecraft:oak_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:oak_door",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:spruce_door",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:spruce_door",Count:1b}}] at @s run particle minecraft:block minecraft:spruce_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:spruce_door",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:birch_door",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:birch_door",Count:1b}}] at @s run particle minecraft:block minecraft:birch_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:birch_door",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:jungle_door",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:jungle_door",Count:1b}}] at @s run particle minecraft:block minecraft:jungle_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:jungle_door",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:acacia_door",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:acacia_door",Count:1b}}] at @s run particle minecraft:block minecraft:acacia_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:acacia_door",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dark_oak_door",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dark_oak_door",Count:1b}}] at @s run particle minecraft:block minecraft:dark_oak_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dark_oak_door",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crimson_door",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crimson_door",Count:1b}}] at @s run particle minecraft:block minecraft:crimson_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crimson_door",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:warped_door",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:warped_door",Count:1b}}] at @s run particle minecraft:block minecraft:warped_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:warped_door",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:oak_trapdoor",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:oak_trapdoor",Count:1b}}] at @s run particle minecraft:block minecraft:oak_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:oak_trapdoor",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:spruce_trapdoor",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:spruce_trapdoor",Count:1b}}] at @s run particle minecraft:block minecraft:spruce_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:spruce_trapdoor",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:birch_trapdoor",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:birch_trapdoor",Count:1b}}] at @s run particle minecraft:block minecraft:birch_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:birch_trapdoor",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:jungle_trapdoor",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:jungle_trapdoor",Count:1b}}] at @s run particle minecraft:block minecraft:jungle_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:jungle_trapdoor",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:acacia_trapdoor",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:acacia_trapdoor",Count:1b}}] at @s run particle minecraft:block minecraft:acacia_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:acacia_trapdoor",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dark_oak_trapdoor",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dark_oak_trapdoor",Count:1b}}] at @s run particle minecraft:block minecraft:dark_oak_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dark_oak_trapdoor",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crimson_trapdoor",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crimson_trapdoor",Count:1b}}] at @s run particle minecraft:block minecraft:crimson_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:crimson_trapdoor",Count:1b}}] at @s run kill @s
-
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:warped_trapdoor",Count:1b}}] at @s run scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] effect_stunned 45
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:warped_trapdoor",Count:1b}}] at @s run particle minecraft:block minecraft:warped_planks ~ ~0.5 ~ 0.7 0.2 0.7 1 80 normal
-execute as @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:warped_trapdoor",Count:1b}}] at @s run kill @s
-
-scoreboard players set @e[type=#cartographer_core:hostile,distance=..6] damage_queue 3
-execute as @e[type=#cartographer_core:hostile,distance=..6] at @s run function cartographer_core:helper/deal_damage/by_score
-execute as @e[type=#cartographer_core:hostile,distance=..6] at @s run function cartographer_core:helper/deal_damage/invulnerable_tick
-
-playsound minecraft:entity.zombie.break_wooden_door block @a[distance=..12] ~ ~ ~ 1 1.2
+execute as @s[scores={splintering=1..,helper_bbarrel=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_boakdoor=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bsprdoor=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bbirdoor=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bjundoor=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bacadoor=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bdrkdoor=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bcridoor=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bwardoor=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_boaktrap=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bsprtrap=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bbirtrap=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bjuntrap=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bacatrap=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bdrktrap=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bcritrap=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item
+execute as @s[scores={splintering=1..,helper_bwartrap=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_item

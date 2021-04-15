@@ -72,7 +72,7 @@ execute as @a run function cartographer_custom_enchantments:enchant_effects/infi
 execute as @e[type=#cartographer_core:hostile,tag=current_drag] at @s run function cartographer_custom_enchantments:enchant_effects/current_drag
 
 #Splintering
-execute as @a[scores={splintering=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering_branch
+execute as @a[scores={splintering=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering
 
 #Remove Two Handed Processed Tag - Fix Inventory Two Handed Bundled Items
 execute as @a[scores={ca.two_hand_del=1}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/return_offhand
