@@ -1,4 +1,4 @@
-function cartographer_core:data_get/do
+function suso.player_data:get/do
 
 scoreboard players set @s loyalty_slot -1
 
@@ -55,4 +55,4 @@ execute if score @s loyalty_slot matches 36 run loot replace entity @s weapon.of
 data modify storage cartographer_core:pl_data working_data.Loyalty_Item set value {}
 data modify storage cartographer_core:pl_data working_data.Loyalty set value {}
 
-function cartographer_core:data_put/do
+function suso.player_data:put/do

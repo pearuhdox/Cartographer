@@ -1,4 +1,4 @@
-function cartographer_core:data_get/do
+function suso.player_data:get/do
 
 data modify storage i:internal inf_cmp_dst set value []
 data modify storage i:internal inf_cmp_dst append from storage cartographer_core:pldata working_data.infinity[{tag:{Infinity:1}}]

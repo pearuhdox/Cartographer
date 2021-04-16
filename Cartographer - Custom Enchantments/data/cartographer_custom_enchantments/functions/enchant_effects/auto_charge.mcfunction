@@ -64,7 +64,7 @@ execute if score $auto_repeat repeating matches ..1 run execute if block 4206901
 execute if score $auto_repeat repeating matches ..1 run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append value {id:"minecraft:arrow",Count:1b}
 
 #If there is Repeating
-execute if score $auto_repeat repeating matches 1.. run function cartographer_core:data_get/do
+execute if score $auto_repeat repeating matches 1.. run function suso.player_data:get/do
 
 #Add to our Projectile List Array if we need to (aka there is already a loaded ammo.)
 execute if score $auto_repeat repeating matches 1.. run execute if data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Quiver append from block 4206901 0 4206900 Items[0].tag.Quiver[0]
@@ -82,7 +82,7 @@ execute if score $auto_repeat repeating matches 1.. run data modify block 420690
 execute if score $auto_repeat repeating matches 1.. run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage cartographer_core:pl_data working_data.RepeatingList[0]
 execute if score $auto_repeat repeating matches 1.. run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage cartographer_core:pl_data working_data.RepeatingList[0]
 
-execute if score $auto_repeat repeating matches 1.. run function cartographer_core:data_put/do
+execute if score $auto_repeat repeating matches 1.. run function suso.player_data:put/do
 
 execute if entity @s[scores={auto_charge=1}] run loot replace entity @s hotbar.0 1 mine 4206901 0 4206900 air{drop_contents:1b}
 execute if entity @s[scores={auto_charge=2}] run loot replace entity @s hotbar.1 1 mine 4206901 0 4206900 air{drop_contents:1b}

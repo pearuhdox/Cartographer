@@ -1,4 +1,4 @@
-function cartographer_core:data_get/do
+function suso.player_data:get/do
 
 data modify storage cartographer_custom_enchantments:enchant_effects/infinity/internal working_it set value []
 data modify storage cartographer_custom_enchantments:enchant_effects/infinity/internal working_it append from storage cartographer_core:pldata working_data.infinity[{Slot:-106b}]
