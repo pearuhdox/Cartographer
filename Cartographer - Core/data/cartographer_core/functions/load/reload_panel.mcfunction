@@ -24,10 +24,14 @@ tellraw @p[tag=minimal_reload] [{"text":"❰","color":"gold","bold":true},{"text
 tellraw @p[tag=minimal_reload] [{"text":"[Disable Minimal Reload]","color":"#54FFFF","bold":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Disables minimal reload, reverting back to the default reload message.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/disable_minimal_reload"}},{"text":" ","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"[Credits]","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Click to see who helped bring you Cartographer.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/credits"}}]
 
 #Without minimal reload
-tellraw @p[tag=!minimal_reload] [{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":"Core (V1.2)","color":"#F04FF0","hoverEvent":{"action":"show_text","contents":[{"text":"Cartographer's base mechanics. No module will work without  this one!","color":"#FFE0A3","italic":true}]}},{"text":" installed!","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
+tellraw @a[tag=!minimal_reload] [{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":"Core (V1.2)","color":"#F04FF0","hoverEvent":{"action":"show_text","contents":[{"text":"Cartographer's base mechanics. No module will work without  this one!","color":"#FFE0A3","italic":true}]}},{"text":" installed!","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
 execute if entity @p[tag=!minimal_reload] run function entityid:load_message
-
-tellraw @p[tag=!minimal_reload] {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
+execute if entity @p[tag=!minimal_reload,tag=!ehid_check] run function cartographer_core:load/ehid_warning
+execute if entity @p[tag=!minimal_reload] run function suso.player_data:load_message
+execute if entity @p[tag=!minimal_reload,tag=!pds_check] run function cartographer_core:load/pds_warning
+tellraw @a[tag=!minimal_reload] {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
+tag @a remove ehid_check
+tag @a remove pds_check
 
 execute if entity @p[tag=!minimal_reload] run function cartographer_custom_enchantments:load/load_message
 execute if entity @p[tag=!minimal_reload] run function cartographer_custom_statuses:load/load_message
