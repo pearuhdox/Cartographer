@@ -1,0 +1,2 @@
+execute if entity @s[tag=!i.restore_inventory] run function cartographer_custom_enchantments:enchant_effects/infinity/save
+advancement revoke @s only cartographer_custom_enchantments:inventory_changed_infinity
