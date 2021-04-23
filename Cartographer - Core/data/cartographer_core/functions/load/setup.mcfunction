@@ -36,13 +36,17 @@ scoreboard objectives add ca.pldata.var dummy
 
 #Place Shulker Boxes needed for Shulker Box trick.
 forceload add 4206900 4206900
+forceload add 4206900 4206890
+forceload add 4206890 4206900
+forceload add 4206890 4206890
+
 setblock 4206900 0 4206900 purple_shulker_box replace
 
 kill @e[type=armor_stand,tag=vector]
 summon armor_stand 4206900 256 4206900 {Tags:["vector"],NoGravity:1,Invisible:1,Marker:1,Small:1}
 
 #Place the Susile Pincushions for proper abuse.
-kill @e[type=giant,tag=susile_pincushion]
+kill @e[type=iron_golem,tag=susile_pincushion]
 kill @e[type=area_effect_cloud,tag=susile_healer]
 
 schedule function cartographer_core:load/pincushion_creation 30t
@@ -95,6 +99,8 @@ scoreboard players set $core.difficulty ca.CONSTANT 0
 #Gamerule tracking and management
 scoreboard objectives add ca.gamerule dummy
 
+execute unless score $gl_reload_msg ca.gamerule matches 0.. run scoreboard players set $gl_reload_msg ca.gamerule 0
+execute unless score $lexica_stand ca.gamerule matches 0.. run scoreboard players set $lexica_stand ca.gamerule 0
 
 #Create the Lexica score.
 scoreboard objectives add use_lexica minecraft.used:minecraft.knowledge_book

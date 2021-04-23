@@ -3,9 +3,10 @@ schedule function cartographer_core:load/fix_gamerules 2t
 schedule function cartographer_core:load/gamerule_states 3t
 
 playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.5 2
-tag @s remove minimal_reload
 
-title @s actionbar [{"text":"Minimal Reload ","color":"aqua","italic":false},{"text":"has been deactivated!","color":"#FFE0A3","italic":false}]
+scoreboard players set $gl_reload_msg ca.gamerule 0
+
+title @s actionbar [{"text":"Global Reload Message ","color":"aqua","italic":false},{"text":"set to ","color":"#FFE0A3","italic":false},{"text":"DEFAULT","color":"yellow","italic":false}]
 
 execute as @s run function cartographer_core:load/reload_panel
 
