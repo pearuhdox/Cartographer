@@ -177,6 +177,10 @@ scoreboard objectives add helper_bdrktrap minecraft.mined:minecraft.dark_oak_tra
 scoreboard objectives add helper_bcritrap minecraft.mined:minecraft.crimson_trapdoor
 scoreboard objectives add helper_bwartrap minecraft.mined:minecraft.warped_trapdoor
 
+scoreboard objectives add helper_pearl minecraft.used:minecraft.ender_pearl
+scoreboard objectives add helper_splashpot minecraft.used:minecraft.splash_potion
+scoreboard objectives add helper_lingerpot minecraft.used:minecraft.lingering_potion
+
 scoreboard objectives add tra_cool dummy
 scoreboard objectives add tra_bias dummy
 

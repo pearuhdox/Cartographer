@@ -6,6 +6,9 @@ tellraw @s {"text":"A set of custom mechanics, made by mappers, for mappers.","c
 tellraw @s {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 tellraw @s [{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":"Core (V1.2)","color":"#F04FF0","hoverEvent":{"action":"show_text","contents":[{"text":"Cartographer's base mechanics. No module will work without  this one!","color":"#FFE0A3","italic":true}]}},{"text":" installed!","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
 function entityid:load_message
+execute if entity @s[tag=!ehid_check] run function cartographer_core:load/ehid_warning
+function suso.player_data:load_message
+execute if entity @s[tag=!pds_check] run function cartographer_core:load/pds_warning
 
 tellraw @s {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
 

@@ -15,5 +15,7 @@ execute as @a at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 
 execute if score $gl_reload_msg ca.gamerule matches 0 as @a at @s run function cartographer_core:load/reload/full
 execute if score $gl_reload_msg ca.gamerule matches 1 as @a at @s run function cartographer_core:load/reload/minimal
 
+tag @a remove ehid_check
+tag @a remove pds_check
 
 schedule function cartographer_core:load/command_feedback 1t
