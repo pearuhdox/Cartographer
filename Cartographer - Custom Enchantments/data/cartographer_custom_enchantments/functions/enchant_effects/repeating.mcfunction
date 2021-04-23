@@ -29,6 +29,7 @@ execute if entity @s[scores={repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{
 
 execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles set value []
 execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
+execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run data modify block 4206900 0 4206901 Items[0].tag.LastFired set from block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
 #Fix Multishot
 execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run execute if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]

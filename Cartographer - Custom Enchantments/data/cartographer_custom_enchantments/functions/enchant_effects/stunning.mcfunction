@@ -2,7 +2,7 @@ function cartographer_core:helper/randomize
 scoreboard players operation $melee helper_melee = @s random
 scoreboard players operation $melee stunning = @s stunning
 
-execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run function cartographer_custom_enchantments:enchant_effects/stunning_branch
+execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run function cartographer_custom_enchantments:enchant_effects/stunning/branch
 
 scoreboard players set $melee helper_melee 0
 scoreboard players set $melee stunning 0

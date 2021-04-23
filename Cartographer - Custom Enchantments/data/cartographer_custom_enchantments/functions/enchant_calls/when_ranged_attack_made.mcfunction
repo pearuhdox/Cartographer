@@ -12,12 +12,12 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:
 execute as @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:flame"}]}}]}] at @s run function cartographer_custom_enchantments:enchant_effects/flame_crossbows
 
 #Flash Calc
-execute as @s[scores={flash=1..,helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/flash_apply
-execute as @s[scores={flash=1..,helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/flash_apply
+execute as @s[scores={flash=1..,helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/flash/apply
+execute as @s[scores={flash=1..,helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/flash/apply
 
 #Punch - Crossbows
-execute as @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/punch_crossbows
-execute as @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch"}]}}]}] at @s run function cartographer_custom_enchantments:enchant_effects/punch_crossbows
+execute as @s[nbt={SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/punch/crossbows
+execute as @s[nbt={Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch"}]}}]}] at @s run function cartographer_custom_enchantments:enchant_effects/punch/crossbows
 
 #Point Blank
 execute as @s[scores={point_blank=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/point_blank

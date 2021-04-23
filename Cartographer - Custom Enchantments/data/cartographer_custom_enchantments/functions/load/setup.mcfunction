@@ -177,6 +177,9 @@ scoreboard objectives add helper_bdrktrap minecraft.mined:minecraft.dark_oak_tra
 scoreboard objectives add helper_bcritrap minecraft.mined:minecraft.crimson_trapdoor
 scoreboard objectives add helper_bwartrap minecraft.mined:minecraft.warped_trapdoor
 
+scoreboard objectives add tra_cool dummy
+scoreboard objectives add tra_bias dummy
+
 scoreboard objectives add ca.ce.true_x dummy
 scoreboard objectives add ca.ce.true_y dummy
 scoreboard objectives add ca.ce.true_z dummy
@@ -217,6 +220,8 @@ scoreboard objectives add ca.max_dmg dummy
 scoreboard objectives add ca.dmg_to_deal dummy
 
 scoreboard objectives add ca.rotation dummy
+
+scoreboard objectives add ca.ind_val dummy
 
 #Set all needed player constants.
 execute as @a unless entity @s[scores={echo_charges=-1..}] run scoreboard players set @a echo_charges 0

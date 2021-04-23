@@ -16,8 +16,23 @@ scoreboard objectives add helper_tokens dummy
 scoreboard objectives add helper_diff dummy
 scoreboard objectives add helper_lifetime dummy
 
+scoreboard objectives add hook_id dummy
+scoreboard players set $master hook_id 0
+scoreboard objectives add hook_travel dummy
+
+scoreboard objectives add sight_dist dummy
+
+scoreboard objectives add flag dummy
+
+#Create the LoS checking armor stand.
+kill 002f80c0-0001-f879-0000-009c001e7bfc
+schedule function cartographer_mob_abilities:load/create_uuids 3t
+
 #Set default of independent difficulty.
 execute unless score $cart_ind_diff global_options matches 0.. run scoreboard players set $cart_ind_diff global_options 0
+
+#Reset all token data on all players.
+tag @a remove token_reset
 
 #Start initial required looping to trigger mob effects.
 

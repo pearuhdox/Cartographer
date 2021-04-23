@@ -1,5 +1,8 @@
 {
 	"values": [
-		"cartographer_core:helper/attack_timer"
+		{"id": "cartographer_custom_enchantments:enchant_calls/when_attacking",
+		"required": false},
+		{"id": "cartographer_core:helper/attack_timer",
+		"required": true}
 	]
 }

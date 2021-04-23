@@ -1,6 +1,6 @@
 scoreboard players operation $hydraul tempest = @s tempest
 
-execute if entity @e[type=trident,distance=..3,sort=nearest,limit=1] run function cartographer_custom_enchantments:enchant_effects/hydraulic_trident_branch
+execute if entity @e[type=trident,distance=..3,sort=nearest,limit=1] run function cartographer_custom_enchantments:enchant_effects/hydraulic/trident_branch
 
 scoreboard players set $hydraul tempest 0
 

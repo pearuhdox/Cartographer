@@ -13,11 +13,11 @@ execute if entity @s[tag=is_flash] at @s run function cartographer_custom_enchan
 execute if entity @s[tag=is_frost] run function cartographer_custom_enchantments:enchant_effects/frost
 
 #Punch - Crossbows
-execute if entity @s[tag=is_punch_1] run function cartographer_custom_enchantments:enchant_effects/punch_effect
-execute if entity @s[tag=is_punch_2] run function cartographer_custom_enchantments:enchant_effects/punch_effect
-execute if entity @s[tag=is_punch_3] run function cartographer_custom_enchantments:enchant_effects/punch_effect
-execute if entity @s[tag=is_punch_4] run function cartographer_custom_enchantments:enchant_effects/punch_effect
-execute if entity @s[tag=is_punch_5] run function cartographer_custom_enchantments:enchant_effects/punch_effect
+execute if entity @s[tag=is_punch_1] run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_2] run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_3] run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_4] run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_5] run function cartographer_custom_enchantments:enchant_effects/punch/effect
 
 #Pin Down
 execute if entity @s[tag=is_pin] run function cartographer_custom_enchantments:enchant_effects/pin_down
@@ -29,9 +29,9 @@ execute if entity @s[tag=is_decay] run function cartographer_custom_enchantments
 execute if entity @s[tag=is_rend] run function cartographer_custom_enchantments:enchant_effects/rend
 
 #Tempo Theft
-execute if entity @s[tag=is_tempo_1] run function cartographer_custom_enchantments:enchant_effects/tempo_theft_mob
-execute if entity @s[tag=is_tempo_2] run function cartographer_custom_enchantments:enchant_effects/tempo_theft_mob
-execute if entity @s[tag=is_tempo_3] run function cartographer_custom_enchantments:enchant_effects/tempo_theft_mob
+execute if entity @s[tag=is_tempo_1] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
+execute if entity @s[tag=is_tempo_2] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
+execute if entity @s[tag=is_tempo_3] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
 
 #Volatile
 execute if entity @s[tag=is_volatile] at @s run function cartographer_custom_enchantments:enchant_effects/volatile
@@ -52,23 +52,23 @@ execute if entity @s[tag=is_tempest_4] run function cartographer_custom_enchantm
 execute if entity @s[tag=is_tempest_5] run function cartographer_custom_enchantments:enchant_effects/tempest
 
 #Duelist - Trident
-execute if entity @s[tag=is_duelist_1] at @s run function cartographer_custom_enchantments:enchant_effects/duelist_ranged
-execute if entity @s[tag=is_duelist_2] at @s run function cartographer_custom_enchantments:enchant_effects/duelist_ranged
-execute if entity @s[tag=is_duelist_3] at @s run function cartographer_custom_enchantments:enchant_effects/duelist_ranged
-execute if entity @s[tag=is_duelist_4] at @s run function cartographer_custom_enchantments:enchant_effects/duelist_ranged
-execute if entity @s[tag=is_duelist_5] at @s run function cartographer_custom_enchantments:enchant_effects/duelist_ranged
+execute if entity @s[tag=is_duelist_1] at @s run function cartographer_custom_enchantments:enchant_effects/duelist/ranged
+execute if entity @s[tag=is_duelist_2] at @s run function cartographer_custom_enchantments:enchant_effects/duelist/ranged
+execute if entity @s[tag=is_duelist_3] at @s run function cartographer_custom_enchantments:enchant_effects/duelist/ranged
+execute if entity @s[tag=is_duelist_4] at @s run function cartographer_custom_enchantments:enchant_effects/duelist/ranged
+execute if entity @s[tag=is_duelist_5] at @s run function cartographer_custom_enchantments:enchant_effects/duelist/ranged
 
 #Hunter - Trident
-execute if entity @s[tag=is_hunter_1] at @s run function cartographer_custom_enchantments:enchant_effects/hunter_ranged
-execute if entity @s[tag=is_hunter_2] at @s run function cartographer_custom_enchantments:enchant_effects/hunter_ranged
-execute if entity @s[tag=is_hunter_3] at @s run function cartographer_custom_enchantments:enchant_effects/hunter_ranged
-execute if entity @s[tag=is_hunter_4] at @s run function cartographer_custom_enchantments:enchant_effects/hunter_ranged
-execute if entity @s[tag=is_hunter_5] at @s run function cartographer_custom_enchantments:enchant_effects/hunter_ranged
+execute if entity @s[tag=is_hunter_1] at @s run function cartographer_custom_enchantments:enchant_effects/hunter/ranged
+execute if entity @s[tag=is_hunter_2] at @s run function cartographer_custom_enchantments:enchant_effects/hunter/ranged
+execute if entity @s[tag=is_hunter_3] at @s run function cartographer_custom_enchantments:enchant_effects/hunter/ranged
+execute if entity @s[tag=is_hunter_4] at @s run function cartographer_custom_enchantments:enchant_effects/hunter/ranged
+execute if entity @s[tag=is_hunter_5] at @s run function cartographer_custom_enchantments:enchant_effects/hunter/ranged
 
 #Committed - Trident
-execute if entity @s[tag=is_committed_1] at @s run function cartographer_custom_enchantments:enchant_effects/committed_ranged
-execute if entity @s[tag=is_committed_2] at @s run function cartographer_custom_enchantments:enchant_effects/committed_ranged
-execute if entity @s[tag=is_committed_3] at @s run function cartographer_custom_enchantments:enchant_effects/committed_ranged
+execute if entity @s[tag=is_committed_1] at @s run function cartographer_custom_enchantments:enchant_effects/committed/ranged
+execute if entity @s[tag=is_committed_2] at @s run function cartographer_custom_enchantments:enchant_effects/committed/ranged
+execute if entity @s[tag=is_committed_3] at @s run function cartographer_custom_enchantments:enchant_effects/committed/ranged
 
 #Fire Aspect - Trident
 execute if entity @s[tag=is_fire_aspect_1] at @s run function cartographer_custom_enchantments:enchant_effects/fire_aspect_ranged
@@ -76,31 +76,31 @@ execute if entity @s[tag=is_fire_aspect_2] at @s run function cartographer_custo
 execute if entity @s[tag=is_fire_aspect_3] at @s run function cartographer_custom_enchantments:enchant_effects/fire_aspect_ranged
 
 #Frostbite - Trident
-execute if entity @s[tag=is_frostbite_1] at @s run function cartographer_custom_enchantments:enchant_effects/frostbite_ranged
-execute if entity @s[tag=is_frostbite_2] at @s run function cartographer_custom_enchantments:enchant_effects/frostbite_ranged
-execute if entity @s[tag=is_frostbite_3] at @s run function cartographer_custom_enchantments:enchant_effects/frostbite_ranged
+execute if entity @s[tag=is_frostbite_1] at @s run function cartographer_custom_enchantments:enchant_effects/frostbite/ranged
+execute if entity @s[tag=is_frostbite_2] at @s run function cartographer_custom_enchantments:enchant_effects/frostbite/ranged
+execute if entity @s[tag=is_frostbite_3] at @s run function cartographer_custom_enchantments:enchant_effects/frostbite/ranged
 
 #Stunning - Trident
-execute if entity @s[tag=is_stunning_1] at @s run function cartographer_custom_enchantments:enchant_effects/stunning_ranged
-execute if entity @s[tag=is_stunning_2] at @s run function cartographer_custom_enchantments:enchant_effects/stunning_ranged
-execute if entity @s[tag=is_stunning_3] at @s run function cartographer_custom_enchantments:enchant_effects/stunning_ranged
-execute if entity @s[tag=is_stunning_4] at @s run function cartographer_custom_enchantments:enchant_effects/stunning_ranged
-execute if entity @s[tag=is_stunning_5] at @s run function cartographer_custom_enchantments:enchant_effects/stunning_ranged
+execute if entity @s[tag=is_stunning_1] at @s run function cartographer_custom_enchantments:enchant_effects/stunning/ranged
+execute if entity @s[tag=is_stunning_2] at @s run function cartographer_custom_enchantments:enchant_effects/stunning/ranged
+execute if entity @s[tag=is_stunning_3] at @s run function cartographer_custom_enchantments:enchant_effects/stunning/ranged
+execute if entity @s[tag=is_stunning_4] at @s run function cartographer_custom_enchantments:enchant_effects/stunning/ranged
+execute if entity @s[tag=is_stunning_5] at @s run function cartographer_custom_enchantments:enchant_effects/stunning/ranged
 
 #Decay - Trident
-execute if entity @s[tag=is_decay_1] at @s run function cartographer_custom_enchantments:enchant_effects/decay_ranged
-execute if entity @s[tag=is_decay_2] at @s run function cartographer_custom_enchantments:enchant_effects/decay_ranged
-execute if entity @s[tag=is_decay_3] at @s run function cartographer_custom_enchantments:enchant_effects/decay_ranged
+execute if entity @s[tag=is_decay_1] at @s run function cartographer_custom_enchantments:enchant_effects/decay/ranged
+execute if entity @s[tag=is_decay_2] at @s run function cartographer_custom_enchantments:enchant_effects/decay/ranged
+execute if entity @s[tag=is_decay_3] at @s run function cartographer_custom_enchantments:enchant_effects/decay/ranged
 
 #Overload - Trident
-execute if entity @s[tag=is_overload_1] at @s run function cartographer_custom_enchantments:enchant_effects/overload_ranged
-execute if entity @s[tag=is_overload_2] at @s run function cartographer_custom_enchantments:enchant_effects/overload_ranged
-execute if entity @s[tag=is_overload_3] at @s run function cartographer_custom_enchantments:enchant_effects/overload_ranged
+execute if entity @s[tag=is_overload_1] at @s run function cartographer_custom_enchantments:enchant_effects/overload/ranged
+execute if entity @s[tag=is_overload_2] at @s run function cartographer_custom_enchantments:enchant_effects/overload/ranged
+execute if entity @s[tag=is_overload_3] at @s run function cartographer_custom_enchantments:enchant_effects/overload/ranged
 
 #Vicious - Trident
-execute if entity @s[tag=is_vicious_1] at @s run function cartographer_custom_enchantments:enchant_effects/vicious_ranged
-execute if entity @s[tag=is_vicious_2] at @s run function cartographer_custom_enchantments:enchant_effects/vicious_ranged
-execute if entity @s[tag=is_vicious_3] at @s run function cartographer_custom_enchantments:enchant_effects/vicious_ranged
+execute if entity @s[tag=is_vicious_1] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/ranged
+execute if entity @s[tag=is_vicious_2] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/ranged
+execute if entity @s[tag=is_vicious_3] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/ranged
 
 #Loyalty - Hits entity
 execute as @e[tag=loyalty] at @s run tag @s add hit_entity

@@ -1,4 +1,5 @@
-scoreboard players set @s cooldown 20
+execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 15
+execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 12
 
 scoreboard players set @s ability_charge 0
 
@@ -75,5 +76,6 @@ scoreboard players set @e[tag=duplicate,distance=..2] cooldown 10
 playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..16] ~ ~ ~ 3 1.3
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-scoreboard players set @a[distance=..20] cooldown 3
+function cartographer_mob_abilities:helper/token/return
+tag @s remove attacking
 tag @s remove tokened

@@ -156,41 +156,47 @@ execute if entity @s[tag=is_vol_rend] if score @s ca.vol_dmg matches 91..95 run 
 execute if entity @s[tag=is_vol_rend] if score @s ca.vol_dmg matches 96..100 run summon firework_rocket ~ ~1 ~ {Tags:["volatile_firework"],ShotAtAngle:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]}]}}}}
 execute if entity @s[tag=is_vol_rend] if score @s ca.vol_dmg matches 100.. run summon firework_rocket ~ ~1 ~ {Tags:["volatile_firework"],ShotAtAngle:1,LifeTime:1,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]},{Type:4,Flicker:1b,Colors:[I;8136230]}]}}}}
 
-execute if entity @s[tag=is_vol_flame] run execute as @e[type=#cartographer_core:hostile,distance=..4.5] at @s run data merge entity @s {Fire:81}
-execute if entity @s[tag=is_vol_frost] run effect give @e[type=#cartographer_core:hostile,distance=..4.5] slowness 5 1
-execute if entity @s[tag=is_vol_pin] run effect give @e[type=#cartographer_core:hostile,distance=..4.5] bad_omen 5 1
+execute if entity @s[tag=is_vol_flame] run scoreboard players set $volatile flame 1
+execute if entity @s[tag=is_vol_flash] run scoreboard players set $volatile flash 1
+execute if entity @s[tag=is_vol_frost] run scoreboard players set $volatile frost 1
+execute if entity @s[tag=is_vol_pin] run scoreboard players set $volatile pin_down 1
+execute if entity @s[tag=is_vol_con] run scoreboard players set $volatile conductive 1
+execute if entity @s[tag=is_vol_decay] run scoreboard players set $volatile decay 1
+execute if entity @s[tag=is_vol_rend] run scoreboard players set $volatile rend 1
 
-execute if entity @s[tag=is_vol_rend] run execute as @e[type=#cartographer_core:hostile,distance=..4.5] at @s run execute if entity @s[scores={effect_bleed=1..}] run scoreboard players add @s effect_bleed 11
-execute if entity @s[tag=is_vol_rend] run execute as @e[type=#cartographer_core:hostile,distance=..4.5] at @s run execute unless entity @s[scores={effect_bleed=1..}] run scoreboard players set @s effect_bleed 5
-
-execute if entity @s[tag=is_vol_con] run scoreboard players set @e[type=#cartographer_core:hostile,distance=..4.5] effect_shocked 5
-execute if entity @s[tag=is_vol_decay] run scoreboard players set @e[type=#cartographer_core:hostile,distance=..4.5] effect_infect 5
-
-execute if entity @s[tag=is_vol_flash] run execute as @e[type=#cartographer_core:hostile,distance=..4.5] at @s run function cartographer_custom_enchantments:enchant_effects/flash
+execute if entity @s[tag=is_vol_p_1] run scoreboard players set $volatile punch 1
+execute if entity @s[tag=is_vol_p_2] run scoreboard players set $volatile punch 2
+execute if entity @s[tag=is_vol_p_3] run scoreboard players set $volatile punch 3
+execute if entity @s[tag=is_vol_p_4] run scoreboard players set $volatile punch 4
+execute if entity @s[tag=is_vol_p_5] run scoreboard players set $volatile punch 5
 
 tag @s add vol_center
 
-execute if entity @s[tag=is_vol_p_1] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-execute if entity @s[tag=is_vol_p_2] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-execute if entity @s[tag=is_vol_p_3] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-execute if entity @s[tag=is_vol_p_4] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-execute if entity @s[tag=is_vol_p_5] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-
-execute if entity @s[tag=is_vol_p_1] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run function cartographer_core:helper/push_no_bias
-execute if entity @s[tag=is_vol_p_2] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run function cartographer_core:helper/push_2_no_bias
-execute if entity @s[tag=is_vol_p_3] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run function cartographer_core:helper/push_3_no_bias
-execute if entity @s[tag=is_vol_p_4] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run function cartographer_core:helper/push_4_no_bias
-execute if entity @s[tag=is_vol_p_5] run execute as @e[type=#cartographer_core:hostile,distance=0.2..4.5] at @s run function cartographer_core:helper/push_5_no_bias
+execute as @e[type=#cartographer_core:hostile,distance=..5.5] at @s run function cartographer_custom_enchantments:enchant_effects/volatile/branch
 
 tag @s remove vol_center
 
-tag @e[type=#cartographer_core:hostile,distance=..12] remove is_volatile
-tag @e[type=#cartographer_core:hostile,distance=..12] remove is_vol_red
-tag @e[type=#cartographer_core:hostile,distance=..12] remove is_vol_con
-tag @e[type=#cartographer_core:hostile,distance=..12] remove is_vol_flame
-tag @e[type=#cartographer_core:hostile,distance=..12] remove is_vol_pin
-tag @e[type=#cartographer_core:hostile,distance=..12] remove is_vol_frost
-tag @e[type=#cartographer_core:hostile,distance=..12] remove is_vol_flash
+tag @s[type=#cartographer_core:hostile] remove is_volatile
+tag @s[type=#cartographer_core:hostile] remove is_vol_red
+tag @s[type=#cartographer_core:hostile] remove is_vol_con
+tag @s[type=#cartographer_core:hostile] remove is_vol_flame
+tag @s[type=#cartographer_core:hostile] remove is_vol_pin
+tag @s[type=#cartographer_core:hostile] remove is_vol_frost
+tag @s[type=#cartographer_core:hostile] remove is_vol_flash
+tag @s[type=#cartographer_core:hostile] remove is_vol_p_1
+tag @s[type=#cartographer_core:hostile] remove is_vol_p_2
+tag @s[type=#cartographer_core:hostile] remove is_vol_p_3
+tag @s[type=#cartographer_core:hostile] remove is_vol_p_4
+tag @s[type=#cartographer_core:hostile] remove is_vol_p_5
+
+scoreboard players set $volatile flame 0
+scoreboard players set $volatile flash 0
+scoreboard players set $volatile frost 0
+scoreboard players set $volatile pin_down 0
+scoreboard players set $volatile conductive 0
+scoreboard players set $volatile decay 0
+scoreboard players set $volatile rend 0
+scoreboard players set $volatile punch 0
 
 #Debug Message
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Volatile.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

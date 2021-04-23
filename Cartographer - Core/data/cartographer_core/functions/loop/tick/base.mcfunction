@@ -27,6 +27,7 @@ execute as @a at @s run function cartographer_core:helper/crit_checker
 
 #Reduce the interal attack timer system scores.
 scoreboard players remove @a[scores={ca.atk_time=1..}] ca.atk_time 1
+scoreboard players remove @a[scores={ca.atk_time_true=1..}] ca.atk_time_true 1
 
 #Run all Cartographer Effects from Core Timers.
 schedule function cartographer_custom_enchantments:loop/tick/base 1t
@@ -51,11 +52,40 @@ scoreboard players set @a lexica_sneak 0
 execute as @e[type=armor_stand,tag=placed_lexica] at @s run function cartographer_core:lexica/placed
 scoreboard players set @a ca.use_lectern 0
 
+#Run anvil and grindstone destruction
+
+
+execute if score $no_anvil ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_anvil=1..}] at @s run scoreboard players set @s helper_raycast 71
+execute if score $no_anvil ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_anvil=1..}] at @s positioned ~ ~-0.5 ~ run function cartographer_core:disables/anvil/raycast
+execute if score $no_anvil ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_anvil=1..}] at @s run scoreboard players set @s helper_raycast 71
+execute if score $no_anvil ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_anvil=1..}] at @s positioned ~ ~0.5 ~ run function cartographer_core:disables/anvil/raycast
+execute if score $no_anvil ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_anvil=1..}] at @s run scoreboard players set @s helper_raycast 71
+execute if score $no_anvil ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_anvil=1..}] at @s positioned ~ ~1.5 ~ run function cartographer_core:disables/anvil/raycast
+execute if score $no_anvil ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_anvil=1..}] at @s run scoreboard players set @s helper_raycast 71
+execute if score $no_anvil ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_anvil=1..}] at @s positioned ~ ~2.5 ~ run function cartographer_core:disables/anvil/raycast
+
+execute if score $no_grindstone ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_grindstone=1..}] at @s run scoreboard players set @s helper_raycast 71
+execute if score $no_grindstone ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_grindstone=1..}] at @s positioned ~ ~-0.5 ~ run function cartographer_core:disables/grindstone/raycast
+execute if score $no_grindstone ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_grindstone=1..}] at @s run scoreboard players set @s helper_raycast 71
+execute if score $no_grindstone ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_grindstone=1..}] at @s positioned ~ ~0.5 ~ run function cartographer_core:disables/grindstone/raycast
+execute if score $no_grindstone ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_grindstone=1..}] at @s run scoreboard players set @s helper_raycast 71
+execute if score $no_grindstone ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_grindstone=1..}] at @s positioned ~ ~1.5 ~ run function cartographer_core:disables/grindstone/raycast
+execute if score $no_grindstone ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_grindstone=1..}] at @s run scoreboard players set @s helper_raycast 71
+execute if score $no_grindstone ca.gamerule matches 1 as @a[gamemode=!creative,gamemode=!spectator,scores={use_grindstone=1..}] at @s positioned ~ ~2.5 ~ run function cartographer_core:disables/grindstone/raycast
+
+execute as @a[scores={use_anvil=1..}] at @s run scoreboard players set @s helper_raycast 0
+execute as @a[scores={use_grindstone=1..}] at @s run scoreboard players set @s helper_raycast 0
+
+scoreboard players set @a use_anvil 0
+scoreboard players set @a use_grindstone 0
+scoreboard players set @a use_enchant_tb 0
+
 #Reset and Run Lexica Trigger
 gamerule sendCommandFeedback false
 execute as @a unless score @s lexica_trig matches 1.. run scoreboard players set @s lexica_trig 0
 execute as @a at @s if score @s lexica_trig matches 1.. run function cartographer_core:lexica/trigger
 gamerule sendCommandFeedback true
+
 #Add anything else to run per tick here!
 #
 #

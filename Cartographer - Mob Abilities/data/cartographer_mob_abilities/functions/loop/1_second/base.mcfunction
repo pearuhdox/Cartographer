@@ -1,33 +1,25 @@
 #Loops every second
 
-#Trigger all second timer attacks where enemies have been tokened.
+#Out of combat check! If the player has been out of combat for a very extended time, we reset their tokens.
+execute as @a[tag=no_near_mobs] at @s if entity @e[type=#cartographer_core:hostile,distance=..30] run tag @s remove no_near_mobs
+execute as @a[tag=!no_near_mobs] at @s unless entity @e[type=#cartographer_core:hostile,distance=..30] run tag @s add no_near_mobs
 
-#Set the score of helper difficulty equal to Minecraft's current difficulty
-execute if score $cart_ind_diff global_options matches 0 run execute store result score @a helper_diff run difficulty
+#Teleport our LoS checking UUID set armor stand back to the force loaded chunk.
+tp 002f80c0-0001-f879-0000-009c001e7bfc 4206900 180 4206900
 
-#Run all actives
-execute as @e[type=#cartographer_core:hostile,tag=tokened,scores={cooldown=0}] at @s run function cartographer_mob_abilities:loop/1_second/run_actives
+#Tag a tokened enemy to attack. Tag only 1 enemy every second.
+execute as @e[type=#cartographer_core:hostile,tag=has_active,tag=tokened,tag=avail_target,tag=!attacking,scores={cooldown=0},limit=1,sort=random] at @s run tag @s add attacking
 
-#Reduce Cooldowns on all enemies with cooldowns.
-#Reduce Cloak stacks on all enemies with cooldowns.
-scoreboard players remove @e[tag=has_active,scores={cooldown=1..}] cooldown 1
+#Run all entity effects
+execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_mob_abilities:loop/1_second/entities
 
-#Run 1 Second Passives: (Reflect)
-execute as @e[tag=reflect_ranged] at @s run function cartographer_mob_abilities:passive/reflect
-execute as @e[tag=reflect_active] at @s run function cartographer_mob_abilities:passive/reflect
+#Tick down the player's cooldown. At -1, the cooldown swapper is run.
+execute as @a unless entity @s[scores={cooldown=-21..}] run scoreboard players set @s cooldown 0
+execute as @a[scores={cooldown=-19..}] at @s run scoreboard players remove @s cooldown 1
+execute as @a[scores={cooldown=..-1}] at @s run function cartographer_mob_abilities:helper/token/cooldown_swapper
 
-#Give players tokens back.
-execute as @a at @s run function cartographer_mob_abilities:token/token_player
+#Has the player been out of combat for 20 seconds? (No tokens have been refreshed in 20 seconds and no nearby mobs within 30 blocks.)
+execute as @a[scores={cooldown=-20},tag=no_near_mobs] at @s run function cartographer_mob_abilities:load/token_reset
+execute as @a[scores={cooldown=-20},tag=no_near_mobs] at @s run scoreboard players set @s cooldown -21
 
 schedule function cartographer_mob_abilities:loop/1_second/base 1s
-
-#Run Stack Manager for Brutal and Relentless Stacks
-execute as @e[scores={brutal_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
-execute as @e[scores={relent_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
-
-#Remove Hookshot tag from mob
-execute as @e[tag=is_hooking,scores={cooldown=6}] at @s run tag @s remove is_hooking
-
-#Add lifetime to ability markers. Kill them if they are too old. Remove old Invulnerable notices.
-execute as @e[type=armor_stand,tag=ability_marker] run function cartographer_mob_abilities:loop/1_second/ability_marker_branch
-execute as @e[type=armor_stand,tag=invulnerable_notice] at @s run function cartographer_mob_abilities:passive/purge_notices

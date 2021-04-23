@@ -1,4 +1,5 @@
-scoreboard players set @s cooldown 10
+execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
+execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 8
 
 scoreboard players set @s ability_charge 0
 
@@ -24,7 +25,8 @@ execute as @s at @s positioned ^ ^ ^3 run execute if entity @a[distance=..2,limi
 execute as @s at @s positioned ^ ^ ^3 run execute if entity @a[distance=..2,limit=1] as @a[distance=..2,limit=1] at @s run replaceitem entity @s weapon.mainhand minecraft:air 1
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-scoreboard players set @a[distance=..20] cooldown 4
+function cartographer_mob_abilities:helper/token/return
+tag @s remove attacking
 tag @s remove tokened
 
 schedule function cartographer_mob_abilities:helper/attacked_reset 10t

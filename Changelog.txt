@@ -215,22 +215,38 @@ Custom Enchantments:
 
  - Tempo Theft:
     - No longer provies Haste at any level.
-    - Reworked effect: Steal 10% Movement Speed from an attacked mob for 10 seconds per level.
+    - Reworked effect: Steal 15% Movement Speed from an attacked mob for 10 seconds per level.
       - Steal applies a slowing effect to the mob equivalent to the speed you temporarily gain.
 
   Developer Commentary: This was always intended to be the ideal version of Tempo Theft (i.e. the exact effect from Minecraft Dungeons) but 1.15.2 did not have the attribute command.
   The effect has been reworked to use the attribute command, adding the speed stealing bonus. The haste has been removed and the speed tuned to compensate for an on demand potent
   slowing ranged attack.
 
+ - Transfiguration:
+    - Now a 5% chance per level to create a "Poultrygheist". Poultrygheists cannot drop feathers, but they can drop extra amounts of "Suspicious Meat"
+    - Once it creates a Poultrygheist, the enchantment is placed on a 15 second internal cooldown.
+    - Now features bias against expectation in random mechanics.
+    - Now affects all enemies hit by the sweep attack (rather than 1).
+    - Still cannot affect enemies with the "elite" or "boss" tag.
+    - Reworked sfx and vfx.
+
+  Developer Commentary: Transfiguration was a bit of a novelty enchantment. It was too low of a chance to actively be useful except at maximum level. The new version
+  prevents it from being used to farm materials as easily, but allows it to trigger more commonly in exchange for an internal cooldown so it can't trigger too often.
+  Suspicious Meat has Curse of Vanishing to limit the effectiveness of farming it. The drop is affected by Looting, so it can be a nice source of early game food.
+
  - Two Handed:
     - Item is now a "Compressed Item" not in a Knapsack. Can no longer be placed.
     - Compressed Items in your inventory or offhand when not holding a Two Handed item are automatically uncompressed.
     - An item takes 1 second to uncompress after you stop holding a Two Handed item.
+    - Compressed items now have a small speed penalty and kbr bonus when in your offhand.
+      - Clarification: Debuff is only active while item is compressed. Uncompressing removes the debuff from the item.
 
   Developer Commentary: Two Handed no longer has Knapsack functionality as it was the source of many unfixable duplication bugs. As compensation, Compressed Items
   are even smoother, and auto uncompress in your inventory. Your offhand item takes a bit longer to uncompress in order to increase the impact of the Two Handed enchant
-  mid combat, ensuring the effects are felt more in general, and not rarely when you use the item.
-
+  mid combat, ensuring the effects are felt more in general, and not rarely when you use the item. Compressed items apply a small speed debuff and kbr buff to accent this.
+  Ideally this debuff is not enough to make a Two Handed item unusable with a compressed item in your offhand (as part of the big draw is making it so players are not
+  encouraged to not fill their offhand slot) but make the curse feel a bit more "curse like". Please let me know how this feels, I welcome feedback on it.
+ 
  - Volatile:
     - Level cap reduced to 1 (from 3).
     - Firework now deals damage equivalent to the damage the arrow deals. (Approximately)

@@ -1,10 +1,8 @@
-execute if entity @s[scores={vicious=1..}] run execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run particle minecraft:block minecraft:redstone_block ~ ~1 ~ 0.25 0.4 0.25 0 10 normal
+scoreboard players operation $melee vicious = @s vicious
 
-execute if entity @s[scores={vicious=1..}] run scoreboard players add @e[scores={effect_bleed=1..},type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] effect_bleed 11
+execute if score @s vicious matches 1.. run execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/branch
 
-execute if entity @s[scores={vicious=1}] run execute unless entity @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s},scores={effect_bleed=1..}] run execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] run scoreboard players add @s effect_bleed 3
-execute if entity @s[scores={vicious=2}] run execute unless entity @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s},scores={effect_bleed=1..}] run execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] run scoreboard players add @s effect_bleed 5
-execute if entity @s[scores={vicious=3}] run execute unless entity @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s},scores={effect_bleed=1..}] run execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] run scoreboard players add @s effect_bleed 7
+scoreboard players set $melee vicious 0
 
 #Debug Message
 tellraw @a[tag=debug,scores={vicious=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Vicious.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

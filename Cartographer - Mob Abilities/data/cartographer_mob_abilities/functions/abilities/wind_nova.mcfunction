@@ -1,4 +1,5 @@
-scoreboard players set @s cooldown 10
+execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
+execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 8
 
 scoreboard players set @s ability_charge 0
 
@@ -19,7 +20,8 @@ particle minecraft:instant_effect ~ ~ ~ 4 0.2 4 0.1 250 normal @a
 particle minecraft:cloud ~ ~1 ~ 0.5 0.5 0.5 0.2 20 normal @a
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-scoreboard players set @a[distance=..20] cooldown 4
+function cartographer_mob_abilities:helper/token/return
+tag @s remove attacking
 tag @s remove tokened
 
 schedule function cartographer_mob_abilities:helper/attacked_reset 10t

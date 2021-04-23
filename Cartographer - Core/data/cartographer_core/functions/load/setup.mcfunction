@@ -6,12 +6,29 @@
 # Description: Sets up all needed infrastructure for Core. Run on reload.
 ########################################
 
+#Order Datapacks Properly
+#datapack disable "file/Cartographer - Custom Enchantments"
+#datapack disable "file/Cartographer - Custom Statuses"
+#datapack disable "file/Cartographer - Mob Abilities"
+#datapack disable "file/Cartographer - Mimics"
+#datapack disable "file/Cartographer - Repair Stations"
+#datapack disable "file/Cartographer - Loot Additions"
+#datapack disable "file/Cartographer - Potion Injector"
+
+#datapack enable "file/Cartographer - Custom Enchantments" before "file/Cartographer - Core"
+#datapack enable "file/Cartographer - Custom Statuses" before "file/Cartographer - Core"
+#datapack enable "file/Cartographer - Mob Abilities" before "file/Cartographer - Core"
+#datapack enable "file/Cartographer - Mimics" before "file/Cartographer - Core"
+#datapack enable "file/Cartographer - Repair Stations" before "file/Cartographer - Core"
+#datapack enable "file/Cartographer - Loot Additions" before "file/Cartographer - Core"
+#datapack enable "file/Cartographer - Potion Injector" before "file/Cartographer - Core"
+
 #Create Randomizer scoreboards
 scoreboard objectives add randomSalt dummy                
 scoreboard objectives add random dummy
 scoreboard players set Random3 randomSalt 100011001
-scoreboard players set Random1 randomSalt 100 
-scoreboard players set @s randomSalt 100 
+scoreboard players set Random1 randomSalt 100
+scoreboard players set @s randomSalt 100
 
 #Create player ID scores
 scoreboard objectives add ca.pldata.id dummy
@@ -43,6 +60,9 @@ scoreboard objectives add vectorZ dummy
 scoreboard objectives add global_options dummy
 scoreboard objectives add no_hndbk_pmpt dummy
 
+#Create raycast score
+scoreboard objectives add helper_raycast dummy
+
 #Create scores for custom damage
 scoreboard objectives add damage_queue dummy
 scoreboard objectives add heal_queue dummy
@@ -72,6 +92,10 @@ scoreboard players set $core.20 ca.CONSTANT 20
 scoreboard players set $core.2 ca.CONSTANT 2
 scoreboard players set $core.difficulty ca.CONSTANT 0
 
+#Gamerule tracking and management
+scoreboard objectives add ca.gamerule dummy
+
+
 #Create the Lexica score.
 scoreboard objectives add use_lexica minecraft.used:minecraft.knowledge_book
 scoreboard objectives add lexica_time dummy
@@ -79,12 +103,17 @@ scoreboard objectives add lexica_sneak minecraft.custom:sneak_time
 
 scoreboard objectives add lexica_trig trigger
 
+#Create the anvil, enchant table, and grindstone destruction scores.
+scoreboard objectives add use_anvil minecraft.custom:minecraft.interact_with_anvil
+scoreboard objectives add use_grindstone minecraft.custom:minecraft.interact_with_grindstone
+
 #Give all players the dummy recipe for Lexica.
 recipe give @a cartographer_core:lexica_dummy
 
 #Schedule the loading message.
+execute as @a at @s run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 1 0.75
 
-schedule function cartographer_core:load/load_message 5t
+schedule function cartographer_core:load/reload_panel 5t
 schedule function cartographer_core:load/force_load 1t
 
 #Analyse what gamerules feedback and death messages are set to.

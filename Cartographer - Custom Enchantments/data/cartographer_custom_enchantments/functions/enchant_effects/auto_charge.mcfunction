@@ -70,9 +70,9 @@ execute if score $auto_repeat repeating matches 1.. run function cartographer_co
 execute if score $auto_repeat repeating matches 1.. run execute if data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Quiver append from block 4206901 0 4206900 Items[0].tag.Quiver[0]
 execute if score $auto_repeat repeating matches 1.. run execute if data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Charged set value 1b
 
-#Create our first loaded ammo (basic arrow) if no loaded ammo.
+#Create our first loaded ammo based off "LastFired".
 execute if score $auto_repeat repeating matches 1.. run execute unless data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Charged set value 1b
-execute if score $auto_repeat repeating matches 1.. run execute unless data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Quiver append value {id:"minecraft:arrow",Count:1b}
+execute if score $auto_repeat repeating matches 1.. run execute unless data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Quiver append from block 4206901 0 4206900 Items[0].tag.LastFired
 
 #Then set our Ammo to load to the lowest value in the array.
 execute if score $auto_repeat repeating matches 1.. run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles set value []

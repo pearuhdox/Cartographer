@@ -6,10 +6,10 @@
 	"minecraft:zombified_piglin",
 	"minecraft:skeleton",
 	"minecraft:stray",
-    "minecraft:wither_skeleton",
-    "minecraft:phantom",
-    "minecraft:wither",
-    "minecraft:spider",
+   	"minecraft:wither_skeleton",
+    	"minecraft:phantom",
+    	"minecraft:wither",
+    	"minecraft:spider",
 	"minecraft:cave_spider",
 	"minecraft:silverfish",
 	"minecraft:endermite",
@@ -35,6 +35,7 @@
 	"minecraft:piglin_brute",
 	"minecraft:hoglin",
 	"minecraft:zoglin",
-	"minecraft:illusioner"
+	"minecraft:illusioner",
+	"minecraft:wolf"
   ]
 }

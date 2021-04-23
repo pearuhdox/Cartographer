@@ -1,4 +1,5 @@
-scoreboard players set @s cooldown 12
+execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 12
+execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 9
 
 scoreboard players set @s ability_charge 0
 
@@ -10,5 +11,6 @@ execute as @e[tag=laser_marker,distance=..1,limit=1] at @s run execute positione
 
 kill @e[type=armor_stand,tag=laser_marker,distance=..1,limit=1]
 
-scoreboard players set @a[distance=..20] cooldown 4
+function cartographer_mob_abilities:helper/token/return
+tag @s remove attacking
 tag @s remove tokened

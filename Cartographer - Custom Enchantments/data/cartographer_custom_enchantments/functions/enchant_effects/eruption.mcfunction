@@ -12,6 +12,9 @@ scoreboard players operation $eruption overload = @s overload
 #Run branching on the xp orb here.
 execute as @e[type=minecraft:experience_orb,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch
 
+#If no xp orb, approximate instead
+execute unless entity @e[type=minecraft:experience_orb,limit=1,sort=nearest,distance=..6] as @s positioned ^ ^ ^3 run function cartographer_custom_enchantments:enchant_effects/eruption/recursion
+
 scoreboard players set $eruption eruption 0
 
 scoreboard players set $eruption fire_aspect 0

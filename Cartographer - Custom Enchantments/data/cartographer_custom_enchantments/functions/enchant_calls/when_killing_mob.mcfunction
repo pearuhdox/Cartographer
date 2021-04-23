@@ -14,7 +14,7 @@ function cartographer_custom_enchantments:enchant_effects/lifesteal
 #Committed
 function cartographer_custom_enchantments:enchant_effects/committed
 #Concealed Consume
-execute if entity @s[scores={concealed=1..}] run function cartographer_custom_enchantments:enchant_effects/concealed_consume
+execute if entity @s[scores={concealed=1..}] run function cartographer_custom_enchantments:enchant_effects/concealed/consume
 #Decay
 function cartographer_custom_enchantments:enchant_effects/decay
 #Duelist
@@ -44,4 +44,4 @@ function cartographer_custom_enchantments:enchant_effects/vanquisher
 function cartographer_custom_enchantments:enchant_effects/echo_restore
 
 #Concealed Restore
-function cartographer_custom_enchantments:enchant_effects/concealed_restore
+function cartographer_custom_enchantments:enchant_effects/concealed/restore
