@@ -1,4 +1,4 @@
-function cartographer_core:data_get/do
+function suso.player_data:get/do
 
 execute if entity @s[scores={repeating=1..7}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s SelectedItem
 execute if entity @s[scores={repeating=11..17}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s Inventory[{Slot:-106b}]
@@ -58,7 +58,7 @@ execute if entity @s[scores={helper_ammo=7,repeating=11..17},nbt={Inventory:[{Sl
 execute if entity @s[scores={helper_ammo=8,repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:8,Charged:1b}
 
 #Save the data back to the player array
-function cartographer_core:data_put/do
+function suso.player_data:put/do
 
 
 execute if entity @s[scores={repeating=1..7}] run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}

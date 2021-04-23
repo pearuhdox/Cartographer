@@ -1,4 +1,4 @@
-function cartographer_core:data_get/do
+function suso.player_data:get/do
 
 scoreboard players set $slot c.var -1
 
@@ -52,4 +52,4 @@ execute if score $slot c.var matches 35 run loot replace entity @s inventory.26 
 data modify storage cartographer_core:pl_data working_data.Uncompress_Item set value {}
 data modify storage cartographer_core:pl_data working_data.Uncompress set value {}
 
-function cartographer_core:data_put/do
+function suso.player_data:put/do

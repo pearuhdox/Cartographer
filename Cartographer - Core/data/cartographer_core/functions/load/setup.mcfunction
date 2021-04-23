@@ -30,10 +30,6 @@ scoreboard players set Random3 randomSalt 100011001
 scoreboard players set Random1 randomSalt 100
 scoreboard players set @s randomSalt 100
 
-#Create player ID scores
-scoreboard objectives add ca.pldata.id dummy
-scoreboard objectives add ca.pldata.var dummy
-
 #Place Shulker Boxes needed for Shulker Box trick.
 forceload add 4206900 4206900
 forceload add 4206900 4206890

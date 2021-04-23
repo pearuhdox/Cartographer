@@ -59,7 +59,7 @@ execute as @a[scores={ca.temp_warp=1..}] at @s run function cartographer_custom_
 execute as @a[scores={concealed=0,ca.conceal_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/concealed/consume
 
 #Infinity 3.0
-execute as @a run function cartographer_custom_enchantments:enchant_effects/infinity/player
+execute as @a at @s run function cartographer_custom_enchantments:enchant_effects/infinity/player
 
 #Splintering
 execute as @a[scores={splintering=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering

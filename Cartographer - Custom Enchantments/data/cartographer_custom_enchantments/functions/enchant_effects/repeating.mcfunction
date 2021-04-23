@@ -1,5 +1,5 @@
 #Grab and store item from player hand
-function cartographer_core:data_get/do
+function suso.player_data:get/do
 
 execute if entity @s[scores={repeating=1..7}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s SelectedItem
 execute if entity @s[scores={repeating=11..17}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s Inventory[{Slot:-106b}]
@@ -38,7 +38,7 @@ execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot
 data remove block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
 #Save the data back to the player array
-function cartographer_core:data_put/do
+function suso.player_data:put/do
 
 #Place item in player hand
 execute if entity @s[scores={repeating=1..7}] run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}

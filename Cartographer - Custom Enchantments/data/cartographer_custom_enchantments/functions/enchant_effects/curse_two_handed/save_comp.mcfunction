@@ -1,6 +1,6 @@
-function cartographer_core:data_get/do
+function suso.player_data:get/do
 
 data modify storage cartographer_core:pldata working_data.offhand set from entity @s Inventory[{Slot:-106b}].tag.Compressed
 data modify storage cartographer_core:pldata working_data.offhand.Slot set value 0b
 
-function cartographer_core:data_put/do
+function suso.player_data:put/do

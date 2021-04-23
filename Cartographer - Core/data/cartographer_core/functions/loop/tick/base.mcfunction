@@ -12,13 +12,6 @@ execute as @a[scores={custom_death=1..},tag=damaging] at @s run function cartogr
 execute as @a[scores={custom_death=1..},tag=damaging] at @s run function cartographer_custom_enchantments:helper/custom_death_msg
 scoreboard players set @a[scores={custom_death=1..}] custom_death 0
 
-#Assign ids to players
-execute unless score #current ca.pldata.id matches 0.. run scoreboard players set #current ca.pldata.id 0
-execute if score #current ca.pldata.id matches 0.. as @a[tag=!ca.pldata.id] run function cartographer_core:data_ids/get_id
-
-#Recover id on name change
-execute as @a[tag=ca.pldata.id] unless score @s ca.pldata.id matches 1.. run function cartographer_core:data_ids/recover_id
-
 #Set the world difficulty to this constant.
 execute store result score $core.difficulty ca.CONSTANT run difficulty
 
