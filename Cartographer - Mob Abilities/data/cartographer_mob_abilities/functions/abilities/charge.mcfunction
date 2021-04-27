@@ -3,7 +3,7 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @s helper_raycast 10
+scoreboard players set @s helper_raycast 21
 
 execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/charge_raycast
 

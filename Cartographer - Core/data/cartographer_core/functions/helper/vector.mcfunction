@@ -1,7 +1,7 @@
 ########################################
 # File: Cartographer Core - Helper / Vector
 #
-# Author: PearUhDox | Date: 1/11/2021
+# Author: PearUhDox | Date: 3/11/2021
 #
 # Description: Calculates a vector based on the direction the entity is facing.
 # Intended to be used with custom knockback functions.

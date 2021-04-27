@@ -3,9 +3,11 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-effect give @s slowness 1 6 true
+scoreboard players set @s mob_move_dis 16
+scoreboard players set @s mob_atk_dis 16
 
-effect give @s weakness 1 99 true
+scoreboard players set @s mob_move_red 31
+scoreboard players set @s mob_atk_red 31
 
 tag @s add ambushing
 
@@ -15,7 +17,7 @@ particle minecraft:smoke ~ ~ ~ 0.5 0.3 0.5 0.05 40
 
 execute as @p[distance=..25] at @s run tp @e[tag=ambushing] ^ ^ ^-1.5
 
-execute unless block ~ ~ ~ air run tp @s ~ ~1.5 ~
+execute unless block ~ ~ ~ #cartographer_core:can_raycast run tp @s ~ ~1.5 ~
 
 execute as @p[distance=..25] at @s run playsound minecraft:entity.enderman.teleport hostile @a[distance=..16] ~ ~ ~ 2 0.5
 

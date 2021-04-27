@@ -1,11 +1,11 @@
 #Grab and store item from player hand
 function suso.player_data:get/do
 
-execute if entity @s[scores={repeating=1..7}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s SelectedItem
-execute if entity @s[scores={repeating=11..17}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s Inventory[{Slot:-106b}]
+execute if entity @s[scores={repeating=1..7}] run data modify storage suso:pldata working_data.repeating set from entity @s SelectedItem
+execute if entity @s[scores={repeating=11..17}] run data modify storage suso:pldata working_data.repeating set from entity @s Inventory[{Slot:-106b}]
 
-data modify storage cartographer_core:pldata working_data.repeating.Slot set value 0b
-data modify block 4206900 0 4206901 Items append from storage cartographer_core:pldata working_data.repeating
+data modify storage suso:pldata working_data.repeating.Slot set value 0b
+data modify block 4206900 0 4206901 Items append from storage suso:pldata working_data.repeating
 
 
 #Adjust ammo count

@@ -124,6 +124,7 @@ function cartographer_core:load/gamerule_states
 #Schedule core clocks.
 
 schedule function cartographer_core:loop/tick/base 1t
+schedule function cartographer_core:loop/half_second/base 25t
 schedule function cartographer_core:loop/1_second/base 25t
 schedule function cartographer_core:loop/3_seconds/base 3s
 schedule function cartographer_core:loop/5_seconds/base 5s

@@ -76,6 +76,13 @@ Custom Statuses:
     - Nausea 13 = Bleeding (only level 1, duration max = 10 seconds)
     - Nausea 14 = Cloaked (for use on enemy potion drops wink)
 
+Repair Stations:
+  - The Station now has a new utility, known as the Limitless Tesseract.
+    - If you break an item (run its durability out) it will be transported to the Limitless Tesseract.
+    - Items you break can be repurchased from the tesseract for a minor material cost.
+      - They will be in identical form to when they broke.
+    - Each player's has their own storage in the Limitless Tesseract (like an Ender Chest).
+
 Changes:
 
 - Core now overwrites every vanilla mob loot table in the game for death detection systems.
@@ -140,6 +147,9 @@ Custom Enchantments:
  - Deadeye:
     - Now inflicts on hit ranged enchantments (currently not including Punch).
     - Improved vfx and sfx.
+    - Multishot now turns this effect into an un-aimed shotgun burst with reduced range.
+    - Trueshot now increases the range of Deadeye projectiles.
+    - Curse of Encumbering now decreases the range of Deadeye projectiles.
 
  - Eruption:
     - Knockback is now counted as an "on hit melee" enchantment.
@@ -163,6 +173,7 @@ Custom Enchantments:
  - Evasion:
     - Individual dodge chance per level decreased to 4% (from 5%).
     - Increased level cap to 20 (from 10). [Now a total of 80% attainable dodge chance]
+    - Can now trigger in succession.
     - Pity math slightly nerfed to compensate higher stackability. (Maxes at 20% additional chance instead of 30% additional chance.)
 
   Developer Commentary: Evasion is an interesting enchant that in its previous scaling, was poised to be a "core" defense enchantment, but didn't scale the same as Protection.
@@ -170,8 +181,12 @@ Custom Enchantments:
   and Protection levels feel more "equal" in worth. (And mathematically, a full 20 levels of Evasion will equal a full 20 levels of protection, either negating 80% of attacks,
   or 80% of the damage from attacks)
 
+ - Executioner:
+    - Threshold is now 10% per level (rather than 10% for first level, and 7.5% for second and third levels)
+
  - Hydraulic:
     - Tempest now increases the damage of Hydraulic shoves.
+    - Drastically improved vfx.
 
  - Ricochet:
     - No longer creates a projectile, instantly targets nearby entities instead.
@@ -274,6 +289,115 @@ Custom Statuses:
  - Vulnerability:
     - Is now called "Exposed" since the mechanic works and functions differently from Resistance (and thus should follow a more unique naming scheme)
 
+Mob Abilities:
+
+ - General:
+    - Abilities that immobilize or root a mob no longer use Slowness and Weakness effects. They now use custom attributes instead.
+    - Abilities have either been reformatted to use the movement and damage disable effects, or movement and damage reduction effects.
+    - Movement and Damage reduction reduces a mob's damage and movement speed by 50%.
+    - Some abilities can now make mobs temporarily knockback immune.
+
+ - Token System:
+    - Cartographer's token system (that's such an ugly phrase, we need a better one...) erm... the **Mob Manager** has been entirely reworked!
+
+ - Mob Manager:
+    - Difficulty control is far more noticeable. Easy is noticeably easier, Hard is noticeably harder.
+    - Hordes of enemies get more frequent and aggressive as the difficulty increases.
+    - More enemies can attack in higher bursts on higher difficulties, and they can do this more often.
+    - Difficulty settings for independent difficulty above Hard still exist.
+    - Attacks have been split into "Light" and "Heavy" attacks.
+      - Less Heavy attacks can be used in succession by groups of mobs than light attacks, and less frequently.
+
+    - Light Attacks: Ambush, Charge, Disarm, Fireball, all Novas, Smash, Sweep, Trapper, Webshot
+    - Heavy Attacks: Augmenter, Cloaker, Duplicator, Healer, Hookshot, Laser, Magic Missile, Wither Storm
+      - These presets can be overwritten for individual mobs with the "heavy_priority" and "light_priority" tags.
+
+ - Ambush:
+    - Charge time reduced to 1 second.
+    - Mob is immobilized and unable to damage players for 0.75 seconds after teleporting (was 1 second).
+    - Mob damage and speed is reduced for 1.5 seconds after teleporting (was 0 seconds).
+
+ - Augmenter:
+    - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
+    - Augmenter can no longer apply the augmentation buff to nearby Augmenter mobs.
+
+ - Charge:
+    - Charge now breaks blocks at the end of the cast (to prevent the mob from getting stuck in walls)
+    - Charge uses better tracking to help prevent mobs from becoming stuck in walls.
+    - Vfx adjusted.
+
+ - Cloaker:
+    - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
+    - Augmenter can no longer cloak nearby Cloaker mobs.
+
+ - Disarm:
+    - Reworked!
+      - The mob laughs and reduces in speed, damage, and becomes knockback immune.
+      - After 1 second, the mob attacks a small area in front of it. Players hit take 4 damage and are blinded for 1 second.
+      - The mob will copy the player's mainhand item and place it into their main hand. (the player's item is not lost or manipulated)
+      - The mob will lose Disarm and gain a different ability based on the item they stole.
+        - Smash if it was an Axe.
+        - Trapper if it was a ranged weapon (Bow, Crossbow, Trident)
+        - Sweep for all other items.
+        - Mob's cooldown is set to 1 second if the hit is successful (rather than the default 10 seconds).
+
+ - Healer:
+    - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
+    - Healer can no longer heal nearby Healer mobs.
+
+ - Magic Missile:
+    - Projectile now has an actual homing effect rather than direct following snap to precision.
+    - The speed of the projectile is now slower, and constant at all distances from the player.
+    - Projectile now leaves behind a cloud of magic residue when it explodes, that inflicts 8 seconds of Wither II.
+
+ - Fireball:
+    - Charge time reduced to 1 second (was 2).
+    - Projectile is now spawned above the mob rather than in front of it.
+
+ - Flame, Frost, Soulfire, Venom, and Wind Nova:
+    - Charge up time reduced to 3 seconds (was 4).
+    - Now reduce the speed and damage of the caster rather than immobilizing them (see above)
+    - Wind Nova specifically: Now creates a cloud of levitation on hit targets rather than inflicting levitation.
+      - These clouds vanish when a player consumes them or after a couple seconds.
+
+ - Hookshot:
+    - Damage increased to 4 (from 2).
+    - Fixed the frankly absurd problems where this ability could drag players in all sorts of unintended paths.
+    - Projectile can no longer travel through walls. (Its a hook, not a spirit tether from the aethervoid)
+
+ - Smash:
+    - Damage reduced to 8 (from 10).
+    - Slowness effect removed from the attack.
+    - Damage now triggers centered on the mob in a 3.5 block radius.
+    - Mob will leap forwards and up in the direction they are facing.
+    - Mob will leap higher in vertical mobility.
+    - Mob will cast the damage effect when they actually land rather than 1 second into the future.
+    - Vfx adjusted.
+
+ - Sweep:
+    - Damage reduced to 6 (was 8).
+    - Weakness effect removed from the attack.
+    - Attack size reduced by 50%.
+    - Charge up time reduced to 0.5 seconds (was 1).
+    - Now reduce the speed and damage of the caster rather than immobilizing them (see above)
+
+ - Trapper:
+    - Reworked vfx, traps are now called "enchanted caltrops" in the death message.
+    - Charge time reduced to 1 second (was 2).
+
+ - Wither Storm:
+    - Values have been entirely reworked.
+    - Effect is the same, but overall, more consistency.
+    - Fixed bug where projectiles would not be placed properly.
+    - A projectile is guaranteed to be placed above the player's position when the storm starts.
+
+Repair Stations:
+
+  Station:
+    - Station now creates an impassable entity wall to prevent more than one player from interacting with the station at a time.
+    - Station will remove all other players from the zone that are not the nearest player (when station is activated)
+    - Station now allows for flexible max levels and scaling.
+    - Station will block a repair if the player attempting the repair doesn't have the needed materials.
 
 Cartographer, Patch 2021.2.0 - Divine Additions
 

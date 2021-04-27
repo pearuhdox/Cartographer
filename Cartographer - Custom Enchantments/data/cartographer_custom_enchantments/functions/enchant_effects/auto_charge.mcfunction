@@ -79,8 +79,8 @@ execute if score $auto_repeat repeating matches 1.. run data modify block 420690
 execute if score $auto_repeat repeating matches 1.. run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from block 4206901 0 4206900 Items[0].tag.Quiver[0]
 
 #If there is Repeating and Multishot
-execute if score $auto_repeat repeating matches 1.. run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage cartographer_core:pl_data working_data.RepeatingList[0]
-execute if score $auto_repeat repeating matches 1.. run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage cartographer_core:pl_data working_data.RepeatingList[0]
+execute if score $auto_repeat repeating matches 1.. run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage suso:pldata working_data.RepeatingList[0]
+execute if score $auto_repeat repeating matches 1.. run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage suso:pldata working_data.RepeatingList[0]
 
 execute if score $auto_repeat repeating matches 1.. run function suso.player_data:put/do
 

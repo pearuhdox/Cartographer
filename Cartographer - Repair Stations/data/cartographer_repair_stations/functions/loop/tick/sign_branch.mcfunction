@@ -52,6 +52,7 @@ execute as @s at @s run execute if block ~ ~ ~1 air run setblock ~ ~ ~1 lime_sta
 
 execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=item_frame,distance=..2]
 execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=armor_stand,distance=..4]
-execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=magma_cube,distance=..5]
-execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=magma_cube,distance=..5]
+execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=sheep,distance=..5]
+execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=sheep,distance=..5]
+execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=villager,tag=void_bag,distance=..5]
 execute if entity @s[scores={repair_tampers=30..}] run summon creeper ~ ~1 ~1 {ExplosionRadius:8b,Fuse:1,ignited:1b,CustomName:'{"text":"a certain exasperated repair station"}'}

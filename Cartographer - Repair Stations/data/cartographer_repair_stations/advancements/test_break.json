@@ -1,0 +1,28 @@
+{
+        "criteria": {
+          "requirement": {
+            "trigger": "minecraft:item_durability_changed",
+            "conditions": {
+              "player": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "tesseract": {
+                      "min": 1,
+                      "max": 1
+                    }
+                  }
+                }
+              ],
+              "durability": {
+                "min": -1000,
+                "max": 1
+              }
+            }
+          }
+        },
+        "rewards": {
+          "function": "cartographer_repair_stations:void_bag/save_inv"
+        }
+      }

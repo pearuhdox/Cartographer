@@ -5,8 +5,8 @@ scoreboard players set @s ability_charge 0
 
 scoreboard players set @s helper_raycast 13
 
-effect give @s slowness 2 6 true
-effect give @s weakness 2 9 true
+scoreboard players set @s mob_move_dis 35
+scoreboard players set @s mob_atk_dis 35
 
 data merge entity @s {NoAI:0}
 

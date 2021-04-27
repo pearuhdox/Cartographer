@@ -30,3 +30,5 @@ execute if entity @s[scores={helper_lifetime=21..}] run scoreboard players remov
 
 execute if entity @s[scores={helper_lifetime=..6}] as @s at @s run playsound minecraft:block.chain.place hostile @a[distance=..12] ~ ~ ~ 1 0.5
 execute if entity @s[scores={helper_lifetime=21..}] as @s at @s run playsound minecraft:block.chain.place hostile @a[distance=..12] ~ ~ ~ 1 0.5
+
+execute unless block ~ ~0.5 ~ #cartographer_core:can_raycast run kill @s

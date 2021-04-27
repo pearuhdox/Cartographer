@@ -7,6 +7,7 @@ scoreboard objectives add brutal_stacks dummy
 scoreboard objectives add relent_stacks dummy
 scoreboard objectives add wither_storms dummy
 scoreboard objectives add storm_height dummy
+scoreboard objectives add smash_bounce dummy
 
 #Setup all necessary helper scoreboards.
 
@@ -24,6 +25,14 @@ scoreboard objectives add sight_dist dummy
 
 scoreboard objectives add flag dummy
 
+scoreboard objectives add mob_move_dis dummy
+scoreboard objectives add mob_atk_dis dummy
+
+scoreboard objectives add mob_move_red dummy
+scoreboard objectives add mob_atk_red dummy
+
+scoreboard objectives add mob_sturdy dummy
+
 #Create the LoS checking armor stand.
 kill 002f80c0-0001-f879-0000-009c001e7bfc
 schedule function cartographer_mob_abilities:load/create_uuids 3t
@@ -33,10 +42,3 @@ execute unless score $cart_ind_diff global_options matches 0.. run scoreboard pl
 
 #Reset all token data on all players.
 tag @a remove token_reset
-
-#Start initial required looping to trigger mob effects.
-
-function cartographer_mob_abilities:loop/tick/base
-function cartographer_mob_abilities:loop/1_second/base
-function cartographer_mob_abilities:loop/3_second/base
-function cartographer_mob_abilities:loop/5_second/base

@@ -25,6 +25,7 @@ execute as @s[type=armor_stand,tag=invulnerable_notice] at @s run function carto
 execute if entity @s[tag=charge,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
 execute if entity @s[tag=flame_nova,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
 execute if entity @s[tag=frost_nova,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
+execute if entity @s[tag=wind_nova,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
 execute if entity @s[tag=venom_nova,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
 execute if entity @s[tag=soulfire_nova,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
 execute if entity @s[tag=ambush,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..25] run tag @s add avail_target

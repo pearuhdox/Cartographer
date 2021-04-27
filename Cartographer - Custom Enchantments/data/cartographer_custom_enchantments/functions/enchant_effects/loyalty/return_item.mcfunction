@@ -2,17 +2,17 @@ function suso.player_data:get/do
 
 scoreboard players set @s loyalty_slot -1
 
-data modify storage cartographer_core:pl_data working_data.Loyalty set from entity @s Inventory[{tag:{IsTrident:1}}]
-execute store result score @s loyalty_slot run data get storage cartographer_core:pl_data working_data.Loyalty.Slot
+data modify storage suso:pldata working_data.Loyalty set from entity @s Inventory[{tag:{IsTrident:1}}]
+execute store result score @s loyalty_slot run data get storage suso:pldata working_data.Loyalty.Slot
 
-execute unless data storage cartographer_core:pl_data working_data.Loyalty.Slot run scoreboard players set @s loyalty_slot -1
+execute unless data storage suso:pldata working_data.Loyalty.Slot run scoreboard players set @s loyalty_slot -1
 
 execute if data entity @s Inventory[{Slot:-106b}].tag.IsTrident run scoreboard players set @s loyalty_slot 36
 
-execute if score @s loyalty_slot matches 0.. run data modify storage cartographer_core:pl_data working_data.Loyalty_Item set from entity @s Inventory[{tag:{IsTrident:1}}].tag.Trident
+execute if score @s loyalty_slot matches 0.. run data modify storage suso:pldata working_data.Loyalty_Item set from entity @s Inventory[{tag:{IsTrident:1}}].tag.Trident
 
 execute if score @s loyalty_slot matches 0.. run replaceitem block 4206900 0 4206899 container.0 air 1
-execute if score @s loyalty_slot matches 0.. run data modify block 4206900 0 4206899 Items append from storage cartographer_core:pl_data working_data.Loyalty_Item
+execute if score @s loyalty_slot matches 0.. run data modify block 4206900 0 4206899 Items append from storage suso:pldata working_data.Loyalty_Item
 
 execute if score @s loyalty_slot matches 0 run loot replace entity @s hotbar.0 1 mine 4206900 0 4206899 air{drop_contents:1b}
 execute if score @s loyalty_slot matches 1 run loot replace entity @s hotbar.1 1 mine 4206900 0 4206899 air{drop_contents:1b}
@@ -52,7 +52,7 @@ execute if score @s loyalty_slot matches 34 run loot replace entity @s inventory
 execute if score @s loyalty_slot matches 35 run loot replace entity @s inventory.26 1 mine 4206900 0 4206899 air{drop_contents:1b}
 execute if score @s loyalty_slot matches 36 run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206899 air{drop_contents:1b}
 
-data modify storage cartographer_core:pl_data working_data.Loyalty_Item set value {}
-data modify storage cartographer_core:pl_data working_data.Loyalty set value {}
+data modify storage suso:pldata working_data.Loyalty_Item set value {}
+data modify storage suso:pldata working_data.Loyalty set value {}
 
 function suso.player_data:put/do

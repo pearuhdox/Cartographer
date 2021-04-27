@@ -3,7 +3,7 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-effect give @s slowness 1 6 true
+scoreboard players set @s mob_move_dis 23
 
 particle minecraft:smoke ~ ~1 ~ 0.3 0.5 0.3 0.05 40
 

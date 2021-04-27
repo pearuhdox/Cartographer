@@ -8,7 +8,7 @@ execute if entity @s[scores={ability_charge=3}] run playsound minecraft:block.be
 
 execute unless entity @s[scores={ability_charge=4..5}] run effect give @s glowing 1 0 true
 
-execute unless entity @s[scores={ability_charge=4..5}] run effect give @s slowness 1 6 true
+execute unless entity @s[scores={ability_charge=4..5}] run scoreboard players set @s mob_move_dis 23
 
 execute unless entity @s[scores={ability_charge=1..}] run particle minecraft:firework ~4 ~0.5 ~-4 0.2 0.2 0.2 0.05 15 normal @a
 execute if entity @s[scores={ability_charge=1}] run particle minecraft:firework ~3 ~0.5 ~-1 0.2 0.2 0.2 0.05 15 normal @a

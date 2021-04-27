@@ -3,11 +3,11 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-effect give @e[distance=0.5..10,type=#cartographer_core:undead,type=!player] minecraft:instant_damage 1 2
+effect give @e[distance=0.5..10,tag=!healer,type=#cartographer_core:undead,type=!player] minecraft:instant_damage 1 2
 
-effect give @e[distance=0.5..10,type=!#cartographer_core:undead,type=!player] minecraft:instant_health 1 2
+effect give @e[distance=0.5..10,tag=!healer,type=!#cartographer_core:undead,type=!player] minecraft:instant_health 1 2
 
-execute as @e[distance=0.5..10,type=#cartographer_core:hostile] at @s run particle minecraft:heart ~ ~1 ~ 0.5 0.5 0.5 0.05 15
+execute as @e[distance=0.5..10,tag=!healer,type=#cartographer_core:hostile] at @s run particle minecraft:heart ~ ~1 ~ 0.5 0.5 0.5 0.05 15
 
 particle minecraft:firework ~ ~1 ~ 0 0 0 0.6 100 normal
 particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.3 100 normal

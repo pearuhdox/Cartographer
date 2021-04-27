@@ -20,6 +20,47 @@ execute as @s[type=item,nbt={Item:{tag:{DeathEffect:1}}}] at @s run function car
 #Run Invulnerable Notices
 execute as @s[type=#cartographer_core:hostile,nbt={HurtTime:9s,ActiveEffects:[{Id:11b,Amplifier:4b}]}] at @s run function cartographer_mob_abilities:passive/invulnerable
 
+#Run Movement Disable and Melee Damage Disable
+execute as @s[scores={mob_move_dis=2..}] run attribute @s minecraft:generic.movement_speed modifier add 00000031-4919-1315-2250-000000000000 "mob_disable_move" -1 multiply
+execute as @s[scores={mob_atk_dis=2..}] run attribute @s minecraft:generic.attack_damage modifier add 00000031-4919-120-11-000000000000 "mob_disable_atk" -1 multiply
+
+execute as @s[scores={mob_move_dis=1}] run attribute @s minecraft:generic.movement_speed modifier remove 00000031-4919-1315-2250-000000000000
+execute as @s[scores={mob_atk_dis=1}] run attribute @s minecraft:generic.attack_damage modifier remove 00000031-4919-120-11-000000000000
+
+scoreboard players remove @s[scores={mob_move_dis=1..}] mob_move_dis 1
+scoreboard players remove @s[scores={mob_atk_dis=1..}] mob_atk_dis 1
+
+execute as @s[scores={mob_move_red=2..}] run attribute @s minecraft:generic.movement_speed modifier add 00000031-1845-1315-2250-000000000000 "mob_reduce_move" -0.5 multiply
+execute as @s[scores={mob_atk_red=2..}] run attribute @s minecraft:generic.attack_damage modifier add 00000031-1845-120-11-000000000000 "mob_reduce_atk" -0.5 multiply
+
+execute as @s[scores={mob_move_red=1}] run attribute @s minecraft:generic.movement_speed modifier remove 00000031-1845-1315-2250-000000000000
+execute as @s[scores={mob_atk_red=1}] run attribute @s minecraft:generic.attack_damage modifier remove 00000031-1845-120-11-000000000000
+
+scoreboard players remove @s[scores={mob_move_red=1..}] mob_move_red 1
+scoreboard players remove @s[scores={mob_atk_red=1..}] mob_atk_red 1
+
+execute as @s[scores={mob_sturdy=2..}] run attribute @s minecraft:generic.knockback_resistance modifier add 00000031-1315-1819-2017-000000000000 "mob_sturdy" 100 add
+execute as @s[scores={mob_sturdy=1}] run attribute @s minecraft:generic.knockback_resistance modifier remove 00000031-1315-1819-2017-000000000000
+
+scoreboard players remove @s[scores={mob_sturdy=1..}] mob_sturdy 1
+
+#Run Smash Land Effect
+execute unless block ~ ~-6 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash_place_particle
+execute unless block ~ ~-4 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash_place_particle
+execute unless block ~ ~-2 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash_place_particle
+execute unless block ~ ~-1 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash
+
+execute if entity @s[tag=airborne_9] run tag @s add airborne_10
+execute if entity @s[tag=airborne_8] run tag @s add airborne_9
+execute if entity @s[tag=airborne_7] run tag @s add airborne_8
+execute if entity @s[tag=airborne_6] run tag @s add airborne_7
+execute if entity @s[tag=airborne_5] run tag @s add airborne_6
+execute if entity @s[tag=airborne_4] run tag @s add airborne_5
+execute if entity @s[tag=airborne_3] run tag @s add airborne_4
+execute if entity @s[tag=airborne_2] run tag @s add airborne_3
+execute if entity @s[tag=airborne] run tag @s add airborne_2
+
+
 #Laser
 execute if entity @s[tag=laser,scores={cooldown=0},tag=tokened] if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/laser
 
@@ -28,6 +69,9 @@ execute if entity @s[tag=laser,tag=tokened,scores={cooldown=0}] unless entity @a
 
 #Ender-Port Test
 execute if entity @s[tag=enderport] if entity @e[type=#cartographer_core:projectile,distance=..5,nbt=!{inGround:1b}] run function cartographer_mob_abilities:passive/enderport
+
+#Wither Storm Blasts
+execute if entity @s[type=armor_stand,tag=wither_blast] run function cartographer_mob_abilities:abilities/wither_storm_blasts
 
 #Fix Tags
 execute if entity @s[tag=has_active,tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix

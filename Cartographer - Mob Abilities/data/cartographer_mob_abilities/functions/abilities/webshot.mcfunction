@@ -5,7 +5,7 @@ scoreboard players set @s ability_charge 0
 
 scoreboard players set @s helper_raycast 13
 
-effect give @s slowness 1 6 true
+scoreboard players set @s mob_move_dis 23
 
 execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/webshot_raycast
 

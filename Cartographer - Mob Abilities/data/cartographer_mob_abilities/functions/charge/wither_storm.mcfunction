@@ -1,4 +1,4 @@
-effect give @s slowness 2 6 true
+scoreboard players set @s mob_move_dis 41
 effect give @s blindness 2 0 false
 
 execute unless entity @s[scores={ability_charge=3..4}] run playsound minecraft:entity.wither.ambient hostile @a[distance=..24] ~ ~ ~ 2 2

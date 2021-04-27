@@ -1,12 +1,12 @@
 function suso.player_data:get/do
 
-execute if entity @s[scores={repeating=1..7}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s SelectedItem
-execute if entity @s[scores={repeating=11..17}] run data modify storage cartographer_core:pldata working_data.repeating set from entity @s Inventory[{Slot:-106b}]
+execute if entity @s[scores={repeating=1..7}] run data modify storage suso:pldata working_data.repeating set from entity @s SelectedItem
+execute if entity @s[scores={repeating=11..17}] run data modify storage suso:pldata working_data.repeating set from entity @s Inventory[{Slot:-106b}]
 
-data modify storage cartographer_core:pldata working_data.repeating.Slot set value 0b
-data modify block 4206900 0 4206901 Items append from storage cartographer_core:pldata working_data.repeating
+data modify storage suso:pldata working_data.repeating.Slot set value 0b
+data modify block 4206900 0 4206901 Items append from storage suso:pldata working_data.repeating
 
-data modify storage cartographer_core:pl_data working_data.RepeatingList set value []
+data modify storage suso:pldata working_data.RepeatingList set value []
 
 #Consume the necessary arrows. In creative, no arrows are consumed, and stock is fully loaded.
 scoreboard players set @s helper_ammo 0
@@ -36,7 +36,7 @@ function cartographer_custom_enchantments:enchant_effects/repeating/recurse
 scoreboard players operation @s helper_ammo = $ammo_save helper_ammo
 
 data modify block 4206900 0 4206901 Items[0].tag.Quiver set value []
-data modify block 4206900 0 4206901 Items[0].tag.Quiver set from storage cartographer_core:pl_data working_data.RepeatingList
+data modify block 4206900 0 4206901 Items[0].tag.Quiver set from storage suso:pldata working_data.RepeatingList
 
 #Fix Crossbow
 execute if entity @s[scores={helper_ammo=1,repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:1,Charged:1b}

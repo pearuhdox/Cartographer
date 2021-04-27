@@ -1,6 +1,6 @@
 execute unless entity @s[scores={ability_charge=1..2}] run playsound minecraft:entity.spider.ambient hostile @a[distance=..16] ~ ~ ~ 2 0.5
 
-execute unless entity @s[scores={ability_charge=1..2}] run effect give @s slowness 1 6 true
+execute unless entity @s[scores={ability_charge=1..2}] run scoreboard players set @s mob_move_dis 23
 
 execute unless entity @s[scores={ability_charge=1..2}] run data merge entity @s {NoAI:1}
 

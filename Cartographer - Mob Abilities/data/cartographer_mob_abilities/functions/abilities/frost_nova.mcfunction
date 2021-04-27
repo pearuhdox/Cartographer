@@ -3,7 +3,7 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-effect give @s slowness 1 6 true
+scoreboard players set @s mob_move_dis 12
 
 execute as @a[gamemode=survival,distance=..8] at @s run tag @s add frost_novad
 
@@ -13,6 +13,7 @@ execute as @a[gamemode=survival,distance=..8] at @s run function cartographer_co
 execute as @a[gamemode=survival,distance=..8] at @s run effect give @s slowness 3 2
 
 playsound minecraft:block.glass.break hostile @a[distance=..16] ~ ~ ~ 3 0.8
+playsound minecraft:block.end_portal.spawn player @a[distance=..16] ~ ~ ~ 0.5 1.75
 
 particle minecraft:item_snowball ~ ~ ~ 4 0.2 4 0.1 250 normal @a
 

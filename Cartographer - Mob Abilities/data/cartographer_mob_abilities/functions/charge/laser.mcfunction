@@ -4,7 +4,7 @@ execute if entity @s[scores={ability_charge=1}] run summon armor_stand ~ ~ ~ {No
 
 execute if entity @s[scores={ability_charge=1..119}] run effect give @s glowing 1 0 true
 
-execute if entity @s[scores={ability_charge=1..119}] run effect give @s slowness 1 6 true
+execute if entity @s[scores={ability_charge=1..119}] run scoreboard players set @s mob_move_red 23
 
 execute if entity @s[scores={ability_charge=1..119}] run tp @e[tag=laser_marker,distance=..1,limit=1] @s
 
