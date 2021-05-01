@@ -5,9 +5,20 @@ scoreboard objectives add cooldown dummy
 scoreboard objectives add ability_charge dummy
 scoreboard objectives add brutal_stacks dummy
 scoreboard objectives add relent_stacks dummy
+scoreboard objectives add devious_stacks dummy
+scoreboard objectives add sacrifice_stacks dummy
 scoreboard objectives add wither_storms dummy
 scoreboard objectives add storm_height dummy
 scoreboard objectives add smash_bounce dummy
+
+scoreboard objectives add devious_time dummy
+scoreboard objectives add abs_health dummy
+
+scoreboard objectives add exalted dummy
+
+scoreboard objectives add reflect_past dummy
+scoreboard objectives add reflect_check dummy
+scoreboard objectives add reflect_diff dummy
 
 #Setup all necessary helper scoreboards.
 

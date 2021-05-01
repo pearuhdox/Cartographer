@@ -73,6 +73,36 @@ execute if entity @s[tag=enderport] if entity @e[type=#cartographer_core:project
 #Wither Storm Blasts
 execute if entity @s[type=armor_stand,tag=wither_blast] run function cartographer_mob_abilities:abilities/wither_storm_blasts
 
+#Setup Exalted
+execute if entity @s[tag=exalted,tag=!setup] run function cartographer_mob_abilities:passive/exalted_setup
+
+#Exalted Souls
+execute if entity @s[tag=exalted_soul_stand] run function cartographer_mob_abilities:passive/exalted_soul
+
+#Exalted Weapons
+execute if entity @s[type=armor_stand,tag=exalted_weapon] run tp @s ~ ~ ~ ~3 ~
+
+#Corpse Crawler Eggs
+execute if entity @s[type=armor_stand,tag=corpse_crawler_egg,tag=pushed] run function cartographer_mob_abilities:passive/corpse_crawler_egg
+
+#Pyromania Placeholders
+execute if entity @s[type=armor_stand,tag=pyro_effect] at @s positioned ~ ~0.7 ~ run function cartographer_mob_abilities:passive/pyromania_effect
+
+#Get an enemy with Reflect's health.
+execute as @s[tag=reflect_melee] run execute store result score @s reflect_past run data get entity @s Health
+execute as @s[tag=reflect_ranged] run execute store result score @s reflect_past run data get entity @s Health
+
+#Set Reflect enemies to have reflect shields in offhand.
+execute as @s[tag=reflect_melee,tag=!reflect_setup] at @s run data modify entity @s HandItems[1] set value {id:"minecraft:shield",Count:1b,tag:{display:{Name:'{"text":"Reflector","color":"aqua","italic":false}'},Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],BlockEntityTag:{Base:3,Patterns:[{Color:0,Pattern:"dls"},{Color:0,Pattern:"gru"},{Color:0,Pattern:"gra"},{Color:8,Pattern:"bo"}]}}}
+execute as @s[tag=reflect_ranged,tag=!reflect_setup] at @s run data modify entity @s HandItems[1] set value {id:"minecraft:shield",Count:1b,tag:{display:{Name:'{"text":"Reflector","color":"aqua","italic":false}'},Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],BlockEntityTag:{Base:3,Patterns:[{Color:0,Pattern:"dls"},{Color:0,Pattern:"gru"},{Color:0,Pattern:"gra"},{Color:8,Pattern:"bo"}]}}}
+
+tag @s[tag=reflect_melee,tag=!reflect_setup] add reflect_setup
+tag @s[tag=reflect_ranged,tag=!reflect_setup] add reflect_setup
+
+#Reflect Enemies Create Particles when players are detected "in ranges"
+execute as @s[tag=reflect_melee] at @s if entity @a[distance=..7] run particle cloud ^ ^1 ^1 0.3 0.5 0.3 0.05 3 normal 
+execute as @s[tag=reflect_ranged] at @s unless entity @a[distance=..7] run particle cloud ^ ^1 ^1 0.3 0.5 0.3 0.05 3 normal 
+
 #Fix Tags
 execute if entity @s[tag=has_active,tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix
 

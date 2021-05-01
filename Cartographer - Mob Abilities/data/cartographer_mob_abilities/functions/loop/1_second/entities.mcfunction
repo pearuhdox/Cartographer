@@ -9,13 +9,11 @@ execute as @s[type=#cartographer_core:hostile,tag=has_active,tag=attacking,score
 #Reduce Cooldowns on all enemies with cooldowns.
 scoreboard players remove @s[tag=has_active,scores={cooldown=1..}] cooldown 1
 
-#Run 1 Second Passives: (Reflect)
-execute as @s[tag=reflect_ranged] at @s run function cartographer_mob_abilities:passive/reflect
-execute as @s[tag=reflect_active] at @s run function cartographer_mob_abilities:passive/reflect
-
-#Run Stack Manager for Brutal and Relentless Stacks
+#Run Stack Manager for Blood Stacks
 execute as @s[scores={brutal_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
 execute as @s[scores={relent_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute as @s[scores={devious_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute as @s[scores={sacrifice_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
 
 #Add lifetime to ability markers. Kill them if they are too old. Remove old Invulnerable notices.
 execute as @s[type=armor_stand,tag=ability_marker] run function cartographer_mob_abilities:loop/1_second/ability_marker_branch
@@ -42,3 +40,13 @@ execute if entity @s[tag=fireball,tag=tokened,scores={cooldown=0}] run execute i
 execute if entity @s[tag=trapper,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=duplicator,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=wither_storm,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..25] run tag @s add avail_target
+
+#Exalted Weapon Despawning
+scoreboard players add @s[type=armor_stand,tag=exalted_weapon] exalted 1
+execute if score @s[type=armor_stand,tag=exalted_weapon] exalted matches 16.. run playsound minecraft:block.bell.use hostile @a[distance=..12] ~ ~ ~ 0.1 2
+execute if score @s[type=armor_stand,tag=exalted_weapon] exalted matches 16.. run playsound minecraft:entity.player.levelup hostile @a[distance=..12] ~ ~ ~ 0.5 2
+execute if score @s[type=armor_stand,tag=exalted_weapon] exalted matches 16.. run particle minecraft:cloud ~ ~1 ~ 0.1 0.5 0.1 0.1 20 normal
+execute if score @s[type=armor_stand,tag=exalted_weapon] exalted matches 16.. run kill @s
+
+#Corpse Crawler Eggs
+execute if entity @s[tag=corpse_crawler_egg]

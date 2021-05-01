@@ -1,6 +1,6 @@
-scoreboard players set @e[type=#cartographer_core:hostile,tag=has_active,distance=..16] cooldown 0
+scoreboard players add @e[type=#cartographer_core:hostile,tag=has_active,distance=..16] devious_stacks 1
 
-effect give @e[type=#cartographer_core:hostile,tag=!has_active,distance=..16] speed 10 0
+scoreboard players add @e[type=#cartographer_core:hostile,tag=!has_active,distance=..16] relent_stacks 1
 
 execute as @e[type=#cartographer_core:hostile,distance=..16] at @s run particle minecraft:dust 1 0 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 15 normal
 

@@ -25,6 +25,7 @@
 	"minecraft:pillager",
 	"minecraft:ravager",
 	"minecraft:guardian",
+	"minecraft:elder_guardian",
 	"minecraft:witch",
 	"minecraft:iron_golem",
 	"minecraft:shulker",
@@ -36,6 +37,7 @@
 	"minecraft:hoglin",
 	"minecraft:zoglin",
 	"minecraft:illusioner",
-	"minecraft:wolf"
+	"minecraft:wolf",
+	"minecraft:ender_dragon"
   ]
 }

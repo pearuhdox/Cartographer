@@ -296,6 +296,7 @@ Mob Abilities:
     - Abilities have either been reformatted to use the movement and damage disable effects, or movement and damage reduction effects.
     - Movement and Damage reduction reduces a mob's damage and movement speed by 50%.
     - Some abilities can now make mobs temporarily knockback immune.
+    - All Cooldowns are reduced by 20-25% on Hard (and higher) difficulty.
 
  - Token System:
     - Cartographer's token system (that's such an ugly phrase, we need a better one...) erm... the **Mob Manager** has been entirely reworked!
@@ -312,10 +313,15 @@ Mob Abilities:
     - Heavy Attacks: Augmenter, Cloaker, Duplicator, Healer, Hookshot, Laser, Magic Missile, Wither Storm
       - These presets can be overwritten for individual mobs with the "heavy_priority" and "light_priority" tags.
 
+Active Abilities (now called "Active Skills" in Lexica):
  - Ambush:
     - Charge time reduced to 1 second.
     - Mob is immobilized and unable to damage players for 0.75 seconds after teleporting (was 1 second).
     - Mob damage and speed is reduced for 1.5 seconds after teleporting (was 0 seconds).
+
+  Developer Commentary: In order to make Mob Abilities slightly more fast paced, many Mob Ability charge up timers are being modified.
+  In light of this, Ambush activates twice as fast, but the mob is debuffed for the duration and slightly after the attack, meaning
+  that ambush attacks will not be as detrimental with the reduced charge time.
 
  - Augmenter:
     - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
@@ -335,15 +341,22 @@ Mob Abilities:
       - The mob laughs and reduces in speed, damage, and becomes knockback immune.
       - After 1 second, the mob attacks a small area in front of it. Players hit take 4 damage and are blinded for 1 second.
       - The mob will copy the player's mainhand item and place it into their main hand. (the player's item is not lost or manipulated)
-      - The mob will lose Disarm and gain a different ability based on the item they stole.
+      - The mob will lose Disarm and gain a different ability based on the item they copied.
         - Smash if it was an Axe.
         - Trapper if it was a ranged weapon (Bow, Crossbow, Trident)
         - Sweep for all other items.
         - Mob's cooldown is set to 1 second if the hit is successful (rather than the default 10 seconds).
 
+  Developer Commentary: Disarm was one of the most infuriating and frustrating effects in the game, that was never engaging to fight.
+  The new version copies the weapon the player uses, and replaces Disarm, so they only "take" one weapon. Overall, this dynamic ability
+  will make combat more interesting than the old hard CC effect of dropping your important items.
+
  - Healer:
     - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
     - Healer can no longer heal nearby Healer mobs.
+
+  Developer Commentary: Augmenter, Cloaker, and Healer no longer work on mobs with the same ability to avoid hordes of mobs with these effects
+  from being very hard to kill.
 
  - Magic Missile:
     - Projectile now has an actual homing effect rather than direct following snap to precision.
@@ -360,6 +373,8 @@ Mob Abilities:
     - Wind Nova specifically: Now creates a cloud of levitation on hit targets rather than inflicting levitation.
       - These clouds vanish when a player consumes them or after a couple seconds.
 
+  Developer Commentary: As with above, to increase the aggression of some Cartographer Mob Abilities, charge up timers have been reduced across the board.
+
  - Hookshot:
     - Damage increased to 4 (from 2).
     - Fixed the frankly absurd problems where this ability could drag players in all sorts of unintended paths.
@@ -374,12 +389,19 @@ Mob Abilities:
     - Mob will cast the damage effect when they actually land rather than 1 second into the future.
     - Vfx adjusted.
 
+  Developer Commentary: One of the biggest focuses of Mob Abilities this patch is removing unnecessary CC effects from abilities where it
+  thematically makes little sense to have them. Additionally, the way Smash works has been reworked so that the attacked area can be made much
+  more clear to players, and to increase the aggressiveness of the ability.
+
  - Sweep:
     - Damage reduced to 6 (was 8).
     - Weakness effect removed from the attack.
     - Attack size reduced by 50%.
     - Charge up time reduced to 0.5 seconds (was 1).
     - Now reduce the speed and damage of the caster rather than immobilizing them (see above)
+
+  Developer Commentary: As above with Smash, removing unnecessary CC effects from abilities was a part of the core updates to Mob Abilities.
+  Thus, Sweep's focus has been reworked to be a fast acting melee attack.
 
  - Trapper:
     - Reworked vfx, traps are now called "enchanted caltrops" in the death message.
@@ -390,6 +412,92 @@ Mob Abilities:
     - Effect is the same, but overall, more consistency.
     - Fixed bug where projectiles would not be placed properly.
     - A projectile is guaranteed to be placed above the player's position when the storm starts.
+
+Death Effects (now called "Morbid Skills" in the Lexica):
+  - Brutal Blood:
+    - Now stacks up to 10 stacks.
+    - Each stack now increases melee damge by 10% rather than a flat +1.
+  
+  - Relentless Blood:
+    - Now stacks up to 10 stacks.
+    - Each stack now only provides 5% speed (was 10%).
+
+  - Devious Blood:
+    - Now grants Devious Stacks instead of resetting cooldowns.
+      - Devious Stacks grant 30% Cooldown Reduction to mobs that have active skills. (Max of 10, at 300% Cooldown Reduction [4 times as fast])
+    - Enemies that do not have actives are given a Relentless Stack instead.
+
+  - Sacrificial Blood:
+    - Now grants Sacrificial Stacks instead of Absorption Health.
+      - Sacrificial Stacks grant 1 Absorption Health per stack whenever they are increased. (Max of 10, gaining 10 Absorption Health whenever Sacrificial Blood stacks are increased)
+    - Sacrifical Stacks cannot be applied to Sacrifical Blood mobs. They are instead given Brutal Blood stacks.
+  
+    Developer Commentary: All blood effects now stack to 10 rather than their previous stack counters or other effects, to make them more in line
+    with each other. Additionally, Relentless speed values have been reduced to make the ramping of speed less drastic, and Brutal stacks now use percentage
+    damage to prevent enemies like Silverfish and Cave Spiders from becoming monsters with stacks. Devious and Sacrificial Blood now use stack systems instead
+    of instant constant value buffs, to reduce their power level.
+
+  - Corpse Crawler:
+    - All corpse crawler variants will drop eggs which hatch into the enemies, instead of spawning the enemies immediately.
+      - Hatch time is 2 seconds.
+      - Eggs can be destroyed before they hatch to prevent the enemy from spawning.
+        - Eggs have 5 health.
+    - Corpse Crawler now has a 50% chance to spawn an additional 4th egg, and a 75% chance to spawn the third egg.
+
+    Developer Commentary: Corpse Crawler is a death effect that activates immediately when the mob dies, with little to no counterplay.
+    The above changes add some much needed counterplay and overall nerf the ability slightly, while keeping the feel and idea of the
+    ability.
+
+  - Exalted:
+    - Reworked!
+      - When the mob dies, it drops a soul near its position and leaves its weapon at it's death pile.
+      - The mob's soul will be placed about 12 blocks away from the mob. It will move towards the nearest weapon to "reclaim" it.
+      - If the soul manages to reclaim the weapon (stands on the weapon for 4 seconds) the entity will be respawned in its default spawn state.
+
+    Developer Commentary: Inspired by the Hades enemy type of similar name, this new effect will serve as an interesting way to allow respawning enemies.
+    The old effects of Exalted have been bundled into Spectral changes (see below).
+
+  - Parting Gift:
+    - TNT fuse time increased to 5 seconds (was 4).
+
+    Developer Commentary: This slightly longer extra time will help players escape from Parting Gift when it is dropped.
+
+  - Pyromania:
+    - Pyromania now creates a "magma shulker" when the enemy dies.
+    - The magma shulker releases heat around it for 2.5 seconds, creating fire and magma around it.
+    - When finished, it drops a full lava source at its position.
+      - The shulker can be destroyed by placing a block inside its space.
+
+    Developer Commentary: In line with the Corpse Crawler changes, Pyromania's changes are to help players combat death effects before they trigger.
+    Thus, the effect now has a lengthier warmup to finishing the effect, and it can be canceled in the same way lava from Pyromania could be removed
+    previously. The ability is slightly more destructive to compensate for these changes (with Magma blocks and Fire).
+
+  - Spectral:
+    - Now spawns 1 of three different types of Spectres.
+      - The Standard Ambushing Shade (the current existing one)
+      - The Ranged Trapping Poltergeist (Pillager type mob)
+      - The Tanky Charging Revenant (Wither Skeleton type mob)
+    - All Spectres spawn with reduced movement and damage for 2 seconds.
+
+    Developer Commentary: Spectral now provides enemy variety to keep the effect more interesting. Spectres are also weakened when they first spawn to prevent
+    unfair attacking from the Spectre.
+
+Passive Effects:
+  - Reflect:
+    - The mob will now always counter attacks of the correct type, regardless of range attacked at.
+      - This means melee attacks hitting Reflect Melee mobs will always reflect, and ranged attacks hitting Reflect Ranged mobs will always reflect.
+      - Mobs will no longer enter a "reflective stance" depending on the range of players.
+    - Damage reflected is now 50% of the damage dealt to the mob (was a flat 4)
+    - Mob is immediately healed for 50% of the damage dealt (instead of 80% damage reduction)
+    - Mob is stunned for 0.5 seconds after reflecting.
+    - Mob has their movement speed and damage reduced by 50% for 2 seconds after reflecting (instead of slower movement and knockback resistance in a reflective stance).
+    - Mob is always equipped with a Reflector Mirror Shield to indicate the effect (in offhand). The shield is cosmetic.
+    - Reworked vfx and sfx
+
+    Developer Commentary: Reflect has moved over to using the Entity Hit Detection System from Gibbs. This brought an opportunity to change how it works without
+    costs in performance. In order to make the balance of all attacks more fair, Reflect now uses percentage based damage and recovery effects. Instead of blocking
+    attacks based on proximity, it will now do as implied, and block attacks of a specific type. To counteract the fact that Reflect mobs are now always much faster,
+    an actual reflection will halt the mob's progress considerably, meaning if you have the defensive capability, a Reflecting mob can be stunlocked.
 
 Repair Stations:
 
