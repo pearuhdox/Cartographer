@@ -14,6 +14,9 @@ scoreboard objectives add smash_bounce dummy
 scoreboard objectives add devious_time dummy
 scoreboard objectives add abs_health dummy
 
+scoreboard objectives add dupe_health dummy
+scoreboard objectives add copies dummy
+
 scoreboard objectives add exalted dummy
 
 scoreboard objectives add reflect_past dummy

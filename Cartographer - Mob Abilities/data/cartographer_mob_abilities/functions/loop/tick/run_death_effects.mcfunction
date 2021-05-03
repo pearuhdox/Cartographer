@@ -2,6 +2,9 @@
 data modify storage ca.death_effect Data set value {}
 data modify storage ca.death Data set from entity @s[type=item] Item.tag
 
+#Duplicate Death Effect
+execute if data storage ca.death Data.DuplicateDeath at @s run function cartographer_mob_abilities:passive/duplicate_explosion
+
 
 #Parting Gift
 execute if data storage ca.death Data.PartingGift at @s run function cartographer_mob_abilities:passive/parting_gift

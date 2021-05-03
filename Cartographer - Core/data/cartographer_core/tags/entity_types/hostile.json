@@ -31,13 +31,13 @@
 	"minecraft:shulker",
 	"minecraft:zombie_villager",
 	"minecraft:bee",
-	"minecraft:shulker",
 	"minecraft:piglin",
 	"minecraft:piglin_brute",
 	"minecraft:hoglin",
 	"minecraft:zoglin",
 	"minecraft:illusioner",
 	"minecraft:wolf",
-	"minecraft:ender_dragon"
+	"minecraft:ender_dragon",
+	"minecraft:rabbit"
   ]
 }

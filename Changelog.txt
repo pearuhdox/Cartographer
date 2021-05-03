@@ -315,7 +315,7 @@ Mob Abilities:
 
 Active Abilities (now called "Active Skills" in Lexica):
  - Ambush:
-    - Charge time reduced to 1 second.
+    - Charge time reduced to 1 second (from 2).
     - Mob is immobilized and unable to damage players for 0.75 seconds after teleporting (was 1 second).
     - Mob damage and speed is reduced for 1.5 seconds after teleporting (was 0 seconds).
 
@@ -350,6 +350,21 @@ Active Abilities (now called "Active Skills" in Lexica):
   Developer Commentary: Disarm was one of the most infuriating and frustrating effects in the game, that was never engaging to fight.
   The new version copies the weapon the player uses, and replaces Disarm, so they only "take" one weapon. Overall, this dynamic ability
   will make combat more interesting than the old hard CC effect of dropping your important items.
+
+ - Duplicator:
+    - Charge time reduced to 1 second (from 2).
+    - Duplicator now works on every hostile mob.
+    - Duplicator now reduces the speed and damage of the caster while charging.
+    - Duplicated mobs always have half the current Health of the original mob.
+    - Duplicated mobs now copy *all* nbt from the original mob (besides the Duplicator tag)
+      - *Unless* they have the "mitosis" tag in which Duplicates can copy themselves.
+        - When copies can copy themselves, they receive much lower cooldowns.
+    - Duplicated mobs explode on death, dealing 4 damage to everything within 2 blocks.
+      - Explosion does not damage terrain.
+      - Explosion affects players and hostile mobs.
+      - Explosion does not trigger if duplicates despawn.
+    - Duplicator by default only makes 1 mob copy.
+      - Additional copies can be added via the "triple" (2 copies), "quadruple" (3 copies), and "quintuple" (4 copies) tags.
 
  - Healer:
     - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
@@ -506,6 +521,9 @@ Repair Stations:
     - Station will remove all other players from the zone that are not the nearest player (when station is activated)
     - Station now allows for flexible max levels and scaling.
     - Station will block a repair if the player attempting the repair doesn't have the needed materials.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 Cartographer, Patch 2021.2.0 - Divine Additions
 

@@ -50,3 +50,8 @@ execute if score @s[type=armor_stand,tag=exalted_weapon] exalted matches 16.. ru
 
 #Corpse Crawler Eggs
 execute if entity @s[tag=corpse_crawler_egg]
+
+#Tick down duplicator copy cooldown. Remove duplicates
+execute if entity @s[tag=duplicate,scores={cooldown=0}] run playsound minecraft:entity.shulker_bullet.hit hostile @a[distance=..12] ~ ~ ~ 1 2
+execute if entity @s[tag=duplicate,scores={cooldown=0}] run particle minecraft:smoke ~ ~1 ~ 0.2 0.4 0.2 0.05 30 normal
+execute if entity @s[tag=duplicate,scores={cooldown=0}] run tp @s ~ -60 ~

@@ -54,8 +54,6 @@ execute if entity @s[tag=trapper,tag=tokened,scores={cooldown=0}] run execute if
 #Duplicate
 execute if entity @s[tag=duplicator,tag=tokened,scores={cooldown=0}] run execute if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/duplicator
 
-execute if entity @s[tag=duplicate,scores={cooldown=0}] run tp @s ~ -60 ~
-
 #Run Ability Canceling
 execute if entity @s[tag=charge,tag=tokened,scores={cooldown=0}] run execute unless entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=flame_nova,tag=tokened,scores={cooldown=0}] run execute unless entity @a[gamemode=survival,distance=..16] run function cartographer_mob_abilities:helper/token/cancel_ability
