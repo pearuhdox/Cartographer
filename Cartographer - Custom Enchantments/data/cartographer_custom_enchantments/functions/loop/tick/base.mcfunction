@@ -32,6 +32,9 @@ tag @a[tag=auto_charge_inv_fix] remove auto_charge_inv_fix
 
 # Triggers for enchants that must attempt every tick.
 
+#Passive Trigger
+execute as @a[tag=has_passive_ench] at @s run function cartographer_custom_enchantments:enchant_calls/passively
+
 #Kill trigger
 execute as @a[scores={helper_kill=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
 
@@ -39,9 +42,6 @@ execute as @a[scores={helper_kill=1..}] at @s run function cartographer_custom_e
 execute as @a[scores={helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 execute as @a[scores={helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 execute as @a[scores={helper_trident=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
-
-#Passive Trigger
-execute as @a[tag=has_passive_ench] at @s run function cartographer_custom_enchantments:enchant_calls/passively
 
 #Break Spawner Trigger
 execute as @a[scores={helper_spawner=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
@@ -87,11 +87,8 @@ execute as @a at @s run function cartographer_custom_enchantments:enchant_effect
 #Reset Function for scores
 function cartographer_custom_enchantments:loop/tick/reset
 
-#Entity Ticker - This runs the entity branch and checks *all* needed entities to conserve @e checks.
-execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_custom_enchantments:loop/tick/entity_branch
 
-
-#Action bar indicators for Repeating and Echo
+#Action bar indicators for Repeating, Echo, and Second Wind
 execute as @a[scores={ui_location=0}] at @s run function cartographer_custom_enchantments:helper/indicators/action_bar
 execute as @a[scores={ui_location=1}] at @s run function cartographer_custom_enchantments:helper/indicators/subtitle
 

@@ -95,14 +95,10 @@ scoreboard players set SecondWindHelper second_wind 10
 
 #Setup Second Wind cooldown timer and bank.
 scoreboard objectives add second_wind_cool dummy
-scoreboard objectives add second_wind_test dummy
-scoreboard objectives add second_wind_save dummy
-scoreboard objectives add second_wind_kill totalKillCount
-scoreboard objectives add second_wind_abso dummy
+scoreboard objectives add second_wind_time dummy
 scoreboard objectives add second_wind_tier dummy
-
-scoreboard objectives add danger_lvl dummy
-scoreboard objectives add threat_lvl dummy
+scoreboard objectives add ca.dmg_resist_sw minecraft.custom:minecraft.damage_resisted
+scoreboard objectives add ca.sw_fall minecraft.custom:minecraft.fall_one_cm
 
 #Set all needed constants.
 scoreboard players set $custom_enchant.TrueshotDouble ca.CONSTANT 2

@@ -37,5 +37,6 @@ execute as @s at @s positioned ^ ^ ^3 if entity @a[distance=..2] as @s[tag=!smas
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
+tag @s remove can_see_player
 
 schedule function cartographer_mob_abilities:helper/attacked_reset 10t

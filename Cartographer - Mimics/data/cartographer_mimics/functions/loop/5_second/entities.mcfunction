@@ -1,0 +1,2 @@
+execute if entity @s[type=wither_skeleton,tag=active_mimic,tag=enraged] run scoreboard players set @s heal_queue 4
+execute if entity @s[type=wither_skeleton,tag=active_mimic,tag=enraged] run function cartographer_core:helper/heal_entity/by_score

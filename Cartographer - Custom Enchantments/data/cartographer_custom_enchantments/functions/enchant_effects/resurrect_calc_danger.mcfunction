@@ -1,7 +1,7 @@
 #Set the danger level equal to whatever the player's health is in the negative +1 (so 10 health is -9)
 scoreboard players set @s danger_lvl 0
 execute store result score @s danger_lvl run data get entity @s Health
-scoreboard players operation @s danger_lvl *= $core.-1 ca.CONSTANT
+scoreboard players operation @s danger_lvl *= $-1 ca.CONSTANT
 scoreboard players add @s danger_lvl 1
 
 #If danger level ever goes equal to 1 or above, the player is "at risk" and any death preparation effects should activate.

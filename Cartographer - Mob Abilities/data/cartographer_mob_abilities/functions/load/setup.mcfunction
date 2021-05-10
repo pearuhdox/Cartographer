@@ -9,7 +9,7 @@ scoreboard objectives add devious_stacks dummy
 scoreboard objectives add sacrifice_stacks dummy
 scoreboard objectives add wither_storms dummy
 scoreboard objectives add storm_height dummy
-scoreboard objectives add smash_bounce dummy
+scoreboard objectives add recast_count dummy
 
 scoreboard objectives add devious_time dummy
 scoreboard objectives add abs_health dummy
@@ -22,6 +22,8 @@ scoreboard objectives add exalted dummy
 scoreboard objectives add reflect_past dummy
 scoreboard objectives add reflect_check dummy
 scoreboard objectives add reflect_diff dummy
+
+scoreboard objectives add augment_time dummy
 
 #Setup all necessary helper scoreboards.
 
@@ -47,8 +49,10 @@ scoreboard objectives add mob_atk_red dummy
 
 scoreboard objectives add mob_sturdy dummy
 
-#Create the LoS checking armor stand.
+#Create the UUID armor stands.
 kill 002f80c0-0001-f879-0000-009c001e7bfc
+kill 002f80c0-0001-f879-003a-2a2300005860
+
 schedule function cartographer_mob_abilities:load/create_uuids 3t
 
 #Set default of independent difficulty.

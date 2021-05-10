@@ -10,9 +10,6 @@ tp 002f80c0-0001-f879-0000-009c001e7bfc 4206900 180 4206900
 #Tag a tokened enemy to attack. Tag only 1 enemy every second.
 execute as @e[type=#cartographer_core:hostile,tag=has_active,tag=tokened,tag=avail_target,tag=!attacking,scores={cooldown=0},limit=1,sort=random] at @s run tag @s add attacking
 
-#Run all entity effects
-execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_mob_abilities:loop/1_second/entities
-
 #Tick down the player's cooldown. At -1, the cooldown swapper is run.
 execute as @a unless entity @s[scores={cooldown=-21..}] run scoreboard players set @s cooldown 0
 execute as @a[scores={cooldown=-19..}] at @s run scoreboard players remove @s cooldown 1

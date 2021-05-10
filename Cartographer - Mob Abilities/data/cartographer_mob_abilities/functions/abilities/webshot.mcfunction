@@ -17,5 +17,6 @@ playsound minecraft:entity.spider.death hostile @a[distance=..16] ~ ~ ~ 2 0.5
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
+tag @s remove can_see_player
 
 schedule function cartographer_mob_abilities:helper/attacked_reset 10t

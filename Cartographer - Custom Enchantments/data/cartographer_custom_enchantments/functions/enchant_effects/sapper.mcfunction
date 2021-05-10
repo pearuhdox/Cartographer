@@ -2,6 +2,13 @@ execute if entity @s[scores={sapper=1}] as @s at @s run scoreboard players set @
 execute if entity @s[scores={sapper=2}] as @s at @s run scoreboard players set @s heal_queue 2
 execute if entity @s[scores={sapper=3}] as @s at @s run scoreboard players set @s heal_queue 3
 execute if entity @s[scores={sapper=4}] as @s at @s run scoreboard players set @s heal_queue 4
+execute if entity @s[scores={sapper=5..}] as @s at @s run scoreboard players set @s heal_queue 5
+
+execute if entity @s[scores={sapper=6}] as @s at @s run effect give @s regeneration 2 1
+execute if entity @s[scores={sapper=7}] as @s at @s run effect give @s regeneration 3 1
+execute if entity @s[scores={sapper=8}] as @s at @s run effect give @s regeneration 4 1
+execute if entity @s[scores={sapper=9}] as @s at @s run effect give @s regeneration 5 1
+execute if entity @s[scores={sapper=10}] as @s at @s run effect give @s regeneration 7 1
 
 execute if entity @s[scores={sapper=1..}] as @s at @s run function cartographer_core:helper/heal_player/by_score
 

@@ -1,14 +1,14 @@
 #Magic Missile Projectile
-execute as @s[type=armor_stand,tag=magic_missile_projectile] at @s run function cartographer_mob_abilities:abilities/magic_missile_projectile
+execute as @s[type=armor_stand,tag=magic_missile_projectile] at @s run function cartographer_mob_abilities:abilities/magic_missile/projectile
 
 #Fireball Projectile
-execute as @s[type=armor_stand,tag=fireball_projectile] at @s run function cartographer_mob_abilities:abilities/fireball_projectile
+execute as @s[type=armor_stand,tag=fireball_projectile] at @s run function cartographer_mob_abilities:abilities/fireball/projectile
 
 #Trap Projectile
 execute as @s[type=armor_stand,tag=trap_projectile] at @s run function cartographer_mob_abilities:abilities/trapper_projectile
 
 #Hook Projectile
-execute as @s[type=armor_stand,tag=hook_projectile] at @s run function cartographer_mob_abilities:abilities/hook_projectile
+execute as @s[type=armor_stand,tag=hook_projectile] at @s run function cartographer_mob_abilities:abilities/hookshot/projectile
 scoreboard players add @s[type=armor_stand,tag=hook_projectile] helper_lifetime 1
 
 #Particle for Wither Storm Skulls
@@ -60,12 +60,14 @@ execute if entity @s[tag=airborne_3] run tag @s add airborne_4
 execute if entity @s[tag=airborne_2] run tag @s add airborne_3
 execute if entity @s[tag=airborne] run tag @s add airborne_2
 
+#Run Sweep Warning
+execute if entity @s[tag=sweep,tag=tokened,scores={cooldown=0}] run particle angry_villager ~ ~1.5 ~ 0 0 0 0 1 normal
 
 #Laser
-execute if entity @s[tag=laser,scores={cooldown=0},tag=tokened] if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/laser
+execute if entity @s[tag=laser,scores={cooldown=0},tag=tokened] if entity @a[gamemode=survival,distance=..32] run function cartographer_mob_abilities:charge/laser
 
 #Laser Animation Cancel
-execute if entity @s[tag=laser,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:token/cancel_ability
+execute if entity @s[tag=laser,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=survival,distance=..32] run function cartographer_mob_abilities:helper/token/cancel_ability
 
 #Ender-Port Test
 execute if entity @s[tag=enderport] if entity @e[type=#cartographer_core:projectile,distance=..5,nbt=!{inGround:1b}] run function cartographer_mob_abilities:passive/enderport
@@ -102,6 +104,10 @@ tag @s[tag=reflect_ranged,tag=!reflect_setup] add reflect_setup
 #Reflect Enemies Create Particles when players are detected "in ranges"
 execute as @s[tag=reflect_melee] at @s if entity @a[distance=..7] run particle cloud ^ ^1 ^1 0.3 0.5 0.3 0.05 3 normal 
 execute as @s[tag=reflect_ranged] at @s unless entity @a[distance=..7] run particle cloud ^ ^1 ^1 0.3 0.5 0.3 0.05 3 normal 
+
+#Augment Buff Particles
+execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust 1 0 0 0.7 ~ ~1 ~ 0.3 0.5 0.3 0 2 normal
+execute if entity @s[scores={augment_time=1..}] run particle minecraft:flame ~ ~1 ~ 0.2 0.2 0.2 0.05 1 normal
 
 #Fix Tags
 execute if entity @s[tag=has_active,tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix

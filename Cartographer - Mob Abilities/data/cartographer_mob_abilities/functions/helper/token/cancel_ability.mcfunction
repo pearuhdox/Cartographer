@@ -5,8 +5,6 @@ scoreboard players set @s ability_charge 0
 data merge entity @s {NoAI:0}
 
 effect clear @s glowing
-effect clear @s slowness
-effect clear @s weakness
 
 #Place the ability on brief cooldown
 scoreboard players set @s cooldown 4

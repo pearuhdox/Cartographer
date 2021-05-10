@@ -41,10 +41,6 @@ tag @a[scores={lexica_time=1}] remove lexica_holding_o
 scoreboard players remove @a[scores={lexica_time=1..}] lexica_time 1
 scoreboard players set @a lexica_sneak 0
 
-#Run in world lexicas
-execute as @e[type=armor_stand,tag=placed_lexica] at @s run function cartographer_core:lexica/placed
-scoreboard players set @a ca.use_lectern 0
-
 #Run anvil and grindstone destruction
 
 
@@ -78,6 +74,15 @@ gamerule sendCommandFeedback false
 execute as @a unless score @s lexica_trig matches 1.. run scoreboard players set @s lexica_trig 0
 execute as @a at @s if score @s lexica_trig matches 1.. run function cartographer_core:lexica/trigger
 gamerule sendCommandFeedback true
+
+#Run all ticking entity effects.
+execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/tick
+
+#Resets
+scoreboard players set @a ca.use_lectern 0
+
+#Mimic Reset
+scoreboard players set @a[scores={helper_open_trap=1..}] helper_open_trap 0
 
 #Add anything else to run per tick here!
 #

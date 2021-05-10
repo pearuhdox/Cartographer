@@ -209,7 +209,7 @@ execute if entity @s[type=wither,scores={copies=1..}] run summon wither ~ ~ ~ {T
 execute if entity @s[type=wither,scores={copies=2..}] run summon wither ~ ~ ~ {Tags:["duplicate"]}
 execute if entity @s[type=wither,scores={copies=3..}] run summon wither ~ ~ ~ {Tags:["duplicate"]}
 
-execute as @e[tag=duplicate,tag=!done_dupe,distance=..1.5] at @s run function cartographer_mob_abilities:abilities/duplicator_copy_data
+execute as @e[tag=duplicate,tag=!done_dupe,distance=..1.5] at @s run function cartographer_mob_abilities:abilities/duplicator/copy_data
 
 playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..16] ~ ~ ~ 3 1.3
 
@@ -217,5 +217,6 @@ playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..16] ~ ~ 
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
+tag @s remove can_see_player
 
 scoreboard players set @s copies 0

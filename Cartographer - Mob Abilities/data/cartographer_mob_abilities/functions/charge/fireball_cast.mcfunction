@@ -9,4 +9,4 @@ execute unless entity @s[scores={ability_charge=1}] run particle minecraft:lava 
 
 execute unless entity @s[scores={ability_charge=2}] run scoreboard players add @s ability_charge 1
 
-execute if entity @s[scores={ability_charge=2}] run function cartographer_mob_abilities:abilities/fireball_cast
+execute if entity @s[scores={ability_charge=2}] run function cartographer_mob_abilities:abilities/fireball/cast

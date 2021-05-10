@@ -12,6 +12,7 @@ execute as @s[type=#cartographer_core:hostile,scores={effect_rage=1..}] at @s ru
 
 #Run Vulnerability
 execute as @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:31b}]}] at @s run function cartographer_custom_statuses:effects/vulnerability
+execute as @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:31b}]}] at @s run function cartographer_custom_statuses:visuals/vulnerability
 
 #Run Blindness
 execute as @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:15b}]}] at @s run function cartographer_custom_statuses:effects/blindness

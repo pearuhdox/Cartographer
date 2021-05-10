@@ -1,11 +1,10 @@
 attribute @s minecraft:generic.attack_damage modifier add 18-1-7-5-1 mimic_rage 0.2 multiply_base
+attribute @s minecraft:generic.knockback_resistance modifier add 18-1-7-5-1 mimic_rage 0.2 add
 
 tag @s remove hookshot
 
 tag @s add charge
-
 tag @s add breaker
-
 tag @s add enraged
 
 effect give @s speed 5 0

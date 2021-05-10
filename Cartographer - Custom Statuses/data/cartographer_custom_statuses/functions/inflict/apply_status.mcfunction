@@ -8,10 +8,10 @@
 execute store result score @s time_convert run data get entity @s ActiveEffects[{Id:9b}].Duration
 scoreboard players remove @s time_convert 1
 
-scoreboard players operation @s time_convert /= $core.20 ca.CONSTANT
+scoreboard players operation @s time_convert /= $20 ca.CONSTANT
 scoreboard players add @s time_convert 1
 
-execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:10b}]}] run scoreboard players operation @s time_convert *= $core.20 ca.CONSTANT
+execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:10b}]}] run scoreboard players operation @s time_convert *= $20 ca.CONSTANT
 execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:10b}]}] run scoreboard players operation @s effect_stunned = @s time_convert
 execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:11b}]}] run scoreboard players operation @s effect_shocked = @s time_convert
 execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:12b}]}] run scoreboard players operation @s effect_infect = @s time_convert

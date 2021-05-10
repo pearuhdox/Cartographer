@@ -15,10 +15,8 @@ execute as @e[tag=mimic_loot_tracker] at @s run clone ~ ~-1 ~ ~ ~-1 ~ ~ 255 ~
 
 clone 4206905 255 4206905 4206905 255 4206905 ~ ~ ~
 
-setblock ~ ~ ~ air destroy
-kill @e[type=item,limit=1,sort=nearest,nbt={Item:{id:"minecraft:barrel",Count:1b}}]
-
-setblock 4206905 255 4206905 air replace
+setblock ~ ~ ~ chest{CustomName:'{"text":"Mimic Carcass","color":"red"}'} destroy
+execute as @e[type=item,distance=..3,limit=1,sort=nearest,nbt={Item:{tag:{MimicDrop:1}}}] run function cartographer_mimics:mimic/death_chest
 
 execute as @e[tag=mimic_loot_tracker] at @s run fill ~ ~-1 ~ ~1 ~-1 ~ air replace
 execute as @e[tag=mimic_loot_tracker] at @s run tp @s ~ ~-1 ~

@@ -14,6 +14,8 @@ scoreboard players set @s[scores={LapisCost=..4}] LapisCost 4
 
 scoreboard players set @s MaterialCost 4
 
+scoreboard players set @s[tag=netherite] MaterialCost 3
+
 scoreboard players operation @p XPcost = @s XPcost
 scoreboard players operation @p LapisCost = @s LapisCost
 
@@ -37,7 +39,7 @@ execute if entity @s[scores={MaterialCost=4},tag=stone] run summon armor_stand ~
 execute if entity @s[scores={MaterialCost=4},tag=iron] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 Iron Ingots","color":"#C4C4C4"}'}
 execute if entity @s[scores={MaterialCost=4},tag=gold] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 Gold Ingots","color":"#FFF347"}'}
 execute if entity @s[scores={MaterialCost=4},tag=diamond] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 Diamonds","color":"#00EEFF"}'}
-execute if entity @s[scores={MaterialCost=4},tag=netherite] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 Netherite Ingots","color":"#291D1D"}'}
+execute if entity @s[scores={MaterialCost=3},tag=netherite] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"3 Netherite Ingots","color":"#291D1D"}'}
 execute if entity @s[scores={MaterialCost=4},tag=leather] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 Leather","color":"#9C5300"}'}
 execute if entity @s[scores={MaterialCost=4},tag=chain] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 Chain","color":"#8C8C8C"}'}
 execute if entity @s[scores={MaterialCost=4},tag=string] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 String","color":"#EBEBEB"}'}

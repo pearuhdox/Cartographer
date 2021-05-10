@@ -74,7 +74,7 @@ execute as @s[type=item,nbt={Item:{id:"minecraft:netherite_sword",tag:{CurseShat
 scoreboard players operation @s ca.dmg_to_deal = @s ca.max_dmg
 scoreboard players operation @s ca.dmg_to_deal -= @s ca.cur_dmg
 
-scoreboard players operation @s ca.dmg_to_deal /= $core.2 ca.CONSTANT
+scoreboard players operation @s ca.dmg_to_deal /= $2 ca.CONSTANT
 
 #scoreboard players operation @s ca.dmg_to_deal += @s ca.cur_dmg
 

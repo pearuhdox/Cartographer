@@ -6,9 +6,13 @@ execute if entity @s[scores={lifesteal=3,helper_kill=1..}] run scoreboard player
 
 execute if entity @s[scores={lifesteal=4,helper_kill=1..}] run scoreboard players set @s heal_queue 4
 
-execute if entity @s[scores={lifesteal=5,helper_kill=1..}] run scoreboard players set @s heal_queue 5
+execute if entity @s[scores={lifesteal=5..,helper_kill=1..}] run scoreboard players set @s heal_queue 5
 
-execute if entity @s[scores={lifesteal=6,helper_kill=1..}] run scoreboard players set @s heal_queue 6
+execute if entity @s[scores={lifesteal=6,helper_kill=1..}] run effect give @s regeneration 2 1
+execute if entity @s[scores={lifesteal=7,helper_kill=1..}] run effect give @s regeneration 3 1
+execute if entity @s[scores={lifesteal=8,helper_kill=1..}] run effect give @s regeneration 4 1
+execute if entity @s[scores={lifesteal=9,helper_kill=1..}] run effect give @s regeneration 5 1
+execute if entity @s[scores={lifesteal=10,helper_kill=1..}] run effect give @s regeneration 7 1
 
 execute if entity @s[scores={lifesteal=1..,helper_kill=1..}] run function cartographer_core:helper/heal_player/by_score
 execute if entity @s[scores={lifesteal=1..,helper_kill=1..}] run playsound minecraft:entity.witch.drink player @a[distance=..8] ~ ~ ~ 0.5 2

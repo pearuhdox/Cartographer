@@ -18,3 +18,4 @@ execute as @e[type=armor_stand,tag=magic_missile_projectile,distance=..1,limit=1
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
+tag @s remove can_see_player

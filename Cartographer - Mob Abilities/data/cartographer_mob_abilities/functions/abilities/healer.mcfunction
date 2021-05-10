@@ -19,3 +19,4 @@ playsound minecraft:entity.player.levelup hostile @a[distance=..16] ~ ~ ~ 3 1.5
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
+tag @s remove can_see_player

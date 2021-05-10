@@ -13,6 +13,6 @@ scoreboard players set @s ca.atk_time 10000
 
 scoreboard players operation @s ca.atk_time /= @s ca.atk_spd_val
 
-scoreboard players operation @s ca.atk_time *= $core.20 ca.CONSTANT
-scoreboard players operation @s ca.atk_time /= $core.100x ca.CONSTANT
-scoreboard players operation @s ca.atk_time /= $core.2 ca.CONSTANT
+scoreboard players operation @s ca.atk_time *= $20 ca.CONSTANT
+scoreboard players operation @s ca.atk_time /= $100 ca.CONSTANT
+scoreboard players operation @s ca.atk_time /= $2 ca.CONSTANT

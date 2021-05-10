@@ -12,6 +12,10 @@
 schedule function cartographer_custom_enchantments:loop/3_second/base 3s
 schedule function cartographer_mob_abilities:loop/3_second/base 3s
 
+#Run all 3 second entity effects from here.
+execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/3_seconds
+
+
 #Add any extra functions here!
 
 

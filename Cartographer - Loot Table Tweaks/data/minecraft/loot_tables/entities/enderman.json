@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chorus_fruit",
+          "functions": [
+            {
+              "function": "minecraft:looting_enchant",
+              "count": {
+                "min": 0,
+                "max": 2
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 9
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Endersoup\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"Speed II (0:30)\",\"color\":\"blue\",\"italic\":false}','{\"text\":\"Absorption (0:30)\",\"color\":\"blue\",\"italic\":false}','{\"text\":\"Night Vision (0:30)\",\"color\":\"blue\",\"italic\":false}']},HideFlags:32,CustomPotionEffects:[{Id:1b,Amplifier:1b,Duration:600},{Id:16b,Amplifier:0b,Duration:600},{Id:22b,Amplifier:0b,Duration:600}],Potion:\"minecraft:water\",CustomPotionColor:10710783}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "cartographer_mob_abilities:death_test/test"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "cartographer_custom_statuses:death_test/test"
+        }
+      ]
+    }
+  ]
+}

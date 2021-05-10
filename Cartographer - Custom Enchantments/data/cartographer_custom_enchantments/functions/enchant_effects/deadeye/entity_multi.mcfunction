@@ -20,3 +20,5 @@ execute if score $deadeye rend matches 1 run execute as @s at @s unless entity @
 execute if score $deadeye rend matches 1 run execute as @s at @s if entity @s[scores={effect_bleed=1..}] run scoreboard players add @s effect_bleed 11
 
 execute if score $deadeye flash matches 1 run execute as @s at @s run scoreboard players add @s effect_stunned 12
+
+scoreboard players set $hit_check deadeye 1

@@ -26,13 +26,14 @@ tag @s remove airborne_8
 tag @s remove airborne_9
 tag @s remove airborne_10
 
-scoreboard players remove @s[scores={smash_bounce=1..}] smash_bounce 1
+scoreboard players remove @s[scores={recast_count=1..}] recast_count 1
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-execute if entity @s[scores={smash_bounce=0}] run function cartographer_mob_abilities:helper/token/return
-execute if entity @s[scores={smash_bounce=0}] run tag @s remove attacking
-execute if entity @s[scores={smash_bounce=0}] run tag @s remove tokened
+execute if entity @s[scores={recast_count=0}] run function cartographer_mob_abilities:helper/token/return
+execute if entity @s[scores={recast_count=0}] run tag @s remove attacking
+execute if entity @s[scores={recast_count=0}] run tag @s remove tokened
+execute if entity @s[scores={recast_count=0}] run tag @s remove can_see_player
 
 schedule function cartographer_mob_abilities:helper/attacked_reset 10t
 
-execute if entity @s[scores={smash_bounce=1..}] run function cartographer_mob_abilities:charge/smash
+execute if entity @s[scores={recast_count=1..}] run function cartographer_mob_abilities:charge/smash

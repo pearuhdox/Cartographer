@@ -21,5 +21,6 @@ particle minecraft:witch ~ ~1 ~ 0.5 0.5 0.5 1 30 normal @a
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
+tag @s remove can_see_player
 
 schedule function cartographer_mob_abilities:helper/attacked_reset 10t

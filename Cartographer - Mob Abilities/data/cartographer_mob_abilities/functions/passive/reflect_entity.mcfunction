@@ -2,7 +2,7 @@ execute as @s run execute store result score @s reflect_check run data get entit
 scoreboard players operation @s reflect_diff = @s reflect_past
 scoreboard players operation @s reflect_diff -= @s reflect_check
 
-scoreboard players operation @s reflect_diff /= $core.2 ca.CONSTANT
+scoreboard players operation @s reflect_diff /= $2 ca.CONSTANT
 
 scoreboard players operation $reflect_pass reflect_diff = @s reflect_diff
 

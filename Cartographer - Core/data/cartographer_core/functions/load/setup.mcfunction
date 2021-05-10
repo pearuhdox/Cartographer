@@ -79,17 +79,38 @@ scoreboard objectives add ca.crit_y_comp dummy
 scoreboard objectives add ca.atk_spd_val dummy
 scoreboard objectives add ca.atk_time dummy
 
+scoreboard objectives add ca.res.amp dummy
+scoreboard objectives add ca.res.par dummy
+scoreboard objectives add ca.res.dur dummy
+scoreboard objectives add ca.res.amb dummy
+scoreboard objectives add ca.res.icn dummy
+
+scoreboard objectives add true_abs dummy
+
+scoreboard objectives add true_health health
+
+scoreboard objectives add epf_prot dummy
+scoreboard objectives add epf_proj dummy
+scoreboard objectives add epf_blas dummy
+scoreboard objectives add epf_fire dummy
+scoreboard objectives add epf_fall dummy
+
+scoreboard objectives add ca.epf dummy
+
 #Add score for difficulty
 execute as @p at @s run execute unless entity @s[scores={no_hndbk_pmpt=0..}] run scoreboard players set @s no_hndbk_pmpt 0
 
 #Setup a score for any and all constant values.
 scoreboard objectives add ca.CONSTANT dummy
 
-scoreboard players set $core.100x ca.CONSTANT 100
-scoreboard players set $core.-1 ca.CONSTANT -1
-scoreboard players set $core.1 ca.CONSTANT 1
-scoreboard players set $core.20 ca.CONSTANT 20
-scoreboard players set $core.2 ca.CONSTANT 2
+scoreboard players set $100 ca.CONSTANT 100
+scoreboard players set $-1 ca.CONSTANT -1
+scoreboard players set $1 ca.CONSTANT 1
+scoreboard players set $10 ca.CONSTANT 10
+scoreboard players set $20 ca.CONSTANT 20
+scoreboard players set $2 ca.CONSTANT 2
+scoreboard players set $3 ca.CONSTANT 3
+scoreboard players set $4 ca.CONSTANT 4
 scoreboard players set $core.difficulty ca.CONSTANT 0
 
 #Gamerule tracking and management
@@ -104,6 +125,8 @@ scoreboard objectives add lexica_time dummy
 scoreboard objectives add lexica_sneak minecraft.custom:sneak_time
 
 scoreboard objectives add lexica_trig trigger
+
+scoreboard objectives add ca.use_lectern minecraft.custom:minecraft.interact_with_lectern
 
 #Create the anvil, enchant table, and grindstone destruction scores.
 scoreboard objectives add use_anvil minecraft.custom:minecraft.interact_with_anvil

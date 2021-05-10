@@ -1,25 +1,35 @@
-playsound minecraft:block.respawn_anchor.deplete player @a[distance=..16] ~ ~ ~ 5 0.75
+scoreboard players set $abs_disable_sw second_wind 0
+execute store result score $abs_disable_sw second_wind run data get entity @s AbsorptionAmount 10
 
-particle minecraft:reverse_portal ~ ~1 ~ 0.5 0.5 0.5 1 100 normal
+execute if score $abs_disable_sw second_wind matches 1.. run tag @s remove fatal_protection
 
-scoreboard players add @s second_wind_tier 1
+execute if entity @s[tag=mortal_coil,scores={second_wind_time=0}] run function cartographer_custom_enchantments:enchant_effects/second_wind/suffer
 
-effect give @s[scores={second_wind_tier=1}] absorption 8 1
-effect give @s[scores={second_wind_tier=2}] absorption 6 1
-effect give @s[scores={second_wind_tier=3}] absorption 4 1
-effect give @s[scores={second_wind_tier=4..}] absorption 2 1
+execute if entity @s[tag=mortal_coil,scores={second_wind_time=1..}] run function cartographer_custom_enchantments:enchant_effects/second_wind/counting
 
-effect give @s[scores={second_wind_tier=2..}] slowness 7 0
-effect give @s[scores={second_wind_tier=3..}] mining_fatigue 5 0
-effect give @s[scores={second_wind_tier=4..}] weakness 3 0
-effect give @s[scores={second_wind_tier=1..}] blindness 1 1
+execute if entity @s[tag=fatal_protection,tag=!evading] run effect give @s resistance 1 4 true
+execute if entity @s[tag=fatal_protection,scores={second_wind_tier=1..}] run scoreboard players remove @s second_wind_tier 1
 
-particle minecraft:flash ~ ~1 ~ 0 0 0 0 1 force
+#Before we call, we test what type of damage it was. We ignore hits that are supposed to be protected by Evasion.
+execute if score @s[tag=fatal_protection,tag=!evading] ca.sw_fall matches 1.. run tag @s add fall_hit
 
-title @s actionbar {"text":"Second Wind has activated!","color":"yellow","bold":false,"italic":false}
+execute if entity @s[tag=fatal_protection,tag=!evading] if block ~ ~ ~ lava run tag @s add fire_hit
+execute if score @s[tag=fatal_protection,tag=!evading] ca.dmg_resist_sw matches 1..10 if entity @s[nbt=!{Fire:-20s}] run tag @s add fire_hit
 
-tag @s add life_fight
+execute if entity @s[advancements={cartographer_custom_enchantments:second_wind_projectile=true}] run tag @s add projectile_hit
 
-scoreboard players set @s second_wind_kill 0
+execute if entity @s[advancements={cartographer_custom_enchantments:second_wind_explosion=true}] run tag @s add explosion_hit
 
-scoreboard players set @s second_wind_cool 0
+
+#Call a Second Wind damage trigger (if no Evading)
+execute if score @s[tag=fatal_protection,tag=!evading] ca.dmg_resist_sw matches 1.. run function cartographer_custom_enchantments:enchant_effects/second_wind/damage
+
+#Call an Evasion trigger instead if evading
+execute if score @s[tag=fatal_protection,tag=evading] ca.dmg_resist_sw matches 1.. run function cartographer_custom_enchantments:enchant_effects/evasion_trigger
+
+scoreboard players set @s ca.dmg_resist_sw 0
+
+execute if entity @s[tag=true_death,tag=fatal_protection,tag=!evading] run function cartographer_custom_enchantments:enchant_effects/second_wind/fatal
+
+tag @s[tag=!mortal_coil] add fatal_protection
+tag @s[tag=mortal_coil] remove fatal_protection

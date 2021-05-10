@@ -59,9 +59,8 @@ execute as @s at @s run function cartographer_mob_abilities:abilities/wither_sto
 
 function cartographer_mob_abilities:abilities/wither_storm_recurse
 
-#execute if entity @e[scores={wither_storms=1..}] run schedule function cartographer_mob_abilities:abilities/wither_storm_recurse 3t
-
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
+tag @s remove can_see_player

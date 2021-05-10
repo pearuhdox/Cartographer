@@ -11,8 +11,6 @@ execute unless score $global_past helper_diff = $global helper_diff run tag @a r
 #Set all tokens on players properly who do not have the "token_reset" tag
 execute as @a[tag=!token_reset] at @s run function cartographer_mob_abilities:load/token_reset
 
-execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_mob_abilities:loop/tick/entities
-
 #Do a line of sight check on one mob that *doesn't* have Line of Sight.
 execute if score $do_los flag matches 1 as @e[type=#cartographer_core:hostile,tag=!los_checked,tag=has_active,scores={cooldown=0},limit=1,sort=random] at @s run function cartographer_mob_abilities:helper/los_check/scan
 

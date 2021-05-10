@@ -68,6 +68,10 @@ Custom Statuses:
     - When an Infected mob dies, it spreads the effect (with it's remaining duration) to 2 nearby targets (not Infected, within 6 blocks).
     - If it cannot spread the effect, it deals 6 damage in a small AoE instead.
       - AoE is half the radius of the spread distance. (3 Blocks)
+ 
+ - New (Player Only) Effect: Cleansing
+    - Set to Nasuea 101 (Amplifier:100b)
+    - Cleanses negative effects from players who obtain it.
 
  - All Status effects can be inflicted now via vanilla potions with custom Nausea effects.
     - Nausea 10 = Stunning
@@ -188,15 +192,36 @@ Custom Enchantments:
     - Tempest now increases the damage of Hydraulic shoves.
     - Drastically improved vfx.
 
+ - Lifesteal:
+    - Now stacks up to level 10.
+    - Levels past 5 heal 1 additional health per 1.25 seconds. (via Regeneration II)
+
+  Developer Commentary: To allow increasing of the Lifesteal cap to a more reasonable and easy to expect number, higher levels of Lifesteal provide over time
+  healing rather than burst healing.
+
+ - Regeneration:
+    - Initial Value of the 1st level reduced to 1 health per 4 seconds (was 1 per 3 seconds).
+    - Additional levels now reduce the time by 0.33 seconds (was 0.4 seconds).
+    - Max level is now 10 (was 6).
+  
+  Developer Commentary: Regeneration is quite a powerful effect and was quite easy to stack quickly. The effect has now been spread out over a higher level cap, meaning
+  an overall nerf to the enchantment. Approximately, 2 levels of Regeneration equal 1 level of old Regeneration with the new scaling. In terms of how it scales to the
+  vanilla effect, Regeneration I (enchantment) is about twice as slow as Regeneration I (potion effect) and Regeneration II (potion effect) is about the same speed as
+  Regeneration X (enchantment). This will allow Regeneration to serve as a more proper defensive enchantment without the threat of reaching the level cap quickly.
+
  - Ricochet:
     - No longer creates a projectile, instantly targets nearby entities instead.
     - Tempest now increases the damage of Ricochet bounces.
 
  - Sapper:
+    - Now stacks up to level 10.
+    - Levels past 5 heal 1 additional health per 1.25 seconds. (via Regeneration II)
     - If a Sapper pickaxe has Adrenaline, Frenzy, or Energetic, those enchantments will activate when you break a spawner.
       - Like Thorns 2.0, the pickaxe must have the enchantment.
 
   Developer Commentary: With synergies being added across the board, they are also being added to Sapper to allow more diverse item creation.
+  To allow increasing of the Sapper cap to a more reasonable and easy to expect number, higher levels of Sapper provide over time
+  healing rather than burst healing.
 
  - Satiation:
     - Reworked: Now provides 15 seconds of Absorption (with potency equal to your level) whenever you eat food (or drink a potion).
@@ -207,6 +232,39 @@ Custom Enchantments:
   Developer Commentary: Satiation prior to this acted as a "different flavor of Lifesteal" that was potentially more powerful, but more frustrating to use than Lifesteal.
   In an effort to make effects more unique, the enchant has been turned into a new effect which allows one to use consumables more readily in combat. It can also be applied
   to the food items themselves, allowing you to create food that provides Absorption/Resistance.
+
+ - Second Wind:
+    - Revamped vfx and sfx. They're cleaner now, but about the same amount of pressure applying as they used to be.
+    
+    - Reworked background fatal hit detection system. Guaranteed to protect any fatal damage.
+      - I don't mean this in jest. The system is 100% fool-proof when it comes to preventing lethals.
+    - Second Wind no longer requires Evasion.
+    - Second Wind will protect from any kind of lethal damage, including one-shot-kills.
+    - Second Wind will not provide fatal protection while you have Absorption Health.
+
+    - Second Wind's tiering system has been updated.
+      - The first trigger (Tier 1) provides 12 Absorption Health for 10 seconds (Penalty Damage is 15).
+      - The second trigger (Tier 2) provides 8 Absorption Health for 7 seconds (Penalty Damage is 30).
+      - Third and further triggers (Tier 3) provide 4 Absorption Health for 4 seconds (Penalty Damage is 45).
+        - All penalty damage is 20% "true damage" (damage that cannot be blocked by armor or enchantments) [3/6/9 respectively]
+      - No longer inflicts debuffs on the player when it triggers.
+  
+    - New Descriptions:
+      "While you have no Absorption Health, you will be protected from a lethal attack, cleansing all potion effects.
+      When you are, your fatal hit protection is removed, and you receive a "Fatal Shield", which lasts for at most 10 seconds.
+
+      While you have this Fatal Shield, killing a mob will restore health equal to the remaining value of the shield and restore
+      your fatal hit protection (cleansing the shield). If the Fatal Shield runs out, either by being damaged or running out of time,
+      the player is instead dealt a heavy instance of damage, 20% of which is "true damage".
+
+      Successive triggers of Second Wind reduce the starting shield value by 4 (minimum of 4),
+      reduce the starting duration by 3 seconds (minimum of 4), and increase the damage dealt by 15."
+    
+    - Short Read Description:
+      "While you have no Absorption Health, you will be protected from a lethal attack.
+      When you are, you gain a temporary shield, which when you slay a mob, restores your health.
+      Failing to slay a mob before the shield runs out has drastic consequences.
+      The effect can trigger in succession, but is less effective when it does."
 
  - Surging Strike:
     - Now deals 50/66/75% of the attack's base damage rather than 2/4/6 flat damage. (Equivalent to Sweeping Edge)
@@ -288,6 +346,21 @@ Custom Statuses:
 
  - Vulnerability:
     - Is now called "Exposed" since the mechanic works and functions differently from Resistance (and thus should follow a more unique naming scheme)
+    - Can be stacked up to 10.
+    - Improved vfx
+    - Sfx and vfx when an Exposed mob takes damage.
+
+Mimics:
+
+  Mimic:
+    - Projectile Damage Resistance reduced from 64% to 48%.
+    - Health regeneration while enraged reduced to 4 (from 6) (every 5 seconds).
+    - Mimics gain 20% Knockback Resistance while enraged.
+    - Mimics now drop a chest ("Mimic Carcass") that is an exact copy of the chest they were posing as.
+      - They still drop XP and Mimic Heads.
+      - Like with before, the behavior works with both manually filled mimic chests and loot table set mimic chests.
+
+    - The Mimic bossbar can now be seen from 64 blocks away (was 20)
 
 Mob Abilities:
 
@@ -354,17 +427,26 @@ Active Abilities (now called "Active Skills" in Lexica):
  - Duplicator:
     - Charge time reduced to 1 second (from 2).
     - Duplicator now works on every hostile mob.
+
     - Duplicator now reduces the speed and damage of the caster while charging.
     - Duplicated mobs always have half the current Health of the original mob.
+    - Duplicated mobs now have a lifetime of 18 seconds (was 15).
+
     - Duplicated mobs now copy *all* nbt from the original mob (besides the Duplicator tag)
       - *Unless* they have the "mitosis" tag in which Duplicates can copy themselves.
-        - When copies can copy themselves, they receive much lower cooldowns.
-    - Duplicated mobs explode on death, dealing 4 damage to everything within 2 blocks.
+        - When copies can copy themselves, the newly created copies receive much lower cooldowns.
+
+    - Duplicated mobs (not mitosis variant) explode on death, dealing 4 damage to everything within 2 blocks.
       - Explosion does not damage terrain.
       - Explosion affects players and hostile mobs.
       - Explosion does not trigger if duplicates despawn.
+
     - Duplicator by default only makes 1 mob copy.
       - Additional copies can be added via the "triple" (2 copies), "quadruple" (3 copies), and "quintuple" (4 copies) tags.
+
+  Developer Commentary: While the effect hasn't gotten a rework, Duplicator has received an extensive number of changes to improve the effect and give
+  more control to mapmakers using it. It also now copies all the nbt from the mob, meaning more terrifying enemies can be made with it. Duplicates now
+  explode on death to further incentivize attacking the real one.
 
  - Healer:
     - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
@@ -404,6 +486,8 @@ Active Abilities (now called "Active Skills" in Lexica):
     - Mob will cast the damage effect when they actually land rather than 1 second into the future.
     - Vfx adjusted.
 
+    - The tags "recast" and "rerecast" can be used to make a Smash mob attack with multiple smashes in succession (2 or 3).
+
   Developer Commentary: One of the biggest focuses of Mob Abilities this patch is removing unnecessary CC effects from abilities where it
   thematically makes little sense to have them. Additionally, the way Smash works has been reworked so that the attacked area can be made much
   more clear to players, and to increase the aggressiveness of the ability.
@@ -411,9 +495,14 @@ Active Abilities (now called "Active Skills" in Lexica):
  - Sweep:
     - Damage reduced to 6 (was 8).
     - Weakness effect removed from the attack.
-    - Attack size reduced by 50%.
+    - Attack shape and size reworked. Is now a very narrow cone that reaches out up to 4 blocks away from the caster. (Max size is 3.2 blocks, min size is 2.2 blocks)
     - Charge up time reduced to 0.5 seconds (was 1).
-    - Now reduce the speed and damage of the caster rather than immobilizing them (see above)
+    - Sweep now moves the mob forward 1.5 blocks after the attack is made (in the direction of the attack)
+
+    - The tags "recast" and "rerecast" can be used to make a Sweep mob attack with multiple sweeps in succession (2 or 3).
+    - The tag "mobile" makes the mob move a bit farther (2 blocks instead of 1.5)
+    - The tag "unstoppable" makes the mob not attempt to realign with the player on recasts.
+
 
   Developer Commentary: As above with Smash, removing unnecessary CC effects from abilities was a part of the core updates to Mob Abilities.
   Thus, Sweep's focus has been reworked to be a fast acting melee attack.

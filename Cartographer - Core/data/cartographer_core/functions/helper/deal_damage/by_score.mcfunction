@@ -1,7 +1,7 @@
 #Sets health value equal to the health of the mob * 100
 #Scales up the damage amount by 100
 execute as @s store result score @s helper_health run data get entity @s Health 100
-scoreboard players operation @s damage_queue *= $core.100x ca.CONSTANT
+scoreboard players operation @s damage_queue *= $100 ca.CONSTANT
 
 #Add the Absorption of the mob to the check.
 execute as @s store result score @s helper_abs run data get entity @s AbsorptionAmount 100
@@ -26,7 +26,7 @@ execute as @s unless entity @s[tag=invulnerable_check] if entity @s[scores={help
 execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=absorbed] store result score @s helper_abs run data get entity @s AbsorptionAmount 100
 execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=absorbed] store result entity @s AbsorptionAmount float 0.01 run scoreboard players operation @s helper_abs -= @s damage_queue
 
-execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=not_absorbed] run scoreboard players operation @s helper_abs *= $core.-1 ca.CONSTANT
+execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=not_absorbed] run scoreboard players operation @s helper_abs *= $-1 ca.CONSTANT
 execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=not_absorbed] run data modify entity @s AbsorptionAmount set value 0
 execute as @s unless entity @s[tag=invulnerable_check] if entity @s[tag=not_absorbed] store result entity @s Health float 0.01 run scoreboard players operation @s helper_health -= @s helper_abs
 

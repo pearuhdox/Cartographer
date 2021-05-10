@@ -7,6 +7,9 @@ execute if entity @s[nbt=!{ActiveEffects:[{Id:17b}]}] run function cartographer_
 #Concealed
 function cartographer_custom_enchantments:enchant_effects/concealed
 
+#Second Wind - Needs to go before Evasion
+execute as @a[scores={second_wind=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/second_wind
+
 #Evasion
 execute as @a[scores={evasion=1..},tag=evading] at @s run function cartographer_custom_enchantments:enchant_effects/evasion
 
@@ -44,7 +47,6 @@ execute as @a[scores={spurs=1..}] at @s run execute if block ~-0.75 ~1 ~0.75 #ca
 
 execute as @a[scores={spurs=1..}] at @s run execute if block ~0.75 ~ ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 execute as @a[scores={spurs=1..}] at @s run execute if block ~0.75 ~1 ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-
 
 #Curses - Malevolent
 execute as @s[scores={curse_malevolent=2..}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_malevolence
