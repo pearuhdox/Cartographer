@@ -6,16 +6,20 @@
 # Description: Reruns the reload panel chat popup.
 ########################################
 
+tag @a add gmr_frozen
 gamerule sendCommandFeedback false
-schedule function cartographer_core:load/fix_gamerules 2t
-schedule function cartographer_core:load/gamerule_states 3t
+
+scoreboard players enable @s options_trig 
 
 execute as @a at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
-execute if score $gl_reload_msg ca.gamerule matches 0 as @a at @s run function cartographer_core:load/reload/full
-execute if score $gl_reload_msg ca.gamerule matches 1 as @a at @s run function cartographer_core:load/reload/minimal
+execute if score $gl_reload_msg ca.gamerule matches 0 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/full
+execute if score $gl_reload_msg ca.gamerule matches 1 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/minimal
+
+execute as @a[scores={ca.reload_type=1}] at @s run function cartographer_core:load/reload/full
+execute as @a[scores={ca.reload_type=2}] at @s run function cartographer_core:load/reload/minimal
+
 
 tag @a remove ehid_check
 tag @a remove pds_check
 
-schedule function cartographer_core:load/command_feedback 1t

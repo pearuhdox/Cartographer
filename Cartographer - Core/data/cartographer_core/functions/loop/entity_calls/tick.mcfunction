@@ -10,7 +10,7 @@ execute if entity @s[type=#cartographer_core:hostile] run function cartographer_
 #Run Decay Spread
 execute if entity @s[type=item,nbt={Item:{tag:{Decaying:1}}}] run function cartographer_custom_statuses:effects/infection_spread
 
-#Run Loot Additions Effects
+#in minecraft:overworld run loot Additions Effects
 function cartographer_loot_additions:loop/tick/entities
 
 #Run Mimic Effects

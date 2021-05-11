@@ -1,6 +1,6 @@
 execute as @s[scores={effect_bleed=1..}] run scoreboard players add @s effect_bleed 11
 
-execute as @s run execute unless entity @s[scores={effect_bleed=1..}] run scoreboard players add @s effect_bleed 5
+execute as @s unless entity @s[scores={effect_bleed=1..}] run scoreboard players add @s effect_bleed 5
 
 tag @s[type=#cartographer_core:hostile,tag=is_rend] remove is_rend
 

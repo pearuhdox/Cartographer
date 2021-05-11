@@ -16,6 +16,10 @@ scoreboard objectives add effect_infect dummy
 scoreboard objectives add effect_cloaked dummy
 
 scoreboard objectives add time_convert dummy
+scoreboard objectives add id_convert dummy
+
+scoreboard objectives add exposed_lvl dummy
+scoreboard objectives add exposed_hit dummy
 
 scoreboard objectives add ca.decay_min dummy
 scoreboard objectives add ca.decay_max dummy

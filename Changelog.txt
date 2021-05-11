@@ -178,6 +178,7 @@ Custom Enchantments:
     - Individual dodge chance per level decreased to 4% (from 5%).
     - Increased level cap to 20 (from 10). [Now a total of 80% attainable dodge chance]
     - Can now trigger in succession.
+    - No longer triggers off non-mob attacks. [This may be reverted]
     - Pity math slightly nerfed to compensate higher stackability. (Maxes at 20% additional chance instead of 30% additional chance.)
 
   Developer Commentary: Evasion is an interesting enchant that in its previous scaling, was poised to be a "core" defense enchantment, but didn't scale the same as Protection.

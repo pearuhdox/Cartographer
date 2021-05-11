@@ -1,7 +1,8 @@
 
+tag @s add gmr_frozen
 gamerule sendCommandFeedback false
-schedule function cartographer_core:load/fix_gamerules 2t
-schedule function cartographer_core:load/gamerule_states 3t
+
+
 
 playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
@@ -33,4 +34,3 @@ tellraw @p {"text":"------------------------------------------","color":"#FFE0A3
 tellraw @p [{"text":"[⏎]","color":"#33FFF8","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return to the reload panel.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/reload_panel"}}]
 tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 
-schedule function cartographer_core:load/command_feedback 1t

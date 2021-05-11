@@ -2,8 +2,8 @@
 execute as @s[type=#cartographer_core:hostile,tag=breaker] at @s run function cartographer_mob_abilities:passive/breaker
 
 #Attempt to token mobs that can see a player.
-execute if entity @e[type=#cartographer_core:hostile,tag=priority_tokened] as @s[type=#cartographer_core:hostile,tag=can_see_player,tag=!tokened,tag=priority_tokened] at @s if entity @a[distance=..30] run function cartographer_mob_abilities:helper/token/take
-execute unless entity @e[type=#cartographer_core:hostile,tag=priority_tokened] as @s[type=#cartographer_core:hostile,tag=can_see_player,tag=!tokened] at @s if entity @a[distance=..30] run function cartographer_mob_abilities:helper/token/take
+execute as @s[type=#cartographer_core:hostile,tag=can_see_player,tag=!tokened,tag=priority_tokened] at @s if entity @a[distance=..30] run function cartographer_mob_abilities:helper/token/take
+execute as @s[type=#cartographer_core:hostile,tag=can_see_player,tag=!tokened] at @s if entity @a[distance=..30] run function cartographer_mob_abilities:helper/token/take
 
 execute as @s[type=#cartographer_core:hostile,tag=can_see_player,tag=!tokened,tag=!priority_tokened] at @s if entity @a[distance=..30] run function cartographer_mob_abilities:helper/token/take
 execute if score $gloabl helper_diff matches 3.. as @s[type=#cartographer_core:hostile,tag=can_see_player,tag=!tokened,tag=!priority_tokened] at @s if entity @a[distance=..30] run function cartographer_mob_abilities:helper/token/take

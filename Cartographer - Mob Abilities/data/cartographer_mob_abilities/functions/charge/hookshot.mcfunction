@@ -12,9 +12,9 @@ execute unless entity @s[scores={ability_charge=1..2}] run tag @s add is_casting
 
 execute unless entity @s[scores={ability_charge=1..2}] run effect give @s glowing 1 0 true
 
-execute unless entity @s[scores={ability_charge=1..2}] run execute as @e[type=armor_stand,tag=hook_marker,distance=..2,limit=1] at @s run tp @s ~ ~ ~ facing entity @p feet
-execute unless entity @s[scores={ability_charge=1..2}] run execute as @e[type=armor_stand,tag=hook_marker,distance=..2,limit=1] at @s run scoreboard players set @s helper_raycast 12
-execute unless entity @s[scores={ability_charge=1..2}] run execute as @e[type=armor_stand,tag=hook_marker,distance=..2,limit=1] at @s run execute positioned ~ ~1 ~ run function cartographer_mob_abilities:charge/hookshot/raycast
+execute unless entity @s[scores={ability_charge=1..2}] as @e[type=armor_stand,tag=hook_marker,distance=..2,limit=1] at @s run tp @s ~ ~ ~ facing entity @p feet
+execute unless entity @s[scores={ability_charge=1..2}] as @e[type=armor_stand,tag=hook_marker,distance=..2,limit=1] at @s run scoreboard players set @s helper_raycast 12
+execute unless entity @s[scores={ability_charge=1..2}] as @e[type=armor_stand,tag=hook_marker,distance=..2,limit=1] at @s positioned ~ ~1 ~ run function cartographer_mob_abilities:charge/hookshot/raycast
 
 execute unless entity @s[scores={ability_charge=2}] run scoreboard players add @s ability_charge 1
 

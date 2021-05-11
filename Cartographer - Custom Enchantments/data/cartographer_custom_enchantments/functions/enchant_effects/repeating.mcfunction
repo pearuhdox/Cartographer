@@ -32,8 +32,8 @@ execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot
 execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run data modify block 4206900 0 4206901 Items[0].tag.LastFired set from block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
 #Fix Multishot
-execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run execute if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
-execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} run execute if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
+execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
+execute unless block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",tag:{Ammo:0}}]} if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
 data remove block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
@@ -41,8 +41,8 @@ data remove block 4206900 0 4206901 Items[0].tag.Quiver[0]
 function suso.player_data:put/do
 
 #Place item in player hand
-execute if entity @s[scores={repeating=1..7}] run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
-execute if entity @s[scores={repeating=11..17}] run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
+execute if entity @s[scores={repeating=1..7}] in minecraft:overworld run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
+execute if entity @s[scores={repeating=11..17}] in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
 
 execute at @s run playsound minecraft:item.crossbow.loading_end player @a[distance=..8] ~ ~ ~ 10 2
 

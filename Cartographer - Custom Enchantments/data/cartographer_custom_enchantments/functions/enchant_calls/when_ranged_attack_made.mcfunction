@@ -30,10 +30,10 @@ execute as @s[scores={repeating=11..17,helper_fire_cbow=1..},nbt={Inventory:[{Sl
 execute as @s[scores={sharpshot=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/sharpshot
 
 #Trueshot
-execute as @s[scores={trueshot=1..}] at @s run execute as @e[type=#cartographer_core:arrow,sort=nearest,limit=3,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/trueshot
+execute as @s[scores={trueshot=1..}] at @s as @e[type=#cartographer_core:arrow,sort=nearest,limit=3,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/trueshot
 
 #Encumbering
-execute as @s[scores={curse_encumber=1..}] at @s run execute as @e[type=#cartographer_core:arrow,sort=nearest,limit=1,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_encumbering
+execute as @s[scores={curse_encumber=1..}] at @s as @e[type=#cartographer_core:arrow,sort=nearest,limit=1,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_encumbering
 
 
 #Do all ranged checks.

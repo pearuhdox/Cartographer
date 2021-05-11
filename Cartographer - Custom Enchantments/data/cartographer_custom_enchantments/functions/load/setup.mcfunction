@@ -243,6 +243,9 @@ setblock 4206900 1 4206900 purple_shulker_box replace
 #Loyalty Ghost
 setblock 4206900 0 4206899 purple_shulker_box replace
 
+#Initialize Global Value
+execute unless score $gl_ui_loc ca.gamerule matches 0.. run scoreboard players set $gl_ui_loc ca.gamerule 0
+
 #Start initial required looping to trigger enchant effects. Offset 1 second effects by 30 ticks.
 function cartographer_custom_enchantments:loop/tick/base
 schedule function cartographer_custom_enchantments:loop/1_second/base 30t

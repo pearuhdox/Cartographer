@@ -5,7 +5,7 @@ scoreboard players set @s ability_charge 0
 
 scoreboard players set @e[tag=laser_marker,distance=..1,limit=1] helper_raycast 32
 
-execute as @e[tag=laser_marker,distance=..1,limit=1] at @s run execute positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/laser/raycast
+execute as @e[tag=laser_marker,distance=..1,limit=1] at @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/laser/raycast
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 

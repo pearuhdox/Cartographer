@@ -2,7 +2,7 @@ playsound minecraft:entity.ravager.attack hostile @a[distance=..16] ~ ~ ~ 5 0.85
 
 effect give @s glowing 1 0 true
 
-execute as @s at @s run particle minecraft:crit ~ ~3 ~ 0.7 2 0.7 0 100
+execute run particle minecraft:crit ~ ~3 ~ 0.7 2 0.7 0 100
 
 tp @s ~ ~ ~ facing entity @p feet
 

@@ -7,8 +7,8 @@ execute if entity @s[gamemode=!creative,scores={loyalty=1..}] run tag @e[type=tr
 execute if entity @s[gamemode=!creative,scores={loyalty=1..}] run scoreboard players operation @e[type=trident,limit=1,sort=nearest,distance=..5] loyalty = @s loyalty
 execute if entity @s[gamemode=!creative,scores={loyalty=11..}] run scoreboard players remove @e[type=trident,limit=1,sort=nearest,distance=..5] loyalty 10
 
-execute if entity @s[gamemode=!creative,scores={loyalty=1..10}] run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206899 air{drop_contents:1b}
-execute if entity @s[gamemode=!creative,scores={loyalty=11..20}] run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206899 air{drop_contents:1b}
+execute if entity @s[gamemode=!creative,scores={loyalty=1..10}] in minecraft:overworld run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206899 air{drop_contents:1b}
+execute if entity @s[gamemode=!creative,scores={loyalty=11..20}] in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206899 air{drop_contents:1b}
 
 tag @s add waiting_loyalty
 

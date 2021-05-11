@@ -1,6 +1,6 @@
 scoreboard players operation $melee vicious = @s vicious
 
-execute if score @s vicious matches 1.. run execute as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/branch
+execute if score @s vicious matches 1.. as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/branch
 
 scoreboard players set $melee vicious 0
 

@@ -10,7 +10,7 @@ execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={frost=
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={putrefy=1}] run tag @s add is_decay
 
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={flash=1..}] run tag @s add is_flash
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={flash=1..}] as @s at @s run scoreboard players operation @s flash = @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={flash=1..}] flash
+execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={flash=1..}] run scoreboard players operation @s flash = @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={flash=1..}] flash
 
 
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={volatile=1}] run tag @s add is_volatile
@@ -29,7 +29,7 @@ execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={volati
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={volatile=1,punch=5}] run tag @s add is_vol_p_5
 
 
-execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={volatile=1}] as @s at @s run scoreboard players operation @s ca.vol_dmg = @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={volatile=1}] ca.vol_dmg
+execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={volatile=1}] run scoreboard players operation @s ca.vol_dmg = @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={volatile=1}] ca.vol_dmg
 
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={tempo_theft=1}] run tag @s add is_tempo_1
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={tempo_theft=2}] run tag @s add is_tempo_2

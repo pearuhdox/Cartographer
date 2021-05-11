@@ -70,13 +70,22 @@ scoreboard players set @a use_grindstone 0
 scoreboard players set @a use_enchant_tb 0
 
 #Reset and Run Lexica Trigger
-gamerule sendCommandFeedback false
 execute as @a unless score @s lexica_trig matches 1.. run scoreboard players set @s lexica_trig 0
 execute as @a at @s if score @s lexica_trig matches 1.. run function cartographer_core:lexica/trigger
-gamerule sendCommandFeedback true
+
+#Reset and Run Options Trigger
+execute as @a unless score @s options_trig matches 1.. run scoreboard players set @s options_trig 0
+execute as @a at @s if score @s options_trig matches 1.. run function cartographer_core:options/player/trigger
 
 #Run all ticking entity effects.
 execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/tick
+
+#Set defaults on players (new spawns).
+scoreboard players set @a[tag=!spawned] ehp_listen 1
+scoreboard players set @a[tag=!spawned] phe_listen 1
+scoreboard players set @a[tag=!spawned] ca.reload_type 0
+scoreboard players set @a[tag=!spawned] ca.ui_loc 0
+tag @a[tag=!spawned] add spawned
 
 #Resets
 scoreboard players set @a ca.use_lectern 0
@@ -89,5 +98,10 @@ scoreboard players set @a[scores={helper_open_trap=1..}] helper_open_trap 0
 #
 #
 #Add anything else to run per tick above.
+
+#Get Gamerule Settings
+execute unless entity @a[tag=gmr_frozen] run function cartographer_core:load/gamerule_defaults
+execute if entity @a[tag=gmr_frozen,tag=!gmr_fixing] run schedule function cartographer_core:load/fix_gamerules 1t
+execute if entity @a[tag=gmr_frozen] run tag @s add gmr_fixing
 
 schedule function cartographer_core:loop/tick/base 1t

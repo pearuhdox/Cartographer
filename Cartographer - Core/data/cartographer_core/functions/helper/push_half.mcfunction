@@ -7,14 +7,14 @@
 # The push is one half the magnitude of Push.
 ########################################
 
-execute as @s at @s run tp @e[type=armor_stand,tag=vector] ^ ^ ^0.5
+execute run tp @e[type=armor_stand,tag=vector] ^ ^ ^0.5
 
 #particle minecraft:witch ^ ^ ^0.5 0 0.5 0 0 100 normal
 
 execute as @e[type=armor_stand,tag=vector,limit=1,sort=nearest] at @s run tp @s ~ ~-0.3 ~
 
 # Pushes a mob based on a given existing vector armor stand.
-execute as @s at @s run function cartographer_core:helper/vector
+execute run function cartographer_core:helper/vector
 
 execute store result entity @s Motion[0] double 0.1 run scoreboard players get @s vectorX
 execute store result entity @s Motion[1] double 0.1 run scoreboard players get @s vectorY

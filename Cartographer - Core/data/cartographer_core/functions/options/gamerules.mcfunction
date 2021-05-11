@@ -1,7 +1,8 @@
 
+tag @s add gmr_frozen
 gamerule sendCommandFeedback false
-schedule function cartographer_core:load/fix_gamerules 2t
-schedule function cartographer_core:load/gamerule_states 3t
+
+
 
 playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
@@ -25,7 +26,7 @@ tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"
 tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Immediate Respawn","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"When enabled, players will immediately respawn on death, instead of seeing the death screen.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules/immediate_respawn"}}]
 tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Insomnia","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"When enabled, Phantoms will naturally spawn on players who have not slept recently.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules/insomnia"}}]
 tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Keep Inventory","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"When enabled, players do not drop their items or xp on death.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules/keep_inventory"}}]
-tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Natural Mob Spawning","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"When enabled, natural mobs can spawn in the world (with the correct conditions).","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules/mob_griefing"}}]
+tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Natural Mob Spawning","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"When enabled, natural mobs can spawn in the world (with the correct conditions).","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules/mob_spawning"}}]
 tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Mob Griefing","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"When enabled, mobs will do terrain damage.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules/mob_griefing"}}]
 tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Universal Anger","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"When enabled, angered neutral mobs will aggro on the nearest player, even if they didn't attack them.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules/universal_anger"}}]
 
@@ -41,4 +42,3 @@ tellraw @p {"text":"------------------------------------------","color":"#FFE0A3
 tellraw @p [{"text":"[⏎]","color":"#33FFF8","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return to Options.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/main"}}]
 tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 
-schedule function cartographer_core:load/command_feedback 1t

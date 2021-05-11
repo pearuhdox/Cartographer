@@ -10,4 +10,4 @@ execute positioned ^ ^ ^3 run particle minecraft:splash ~ ~0.5 ~ 1 0.7 1 1 300
 
 execute positioned ^ ^ ^3 run function cartographer_custom_enchantments:enchant_effects/hydraulic/circle_raycast
 
-execute positioned ^ ^ ^3 run execute as @e[type=#cartographer_core:hostile,distance=..3] at @s run function cartographer_custom_enchantments:enchant_effects/hydraulic/enemy_branch
+execute positioned ^ ^ ^3 as @e[type=#cartographer_core:hostile,distance=..3] at @s run function cartographer_custom_enchantments:enchant_effects/hydraulic/enemy_branch

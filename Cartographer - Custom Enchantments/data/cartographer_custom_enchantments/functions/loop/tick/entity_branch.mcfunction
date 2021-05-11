@@ -16,7 +16,7 @@ execute as @s[type=arrow,scores={helper_lifetime=2..}] at @s run function cartog
 
 kill @s[type=armor_stand,tag=hydraul_stopper,scores={helper_lifetime=3..}]
 
-execute as @s[type=trident,tag=loyalty] at @s run execute if entity @s[nbt={inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/loyalty/convert
+execute as @s[type=trident,tag=loyalty] at @s if entity @s[nbt={inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/loyalty/convert
 execute as @s[type=armor_stand,tag=loyalty_projectile] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty/projectile
 
 #Evoker Fangs from Evocation - Kill them if they stay alive too long, and "trample" them, increasing their warmup tags as long as a player stands on it.

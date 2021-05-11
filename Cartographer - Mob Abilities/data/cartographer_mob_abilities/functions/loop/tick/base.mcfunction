@@ -2,11 +2,12 @@
 #This also sets mob tags properly for active skill mobs and on death mobs.
 
 #Set the score of helper difficulty equal to Minecraft's current difficulty
-execute if score $cart_ind_diff global_options matches 0 run scoreboard players operation $global_past helper_diff = $global helper_diff
-execute if score $cart_ind_diff global_options matches 0 run execute store result score $global helper_diff run difficulty
+execute if score $gl_ind_diff ca.gamerule matches 0 run scoreboard players operation $global_past helper_diff = $global helper_diff
+execute if score $gl_ind_diff ca.gamerule matches 0 store result score $global helper_diff run difficulty
 
 #When you change difficulty, tokens need to be entirely reset.
 execute unless score $global_past helper_diff = $global helper_diff run tag @a remove token_reset
+execute unless score $global_past helper_diff = $global helper_diff run scoreboard players operation $global_past helper_diff = $global helper_diff
 
 #Set all tokens on players properly who do not have the "token_reset" tag
 execute as @a[tag=!token_reset] at @s run function cartographer_mob_abilities:load/token_reset

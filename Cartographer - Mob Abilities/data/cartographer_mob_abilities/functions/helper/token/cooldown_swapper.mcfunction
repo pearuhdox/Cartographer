@@ -4,10 +4,10 @@ execute if data storage suso:pldata working_data.Tokens.CurrentCooling.Owner run
 
 #Return the Current Cooling Down Token to the proper queue.
 execute if score @s cooldown matches -10 run scoreboard players set $token_type helper_tokens -1
-execute if score @s cooldown matches -10 run execute store result score $token_type helper_tokens run data get storage suso:pldata working_data.Tokens.CurrentCooling.Type
+execute if score @s cooldown matches -10 store result score $token_type helper_tokens run data get storage suso:pldata working_data.Tokens.CurrentCooling.Type
 
-execute if score @s cooldown matches -10 run execute if score $token_type helper_tokens matches 0 run data modify storage suso:pldata working_data.Tokens.LightTokens append from storage suso:pldata working_data.Tokens.CurrentCooling
-execute if score @s cooldown matches -10 run execute if score $token_type helper_tokens matches 1 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from storage suso:pldata working_data.Tokens.CurrentCooling
+execute if score @s cooldown matches -10 if score $token_type helper_tokens matches 0 run data modify storage suso:pldata working_data.Tokens.LightTokens append from storage suso:pldata working_data.Tokens.CurrentCooling
+execute if score @s cooldown matches -10 if score $token_type helper_tokens matches 1 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from storage suso:pldata working_data.Tokens.CurrentCooling
 
 execute if score @s cooldown matches -10 run data modify storage suso:pldata working_data.Tokens.CurrentCooling set value {}
 

@@ -21,32 +21,32 @@ execute as @s[scores={repeating=1..7},nbt={SelectedItem:{tag:{Ammo:0,Charged:1b}
 execute as @s[scores={repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] at @s run function cartographer_custom_enchantments:enchant_effects/repeating/reload
 
 #Spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~ ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~1 ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~ ~ ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~ ~1 ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
-execute as @a[scores={spurs=1..}] at @s run execute if block ~0.75 ~ ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~0.75 ~1 ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~0.75 ~ ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~0.75 ~1 ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
-execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~ ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~1 ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~ ~ ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~ ~1 ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
-execute as @a[scores={spurs=1..}] at @s run execute if block ~-0.75 ~ ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~-0.75 ~1 ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~-0.75 ~ ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~-0.75 ~1 ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
-execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~ ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~ ~1 ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~ ~ ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~ ~1 ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
-execute as @a[scores={spurs=1..}] at @s run execute if block ~0.75 ~ ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~0.75 ~1 ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~0.75 ~ ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~0.75 ~1 ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
-execute as @a[scores={spurs=1..}] at @s run execute if block ~-0.75 ~ ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~-0.75 ~1 ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~-0.75 ~ ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~-0.75 ~1 ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
-execute as @a[scores={spurs=1..}] at @s run execute if block ~-0.75 ~ ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~-0.75 ~1 ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~-0.75 ~ ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~-0.75 ~1 ~0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
-execute as @a[scores={spurs=1..}] at @s run execute if block ~0.75 ~ ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
-execute as @a[scores={spurs=1..}] at @s run execute if block ~0.75 ~1 ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~0.75 ~ ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
+execute as @a[scores={spurs=1..}] at @s if block ~0.75 ~1 ~-0.75 #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs
 
 #Curses - Malevolent
 execute as @s[scores={curse_malevolent=2..}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_malevolence

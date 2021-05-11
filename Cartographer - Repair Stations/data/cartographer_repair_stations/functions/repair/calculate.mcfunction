@@ -1,15 +1,15 @@
-execute if entity @s[tag=held] run execute store result score @s XPcost run data get entity @s HandItems[0].tag.RepairCost
-execute if entity @s[tag=feet] run execute store result score @s XPcost run data get entity @s ArmorItems[0].tag.RepairCost
-execute if entity @s[tag=legs] run execute store result score @s XPcost run data get entity @s ArmorItems[1].tag.RepairCost
-execute if entity @s[tag=chest] run execute store result score @s XPcost run data get entity @s ArmorItems[2].tag.RepairCost
-execute if entity @s[tag=helm] run execute store result score @s XPcost run data get entity @s ArmorItems[3].tag.RepairCost
+execute if entity @s[tag=held] store result score @s XPcost run data get entity @s HandItems[0].tag.RepairCost
+execute if entity @s[tag=feet] store result score @s XPcost run data get entity @s ArmorItems[0].tag.RepairCost
+execute if entity @s[tag=legs] store result score @s XPcost run data get entity @s ArmorItems[1].tag.RepairCost
+execute if entity @s[tag=chest] store result score @s XPcost run data get entity @s ArmorItems[2].tag.RepairCost
+execute if entity @s[tag=helm] store result score @s XPcost run data get entity @s ArmorItems[3].tag.RepairCost
 scoreboard players set @s[scores={XPcost=..12}] XPcost 12
 
-execute if entity @s[tag=held] run execute store result score @s LapisCost run data get entity @s HandItems[0].tag.LapisCost
-execute if entity @s[tag=feet] run execute store result score @s LapisCost run data get entity @s ArmorItems[0].tag.LapisCost
-execute if entity @s[tag=legs] run execute store result score @s LapisCost run data get entity @s ArmorItems[1].tag.LapisCost
-execute if entity @s[tag=chest] run execute store result score @s LapisCost run data get entity @s ArmorItems[2].tag.LapisCost
-execute if entity @s[tag=helm] run execute store result score @s LapisCost run data get entity @s ArmorItems[3].tag.LapisCost
+execute if entity @s[tag=held] store result score @s LapisCost run data get entity @s HandItems[0].tag.LapisCost
+execute if entity @s[tag=feet] store result score @s LapisCost run data get entity @s ArmorItems[0].tag.LapisCost
+execute if entity @s[tag=legs] store result score @s LapisCost run data get entity @s ArmorItems[1].tag.LapisCost
+execute if entity @s[tag=chest] store result score @s LapisCost run data get entity @s ArmorItems[2].tag.LapisCost
+execute if entity @s[tag=helm] store result score @s LapisCost run data get entity @s ArmorItems[3].tag.LapisCost
 scoreboard players set @s[scores={LapisCost=..4}] LapisCost 4
 
 scoreboard players set @s MaterialCost 4

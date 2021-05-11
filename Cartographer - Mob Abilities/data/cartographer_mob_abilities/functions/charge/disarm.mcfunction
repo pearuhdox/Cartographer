@@ -6,7 +6,7 @@ execute unless entity @s[scores={ability_charge=1..2}] run scoreboard players se
 execute unless entity @s[scores={ability_charge=1..2}] run scoreboard players set @s mob_move_red 31
 execute unless entity @s[scores={ability_charge=1..2}] run scoreboard players set @s mob_sturdy 31
 
-execute unless entity @s[scores={ability_charge=1..2}] run execute as @s at @s positioned ^ ^ ^3 run particle minecraft:effect ~ ~0.2 ~ 1.2 0 1.2 0 50
+execute unless entity @s[scores={ability_charge=1..2}] positioned ^ ^ ^3 run particle minecraft:effect ~ ~0.2 ~ 1.2 0 1.2 0 50
 
 execute unless entity @s[scores={ability_charge=2}] run scoreboard players add @s ability_charge 1
 

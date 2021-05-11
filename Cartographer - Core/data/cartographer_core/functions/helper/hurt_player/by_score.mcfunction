@@ -6,7 +6,7 @@
 # Description: Deals damage to the callee (intended for players).
 # Damage taken is equal to the callee's "damage_queue" score.
 ########################################
-
+tag @s add gmr_frozen
 gamerule showDeathMessages false
 
 scoreboard players add $giant_count susile_count 1
@@ -41,5 +41,3 @@ execute if score $giant_count susile_count matches 5 run data modify entity 0000
 execute if score $giant_count susile_count matches 6 run data modify entity 00000c22-0000-101f-0000-2e2a00000000 Owner set from entity @s UUID
 execute if score $giant_count susile_count matches 7 run data modify entity 00000c23-0000-101f-0000-2e2a00000000 Owner set from entity @s UUID
 execute if score $giant_count susile_count matches 8 run data modify entity 00000c24-0000-101f-0000-2e2a00000000 Owner set from entity @s UUID
-
-schedule function cartographer_core:load/fix_gamerules 3t

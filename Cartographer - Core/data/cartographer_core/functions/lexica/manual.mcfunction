@@ -6,9 +6,10 @@
 # Description: Runs the basic manual dialogue.
 ########################################
 
+tag @s add gmr_frozen
 gamerule sendCommandFeedback false
-schedule function cartographer_core:load/fix_gamerules 2t
-schedule function cartographer_core:load/gamerule_states 3t
+
+
 
 playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
@@ -34,4 +35,3 @@ function cartographer_mob_abilities:lexica_calls/header
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 
-schedule function cartographer_core:load/command_feedback 1t

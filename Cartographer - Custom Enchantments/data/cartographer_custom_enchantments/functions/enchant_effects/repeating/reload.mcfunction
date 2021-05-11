@@ -61,8 +61,8 @@ execute if entity @s[scores={helper_ammo=8,repeating=11..17},nbt={Inventory:[{Sl
 function suso.player_data:put/do
 
 
-execute if entity @s[scores={repeating=1..7}] run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
-execute if entity @s[scores={repeating=11..17}] run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
+execute if entity @s[scores={repeating=1..7}] in minecraft:overworld run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
+execute if entity @s[scores={repeating=11..17}] in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
 
 execute at @s run playsound minecraft:block.chest.locked player @a[distance=..8] ~ ~ ~ 10 2
 

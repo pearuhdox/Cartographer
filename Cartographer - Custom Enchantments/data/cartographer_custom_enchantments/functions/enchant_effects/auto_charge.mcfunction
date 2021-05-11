@@ -4,7 +4,7 @@ tellraw @a[tag=debug,scores={auto_charge=1..}] [{"text":"[Debug] ","color":"red"
 tag @s add doing_auto_charge
 
 #Sfx
-execute if entity @s[scores={auto_charge=1..}] run execute at @s run playsound minecraft:item.crossbow.loading_end player @a[distance=..8] ~ ~ ~ 10 0.8
+execute if entity @s[scores={auto_charge=1..}] at @s run playsound minecraft:item.crossbow.loading_end player @a[distance=..8] ~ ~ ~ 10 0.8
 
 #Recharging
 execute if entity @s[scores={auto_charge=1}] run data modify storage item:load path set from entity @s Inventory[{Slot:0b}]
@@ -60,40 +60,40 @@ execute if score $auto_repeat repeating matches ..1 run data modify block 420690
 execute if score $auto_repeat repeating matches ..1 run data modify block 4206901 0 4206900 Items[0].tag.Charged set value 1b
 
 #If there is NO Repeating but there is Multishot
-execute if score $auto_repeat repeating matches ..1 run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append value {id:"minecraft:arrow",Count:1b}
-execute if score $auto_repeat repeating matches ..1 run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append value {id:"minecraft:arrow",Count:1b}
+execute if score $auto_repeat repeating matches ..1 if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append value {id:"minecraft:arrow",Count:1b}
+execute if score $auto_repeat repeating matches ..1 if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append value {id:"minecraft:arrow",Count:1b}
 
 #If there is Repeating
 execute if score $auto_repeat repeating matches 1.. run function suso.player_data:get/do
 
 #Add to our Projectile List Array if we need to (aka there is already a loaded ammo.)
-execute if score $auto_repeat repeating matches 1.. run execute if data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Quiver append from block 4206901 0 4206900 Items[0].tag.Quiver[0]
-execute if score $auto_repeat repeating matches 1.. run execute if data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Charged set value 1b
+execute if score $auto_repeat repeating matches 1.. if data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Quiver append from block 4206901 0 4206900 Items[0].tag.Quiver[0]
+execute if score $auto_repeat repeating matches 1.. if data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Charged set value 1b
 
 #Create our first loaded ammo based off "LastFired".
-execute if score $auto_repeat repeating matches 1.. run execute unless data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Charged set value 1b
-execute if score $auto_repeat repeating matches 1.. run execute unless data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Quiver append from block 4206901 0 4206900 Items[0].tag.LastFired
+execute if score $auto_repeat repeating matches 1.. unless data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Charged set value 1b
+execute if score $auto_repeat repeating matches 1.. unless data block 4206901 0 4206900 Items[0].tag.Quiver[0].id run data modify block 4206901 0 4206900 Items[0].tag.Quiver append from block 4206901 0 4206900 Items[0].tag.LastFired
 
 #Then set our Ammo to load to the lowest value in the array.
 execute if score $auto_repeat repeating matches 1.. run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles set value []
 execute if score $auto_repeat repeating matches 1.. run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from block 4206901 0 4206900 Items[0].tag.Quiver[0]
 
 #If there is Repeating and Multishot
-execute if score $auto_repeat repeating matches 1.. run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage suso:pldata working_data.RepeatingList[0]
-execute if score $auto_repeat repeating matches 1.. run execute if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage suso:pldata working_data.RepeatingList[0]
+execute if score $auto_repeat repeating matches 1.. if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage suso:pldata working_data.RepeatingList[0]
+execute if score $auto_repeat repeating matches 1.. if block 4206901 0 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206901 0 4206900 Items[0].tag.ChargedProjectiles append from storage suso:pldata working_data.RepeatingList[0]
 
 execute if score $auto_repeat repeating matches 1.. run function suso.player_data:put/do
 
-execute if entity @s[scores={auto_charge=1}] run loot replace entity @s hotbar.0 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=2}] run loot replace entity @s hotbar.1 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=3}] run loot replace entity @s hotbar.2 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=4}] run loot replace entity @s hotbar.3 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=5}] run loot replace entity @s hotbar.4 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=6}] run loot replace entity @s hotbar.5 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=7}] run loot replace entity @s hotbar.6 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=8}] run loot replace entity @s hotbar.7 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=9}] run loot replace entity @s hotbar.8 1 mine 4206901 0 4206900 air{drop_contents:1b}
-execute if entity @s[scores={auto_charge=10}] run loot replace entity @s weapon.offhand 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=1}] in minecraft:overworld run loot replace entity @s hotbar.0 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=2}] in minecraft:overworld run loot replace entity @s hotbar.1 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=3}] in minecraft:overworld run loot replace entity @s hotbar.2 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=4}] in minecraft:overworld run loot replace entity @s hotbar.3 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=5}] in minecraft:overworld run loot replace entity @s hotbar.4 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=6}] in minecraft:overworld run loot replace entity @s hotbar.5 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=7}] in minecraft:overworld run loot replace entity @s hotbar.6 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=8}] in minecraft:overworld run loot replace entity @s hotbar.7 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=9}] in minecraft:overworld run loot replace entity @s hotbar.8 1 mine 4206901 0 4206900 air{drop_contents:1b}
+execute if entity @s[scores={auto_charge=10}] in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine 4206901 0 4206900 air{drop_contents:1b}
 
 #Remove the repeating tag so it shows an updated ammo count.
 tag @s remove showing_repeating

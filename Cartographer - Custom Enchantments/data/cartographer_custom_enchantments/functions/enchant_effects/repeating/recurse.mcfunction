@@ -10,11 +10,11 @@ execute if data storage suso:pldata working_data.RepeatingTest.id run tag @s add
 
 execute unless entity @s[tag=loading_tipped] run scoreboard players set $arrow_type repeating 2
 execute unless entity @s[tag=loading_tipped] run data modify storage suso:pldata working_data.RepeatingTest set from entity @s Inventory[{id:"minecraft:spectral_arrow"}]
-execute unless entity @s[tag=loading_tipped] run execute if data storage suso:pldata working_data.RepeatingTest.id run tag @s add loading_spectral
+execute unless entity @s[tag=loading_tipped] if data storage suso:pldata working_data.RepeatingTest.id run tag @s add loading_spectral
 
-execute unless entity @s[tag=loading_tipped] run execute unless entity @s[tag=loading_spectral] run scoreboard players set $arrow_type repeating 3
-execute unless entity @s[tag=loading_tipped] run execute unless entity @s[tag=loading_spectral] run data modify storage suso:pldata working_data.RepeatingTest set from entity @s Inventory[{id:"minecraft:arrow"}]
-execute unless entity @s[tag=loading_tipped] run execute unless entity @s[tag=loading_spectral] run execute if data storage suso:pldata working_data.RepeatingTest.id run tag @s add loading_normal
+execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] run scoreboard players set $arrow_type repeating 3
+execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] run data modify storage suso:pldata working_data.RepeatingTest set from entity @s Inventory[{id:"minecraft:arrow"}]
+execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] if data storage suso:pldata working_data.RepeatingTest.id run tag @s add loading_normal
 
 execute unless data storage suso:pldata working_data.RepeatingTest.id run scoreboard players set @s helper_ammo 0
 

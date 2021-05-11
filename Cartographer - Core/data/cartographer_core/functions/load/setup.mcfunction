@@ -97,9 +97,6 @@ scoreboard objectives add epf_fall dummy
 
 scoreboard objectives add ca.epf dummy
 
-#Add score for difficulty
-execute as @p at @s run execute unless entity @s[scores={no_hndbk_pmpt=0..}] run scoreboard players set @s no_hndbk_pmpt 0
-
 #Setup a score for any and all constant values.
 scoreboard objectives add ca.CONSTANT dummy
 
@@ -115,6 +112,9 @@ scoreboard players set $core.difficulty ca.CONSTANT 0
 
 #Gamerule tracking and management
 scoreboard objectives add ca.gamerule dummy
+scoreboard objectives add ca.reload_type dummy
+#For Custom Enchantments
+scoreboard objectives add ca.ui_loc dummy
 
 execute unless score $gl_reload_msg ca.gamerule matches 0.. run scoreboard players set $gl_reload_msg ca.gamerule 0
 execute unless score $lexica_stand ca.gamerule matches 0.. run scoreboard players set $lexica_stand ca.gamerule 0
@@ -128,6 +128,10 @@ scoreboard objectives add lexica_trig trigger
 
 scoreboard objectives add ca.use_lectern minecraft.custom:minecraft.interact_with_lectern
 
+#Create options trigger score (for player options)
+scoreboard objectives add options_trig trigger
+scoreboard players enable @a options_trig
+
 #Create the anvil, enchant table, and grindstone destruction scores.
 scoreboard objectives add use_anvil minecraft.custom:minecraft.interact_with_anvil
 scoreboard objectives add use_grindstone minecraft.custom:minecraft.interact_with_grindstone
@@ -138,6 +142,7 @@ recipe give @a cartographer_core:lexica_dummy
 #Schedule the loading message.
 execute as @a at @s run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 1 0.75
 
+tag @a add gmr_frozen
 schedule function cartographer_core:load/reload_panel 5t
 schedule function cartographer_core:load/force_load 1t
 

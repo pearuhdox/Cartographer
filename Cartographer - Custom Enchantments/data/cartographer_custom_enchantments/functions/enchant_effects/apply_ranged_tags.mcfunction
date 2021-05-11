@@ -22,8 +22,8 @@ execute if entity @s[scores={putrefy=1..}] run tag @e[type=#cartographer_core:ar
 execute if entity @s[scores={flash=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
 execute if entity @s[scores={volatile=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] volatile 1
-execute if entity @s[scores={volatile=1..}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] at @s run execute store result score @s ca.vol_dmg run data get entity @s damage 10
-execute if entity @s[scores={volatile=1..}] run execute as @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] at @s run data merge entity @s {damage:0.0d}
+execute if entity @s[scores={volatile=1..}] as @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] at @s store result score @s ca.vol_dmg run data get entity @s damage 10
+execute if entity @s[scores={volatile=1..}] as @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] at @s run data merge entity @s {damage:0.0d}
 execute if entity @s[scores={volatile=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
 execute if entity @s[scores={volatile=1..},nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:flame",lvl:1s}]}}}] at @s run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add vol_flame

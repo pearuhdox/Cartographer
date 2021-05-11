@@ -16,7 +16,7 @@ execute unless entity @s[tag=true] run function cartographer_core:helper/hurt_pl
 execute unless entity @s[tag=true] run function cartographer_core:helper/hurt_player/true_damage/save_resistance
 
 #applying resistance
-execute unless entity @s[tag=true] run execute if score damage= damage_queue matches 1.. if score @s ca.res.dur matches 1.. unless score $check_too_low ca.res.dur matches 1 run function cartographer_core:helper/hurt_player/true_damage/resistance
+execute unless entity @s[tag=true] if score damage= damage_queue matches 1.. if score @s ca.res.dur matches 1.. unless score $check_too_low ca.res.dur matches 1 run function cartographer_core:helper/hurt_player/true_damage/resistance
 execute unless entity @s[tag=true] run scoreboard players operation damage= damage_queue /= 10 ca.CONSTANT
 
 execute unless entity @s[tag=true] run scoreboard players set $check_too_low ca.res.dur 0

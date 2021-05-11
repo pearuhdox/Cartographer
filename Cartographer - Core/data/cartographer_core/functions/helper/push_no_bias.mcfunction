@@ -6,11 +6,11 @@
 # Description: Based on a derived vector, pushes the mob opposite its facing direction.
 ########################################
 
-execute as @s at @s run tp @e[type=armor_stand,tag=vector] ^ ^ ^2
+execute run tp @e[type=armor_stand,tag=vector] ^ ^ ^2
 execute as @e[type=armor_stand,tag=vector,limit=1,sort=nearest] at @s run tp @s ~ ~-0.4 ~
 
 # Pushes a mob based on a given existing vector armor stand.
-execute as @s at @s run function cartographer_core:helper/vector
+execute run function cartographer_core:helper/vector
 
 scoreboard players add @s vectorY 5
 

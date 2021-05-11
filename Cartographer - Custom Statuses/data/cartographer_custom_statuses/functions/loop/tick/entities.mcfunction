@@ -1,8 +1,4 @@
-execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:10b}]}] run function cartographer_custom_statuses:inflict/apply_status
-execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:11b}]}] run function cartographer_custom_statuses:inflict/apply_status
-execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:12b}]}] run function cartographer_custom_statuses:inflict/apply_status
-execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:13b}]}] run function cartographer_custom_statuses:inflict/apply_status
-execute if entity @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:9b,Amplifier:14b}]}] run function cartographer_custom_statuses:inflict/apply_status
+execute if entity @s[type=#cartographer_core:hostile] if data entity @s ActiveEffects[{Id:9b}] run function cartographer_custom_statuses:inflict/apply_status
 
 #Run Stunned
 execute as @s[type=#cartographer_core:hostile,scores={effect_stunned=1..}] at @s run function cartographer_custom_statuses:visuals/stunned

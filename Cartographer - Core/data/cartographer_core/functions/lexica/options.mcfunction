@@ -6,9 +6,10 @@
 # Description: Runs the dialogue box for options.
 ########################################
 
+tag @s add gmr_frozen
 gamerule sendCommandFeedback false
-schedule function cartographer_core:load/fix_gamerules 2t
-schedule function cartographer_core:load/gamerule_states 3t
+
+
 
 execute as @p at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
@@ -31,4 +32,3 @@ execute if entity @p[gamemode=creative] run function cartographer_mob_abilities:
 
 tellraw @p {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 
-schedule function cartographer_core:load/command_feedback 1t

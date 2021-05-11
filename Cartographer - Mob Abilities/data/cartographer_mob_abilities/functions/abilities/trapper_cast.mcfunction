@@ -34,8 +34,8 @@ execute as @e[tag=!target,tag=trap_projectile] at @s run tp @s ~ ~ ~ facing enti
 execute as @e[tag=!target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~-20 ~
 execute as @e[tag=!target,tag=trap_projectile] run tag @s add target
 
-execute unless entity @a[distance=11..20] run execute as @e[tag=target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~ ~2
-execute if entity @a[distance=11..20] run execute as @e[tag=target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~ ~3
+execute unless entity @a[distance=11..20] as @e[tag=target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~ ~2
+execute if entity @a[distance=11..20] as @e[tag=target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~ ~3
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking

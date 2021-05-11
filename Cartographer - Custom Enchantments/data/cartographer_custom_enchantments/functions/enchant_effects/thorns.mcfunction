@@ -8,7 +8,7 @@ scoreboard players operation $thorns t_vuln = @s t_vuln
 scoreboard players operation $thorns t_decay = @s t_decay
 scoreboard players operation $thorns t_knock = @s t_knock
 
-execute at @s run execute as @e[type=#cartographer_core:hostile,tag=thorns_mark,distance=..30] at @s run function cartographer_custom_enchantments:enchant_effects/thorns/effects
+execute at @s as @e[type=#cartographer_core:hostile,tag=thorns_mark,distance=..30] at @s run function cartographer_custom_enchantments:enchant_effects/thorns/effects
 
 execute at @s run playsound minecraft:enchant.thorns.hit ambient @a[distance=..8] ~ ~ ~ 1.5 1
 

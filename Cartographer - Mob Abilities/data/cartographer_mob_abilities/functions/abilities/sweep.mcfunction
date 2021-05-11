@@ -3,24 +3,24 @@ execute if score $global helper_diff matches 3.. if entity @s[scores={recast_cou
 
 scoreboard players set @s ability_charge 0
 
-execute as @s at @s positioned ^ ^ ^1.5 run particle minecraft:sweep_attack ~ ~1 ~ 0.4 0 0.4 0.2 12
-execute as @s at @s positioned ^ ^ ^2.5 run particle minecraft:sweep_attack ~ ~1 ~ 0.3 0 0.3 0.2 9
-execute as @s at @s positioned ^ ^ ^3.5 run particle minecraft:sweep_attack ~ ~1 ~ 0.2 0 0.2 0.2 6
+execute positioned ^ ^ ^1.5 run particle minecraft:sweep_attack ~ ~1 ~ 0.4 0 0.4 0.2 12
+execute positioned ^ ^ ^2.5 run particle minecraft:sweep_attack ~ ~1 ~ 0.3 0 0.3 0.2 9
+execute positioned ^ ^ ^3.5 run particle minecraft:sweep_attack ~ ~1 ~ 0.2 0 0.2 0.2 6
 
 playsound minecraft:entity.player.attack.sweep hostile @a[distance=..12] ~ ~ ~ 3 0.5
 playsound minecraft:entity.player.attack.crit hostile @a[distance=..12] ~ ~ ~ 3 0.5
 
-execute as @s at @s positioned ^ ^0.3 ^1.5 run execute as @a[distance=..1.6,tag=!swept] at @s run scoreboard players set @s damage_queue 6
-execute as @s at @s positioned ^ ^0.3 ^1.5 run execute as @a[distance=..1.6,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
-execute as @s at @s positioned ^ ^0.3 ^1.5 run execute as @a[distance=..1.6,tag=!swept] at @s run tag @s add swept
+execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run scoreboard players set @s damage_queue 6
+execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
+execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run tag @s add swept
 
-execute as @s at @s positioned ^ ^0.3 ^2.5 run execute as @a[distance=..1.4,tag=!swept] at @s run scoreboard players set @s damage_queue 6
-execute as @s at @s positioned ^ ^0.3 ^2.5 run execute as @a[distance=..1.4,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
-execute as @s at @s positioned ^ ^0.3 ^2.5 run execute as @a[distance=..1.4,tag=!swept] at @s run tag @s add swept
+execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run scoreboard players set @s damage_queue 6
+execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
+execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run tag @s add swept
 
-execute as @s at @s positioned ^ ^0.3 ^3.5 run execute as @a[distance=..1.2,tag=!swept] at @s run scoreboard players set @s damage_queue 6
-execute as @s at @s positioned ^ ^0.3 ^3.5 run execute as @a[distance=..1.2,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
-execute as @s at @s positioned ^ ^0.3 ^3.5 run execute as @a[distance=..1.2,tag=!swept] at @s run tag @s add swept
+execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run scoreboard players set @s damage_queue 6
+execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
+execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run tag @s add swept
 
 data modify entity @s NoAI set value 0
 

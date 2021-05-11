@@ -89,8 +89,11 @@ function cartographer_custom_enchantments:loop/tick/reset
 
 
 #Action bar indicators for Repeating, Echo, and Second Wind
-execute as @a[scores={ui_location=0}] at @s run function cartographer_custom_enchantments:helper/indicators/action_bar
-execute as @a[scores={ui_location=1}] at @s run function cartographer_custom_enchantments:helper/indicators/subtitle
+execute if score $gl_ui_loc ca.gamerule matches 0 as @a[scores={ca.ui_loc=0}] at @s run function cartographer_custom_enchantments:helper/indicators/action_bar
+execute if score $gl_ui_loc ca.gamerule matches 1 as @a[scores={ca.ui_loc=0}] at @s run function cartographer_custom_enchantments:helper/indicators/subtitle
+
+execute as @a[scores={ca.ui_loc=1}] at @s run function cartographer_custom_enchantments:helper/indicators/action_bar
+execute as @a[scores={ca.ui_loc=2}] at @s run function cartographer_custom_enchantments:helper/indicators/subtitle
 
 tag @a[scores={repeating=0}] remove showing_repeating
 tag @a[scores={echo=0}] remove showing_echo

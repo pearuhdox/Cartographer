@@ -56,7 +56,7 @@ kill 002f80c0-0001-f879-003a-2a2300005860
 schedule function cartographer_mob_abilities:load/create_uuids 3t
 
 #Set default of independent difficulty.
-execute unless score $cart_ind_diff global_options matches 0.. run scoreboard players set $cart_ind_diff global_options 0
+execute unless score $gl_ind_diff ca.gamerule matches 0.. run scoreboard players set $gl_ind_diff ca.gamerule 0
 
 #Reset all token data on all players.
 tag @a remove token_reset
