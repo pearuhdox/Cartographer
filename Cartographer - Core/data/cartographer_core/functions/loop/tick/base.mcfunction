@@ -81,8 +81,8 @@ execute as @a at @s if score @s options_trig matches 1.. run function cartograph
 execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/tick
 
 #Set defaults on players (new spawns).
-scoreboard players set @a[tag=!spawned] ehp_listen 1
-scoreboard players set @a[tag=!spawned] phe_listen 1
+scoreboard players add @a[tag=!spawned] ehp_listen 1
+scoreboard players add @a[tag=!spawned] phe_listen 1
 scoreboard players set @a[tag=!spawned] ca.reload_type 0
 scoreboard players set @a[tag=!spawned] ca.ui_loc 0
 tag @a[tag=!spawned] add spawned

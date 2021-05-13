@@ -47,10 +47,11 @@ execute if score @s lexica_trig matches 234 run function cartographer_custom_enc
 execute if score @s lexica_trig matches 235 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/evasion
 execute if score @s lexica_trig matches 236 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/frenzy
 execute if score @s lexica_trig matches 237 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/lifesteal
-execute if score @s lexica_trig matches 238 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/regeneration
-execute if score @s lexica_trig matches 239 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/satiation
-execute if score @s lexica_trig matches 240 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/second_wind
-execute if score @s lexica_trig matches 241 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/spurs
+execute if score @s lexica_trig matches 238 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/rally
+execute if score @s lexica_trig matches 239 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/regeneration
+execute if score @s lexica_trig matches 240 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/satiation
+execute if score @s lexica_trig matches 241 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/second_wind
+execute if score @s lexica_trig matches 242 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/spurs
 
 execute if score @s lexica_trig matches 250 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/auto_charge
 execute if score @s lexica_trig matches 251 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/conductive

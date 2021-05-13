@@ -1,6 +1,39 @@
 data modify storage ca.susu:enchants temp_item set value {}
 data modify storage ca.susu:enchants temp_item set from entity @s Inventory[{Slot:-106b}]
 
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:leather_boots"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:leather_leggings"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:leather_chestplate"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:leather_helmet"} run data modify storage ca.susu:enchants temp_item set value {}
+
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:golden_boots"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:golden_leggings"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:golden_chestplate"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:golden_helmet"} run data modify storage ca.susu:enchants temp_item set value {}
+
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:chainmail_boots"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:chainmail_leggings"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:chainmail_chestplate"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:chainmail_helmet"} run data modify storage ca.susu:enchants temp_item set value {}
+
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:iron_boots"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:iron_leggings"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:iron_chestplate"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:iron_helmet"} run data modify storage ca.susu:enchants temp_item set value {}
+
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:diamond_boots"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:diamond_leggings"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:diamond_chestplate"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:diamond_helmet"} run data modify storage ca.susu:enchants temp_item set value {}
+
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:netherite_boots"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:netherite_leggings"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:netherite_chestplate"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:netherite_helmet"} run data modify storage ca.susu:enchants temp_item set value {}
+
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:turtle_helmet"} run data modify storage ca.susu:enchants temp_item set value {}
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:elytra"} run data modify storage ca.susu:enchants temp_item set value {}
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Adrenaline
 scoreboard players operation @s adrenaline += $temp ca.susu
 
@@ -58,6 +91,9 @@ scoreboard players operation @s hydraulic += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Lifesteal
 scoreboard players operation @s lifesteal += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Opportunist
+scoreboard players operation @s opportunist += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.PinDown
 scoreboard players operation @s pin_down += $temp ca.susu
 
@@ -67,7 +103,9 @@ scoreboard players operation @s point_blank += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Putrefy
 scoreboard players operation @s putrefy += $temp ca.susu
 
-#TODO: Why does repeating add +10 levels?
+execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Rally
+scoreboard players operation @s rally += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Repeating
 execute if score $temp ca.susu matches 1.. run scoreboard players add $temp ca.susu 10
 scoreboard players operation @s repeating += $temp ca.susu

@@ -17,7 +17,7 @@ function cartographer_loot_additions:loop/tick/entities
 function cartographer_mimics:loop/tick/entities
 
 #Run Mob Abilities Effects
-function cartographer_mob_abilities:loop/tick/entities
+execute if entity @s[tag=!item_frame] run function cartographer_mob_abilities:loop/tick/entities
 
 #Run Potion Injector Effects - n/a - Currently there are no entity effects for Potion Injector
 

@@ -75,8 +75,13 @@ scoreboard players set @a helper_milk 0
 
 scoreboard players remove @a[scores={helper_repeat=2..}] helper_repeat 1
 
-scoreboard players set @s ca.dmg_resist_sw 0
-scoreboard players set @s ca.sw_fall 0
+scoreboard players set @a helper_sneak 0
+
+scoreboard players set @a ca.dmg_resist_sw 0
+scoreboard players set @a ca.sw_fall 0
+
+scoreboard players set @a ca.rally_amt 0
+scoreboard players set @a ca.rally_rst 0
 
 advancement revoke @a only cartographer_custom_enchantments:second_wind_projectile
 advancement revoke @a only cartographer_custom_enchantments:second_wind_explosion

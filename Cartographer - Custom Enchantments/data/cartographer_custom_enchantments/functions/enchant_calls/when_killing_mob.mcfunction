@@ -40,6 +40,9 @@ function cartographer_custom_enchantments:enchant_effects/vicious
 #Vanquisher
 function cartographer_custom_enchantments:enchant_effects/vanquisher
 
+#Rally - Can trigger on any type of attack.
+execute if entity @s[scores={ca.atk_time=0}] run function cartographer_custom_enchantments:enchant_effects/rally/restore_health
+
 #Echo Charge Restore
 function cartographer_custom_enchantments:enchant_effects/echo_restore
 

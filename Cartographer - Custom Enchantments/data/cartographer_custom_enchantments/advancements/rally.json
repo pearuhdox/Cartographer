@@ -1,15 +1,117 @@
 {
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:1}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:2}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:3}"
+                    }
+                ]
+            }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:4}"
+                    }
+                ]
+            }
+        },
+        "find5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:5}"
+                    }
+                ]
+            }
+        },
+        "find6": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:6}"
+                    }
+                ]
+            }
+        },
+        "find7": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:7}"
+                    }
+                ]
+            }
+        },
+        "find8": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:8}"
+                    }
+                ]
+            }
+        },
+        "find9": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:9}"
+                    }
+                ]
+            }
+        },
+        "find10": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Rally:10}"
+                    }
+                ]
+            }
+        }
+    },
     "display": {
         "title": {
-            "text": "Lifesteal      ",
+            "text": "Rally                    ",
             "color": "aqua"
         },
         "description": {
-            "color": "white",
-            "text": "Restores health when the user kills a mob."
+            "text": "When attacked, the user can restore a percentage of the lost health by attacking quickly.",
+            "color": "white"
         },
         "icon": {
-            "item": "minecraft:wither_skeleton_skull"
+            "item": "minecraft:red_dye"
         },
         "frame": "task",
         "show_toast": true,
@@ -30,110 +132,8 @@
             "find10"
         ]
     ],
-    "criteria": {
-        "find1": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:1}"
-                    }
-                ]
-            }
-        },
-        "find2": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:2}"
-                    }
-                ]
-            }
-        },
-        "find3": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:3}"
-                    }
-                ]
-            }
-        },
-        "find4": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:4}"
-                    }
-                ]
-            }
-        },
-        "find5": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:5}"
-                    }
-                ]
-            }
-        },
-        "find6": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:6}"
-                    }
-                ]
-            }
-        },
-        "find7": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:7}"
-                    }
-                ]
-            }
-        },
-        "find8": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:8}"
-                    }
-                ]
-            }
-        },
-        "find9": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:9}"
-                    }
-                ]
-            }
-        },
-        "find10": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Lifesteal:10}"
-                    }
-                ]
-            }
-        }
-    },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/lifesteal"
+        "function": "cartographer_custom_enchantments:descriptions/rally"
       },
-    "parent": "cartographer_custom_enchantments:frenzy"
+    "parent": "cartographer_custom_enchantments:lifesteal"
 }

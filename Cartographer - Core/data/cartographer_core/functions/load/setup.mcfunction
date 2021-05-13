@@ -100,14 +100,23 @@ scoreboard objectives add ca.epf dummy
 #Setup a score for any and all constant values.
 scoreboard objectives add ca.CONSTANT dummy
 
-scoreboard players set $100 ca.CONSTANT 100
 scoreboard players set $-1 ca.CONSTANT -1
-scoreboard players set $1 ca.CONSTANT 1
+
+scoreboard players set $1000 ca.CONSTANT 1000
+scoreboard players set $100 ca.CONSTANT 100
 scoreboard players set $10 ca.CONSTANT 10
 scoreboard players set $20 ca.CONSTANT 20
+
+scoreboard players set $1 ca.CONSTANT 1
 scoreboard players set $2 ca.CONSTANT 2
 scoreboard players set $3 ca.CONSTANT 3
 scoreboard players set $4 ca.CONSTANT 4
+scoreboard players set $5 ca.CONSTANT 5
+scoreboard players set $6 ca.CONSTANT 6
+scoreboard players set $7 ca.CONSTANT 7
+scoreboard players set $8 ca.CONSTANT 8
+scoreboard players set $9 ca.CONSTANT 9
+
 scoreboard players set $core.difficulty ca.CONSTANT 0
 
 #Gamerule tracking and management

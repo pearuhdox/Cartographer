@@ -27,6 +27,7 @@ execute if score @s lifesteal matches 11.. run scoreboard players set @s lifeste
 execute if score @s pin_down matches 2.. run scoreboard players set @s pin_down 1
 execute if score @s point_blank matches 4.. run scoreboard players set @s point_blank 3
 execute if score @s putrefy matches 2.. run scoreboard players set @s putrefy 1
+execute if score @s rally matches 11.. run scoreboard players set @s rally 10
 execute if score @s regeneration matches 11.. run scoreboard players set @s regeneration 10
 execute if score @s repeating matches 8..10 run scoreboard players set @s repeating 7
 execute if score @s repeating matches 18.. run scoreboard players set @s repeating 17
@@ -36,6 +37,7 @@ execute if score @s sapper matches 11.. run scoreboard players set @s sapper 10
 execute if score @s satiation matches 4.. run scoreboard players set @s satiation 3
 execute if score @s second_wind matches 5.. run scoreboard players set @s second_wind 4
 execute if score @s sharpshot matches 4.. run scoreboard players set @s sharpshot 3
+execute if score @s opportunist matches 4.. run scoreboard players set @s opportunist 3
 execute if score @s overload matches 4.. run scoreboard players set @s overload 3
 execute if score @s splintering matches 2.. run scoreboard players set @s splintering 1
 execute if score @s spurs matches 2.. run scoreboard players set @s spurs 1

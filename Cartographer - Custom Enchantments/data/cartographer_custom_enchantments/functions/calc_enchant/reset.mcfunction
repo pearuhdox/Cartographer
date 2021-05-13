@@ -29,11 +29,13 @@ scoreboard players set @s frost 0
 scoreboard players set @s hunter 0
 scoreboard players set @s[scores={helper_trident=0}] hydraulic 0
 scoreboard players set @s lifesteal 0
+scoreboard players set @s opportunist 0
 scoreboard players set @s point_blank 0
 scoreboard players set @s pin_down 0
 scoreboard players set @s putrefy 0
 scoreboard players set @s regeneration 0
 scoreboard players set @s vanquisher 0
+scoreboard players set @s rally 0
 scoreboard players set @s repeating 0
 scoreboard players set @s rend 0
 scoreboard players set @s[scores={helper_trident=0}] ricochet 0

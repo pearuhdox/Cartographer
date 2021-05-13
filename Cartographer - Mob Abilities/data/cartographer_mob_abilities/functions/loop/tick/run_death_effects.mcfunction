@@ -16,7 +16,7 @@ execute if data storage ca.death Data.CorpseCrawlerDrowned at @s run function ca
 execute if data storage ca.death Data.CorpseCrawlerHusk at @s run function cartographer_mob_abilities:passive/corpse_crawler_husk
 execute if data storage ca.death Data.CorpseCrawlerPiglin at @s run function cartographer_mob_abilities:passive/corpse_crawler_piglin
 execute if data storage ca.death Data.CorpseCrawlerZoglin at @s run function cartographer_mob_abilities:passive/corpse_crawler_zoglin
-
+execute if data storage ca.death Data.CorpseCrawlerSpider at @s run function cartographer_mob_abilities:passive/corpse_crawler_spider
 #Exalted
 execute if data storage ca.death Data.Exalted at @s run function cartographer_mob_abilities:passive/exalted
 

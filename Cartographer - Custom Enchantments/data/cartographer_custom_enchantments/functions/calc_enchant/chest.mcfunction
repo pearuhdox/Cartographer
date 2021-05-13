@@ -40,6 +40,9 @@ scoreboard players operation @s frenzy += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Lifesteal
 scoreboard players operation @s lifesteal += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Rally
+scoreboard players operation @s rally += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Regeneration
 scoreboard players operation @s regeneration += $temp ca.susu
 

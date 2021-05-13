@@ -42,6 +42,6 @@ execute if entity @s[scores={evocation=1..,fire_aspect=1..}] run scoreboard play
 execute if entity @s[scores={evocation=1..,committed=1..}] run scoreboard players operation @e[type=area_effect_cloud,tag=evocation_place,distance=..10] committed = @s[scores={evocation=1..}] committed
 execute if entity @s[scores={evocation=1..,knockback=1..}] run scoreboard players operation @e[type=area_effect_cloud,tag=evocation_place,distance=..10] knockback = @s[scores={evocation=1..}] knockback
 
-execute as @e[type=area_effect_cloud,tag=evocation_place] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/recurse_fix
+scoreboard players set @e[type=area_effect_cloud] helper_raycast 41
 
-execute as @e[type=area_effect_cloud,tag=evocation_place] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/swapper
+execute as @e[type=area_effect_cloud,tag=evocation_place] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/recurse_fix

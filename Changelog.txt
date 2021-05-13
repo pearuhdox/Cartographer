@@ -56,6 +56,9 @@ Custom Enchantments:
       - Stun duration and chance to stun are dependent on how charged the arrow shot is.
       - Maxes at 1 second and 70% chance, respectively.
  
+ - A new passive enchantment:
+    - Rally: When you are attacked by a mob, you can restore a portion of the health you lost by attacking quickly.
+
  - And a new curse enchantment (this has been in the code for a while but not fully implemented or finished):
     - Curse of Regret: Using the item inflicts 2 damage per level of Curse of Regret. (Maximum level is 5) [Custom Tag: {CurseRegret:1}]
       - Damage is negated by all sources of damage resistance.
@@ -99,6 +102,10 @@ Custom Enchantments:
 
  - Spectral Arrows now work with all Cartographer Bow and Crossbow enchantments.
 
+ - Armor items with passive enchantments will no longer apply those passive enchantments in your main or offhand.
+
+    Developer Commentary: This is a change to stop using an item intended to be worn providing effects in a slot it should not provide bonuses in.
+
  - The following enchantments now apply to Trident projectiles as if they were melee attacks.
     - Duelist
     - Hunter
@@ -134,6 +141,9 @@ Custom Enchantments:
 
  - Committed:
     - Duration increased to 4 seconds (from 3) to be consistent with other effects that inflict constant time potency debuffs. (Frostbite)
+
+ - Curse of Encumbering:
+    - Trueshot arrows lose damage bonus from Point Blank 50% slower.
 
  - Curse of Shattering:
     - Now takes 50% of the item's remaining durability, rather than reducing it to 1 durability.
@@ -307,6 +317,10 @@ Custom Enchantments:
   Developer Commentary: Transfiguration was a bit of a novelty enchantment. It was too low of a chance to actively be useful except at maximum level. The new version
   prevents it from being used to farm materials as easily, but allows it to trigger more commonly in exchange for an internal cooldown so it can't trigger too often.
   Suspicious Meat has Curse of Vanishing to limit the effectiveness of farming it. The drop is affected by Looting, so it can be a nice source of early game food.
+
+ - Trueshot:
+    - Trueshot arrows are affected twice as much by Sharpshot.
+    - Trueshot arrows lose damage bonus from Point Blank 50% faster.
 
  - Two Handed:
     - Item is now a "Compressed Item" not in a Knapsack. Can no longer be placed.
@@ -548,6 +562,8 @@ Death Effects (now called "Morbid Skills" in the Lexica):
       - Eggs can be destroyed before they hatch to prevent the enemy from spawning.
         - Eggs have 5 health.
     - Corpse Crawler now has a 50% chance to spawn an additional 4th egg, and a 75% chance to spawn the third egg.
+    - Corpse Crawler now has a subtype for cave spiders ("corpse_crawler_spider")
+    - Corpse Crawler mob stats have been retuned. Arthropods have less health and damage, Zoglins have less damage, more health. Undead are unchanged.
 
     Developer Commentary: Corpse Crawler is a death effect that activates immediately when the mob dies, with little to no counterplay.
     The above changes add some much needed counterplay and overall nerf the ability slightly, while keeping the feel and idea of the

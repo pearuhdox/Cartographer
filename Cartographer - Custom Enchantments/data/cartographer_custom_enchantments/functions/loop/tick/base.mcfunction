@@ -1,22 +1,22 @@
 
 #Reset attack speed and kbr on Echo users
-execute as @a[scores={echo=1..,echo_charges=0..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 echo_effect_spd 1024 add
+execute as @a[scores={echo=1..,echo_charges=0..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 "echo_effect_spd" 1024 add
 execute as @a[scores={echo=1..,echo_charges=..-1}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
 execute as @a[scores={echo=0}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
 
-execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance modifier add 5-3-8-15-180504192124 echo_effect_kbr 0.15 add
+execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance modifier add 5-3-8-15-180504192124 "echo_effect_kbr" 0.15 add
 execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
 execute as @a[scores={echo=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
 
 #Current recharge attack meter
-execute as @a[scores={ca.ce.cur_spd=2..}] run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 current_effect_spd 1024 add
+execute as @a[scores={ca.ce.cur_spd=2..}] run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "current_effect_spd" 1024 add
 execute as @a[scores={ca.ce.cur_spd=1}] run attribute @s minecraft:generic.attack_speed modifier remove 31-321-1818-514-20
 scoreboard players remove @a[scores={ca.ce.cur_spd=1..}] ca.ce.cur_spd 1
 
 #Apply the attack speed debuff for Evocation.
-execute as @a[scores={ca.evo_burn=2..20}] run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 evo_effect_spd -0.3 multiply
-execute as @a[scores={ca.evo_burn=22..40}] run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 evo_effect_spd -0.5 multiply
-execute as @a[scores={ca.evo_burn=42..60}] run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 evo_effect_spd -0.7 multiply
+execute as @a[scores={ca.evo_burn=2..20}] run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.3 multiply
+execute as @a[scores={ca.evo_burn=22..40}] run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.5 multiply
+execute as @a[scores={ca.evo_burn=42..60}] run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.7 multiply
 
 execute as @a[scores={ca.evo_burn=1}] run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
 execute as @a[scores={ca.evo_burn=21}] run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
@@ -63,6 +63,10 @@ execute as @a at @s run function cartographer_custom_enchantments:enchant_effect
 
 #Splintering
 execute as @a[scores={splintering=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering
+
+#Rally Timer
+execute as @a[scores={rally_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/rally/timer
+
 
 #Remove Two Handed Processed Tag - Fix Inventory Two Handed Bundled Items
 execute as @a[scores={ca.two_hand_del=1}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/return_offhand

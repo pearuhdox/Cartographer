@@ -87,6 +87,18 @@ scoreboard objectives add curse_regret dummy
 scoreboard objectives add curse_two_handed dummy
 scoreboard objectives add curse_encumber dummy
 
+scoreboard objectives add rally dummy
+scoreboard objectives add opportunist dummy
+
+scoreboard objectives add ca.rally_amt minecraft.custom:minecraft.damage_taken
+scoreboard objectives add ca.rally_rst dummy
+scoreboard objectives add ca.rally_crt dummy
+
+scoreboard objectives add rally_overflow dummy
+scoreboard objectives add rally_time dummy
+scoreboard objectives add rally_percent dummy
+scoreboard objectives add rally_bank dummy
+
 #Setup evasion bias score.
 scoreboard objectives add evasion_bias dummy
 
