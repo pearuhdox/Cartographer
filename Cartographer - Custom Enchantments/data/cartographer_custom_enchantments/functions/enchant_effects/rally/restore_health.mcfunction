@@ -10,7 +10,9 @@ scoreboard players operation @s ca.rally_rst *= $10 ca.CONSTANT
 
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}},tag=can_crit] run scoreboard players operation @s ca.rally_rst += @s ca.rally_crt
 
-scoreboard players operation @s ca.rally_rst /= $3 ca.CONSTANT
+scoreboard players operation @s ca.rally_rst *= $25 ca.CONSTANT
+scoreboard players operation @s ca.rally_rst /= $100 ca.CONSTANT
+
 
 scoreboard players operation $test_amt ca.rally_rst = @s ca.rally_rst
 

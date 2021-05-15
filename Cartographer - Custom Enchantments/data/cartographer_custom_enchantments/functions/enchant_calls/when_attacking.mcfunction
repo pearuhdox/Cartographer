@@ -29,6 +29,12 @@ execute if entity @s[scores={vicious=1..},advancements={entityid:player_hurt_ent
 #Vanquisher
 execute if entity @s[scores={vanquisher=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/vanquisher
 
+#Melee Opportunist
+execute if entity @s[scores={opportunist=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/opportunist/melee
+
+#Ranged Opportunist
+execute if entity @s[scores={opportunist=11..},advancements={entityid:player_hurt_entity={is_projectile=true}}] run function cartographer_custom_enchantments:enchant_effects/opportunist/ranged
+
 #Rally - Can trigger on any type of attack.
 execute if entity @s[scores={rally=1..,ca.atk_time=0}] run function cartographer_custom_enchantments:enchant_effects/rally/restore_health
 

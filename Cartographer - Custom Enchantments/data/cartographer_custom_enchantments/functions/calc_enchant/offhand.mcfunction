@@ -94,6 +94,9 @@ scoreboard players operation @s lifesteal += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Opportunist
 scoreboard players operation @s opportunist += $temp ca.susu
 
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:bow"} run scoreboard players add @s opportunist 10
+execute if data storage ca.susu:enchants temp_item{id:"minecraft:crossbow"} run scoreboard players add @s opportunist 10
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.PinDown
 scoreboard players operation @s pin_down += $temp ca.susu
 

@@ -90,6 +90,27 @@ scoreboard objectives add curse_encumber dummy
 scoreboard objectives add rally dummy
 scoreboard objectives add opportunist dummy
 
+scoreboard objectives add op_com dummy
+scoreboard objectives add op_dec dummy
+scoreboard objectives add op_due dummy
+scoreboard objectives add op_exe dummy
+scoreboard objectives add op_fro dummy
+scoreboard objectives add op_hun dummy
+scoreboard objectives add op_ove dummy
+scoreboard objectives add op_stu dummy
+scoreboard objectives add op_tra dummy
+scoreboard objectives add op_van dummy
+scoreboard objectives add op_vic dummy
+scoreboard objectives add op_fir dummy
+scoreboard objectives add op_sha dummy
+scoreboard objectives add op_smi dummy
+scoreboard objectives add op_ban dummy
+scoreboard objectives add op_kno dummy
+
+scoreboard objectives add op_dmg dummy
+
+scoreboard objectives add op_time dummy
+
 scoreboard objectives add ca.rally_amt minecraft.custom:minecraft.damage_taken
 scoreboard objectives add ca.rally_rst dummy
 scoreboard objectives add ca.rally_crt dummy

@@ -82,4 +82,21 @@ scoreboard players set @s s_adrenaline 0
 scoreboard players set @s s_energetic 0
 scoreboard players set @s s_frenzy 0
 
+scoreboard players set @s op_com 0
+scoreboard players set @s op_dec 0
+scoreboard players set @s op_due 0
+scoreboard players set @s op_exe 0
+scoreboard players set @s op_fro 0
+scoreboard players set @s op_hun 0
+scoreboard players set @s op_ove 0
+scoreboard players set @s op_stu 0
+scoreboard players set @s op_tra 0
+scoreboard players set @s op_van 0
+scoreboard players set @s op_vic 0
+scoreboard players set @s op_fir 0
+scoreboard players set @s op_sha 0
+scoreboard players set @s op_smi 0
+scoreboard players set @s op_ban 0
+scoreboard players set @s op_kno 0
+
 tag @s remove has_passive_ench

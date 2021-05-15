@@ -37,7 +37,8 @@ execute if score @s sapper matches 11.. run scoreboard players set @s sapper 10
 execute if score @s satiation matches 4.. run scoreboard players set @s satiation 3
 execute if score @s second_wind matches 5.. run scoreboard players set @s second_wind 4
 execute if score @s sharpshot matches 4.. run scoreboard players set @s sharpshot 3
-execute if score @s opportunist matches 4.. run scoreboard players set @s opportunist 3
+execute if score @s opportunist matches 4..10 run scoreboard players set @s opportunist 3
+execute if score @s opportunist matches 14.. run scoreboard players set @s opportunist 13
 execute if score @s overload matches 4.. run scoreboard players set @s overload 3
 execute if score @s splintering matches 2.. run scoreboard players set @s splintering 1
 execute if score @s spurs matches 2.. run scoreboard players set @s spurs 1
