@@ -25,3 +25,5 @@ execute if entity @s[scores={helper_raycast=1..}] unless block ~ ~ ~ #cartograph
 execute unless entity @s[scores={helper_raycast=1..}] run kill @s
 
 execute if entity @s[scores={helper_raycast=1..}] unless block ~ ~ ~ #cartographer_core:can_raycast run kill @s
+
+tag @a[tag=is_firing_deadeye] remove is_firing_deadeye

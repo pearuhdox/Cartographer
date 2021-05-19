@@ -46,3 +46,9 @@ execute if entity @s[tag=is_punch_2] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing 
 execute if entity @s[tag=is_punch_3] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing entity @e[distance=..7,type=arrow,limit=1,sort=nearest] feet
 execute if entity @s[tag=is_punch_4] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing entity @e[distance=..7,type=arrow,limit=1,sort=nearest] feet
 execute if entity @s[tag=is_punch_5] positioned ~ ~0.5 ~ run tp @s ~ ~ ~ facing entity @e[distance=..7,type=arrow,limit=1,sort=nearest] feet
+
+execute if entity @s[tag=is_punch_1] positioned ~ ~0.5 ~ run data modify entity @s Rotation[1] set value 0f
+execute if entity @s[tag=is_punch_2] positioned ~ ~0.5 ~ run data modify entity @s Rotation[1] set value 0f
+execute if entity @s[tag=is_punch_3] positioned ~ ~0.5 ~ run data modify entity @s Rotation[1] set value 0f
+execute if entity @s[tag=is_punch_4] positioned ~ ~0.5 ~ run data modify entity @s Rotation[1] set value 0f
+execute if entity @s[tag=is_punch_5] positioned ~ ~0.5 ~ run data modify entity @s Rotation[1] set value 0f

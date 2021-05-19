@@ -43,4 +43,6 @@ execute if score $deadeye trueshot matches 1.. run tag @s add trueshotted
 execute if score $deadeye curse_encumber matches 1.. run scoreboard players set @s helper_raycast 5
 execute if score $deadeye curse_encumber matches 1.. run tag @s add encumbered
 
-execute positioned ~ ~1.2 ~ run function cartographer_custom_enchantments:enchant_effects/deadeye/raycast_multi
+tag @s add queue_to_fire_multi
+
+#execute positioned ~ ~1.2 ~ run function cartographer_custom_enchantments:enchant_effects/deadeye/raycast_multi

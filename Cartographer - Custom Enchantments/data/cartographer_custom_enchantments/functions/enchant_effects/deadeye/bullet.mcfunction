@@ -19,5 +19,6 @@ execute if score $deadeye trueshot matches 1.. run tp @s ~ ~ ~ facing entity @e[
 execute if score $deadeye curse_encumber matches 1.. run tp @s ~ ~ ~ facing entity @e[limit=1,type=#cartographer_core:hostile,distance=..8,sort=random,nbt={HurtTime:0s}] feet
 execute unless score $deadeye trueshot matches 1.. unless score $deadeye trueshot matches 1.. run tp @s ~ ~ ~ facing entity @e[limit=1,type=#cartographer_core:hostile,distance=..13,sort=random,nbt={HurtTime:0s}] feet
 
+tag @s add queue_to_fire_single
 
-execute positioned ~ ~1.2 ~ run function cartographer_custom_enchantments:enchant_effects/deadeye/raycast
+#execute positioned ~ ~1.2 ~ run function cartographer_custom_enchantments:enchant_effects/deadeye/raycast

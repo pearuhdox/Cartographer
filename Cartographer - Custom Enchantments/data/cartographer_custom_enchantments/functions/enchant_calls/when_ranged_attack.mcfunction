@@ -13,11 +13,11 @@ execute if entity @s[tag=is_flash] at @s run function cartographer_custom_enchan
 execute if entity @s[tag=is_frost] run function cartographer_custom_enchantments:enchant_effects/frost
 
 #Punch - Crossbows
-execute if entity @s[tag=is_punch_1] run function cartographer_custom_enchantments:enchant_effects/punch/effect
-execute if entity @s[tag=is_punch_2] run function cartographer_custom_enchantments:enchant_effects/punch/effect
-execute if entity @s[tag=is_punch_3] run function cartographer_custom_enchantments:enchant_effects/punch/effect
-execute if entity @s[tag=is_punch_4] run function cartographer_custom_enchantments:enchant_effects/punch/effect
-execute if entity @s[tag=is_punch_5] run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_1] at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_2] at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_3] at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_4] at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
+execute if entity @s[tag=is_punch_5] at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
 
 #Pin Down
 execute if entity @s[tag=is_pin] run function cartographer_custom_enchantments:enchant_effects/pin_down

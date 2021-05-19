@@ -9,7 +9,7 @@ execute run scoreboard players set @s damage_queue 10
 execute run function cartographer_core:helper/deal_damage/by_score
 execute run function cartographer_core:helper/deal_damage/invulnerable_tick
 
-execute run tp @s ~ ~ ~ facing entity @p[scores={deadeye=1..}] feet
+execute run tp @s ~ ~ ~ facing entity @p[tag=is_firing_deadeye] feet
 
 execute run function cartographer_core:helper/push_half
 
