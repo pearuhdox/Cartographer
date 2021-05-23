@@ -1,5 +1,7 @@
 playsound minecraft:entity.generic.hurt hostile @a[distance=..16] ~ ~ ~ 1 0.5
 
+execute if entity @s[scores={effect_bleed=51..}] run scoreboard players set @s effect_bleed 50
+
 execute if entity @s[scores={effect_bleed=1..9}] run scoreboard players set @s damage_queue 1
 execute if entity @s[scores={effect_bleed=11..19}] run scoreboard players set @s damage_queue 2
 execute if entity @s[scores={effect_bleed=21..29}] run scoreboard players set @s damage_queue 3

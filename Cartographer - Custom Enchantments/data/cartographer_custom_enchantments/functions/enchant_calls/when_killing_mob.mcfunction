@@ -48,3 +48,6 @@ function cartographer_custom_enchantments:enchant_effects/echo_restore
 
 #Concealed Restore
 function cartographer_custom_enchantments:enchant_effects/concealed/restore
+
+#Call Invul Timer for Mob Abilities
+scoreboard players set $invul_time_check invul 25

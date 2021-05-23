@@ -1,4 +1,4 @@
-execute if entity @s[type=#cartographer_core:hostile] if data entity @s ActiveEffects[{Id:9b}] run function cartographer_custom_statuses:inflict/apply_status
+execute if entity @s[type=#cartographer_core:hostile,predicate=cartographer_custom_statuses:is_dummy_effected] run function cartographer_custom_statuses:inflict/apply_status
 
 #Run Stunned
 execute as @s[type=#cartographer_core:hostile,scores={effect_stunned=1..}] at @s run function cartographer_custom_statuses:visuals/stunned
@@ -7,11 +7,11 @@ execute as @s[type=#cartographer_core:hostile,scores={effect_stunned=1..}] at @s
 execute as @s[type=#cartographer_core:hostile,scores={effect_rage=1..}] at @s run function cartographer_custom_statuses:visuals/rage
 
 #Run Vulnerability
-execute as @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:31b}]}] at @s run function cartographer_custom_statuses:effects/vulnerability
-execute as @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:31b}]}] at @s run function cartographer_custom_statuses:visuals/vulnerability
+execute as @s[type=#cartographer_core:hostile,predicate=cartographer_custom_statuses:is_exposed] at @s run function cartographer_custom_statuses:effects/vulnerability
+execute as @s[type=#cartographer_core:hostile,predicate=cartographer_custom_statuses:is_exposed] at @s run function cartographer_custom_statuses:visuals/vulnerability
 
 #Run Blindness
-execute as @s[type=#cartographer_core:hostile,nbt={ActiveEffects:[{Id:15b}]}] at @s run function cartographer_custom_statuses:effects/blindness
+execute as @s[type=#cartographer_core:hostile,predicate=cartographer_custom_statuses:is_blind] at @s run function cartographer_custom_statuses:effects/blindness
 
 #Run Visuals for Bleed, Shocked, and Cloaked
 execute if score @s effect_bleed matches 1.. run function cartographer_custom_statuses:visuals/bleeding

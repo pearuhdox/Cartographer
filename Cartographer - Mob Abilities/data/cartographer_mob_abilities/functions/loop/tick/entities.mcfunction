@@ -5,7 +5,7 @@ execute as @s[type=armor_stand] at @s run function cartographer_mob_abilities:lo
 execute as @s[type=item,nbt={Item:{tag:{DeathEffect:1}}}] at @s run function cartographer_mob_abilities:loop/tick/run_death_effects
 
 #Run Invulnerable Notices
-execute as @s[type=#cartographer_core:hostile] if entity @s[predicate=cartographer_mob_abilities:is_invulnerable,nbt={HurtTime:9s}] at @s run function cartographer_mob_abilities:passive/invulnerable
+execute if score $invul_time_check invul matches 1.. as @s[type=#cartographer_core:hostile] if entity @s[predicate=cartographer_mob_abilities:is_invulnerable] at @s run function cartographer_mob_abilities:loop/tick/invulnerable_test
 
 #Run Movement Disable and Melee Damage Disable
 execute if entity @s[scores={mob_move_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/move

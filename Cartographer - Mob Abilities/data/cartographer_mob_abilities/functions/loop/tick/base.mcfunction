@@ -17,3 +17,6 @@ execute if score $do_los flag matches 1 as @e[type=#cartographer_core:hostile,ta
 
 #Unflag the check for needing los
 scoreboard players set $do_los flag 0
+
+#reduce 1 on our "check invul mob damage etc etc"
+execute if score $invul_time_check invul matches 1.. run scoreboard players remove $invul_time_check invul 1

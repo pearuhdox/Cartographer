@@ -35,3 +35,6 @@ scoreboard players set @s damage_queue 0
 tag @s remove absorbed
 tag @s remove not_absorbed
 tag @s remove invulnerable_check
+
+#Call Invul Timer for Mob Abilities
+scoreboard players set $invul_time_check invul 25

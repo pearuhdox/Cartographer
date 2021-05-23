@@ -4,7 +4,7 @@ THE BIG TODO LIST:
 - Toggle for Placed Lexica behavior. (either open menu or give you a Lexica)
 - Deadeye only targets enemies in front of you.
 
-Cartographer, Patch TBD - Wrath of the Podiatrist, Part 1
+Cartographer, Patch TBD - Wrath of the Podiatrist
 
 This is the first in a set of optimization and clean up patches. The goal of these series of patches is to re-optimize many sections of the pack
 (creating a more fluid and fresh experience, with less lag) address a couple balance issues, and patch some holes in each module.
@@ -77,11 +77,21 @@ Custom Statuses:
     - Cleanses negative effects from players who obtain it.
 
  - All Status effects can be inflicted now via vanilla potions with custom Nausea effects.
-    - Nausea 10 = Stunning
-    - Nausea 11 = Shocked
-    - Nausea 12 = Infection
-    - Nausea 13 = Bleeding (only level 1, duration max = 10 seconds)
-    - Nausea 14 = Cloaked (for use on enemy potion drops wink)
+    #Custom Debuff Conversion Chart
+      # Nausea 10 - Stunned
+      # Nausea 11 - Shocked
+      # Nausea 12 - Infection
+      # Nausea 13 - Bleeding
+      # Nausea 14 - Bleeding II (Adds 2 Stacks of Bleeding)
+      # Nausea 15 - Bleeding III (Adds 3 Stacks of Bleeding)
+      # Nausea 16 - Bleeding IV (Adds 4 Stacks of Bleeding)
+      # Nausea 17 - Bleeding V (Adds 5 Stacks of Bleeding)
+      # Nausea 18 - Cloaked
+
+  - Inflict the above Nausea level with the duration of time you want, and the custom effect will be applied to the mob (and Nausea removed).
+
+  - Note: Bleeding stacks are added with proper math. If you apply Bleeding II to a mob with 2 Bleeding stacks, they will add up to Bleeding IV (4 stacks)
+    - Bleeding cannot exceed a time of 10 seconds at any stack value. Doing so will cause unintended behavior.
 
 Repair Stations:
   - The Station now has a new utility, known as the Limitless Tesseract.
