@@ -16,7 +16,7 @@ tellraw @s {"text":"------------------------------------------","color":"#ACFFA6
 tellraw @s [{"text":"Exalted","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the enemy dies, they spawn an Exalted where they die. Exalted are undead spirits with high attack damage, slow speed, and the Charge active skill.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the enemy dies, they drop their weapon and reincarnate as a soul nearby. The soul attempts to reclaim its weapon by moving towards it. If it is successful, the soul will respawn as the original entity.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Applicable Mobs: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"All Hostile Mobs","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]

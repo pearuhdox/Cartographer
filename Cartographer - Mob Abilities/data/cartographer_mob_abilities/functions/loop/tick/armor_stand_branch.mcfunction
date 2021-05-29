@@ -14,6 +14,9 @@ scoreboard players add @s[tag=hook_projectile] helper_lifetime 1
 #Wither Storm Blasts
 execute if entity @s[tag=wither_blast] run function cartographer_mob_abilities:abilities/wither_storm_blasts
 
+#Exalted Souls
+execute if entity @s[tag=exalted_soul_stand] run function cartographer_mob_abilities:passive/exalted_soul
+
 #Exalted Weapons
 execute if entity @s[tag=exalted_weapon] run tp @s ~ ~ ~ ~3 ~
 

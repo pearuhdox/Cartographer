@@ -49,7 +49,6 @@ execute if score @s[type=armor_stand,tag=exalted_weapon] exalted matches 16.. ru
 execute if score @s[type=armor_stand,tag=exalted_weapon] exalted matches 16.. run kill @s
 
 #Corpse Crawler Eggs
-execute if entity @s[tag=corpse_crawler_egg]
 
 #Tick down particle display time for Augmenter
 scoreboard players remove @s[scores={augment_time=1..}] augment_time 1
