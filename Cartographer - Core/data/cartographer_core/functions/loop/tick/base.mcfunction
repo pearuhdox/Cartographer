@@ -80,6 +80,9 @@ execute as @a at @s if score @s options_trig matches 1.. run function cartograph
 #Run all ticking entity effects.
 execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/tick
 
+#Reset token kill check (Mob Abilities)
+scoreboard players set @a[scores={token_kill_check=1..}] token_kill_check 0
+
 #Set defaults on players (new spawns).
 scoreboard players add @a[tag=!spawned] ehp_listen 1
 scoreboard players add @a[tag=!spawned] phe_listen 1

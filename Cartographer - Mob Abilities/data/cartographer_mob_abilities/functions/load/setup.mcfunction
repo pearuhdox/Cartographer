@@ -25,6 +25,8 @@ scoreboard objectives add reflect_diff dummy
 
 scoreboard objectives add augment_time dummy
 
+scoreboard objectives add token_kill_check totalKillCount
+
 scoreboard objectives add invul dummy
 
 #Setup all necessary helper scoreboards.
