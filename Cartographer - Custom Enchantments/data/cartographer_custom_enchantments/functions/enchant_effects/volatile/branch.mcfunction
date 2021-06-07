@@ -10,14 +10,14 @@ execute if score $volatile decay matches 1.. run scoreboard players set @s effec
 
 execute if score $volatile flash matches 1.. run function cartographer_custom_enchantments:enchant_effects/flash
 
-execute if score $volatile punch matches 1 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-execute if score $volatile punch matches 2 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-execute if score $volatile punch matches 3 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-execute if score $volatile punch matches 4 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
-execute if score $volatile punch matches 5.. run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
+#execute if score $volatile punch matches 1 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
+#execute if score $volatile punch matches 2 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
+#execute if score $volatile punch matches 3 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
+#execute if score $volatile punch matches 4 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
+#execute if score $volatile punch matches 5.. run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
 
-execute if score $volatile punch matches 1 run function cartographer_core:helper/push_no_bias
-execute if score $volatile punch matches 2 run function cartographer_core:helper/push_2_no_bias
-execute if score $volatile punch matches 3 run function cartographer_core:helper/push_3_no_bias
-execute if score $volatile punch matches 4 run function cartographer_core:helper/push_4_no_bias
-execute if score $volatile punch matches 5.. run function cartographer_core:helper/push_5_no_bias
+#execute if score $volatile punch matches 1 at @s run function cartographer_core:helper/push
+#execute if score $volatile punch matches 2 at @s run function cartographer_core:helper/push_2
+#execute if score $volatile punch matches 3 at @s run function cartographer_core:helper/push_3
+#execute if score $volatile punch matches 4 at @s run function cartographer_core:helper/push_4
+#execute if score $volatile punch matches 5.. at @s run function cartographer_core:helper/push_5

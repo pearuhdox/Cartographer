@@ -135,6 +135,7 @@ scoreboard objectives add ca.ui_loc dummy
 
 execute unless score $gl_reload_msg ca.gamerule matches 0.. run scoreboard players set $gl_reload_msg ca.gamerule 0
 execute unless score $lexica_stand ca.gamerule matches 0.. run scoreboard players set $lexica_stand ca.gamerule 0
+execute unless score $no_lexica_prompt ca.gamerule matches 0.. run scoreboard players set $no_lexica_prompt ca.gamerule 0
 
 #Create the Lexica score.
 scoreboard objectives add use_lexica minecraft.used:minecraft.knowledge_book

@@ -13,7 +13,7 @@ scoreboard players operation @s ca.rally_amt *= @s rally_percent
 
 scoreboard players operation @s ca.rally_amt /= $100 ca.CONSTANT
 
-scoreboard players set @s rally_time 61
+scoreboard players set @s rally_time 51
 
 scoreboard players set @s rally_bank 0
 scoreboard players operation @s rally_bank = @s ca.rally_amt
