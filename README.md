@@ -3,7 +3,7 @@ Cartographer is a collection of datapacks for Minecraft 1.16 that add custom enc
 
 Each folder above is a separate datapack which can be dropped into a Minecraft world's "datapack" folder. Once placed inside the datapack folder, and the world has been reloaded, they will add new features to the game.
 
-The current existing modules are:
+## Modules
 
 **Custom Enchantments** - An addition of over 20 new Enchantments that can be added to weapons, tools, and armor.
 
