@@ -5,15 +5,15 @@ Each folder above is a separate datapack which can be dropped into a Minecraft w
 
 The current existing modules are:
 
-Custom Enchantments - An addition of over 20 new Enchantments that can be added to weapons, tools, and armor.
+**Custom Enchantments** - An addition of over 20 new Enchantments that can be added to weapons, tools, and armor.
 
-Custom Statuses - Additional status effects which can be used on mobs. Currently unfinished, but used by the Custom Enchantments pack.
+**Custom Statuses** - Additional status effects which can be used on mobs. Currently unfinished, but used by the Custom Enchantments pack.
 
-Mimics - Adds a new mob type to the game: The Mimic. Mimics disguise themselves as chests and attack unsuspecting victims when opened.
+**Mimics** - Adds a new mob type to the game: The Mimic. Mimics disguise themselves as chests and attack unsuspecting victims when opened.
 
-Mob Abilities - An addition of over 20 new custom ability attacks which can be given to all hostile mobs. Includes active telegraphed attacks with fancy particles, passive traits that can be applied to mobs, and traits that trigger when a mob dies.
+**Mob Abilities** - An addition of over 20 new custom ability attacks which can be given to all hostile mobs. Includes active telegraphed attacks with fancy particles, passive traits that can be applied to mobs, and traits that trigger when a mob dies.
 
-Repair Stations - Adds a structure which can be spawned in world which serves as an alternative to anvils. It can repair gear with increasing and controllable costs, and protects gear lost from durability destroying it.
+**Repair Stations** - Adds a structure which can be spawned in world which serves as an alternative to anvils. It can repair gear with increasing and controllable costs, and protects gear lost from durability destroying it.
 
 To get started, you can refer to the documentation wiki for Cartographer, which can be found here.
 https://github.com/pearuhdox/Cartographer/wiki/Home
