@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+      "minecraft:enchanted_golden_apple",
+      "minecraft:golden_apple",
+      "minecraft:suspicious_stew",
+      "minecraft:chorus_fruit",
+      "minecraft:honey_bottle",
+      "minecraft:potion",
+      "minecraft:splash_potion",
+      "minecraft:lingering_potion",
+      "minecraft:ender_pearl",
+      "minecraft:ender_eye",
+      "minecraft:milk_bucket"
+    ]
+}

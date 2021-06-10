@@ -1,0 +1,1 @@
+execute if score @s ca.pldata.id = $return helper_tokens run tag @s add player_to_return

@@ -14,11 +14,11 @@
     "display": {
         "title": {
             "text": "Infinity                 ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "Grants infinite power to items. Bows with Infinity will not consume arrows when fired, and consumables with Infinity will not be consumed when used."
+            "text": "When on a consumable item, grants infinite usage of the item."
         },
         "icon": {
             "item": "minecraft:arrow"

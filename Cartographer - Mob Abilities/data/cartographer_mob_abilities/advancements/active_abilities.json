@@ -6,14 +6,14 @@
     },
     "display": {
         "title": {
-            "text": "Active Abilities         ",
+            "text": "Active Skills            ",
             "color": "yellow",
             "bold": false
         },
         "description": {
             "bold": false,
             "color": "white",
-            "text": "Custom mob attacks with a charge up attack or ability."
+            "text": "Mob skills that activate periodically. Often have a delay to charge up and a cooldown."
         },
         "icon": {
             "item": "minecraft:netherite_axe"

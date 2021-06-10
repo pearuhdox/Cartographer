@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy charges up, and after a delay, releases a burst of soul fire around it. Players within the burst have 8 health stolen from them (and given to the casting mob)."
+            "text": "The enemy can release a burst of soul flames around it, stealing health from players."
         },
         "icon": {
             "item": "minecraft:soul_campfire"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/soulfire_nova"
       },
-    "parent": "cartographer_mob_abilities:frost_nova"
+    "parent": "cartographer_mob_abilities:smash"
 }

@@ -34,10 +34,10 @@
     "display": {
         "title": {
             "text": "Ricochet                 ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "When this trident is thrown, and hits an enemy, a watery stream bounces off of it to a nearby enemy, dealing 7 damage. The stream bounces to enemies equal to the level of Ricochet.",
+            "text": "Throws from this trident bounce to additional nearby enemies.",
             "color": "white"
         },
         "icon": {
@@ -58,5 +58,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/ricochet"
       },
-    "parent": "cartographer_custom_enchantments:hydraulic"
+    "parent": "cartographer_custom_enchantments:repeater"
 }

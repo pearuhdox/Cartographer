@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "on_block": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "nbt": "{Infinity:1}"
+        }
+      }
+    },
+    "consumed": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "nbt": "{Infinity:1}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "on_block",
+      "consumed"
+    ]
+  ],
+  "rewards": {
+    "function": "cartographer_custom_enchantments:enchant_effects/infinity/consume"
+  }
+}

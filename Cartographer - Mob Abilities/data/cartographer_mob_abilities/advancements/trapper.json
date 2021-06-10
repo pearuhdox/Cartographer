@@ -15,7 +15,7 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy pauses and readies traps. After a brief delay, they throw them in a cone behind the target. Walking in a trap deals 6 damage and inflicts Slowness III for 2 seconds.",
+            "text": "The enemy can throw a cone of traps that slow and hurt players.",
             "color": "white"
         },
         "icon": {
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/trapper"
       },
-    "parent": "cartographer_mob_abilities:magic_missile"
+    "parent": "cartographer_mob_abilities:sweep"
 }

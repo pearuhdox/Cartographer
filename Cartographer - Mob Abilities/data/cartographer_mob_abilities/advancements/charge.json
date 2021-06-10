@@ -16,7 +16,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy roars, and after a brief delay, charges in a straight line in the direction it is facing. Players standing in the enemy's path take 10 damage."
+            "text": "The enemy can quickly move (charge) in a straight line in the direction it is facing. Players standing in the path take damage."
         },
         "icon": {
             "item": "minecraft:wooden_axe"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/charge"
       },
-    "parent": "cartographer_mob_abilities:active_abilities"
+    "parent": "cartographer_mob_abilities:augmenter"
 }

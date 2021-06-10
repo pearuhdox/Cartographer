@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Point Blank              ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "Arrows gain a +70% damage per level boost which quickly drains as the arrow travels. The arrow loses the entire bonus after half a second of travel.",
+            "text": "Arrows from this weapon deal increased damage to enemies closer to you.",
             "color": "white"
         },
         "icon": {
@@ -58,5 +58,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/point_blank"
       },
-    "parent": "cartographer_custom_enchantments:ranged_tree"
+    "parent": "cartographer_custom_enchantments:pin_down"
 }

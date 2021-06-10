@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Agility                  ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "While held or worn, the user gains +1 block of jump height per level, up to 5 extra blocks."
+            "text": "The user's jump strength is increased."
         },
         "icon": {
             "item": "minecraft:slime_ball"
@@ -80,5 +80,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/agility"
       },
-    "parent": "cartographer_custom_enchantments:passive_tree"
+    "parent": "cartographer_custom_enchantments:adrenaline"
 }

@@ -1,0 +1,58 @@
+{
+        "criteria": {
+          "hit_ranged": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+              "damage": {
+                "type": {
+                  "is_projectile": true
+                }
+              },
+              "entity": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "nbt": "{Tags:[\"reflect_ranged\"]}"
+                  }
+                }
+              ]
+            }
+          },
+          "hit_melee": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+              "damage": {
+                "type": {
+                  "is_explosion": false,
+                  "is_fire": false,
+                  "is_magic": false,
+                  "is_projectile": false,
+                  "is_lightning": false,
+                  "bypasses_armor": false,
+                  "bypasses_invulnerability": false,
+                  "bypasses_magic": false
+                }
+              },
+              "entity": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "nbt": "{Tags:[\"reflect_melee\"]}"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "requirements": [
+          [
+            "hit_ranged",
+            "hit_melee"
+          ]
+        ],
+        "rewards": {
+          "function": "cartographer_mob_abilities:passive/reflect_player"
+        }
+      }

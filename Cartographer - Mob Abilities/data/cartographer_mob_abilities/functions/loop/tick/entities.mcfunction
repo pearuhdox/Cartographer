@@ -1,26 +1,27 @@
-#Laser
-execute if entity @s[tag=laser,scores={cooldown=0},tag=tokened] if entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:charge/laser
+#Armor Stand Effects
+execute as @s[type=armor_stand] at @s run function cartographer_mob_abilities:loop/tick/armor_stand_branch
 
-#Laser Animation Cancel
-execute if entity @s[tag=laser,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=survival,distance=..20] run function cartographer_mob_abilities:token/cancel_ability
+#Run On-Death Effects
+execute as @s[type=item,nbt={Item:{tag:{DeathEffect:1}}}] at @s run function cartographer_mob_abilities:loop/tick/run_death_effects
 
-#Ender-Port Test
-execute if entity @s[tag=enderport] if entity @e[type=#cartographer_core:projectile,distance=..5,nbt=!{inGround:1b}] run function cartographer_mob_abilities:passive/enderport
+#Run Invulnerable Notices
+execute if score $invul_time_check invul matches 1.. as @s[type=#cartographer_core:hostile] if entity @s[predicate=cartographer_mob_abilities:is_invulnerable] at @s run function cartographer_mob_abilities:loop/tick/invulnerable_test
 
-#Fix Tags
-execute if entity @s[tag=has_active,tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix
+#Run Movement Disable and Melee Damage Disable
+execute if entity @s[scores={mob_move_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/move
+execute if entity @s[scores={mob_atk_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/attack
 
-execute if entity @s[tag=parting_gift,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=corpse_crawler,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=corpse_crawler_bee,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=corpse_crawler_drowned,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=corpse_crawler_husk,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=corpse_crawler_piglin,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=corpse_crawler_zoglin,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=exalted,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=pyromania,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=spectral,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=brutal_blood,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=relentless_blood,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=devious_blood,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
-execute if entity @s[tag=sacrificial_blood,tag=!death_checked] run function cartographer_mob_abilities:passive/death_fix
+execute if entity @s[scores={mob_move_red=1..}] run function cartographer_mob_abilities:loop/tick/reducers/move
+execute if entity @s[scores={mob_atk_red=1..}] run function cartographer_mob_abilities:loop/tick/reducers/attack
+
+execute if entity @s[scores={mob_sturdy=1..}] run function cartographer_mob_abilities:loop/tick/sturdy/effects
+
+#Run Has Active Effects
+execute if entity @s[tag=has_active] run function cartographer_mob_abilities:loop/tick/actives
+
+#Augment Buff Particles
+execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust 1 0 0 0.7 ~ ~1 ~ 0.3 0.5 0.3 0 2 normal
+execute if entity @s[scores={augment_time=1..}] run particle minecraft:flame ~ ~1 ~ 0.2 0.2 0.2 0.05 1 normal
+
+#Setup Exalted
+execute if entity @s[tag=!setup,tag=exalted] run function cartographer_mob_abilities:passive/exalted_setup

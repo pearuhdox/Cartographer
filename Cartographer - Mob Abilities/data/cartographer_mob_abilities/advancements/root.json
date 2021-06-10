@@ -6,12 +6,12 @@
     },
     "display": {
         "title": {
-            "text": "Enemy Observations",
-            "color": "yellow"
+            "text": "Lexica: Beastiary            ",
+            "color": "#ACFFA6"
         },
         "description": {
             "color": "white",
-            "text": "Notes on the enemies around you. Any unique or dangerous effects they might have are documented here."
+            "text": "Whenever you kill an enemy with a unique property or skill, this tab creates a short description of it. Detailed descriptions can be found in the Lexica Cartographia."
         },
         "icon": {
             "item": "minecraft:writable_book"

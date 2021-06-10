@@ -1,0 +1,5 @@
+{
+	"values": [
+		{"id": "cartographer_mob_abilities:effect_calls/when_attacking_entity", "required": false}
+	]
+}

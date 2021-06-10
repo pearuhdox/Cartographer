@@ -36,10 +36,6 @@ scoreboard players set @a helper_lingerpot 0
 scoreboard players set @a helper_pearl 0
 scoreboard players set @a helper_eye 0
 
-scoreboard players set @a helper_tnt 0
-scoreboard players set @a helper_torch 0
-scoreboard players set @a helper_glass 0
-
 scoreboard players set @a helper_bread 0
 scoreboard players set @a helper_m_soup 0
 scoreboard players set @a helper_apple 0
@@ -77,7 +73,15 @@ scoreboard players set @a helper_s_eye 0
 scoreboard players set @a helper_honey 0
 scoreboard players set @a helper_milk 0
 
-scoreboard players set @a[predicate=!cartographer_custom_enchantments:infinity/mainhand_1] infinity_m 0
-scoreboard players set @a[predicate=!cartographer_custom_enchantments:infinity/offhand_1] infinity_o 0
-
 scoreboard players remove @a[scores={helper_repeat=2..}] helper_repeat 1
+
+scoreboard players set @a helper_sneak 0
+
+scoreboard players set @a ca.dmg_resist_sw 0
+scoreboard players set @a ca.sw_fall 0
+
+scoreboard players set @a ca.rally_amt 0
+scoreboard players set @a ca.rally_rst 0
+
+advancement revoke @a only cartographer_custom_enchantments:second_wind_projectile
+advancement revoke @a only cartographer_custom_enchantments:second_wind_explosion

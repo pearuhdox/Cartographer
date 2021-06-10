@@ -1,0 +1,1 @@
+effect give @s resistance 1 4 true

@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Lifesteal      ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When the holder or wearer kills a mob, instantly restore health equal to your total levels of Lifesteal (up to 6 health total)."
+            "text": "Restores health when the user kills a mob."
         },
         "icon": {
             "item": "minecraft:wither_skeleton_skull"
@@ -20,7 +20,14 @@
         [
             "find1",
             "find2",
-            "find3"
+            "find3",
+            "find4",
+            "find5",
+            "find6",
+            "find7",
+            "find8",
+            "find9",
+            "find10"
         ]
     ],
     "criteria": {
@@ -50,6 +57,76 @@
                 "items": [
                     {
                         "nbt": "{Lifesteal:3}"
+                    }
+                ]
+            }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Lifesteal:4}"
+                    }
+                ]
+            }
+        },
+        "find5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Lifesteal:5}"
+                    }
+                ]
+            }
+        },
+        "find6": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Lifesteal:6}"
+                    }
+                ]
+            }
+        },
+        "find7": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Lifesteal:7}"
+                    }
+                ]
+            }
+        },
+        "find8": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Lifesteal:8}"
+                    }
+                ]
+            }
+        },
+        "find9": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Lifesteal:9}"
+                    }
+                ]
+            }
+        },
+        "find10": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Lifesteal:10}"
                     }
                 ]
             }

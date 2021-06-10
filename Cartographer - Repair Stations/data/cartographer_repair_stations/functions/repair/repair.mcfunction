@@ -1,41 +1,31 @@
-scoreboard players operation @p[distance=..5] XPcost = @s XPcost
-scoreboard players operation @p[distance=..5] LapisCost = @s LapisCost
-scoreboard players operation @p[distance=..5] MaterialCost = @s MaterialCost
+execute as @p[distance=..5] store result score @s LapisCost run clear @s minecraft:lapis_lazuli 0
+execute as @p[distance=..5] store result score @s XPcost run data get entity @s XpLevel
 
-scoreboard players operation @s LapisCost *= helper_repair repairConstant
-scoreboard players operation @s XPcost *= helper_repair repairConstant
-
-execute as @s store result entity @s HandItems[0].tag.RepairCost float 1 run scoreboard players add @s XPcost 0
-execute as @s store result entity @s HandItems[0].tag.LapisCost float 1 run scoreboard players add @s LapisCost 0
-
-execute as @s store result entity @s ArmorItems[0].tag.RepairCost float 1 run scoreboard players add @s XPcost 0
-execute as @s store result entity @s ArmorItems[0].tag.LapisCost float 1 run scoreboard players add @s LapisCost 0
-
-execute as @s store result entity @s ArmorItems[1].tag.RepairCost float 1 run scoreboard players add @s XPcost 0
-execute as @s store result entity @s ArmorItems[1].tag.LapisCost float 1 run scoreboard players add @s LapisCost 0
-
-execute as @s store result entity @s ArmorItems[2].tag.RepairCost float 1 run scoreboard players add @s XPcost 0
-execute as @s store result entity @s ArmorItems[2].tag.LapisCost float 1 run scoreboard players add @s LapisCost 0
-
-execute as @s store result entity @s ArmorItems[3].tag.RepairCost float 1 run scoreboard players add @s XPcost 0
-execute as @s store result entity @s ArmorItems[3].tag.LapisCost float 1 run scoreboard players add @s LapisCost 0
-
-data modify entity @s HandItems[0].tag.Damage set value 0
-data modify entity @s ArmorItems[0].tag.Damage set value 0
-data modify entity @s ArmorItems[1].tag.Damage set value 0
-data modify entity @s ArmorItems[2].tag.Damage set value 0
-data modify entity @s ArmorItems[3].tag.Damage set value 0
-
-data modify entity @s HandItems[0].tag.Damage set value 0
-
-playsound minecraft:block.anvil.use block @a[distance=..20] ~ ~ ~ 1 1 1
-particle minecraft:end_rod ~ ~0.2 ~ 0 0 0 0.1 15 force
-particle minecraft:composter ~ ~0.2 ~ 0.3 0.3 0.3 0 40 force
+execute if entity @s[tag=wood] as @p[distance=..5] store result score @s MaterialCost run clear @s #minecraft:planks 0
+execute if entity @s[tag=stone] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:cobblestone 0
+execute if entity @s[tag=iron] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:iron_ingot 0
+execute if entity @s[tag=gold] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:gold_ingot 0
+execute if entity @s[tag=diamond] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:diamond 0
+execute if entity @s[tag=netherite] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:netherite_ingot 0
+execute if entity @s[tag=leather] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:leather 0
+execute if entity @s[tag=chain] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:chain 0
+execute if entity @s[tag=scute] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:scute 0
+execute if entity @s[tag=string] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:string 0
+execute if entity @s[tag=quartz] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:quartz 0
+execute if entity @s[tag=carrot] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:carrot 0
+execute if entity @s[tag=fungus] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:warped_fungus 0
+execute if entity @s[tag=membrane] as @p[distance=..5] store result score @s MaterialCost run clear @s minecraft:phantom_membrane 0
 
 
-execute as @p[distance=..5] run function cartographer_repair_stations:repair/extract_levels
-execute as @p[distance=..5] run function cartographer_repair_stations:repair/extract_lapis
-execute as @p[distance=..5] run function cartographer_repair_stations:repair/extract_material
+scoreboard players operation @p[distance=..5] XPcost -= @s XPcost
+scoreboard players operation @p[distance=..5] LapisCost -= @s LapisCost
+scoreboard players operation @p[distance=..5] MaterialCost -= @s MaterialCost
 
+execute if score @p XPcost matches 0.. if score @p LapisCost matches 0.. if score @p MaterialCost matches 0.. run function cartographer_repair_stations:repair/repair_complete
+execute unless score @p XPcost matches 0.. run tag @s add failed_repair
+execute unless score @p LapisCost matches 0.. run tag @s add failed_repair
+execute unless score @p MaterialCost matches 0.. run tag @s add failed_repair
 
-function cartographer_repair_stations:repair/return_item
+execute if entity @s[tag=failed_repair] run function cartographer_repair_stations:repair/repair_fail
+
+tag @s remove failed_repair

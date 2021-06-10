@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy becomes immobile and channels a laser at the nearest player. At the end of the channel, the laser deals 18 damage if it connects with a player, and knocks them back. The laser can be blocked by line of sight, but destroys terrain.",
+            "text": "The enemy can channel a laser aimed at the nearest player. When fired, it destroys terrain and does explosive damage.",
             "color": "white"
         },
         "icon": {
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/laser"
       },
-    "parent": "cartographer_mob_abilities:fireball"
+    "parent": "cartographer_mob_abilities:hookshot"
 }

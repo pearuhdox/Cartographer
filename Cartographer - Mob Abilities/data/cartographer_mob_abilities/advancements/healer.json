@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy charges up, and after a long delay, heals all enemies within 10 blocks 8 health."
+            "text": "The enemy can charge up and heal other nearby enemies."
         },
         "icon": {
             "item": "minecraft:red_dye"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/healer"
       },
-    "parent": "cartographer_mob_abilities:cloaker"
+    "parent": "cartographer_mob_abilities:frost_nova"
 }

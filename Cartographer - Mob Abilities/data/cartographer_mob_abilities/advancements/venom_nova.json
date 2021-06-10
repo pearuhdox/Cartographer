@@ -16,7 +16,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy charges up, and after a delay, releases a toxic cloud around it. Players within the burst take 8 damage and are inflicted with Poison for 15 seconds."
+            "text": "The enemy can release a burst of toxins around it, dealing damage and poisoning players."
         },
         "icon": {
             "item": "minecraft:slime_ball"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/venom_nova"
       },
-    "parent": "cartographer_mob_abilities:soulfire_nova"
+    "parent": "cartographer_mob_abilities:trapper"
 }

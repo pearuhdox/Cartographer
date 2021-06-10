@@ -6,11 +6,11 @@
     },
     "display": {
         "title": {
-            "text": "Afflictions and Maladies",
-            "color": "yellow"
+            "text": "Lexica: Afflictions            ",
+            "color": "#ACFFA6"
         },
         "description": {
-            "text": "Research notes from long ago. Detail unique statuses that can be afflicted to mobs.",
+            "text": "Whenever you use a mysterious status effect, this tab creates a short description of it. Detailed descriptions can be found in the Lexica Cartographia.",
             "color": "white"
         },
         "icon": {

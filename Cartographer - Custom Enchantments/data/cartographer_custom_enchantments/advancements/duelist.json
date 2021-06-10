@@ -2,11 +2,11 @@
     "display": {
         "title": {
             "text": "Duelist                  ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "This weapon deals 2.5 bonus damage per level to \"illager\" mobs: [Vindicator, Pillager, Evoker, Ravager, Vex, Witch]"
+            "text": "Melee attacks with this weapon do additional damage to \"Illager\" mobs."
         },
         "icon": {
             "item": "minecraft:iron_sword"
@@ -80,5 +80,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/duelist"
       },
-    "parent": "cartographer_custom_enchantments:melee_tree"
+    "parent": "cartographer_custom_enchantments:decay"
 }

@@ -11,12 +11,12 @@
     },
     "display": {
         "title": {
-            "text": "Venom Nova               ",
+            "text": "Wind Nova                 ",
             "color": "white"
         },
         "description": {
             "color": "white",
-            "text": "The enemy charges up, and after a delay, releases a windy cloud around it. Players within the burst take 8 damage and are thrown into the air."
+            "text": "The enemy can release a burst of wind around it, dealing damage and throwing players into the air."
         },
         "icon": {
             "item": "minecraft:feather"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/wind_nova"
       },
-    "parent": "cartographer_mob_abilities:venom_nova"
+    "parent": "cartographer_mob_abilities:webshot"
 }

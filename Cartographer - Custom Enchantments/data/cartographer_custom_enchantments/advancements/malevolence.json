@@ -5,7 +5,7 @@
             "color": "red"
         },
         "description": {
-            "text": "When more than 1 of these items is held in the hotbar, offhand, or worn in an armor slot, the user is inflicted with Blindness.",
+            "text": "When more than 1 of these items is used at a time, the user is inflicted with Blindness.",
             "color": "white"
         },
         "icon": {

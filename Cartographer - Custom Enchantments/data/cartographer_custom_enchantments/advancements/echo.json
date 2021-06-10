@@ -41,10 +41,10 @@
     "display": {
         "title": {
             "text": "Echo                     ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "You can store (Level + 1) Echo charges. When you attack, consume an Echo charge to instantly refill your attack meter. Echo charges are refunded on mob kills, and out of combat while holding the weapon.",
+            "text": "Your weapon stores charges when you kill enemies that when attacking, are consumed to instantly refresh your attack meter.",
             "color": "white" 
         },
         "icon": {
@@ -58,5 +58,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/echo"
       },
-    "parent": "cartographer_custom_enchantments:melee_tree"
+    "parent": "cartographer_custom_enchantments:duelist"
 }

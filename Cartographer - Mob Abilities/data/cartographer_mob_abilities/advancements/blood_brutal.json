@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "When the enemy dies, nearby enemies are healed slightly, and gain slightly increased melee damage. This effect can stack.",
+            "text": "On death, nearby enemies are healed and gain stacking damage improvements.",
             "color": "white"
         },
         "icon": {

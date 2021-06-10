@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "This mob gains and refreshes Cloaked every 5 seconds.",
+            "text": "Is permanently Cloaked.",
             "color": "white"
         },
         "icon": {

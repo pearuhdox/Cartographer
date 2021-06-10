@@ -1,13 +1,12 @@
-#Check for invulnerability, if so, block the absorption grant.
-execute if entity @s[nbt={ActiveEffects:[{Id:11b,Amplifier:4b}]}] run tag @s add invulnerable_check2
+data modify storage cartographer_core:dmg_save_resist OldResist set value {}
+data modify storage cartographer_core:dmg_save_wither OldWither set value {}
 
-#Grant 6 absorption to the mob.
-execute as @s unless entity @s[tag=invulnerable_check2] store result score @s ca.invul_abs run data get entity @s AbsorptionAmount 100
-execute as @s unless entity @s[tag=invulnerable_check2] store result entity @s AbsorptionAmount float 0.01 run scoreboard players add @s ca.invul_abs 600
+data modify storage cartographer_core:dmg_save_resist OldResist set from entity @s ActiveEffects[{Id:11b}]
+data modify storage cartographer_core:dmg_save_wither OldWither set from entity @s ActiveEffects[{Id:20b}]
 
-#Deal 6 damage to the mob.
-execute if entity @s[type=!#cartographer_core:undead] run effect give @s instant_damage 1 0 true
-execute if entity @s[type=#cartographer_core:undead] run effect give @s instant_health 1 0 true
+#Data Modify Wither and Resistance onto the mob.
+data modify entity @s ActiveEffects append value {Id:20b,Duration:2,Amplifier:100b}
+data modify entity @s ActiveEffects append value {Id:11b,Duration:2,Amplifier:100b}
 
-
-tag @s remove invulnerable_check2
+data modify entity @s ActiveEffects[{Id:20b}].HiddenEffect set from storage cartographer_core:dmg_save_wither OldWither
+data modify entity @s ActiveEffects[{Id:11b}].HiddenEffect set from storage cartographer_core:dmg_save_resist OldResist

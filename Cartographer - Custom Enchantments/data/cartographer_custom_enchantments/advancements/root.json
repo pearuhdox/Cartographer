@@ -6,12 +6,12 @@
     },
     "display": {
         "title": {
-            "color": "yellow",
-            "text": "Arcane Notes"
+            "color": "#ACFFA6",
+            "text": "Lexica: Arcane Notes          "
         },
         "description": {
             "color": "white",
-            "text": "Whenever you find a mysterious enchantment, this book fills out, automatically adding its description to this index."
+            "text": "Whenever you find a mysterious enchantment, this tab creates a short description of it. Detailed descriptions can be found in the Lexica Cartographia."
         },
         "icon": {
             "item": "minecraft:enchanted_book"

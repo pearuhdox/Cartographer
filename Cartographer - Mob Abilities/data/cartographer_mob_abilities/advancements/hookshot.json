@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy laughs, and winds up an attack. After a brief delay, the enemy launches a hook projectile. Players caught by the hook take 6 damage, and are dragged directly in front of the mob."
+            "text": "The enemy can throw a hook projectile that drags players back towards the enemy."
         },
         "icon": {
             "item": "minecraft:fishing_rod"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/hookshot"
       },
-    "parent": "cartographer_mob_abilities:laser"
+    "parent": "cartographer_mob_abilities:healer"
 }

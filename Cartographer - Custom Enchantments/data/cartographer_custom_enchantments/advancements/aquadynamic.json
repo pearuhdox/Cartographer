@@ -14,11 +14,11 @@
     "display": {
         "title": {
             "text": "Aquadynamic              ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "While held or worn, the user enters water with 8 seconds of Dolphins Grace. When not sprint swimming, the user gains 8 seconds of Conduit Power. When sprint swimming, they gain 8 seconds of Dolphins Grace."
+            "text": "The user enters water with Dolphins Grace. The user gains Conduit Power when moving slow in water."
         },
         "icon": {
             "item": "minecraft:heart_of_the_sea"

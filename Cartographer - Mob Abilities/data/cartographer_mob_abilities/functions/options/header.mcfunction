@@ -1,0 +1,1 @@
+tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Mob Abilities","color":"#FF7D7D","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View settings for Mob Abilities.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_mob_abilities:options/main"}}]

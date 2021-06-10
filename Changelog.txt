@@ -1,3 +1,646 @@
+Cartographer, June 2021 Patch - Wrath of the Podiatrist
+
+This is the first in a set of optimization and clean up patches. The goal of these series of patches is to re-optimize many sections of the pack
+(creating a more fluid and fresh experience, with less lag) address a couple balance issues, and patch some holes in each module.
+
+Overall, this still means a couple new features, but also a *ton* of reworks. Reworks, reworks, and more reworks. Many things are getting reworked!
+
+Despite reworks, the goal is to expand on what the pack offers while also minimizing the content it offers that is similar to something offered by Vanilla
+or elsewhere in Cartographer.
+
+As a side note, this is the final update for 1.16.5. Future versions of this datapack will be for 1.17. Critical issues will be fixed for the 1.16.5 version,
+but the pack will not receive new features or minor bugfixes for 1.16.5.
+
+And with that, let's get on with the updates!
+
+Additions:
+
+Core:
+ - A new feature has been added to Core: The Lexica Cartographia
+    - The Lexica is an in game holdable manual item. It serves as the new home for full and verbose descriptions of Cartographer effects.
+    - There is a placeable variant via a structure block structure.
+    - Lexica entries only show up if you've discovered them (like Advancements)
+    - Advancement and Tellraw entries have been shortened and simplified drastically.
+      - Overall, they should still provide a basic understanding of the enchantment, but have less complex details and simplify understanding.
+
+ - All entity hit detection in the entire pack has been moved to Gibbsly's Entity Hit Detection and ID system.
+ - A slightly modified version of Gibbsly's system is now included as a separate "Core" datapack. This must now be installed in order for Cartographer to work.
+    - This is labeled as "Cartographer - Core - Entity Hit Detection". Install this datapack with everything else in Cartographer.
+      - Functionality wise, this is identical to Gibbsly's EHID system. If you are already using it for some other system, you do not need to install this datapack.
+      - TLDR - If you have no idea what I am talking about and are not using Gibbsly's Custom Shields, install this datapack. :)
+
+Custom Enchantments:
+ - Thorns 2.0 is a custom enchantment in Cartographer which serves as an improvement to the vanilla Thorns enchant. [Custom Tag: {Thorns:1}]
+    - Description: When attacked, deal damage back to the enemy equal to the level of Thorns you have.
+    - Additionally, on hit melee enchants on items with Thorns will also apply their effects (like Fire Aspect)
+    - Only if an item has both an on hit enchantment and Thorns will this apply (so Fire Aspect and Thorns on the same item)
+    - No additional armor durability loss, or annoying chance based effects!
+
+ - Loyalty 2.0 is a custom enchantment in Cartographer which serves as an improvement to the vanilla Loyalty enchantment. [Custom Tag: {Loyalty:1}]
+    - Description: When thrown, this trident creates a "Prismarine Conch" in the slot it was occupying. When
+    it lands, the trident will travel back to and return to your inventory, replacing the Conch when it reaches you.
+    - Just like the vanilla version, higher levels of Loyalty increase the travel time.
+    - Just like the vanilla version, hitting an enemy with the Loyalty trident makes it return faster.
+    - Loyalty 2.0 times have been designed so that the approximate time to return is the same as vanilla Loyalty.
+    - Loyalty 2.0 has a max level of 10.
+
+ - Power and Punch have been brought to Crossbows with Custom Enchantments, with maximum levels of 10 and 5, respectively.
+    - Simply apply the vanilla enchants to crossbows. No custom tags needed.
+
+ - A couple new bow enchantments:
+    - Putrefy: Inflicts the new Infection debuff in Custom Statuses (see below) for 5 seconds. [Custom Tag: {Putrefy:1}]
+    - Flash: Inflicts Stunned on the hit target. [Custom Tag: {Flash:1}]
+      - Stun duration and chance to stun are dependent on how charged the arrow shot is.
+      - Maxes at 1 second and 70% chance, respectively.
+ 
+ - A new passive enchantment:
+    - Rally: When you are attacked by a mob, you can restore a portion of the health you lost by attacking quickly.
+        Description: When attacked, a percentage of the damage the holder/wearer took can be restored by attacks they make in the next 2.5 seconds.
+        During those 2.5 seconds, you deal 25% more melee damage and attack 25% faster.
+        Initially, 15% of the damage you took can be restored, with each additional level up to 4 increasing the percentage by 10%,
+        and each additional level after that increasing the percentage by 5%. (Max of 75%)
+
+ - And a new curse enchantment (this has been in the code for a while but not fully implemented or finished):
+    - Curse of Regret: Using the item inflicts 2 damage per level of Curse of Regret. (Maximum level is 5) [Custom Tag: {CurseRegret:1}]
+      - Damage is negated by all sources of damage resistance.
+ 
+Custom Statuses:
+ - New Effect: Infection
+    - Deals 2 damage per second to the afflicted mob.
+    - Afflicted mob is affected by a percent loss of movement speed and melee damage based on how close to death they are.
+      - The closer to death, the more debilitating the effect.
+    - When an Infected mob dies, it spreads the effect (with it's remaining duration) to 2 nearby targets (not Infected, within 6 blocks).
+    - If it cannot spread the effect, it deals 6 damage in a small AoE instead.
+      - AoE is half the radius of the spread distance. (3 Blocks)
+ 
+ - New (Player Only) Effect: Cleansing
+    - Set to Nasuea 101 (Amplifier:100b)
+    - Cleanses negative effects from players who obtain it.
+
+ - All Status effects can be inflicted now via vanilla potions with custom Nausea effects.
+    #Custom Debuff Conversion Chart
+      # Nausea 10 - Stunned
+      # Nausea 11 - Shocked
+      # Nausea 12 - Infection
+      # Nausea 13 - Bleeding
+      # Nausea 14 - Bleeding II (Adds 2 Stacks of Bleeding)
+      # Nausea 15 - Bleeding III (Adds 3 Stacks of Bleeding)
+      # Nausea 16 - Bleeding IV (Adds 4 Stacks of Bleeding)
+      # Nausea 17 - Bleeding V (Adds 5 Stacks of Bleeding)
+      # Nausea 18 - Cloaked
+
+  - Inflict the above Nausea level with the duration of time you want, and the custom effect will be applied to the mob (and Nausea removed).
+
+  - Note: Bleeding stacks are added with proper math. If you apply Bleeding II to a mob with 2 Bleeding stacks, they will add up to Bleeding IV (4 stacks)
+    - Bleeding cannot exceed a time of 10 seconds at any stack value. Doing so will cause unintended behavior.
+
+Repair Stations:
+  - The Station now has a new utility, known as the Limitless Tesseract.
+    - If you break an item (run its durability out) it will be transported to the Limitless Tesseract.
+    - Items you break can be repurchased from the tesseract for a minor material cost.
+      - They will be in identical form to when they broke.
+    - Each player's has their own storage in the Limitless Tesseract (like an Ender Chest).
+
+Changes:
+
+- Core now overwrites every vanilla mob loot table in the game for death detection systems.
+  - You will nowhave to extend this to custom loot tables if you want death effects (abilities and Infection) to work on enemies.
+  - You will now have to modify *these* loot tables if you want to edit the vanilla mob drops in the map.
+  - More details can be found on the wiki's Core page.
+  - It overall is a bit more of a hassle, but this will save on some performance, and allow enemies with death effects to drop their items.
+
+Custom Enchantments:
+
+ - Spectral Arrows now work with all Cartographer Bow and Crossbow enchantments.
+
+ - Armor items with passive enchantments will no longer apply those passive enchantments in your main or offhand.
+
+    Developer Commentary: This is a change to stop using an item intended to be worn providing effects in a slot it should not provide bonuses in.
+
+ - The following enchantments now apply to Trident projectiles as if they were melee attacks.
+    - Duelist
+    - Hunter
+    - Fire Aspect
+    - Frostbite
+    - Committed
+    - Stunning
+    - Vicious
+    - Overload
+    - Decay
+
+  Developer Commentary: In order to make Duelist and Hunter more consistent with Smite and Bane of Arthropods, they now deal their increased damage on ranged attacks.
+  To extend the general usefulness and item space for trident design, the above melee on hit effects will also work on ranged attacks.
+
+ - Adrenaline, Energetic, and Frenzy have all received a scaling tweak.
+    - Each level increases your move speed, mining speed, or attack damage by 20% per level.
+    - The effect duration lasts 10 seconds, and each second the effect decreases in potency by 2% (per level).
+    - TLDR: Higher levels of the enchants give a bigger potency, but in a burst that decays at a higher rate.
+    - Time buffed is constant at all levels.
+    - Revamped sfx and vfx for all 3 enchantments.
+
+  Developer Commentary: While v2 of the scaling was better than v1, it left a lot to be desired where now higher levels of the enchant felt progressively less useful.
+  v3 of the scaling attempts to solve this problem, by allowing a potency increase (shudder) but capping the duration at 10 seconds, and increasing how fast the buff
+  drains over time. Hopefully, this will be the last scaling rework.
+
+ - Auto Charge and Repeating:
+    - Auto Charge will now trigger on Repeating Crossbows, reloading 1 Ammo per activation.
+    - Repeating will now work with Spectral and Tipped Arrows.
+      - Tipped Arrows *always* have priority on additional shot. Spectral comes next, then normals.
+      - First arrow follows conventional vanilla priority (arrow in "lowest" inventory slot)
+      - Auto Charge reload will load a copy of the current "next shot" (so if your next shot will be a Poison Arrow, Auto Charge will copy the Poison Arrow instead)
+      - All new effects work with Multishot
+
+ - Committed:
+    - Duration increased to 4 seconds (from 3) to be consistent with other effects that inflict constant time potency debuffs. (Frostbite)
+
+ - Curse of Encumbering:
+    - Trueshot arrows lose damage bonus from Point Blank 50% slower.
+
+ - Curse of Shattering:
+    - Now takes 50% of the item's remaining durability, rather than reducing it to 1 durability.
+
+  Developer Commentary: Removing from remaining durability serves as a less punishing effect that doesn't necessarily force a player into immediate downtime, but will still punish
+  a player more for dying while holding the item.
+
+ - Decay:
+    - Now uses the Custom Status "Infection" instead of Wither.
+    - Inflicts 3/5/7 seconds of Infection, based on level.
+
+  Developer: The introduction of Infection is to move Decay away from Wither. Wither in the past acted like a "different flavor" of Fire Aspect. In an effort to
+  make the enchant more useful and unique, it has been given an entirely custom effect.
+
+ - Deadeye:
+    - Now inflicts on hit ranged enchantments (currently not including Punch).
+    - Improved vfx and sfx.
+    - Multishot now turns this effect into an un-aimed shotgun burst with reduced range.
+    - Trueshot now increases the range of Deadeye projectiles.
+    - Curse of Encumbering now decreases the range of Deadeye projectiles.
+
+ - Eruption:
+    - Knockback is now counted as an "on hit melee" enchantment.
+
+  Developer Commentary: With the introduction of Thorns 2.0 and counting Knockback as one of its effects, it made sense to retroactively also include it on Eruption.
+
+ - Evocation:
+    - Reworked!
+      - Evocation: "Special Attacks" (Sprint, Crits, and Sneak Attacks) with this weapon create Evoker Fangs.
+      - Fangs are created at the cost of -70/-50/-30% Attack Speed for your next hit.
+      - On hit effects (such as Fire Aspect) are applied to the fangs.
+        - As an extra mention, this does work with Knockback. Fangs will apply vertical momentum instead of horizontal momentum.
+      - Pattern of the fangs is dependent on the special attack used.
+      - Cannot be used below 50% attack timer.
+      - Fangs from Evocation are killed if the player walks over them.
+
+  Developer Commentary: Evocation sat in a position where it wasn't too useful in a fight, and could still hurt the user. Since the effect only triggered on a mob's death,
+  the effect only saved you time in cleaning up an already finished fight. This new rework offers it as a powerful "super attack" on the weapon, at the cost of some recharge
+  speed. It has also received the on hit synergy treatment, to open up more potential combos.
+
+ - Evasion:
+    - Individual dodge chance per level decreased to 4% (from 5%).
+    - Increased level cap to 20 (from 10). [Now a total of 80% attainable dodge chance]
+    - Can now trigger in succession.
+    - No longer triggers off non-mob attacks. [This may be reverted]
+    - Pity math slightly nerfed to compensate higher stackability. (Maxes at 20% additional chance instead of 30% additional chance.)
+
+  Developer Commentary: Evasion is an interesting enchant that in its previous scaling, was poised to be a "core" defense enchantment, but didn't scale the same as Protection.
+  The above changes are to modify the scaling so that it has effectively the exact same scaling as Protection. While still offering its own other upsides, this will help Evasion
+  and Protection levels feel more "equal" in worth. (And mathematically, a full 20 levels of Evasion will equal a full 20 levels of protection, either negating 80% of attacks,
+  or 80% of the damage from attacks)
+
+ - Executioner:
+    - Threshold is now 10% per level (rather than 10% for first level, and 7.5% for second and third levels)
+
+ - Hydraulic:
+    - Tempest now increases the damage of Hydraulic shoves.
+    - Drastically improved vfx.
+
+ - Lifesteal:
+    - Now stacks up to level 10.
+    - Levels past 5 heal 1 additional health per 1.25 seconds. (via Regeneration II)
+
+  Developer Commentary: To allow increasing of the Lifesteal cap to a more reasonable and easy to expect number, higher levels of Lifesteal provide over time
+  healing rather than burst healing.
+
+ - Regeneration:
+    - Initial Value of the 1st level reduced to 1 health per 4 seconds (was 1 per 3 seconds).
+    - Additional levels now reduce the time by 0.33 seconds (was 0.4 seconds).
+    - Max level is now 10 (was 6).
+  
+  Developer Commentary: Regeneration is quite a powerful effect and was quite easy to stack quickly. The effect has now been spread out over a higher level cap, meaning
+  an overall nerf to the enchantment. Approximately, 2 levels of Regeneration equal 1 level of old Regeneration with the new scaling. In terms of how it scales to the
+  vanilla effect, Regeneration I (enchantment) is about twice as slow as Regeneration I (potion effect) and Regeneration II (potion effect) is about the same speed as
+  Regeneration X (enchantment). This will allow Regeneration to serve as a more proper defensive enchantment without the threat of reaching the level cap quickly.
+
+ - Ricochet:
+    - No longer creates a projectile, instantly targets nearby entities instead.
+    - Tempest now increases the damage of Ricochet bounces.
+
+ - Sapper:
+    - Now stacks up to level 10.
+    - Levels past 5 heal 1 additional health per 1.25 seconds. (via Regeneration II)
+    - If a Sapper pickaxe has Adrenaline, Frenzy, or Energetic, those enchantments will activate when you break a spawner.
+      - Like Thorns 2.0, the pickaxe must have the enchantment.
+
+  Developer Commentary: With synergies being added across the board, they are also being added to Sapper to allow more diverse item creation.
+  To allow increasing of the Sapper cap to a more reasonable and easy to expect number, higher levels of Sapper provide over time
+  healing rather than burst healing.
+
+ - Satiation:
+    - Reworked: Now provides 15 seconds of Absorption (with potency equal to your level) whenever you eat food (or drink a potion).
+    - Additionally, provides 5 seconds of Resistance 1 when you eat food.
+    - New level cap is 3 (from 6).
+    - Not a feature, but worth noting this can be applied to and works on the actual food item itself.
+
+  Developer Commentary: Satiation prior to this acted as a "different flavor of Lifesteal" that was potentially more powerful, but more frustrating to use than Lifesteal.
+  In an effort to make effects more unique, the enchant has been turned into a new effect which allows one to use consumables more readily in combat. It can also be applied
+  to the food items themselves, allowing you to create food that provides Absorption/Resistance.
+
+ - Second Wind:
+    - Revamped vfx and sfx. They're cleaner now, but about the same amount of pressure applying as they used to be.
+    
+    - Reworked background fatal hit detection system. Guaranteed to protect any fatal damage.
+      - I don't mean this in jest. The system is 100% fool-proof when it comes to preventing lethals.
+    - Second Wind no longer requires Evasion.
+    - Second Wind will protect from any kind of lethal damage, including one-shot-kills.
+    - Second Wind will not provide fatal protection while you have Absorption Health.
+
+    - Second Wind's tiering system has been updated.
+      - The first trigger (Tier 1) provides 12 Absorption Health for 10 seconds (Penalty Damage is 15).
+      - The second trigger (Tier 2) provides 8 Absorption Health for 7 seconds (Penalty Damage is 30).
+      - Third and further triggers (Tier 3) provide 4 Absorption Health for 4 seconds (Penalty Damage is 45).
+        - All penalty damage is 20% "true damage" (damage that cannot be blocked by armor or enchantments) [3/6/9 respectively]
+      - No longer inflicts debuffs on the player when it triggers.
+  
+    - New Descriptions:
+      "While you have no Absorption Health, you will be protected from a lethal attack, cleansing all potion effects.
+      When you are, your fatal hit protection is removed, and you receive a "Fatal Shield", which lasts for at most 10 seconds.
+
+      While you have this Fatal Shield, killing a mob will restore health equal to the remaining value of the shield and restore
+      your fatal hit protection (cleansing the shield). If the Fatal Shield runs out, either by being damaged or running out of time,
+      the player is instead dealt a heavy instance of damage, 20% of which is "true damage".
+
+      Successive triggers of Second Wind reduce the starting shield value by 4 (minimum of 4),
+      reduce the starting duration by 3 seconds (minimum of 4), and increase the damage dealt by 15."
+    
+    - Short Read Description:
+      "While you have no Absorption Health, you will be protected from a lethal attack.
+      When you are, you gain a temporary shield, which when you slay a mob, restores your health.
+      Failing to slay a mob before the shield runs out has drastic consequences.
+      The effect can trigger in succession, but is less effective when it does."
+
+ - Surging Strike:
+    - Now deals 50/66/75% of the attack's base damage rather than 2/4/6 flat damage. (Equivalent to Sweeping Edge)
+    - Now triggers on mobs up to 4 blocks away without the sprint attack. Sprint attack still allows hitting mobs up to 7 blocks away.
+    - Knockback reduced by 50%.
+    - On hit effect enchantments apply to enemies hit by the thrust attack.
+
+  Developer Commentary: Scaling adjusted to work with Sweeping Edge so these two parallel effects are consistent. Additionally, it has been given an additional "grace"
+  trigger, and can be activated without sprint hits (but the maximum value is still with sprint hits). As compensation for the easier to use trigger and potential higher damage
+  on larger scaling weapons, its knockback has been reduced.
+
+ - Splintering:
+    - Now deals 3 damage to all hit mobs.
+    - Stun duration reduced to 2 seconds (from 3).
+
+  Developer Commentary: Damage has been added to Splintering to make it feel more impactful in use. Stun duration has been reduced in an effort to reduce the amount of potent hard
+  CC effects players can use on mobs.
+
+ - Soulbound:
+    - Now protects the item when you die from anything that would destroy it.
+
+ - Tempo Theft:
+    - No longer provies Haste at any level.
+    - Reworked effect: Steal 15% Movement Speed from an attacked mob for 10 seconds per level.
+      - Steal applies a slowing effect to the mob equivalent to the speed you temporarily gain.
+
+  Developer Commentary: This was always intended to be the ideal version of Tempo Theft (i.e. the exact effect from Minecraft Dungeons) but 1.15.2 did not have the attribute command.
+  The effect has been reworked to use the attribute command, adding the speed stealing bonus. The haste has been removed and the speed tuned to compensate for an on demand potent
+  slowing ranged attack.
+
+ - Transfiguration:
+    - Now a 5% chance per level to create a "Poultrygheist". Poultrygheists cannot drop feathers, but they can drop extra amounts of "Suspicious Meat"
+    - Once it creates a Poultrygheist, the enchantment is placed on a 15 second internal cooldown.
+    - Now features bias against expectation in random mechanics.
+    - Now affects all enemies hit by the sweep attack (rather than 1).
+    - Still cannot affect enemies with the "elite" or "boss" tag.
+    - Reworked sfx and vfx.
+
+  Developer Commentary: Transfiguration was a bit of a novelty enchantment. It was too low of a chance to actively be useful except at maximum level. The new version
+  prevents it from being used to farm materials as easily, but allows it to trigger more commonly in exchange for an internal cooldown so it can't trigger too often.
+  Suspicious Meat has Curse of Vanishing to limit the effectiveness of farming it. The drop is affected by Looting, so it can be a nice source of early game food.
+
+ - Trueshot:
+    - Trueshot arrows are affected twice as much by Sharpshot.
+    - Trueshot arrows lose damage bonus from Point Blank 50% faster.
+
+ - Two Handed:
+    - Item is now a "Compressed Item" not in a Knapsack. Can no longer be placed.
+    - Compressed Items in your inventory or offhand when not holding a Two Handed item are automatically uncompressed.
+    - An item takes 1 second to uncompress after you stop holding a Two Handed item.
+    - Compressed items now have a small speed penalty and kbr bonus when in your offhand.
+      - Clarification: Debuff is only active while item is compressed. Uncompressing removes the debuff from the item.
+
+  Developer Commentary: Two Handed no longer has Knapsack functionality as it was the source of many unfixable duplication bugs. As compensation, Compressed Items
+  are even smoother, and auto uncompress in your inventory. Your offhand item takes a bit longer to uncompress in order to increase the impact of the Two Handed enchant
+  mid combat, ensuring the effects are felt more in general, and not rarely when you use the item. Compressed items apply a small speed debuff and kbr buff to accent this.
+  Ideally this debuff is not enough to make a Two Handed item unusable with a compressed item in your offhand (as part of the big draw is making it so players are not
+  encouraged to not fill their offhand slot) but make the curse feel a bit more "curse like". Please let me know how this feels, I welcome feedback on it.
+ 
+ - Volatile:
+    - Level cap reduced to 1 (from 3).
+    - Firework now deals damage equivalent to the damage the arrow deals. (Approximately)
+    - Volatile explosions now also inflict on hit ranged enchantments (like Flame) to enemies caught within the blast.
+    - Volatile arrows should create explosions even if they kill their targets.
+    - Volatile arrows no longer create explosions when they hit blocks.
+
+  Developer Commentary: Volatile has lost level scaling in exchange for scaling with the direct power of the arrow. Additionally, it now serves as the Bow/Crossbow's
+  propogation effect, allowing splash debuffs of custom enchantment effects. Explosions have been removed from block hits to make the enchant consistent with other
+  Bow effects, and because it was causing performance issues.
+
+Custom Statuses:
+
+ - Shocked:
+    - Chance of knock back when damage tick received reduced to 20% (from 100%)
+    - Chance of "mini stun" when damage tick received increased to 20% (from 0%)
+    - (Mini stun and knock back are mutually exclusive events. Only one can activate per tick)
+    - RNG pity system implemented to make chance more consistent.
+
+  Developer Commentary: Proper uses of past Shocked could easily prevent hordes of enemies from ever getting close to the player. In an effort to reduce this effect,
+  the chance of Knockback has been reduced severely. As a side grade, Shocked can now mini stun the crowd, which will slow them down briefly, but also cancel any
+  active attacks or abilities. As with Evasion, a pity system has been built in to help ensure you get at least one activation out of the CC.
+
+ - Vulnerability:
+    - Is now called "Exposed" since the mechanic works and functions differently from Resistance (and thus should follow a more unique naming scheme)
+    - Can be stacked up to 10.
+    - Improved vfx
+    - Sfx and vfx when an Exposed mob takes damage.
+
+Mimics:
+
+  Mimic:
+    - Projectile Damage Resistance reduced from 64% to 48%.
+    - Health regeneration while enraged reduced to 4 (from 6) (every 5 seconds).
+    - Mimics gain 20% Knockback Resistance while enraged.
+    - Mimics now drop a chest ("Mimic Carcass") that is an exact copy of the chest they were posing as.
+      - They still drop XP and Mimic Heads.
+      - Like with before, the behavior works with both manually filled mimic chests and loot table set mimic chests.
+
+    - The Mimic bossbar can now be seen from 64 blocks away (was 20)
+
+Mob Abilities:
+
+ - General:
+    - Abilities that immobilize or root a mob no longer use Slowness and Weakness effects. They now use custom attributes instead.
+    - Abilities have either been reformatted to use the movement and damage disable effects, or movement and damage reduction effects.
+    - Movement and Damage reduction reduces a mob's damage and movement speed by 50%.
+    - Some abilities can now make mobs temporarily knockback immune.
+    - All Cooldowns are reduced by 20-25% on Hard (and higher) difficulty.
+
+ - Token System:
+    - Cartographer's token system (that's such an ugly phrase, we need a better one...) erm... the **Mob Manager** has been entirely reworked!
+
+ - Mob Manager:
+    - Difficulty control is far more noticeable. Easy is noticeably easier, Hard is noticeably harder.
+    - Hordes of enemies get more frequent and aggressive as the difficulty increases.
+    - More enemies can attack in higher bursts on higher difficulties, and they can do this more often.
+    - Difficulty settings for independent difficulty above Hard still exist.
+    - Attacks have been split into "Light" and "Heavy" attacks.
+      - Less Heavy attacks can be used in succession by groups of mobs than light attacks, and less frequently.
+
+    - Light Attacks: Ambush, Charge, Disarm, Fireball, all Novas, Smash, Sweep, Trapper, Webshot
+    - Heavy Attacks: Augmenter, Cloaker, Duplicator, Healer, Hookshot, Laser, Magic Missile, Wither Storm
+      - These presets can be overwritten for individual mobs with the "heavy_priority" and "light_priority" tags.
+
+Active Abilities (now called "Active Skills" in Lexica):
+ - Ambush:
+    - Charge time reduced to 1 second (from 2).
+    - Mob is immobilized and unable to damage players for 0.75 seconds after teleporting (was 1 second).
+    - Mob damage and speed is reduced for 1.5 seconds after teleporting (was 0 seconds).
+
+  Developer Commentary: In order to make Mob Abilities slightly more fast paced, many Mob Ability charge up timers are being modified.
+  In light of this, Ambush activates twice as fast, but the mob is debuffed for the duration and slightly after the attack, meaning
+  that ambush attacks will not be as detrimental with the reduced charge time.
+
+ - Augmenter:
+    - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
+    - Augmenter can no longer apply the augmentation buff to nearby Augmenter mobs.
+
+ - Charge:
+    - Charge now breaks blocks at the end of the cast (to prevent the mob from getting stuck in walls)
+    - Charge uses better tracking to help prevent mobs from becoming stuck in walls.
+    - Vfx adjusted.
+
+ - Cloaker:
+    - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
+    - Augmenter can no longer cloak nearby Cloaker mobs.
+
+ - Disarm:
+    - Reworked!
+      - The mob laughs and reduces in speed, damage, and becomes knockback immune.
+      - After 1 second, the mob attacks a small area in front of it. Players hit take 4 damage and are blinded for 1 second.
+      - The mob will copy the player's mainhand item and place it into their main hand. (the player's item is not lost or manipulated)
+      - The mob will lose Disarm and gain a different ability based on the item they copied.
+        - Smash if it was an Axe.
+        - Trapper if it was a ranged weapon (Bow, Crossbow, Trident)
+        - Sweep for all other items.
+        - Mob's cooldown is set to 1 second if the hit is successful (rather than the default 10 seconds).
+
+  Developer Commentary: Disarm was one of the most infuriating and frustrating effects in the game, that was never engaging to fight.
+  The new version copies the weapon the player uses, and replaces Disarm, so they only "take" one weapon. Overall, this dynamic ability
+  will make combat more interesting than the old hard CC effect of dropping your important items.
+
+ - Duplicator:
+    - Charge time reduced to 1 second (from 2).
+    - Duplicator now works on every hostile mob.
+
+    - Duplicator now reduces the speed and damage of the caster while charging.
+    - Duplicated mobs always have half the current Health of the original mob.
+    - Duplicated mobs now have a lifetime of 18 seconds (was 15).
+
+    - Duplicated mobs now copy *all* nbt from the original mob (besides the Duplicator tag)
+      - *Unless* they have the "mitosis" tag in which Duplicates can copy themselves.
+        - When copies can copy themselves, the newly created copies receive much lower cooldowns.
+
+    - Duplicated mobs (not mitosis variant) explode on death, dealing 4 damage to everything within 2 blocks.
+      - Explosion does not damage terrain.
+      - Explosion affects players and hostile mobs.
+      - Explosion does not trigger if duplicates despawn.
+
+    - Duplicator by default only makes 1 mob copy.
+      - Additional copies can be added via the "triple" (2 copies), "quadruple" (3 copies), and "quintuple" (4 copies) tags.
+
+  Developer Commentary: While the effect hasn't gotten a rework, Duplicator has received an extensive number of changes to improve the effect and give
+  more control to mapmakers using it. It also now copies all the nbt from the mob, meaning more terrifying enemies can be made with it. Duplicates now
+  explode on death to further incentivize attacking the real one.
+
+ - Fireball:
+    - Charge time reduced to 1 second (was 2).
+    - Projectile is now spawned above the mob rather than in front of it.
+
+ - Flame, Frost, Soulfire, Venom, and Wind Nova:
+    - Charge up time reduced to 3 seconds (was 4).
+    - Now reduce the speed and damage of the caster rather than immobilizing them (see above)
+    - Wind Nova specifically: Now creates a cloud of levitation on hit targets rather than inflicting levitation.
+      - These clouds vanish when a player consumes them or after a couple seconds.
+
+  Developer Commentary: As with above, to increase the aggression of some Cartographer Mob Abilities, charge up timers have been reduced across the board.
+
+ - Healer:
+    - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
+    - Healer can no longer heal nearby Healer mobs.
+
+  Developer Commentary: Augmenter, Cloaker, and Healer no longer work on mobs with the same ability to avoid hordes of mobs with these effects
+  from being very hard to kill.
+    
+ - Hookshot:
+    - Damage increased to 4 (from 2).
+    - Fixed the frankly absurd problems where this ability could drag players in all sorts of unintended paths.
+    - Projectile can no longer travel through walls. (Its a hook, not a spirit tether from the aethervoid)
+
+ - Magic Missile:
+    - Projectile now has an actual homing effect rather than direct following snap to precision.
+    - The speed of the projectile is now slower, and constant at all distances from the player.
+    - Projectile now leaves behind a cloud of magic residue when it explodes, that inflicts 8 seconds of Wither II.
+
+ - Smash:
+    - Damage reduced to 8 (from 10).
+    - Slowness effect removed from the attack.
+    - Damage now triggers centered on the mob in a 3.5 block radius.
+    - Mob will leap forwards and up in the direction they are facing.
+    - Mob will leap higher in vertical mobility.
+    - Mob will cast the damage effect when they actually land rather than 1 second into the future.
+    - Vfx adjusted.
+
+    - The tags "recast" and "rerecast" can be used to make a Smash mob attack with multiple smashes in succession (2 or 3).
+
+  Developer Commentary: One of the biggest focuses of Mob Abilities this patch is removing unnecessary CC effects from abilities where it
+  thematically makes little sense to have them. Additionally, the way Smash works has been reworked so that the attacked area can be made much
+  more clear to players, and to increase the aggressiveness of the ability.
+
+ - Sweep:
+    - Damage reduced to 6 (was 8).
+    - Weakness effect removed from the attack.
+    - Attack shape and size reworked. Is now a very narrow cone that reaches out up to 4 blocks away from the caster. (Max size is 3.2 blocks, min size is 2.2 blocks)
+    - Charge up time reduced to 0.5 seconds (was 1).
+    - Sweep now moves the mob forward 1.5 blocks after the attack is made (in the direction of the attack)
+
+    - The tags "recast" and "rerecast" can be used to make a Sweep mob attack with multiple sweeps in succession (2 or 3).
+    - The tag "mobile" makes the mob move a bit farther (2 blocks instead of 1.5)
+    - The tag "unstoppable" makes the mob not attempt to realign with the player on recasts.
+
+
+  Developer Commentary: As above with Smash, removing unnecessary CC effects from abilities was a part of the core updates to Mob Abilities.
+  Thus, Sweep's focus has been reworked to be a fast acting melee attack.
+
+ - Trapper:
+    - Reworked vfx, traps are now called "enchanted caltrops" in the death message.
+    - Charge time reduced to 1 second (was 2).
+
+ - Wither Storm:
+    - Values have been entirely reworked.
+    - Effect is the same, but overall, more consistency.
+    - Fixed bug where projectiles would not be placed properly.
+    - A projectile is guaranteed to be placed above the player's position when the storm starts.
+
+Death Effects (now called "Morbid Skills" in the Lexica):
+  - Brutal Blood:
+    - Now stacks up to 10 stacks.
+    - Each stack now increases melee damge by 10% rather than a flat +1.
+  
+  - Relentless Blood:
+    - Now stacks up to 10 stacks.
+    - Each stack now only provides 5% speed (was 10%).
+
+  - Devious Blood:
+    - Now grants Devious Stacks instead of resetting cooldowns.
+      - Devious Stacks grant 30% Cooldown Reduction to mobs that have active skills. (Max of 10, at 300% Cooldown Reduction [4 times as fast])
+    - Enemies that do not have actives are given a Relentless Stack instead.
+
+  - Sacrificial Blood:
+    - Now grants Sacrificial Stacks instead of Absorption Health.
+      - Sacrificial Stacks grant 1 Absorption Health per stack whenever they are increased. (Max of 10, gaining 10 Absorption Health whenever Sacrificial Blood stacks are increased)
+    - Sacrifical Stacks cannot be applied to Sacrifical Blood mobs. They are instead given Brutal Blood stacks.
+  
+    Developer Commentary: All blood effects now stack to 10 rather than their previous stack counters or other effects, to make them more in line
+    with each other. Additionally, Relentless speed values have been reduced to make the ramping of speed less drastic, and Brutal stacks now use percentage
+    damage to prevent enemies like Silverfish and Cave Spiders from becoming monsters with stacks. Devious and Sacrificial Blood now use stack systems instead
+    of instant constant value buffs, to reduce their power level.
+
+  - Corpse Crawler:
+    - All corpse crawler variants will drop eggs which hatch into the enemies, instead of spawning the enemies immediately.
+      - Hatch time is 2 seconds.
+      - Eggs can be destroyed before they hatch to prevent the enemy from spawning.
+        - Eggs have 5 health.
+    - Corpse Crawler now has a 50% chance to spawn an additional 4th egg, and a 75% chance to spawn the third egg.
+    - Corpse Crawler now has a subtype for cave spiders ("corpse_crawler_spider")
+    - Corpse Crawler mob stats have been retuned. Arthropods have less health and damage, Zoglins have less damage, more health. Undead are unchanged.
+
+    Developer Commentary: Corpse Crawler is a death effect that activates immediately when the mob dies, with little to no counterplay.
+    The above changes add some much needed counterplay and overall nerf the ability slightly, while keeping the feel and idea of the
+    ability.
+
+  - Exalted:
+    - Reworked!
+      - When the mob dies, it drops a soul near its position and leaves its weapon at it's death pile.
+      - The mob's soul will be placed about 12 blocks away from the mob. It will move towards the nearest weapon to "reclaim" it.
+      - If the soul manages to reclaim the weapon (stands on the weapon for 4 seconds) the entity will be respawned in its default spawn state.
+
+    Developer Commentary: Inspired by the Hades enemy type of similar name, this new effect will serve as an interesting way to allow respawning enemies.
+    The old effects of Exalted have been bundled into Spectral changes (see below).
+
+  - Parting Gift:
+    - TNT fuse time increased to 5 seconds (was 4).
+
+    Developer Commentary: This slightly longer extra time will help players escape from Parting Gift when it is dropped.
+
+  - Pyromania:
+    - Pyromania now creates a "magma shulker" when the enemy dies.
+    - The magma shulker releases heat around it for 2.5 seconds, creating fire and magma around it.
+    - When finished, it drops a full lava source at its position.
+      - The shulker can be destroyed by placing a block inside its space.
+
+    Developer Commentary: In line with the Corpse Crawler changes, Pyromania's changes are to help players combat death effects before they trigger.
+    Thus, the effect now has a lengthier warmup to finishing the effect, and it can be canceled in the same way lava from Pyromania could be removed
+    previously. The ability is slightly more destructive to compensate for these changes (with Magma blocks and Fire).
+
+  - Spectral:
+    - Now spawns 1 of three different types of Spectres.
+      - The Standard Ambushing Shade (the current existing one)
+      - The Ranged Trapping Poltergeist (Pillager type mob)
+      - The Tanky Charging Revenant (Wither Skeleton type mob)
+    - All Spectres spawn with reduced movement and damage for 2 seconds.
+
+    Developer Commentary: Spectral now provides enemy variety to keep the effect more interesting. Spectres are also weakened when they first spawn to prevent
+    unfair attacking from the Spectre.
+
+Passive Effects:
+  - Reflect:
+    - The mob will now always counter attacks of the correct type, regardless of range attacked at.
+      - This means melee attacks hitting Reflect Melee mobs will always reflect, and ranged attacks hitting Reflect Ranged mobs will always reflect.
+      - Mobs will no longer enter a "reflective stance" depending on the range of players.
+    - Damage reflected is now 50% of the damage dealt to the mob (was a flat 4)
+    - Mob is immediately healed for 50% of the damage dealt (instead of 80% damage reduction)
+    - Mob is stunned for 0.5 seconds after reflecting.
+    - Mob has their movement speed and damage reduced by 50% for 2 seconds after reflecting (instead of slower movement and knockback resistance in a reflective stance).
+    - Mob is always equipped with a Reflector Mirror Shield to indicate the effect (in offhand). The shield is cosmetic.
+    - Reworked vfx and sfx
+
+    Developer Commentary: Reflect has moved over to using the Entity Hit Detection System from Gibbs. This brought an opportunity to change how it works without
+    costs in performance. In order to make the balance of all attacks more fair, Reflect now uses percentage based damage and recovery effects. Instead of blocking
+    attacks based on proximity, it will now do as implied, and block attacks of a specific type. To counteract the fact that Reflect mobs are now always much faster,
+    an actual reflection will halt the mob's progress considerably, meaning if you have the defensive capability, a Reflecting mob can be stunlocked.
+
+Repair Stations:
+
+  Station:
+    - Station now creates an impassable entity wall to prevent more than one player from interacting with the station at a time.
+    - Station will remove all other players from the zone that are not the nearest player (when station is activated)
+    - Station now allows for flexible max levels and scaling.
+    - Station will block a repair if the player attempting the repair doesn't have the needed materials.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Cartographer, Patch 2021.2.0 - Divine Additions
 
 Alright lets start out with the announcements!

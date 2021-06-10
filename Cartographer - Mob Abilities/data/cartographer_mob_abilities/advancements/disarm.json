@@ -7,7 +7,15 @@
                     "nbt": "{Tags:[\"disarm\"]}"
                 }
             }
-        }
+        },
+        "found_2": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+              "entity": {
+                "nbt": "{Tags:[\"used_disarm\"]}"
+              }
+            }
+          }
     },
     "display": {
         "title": {
@@ -15,7 +23,7 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy laughs, and after a brief delay, attacks the area in front of it. Players caught in the attack take 8 damage, and drop the item they are holding on the ground.",
+            "text": "The enemy can attack the area directly in front of it. Players hit take damage and drop the item they are holding.",
             "color": "white"
         },
         "icon": {
@@ -26,8 +34,14 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "requirements": [
+        [
+            "found",
+            "found_2"
+        ]
+    ],
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/disarm"
       },
-    "parent": "cartographer_mob_abilities:charge"
+    "parent": "cartographer_mob_abilities:cloaker"
 }

@@ -1,1 +1,0 @@
-execute as @s[tag=evading] at @s run effect give @s resistance 1 4 true

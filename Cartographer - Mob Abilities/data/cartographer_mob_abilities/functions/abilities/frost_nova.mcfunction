@@ -1,8 +1,9 @@
-scoreboard players set @s cooldown 10
+execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
+execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 8
 
 scoreboard players set @s ability_charge 0
 
-effect give @s slowness 1 6 true
+scoreboard players set @s mob_move_dis 12
 
 execute as @a[gamemode=survival,distance=..8] at @s run tag @s add frost_novad
 
@@ -12,13 +13,16 @@ execute as @a[gamemode=survival,distance=..8] at @s run function cartographer_co
 execute as @a[gamemode=survival,distance=..8] at @s run effect give @s slowness 3 2
 
 playsound minecraft:block.glass.break hostile @a[distance=..16] ~ ~ ~ 3 0.8
+playsound minecraft:block.end_portal.spawn player @a[distance=..16] ~ ~ ~ 0.5 1.75
 
 particle minecraft:item_snowball ~ ~ ~ 4 0.2 4 0.1 250 normal @a
 
 particle minecraft:cloud ~ ~1 ~ 0.75 0.25 0.75 0.1 30 normal @a
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-scoreboard players set @a[distance=..20] cooldown 4
+function cartographer_mob_abilities:helper/token/return
+tag @s remove attacking
 tag @s remove tokened
+tag @s remove can_see_player
 
 schedule function cartographer_mob_abilities:helper/attacked_reset 10t

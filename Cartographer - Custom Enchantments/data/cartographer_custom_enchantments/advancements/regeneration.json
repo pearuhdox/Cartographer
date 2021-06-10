@@ -29,15 +29,85 @@
                     }
                 ]
             }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Regeneration:4}"
+                    }
+                ]
+            }
+        },
+        "find5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Regeneration:5}"
+                    }
+                ]
+            }
+        },
+        "find6": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Regeneration:6}"
+                    }
+                ]
+            }
+        },
+        "find7": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Regeneration:7}"
+                    }
+                ]
+            }
+        },
+        "find8": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Regeneration:8}"
+                    }
+                ]
+            }
+        },
+        "find9": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Regeneration:9}"
+                    }
+                ]
+            }
+        },
+        "find10": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Regeneration:10}"
+                    }
+                ]
+            }
         }
     },
     "display": {
         "title": {
             "text": "Regeneration             ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
-            "text": "The holder/wearer passively regenerates health. The rate is faster the more levels the user wears/holds. (Health is regenerated at 1 health per 3 seconds at level 1. Health is regenerated 0.4 seconds faster per additional level, capping at 1 health per second).",
+            "text": "The user slowly regenerates health.",
             "color": "white"
         },
         "icon": {
@@ -52,11 +122,18 @@
         [
             "find1",
             "find2",
-            "find3"
+            "find3",
+            "find4",
+            "find5",
+            "find6",
+            "find7",
+            "find8",
+            "find9",
+            "find10"
         ]
     ],
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/regeneration"
       },
-    "parent": "cartographer_custom_enchantments:cleansing"
+    "parent": "cartographer_custom_enchantments:rally"
 }

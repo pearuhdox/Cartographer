@@ -1,0 +1,10 @@
+{
+  "values":[
+	  "minecraft:cobweb",
+    "minecraft:sweet_berry_bush",
+    "minecraft:tall_grass",
+    "#minecraft:flowers",
+    "#minecraft:tall_flowers",
+    "minecraft:large_fern"
+  ]
+}

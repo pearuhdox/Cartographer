@@ -13,12 +13,12 @@
     },
     "display": {
         "title": {
-            "text": "Two-Handed               ",
+            "text": "Two Handed               ",
             "color": "red"
         },
         "description": {
             "color": "white",
-            "text": "When in the hotbar, this item packages and stores up any item placed in your offhand (rendering it ineffective). The package can be opened by right clicking it on the ground."
+            "text": "While held, disables the offhand slot. Any items placed into the offhand are compressed and unusable until the item is not held."
         },
         "icon": {
             "item": "minecraft:stone_axe"
@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/two_handed"
       },
-    "parent": "cartographer_custom_enchantments:curse_tree"
+    "parent": "cartographer_custom_enchantments:shattering"
 }

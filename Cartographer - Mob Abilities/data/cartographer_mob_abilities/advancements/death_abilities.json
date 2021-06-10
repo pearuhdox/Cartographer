@@ -6,11 +6,11 @@
     },
     "display": {
         "title": {
-            "text": "Death Abilities          ",
+            "text": "Morbid Skills            ",
             "color": "yellow"
         },
         "description": {
-            "text": "Effects that occur when an enemy with them dies.",
+            "text": "Mob skills that activate when an enemy with them dies.",
             "color": "white"
         },
         "icon": {

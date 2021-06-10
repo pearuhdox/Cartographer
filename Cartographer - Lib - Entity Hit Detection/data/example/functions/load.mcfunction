@@ -1,0 +1,1 @@
+scoreboard objectives add ex.has_chest dummy

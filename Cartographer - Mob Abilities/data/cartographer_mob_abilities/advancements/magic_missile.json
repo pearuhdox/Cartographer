@@ -15,7 +15,7 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy becomes immobile, and charges up. After a delay, the enemy creates a magic missile projectile. The missile chases players, and moves faster the further it is from its target. When it collides with a block or player, it explodes, dealing 8 damage.",
+            "text": "The enemy can create a projectile that chases players. When it collides with a block or player, it deals damage to nearby entities.",
             "color": "white"
         },
         "icon": {
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/magic_missile"
       },
-    "parent": "cartographer_mob_abilities:hookshot"
+    "parent": "cartographer_mob_abilities:laser"
 }

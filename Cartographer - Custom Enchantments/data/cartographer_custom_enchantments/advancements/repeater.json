@@ -85,11 +85,11 @@
     "display": {
         "title": {
             "text": "Repeating                ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "This crossbow loads an additional arrow per reload per level, which can be fired in rapid succession."
+            "text": "When reloaded, loads in additional arrows that can be fired in rapid succession."
         },
         "icon": {
             "item": "minecraft:crossbow"
@@ -102,5 +102,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/repeating"
       },
-    "parent": "cartographer_custom_enchantments:auto_charge"
+    "parent": "cartographer_custom_enchantments:rend"
 }

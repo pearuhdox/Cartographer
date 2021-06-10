@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy roars, and after a delay, fires a large amount of wither skulls into the air. These skulls, after all have been fired, will rain down around nearby players."
+            "text": "The enemy can create a storm of wither skull rain around it."
         },
         "icon": {
             "item": "minecraft:nether_star"
@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/wither_storm"
       },
-    "parent": "cartographer_mob_abilities:webshot"
+    "parent": "cartographer_mob_abilities:wind_nova"
 }

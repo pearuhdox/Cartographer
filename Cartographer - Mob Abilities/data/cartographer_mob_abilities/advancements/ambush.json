@@ -15,7 +15,7 @@
             "color": "white"
         },
         "description": {
-            "text": "The enemy laughs, and after a brief delay, teleports directly behind the nearest player. After teleporting, the enemy cannot move or attack for 1 second.",
+            "text": "The enemy can teleport behind the player. They are briefly unable to attack after doing so.",
             "color": "white"
         },
         "icon": {

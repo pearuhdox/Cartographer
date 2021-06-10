@@ -1,0 +1,20 @@
+Entity hit detection utility
+	This is a pack to detect what entity a player hit, and/or what entity hit a player.
+	
+	This also applies an ID to all entities that are not in the tag #entityid:id_skip. 
+	
+	IDs are stored on the scoreboard entityid as well as in the entities 'Tags' array bit by bit. This is formatted like "entityid.<bit_index>.<bit_value>".
+	
+	By default this pack will not attempt to run any checks on players, to start checking for damage you add 1 to the score "phe_listen" for "player_hurt_entity" and "ehp_listen" for "entity_hurt_player". If you want to stop listening you remove 1 from the score you added to. This allows multiple systems to enable listening without having to track if any other system may be listening at the same time. 
+	
+	If the system is currently listening some function tags will be called if a player is hit or if a player hits an entity. These function tags are listed below. The attacker and receiver are tagged with entityid.<attacker|receiver>. The execution order is always entity/player/entity.
+		"#player_hurt_entity/as_entity"		| runs as the entity that was hit by the player before any player handling happens
+		"#player_hurt_entity/as_attacker"	| runs as the player when they attack an entity
+		"#player_hurt_entity/as_receiver"	| runs as the entity that was hit by the player
+		"#entity_hurt_player/as_entity"		| runs as the entity that hit the player before any player handling happens
+		"#entity_hurt_player/as_receiver"	| runs as the player when hit by an entity
+		"#entity_hurt_player/as_attacker"	| runs as the entity that hit the player
+	
+	This system has no context of what systems are currently requesting updates, so you will need to handle the logic of that yourself in your own systems.
+	
+	This system also writes the ID of the owner onto projectiles, any projectiles an attacker owns are tagged as "entityid.attacker.projectile" when a player receives damage

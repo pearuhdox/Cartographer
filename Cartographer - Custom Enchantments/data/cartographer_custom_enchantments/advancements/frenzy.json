@@ -41,11 +41,11 @@
     "display": {
         "title": {
             "text": "Frenzy                   ",
-            "color": "white"
+            "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "When the holder or wearer kills a mob, they gain Strength I. For up to 2 levels of Frenzy, receive 5 seconds per level. Each additional level provides 1 less second (Capping at 20 seconds)."
+            "text": "When the user slays a mob, they gain a melee damage boost that shrinks over time."
         },
         "icon": {
             "item": "minecraft:blaze_powder"
@@ -58,5 +58,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/frenzy"
       },
-    "parent": "cartographer_custom_enchantments:energetic"
+    "parent": "cartographer_custom_enchantments:evasion"
 }
