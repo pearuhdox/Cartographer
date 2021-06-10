@@ -18,4 +18,7 @@ The current existing modules are:
 To get started, you can refer to the documentation wiki for Cartographer, which can be found here.
 https://github.com/pearuhdox/Cartographer/wiki/Home
 
+The credits and license information for the pack can be found in game with the pack installed, as well as here.
+https://github.com/pearuhdox/Cartographer/wiki/Acknowledgements:-Licensing-and-Credits
+
 If you would like to report a bug, or suggest a feature, please use the Issue tracker on Github to do so. Please check to see if a report has already been made before you make one. You can also contact me on discord (PearUhDox#0002) or via business email (pearuhdox@gmail.com) for any detailed questions (though I may not get back to you as quickly via those.) Please do not report bugs or suggest features in my socials.
