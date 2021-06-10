@@ -15,6 +15,8 @@ Each folder above is a separate datapack which can be dropped into a Minecraft w
 
 **Repair Stations** - Adds a structure which can be spawned in world which serves as an alternative to anvils. It can repair gear with increasing and controllable costs, and protects gear lost from durability destroying it.
 
+## Documentation and Contact
+
 To get started, you can refer to the documentation wiki for Cartographer, which can be found here.
 https://github.com/pearuhdox/Cartographer/wiki/Home
 
