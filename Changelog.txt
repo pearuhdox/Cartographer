@@ -1,10 +1,4 @@
-THE BIG TODO LIST:
-- Make Shattering only take 50% of an item's remaining durability.
-- Toggles for Global options of personal stuff. (Aka defaults)
-- Toggle for Placed Lexica behavior. (either open menu or give you a Lexica)
-- Deadeye only targets enemies in front of you.
-
-Cartographer, Patch TBD - Wrath of the Podiatrist
+Cartographer, June 2021 Patch - Wrath of the Podiatrist
 
 This is the first in a set of optimization and clean up patches. The goal of these series of patches is to re-optimize many sections of the pack
 (creating a more fluid and fresh experience, with less lag) address a couple balance issues, and patch some holes in each module.
@@ -13,6 +7,9 @@ Overall, this still means a couple new features, but also a *ton* of reworks. Re
 
 Despite reworks, the goal is to expand on what the pack offers while also minimizing the content it offers that is similar to something offered by Vanilla
 or elsewhere in Cartographer.
+
+As a side note, this is the final update for 1.16.5. Future versions of this datapack will be for 1.17. Critical issues will be fixed for the 1.16.5 version,
+but the pack will not receive new features or minor bugfixes for 1.16.5.
 
 And with that, let's get on with the updates!
 
@@ -58,6 +55,10 @@ Custom Enchantments:
  
  - A new passive enchantment:
     - Rally: When you are attacked by a mob, you can restore a portion of the health you lost by attacking quickly.
+        Description: When attacked, a percentage of the damage the holder/wearer took can be restored by attacks they make in the next 2.5 seconds.
+        During those 2.5 seconds, you deal 25% more melee damage and attack 25% faster.
+        Initially, 15% of the damage you took can be restored, with each additional level up to 4 increasing the percentage by 10%,
+        and each additional level after that increasing the percentage by 5%. (Max of 75%)
 
  - And a new curse enchantment (this has been in the code for a while but not fully implemented or finished):
     - Curse of Regret: Using the item inflicts 2 damage per level of Curse of Regret. (Maximum level is 5) [Custom Tag: {CurseRegret:1}]
@@ -349,7 +350,6 @@ Custom Enchantments:
     - Level cap reduced to 1 (from 3).
     - Firework now deals damage equivalent to the damage the arrow deals. (Approximately)
     - Volatile explosions now also inflict on hit ranged enchantments (like Flame) to enemies caught within the blast.
-      - As an extra mention, this *does* work with Punch.
     - Volatile arrows should create explosions even if they kill their targets.
     - Volatile arrows no longer create explosions when they hit blocks.
 
@@ -473,18 +473,6 @@ Active Abilities (now called "Active Skills" in Lexica):
   more control to mapmakers using it. It also now copies all the nbt from the mob, meaning more terrifying enemies can be made with it. Duplicates now
   explode on death to further incentivize attacking the real one.
 
- - Healer:
-    - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
-    - Healer can no longer heal nearby Healer mobs.
-
-  Developer Commentary: Augmenter, Cloaker, and Healer no longer work on mobs with the same ability to avoid hordes of mobs with these effects
-  from being very hard to kill.
-
- - Magic Missile:
-    - Projectile now has an actual homing effect rather than direct following snap to precision.
-    - The speed of the projectile is now slower, and constant at all distances from the player.
-    - Projectile now leaves behind a cloud of magic residue when it explodes, that inflicts 8 seconds of Wither II.
-
  - Fireball:
     - Charge time reduced to 1 second (was 2).
     - Projectile is now spawned above the mob rather than in front of it.
@@ -497,10 +485,22 @@ Active Abilities (now called "Active Skills" in Lexica):
 
   Developer Commentary: As with above, to increase the aggression of some Cartographer Mob Abilities, charge up timers have been reduced across the board.
 
+ - Healer:
+    - Now reduces the speed and damage of the caster rather than immobilizing them (see above)
+    - Healer can no longer heal nearby Healer mobs.
+
+  Developer Commentary: Augmenter, Cloaker, and Healer no longer work on mobs with the same ability to avoid hordes of mobs with these effects
+  from being very hard to kill.
+    
  - Hookshot:
     - Damage increased to 4 (from 2).
     - Fixed the frankly absurd problems where this ability could drag players in all sorts of unintended paths.
     - Projectile can no longer travel through walls. (Its a hook, not a spirit tether from the aethervoid)
+
+ - Magic Missile:
+    - Projectile now has an actual homing effect rather than direct following snap to precision.
+    - The speed of the projectile is now slower, and constant at all distances from the player.
+    - Projectile now leaves behind a cloud of magic residue when it explodes, that inflicts 8 seconds of Wither II.
 
  - Smash:
     - Damage reduced to 8 (from 10).
