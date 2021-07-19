@@ -12,8 +12,8 @@ execute as @e[type=armor_stand,tag=vector,limit=1,sort=nearest] at @s run tp @s 
 # Pushes a mob based on a given existing vector armor stand.
 execute run function cartographer_core:helper/vector
 
-execute store result entity @s Motion[0] double 0.1 run scoreboard players get @s vectorX
-execute store result entity @s Motion[1] double 0.1 run scoreboard players get @s vectorY
-execute store result entity @s Motion[2] double 0.1 run scoreboard players get @s vectorZ
+execute store result entity @s Motion[0] double 0.1 run scoreboard players get @s ca.vectorX
+execute store result entity @s Motion[1] double 0.1 run scoreboard players get @s ca.vectorY
+execute store result entity @s Motion[2] double 0.1 run scoreboard players get @s ca.vectorZ
 
 tp @e[type=armor_stand,tag=vector] 4206900 256 4206900

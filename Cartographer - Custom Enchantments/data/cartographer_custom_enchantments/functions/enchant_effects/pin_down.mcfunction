@@ -1,4 +1,4 @@
-effect give @s bad_omen 5 1
+effect give @s bad_omen 4 1
 
 tag @s[type=#cartographer_core:hostile,tag=is_pin] remove is_pin
 

@@ -10,17 +10,24 @@ execute positioned ^ ^ ^3.5 run particle minecraft:sweep_attack ~ ~1 ~ 0.2 0 0.2
 playsound minecraft:entity.player.attack.sweep hostile @a[distance=..12] ~ ~ ~ 3 0.5
 playsound minecraft:entity.player.attack.crit hostile @a[distance=..12] ~ ~ ~ 3 0.5
 
-execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run scoreboard players set @s damage_queue 6
-execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
+function cartographer_mob_abilities:abilities/sweep/calc_damage
+
+execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
+execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run scoreboard players set @s cdl.Death_ID 310208
+execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run tag @s add swept
 
-execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run scoreboard players set @s damage_queue 6
-execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
+execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
+execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run scoreboard players set @s cdl.Death_ID 310208
+execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run tag @s add swept
 
-execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run scoreboard players set @s damage_queue 6
-execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run function cartographer_core:helper/hurt_player/by_score
+execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
+execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run scoreboard players set @s cdl.Death_ID 310208
+execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run tag @s add swept
+
+execute as @a[distance=..5,tag=swept] run tag @s remove swept
 
 data modify entity @s NoAI set value 0
 
@@ -49,5 +56,3 @@ execute if entity @s[scores={recast_count=0}] run function cartographer_mob_abil
 execute if entity @s[scores={recast_count=0}] run tag @s remove attacking
 execute if entity @s[scores={recast_count=0}] run tag @s remove tokened
 execute if entity @s[scores={recast_count=0}] run tag @s remove can_see_player
-
-execute if entity @s[scores={recast_count=0}] run schedule function cartographer_mob_abilities:helper/attacked_reset 20t

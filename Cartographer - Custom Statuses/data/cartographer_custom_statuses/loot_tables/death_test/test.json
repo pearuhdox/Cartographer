@@ -24,7 +24,7 @@
                       "condition": "minecraft:entity_scores",
                       "entity": "this",
                       "scores": {
-                        "effect_infect": {
+                        "ca.effect_infect": {
                           "min": 1,
                           "max": 1
                         }
@@ -62,7 +62,7 @@
                       "condition": "minecraft:entity_scores",
                       "entity": "this",
                       "scores": {
-                        "effect_infect": {
+                        "ca.effect_infect": {
                           "min": 2,
                           "max": 2
                         }
@@ -100,7 +100,7 @@
                       "condition": "minecraft:entity_scores",
                       "entity": "this",
                       "scores": {
-                        "effect_infect": {
+                        "ca.effect_infect": {
                           "min": 3,
                           "max": 3
                         }
@@ -138,7 +138,7 @@
                       "condition": "minecraft:entity_scores",
                       "entity": "this",
                       "scores": {
-                        "effect_infect": {
+                        "ca.effect_infect": {
                           "min": 4,
                           "max": 4
                         }
@@ -176,7 +176,7 @@
                       "condition": "minecraft:entity_scores",
                       "entity": "this",
                       "scores": {
-                        "effect_infect": {
+                        "ca.effect_infect": {
                           "min": 5,
                           "max": 100
                         }

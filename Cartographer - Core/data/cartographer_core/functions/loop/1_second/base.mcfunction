@@ -9,10 +9,10 @@
 
 #Run all Cartographer Effects from Core Timers.
 
-schedule function cartographer_custom_enchantments:loop/1_second/base 1s
-schedule function cartographer_custom_statuses:loop/1_second/base 1s
-schedule function cartographer_mob_abilities:loop/1_second/base 1s
-schedule function cartographer_repair_stations:loop/1_second/base 1s
+function cartographer_custom_enchantments:loop/1_second/base
+function cartographer_custom_statuses:loop/1_second/base
+function cartographer_mob_abilities:loop/1_second/base
+function cartographer_repair_stations:loop/1_second/base
 
 #Out of Combat Test is done in Enchantments. Set this up here.
 tag @a add out_of_combat
@@ -25,5 +25,3 @@ execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartograp
 
 
 #Add any extra functions above.
-
-schedule function cartographer_core:loop/1_second/base 1s

@@ -11,11 +11,11 @@
         "found_2": {
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
-              "entity": {
-                "nbt": "{Tags:[\"used_disarm\"]}"
-              }
+                "entity": {
+                    "nbt": "{Tags:[\"used_disarm\"]}"
+                }
             }
-          }
+        }
     },
     "display": {
         "title": {
@@ -42,6 +42,6 @@
     ],
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/disarm"
-      },
+    },
     "parent": "cartographer_mob_abilities:cloaker"
 }

@@ -30,6 +30,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/flash"
-      },
+    },
     "parent": "cartographer_custom_enchantments:deadeye"
 }

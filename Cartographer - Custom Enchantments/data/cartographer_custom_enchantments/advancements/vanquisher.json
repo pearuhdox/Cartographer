@@ -79,6 +79,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/vanquisher"
-      },
+    },
     "parent": "cartographer_custom_enchantments:transfiguration"
 }

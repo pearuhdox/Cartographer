@@ -3,7 +3,7 @@
 #
 # Author: PearUhDox | Date: 3/19/2021
 #
-# Description: Grabs the player's last y position and current y position. If they are different,
+# Description: Grabs the player's last y position and ca.current y position. If they are different,
 # Give a "can_crit" tag and remove it if otherwise.
 ########################################
 
@@ -18,7 +18,7 @@ execute if score @s ca.crit_y_comp matches 1.. run tag @s add can_crit
 
 #summon firework_rocket ~ ~0.5 ~ {Lifetime:20}
 
-execute if entity @s[nbt={ActiveEffects:[{Id:15b}]}] run tag @s remove can_crit
+execute unless score $blind_crit ca.ganerule matches 1.. if entity @s[predicate=cartographer_core:has_blindness] run tag @s remove can_crit
 
 execute if block ~ ~ ~ #cartographer_core:no_crit run tag @s remove can_crit
 execute if block ~ ~1 ~ #cartographer_core:no_crit run tag @s remove can_crit

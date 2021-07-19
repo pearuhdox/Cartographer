@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/sweep"
-      },
+    },
     "parent": "cartographer_mob_abilities:soulfire_nova"
 }

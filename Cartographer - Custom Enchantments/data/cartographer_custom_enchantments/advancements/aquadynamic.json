@@ -30,6 +30,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/aquadynamic"
-      },
+    },
     "parent": "cartographer_custom_enchantments:agility"
 }

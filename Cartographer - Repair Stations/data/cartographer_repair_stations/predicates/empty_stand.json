@@ -4,22 +4,34 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "item": "minecraft:air"
+        "items": [
+          "minecraft:air"
+        ]
       },
       "offhand": {
-        "item": "minecraft:air"
+        "items": [
+          "minecraft:air"
+        ]
       },
       "head": {
-        "item": "minecraft:air"
+        "items": [
+          "minecraft:air"
+        ]
       },
       "chest": {
-        "item": "minecraft:air"
+        "items": [
+          "minecraft:air"
+        ]
       },
       "legs": {
-        "item": "minecraft:air"
+        "items": [
+          "minecraft:air"
+        ]
       },
       "feet": {
-        "item": "minecraft:air"
+        "items": [
+          "minecraft:air"
+        ]
       }
     }
   }

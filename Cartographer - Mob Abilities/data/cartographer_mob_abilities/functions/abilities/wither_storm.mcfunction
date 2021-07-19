@@ -55,9 +55,9 @@ scoreboard players set @s wither_storms 40
 scoreboard players set @e[type=armor_stand,tag=wither_blast,distance=..2] wither_storms 70
 scoreboard players set @e[type=armor_stand,tag=wither_blast,tag=checked,distance=..20] wither_storms 190
 
-execute run function cartographer_mob_abilities:abilities/wither_storm_spread
+execute run function cartographer_mob_abilities:abilities/wither_storm/spread
 
-function cartographer_mob_abilities:abilities/wither_storm_recurse
+function cartographer_mob_abilities:abilities/wither_storm/recurse
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/return

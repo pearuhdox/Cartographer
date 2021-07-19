@@ -8,7 +8,7 @@ playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
 execute as @s run function cartographer_core:load/spacer
 
-scoreboard players enable @s options_trig
+scoreboard players enable @s ca.options_trig
 
 tellraw @s [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Player Options ⊱","color":"yellow","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"-------------------------","color":"#FFE0A3","bold":true}]
 tellraw @s {"text":"Tweak various player options...","color":"#FFE0A3","bold":false,"italic":true}
@@ -17,7 +17,7 @@ tellraw @s {"text":"------------------------------------------","color":"#FFE0A3
 tellraw @s [{"text":"Click on an option to see more information!","color":"#FFF4D9","italic":true}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"text":"Core and Gamerules","color":"#F04FF0","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Tweak Vanilla and Core gamerules.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger options_trig set 3"}}]
+tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"text":"Core and Gamerules","color":"#F04FF0","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Tweak Vanilla and Core gamerules.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.options_trig set 3"}}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 

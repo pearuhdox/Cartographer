@@ -12,5 +12,5 @@ execute if score @s ca.ui_loc matches 1 run title @s actionbar [{"text":"Player 
 execute if score @s ca.ui_loc matches 2 run title @s actionbar [{"text":"Player GUI Location ","color":"aqua","italic":false},{"text":"set to ","color":"#FFE0A3","italic":false},{"text":"SUBTITLE","color":"yellow","italic":false}]
 execute if score @s ca.ui_loc matches 3 run title @s actionbar [{"text":"Player GUI Location ","color":"aqua","italic":false},{"text":"set to ","color":"#FFE0A3","italic":false},{"text":"INVISIBLE","color":"yellow","italic":false}]
 
-scoreboard players enable @s options_trig
+scoreboard players enable @s ca.options_trig
 function cartographer_custom_enchantments:options/player/branch

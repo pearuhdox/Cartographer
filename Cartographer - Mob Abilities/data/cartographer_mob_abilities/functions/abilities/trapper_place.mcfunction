@@ -1,2 +1,0 @@
-execute if block ~ ~ ~ #cartographer_core:can_raycast run summon area_effect_cloud ~ ~0.1 ~ {Particle:"crit",NoGravity:1b,Radius:1.5f,RadiusPerTick:0f,RadiusOnUse:-2f,Duration:160,DurationOnUse:0f,Age:0,WaitTime:10,Tags:["trap_deployed"],Effects:[{Id:2b,Amplifier:2b,Duration:40},{Id:7b,Amplifier:1b,Duration:1}],CustomName:'{"text":"enchanted caltrops"}'}
-execute unless block ~ ~ ~ #cartographer_core:can_raycast positioned ~ ~0.2 ~ run function cartographer_mob_abilities:abilities/trapper_place

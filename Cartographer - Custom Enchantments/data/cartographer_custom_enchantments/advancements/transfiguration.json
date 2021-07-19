@@ -79,6 +79,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/transfiguration"
-      },
+    },
     "parent": "cartographer_custom_enchantments:surging_strike"
 }

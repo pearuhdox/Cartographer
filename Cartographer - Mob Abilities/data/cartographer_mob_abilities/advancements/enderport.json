@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/enderport"
-      },
+    },
     "parent": "cartographer_mob_abilities:passive_abilities"
 }

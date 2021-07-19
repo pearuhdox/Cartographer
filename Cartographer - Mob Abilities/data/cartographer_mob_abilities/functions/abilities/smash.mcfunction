@@ -7,9 +7,11 @@ execute positioned ~ ~ ~ run particle minecraft:explosion_emitter ~ ~1 ~ 0 0 0 0
 
 playsound minecraft:entity.zombie.break_wooden_door hostile @a[distance=..16] ~ ~ ~ 2 0.75
 
-execute as @a[distance=..4.5] at @s run tag @s add smashed
-execute as @a[distance=..4.5] at @s run scoreboard players set @s damage_queue 8
-execute as @a[distance=..4.5] at @s run function cartographer_core:helper/hurt_player/by_score
+function cartographer_mob_abilities:abilities/smash/calc_damage
+
+execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
+execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run scoreboard players set @s cdl.Death_ID 310206
+execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run function cd:lib/player/damage/normal
 
 data merge entity @s {Motion:[0.0,0.5,0.0]}
 
@@ -33,7 +35,5 @@ execute if entity @s[scores={recast_count=0}] run function cartographer_mob_abil
 execute if entity @s[scores={recast_count=0}] run tag @s remove attacking
 execute if entity @s[scores={recast_count=0}] run tag @s remove tokened
 execute if entity @s[scores={recast_count=0}] run tag @s remove can_see_player
-
-schedule function cartographer_mob_abilities:helper/attacked_reset 10t
 
 execute if entity @s[scores={recast_count=1..}] run function cartographer_mob_abilities:charge/smash

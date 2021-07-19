@@ -1,7 +1,6 @@
 {
 	"values": [
-		{"id": "cartographer_custom_enchantments:enchant_calls/when_attacked_player",
-			"required": false},
-		{"id": "cartographer_mob_abilities:effect_calls/when_attacked", "required": false}
+		{"id": "cartographer_custom_enchantments:enchant_calls/when_attacked_player","required": false},
+		{"id": "cartographer_mob_abilities:effect_calls/when_player_attacked_post", "required": false}
 	]
 }

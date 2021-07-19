@@ -18,23 +18,23 @@
     },
     "criteria": {
         "find5": {
-          "trigger": "minecraft:inventory_changed",
-          "conditions": {
-            "items": [
-              {
-                "nbt": "{CustomPotionEffects:[{Id:15b,Amplifier:0b}]}"
-              }
-            ]
-          }
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomPotionEffects:[{Id:15b,Amplifier:0b}]}"
+                    }
+                ]
+            }
         }
-      },
-      "requirements": [
+    },
+    "requirements": [
         [
-          "find5"
+            "find5"
         ]
-      ],
+    ],
     "rewards": {
-      "function": "cartographer_custom_statuses:descriptions/blindness"
+        "function": "cartographer_custom_statuses:descriptions/blindness"
     },
     "parent": "cartographer_custom_statuses:bleed"
 }

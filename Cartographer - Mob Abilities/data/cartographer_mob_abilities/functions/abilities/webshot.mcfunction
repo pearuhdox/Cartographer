@@ -3,11 +3,13 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @s helper_raycast 13
+scoreboard players set @s ca.raycast 13
 
 scoreboard players set @s mob_move_dis 23
 
 execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/webshot_raycast
+
+tag @a[distance=..16] remove webbed
 
 data merge entity @s {NoAI:0}
 
@@ -18,5 +20,3 @@ function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player
-
-schedule function cartographer_mob_abilities:helper/attacked_reset 10t

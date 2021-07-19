@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "load_crossbow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {}
+          }
+        ],
+        "items": [
+          {
+            "items": [
+              "minecraft:crossbow"
+            ],
+            "nbt": "{Charged:1b,CustomEnchantments:[{id:\"fleetfoot\",lvl:1b}]}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "cartographer_custom_enchantments:enchant_effects/fleetfoot_crossbow"
+  }
+}

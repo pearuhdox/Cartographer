@@ -3,9 +3,13 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @s helper_raycast 21
+scoreboard players set @s ca.raycast 21
+
+function cartographer_mob_abilities:abilities/charge/calc_damage
 
 execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/charge/raycast
+
+execute as @a[distance=..16] run tag @s remove ran_over
 
 data merge entity @s {NoAI:0}
 
@@ -18,5 +22,3 @@ tag @s remove tokened
 tag @s remove can_see_player
 
 kill @e[type=armor_stand,tag=charge_marker,limit=1,sort=nearest]
-
-schedule function cartographer_mob_abilities:helper/attacked_reset 10t

@@ -57,6 +57,6 @@
     ],
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/tempo_theft"
-      },
+    },
     "parent": "cartographer_custom_enchantments:tempest"
 }

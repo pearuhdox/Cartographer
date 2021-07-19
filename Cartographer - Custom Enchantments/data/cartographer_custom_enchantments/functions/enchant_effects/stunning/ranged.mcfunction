@@ -1,12 +1,21 @@
-function cartographer_core:helper/randomize
+scoreboard players set in math 1
+scoreboard players set in1 math 100
 
-scoreboard players operation @s helper_melee = @s random
+function cartographer_core:helper/math/rng/range
 
-scoreboard players set @s[tag=is_stunning_1,scores={helper_melee=..10}] effect_stunned 21
-scoreboard players set @s[tag=is_stunning_2,scores={helper_melee=..20}] effect_stunned 21
-scoreboard players set @s[tag=is_stunning_3,scores={helper_melee=..30}] effect_stunned 21
-scoreboard players set @s[tag=is_stunning_4,scores={helper_melee=..40}] effect_stunned 21
-scoreboard players set @s[tag=is_stunning_5,scores={helper_melee=..50}] effect_stunned 21
+scoreboard players operation $melee ca.melee_chance = out math
+
+execute if entity @s[tag=is_stunning_1] run scoreboard players set $percent_stun ca.melee_chance 1
+execute if entity @s[tag=is_stunning_2] run scoreboard players set $percent_stun ca.melee_chance 2
+execute if entity @s[tag=is_stunning_3] run scoreboard players set $percent_stun ca.melee_chance 3
+execute if entity @s[tag=is_stunning_4] run scoreboard players set $percent_stun ca.melee_chance 4
+execute if entity @s[tag=is_stunning_5] run scoreboard players set $percent_stun ca.melee_chance 5
+
+scoreboard players operation $percent_stun ca.melee_chance *= $10 ca.CONSTANT
+
+execute if score $melee ca.melee_chance <= $percent_stun ca.melee_chance run particle minecraft:firework ~ ~1 ~ 0.3 0.5 0.3 0.05 10 normal
+execute if score $melee ca.melee_chance <= $percent_stun ca.melee_chance run playsound minecraft:entity.firework_rocket.twinkle player @a[distance=..8] ~ ~ ~ 0.5 1.25
+execute if score $melee ca.melee_chance <= $percent_stun ca.melee_chance run scoreboard players set @s ca.effect_stun 21
 
 tag @s[type=#cartographer_core:hostile,tag=is_stunning_1] remove is_stunning_1
 tag @s[type=#cartographer_core:hostile,tag=is_stunning_2] remove is_stunning_2

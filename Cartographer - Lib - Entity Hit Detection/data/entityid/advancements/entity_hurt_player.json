@@ -422,24 +422,84 @@
 		}
 	},
 	"requirements": [
-		[ "entity" ],
-		[ "typeless", "is_explosion", "is_fire", "is_magic", "is_projectile", "is_lightning", "bypasses_armor", "bypasses_invulnerability", "bypasses_magic" ],
-		[ "bit0", "!bit0" ],
-		[ "bit1", "!bit1" ],
-		[ "bit2", "!bit2" ],
-		[ "bit3", "!bit3" ],
-		[ "bit4", "!bit4" ],
-		[ "bit5", "!bit5" ],
-		[ "bit6", "!bit6" ],
-		[ "bit7", "!bit7" ],
-		[ "bit8", "!bit8" ],
-		[ "bit9", "!bit9" ],
-		[ "bit10", "!bit10" ],
-		[ "bit11", "!bit11" ],
-		[ "bit12", "!bit12" ],
-		[ "bit13", "!bit13" ],
-		[ "bit14", "!bit14" ],
-		[ "bit15", "!bit15" ]
+		[
+			"entity"
+		],
+		[
+			"typeless",
+			"is_explosion",
+			"is_fire",
+			"is_magic",
+			"is_projectile",
+			"is_lightning",
+			"bypasses_armor",
+			"bypasses_invulnerability",
+			"bypasses_magic"
+		],
+		[
+			"bit0",
+			"!bit0"
+		],
+		[
+			"bit1",
+			"!bit1"
+		],
+		[
+			"bit2",
+			"!bit2"
+		],
+		[
+			"bit3",
+			"!bit3"
+		],
+		[
+			"bit4",
+			"!bit4"
+		],
+		[
+			"bit5",
+			"!bit5"
+		],
+		[
+			"bit6",
+			"!bit6"
+		],
+		[
+			"bit7",
+			"!bit7"
+		],
+		[
+			"bit8",
+			"!bit8"
+		],
+		[
+			"bit9",
+			"!bit9"
+		],
+		[
+			"bit10",
+			"!bit10"
+		],
+		[
+			"bit11",
+			"!bit11"
+		],
+		[
+			"bit12",
+			"!bit12"
+		],
+		[
+			"bit13",
+			"!bit13"
+		],
+		[
+			"bit14",
+			"!bit14"
+		],
+		[
+			"bit15",
+			"!bit15"
+		]
 	],
 	"rewards": {
 		"function": "entityid:entity_hurt_player"

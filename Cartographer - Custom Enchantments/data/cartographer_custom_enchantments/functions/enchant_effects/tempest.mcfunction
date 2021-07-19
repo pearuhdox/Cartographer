@@ -1,10 +1,10 @@
-execute if entity @s[tag=is_tempest_1] run scoreboard players set @s damage_queue 3
-execute if entity @s[tag=is_tempest_2] run scoreboard players set @s damage_queue 6
-execute if entity @s[tag=is_tempest_3] run scoreboard players set @s damage_queue 9
-execute if entity @s[tag=is_tempest_4] run scoreboard players set @s damage_queue 12
-execute if entity @s[tag=is_tempest_5] run scoreboard players set @s damage_queue 15
+execute if entity @s[tag=is_tempest_1] run scoreboard players set @s cdl.Damage_Queue 3
+execute if entity @s[tag=is_tempest_2] run scoreboard players set @s cdl.Damage_Queue 6
+execute if entity @s[tag=is_tempest_3] run scoreboard players set @s cdl.Damage_Queue 9
+execute if entity @s[tag=is_tempest_4] run scoreboard players set @s cdl.Damage_Queue 12
+execute if entity @s[tag=is_tempest_5] run scoreboard players set @s cdl.Damage_Queue 15
 
-execute if entity @s run function cartographer_core:helper/deal_damage/by_score
+execute if entity @s run function cd:lib/mob/damage/true
 
 tag @s[type=#cartographer_core:hostile,tag=is_tempest_1] remove is_tempest_1
 tag @s[type=#cartographer_core:hostile,tag=is_tempest_2] remove is_tempest_2

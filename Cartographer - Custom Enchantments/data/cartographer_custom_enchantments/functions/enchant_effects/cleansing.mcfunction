@@ -1,8 +1,8 @@
-execute if entity @s[scores={s_cleansing=1},nbt={ActiveEffects:[{Id:2b}]}] run tag @s add slow_cleanse
-execute if entity @s[scores={f_cleansing=1},nbt={ActiveEffects:[{Id:4b}]}] run tag @s add fatigue_cleanse
-execute if entity @s[scores={w_cleansing=1},nbt={ActiveEffects:[{Id:18b}]}] run tag @s add weak_cleanse
-execute if entity @s[scores={p_cleansing=1},nbt={ActiveEffects:[{Id:19b}]}] run tag @s add poison_cleanse
-execute if entity @s[scores={wi_cleansing=1},nbt={ActiveEffects:[{Id:20b}]}] run tag @s add wither_cleanse
+execute if entity @s[scores={ca.s_cleansing=1},nbt={ActiveEffects:[{Id:2b}]}] run tag @s add slow_cleanse
+execute if entity @s[scores={ca.f_cleansing=1},nbt={ActiveEffects:[{Id:4b}]}] run tag @s add fatigue_cleanse
+execute if entity @s[scores={ca.w_cleansing=1},nbt={ActiveEffects:[{Id:18b}]}] run tag @s add weak_cleanse
+execute if entity @s[scores={ca.p_cleansing=1},nbt={ActiveEffects:[{Id:19b}]}] run tag @s add poison_cleanse
+execute if entity @s[scores={ca.wi_cleansing=1},nbt={ActiveEffects:[{Id:20b}]}] run tag @s add wither_cleanse
 
 execute if entity @s[tag=slow_cleanse,nbt={ActiveEffects:[{Id:2b}]}] run playsound minecraft:block.bell.resonate player @p ~ ~ ~ 2 2
 execute if entity @s[tag=fatigue_cleanse,nbt={ActiveEffects:[{Id:4b}]}] run playsound minecraft:block.bell.resonate player @p ~ ~ ~ 2 2

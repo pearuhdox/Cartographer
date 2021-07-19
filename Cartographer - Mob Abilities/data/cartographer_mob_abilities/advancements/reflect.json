@@ -42,6 +42,6 @@
     ],
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/reflect"
-      },
+    },
     "parent": "cartographer_mob_abilities:quiver"
 }

@@ -1,6 +1,6 @@
 summon armor_stand ^ ^ ^2 {NoGravity:1,Tags:["hydraul_stopper"],DeathLootTable:"nothing",Invisible:1}
 
-scoreboard players set @e[tag=hydraul_stopper,type=armor_stand,limit=1] helper_lifetime 1
+scoreboard players set @e[tag=hydraul_stopper,type=armor_stand,limit=1] ca.lifetime 1
 
 execute run playsound minecraft:block.bubble_column.upwards_inside player @a[distance=..8] ~ ~ ~ 2 0.75
 

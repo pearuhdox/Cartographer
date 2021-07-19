@@ -30,9 +30,13 @@ execute if entity @p[tag=!minimal_reload] run function entityid:load_message
 execute if entity @p[tag=!minimal_reload,tag=!ehid_check] run function cartographer_core:load/ehid_warning
 execute if entity @p[tag=!minimal_reload] run function suso.player_data:load_message
 execute if entity @p[tag=!minimal_reload,tag=!pds_check] run function cartographer_core:load/pds_warning
+execute if entity @p[tag=!minimal_reload] run function cd:load_message
+execute if entity @p[tag=!minimal_reload,tag=!cdl_check] run function cartographer_core:load/cdl_warning
 tellraw @a[tag=!minimal_reload] {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
+
 tag @a remove ehid_check
 tag @a remove pds_check
+tag @a remove cdl_check
 
 execute if entity @a[tag=!minimal_reload] run function cartographer_custom_enchantments:load/load_message
 execute if entity @a[tag=!minimal_reload] run function cartographer_custom_statuses:load/load_message

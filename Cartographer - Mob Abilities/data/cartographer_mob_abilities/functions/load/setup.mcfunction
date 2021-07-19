@@ -1,6 +1,7 @@
 
 #Setup all necessary scoreboard commands.
 
+scoreboard objectives add ca.ability_dmg dummy
 scoreboard objectives add cooldown dummy
 scoreboard objectives add ability_charge dummy
 scoreboard objectives add brutal_stacks dummy
@@ -29,13 +30,22 @@ scoreboard objectives add token_kill_check totalKillCount
 
 scoreboard objectives add invul dummy
 
+scoreboard objectives add ca.glacial_slow dummy
+scoreboard objectives add ca.horrified dummy
+scoreboard objectives add ca.overload_pos dummy
+scoreboard objectives add ca.celest_steal dummy
+scoreboard objectives add ca.aftershock dummy
+scoreboard objectives add ca.evocate_time dummy
+
+scoreboard objectives add ca.touch_check dummy
+
 #Setup all necessary helper scoreboards.
 
-scoreboard objectives add helper_raycast dummy
+scoreboard objectives add ca.raycast dummy
 scoreboard objectives add helper_random dummy
 scoreboard objectives add helper_tokens dummy
 scoreboard objectives add helper_diff dummy
-scoreboard objectives add helper_lifetime dummy
+scoreboard objectives add ca.lifetime dummy
 
 scoreboard objectives add hook_id dummy
 scoreboard players set $master hook_id 0

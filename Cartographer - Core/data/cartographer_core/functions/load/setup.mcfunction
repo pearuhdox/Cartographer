@@ -6,29 +6,25 @@
 # Description: Sets up all needed infrastructure for Core. Run on reload.
 ########################################
 
-#Order Datapacks Properly
-#datapack disable "file/Cartographer - Custom Enchantments"
-#datapack disable "file/Cartographer - Custom Statuses"
-#datapack disable "file/Cartographer - Mob Abilities"
-#datapack disable "file/Cartographer - Mimics"
-#datapack disable "file/Cartographer - Repair Stations"
-#datapack disable "file/Cartographer - Loot Additions"
-#datapack disable "file/Cartographer - Potion Injector"
 
-#datapack enable "file/Cartographer - Custom Enchantments" before "file/Cartographer - Core"
-#datapack enable "file/Cartographer - Custom Statuses" before "file/Cartographer - Core"
-#datapack enable "file/Cartographer - Mob Abilities" before "file/Cartographer - Core"
-#datapack enable "file/Cartographer - Mimics" before "file/Cartographer - Core"
-#datapack enable "file/Cartographer - Repair Stations" before "file/Cartographer - Core"
-#datapack enable "file/Cartographer - Loot Additions" before "file/Cartographer - Core"
-#datapack enable "file/Cartographer - Potion Injector" before "file/Cartographer - Core"
+#Create the scoreboard used to enable or disable features to dynamically save performance.
+scoreboard objectives add ca.enabler dummy
+scoreboard objectives add ca.installed dummy
 
-#Create Randomizer scoreboards
-scoreboard objectives add randomSalt dummy                
-scoreboard objectives add random dummy
-scoreboard players set Random3 randomSalt 100011001
-scoreboard players set Random1 randomSalt 100
-scoreboard players set @s randomSalt 100
+scoreboard players set $custom_enchantments ca.installed 0
+scoreboard players set $custom_statuses ca.installed 0
+scoreboard players set $loot_additions ca.installed 0
+scoreboard players set $mimics ca.installed 0
+scoreboard players set $mob_abilities ca.installed 0
+scoreboard players set $pot_injector ca.installed 0
+scoreboard players set $repair_stations ca.installed 0
+
+#Trigger scoreboards for menus and giving lexica.
+scoreboard objectives add lexica trigger
+scoreboard objectives add menu trigger
+
+#Initialize Cloud Wolf's Math Lite Datapack
+function cartographer_core:helper/math/zprivate/init
 
 #Place Shulker Boxes needed for Shulker Box trick.
 forceload add 4206900 4206900
@@ -38,34 +34,35 @@ forceload add 4206890 4206890
 
 setblock 4206900 0 4206900 purple_shulker_box replace
 
+#Shulker Box for Lexica, so a mapmaker can change the format.
+setblock 4206900 5 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Lexica Cartographia","color":"#FFE0A3","bold":true,"italic":false}',Lore:['{"text":"Your in game guide to all things Cartographer.","color":"dark_gray","italic":false}','{"text":"A compendium that contains all discovered","color":"dark_gray","italic":false}','{"text":"knowledge of custom mechanics and features.","color":"dark_gray","italic":false}','{"text":" "}','[{"text":"[","color":"white","italic":false},{"keybind":"key.use","color":"aqua","italic":false},{"text":"] ","color":"white","italic":false},{"text":"to open this manual.","color":"dark_gray","italic":false}]','[{"text":"[","color":"white","italic":false},{"keybind":"key.use","color":"aqua","italic":false},{"text":" + ","color":"white","italic":false},{"keybind":"key.sneak","color":"aqua","italic":false},{"text":"] ","color":"white","italic":false},{"text":"to configure settings.","color":"dark_gray","italic":false}]']},HideFlags:1,Lexica:1,Enchantments:[{id:"minecraft:mending",lvl:1s}],Recipes:["cartographer_core:lexica_dummy"]}}]} keep
+
 kill @e[type=armor_stand,tag=vector]
 summon armor_stand 4206900 256 4206900 {Tags:["vector"],NoGravity:1,Invisible:1,Marker:1,Small:1}
 
-#Place the Susile Pincushions for proper abuse.
-kill @e[type=iron_golem,tag=susile_pincushion]
-kill @e[type=area_effect_cloud,tag=susile_healer]
-
-schedule function cartographer_core:load/pincushion_creation 30t
-
-scoreboard objectives add susile_count dummy 
-scoreboard players set $giant_count susile_count 0
-scoreboard players set $heal_count susile_count 0
-
 #Create vector related scoreboards
-scoreboard objectives add vectorX dummy
-scoreboard objectives add vectorY dummy
-scoreboard objectives add vectorZ dummy
+scoreboard objectives add ca.vectorX dummy
+scoreboard objectives add ca.vectorY dummy
+scoreboard objectives add ca.vectorZ dummy
 
-#Create the global option scoreboard.
-scoreboard objectives add global_options dummy
-scoreboard objectives add no_hndbk_pmpt dummy
+#Create scoreboards for drawing bows, holding tridents, loading crossbows, using ender eyes, and holding up shields.
+scoreboard objectives add ca.draw_bow_time dummy
+scoreboard objectives add ca.load_cro_time dummy
+scoreboard objectives add ca.use_ee_time dummy
+scoreboard objectives add ca.hold_shi_time dummy
+scoreboard objectives add ca.hold_tri_time dummy
+
+scoreboard objectives add ca.is_draw_bow dummy
+scoreboard objectives add ca.is_load_cro dummy
+scoreboard objectives add ca.is_use_ee dummy
+scoreboard objectives add ca.is_hold_shi dummy
+scoreboard objectives add ca.is_hold_tri dummy
 
 #Create raycast score
-scoreboard objectives add helper_raycast dummy
+scoreboard objectives add ca.raycast dummy
 
 #Create scores for custom damage
-scoreboard objectives add damage_queue dummy
-scoreboard objectives add heal_queue dummy
+scoreboard objectives add cdl.Damage_Queue dummy
 scoreboard objectives add custom_death deathCount
 scoreboard objectives add ca.invul_abs dummy
 scoreboard objectives add helper_health dummy
@@ -87,15 +84,19 @@ scoreboard objectives add ca.res.icn dummy
 
 scoreboard objectives add true_abs dummy
 
-scoreboard objectives add true_health health
+scoreboard objectives add ca.health health
 
-scoreboard objectives add epf_prot dummy
-scoreboard objectives add epf_proj dummy
-scoreboard objectives add epf_blas dummy
-scoreboard objectives add epf_fire dummy
-scoreboard objectives add epf_fall dummy
+scoreboard objectives add ca.epf_prot dummy
+scoreboard objectives add ca.epf_proj dummy
+scoreboard objectives add ca.epf_blas dummy
+scoreboard objectives add ca.epf_fire dummy
+scoreboard objectives add ca.epf_fall dummy
 
 scoreboard objectives add ca.epf dummy
+
+#Create timer variable
+scoreboard objectives add ca.timer dummy
+scoreboard players set $ca_timer ca.timer 0
 
 #Setup a score for any and all constant values.
 scoreboard objectives add ca.CONSTANT dummy
@@ -106,14 +107,21 @@ scoreboard players set $1000 ca.CONSTANT 1000
 scoreboard players set $100 ca.CONSTANT 100
 scoreboard players set $10 ca.CONSTANT 10
 
+scoreboard players set $15 ca.CONSTANT 15
 scoreboard players set $20 ca.CONSTANT 20
 scoreboard players set $25 ca.CONSTANT 25
 scoreboard players set $33 ca.CONSTANT 25
 
 scoreboard players set $50 ca.CONSTANT 50
 scoreboard players set $67 ca.CONSTANT 67
+scoreboard players set $60 ca.CONSTANT 60
 scoreboard players set $75 ca.CONSTANT 75
 scoreboard players set $80 ca.CONSTANT 80
+scoreboard players set $100 ca.CONSTANT 100
+scoreboard players set $200 ca.CONSTANT 200
+scoreboard players set $300 ca.CONSTANT 300
+scoreboard players set $600 ca.CONSTANT 600
+scoreboard players set $1200 ca.CONSTANT 1200
 
 scoreboard players set $1 ca.CONSTANT 1
 scoreboard players set $2 ca.CONSTANT 2
@@ -137,25 +145,27 @@ execute unless score $gl_reload_msg ca.gamerule matches 0.. run scoreboard playe
 execute unless score $lexica_stand ca.gamerule matches 0.. run scoreboard players set $lexica_stand ca.gamerule 0
 execute unless score $no_lexica_prompt ca.gamerule matches 0.. run scoreboard players set $no_lexica_prompt ca.gamerule 0
 
-#Create the Lexica score.
-scoreboard objectives add use_lexica minecraft.used:minecraft.knowledge_book
-scoreboard objectives add lexica_time dummy
-scoreboard objectives add lexica_sneak minecraft.custom:sneak_time
+#Create the Lexica scores.
+scoreboard objectives add ca.use_lex minecraft.used:minecraft.knowledge_book
+scoreboard objectives add ca.lexica_count dummy
 
-scoreboard objectives add lexica_trig trigger
+scoreboard objectives add ca.lexica_time dummy
+scoreboard objectives add ca.lexica_sneak minecraft.custom:sneak_time
+
+scoreboard objectives add ca.lexica_trig trigger
 
 scoreboard objectives add ca.use_lectern minecraft.custom:minecraft.interact_with_lectern
 
 #Create options trigger score (for player options)
-scoreboard objectives add options_trig trigger
-scoreboard players enable @a options_trig
+scoreboard objectives add ca.options_trig trigger
+scoreboard players enable @a ca.options_trig
 
 #Create the anvil, enchant table, and grindstone destruction scores.
-scoreboard objectives add use_anvil minecraft.custom:minecraft.interact_with_anvil
-scoreboard objectives add use_grindstone minecraft.custom:minecraft.interact_with_grindstone
+scoreboard objectives add ca.use_anvil minecraft.custom:minecraft.interact_with_anvil
+scoreboard objectives add ca.use_grind minecraft.custom:minecraft.interact_with_grindstone
 
 #Give all players the dummy recipe for Lexica.
-recipe give @a cartographer_core:lexica_dummy
+#recipe give @a cartographer_core:lexica_dummy
 
 #Schedule the loading message.
 execute as @a at @s run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 1 0.75
@@ -165,16 +175,6 @@ schedule function cartographer_core:load/reload_panel 5t
 schedule function cartographer_core:load/force_load 1t
 
 #Analyse what gamerules feedback and death messages are set to.
-function cartographer_core:load/gamerule_states
+#function cartographer_core:load/gamerule_states
 
 #Schedule core clocks.
-
-schedule function cartographer_core:loop/tick/base 1t
-schedule function cartographer_core:loop/half_second/base 25t
-schedule function cartographer_core:loop/1_second/base 25t
-schedule function cartographer_core:loop/3_seconds/base 3s
-schedule function cartographer_core:loop/5_seconds/base 5s
-schedule function cartographer_core:loop/10_seconds/base 10s
-schedule function cartographer_core:loop/15_seconds/base 15s
-schedule function cartographer_core:loop/30_seconds/base 30s
-schedule function cartographer_core:loop/60_seconds/base 60s

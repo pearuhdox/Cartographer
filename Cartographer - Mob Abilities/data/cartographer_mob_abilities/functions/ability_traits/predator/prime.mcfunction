@@ -1,0 +1,1 @@
+scoreboard players set @s ca.aftershock 21

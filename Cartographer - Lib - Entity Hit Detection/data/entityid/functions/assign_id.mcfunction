@@ -2,7 +2,7 @@
 function entityid:assign_id/find_id
 
 #getting bits
-scoreboard players operation @s entityid = current= entityid
+scoreboard players operation @s entityid = ca.ca.current= entityid
 
 #get bit 0
 scoreboard players operation @s entityid.0 = @s entityid
@@ -116,9 +116,9 @@ scoreboard players operation @s entityid /= 2 num
 execute if score @s entityid.15 matches 0 run tag @s add entityid.15.0
 execute if score @s entityid.15 matches 1 run tag @s add entityid.15.1
 
-#re-setting current
-scoreboard players operation @s entityid = current= entityid
+#re-setting ca.current
+scoreboard players operation @s entityid = ca.ca.current= entityid
 execute if entity @s[type=player] run function entityid:assign_id/log_player
 
 #rolling over
-execute if score current= entityid matches 65534.. run scoreboard players set current= entityid 0
+execute if score ca.ca.current= entityid matches 65534.. run scoreboard players set ca.ca.current= entityid 0

@@ -58,26 +58,27 @@
             }
         },
         "find5": {
-          "trigger": "minecraft:inventory_changed",
-          "conditions": {
-            "items": [
-              {
-                "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:11b}]}"
-              }
-            ]
-          }
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:11b}]}"
+                    }
+                ]
+            }
         }
-      },
-      "requirements": [
+    },
+    "requirements": [
         [
-          "find1",
-          "find2",
-          "find3",
-          "find4",
-          "find5"
+            "find1",
+            "find2",
+            "find3",
+            "find4",
+            "find5"
         ]
-      ],"rewards": {
+    ],
+    "rewards": {
         "function": "cartographer_custom_statuses:descriptions/shocked"
-      },
+    },
     "parent": "cartographer_custom_statuses:rage"
 }

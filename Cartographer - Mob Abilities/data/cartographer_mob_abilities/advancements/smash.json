@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/smash"
-      },
+    },
     "parent": "cartographer_mob_abilities:magic_missile"
 }

@@ -1,4 +1,4 @@
-scoreboard players set @s effect_shocked 5
+scoreboard players set @s ca.effect_shock 4
 
 tag @s[type=#cartographer_core:hostile,tag=is_rend] remove is_conductive
 

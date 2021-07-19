@@ -1,7 +1,7 @@
 #Loop all abilities that need to be played each tick. This includes Laser (active), Hybrid Fighter (NYI), all On-Death Skills, and helper functions for Hookshot.
 #This also sets mob tags properly for active skill mobs and on death mobs.
 
-#Set the score of helper difficulty equal to Minecraft's current difficulty
+#Set the score of helper difficulty equal to Minecraft's ca.current difficulty
 execute if score $gl_ind_diff ca.gamerule matches 0 run scoreboard players operation $global_past helper_diff = $global helper_diff
 execute if score $gl_ind_diff ca.gamerule matches 0 store result score $global helper_diff run difficulty
 
@@ -20,3 +20,11 @@ scoreboard players set $do_los flag 0
 
 #reduce 1 on our "check invul mob damage etc etc"
 execute if score $invul_time_check invul matches 1.. run scoreboard players remove $invul_time_check invul 1
+
+#For all players with the glacial slow debuff, reduce the debuff and run it.
+execute as @a[scores={ca.glacial_slow=1..}] at @s run function cartographer_mob_abilities:ability_traits/glacial/slow_tick
+
+#For all players with the horrified debuff, reduce the debuff and run it.
+execute as @a[scores={ca.horrified=1..}] at @s run function cartographer_mob_abilities:ability_traits/horrifying/horrify_tick
+
+#For all players who recently died, run the reset tag.

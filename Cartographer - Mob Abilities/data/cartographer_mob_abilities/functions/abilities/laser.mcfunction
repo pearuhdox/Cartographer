@@ -3,7 +3,9 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @e[tag=laser_marker,distance=..1,limit=1] helper_raycast 32
+scoreboard players set @e[tag=laser_marker,distance=..1,limit=1] ca.raycast 32
+
+execute store result score $laser ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
 
 execute as @e[tag=laser_marker,distance=..1,limit=1] at @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/laser/raycast
 

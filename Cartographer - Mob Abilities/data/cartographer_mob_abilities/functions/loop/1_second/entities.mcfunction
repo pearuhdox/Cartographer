@@ -20,26 +20,26 @@ execute as @s[type=armor_stand,tag=ability_marker] run function cartographer_mob
 execute as @s[type=armor_stand,tag=invulnerable_notice] at @s run function cartographer_mob_abilities:passive/purge_notices
 
 #Check if mobs with abilities have needed players in range.
-execute if entity @s[tag=charge,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
-execute if entity @s[tag=flame_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
-execute if entity @s[tag=frost_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
-execute if entity @s[tag=wind_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
-execute if entity @s[tag=venom_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
-execute if entity @s[tag=soulfire_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..16] run tag @s add avail_target
-execute if entity @s[tag=ambush,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..25] run tag @s add avail_target
-execute if entity @s[tag=healer,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..25] run tag @s add avail_target
-execute if entity @s[tag=augmenter,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..25] run tag @s add avail_target
-execute if entity @s[tag=cloaker,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..25] run tag @s add avail_target
-execute if entity @s[tag=hookshot,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..20] run tag @s add avail_target
-execute if entity @s[tag=webshot,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..20] run tag @s add avail_target
-execute if entity @s[tag=disarm,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..8] run tag @s add avail_target
-execute if entity @s[tag=smash,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..15] run tag @s add avail_target
-execute if entity @s[tag=sweep,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..12] run tag @s add avail_target
-execute if entity @s[tag=magic_missile,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..24] run tag @s add avail_target
-execute if entity @s[tag=fireball,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..24] run tag @s add avail_target
-execute if entity @s[tag=trapper,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..20] run tag @s add avail_target
-execute if entity @s[tag=duplicator,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..20] run tag @s add avail_target
-execute if entity @s[tag=wither_storm,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=survival,distance=..25] run tag @s add avail_target
+execute if entity @s[tag=charge,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
+execute if entity @s[tag=nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
+execute if entity @s[tag=frost_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
+execute if entity @s[tag=wind_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
+execute if entity @s[tag=venom_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
+execute if entity @s[tag=soulfire_nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
+execute if entity @s[tag=ambush,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..25] run tag @s add avail_target
+execute if entity @s[tag=healer,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..25] run tag @s add avail_target
+execute if entity @s[tag=augmenter,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..25] run tag @s add avail_target
+execute if entity @s[tag=cloaker,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..25] run tag @s add avail_target
+execute if entity @s[tag=hookshot,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
+execute if entity @s[tag=webshot,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
+execute if entity @s[tag=disarm,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..8] run tag @s add avail_target
+execute if entity @s[tag=smash,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..15] run tag @s add avail_target
+execute if entity @s[tag=sweep,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..12] run tag @s add avail_target
+execute if entity @s[tag=magic_missile,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..24] run tag @s add avail_target
+execute if entity @s[tag=fireball,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..24] run tag @s add avail_target
+execute if entity @s[tag=trapper,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
+execute if entity @s[tag=duplicator,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
+execute if entity @s[tag=wither_storm,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..25] run tag @s add avail_target
 
 #Exalted Weapon Despawning
 scoreboard players add @s[type=armor_stand,tag=exalted_weapon] exalted 1

@@ -10,12 +10,10 @@
 #Run all Cartographer Effects from Core Timers.
 
 #Give dummy lexica recipe to all players.
-recipe give @a cartographer_core:lexica_dummy
+#recipe give @a cartographer_core:lexica_dummy
 
 #Add any extra functions here!
 
 
 
 #Add any extra functions above.
-
-schedule function cartographer_core:loop/60_seconds/base 60s

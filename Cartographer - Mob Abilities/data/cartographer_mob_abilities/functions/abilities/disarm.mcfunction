@@ -9,9 +9,12 @@ playsound minecraft:entity.zombie.attack_iron_door hostile @a[distance=..16] ~ ~
 
 data merge entity @s {NoAI:0}
 
+function cartographer_mob_abilities:abilities/disarm/calc_damage
+
 execute positioned ^ ^ ^3 if entity @a[distance=..2] run scoreboard players set @s cooldown 1
-execute positioned ^ ^ ^3 as @a[distance=..2] at @s run scoreboard players set @s damage_queue 4
-execute positioned ^ ^ ^3 as @a[distance=..2] at @s run function cartographer_core:helper/hurt_player/by_score
+execute positioned ^ ^ ^3 as @a[distance=..2] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
+execute positioned ^ ^ ^3 as @a[distance=..2] at @s run scoreboard players set @s cdl.Death_ID 310202
+execute positioned ^ ^ ^3 as @a[distance=..2] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run effect give @s blindness 2 0
 
 execute positioned ^ ^ ^3 if entity @a[distance=..2] as @a[distance=..2] at @s run data modify storage ca.disarm:space Weapon set from entity @s SelectedItem
@@ -38,5 +41,3 @@ function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player
-
-schedule function cartographer_mob_abilities:helper/attacked_reset 10t

@@ -1,39 +1,39 @@
-scoreboard players set @a helper_kill 0
-scoreboard players set @a helper_damaged 0
-scoreboard players set @a helper_resist 0
-scoreboard players set @a helper_deal_dmg 0
-scoreboard players set @a helper_spawner 0
-scoreboard players set @a helper_fire_bow 0
-scoreboard players set @a helper_fire_cbow 0
-scoreboard players set @a helper_trident 0
-scoreboard players set @a[scores={helper_sprint=5..}] helper_sprint 5
-scoreboard players remove @a[scores={helper_sprint=1..}] helper_sprint 1
+scoreboard players set @a ca.kill_entity 0
+scoreboard players set @a ca.take_dmg 0
+scoreboard players set @a ca.resist_dmg 0
+scoreboard players set @a ca.deal_mel_dmg 0
+scoreboard players set @a ca.mine_spawner 0
+scoreboard players set @a ca.fire_bow 0
+scoreboard players set @a ca.fire_cbow 0
+scoreboard players set @a ca.throw_trident 0
+scoreboard players set @a[scores={ca.sprint=5..}] ca.sprint 5
+scoreboard players remove @a[scores={ca.sprint=1..}] ca.sprint 1
 scoreboard players set @a[scores={ca.swim=1..}] ca.swim 0
 scoreboard players set @a[scores={ca.water_walk=201..}] ca.water_walk 200
 scoreboard players remove @a[scores={ca.water_walk=5..}] ca.water_walk 5
 
-scoreboard players set @a helper_bbarrel 0
-scoreboard players set @a helper_boakdoor 0
-scoreboard players set @a helper_bsprdoor 0
-scoreboard players set @a helper_bbirdoor 0
-scoreboard players set @a helper_bjundoor 0
-scoreboard players set @a helper_bacadoor 0
-scoreboard players set @a helper_bdrkdoor 0
-scoreboard players set @a helper_bcridoor 0
-scoreboard players set @a helper_bwardoor 0
-scoreboard players set @a helper_boaktrap 0
-scoreboard players set @a helper_bsprtrap 0
-scoreboard players set @a helper_bbirtrap 0
-scoreboard players set @a helper_bjuntrap 0
-scoreboard players set @a helper_bacatrap 0
-scoreboard players set @a helper_bdrktrap 0
-scoreboard players set @a helper_bcritrap 0
-scoreboard players set @a helper_bwartrap 0
+scoreboard players set @a ca.br_barrel 0
+scoreboard players set @a ca.br_oak_dr 0
+scoreboard players set @a ca.br_spr_dr 0
+scoreboard players set @a ca.br_bir_dr 0
+scoreboard players set @a ca.br_jun_dr 0
+scoreboard players set @a ca.br_aca_dr 0
+scoreboard players set @a ca.br_drk_dr 0
+scoreboard players set @a ca.br_cri_dr 0
+scoreboard players set @a ca.br_war_dr 0
+scoreboard players set @a ca.br_oka_trap 0
+scoreboard players set @a ca.br_spr_trap 0
+scoreboard players set @a ca.br_bir_trap 0
+scoreboard players set @a ca.br_jun_trap 0
+scoreboard players set @a ca.br_aca_trap 0
+scoreboard players set @a ca.br_drk_trap 0
+scoreboard players set @a ca.br_cri_trap 0
+scoreboard players set @a ca.br_war_trap 0
 
 scoreboard players set @a helper_potion 0
-scoreboard players set @a helper_splashpot 0
-scoreboard players set @a helper_lingerpot 0
-scoreboard players set @a helper_pearl 0
+scoreboard players set @a ca.use_splashpot 0
+scoreboard players set @a ca.use_lingerpot 0
+scoreboard players set @a ca.use_pearl 0
 scoreboard players set @a helper_eye 0
 
 scoreboard players set @a helper_bread 0
@@ -73,9 +73,9 @@ scoreboard players set @a helper_s_eye 0
 scoreboard players set @a helper_honey 0
 scoreboard players set @a helper_milk 0
 
-scoreboard players remove @a[scores={helper_repeat=2..}] helper_repeat 1
+scoreboard players remove @a[scores={ca.rpt_cdl=2..}] ca.rpt_cdl 1
 
-scoreboard players set @a helper_sneak 0
+scoreboard players set @a ca.sneak 0
 
 scoreboard players set @a ca.dmg_resist_sw 0
 scoreboard players set @a ca.sw_fall 0

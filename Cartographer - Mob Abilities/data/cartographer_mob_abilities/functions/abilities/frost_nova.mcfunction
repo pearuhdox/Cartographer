@@ -5,12 +5,11 @@ scoreboard players set @s ability_charge 0
 
 scoreboard players set @s mob_move_dis 12
 
-execute as @a[gamemode=survival,distance=..8] at @s run tag @s add frost_novad
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run scoreboard players set @s cdl.Damage_Queue 8
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run scoreboard players set @s cdl.Death_ID 310204
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run function cd:lib/player/damage/normal
 
-execute as @a[gamemode=survival,distance=..8] at @s run scoreboard players set @s damage_queue 8
-execute as @a[gamemode=survival,distance=..8] at @s run function cartographer_core:helper/hurt_player/by_score
-
-execute as @a[gamemode=survival,distance=..8] at @s run effect give @s slowness 3 2
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run effect give @s slowness 3 2
 
 playsound minecraft:block.glass.break hostile @a[distance=..16] ~ ~ ~ 3 0.8
 playsound minecraft:block.end_portal.spawn player @a[distance=..16] ~ ~ ~ 0.5 1.75
@@ -24,5 +23,3 @@ function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player
-
-schedule function cartographer_mob_abilities:helper/attacked_reset 10t

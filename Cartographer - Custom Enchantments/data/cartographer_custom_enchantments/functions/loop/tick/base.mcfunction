@@ -1,12 +1,20 @@
 
 #Reset attack speed and kbr on Echo users
-execute as @a[scores={echo=1..,echo_charges=0..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 "echo_effect_spd" 1024 add
-execute as @a[scores={echo=1..,echo_charges=..-1}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
-execute as @a[scores={echo=0}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
+execute as @a[scores={ca.echo=1..,ca.echo_charges=0..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 "echo_effect_spd" 1024 add
+execute as @a[scores={ca.echo=1..,ca.echo_charges=..-1}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
+execute as @a[scores={ca.echo=0}] run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192124
 
-execute as @a[scores={echo=1..,echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance modifier add 5-3-8-15-180504192124 "echo_effect_kbr" 0.15 add
-execute as @a[scores={echo=1..,echo_charges=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
-execute as @a[scores={echo=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
+execute as @a[scores={ca.echo=1..,ca.echo_charges=1..}] run attribute @s minecraft:generic.knockback_resistance modifier add 5-3-8-15-180504192124 "echo_effect_kbr" 0.15 add
+execute as @a[scores={ca.echo=1..,ca.echo_charges=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
+execute as @a[scores={ca.echo=0}] run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
+
+execute as @a[scores={ca.fleetfoot=1..,ca.is_load_cro=1..}] run attribute @s minecraft:generic.movement_speed modifier add 31-321-514-000-6151520 "fleetfoot_effect_spd" 0.4 add
+
+execute as @a[scores={ca.fleetfoot=1..,ca.is_draw_bow=1..}] run attribute @s minecraft:generic.movement_speed modifier add 31-321-514-000-6151520 "fleetfoot_effect_spd" 0.4 add
+
+execute as @a[scores={ca.fleetfoot=1..,ca.is_hold_tri=1..}] run attribute @s minecraft:generic.movement_speed modifier add 31-321-514-000-6151520 "fleetfoot_effect_spd" 0.4 add
+
+execute as @a[scores={ca.fleetfoot=0}] run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
 
 #Current recharge attack meter
 execute as @a[scores={ca.ce.cur_spd=2..}] run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "current_effect_spd" 1024 add
@@ -33,44 +41,49 @@ tag @a[tag=auto_charge_inv_fix] remove auto_charge_inv_fix
 # Triggers for enchants that must attempt every tick.
 
 #Passive Trigger
-execute as @a[tag=has_passive_ench] at @s run function cartographer_custom_enchantments:enchant_calls/passively
+execute if score $cu_en_passive ca.enabler matches 1.. as @a[tag=has_passive_ench] at @s run function cartographer_custom_enchantments:enchant_calls/passively
 
 #Kill trigger
-execute as @a[scores={helper_kill=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
+execute if score $cu_en_kill ca.enabler matches 1.. as @a[scores={ca.kill_entity=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
 
 #Make ranged attack triggers.
-execute as @a[scores={helper_fire_bow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
-execute as @a[scores={helper_fire_cbow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
-execute as @a[scores={helper_trident=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
+execute if score $cu_en_ranged ca.enabler matches 1.. as @a[scores={ca.fire_bow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
+execute if score $cu_en_ranged ca.enabler matches 1.. as @a[scores={ca.fire_cbow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
+execute if score $cu_en_ranged ca.enabler matches 1.. as @a[scores={ca.throw_trident=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
 
 #Break Spawner Trigger
-execute as @a[scores={helper_spawner=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
+execute if score $cu_en_spawner ca.enabler matches 1.. as @a[scores={ca.mine_spawner=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
 
 #Player Death Trigger
-execute as @a[scores={helper_deathtime=0}] at @s run function cartographer_custom_enchantments:enchant_calls/when_player_dies
+execute as @a[scores={ca.death_time=0}] at @s run function cartographer_custom_enchantments:enchant_calls/when_player_dies
 
 #Player Respawn Trigger
-execute as @a[scores={helper_deathtime=2..20}] at @s run function cartographer_custom_enchantments:enchant_calls/when_player_respawns
+execute as @a[scores={ca.death_time=2..20}] at @s run function cartographer_custom_enchantments:enchant_calls/when_player_respawns
 
-#Tempo Theft Effect
+#Tempo Theft Effect - Players
 execute as @a[scores={ca.temp_warp=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect
 
 #Break Concealed
-execute as @a[scores={concealed=0,ca.conceal_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/concealed/consume
+execute as @a[scores={ca.concealed=0,ca.conceal_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/concealed/consume
 
 #Infinity 3.0
 execute as @a at @s run function cartographer_custom_enchantments:enchant_effects/infinity/player
 
 #Splintering
-execute as @a[scores={splintering=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering
+execute if score $cu_en_passive ca.enabler matches 1.. as @a[scores={ca.splintering=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/splintering
+
+#Charge Overcharge
+execute if score $cu_en_ranged ca.enabler matches 1.. as @a[scores={ca.overcharge=1..,ca.draw_bow_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/overcharge/tier
+
+#Reset Overcharge Tier
+execute as @a unless score @s ca.overcharge matches 1.. run scoreboard players set @s ca.ov_tier 0
 
 #Rally Timer
-execute as @a[scores={rally_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/rally/timer
-
+execute if score $cu_en_passive ca.enabler matches 1.. as @a[scores={ca.ral_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/rally/timer
 
 #Remove Two Handed Processed Tag - Fix Inventory Two Handed Bundled Items
 execute as @a[scores={ca.two_hand_del=1}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/return_offhand
-execute as @a[scores={curse_two_handed=0},tag=!processed_two_handed] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/inv_fix
+
 tag @a[tag=processed_two_handed] remove processed_two_handed
 scoreboard players remove @a[scores={ca.two_hand_del=1..}] ca.two_hand_del 1
 
@@ -99,8 +112,8 @@ execute if score $gl_ui_loc ca.gamerule matches 1 as @a[scores={ca.ui_loc=0}] at
 execute as @a[scores={ca.ui_loc=1}] at @s run function cartographer_custom_enchantments:helper/indicators/action_bar
 execute as @a[scores={ca.ui_loc=2}] at @s run function cartographer_custom_enchantments:helper/indicators/subtitle
 
-tag @a[scores={repeating=0}] remove showing_repeating
-tag @a[scores={echo=0}] remove showing_echo
+tag @a[scores={ca.repeating=0}] remove showing_repeating
+tag @a[scores={ca.echo=0}] remove showing_echo
 
 #Just in case
 execute as @a run function cartographer_custom_enchantments:calc_enchant/slot_change

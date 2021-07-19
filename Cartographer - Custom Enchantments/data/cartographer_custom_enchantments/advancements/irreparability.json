@@ -30,6 +30,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/irreparability"
-      },
+    },
     "parent": "cartographer_custom_enchantments:encumbering"
 }

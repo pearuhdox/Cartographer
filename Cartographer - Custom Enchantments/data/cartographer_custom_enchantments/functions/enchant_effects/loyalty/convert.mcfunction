@@ -2,9 +2,9 @@ summon armor_stand ~ ~-1 ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,
 
 playsound minecraft:item.trident.return player @a[distance=..32] ~ ~ ~ 3 1
 
-execute if entity @s[scores={current=1..}] positioned ~ ~-1 ~ run scoreboard players set @e[tag=loyalty_projectile,distance=..1,sort=nearest] current 1
-execute positioned ~ ~-1 ~ run scoreboard players operation @e[tag=loyalty_projectile,distance=..1,sort=nearest] loyalty = @s loyalty
-execute positioned ~ ~-1 ~ run scoreboard players add @e[tag=loyalty_projectile,distance=..1,sort=nearest] loyalty 1
+execute if entity @s[scores={ca.current=1..}] positioned ~ ~-1 ~ run scoreboard players set @e[tag=loyalty_projectile,distance=..1,sort=nearest] ca.current 1
+execute positioned ~ ~-1 ~ run scoreboard players operation @e[tag=loyalty_projectile,distance=..1,sort=nearest] ca.loyalty = @s ca.loyalty
+execute positioned ~ ~-1 ~ run scoreboard players add @e[tag=loyalty_projectile,distance=..1,sort=nearest] ca.loyalty 1
 
 kill @s
 

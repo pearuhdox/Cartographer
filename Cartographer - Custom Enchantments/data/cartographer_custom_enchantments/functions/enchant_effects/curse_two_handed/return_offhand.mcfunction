@@ -1,6 +1,6 @@
 tag @s remove is_two_handing
 
-replaceitem block 4206900 1 4206900 container.0 air 1
+item replace block 4206900 1 4206900 container.0 with air 1
 data modify block 4206900 1 4206900 Items append from storage suso:pldata working_data.offhand
 
 loot replace entity @s weapon.offhand 1 mine 4206900 1 4206900 air{drop_contents:1b}

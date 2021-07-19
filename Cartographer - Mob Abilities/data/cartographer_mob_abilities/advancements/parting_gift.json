@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/parting_gift"
-      },
+    },
     "parent": "cartographer_mob_abilities:exalted"
 }

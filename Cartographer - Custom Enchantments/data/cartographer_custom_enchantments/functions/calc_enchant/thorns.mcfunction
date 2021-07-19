@@ -1,190 +1,187 @@
-data modify storage ca.susu:enchants temp_item set value {}
-data modify storage ca.susu:enchants temp_item set from entity @s Inventory[{Slot:100b}]
-execute unless data storage ca.susu:enchants temp_item.tag.Thorns run data modify storage ca.susu:enchants temp_item set value {}
+data modify storage ca.susu:enchants thorns_items set value {}
+data modify storage ca.susu:enchants thorns_items.head set from storage ca.susu:enchants head
+data modify storage ca.susu:enchants thorns_items.body set from storage ca.susu:enchants body
+data modify storage ca.susu:enchants thorns_items.legs set from storage ca.susu:enchants legs
+data modify storage ca.susu:enchants thorns_items.feet set from storage ca.susu:enchants feet
+data modify storage ca.susu:enchants thorns_items.main set from storage ca.susu:enchants main
+data modify storage ca.susu:enchants thorns_items.offh set from storage ca.susu:enchants offh
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Frostbite
-scoreboard players operation @s t_frost += $temp ca.susu
+#Check Feet
+execute unless data storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"thorns"}].lvl run data modify storage ca.susu:enchants thorns_items.feet set value {}
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"frostbite"}].lvl
+scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Vicious
-scoreboard players operation @s t_bleed += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Overload
-scoreboard players operation @s t_shock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"vicious"}].lvl
+scoreboard players operation @s ca.t_bleed += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Committed
-scoreboard players operation @s t_vuln += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"overload"}].lvl
+scoreboard players operation @s ca.t_shock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"committed"}].lvl
+scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Decay
-scoreboard players operation @s t_decay += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
-scoreboard players operation @s t_fire += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"decay"}].lvl
+scoreboard players operation @s ca.t_decay += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:knockback"}].lvl
-scoreboard players operation @s t_knock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
+scoreboard players operation @s ca.t_fire += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.Enchantments[{id:"minecraft:knockback"}].lvl
+scoreboard players operation @s ca.t_knock += $temp ca.susu
 
-data modify storage ca.susu:enchants temp_item set value {}
-data modify storage ca.susu:enchants temp_item set from entity @s Inventory[{Slot:101b}]
-execute unless data storage ca.susu:enchants temp_item.tag.Thorns run data modify storage ca.susu:enchants temp_item set value {}
+#Check Legs
+execute unless data storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"thorns"}].lvl run data modify storage ca.susu:enchants thorns_items.legs set value {}
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Frostbite
-scoreboard players operation @s t_frost += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"frostbite"}].lvl
+scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Vicious
-scoreboard players operation @s t_bleed += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"vicious"}].lvl
+scoreboard players operation @s ca.t_bleed += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Overload
-scoreboard players operation @s t_shock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"overload"}].lvl
+scoreboard players operation @s ca.t_shock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Committed
-scoreboard players operation @s t_vuln += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"committed"}].lvl
+scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Decay
-scoreboard players operation @s t_decay += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"decay"}].lvl
+scoreboard players operation @s ca.t_decay += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
-scoreboard players operation @s t_fire += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
+scoreboard players operation @s ca.t_fire += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:knockback"}].lvl
-scoreboard players operation @s t_knock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.Enchantments[{id:"minecraft:knockback"}].lvl
+scoreboard players operation @s ca.t_knock += $temp ca.susu
 
+#Check Body
+execute unless data storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"thorns"}].lvl run data modify storage ca.susu:enchants thorns_items.body set value {}
 
-data modify storage ca.susu:enchants temp_item set value {}
-data modify storage ca.susu:enchants temp_item set from entity @s Inventory[{Slot:102b}]
-execute unless data storage ca.susu:enchants temp_item.tag.Thorns run data modify storage ca.susu:enchants temp_item set value {}
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"frostbite"}].lvl
+scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Frostbite
-scoreboard players operation @s t_frost += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"vicious"}].lvl
+scoreboard players operation @s ca.t_bleed += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Vicious
-scoreboard players operation @s t_bleed += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"overload"}].lvl
+scoreboard players operation @s ca.t_shock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Overload
-scoreboard players operation @s t_shock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"committed"}].lvl
+scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Committed
-scoreboard players operation @s t_vuln += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"decay"}].lvl
+scoreboard players operation @s ca.t_decay += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Decay
-scoreboard players operation @s t_decay += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
+scoreboard players operation @s ca.t_fire += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
-scoreboard players operation @s t_fire += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.Enchantments[{id:"minecraft:knockback"}].lvl
+scoreboard players operation @s ca.t_knock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:knockback"}].lvl
-scoreboard players operation @s t_knock += $temp ca.susu
+#Check Head
+execute unless data storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"thorns"}].lvl run data modify storage ca.susu:enchants thorns_items.head set value {}
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"frostbite"}].lvl
+scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-data modify storage ca.susu:enchants temp_item set value {}
-data modify storage ca.susu:enchants temp_item set from entity @s Inventory[{Slot:103b}]
-execute unless data storage ca.susu:enchants temp_item.tag.Thorns run data modify storage ca.susu:enchants temp_item set value {}
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Frostbite
-scoreboard players operation @s t_frost += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"vicious"}].lvl
+scoreboard players operation @s ca.t_bleed += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"overload"}].lvl
+scoreboard players operation @s ca.t_shock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Vicious
-scoreboard players operation @s t_bleed += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"committed"}].lvl
+scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Overload
-scoreboard players operation @s t_shock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Committed
-scoreboard players operation @s t_vuln += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"decay"}].lvl
+scoreboard players operation @s ca.t_decay += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
+scoreboard players operation @s ca.t_fire += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Decay
-scoreboard players operation @s t_decay += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.Enchantments[{id:"minecraft:knockback"}].lvl
+scoreboard players operation @s ca.t_knock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
-scoreboard players operation @s t_fire += $temp ca.susu
+#Check Offhands
+execute unless data storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"thorns"}].lvl run data modify storage ca.susu:enchants thorns_items.offh set value {}
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:knockback"}].lvl
-scoreboard players operation @s t_knock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"frostbite"}].lvl
+scoreboard players operation @s ca.t_frost += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-data modify storage ca.susu:enchants temp_item set value {}
-data modify storage ca.susu:enchants temp_item set from entity @s Inventory[{Slot:-106b}]
-execute unless data storage ca.susu:enchants temp_item.tag.Thorns run data modify storage ca.susu:enchants temp_item set value {}
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"vicious"}].lvl
+scoreboard players operation @s ca.t_bleed += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Frostbite
-scoreboard players operation @s t_frost += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"overload"}].lvl
+scoreboard players operation @s ca.t_shock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"committed"}].lvl
+scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Vicious
-scoreboard players operation @s t_bleed += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Overload
-scoreboard players operation @s t_shock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"decay"}].lvl
+scoreboard players operation @s ca.t_decay += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Committed
-scoreboard players operation @s t_vuln += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
+scoreboard players operation @s ca.t_fire += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.Enchantments[{id:"minecraft:knockback"}].lvl
+scoreboard players operation @s ca.t_knock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Decay
-scoreboard players operation @s t_decay += $temp ca.susu
+#Check Mainhands
+execute unless data storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"thorns"}].lvl run data modify storage ca.susu:enchants thorns_items.main set value {}
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
-scoreboard players operation @s t_fire += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"frostbite"}].lvl
+scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:knockback"}].lvl
-scoreboard players operation @s t_knock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"vicious"}].lvl
+scoreboard players operation @s ca.t_bleed += $temp ca.susu
 
-data modify storage ca.susu:enchants temp_item set value {}
-data modify storage ca.susu:enchants temp_item set from entity @s SelectedItem
-execute unless data storage ca.susu:enchants temp_item.tag.Thorns run data modify storage ca.susu:enchants temp_item set value {}
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"overload"}].lvl
+scoreboard players operation @s ca.t_shock += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Frostbite
-scoreboard players operation @s t_frost += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"committed"}].lvl
+scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"stunning"}].lvl
+scoreboard players operation @s ca.t_stun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Vicious
-scoreboard players operation @s t_bleed += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"decay"}].lvl
+scoreboard players operation @s ca.t_decay += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Overload
-scoreboard players operation @s t_shock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
+scoreboard players operation @s ca.t_fire += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Committed
-scoreboard players operation @s t_vuln += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Stunning
-scoreboard players operation @s t_stun += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Decay
-scoreboard players operation @s t_decay += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
-scoreboard players operation @s t_fire += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants temp_item.tag.Enchantments[{id:"minecraft:knockback"}].lvl
-scoreboard players operation @s t_knock += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.Enchantments[{id:"minecraft:knockback"}].lvl
+scoreboard players operation @s ca.t_knock += $temp ca.susu

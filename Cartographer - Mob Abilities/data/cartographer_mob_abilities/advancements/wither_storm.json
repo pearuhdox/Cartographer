@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/wither_storm"
-      },
+    },
     "parent": "cartographer_mob_abilities:wind_nova"
 }

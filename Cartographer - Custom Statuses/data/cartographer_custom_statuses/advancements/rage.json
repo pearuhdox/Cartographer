@@ -20,8 +20,9 @@
         "found": {
             "trigger": "minecraft:impossible"
         }
-    },"rewards": {
+    },
+    "rewards": {
         "function": "cartographer_custom_statuses:descriptions/rage"
-      },
+    },
     "parent": "cartographer_custom_statuses:infected"
 }

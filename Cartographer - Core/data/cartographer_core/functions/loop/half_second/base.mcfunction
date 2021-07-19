@@ -8,11 +8,9 @@
 ########################################
 
 #Run all Cartographer Effects from Core Timers.
-schedule function cartographer_mob_abilities:loop/half_second/base 10t
+function cartographer_mob_abilities:loop/half_second/base
 
 #Add any extra functions here!
 
 
 #Add any extra functions above.
-
-schedule function cartographer_core:loop/half_second/base 10t

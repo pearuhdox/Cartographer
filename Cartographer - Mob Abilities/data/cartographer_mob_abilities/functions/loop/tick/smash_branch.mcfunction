@@ -1,7 +1,7 @@
 #Run Smash Land Effect
-execute unless block ~ ~-6 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash_place_particle
-execute unless block ~ ~-4 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash_place_particle
-execute unless block ~ ~-2 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash_place_particle
+execute unless block ~ ~-6 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash/place_particle
+execute unless block ~ ~-4 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash/place_particle
+execute unless block ~ ~-2 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash/place_particle
 execute unless block ~ ~-1 ~ #cartographer_core:can_raycast if entity @s[tag=airborne_10] run function cartographer_mob_abilities:abilities/smash
 
 execute if entity @s[tag=airborne_9] run tag @s add airborne_10

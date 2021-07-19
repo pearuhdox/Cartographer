@@ -19,25 +19,25 @@ execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecra
 
 kill @e[type=#cartographer_core:arrow,limit=3,sort=nearest]
 
-scoreboard players set $deadeye pin_down 0
-scoreboard players set $deadeye rend 0
-scoreboard players set $deadeye conductive 0
-scoreboard players set $deadeye frost 0
-scoreboard players set $deadeye flame 0
-scoreboard players set $deadeye flash 0
-scoreboard players set $deadeye putrefy 0
-scoreboard players set $deadeye trueshot 0
-scoreboard players set $deadeye curse_encumber 0
+scoreboard players set $deadeye ca.pin_down 0
+scoreboard players set $deadeye ca.rend 0
+scoreboard players set $deadeye ca.conductive 0
+scoreboard players set $deadeye ca.frost 0
+scoreboard players set $deadeye ca.flame 0
+scoreboard players set $deadeye ca.flash 0
+scoreboard players set $deadeye ca.putrefy 0
+scoreboard players set $deadeye ca.trueshot 0
+scoreboard players set $deadeye ca.curse_encum 0
 
-execute if score @s pin_down matches 1 run scoreboard players set $deadeye pin_down 1
-execute if score @s rend matches 1 run scoreboard players set $deadeye rend 1
-execute if score @s conductive matches 1 run scoreboard players set $deadeye conductive 1
-execute if score @s frost matches 1 run scoreboard players set $deadeye frost 1
-execute if score @s flame matches 1 run scoreboard players set $deadeye flame 1
-execute if score @s flash matches 1 run scoreboard players set $deadeye flash 1
-execute if score @s putrefy matches 1 run scoreboard players set $deadeye putrefy 1
-execute if score @s trueshot matches 1 run scoreboard players set $deadeye trueshot 1
-execute if score @s curse_encumber matches 1 run scoreboard players set $deadeye curse_encumber 1
+execute if score @s ca.pin_down matches 1 run scoreboard players set $deadeye ca.pin_down 1
+execute if score @s ca.rend matches 1 run scoreboard players set $deadeye ca.rend 1
+execute if score @s ca.conductive matches 1 run scoreboard players set $deadeye ca.conductive 1
+execute if score @s ca.frost matches 1 run scoreboard players set $deadeye ca.frost 1
+execute if score @s ca.flame matches 1 run scoreboard players set $deadeye ca.flame 1
+execute if score @s ca.flash matches 1 run scoreboard players set $deadeye ca.flash 1
+execute if score @s ca.putrefy matches 1 run scoreboard players set $deadeye ca.putrefy 1
+execute if score @s ca.trueshot matches 1 run scoreboard players set $deadeye ca.trueshot 1
+execute if score @s ca.curse_encum matches 1 run scoreboard players set $deadeye ca.curse_encum 1
 
 execute store result score $x_rot ca.rotation run data get entity @s Rotation[0]
 execute store result score $z_rot ca.rotation run data get entity @s Rotation[1]

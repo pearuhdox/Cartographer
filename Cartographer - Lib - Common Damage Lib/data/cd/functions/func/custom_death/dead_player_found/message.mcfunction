@@ -1,0 +1,1 @@
+function #minecraft:custom_death_message

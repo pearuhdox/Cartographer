@@ -30,6 +30,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/soulbound"
-      },
+    },
     "parent": "cartographer_custom_enchantments:infinity"
 }

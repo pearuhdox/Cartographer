@@ -1,0 +1,2 @@
+execute as @e[tag=cdl.Damaging_Mob,nbt={HurtTime:4s}] at @s run function cd:func/mob_damage_normal/as_mob
+execute if entity @e[tag=cdl.Damaging_Mob] run schedule function cd:func/mob_damage_normal/loop 1t

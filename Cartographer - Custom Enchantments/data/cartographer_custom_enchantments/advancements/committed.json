@@ -68,6 +68,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/committed"
-      },
+    },
     "parent": "cartographer_custom_enchantments:melee_tree"
 }

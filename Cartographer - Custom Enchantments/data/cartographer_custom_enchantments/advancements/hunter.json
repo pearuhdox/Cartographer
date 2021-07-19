@@ -79,6 +79,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/hunter"
-      },
+    },
     "parent": "cartographer_custom_enchantments:frostbite"
 }

@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/magic_missile"
-      },
+    },
     "parent": "cartographer_mob_abilities:laser"
 }

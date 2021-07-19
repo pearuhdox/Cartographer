@@ -1,4 +1,4 @@
-scoreboard players set @s helper_lifetime 1
+scoreboard players set @s ca.lifetime 1
 
 execute run data merge entity @s {NoGravity:1}
 

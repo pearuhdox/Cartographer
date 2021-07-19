@@ -45,7 +45,7 @@
         },
         "description": {
             "text": "Your weapon stores charges when you kill enemies that when attacking, are consumed to instantly refresh your attack meter.",
-            "color": "white" 
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:diamond_sword"
@@ -57,6 +57,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/echo"
-      },
+    },
     "parent": "cartographer_custom_enchantments:duelist"
 }

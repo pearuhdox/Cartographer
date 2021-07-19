@@ -30,6 +30,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/pin_down"
-      },
+    },
     "parent": "cartographer_custom_enchantments:hydraulic"
 }

@@ -5,7 +5,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Infinity:1}"
+                        "nbt": "{CustomEnchantments:[{id:\"infinity\",lvl:1b}]}"
                     }
                 ]
             }
@@ -30,6 +30,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/infinity"
-      },
+    },
     "parent": "cartographer_custom_enchantments:other_tree"
 }

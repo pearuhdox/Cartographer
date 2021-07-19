@@ -1,0 +1,1 @@
+tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Custom Statuses","color":"#CC73FF","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View settings for Custom Statuses.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_custom_statuses:options/main"}}]

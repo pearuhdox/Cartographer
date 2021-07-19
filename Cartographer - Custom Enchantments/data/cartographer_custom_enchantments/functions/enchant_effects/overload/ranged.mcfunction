@@ -1,6 +1,6 @@
-scoreboard players set @s[tag=is_overload_1] effect_shocked 3
-scoreboard players set @s[tag=is_overload_2] effect_shocked 5
-scoreboard players set @s[tag=is_overload_3] effect_shocked 7
+scoreboard players set @s[tag=is_overload_1] ca.effect_shock 3
+scoreboard players set @s[tag=is_overload_2] ca.effect_shock 5
+scoreboard players set @s[tag=is_overload_3] ca.effect_shock 7
 
 tag @s[type=#cartographer_core:hostile,tag=is_overload_1] remove is_overload_1
 tag @s[type=#cartographer_core:hostile,tag=is_overload_2] remove is_overload_2

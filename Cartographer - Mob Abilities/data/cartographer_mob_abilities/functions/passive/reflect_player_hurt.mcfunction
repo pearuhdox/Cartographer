@@ -1,6 +1,6 @@
-execute as @a[tag=reflect_hit] at @s run scoreboard players operation @s damage_queue = $reflect_pass reflect_diff
+execute as @a[tag=reflect_hit] at @s run scoreboard players operation @s cdl.Damage_Queue = $reflect_pass reflect_diff
 
-execute as @a[tag=reflect_hit] at @s run function cartographer_core:helper/hurt_player/by_score
+execute as @a[tag=reflect_hit] at @s run function cd:lib/player/damage/normal
 
 execute as @a[tag=reflect_hit] at @s run playsound minecraft:entity.shulker.hurt_closed hostile @s ~ ~ ~ 2 0.5
 execute as @a[tag=reflect_hit] at @s run playsound minecraft:entity.zombie.attack_iron_door player @s ~ ~ ~ 0.5 1.5

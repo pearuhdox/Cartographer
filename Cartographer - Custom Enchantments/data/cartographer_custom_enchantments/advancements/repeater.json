@@ -101,6 +101,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/repeating"
-      },
+    },
     "parent": "cartographer_custom_enchantments:rend"
 }

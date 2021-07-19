@@ -1,4 +1,4 @@
-scoreboard players set @s effect_infect 5
+scoreboard players set @s ca.effect_infect 4
 
 tag @s[type=#cartographer_core:hostile,tag=is_decay] remove is_decay
 

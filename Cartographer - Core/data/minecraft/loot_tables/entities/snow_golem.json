@@ -10,7 +10,7 @@
         }
       ]
     },
-{
+    {
       "rolls": 1,
       "entries": [
         {
@@ -37,8 +37,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 15.0,
+                "min": 0,
+                "max": 15,
                 "type": "minecraft:uniform"
               }
             }

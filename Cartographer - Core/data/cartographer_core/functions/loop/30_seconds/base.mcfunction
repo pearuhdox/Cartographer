@@ -14,5 +14,3 @@
 
 
 #Add any extra functions above.
-
-schedule function cartographer_core:loop/30_seconds/base 30s

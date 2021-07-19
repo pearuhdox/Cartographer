@@ -9,7 +9,7 @@
 tag @a add gmr_frozen
 gamerule sendCommandFeedback false
 
-scoreboard players enable @s options_trig 
+scoreboard players enable @s ca.options_trig 
 
 execute as @a at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
@@ -22,4 +22,5 @@ execute as @a[scores={ca.reload_type=2}] at @s run function cartographer_core:lo
 
 tag @a remove ehid_check
 tag @a remove pds_check
+tag @a remove cdl_check
 

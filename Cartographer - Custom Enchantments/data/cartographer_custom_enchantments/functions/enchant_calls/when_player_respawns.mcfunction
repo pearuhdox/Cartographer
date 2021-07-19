@@ -3,4 +3,4 @@
 #Soulbound Return
 function cartographer_custom_enchantments:enchant_effects/soulbound_return
 
-scoreboard players set @s helper_deathtime 21
+scoreboard players set @s ca.death_time 21

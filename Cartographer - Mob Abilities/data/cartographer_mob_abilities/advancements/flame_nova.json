@@ -4,18 +4,18 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"flame_nova\"]}"
+                    "nbt": "{Tags:[\"nova\"]}"
                 }
             }
         }
     },
     "display": {
         "title": {
-            "text": "Flame Nova               ",
+            "text": "Nova Burst               ",
             "color": "white"
         },
         "description": {
-            "text": "The enemy can release a burst of flames around it, dealing damage and setting players on fire.",
+            "text": "The enemy can release a burst of magic energy around it, dealing damage to nearby players.",
             "color": "white"
         },
         "icon": {
@@ -27,7 +27,7 @@
         "hidden": true
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/flame_nova"
-      },
+        "function": "cartographer_mob_abilities:descriptions/nova"
+    },
     "parent": "cartographer_mob_abilities:fireball"
 }

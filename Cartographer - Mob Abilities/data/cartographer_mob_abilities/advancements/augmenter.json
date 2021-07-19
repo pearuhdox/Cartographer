@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/augmenter"
-      },
+    },
     "parent": "cartographer_mob_abilities:ambush"
 }

@@ -4,7 +4,7 @@ execute run tp 002f80c0-0001-f879-0000-009c001e7bfc ~ ~ ~ facing entity @p[gamem
 
 execute store result score @s sight_dist run attribute @s minecraft:generic.follow_range get
 
-scoreboard players operation 002f80c0-0001-f879-0000-009c001e7bfc helper_raycast = @s sight_dist
+scoreboard players operation 002f80c0-0001-f879-0000-009c001e7bfc ca.raycast = @s sight_dist
 execute as 002f80c0-0001-f879-0000-009c001e7bfc at @s positioned ~ ~1 ~ run function cartographer_mob_abilities:helper/los_check/raycast
 
 tag @s add los_checked

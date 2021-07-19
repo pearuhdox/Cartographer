@@ -1,1 +1,0 @@
-execute if score @s effect_stunned matches 1.. run summon area_effect_cloud ~ ~ ~ {Particle:"block air",NoGravity:1b,CustomNameVisible:1b,ReapplicationDelay:0,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:1,DurationOnUse:0f,Age:0,WaitTime:0,Tags:["indicator"],CustomName:'{"text":"✦ ✦","color":"#FFD438","bold":true,"italic":false}'}

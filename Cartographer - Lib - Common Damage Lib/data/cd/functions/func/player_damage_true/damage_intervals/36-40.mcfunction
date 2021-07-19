@@ -1,0 +1,5 @@
+execute if score @s cdl.Damage_Queue matches 36 run attribute @s minecraft:generic.max_health modifier add 31514192-0114-2651-8151-950000000006 "cdl.player.True_Damage_HP_Mod" -36 add
+execute if score @s cdl.Damage_Queue matches 37 run attribute @s minecraft:generic.max_health modifier add 31514192-0114-2651-8151-950000000006 "cdl.player.True_Damage_HP_Mod" -37 add
+execute if score @s cdl.Damage_Queue matches 38 run attribute @s minecraft:generic.max_health modifier add 31514192-0114-2651-8151-950000000006 "cdl.player.True_Damage_HP_Mod" -38 add
+execute if score @s cdl.Damage_Queue matches 39 run attribute @s minecraft:generic.max_health modifier add 31514192-0114-2651-8151-950000000006 "cdl.player.True_Damage_HP_Mod" -39 add
+execute if score @s cdl.Damage_Queue matches 40.. run attribute @s minecraft:generic.max_health modifier add 31514192-0114-2651-8151-950000000006 "cdl.player.True_Damage_HP_Mod" -40 add

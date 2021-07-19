@@ -1,3 +1,283 @@
+Cartographer, August 2021 Update - 1.17 Begins!
+
+This is another optimization, clean up, and rework patch. But now, we're in 1.17! Wheeeeeeee!
+
+Additions:
+
+Custom Enchantments:
+  - Added Cauterize (Passive):
+    - Attack (Melee, Ranged, Thorns 2.0, Eruption) a mob on fire to cauterize it, cleansing fire, doing half the remaining burn damage instantly, and making the mob brittle.
+    - For the remaining duration of fire, the mob is instead "Brittle"
+    - Brittle mobs take 100% damage and bonus knockback from the next attack from a player. (The debuff is consumed).
+    - Enemies immune to fire damage [note: not Fire Resistance] cannot be made brittle, but do always take 2.5 additional damage from the enchantment.
+
+  - Added Singe (Melee):
+    - Deal 2.5 bonus melee damage (per level) to enemies on Fire.
+    - Enemies immune to fire damage automatically take the bonus damage.
+
+  - Added Fleetfoot (Ranged):
+    - Move at full movement speed while drawing back a bow, loading a crossbow, or aiming a trident.
+  
+  - Added Overcharge: (Ranged -> Bow):
+    - Hold a bow for additional time (past maximum charge) to further increase the damage of the shot.
+    - Increases by 50% (multiplicative of all bow effects) for each level (max of 3 levels)
+    - Each level adds an additional 0.5 seconds to the maximum bonus charge.
+
+  - Added Resourceful:
+    - Grants a 10% chance per level to not consume a given anything.
+      - Includes all consumables, arrows, and durability.
+
+Custom Statuses:
+  - Added a Global Option to enable Critical Hits while players are Blind or Slow Falling.
+
+
+  THIS CHANGE YET TO BE MADE
+  - Luck / Bad Luck now have effects on players.
+    - Any chance based effect in Cartographer if it fails, rolls an additional time per positive luck to see if it passes.
+    - Any chance based effect in Cartographer if it passes, rolls an additional time per negative luck to see if it fails.
+      - Based on positive/negative, the pass/fail check is accepted as the actual outcome.
+
+    - This effect can be decoupled from the Luck / Bad Luck attribute via a setting. The scoreboard can still be set and behavior will be the same.
+
+    - With Luck/Unluck, effects that grant buffs have a 20% chance to be rolled for +2/-2 second duration.
+    - Effects that heal the player have a 20% chance to do +1/-1 healing.
+      - Additional points of Luck reroll additional times for favorable/unfavorable outcomes.
+
+    - Effects that count:
+      - Evasion - Done
+      - Stunning
+      - Flash
+      - Transfiguration
+      - Shocked proc-effects (transferred luck coeff from player to mob)
+      - Evocation (at higher levels)
+      - Curse of Regret
+
+    - For healing bonuses:
+      - Sapper
+      - Regeneration
+      - Rally
+      - Lifesteal
+
+    - For duration bonuses:
+      - Frenzy
+      - Adrenaline
+      - Energetic
+      - Tempo Theft
+
+Mob Abilities:
+
+Introducing Ability Traits:
+  - Formerly known as passives, Ability traits now allow customization of the enemies' active effects.
+  - Abilities such as all the Nova varieties no longer have varieties, instead using this system.
+
+Current Ability Traits:
+  Damage Modifiers:
+  - Mystic: The mob deals 1.5x damage with abilities (calculated from final amount).
+  - Arcane: The mob deals 2x damage with abilities (calculated from final amount).
+  - Muted: The mob deals 0.75x damage with abilities (calculated from final amount).
+  - Dampened: The mob deals 0.5x damage with abilities (calculated from final amount).
+
+  Cooldown Modifiers: (TBI)
+  - Quickened: Cooldowns are reduced by 25%.
+  - Hastened: Cooldowns are reduced by 50%.
+  - Fatigued: Cooldowns are increased by 25%.
+  - Sluggish: Cooldowns are increased by 50%.
+
+  On Hit Effects:
+  - Blazing: The ability lights the ground beneath attacked players on fire.
+  - Glacial: The ability applies a slow effect to the player which diminishes rapidly over time.
+  - Overloading: The ability creates clouds of electric sparks around the player, which when walked into, weaken, fatigue, and damage entities.
+  - Horrifying: The ability cripples players (slowing players, reducing their melee attack speed, and reducing their armor) temporarily.
+  - Celestial: The ability heals the user for 50% of the damage value dealt to a player. (If a player was damaged)
+  - Venemous: The ability poisons the attacked player. The poison ticks faster if the player has Saturation.
+  - Zephyrous: The ability throws the attacked player into the air.
+
+  Mob Effects:
+  - Aftershock: The ability pulses a shockwave around the mob when finished. (50% of the Attack Damage stat)
+  - Predator: The enemy leaps towards the nearest player if the player is out of melee range. If the player is within melee range, they leap away.
+  - Evocative: The mob directs a path of evoker fangs at the nearest player.
+  - Carapace: The mob creates a shield around it when it uses an ability. The shield grants it 30 armor and knockback immunity, lasting until the mob is attacked (or 10 seconds).
+  - Volatile: The mob explodes when they cast the ability.
+
+Old Traits (aka Passives) are now called "Passives"
+
+New Passives:
+  - Touch: The mob inflicts bonuses from any ability traits it has on melee/ranged attack.
+  
+  - Creation: The mob automatically triggers passives when it spawns. (It does not trigger on hits) [TBI]
+
+Changes:
+
+Custom Enchantments:
+  - All custom nbt of custom enchantments has been reformatted and revamped.
+
+  THIS CHANGE YET TO BE MADE
+  - Some enchantments have received name changes in order to make them easier to understand and differentiate from other effects.
+    - Vicious and Rend have been renamed to Bleeding and Bleed
+    - Overload and Conductive have been renamed to Electrocute and Electrode
+    - Decay and Putrefy have been renamed to Infection and Infect
+    - Committed and Pin Down have been renamed to Exposing and Expose
+    - Vanquisher has been renamed to "Unchanting" ()
+    - Volatile has been renamed to "Explosive"
+
+
+  - Bleeding:
+    - Duration of Bleeding status is always 3 seconds (adding 1 when adding more stacks)
+    - Now increases the number of afflicted stacks by 1 per level. (1/2/3 stacks inflicted)
+
+  - Bleed:
+    - Now inflicts 4 seconds of Bleeding 2 (2 stacks)
+
+  Developer Commentary: Bleeding has felt like a lackluster debuff compared to Shocked, Infection, and the new Cauterize. It was originally intended as a stacked
+  debuff that you applied repeatedly to get bursty high damage DoT. Unfortunately, hitting a mob repeatedly already places it near death, failing to justify a high damage
+  bursty DoT effects. Bleeding served much better as a hit and run effect where you would tag many enemies with stacks and allow the effect to lower their health while you
+  prioritized other enemies or spawners. Bleeding related enchants are receiving the above changes to accent this playstyle. Bleeding (the status effect) is also receiving
+  other changes (see below) to merge the original design into this playstyle.
+
+  TBI
+  - Curse of Regret:
+    - Is now a 15% chance per level to take 2 damage.
+
+  - Electrode:
+    - Duration of Shocked reduced to 4 seconds (from 5 seconds).
+
+  TBI
+  - Evocation:
+    - Levels past the first have an additional 10% chance to activate on non-special attacks. When it does, up to 3 nearby mobs (twice melee range) are struck by fangs.
+      - Non special attack triggers do not take additional cooldown.
+    - Cooldown penalty for special attacks is no longer adjusted.
+
+  - Flash:
+    - Uses time charged on bow rather than arrow velocity for stun chance.
+    - Stun time is now an always constant 1 second.
+    - Bow can be overcharged to increase stun percentage (maxes at 2.5 seconds of draw time)
+    - Now takes 1 second to activate the stun after the arrow lands.
+      - Time is increased to 1.5 seeconds when percentage is maxed.
+
+  - Fire Aspect:
+    - With Custom Enchantments installed, now applies Fire to all enemies hit by a sweep attack.
+    - Duration is fixed to do 4 damage rather than do 4 seconds, rather than only 3 damage thanks to the first invulnerability tick. (At level 1)
+
+  - Frostbite:
+    - No longer applies Slowness. Applies -10% Speed (per level) for 4 seconds instead.
+  
+  Developer Commentary: Reducing the potency of effective CC options ensures players aren't able to make crowds a non-threat.
+
+  - Frost:
+    - No longer applies Slowness. Applies -20% Speed for 4 seconds instead.
+
+  Developer Commentary: Reducing the potency of effective CC options ensures players aren't able to make crowds a non-threat.
+
+  - Pin Down:
+    - Duration of Exposed reduced to 4 seconds (from 5 seconds).
+    - Changed vfx to 1.17 particles.
+  
+  - Point Blank:
+    - Changed vfx to 1.17 particles.
+
+  - Putrefy:
+    - Duration of Infection reduced to 4 seconds (from 5 seconds).
+
+  - Second Wind:
+    - Now inflicts 6/12/18 true damage per tier, no longer inflicts normal damage.
+    - Calculates fractions of damage properly. (Low mob damage, Poison and Wither will no longer bypass resistances.)
+
+  Developer Commentary: Reducing the complexity of the enchant as well as adapting it to current limitations of CDL. Overall, the effect will be the same,
+  as it will just execute the player if the player's health value is too far below the desired tier's amount (same as what it used to do).
+
+Custom Statuses:
+
+  - Bleeding:
+    - When above 5 Stacks (6 or more) Bleeding now does 33% of the mob's maximum health in damage per second.
+    - Bleeding now inflicts 20% Weakness (aka -20% Attack Damage) on the mob, independent of the number of stacks.
+
+  Developer Commentary: Bleeding has been the more lackluster of Cartographer's Custom Statuses. While originally intended to be something that was stacked
+  via many hits to do high damage, it overall has struggled to fit this niche because repeated hits in Minecraft via a weapon often just kill the enemy, failing to
+  justify Bleeding. These changes combined with the changes to Bleeding inflicting effects above will allow for the status to be a very offensively focused effect,
+  keep it's original purpose, but improve it to be on par with other debuffs.
+
+  - Exposed:
+    - Reworked vfx and sfx with 1.17 particles and sounds.
+
+  - Infection:
+    - -% Speed per fraction of health lost decreased to -8% (was -10%)
+    - -% Attack Damage peer fraction of health changed: Automatic -15%, -5% additional for each fraction lost (was -10% per fraction).
+      - "Fraction of health" means >1/2, 1/3-1/2, 1/4-1/3, 1/5-1/4, < 1/5.
+    - Infected enemies lose the debilitation when the effect ends (bugfix).
+
+  Developer Commentary: Infection is an incredibly powerful status effect that does it all. It has the potential to do good group damage, handle crowds,
+  and serve as a solid addition to the Status effect arsenal. That being said, some of the power it has in relation to CC has been reduced with an effort to
+  make CC effects across the board less powerful.
+
+  - Shocked:
+    - Chance to either mini-stun or group knockback reduced to 15% for each event. (30% chance of an event) [Previously was 20% for each, 40% combined]
+    - Reworked sfx and vfx with 1.17 particles. It is now more clear when a mini-stun/knockback event occurs via v/sfx feedback.
+
+  Developer Commentary: Reducing the potency of effective CC options ensures players aren't able to make crowds a non-threat.
+
+  - Stunned:
+    - A mob is now stunned for less time proportional to their Knockback Resistance.
+      - 5% Knockback Resistance grants the mob an innate 5% Stun Duration Reduction.
+        - E.g. A mob with 50% Knockback Resistance that is stunned for 1 second will only be stunned for 0.5 seconds.
+
+  Developer Commentary: Provides a natural born counter to Stunning effects that can be built in on mobs that already exist to be more "unstoppable".
+
+Mob Abilities:
+
+- General: All Mob Abilities that formerly did flat damage now do a percentage of the mob's "Attack Damage" attribute.
+  - Any changes below unless specified otherwise of the format [Damage changed to X%] refer to "X% of the Attack Damage attribute"
+  - Most values have been balanced around an average damage amount of 4. (Meaning abilities will do approximately the same damage they used to do when the mob has 4 attack damage)
+
+- Active Abilities:
+  - Charge:
+    - Damage changed to 250%.
+  
+  - Fireball:
+    - Attack Damage of the mob now changes the explosion size.
+    - Every 8 attack damage increases the explosion size by 1 (up to a size of 4, starting at 1).
+
+  - Disarm:
+    - Damage changed to 50%.
+
+  - Hookshot:
+    - Damage changed to 50%.
+
+  - Laser:
+    - Attack Damage of the mob now changes the explosion size.
+    - Every 12 damage increases the explosion size by 1 (up to a size of 4, starting at 2).
+
+  - Novas:
+    - As mentioned above, nova subsets no longer exist.
+    - Nova now deals damage (and only damage by default) in an AoE around it, marked by a particle zone.
+      - All subsets of old novas can be accessed through the Trait system.
+    - Damage changed to 200%.
+
+  - Magic Missile:
+    - Attack Damage of the mob now changes the projectile damage.
+    - Every 8 attack damage increases the number of firework stars by 2 (aka +3 damage).
+
+  - Smash:
+    - Damage changed to 200%.
+
+  - Sweep:
+    - Damage changed to 150%.
+  
+  - Trapper:
+    - Angle is slightly increased for traps.
+    - Mob now jumps back a slight bit when throwing.
+    - Caltrop radius is now 1.75 blocks (was 1.5)
+    - Caltrops are now 3 second duration.
+    - Caltrop slow is dependent on the Attack Damage stat of the mob.
+      - Every 4 damage is one additional potency of Slowness (starting at 2, maxing at 6)
+
+  - Webshot:
+    - Damage changed to 150%.
+
+- Passives:
+  - Existing traits have been reworked into the new trait system.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Cartographer, June 2021 Patch - Wrath of the Podiatrist
 
 This is the first in a set of optimization and clean up patches. The goal of these series of patches is to re-optimize many sections of the pack
@@ -147,7 +427,7 @@ Custom Enchantments:
     - Repeating will now work with Spectral and Tipped Arrows.
       - Tipped Arrows *always* have priority on additional shot. Spectral comes next, then normals.
       - First arrow follows conventional vanilla priority (arrow in "lowest" inventory slot)
-      - Auto Charge reload will load a copy of the current "next shot" (so if your next shot will be a Poison Arrow, Auto Charge will copy the Poison Arrow instead)
+      - Auto Charge reload will load a copy of the ca.current "next shot" (so if your next shot will be a Poison Arrow, Auto Charge will copy the Poison Arrow instead)
       - All new effects work with Multishot
 
  - Committed:
@@ -296,7 +576,7 @@ Custom Enchantments:
 
   Developer Commentary: Scaling adjusted to work with Sweeping Edge so these two parallel effects are consistent. Additionally, it has been given an additional "grace"
   trigger, and can be activated without sprint hits (but the maximum value is still with sprint hits). As compensation for the easier to use trigger and potential higher damage
-  on larger scaling weapons, its knockback has been reduced.
+  on larger scaling weapons, its ca.knockback has been reduced.
 
  - Splintering:
     - Now deals 3 damage to all hit mobs.
@@ -379,7 +659,7 @@ Mimics:
 
   Mimic:
     - Projectile Damage Resistance reduced from 64% to 48%.
-    - Health regeneration while enraged reduced to 4 (from 6) (every 5 seconds).
+    - Health ca.regeneration while enraged reduced to 4 (from 6) (every 5 seconds).
     - Mimics gain 20% Knockback Resistance while enraged.
     - Mimics now drop a chest ("Mimic Carcass") that is an exact copy of the chest they were posing as.
       - They still drop XP and Mimic Heads.
@@ -393,7 +673,7 @@ Mob Abilities:
     - Abilities that immobilize or root a mob no longer use Slowness and Weakness effects. They now use custom attributes instead.
     - Abilities have either been reformatted to use the movement and damage disable effects, or movement and damage reduction effects.
     - Movement and Damage reduction reduces a mob's damage and movement speed by 50%.
-    - Some abilities can now make mobs temporarily knockback immune.
+    - Some abilities can now make mobs temporarily ca.knockback immune.
     - All Cooldowns are reduced by 20-25% on Hard (and higher) difficulty.
 
  - Token System:
@@ -436,7 +716,7 @@ Active Abilities (now called "Active Skills" in Lexica):
 
  - Disarm:
     - Reworked!
-      - The mob laughs and reduces in speed, damage, and becomes knockback immune.
+      - The mob laughs and reduces in speed, damage, and becomes ca.knockback immune.
       - After 1 second, the mob attacks a small area in front of it. Players hit take 4 damage and are blinded for 1 second.
       - The mob will copy the player's mainhand item and place it into their main hand. (the player's item is not lost or manipulated)
       - The mob will lose Disarm and gain a different ability based on the item they copied.
@@ -454,7 +734,7 @@ Active Abilities (now called "Active Skills" in Lexica):
     - Duplicator now works on every hostile mob.
 
     - Duplicator now reduces the speed and damage of the caster while charging.
-    - Duplicated mobs always have half the current Health of the original mob.
+    - Duplicated mobs always have half the ca.current Health of the original mob.
     - Duplicated mobs now have a lifetime of 18 seconds (was 15).
 
     - Duplicated mobs now copy *all* nbt from the original mob (besides the Duplicator tag)
@@ -605,7 +885,7 @@ Death Effects (now called "Morbid Skills" in the Lexica):
 
   - Spectral:
     - Now spawns 1 of three different types of Spectres.
-      - The Standard Ambushing Shade (the current existing one)
+      - The Standard Ambushing Shade (the ca.current existing one)
       - The Ranged Trapping Poltergeist (Pillager type mob)
       - The Tanky Charging Revenant (Wither Skeleton type mob)
     - All Spectres spawn with reduced movement and damage for 2 seconds.
@@ -621,7 +901,7 @@ Passive Effects:
     - Damage reflected is now 50% of the damage dealt to the mob (was a flat 4)
     - Mob is immediately healed for 50% of the damage dealt (instead of 80% damage reduction)
     - Mob is stunned for 0.5 seconds after reflecting.
-    - Mob has their movement speed and damage reduced by 50% for 2 seconds after reflecting (instead of slower movement and knockback resistance in a reflective stance).
+    - Mob has their movement speed and damage reduced by 50% for 2 seconds after reflecting (instead of slower movement and ca.knockback resistance in a reflective stance).
     - Mob is always equipped with a Reflector Mirror Shield to indicate the effect (in offhand). The shield is cosmetic.
     - Reworked vfx and sfx
 
@@ -755,8 +1035,8 @@ Core:
 - Helper mob damage now takes Absorption into account, and will damage Absorption health first.
 - Helper mob damage now takes Resistance 5 into account, and will not do damage if the mob has it.
 
-- Core has additional push functions for knockback events of varying degrees. These are very complex and hard to use outside of Cartographer (you're welcome to try) at least for now.
-- Used to apply knockback to a couple new things at different amounts.
+- Core has additional push functions for ca.knockback events of varying degrees. These are very complex and hard to use outside of Cartographer (you're welcome to try) at least for now.
+- Used to apply ca.knockback to a couple new things at different amounts.
 - Core now has a "projectile" tag. Currently contains arrows and tridents, and is used to help optimize some functions.
 
 - Cartographer now uses Purple Shulker Boxes for its Shulker Box trick mechanics. This is to help prevent it from causing issues with other mechanics in maps made by other mappers.
@@ -777,7 +1057,7 @@ Custom Enchantments:
   - Current applies "Stunned" to mobs it is carrying.
 
 - Deadeye:
-  - Inflicts small amount of knockback (its hidden version did not)
+  - Inflicts small amount of ca.knockback (its hidden version did not)
 
 - Decay:
   - Now has particle effects for hits.
@@ -789,8 +1069,8 @@ Custom Enchantments:
 - Echo:
   - Reworked!
     - Per level, now stores charges of instant attacks.
-    - When you hit a mob with an echo weapon, decrease 1 charge.
-    - While you have charges, your weapon recharges instantly, and you gain a small amount of knockback resistance.
+    - When you hit a mob with an ca.echo weapon, decrease 1 charge.
+    - While you have charges, your weapon recharges instantly, and you gain a small amount of ca.knockback resistance.
     - Gain charges back when out of combat.
     - Or gain 1 of them back when you kill a mob.
     - Each level of Echo gives +1 charge. Echo I starts at 2 charges (2/3/4 Echo attacks)
@@ -805,7 +1085,7 @@ Custom Enchantments:
   - Damage increased to 3 per level. (Scales 3/6/9/12/15)
   - Radius reduced to 8 (was 10).
   - Radius is now centered around the spawner.
-  - Now inflicts a small amount of knockback.
+  - Now inflicts a small amount of ca.knockback.
   - Now inflicts on hit enchantments when triggered (Fire Aspect, Frostbite, Decay, Overload, Vicious, Committed, Stunning). Thanks ShadowVisions for this suggestion!
   - Improved vfx
 
@@ -813,7 +1093,7 @@ Custom Enchantments:
   - When Evasion triggers, enemies within 8 blocks are blinded for 3 seconds.
   - When Evasion triggers, enemies within 8 blocks are knocked back a short distance.
   - Now features a "bias against expectation" system.
-    - Each failed trigger of evasion raises the chance of it triggering by 5%. (Capping at 30% additional chance)
+    - Each failed trigger of ca.evasion raises the chance of it triggering by 5%. (Capping at 30% additional chance)
     - When Evasion triggers, this counter is reset.
     - You only gain "Evasion Bias" when wearing Evasion gear.
     - This does not increase your Evasion level, it only increases the chance of Evasion successfully triggering over time.
@@ -879,7 +1159,7 @@ Custom Enchantments:
 
 Developer Commentary:
 Adrenaline, Energetic, and Frenzy have all received scaling adjustments to make lower levels feel much more useful.
-Eruption damage has been buffed to make it feel more useful, with a slight nerf to its range, and the introduction of knockback to make
+Eruption damage has been buffed to make it feel more useful, with a slight nerf to its range, and the introduction of ca.knockback to make
 its damage feel more normal.
 Evasion has received multiple changes to help it feel more impactful.
 Second Wind has been given harsher scaling, to prevent it from being powerful when combined with
@@ -986,7 +1266,7 @@ Bug Fixes and Optimizations:
 - Fixed a bug where Conductive and Rend didn't work more than 160 blocks from 0,0.
 - Fixed a bug where Hydraulic left behind permanent marker Armor Stands.
 - Fixed a bug where items that were used or broken with Custom Enchantments still "existed" on the player, providing their effects.
-- Fixed a bug where custom damage effects did less damage to Wither Skeletons and did not make the damage flash.
+- Fixed a bug where custom damage effects did less damage to Wither Skeletons and did not make the damage ca.flash.
 - Fixed a bug where multiplayer token systems could cause more than 1 ability to activate at a time.
 
 - About 60 or 70% of the @e calls have been removed from the pack. (Ballparking ~200 separate calls)
@@ -1002,7 +1282,7 @@ Version Beta 1.1 - The Shock and Awe Update (yeah I'm gonna give updates cutesy 
 As an overview, this new version boasts:
 + Almost double the Custom Enchantments on original 1.0 launch. This includes new Trident enchants, new Bow enchants, and more!
 + Multiple new mob abilities to test your mettle against. Soulfire Novas, Fireballs, Traps, and more!
-+ Custom Statuses is now an official supported module, with a current total of 6 custom status debuffs that can be applied to mobs!
++ Custom Statuses is now an official supported module, with a ca.current total of 6 custom status debuffs that can be applied to mobs!
 + New Enchantments that utilize the mechanics of Custom Statuses.
 + Handbooks for all modules, not just Custom Enchantments!
 + Bugs, there will probably be bugs too. But I've got the bug spray ready.

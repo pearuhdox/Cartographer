@@ -5,4 +5,4 @@ execute as @a[distance=..16] at @s run playsound minecraft:ambient.crimson_fores
 particle minecraft:cloud ~ ~0.25 ~ 0 0 0 0.1 1 force
 particle minecraft:cloud ~ ~0.25 ~ 0 0 0 0.1 1 force
 
-scoreboard players remove @s effect_cloaked 1
+scoreboard players remove @s ca.effect_cloak 1

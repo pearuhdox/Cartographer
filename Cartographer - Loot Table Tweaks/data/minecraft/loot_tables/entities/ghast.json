@@ -10,7 +10,7 @@
         }
       ]
     },
-{
+    {
       "rolls": 1,
       "entries": [
         {
@@ -117,16 +117,16 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 2.0,
+                "min": 0,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             },
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],

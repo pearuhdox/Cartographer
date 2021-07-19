@@ -3,7 +3,7 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @s helper_raycast 13
+scoreboard players set @s ca.raycast 13
 
 scoreboard players set @s mob_move_dis 35
 scoreboard players set @s mob_atk_dis 35
@@ -15,6 +15,8 @@ playsound minecraft:block.iron_door.close hostile @a[distance=..16] ~ ~ ~ 2 0.5
 scoreboard players add $master hook_id 1
 
 scoreboard players operation @s hook_id = $master hook_id
+
+function cartographer_mob_abilities:abilities/hookshot/calc_damage
 
 execute positioned ^ ^0.75 ^1.5 run summon armor_stand ~ ~ ~ {NoGravity:1b,ShowArms:0b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["hook_projectile"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-639877664,1727545686,-2004029853,-632720288],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1MjNlMTVlOTk4NjM1NWExZjg1MWY0M2Y3NTBlZTNmMjNjODlhZTEyMzYzMWRhMjQxZjg3MmJhN2E3ODEifX19"}]}}}}]}
 
@@ -29,5 +31,3 @@ tag @s remove tokened
 tag @s remove can_see_player
 
 kill @e[type=armor_stand,tag=hook_marker,sort=nearest,limit=1]
-
-schedule function cartographer_mob_abilities:helper/attacked_reset 10t

@@ -30,6 +30,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/auto_charge"
-      },
+    },
     "parent": "cartographer_custom_enchantments:ranged_tree"
 }

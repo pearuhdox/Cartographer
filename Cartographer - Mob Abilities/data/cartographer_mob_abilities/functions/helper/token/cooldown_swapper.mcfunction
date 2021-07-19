@@ -13,7 +13,7 @@ execute if score @s cooldown matches -100 if score $token_type helper_tokens mat
 
 execute if score @s cooldown matches -100 run data modify storage suso:pldata working_data.Tokens.CurrentCooling set value {}
 
-#Grab the next token off the cooldown stack. Set it to the cooldown score. Save it to current cooling space.
+#Grab the next token off the cooldown stack. Set it to the cooldown score. Save it to ca.current cooling space.
 scoreboard players set @s cooldown -1
 execute store result score @s cooldown if data storage suso:pldata working_data.Tokens.CooldownTokens[0].Cooldown run data get storage suso:pldata working_data.Tokens.CooldownTokens[0].Cooldown
 

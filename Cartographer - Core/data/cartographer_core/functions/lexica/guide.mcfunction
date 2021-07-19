@@ -7,7 +7,7 @@ playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
 execute as @s run function cartographer_core:load/spacer
 
-scoreboard players enable @s lexica_trig
+scoreboard players enable @s ca.lexica_trig
 
 tellraw @s [{"text":"❰","color":"green","bold":true},{"text":"⊰ Lexica Cartographia ⊱","color":"#ACFFA6","bold":true},{"text":"❱","color":"green","bold":true},{"text":"---------------------------","color":"#ACFFA6","bold":true}]
 tellraw @s {"text":"Your comprehensive guide to foreign facts.","color":"#ACFFA6","bold":false,"italic":true}

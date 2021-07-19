@@ -1,4 +1,4 @@
-scoreboard players set @s helper_lifetime 1
+scoreboard players set @s ca.lifetime 1
 
 execute as @s store result score @s ca.ce.true_x run data get entity @s Motion[0] 1000
 execute as @s store result score @s ca.ce.true_y run data get entity @s Motion[1] 1000

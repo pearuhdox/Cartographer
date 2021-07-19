@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/quiver"
-      },
+    },
     "parent": "cartographer_mob_abilities:permacloak"
 }

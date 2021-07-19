@@ -4,7 +4,7 @@
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "item": {
-          "nbt": "{Infinity:1}"
+          "nbt": "{CustomEnchantments:[{id:\"infinity\",lvl:1b}]}"
         }
       }
     },
@@ -12,7 +12,7 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "nbt": "{Infinity:1}"
+          "nbt": "{CustomEnchantments:[{id:\"infinity\",lvl:1b}]}"
         }
       }
     }

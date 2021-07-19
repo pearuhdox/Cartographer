@@ -10,7 +10,7 @@
         }
       ]
     },
-{
+    {
       "rolls": 1,
       "entries": [
         {
@@ -30,8 +30,8 @@
     },
     {
       "rolls": {
-        "min": 1.0,
-        "max": 3.0,
+        "min": 1,
+        "max": 3,
         "type": "minecraft:uniform"
       },
       "entries": [
@@ -41,16 +41,16 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 2.0,
+                "min": 0,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             },
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -62,16 +62,16 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 2.0,
+                "min": 0,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             },
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -83,16 +83,16 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 2.0,
+                "min": 0,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             },
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -104,16 +104,16 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 2.0,
+                "min": 0,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             },
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -125,16 +125,16 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 2.0,
+                "min": 0,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             },
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -146,16 +146,16 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 2.0,
+                "min": 0,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             },
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -168,16 +168,16 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 2.0,
+                "min": 0,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             },
             {
               "function": "minecraft:looting_enchant",
               "count": {
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],

@@ -1,53 +1,54 @@
 #Adrenaline
-function cartographer_custom_enchantments:enchant_effects/adrenaline
+execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/adrenaline
 #Auto Charge
-function cartographer_custom_enchantments:enchant_effects/auto_charge
+execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/auto_charge
 #Energetic
-function cartographer_custom_enchantments:enchant_effects/energetic
-#Evocation
-function cartographer_custom_enchantments:enchant_effects/evocation
+execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/energetic
 #Frenzy
-function cartographer_custom_enchantments:enchant_effects/frenzy
+execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy
 #Lifesteal
-function cartographer_custom_enchantments:enchant_effects/lifesteal
+execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal
+
+#Concealed Consume
+execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.concealed=1..}] run function cartographer_custom_enchantments:enchant_effects/concealed/consume
 
 #Committed
-function cartographer_custom_enchantments:enchant_effects/committed
-#Concealed Consume
-execute if entity @s[scores={concealed=1..}] run function cartographer_custom_enchantments:enchant_effects/concealed/consume
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/committed
 #Decay
-function cartographer_custom_enchantments:enchant_effects/decay
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/decay
 #Duelist
-function cartographer_custom_enchantments:enchant_effects/duelist
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/duelist
 #Echo
-function cartographer_custom_enchantments:enchant_effects/echo
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/echo
+#Evocation
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/evocation
 #Executioner
-function cartographer_custom_enchantments:enchant_effects/executioner
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner
 #Frostbite
-function cartographer_custom_enchantments:enchant_effects/frostbite
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite
 #Hunter
-function cartographer_custom_enchantments:enchant_effects/hunter
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/hunter
 #Overload
-function cartographer_custom_enchantments:enchant_effects/overload
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/overload
 #Surging Strike
-function cartographer_custom_enchantments:enchant_effects/surging_strike
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/surging_strike
 #Stunning
-function cartographer_custom_enchantments:enchant_effects/stunning
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/stunning
 #Transfiguration
-function cartographer_custom_enchantments:enchant_effects/transfiguration
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/transfiguration
 #Vicious
-function cartographer_custom_enchantments:enchant_effects/vicious
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/vicious
 #Vanquisher
-function cartographer_custom_enchantments:enchant_effects/vanquisher
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/vanquisher
 
 #Rally - Can trigger on any type of attack.
-execute if entity @s[scores={ca.atk_time=0}] run function cartographer_custom_enchantments:enchant_effects/rally/restore_health
+execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.atk_time=0}] run function cartographer_custom_enchantments:enchant_effects/rally/restore_health
 
 #Echo Charge Restore
 function cartographer_custom_enchantments:enchant_effects/echo_restore
 
 #Concealed Restore
-function cartographer_custom_enchantments:enchant_effects/concealed/restore
+execute if score $cu_en_passive ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/concealed/restore
 
 #Call Invul Timer for Mob Abilities
 scoreboard players set $invul_time_check invul 25

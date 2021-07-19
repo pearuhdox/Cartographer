@@ -1,0 +1,11 @@
+{
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "player": {
+            "recipes": {
+              "cartographer_core:lexica_dummy": true
+            }
+          }
+        }
+      }

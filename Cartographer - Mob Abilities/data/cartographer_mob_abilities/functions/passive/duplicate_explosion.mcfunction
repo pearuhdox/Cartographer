@@ -1,5 +1,5 @@
-scoreboard players set @a[distance=..2] damage_queue 4
-execute as @a[distance=..2] at @s run function cartographer_core:helper/hurt_player/by_score
+scoreboard players set @a[distance=..2] cdl.Damage_Queue 4
+execute as @a[distance=..2] at @s run function cd:lib/player/damage/normal
 execute as @e[type=#cartographer_core:hostile,distance=..2] at @s run function cartographer_mob_abilities:passive/duplicate_explosion_mob 
 
 playsound minecraft:entity.generic.explode hostile @a[distance=..12] ~ ~ ~ 1 2

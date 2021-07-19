@@ -5,14 +5,14 @@ execute as @s[tag=magic_missile_projectile] at @s run function cartographer_mob_
 execute as @s[tag=fireball_projectile] at @s run function cartographer_mob_abilities:abilities/fireball/projectile
 
 #Trap Projectile
-execute as @s[tag=trap_projectile] at @s run function cartographer_mob_abilities:abilities/trapper_projectile
+execute as @s[tag=trap_projectile] at @s run function cartographer_mob_abilities:abilities/trapper/projectile
 
 #Hook Projectile
 execute as @s[tag=hook_projectile] at @s run function cartographer_mob_abilities:abilities/hookshot/projectile
-scoreboard players add @s[tag=hook_projectile] helper_lifetime 1
+scoreboard players add @s[tag=hook_projectile] ca.lifetime 1
 
 #Wither Storm Blasts
-execute if entity @s[tag=wither_blast] run function cartographer_mob_abilities:abilities/wither_storm_blasts
+execute if entity @s[tag=wither_blast] run function cartographer_mob_abilities:abilities/wither_storm/blasts
 
 #Exalted Souls
 execute if entity @s[tag=exalted_soul_stand] run function cartographer_mob_abilities:passive/exalted_soul

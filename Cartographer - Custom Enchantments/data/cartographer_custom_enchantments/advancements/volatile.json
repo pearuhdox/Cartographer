@@ -35,6 +35,6 @@
     ],
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/volatile"
-      },
+    },
     "parent": "cartographer_custom_enchantments:trueshot"
 }

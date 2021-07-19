@@ -1,3 +1,0 @@
-execute if score damage= damage_queue matches ..5 run function cartographer_core:helper/hurt_player/true_damage/damage_intervals/1-5
-execute if score damage= damage_queue matches 06..10 run function cartographer_core:helper/hurt_player/true_damage/damage_intervals/6-10
-execute if score damage= damage_queue matches 11..15 run function cartographer_core:helper/hurt_player/true_damage/damage_intervals/11-15

@@ -1,6 +1,4 @@
 #gamerule sendCommandFeedback false
-##schedule function cartographer_core:load/fix_gamerules 2t
-##schedule function cartographer_core:load/gamerule_states 3t
 
 execute as @p at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.5 2
 

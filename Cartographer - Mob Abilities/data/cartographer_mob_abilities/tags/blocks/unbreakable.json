@@ -1,15 +1,15 @@
 {
-  "values":[
-	"minecraft:bedrock",
-	"minecraft:command_block",
-	"minecraft:chain_command_block",
-	"minecraft:repeating_command_block",
-	"minecraft:structure_block",
-	"minecraft:structure_void",
-	"minecraft:barrier",
-    "minecraft:obsidian",
-	"minecraft:water",
-	"minecraft:spawner",
-    "minecraft:chest"
-  ]
+	"values": [
+		"minecraft:bedrock",
+		"minecraft:command_block",
+		"minecraft:chain_command_block",
+		"minecraft:repeating_command_block",
+		"minecraft:structure_block",
+		"minecraft:structure_void",
+		"minecraft:barrier",
+		"minecraft:obsidian",
+		"minecraft:water",
+		"minecraft:spawner",
+		"minecraft:chest"
+	]
 }

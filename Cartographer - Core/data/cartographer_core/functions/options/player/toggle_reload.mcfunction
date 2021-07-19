@@ -13,6 +13,6 @@ execute if score @s ca.reload_type matches 0 run title @s actionbar [{"text":"[P
 execute if score @s ca.reload_type matches 1 run title @s actionbar [{"text":"[Player] Reload Message ","color":"aqua","italic":false},{"text":"set to ","color":"#FFE0A3","italic":false},{"text":"DEFAULT","color":"yellow","italic":false}]
 execute if score @s ca.reload_type matches 2 run title @s actionbar [{"text":"[Player] Reload Message ","color":"aqua","italic":false},{"text":"set to ","color":"#FFE0A3","italic":false},{"text":"MINIMAL","color":"yellow","italic":false}]
 
-scoreboard players enable @s options_trig
+scoreboard players enable @s ca.options_trig
 function cartographer_core:options/player/branch
 

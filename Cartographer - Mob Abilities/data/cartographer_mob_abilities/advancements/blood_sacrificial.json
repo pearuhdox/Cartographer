@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/sacrificial_blood"
-      },
+    },
     "parent": "cartographer_mob_abilities:blood_relentless"
 }

@@ -12,6 +12,11 @@ playsound minecraft:entity.blaze.hurt hostile @a[distance=..32] ~ ~ ~ 4 0.5
 
 execute positioned ~ ~3 ~ run summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"text":"Dinnerbone"}',NoGravity:1b,ShowArms:0b,Marker:0b,Invisible:1b,NoBasePlate:1b,Tags:["fireball_projectile"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;1185639029,1846363053,-1787704507,813969860],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDUwMDI5MmY0YWZlNTJkMTBmMjk5ZGZiMjYwMzYzMjI4MzA0NTAzMzFlMDAzMDg0YmIyMjAzMzM1MzA2NjRlMSJ9fX0="}]}}}}]}
 
+execute store result score @s ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+
+scoreboard players operation @e[tag=fireball_projectile,sort=nearest,tag=!checked,limit=1] ca.ability_dmg = @s ca.ability_dmg
+tag @e[tag=fireball_projectile,sort=nearest,tag=!checked,limit=1] add checked
+
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking

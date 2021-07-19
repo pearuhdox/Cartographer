@@ -1,7 +1,7 @@
 
-scoreboard players operation @s heal_queue = $sw_abs_check second_wind
+scoreboard players operation @s cdl.Heal_Queue = $sw_abs_check ca.second_wind
 
-function cartographer_core:helper/heal_player/by_score
+function cd:lib/player/heal
 
 effect clear @s absorption
 
@@ -12,4 +12,4 @@ playsound minecraft:block.respawn_anchor.charge player @s ~ ~ ~ 0.6 0.5
 tag @s remove mortal_coil
 tag @s add fatal_protection
 
-scoreboard players set @s[scores={second_wind_time=1..}] second_wind_time 0
+scoreboard players set @s[scores={ca.sw_time=1..}] ca.sw_time 0

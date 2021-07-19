@@ -134,6 +134,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/sapper"
-      },
+    },
     "parent": "cartographer_custom_enchantments:eruption"
 }

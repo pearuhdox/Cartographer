@@ -28,6 +28,6 @@
     },
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/fireball"
-      },
+    },
     "parent": "cartographer_mob_abilities:duplicator"
 }

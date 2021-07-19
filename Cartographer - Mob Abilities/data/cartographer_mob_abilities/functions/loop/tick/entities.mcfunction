@@ -23,5 +23,21 @@ execute if entity @s[tag=has_active] run function cartographer_mob_abilities:loo
 execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust 1 0 0 0.7 ~ ~1 ~ 0.3 0.5 0.3 0 2 normal
 execute if entity @s[scores={augment_time=1..}] run particle minecraft:flame ~ ~1 ~ 0.2 0.2 0.2 0.05 1 normal
 
+<<<<<<< Updated upstream
+=======
+#Run Reflection per Tick
+execute if entity @s[tag=reflect_melee] run function cartographer_mob_abilities:loop/tick/reflect/melee
+execute if entity @s[tag=reflect_ranged] run function cartographer_mob_abilities:loop/tick/reflect/ranged
+
+#Run Aftershock time reduction
+execute if entity @s[scores={ca.aftershock=1..}] run function cartographer_mob_abilities:ability_traits/aftershock/windup
+
+#Run Carapaces
+execute as @s[tag=carapaced] at @s run function cartographer_mob_abilities:ability_traits/carapace/carapaced
+
+#Run Creation
+execute as @s[tag=ca.creation,tag=!created] at @s run function cartographer_mob_abilities:ability_traits/creation/effect
+
+>>>>>>> Stashed changes
 #Setup Exalted
 execute if entity @s[tag=!setup,tag=exalted] run function cartographer_mob_abilities:passive/exalted_setup

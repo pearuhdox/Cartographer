@@ -1,4 +1,5 @@
-effect give @s slowness 5 1
+scoreboard players set @s ca.frost_tier 2
+scoreboard players set @s ca.frost_time 81
 
 tag @s[type=#cartographer_core:hostile,tag=is_frost] remove is_frost
 

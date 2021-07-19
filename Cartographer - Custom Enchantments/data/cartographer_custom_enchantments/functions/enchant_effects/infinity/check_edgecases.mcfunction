@@ -1,2 +1,2 @@
-execute store success score $temp i.var run tag @e[type=#cartographer_custom_enchantments:infinity_edgecase,tag=!i.edgecase_checked,distance=..10,nbt={Item:{tag:{Infinity:1}}}] add i.edgecase_checked
-execute if score $temp i.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/infinity/restore
+execute store success score $temp ca.inf_var run tag @e[type=#cartographer_custom_enchantments:infinity_edgecase,tag=!i.edgecase_checked,distance=..10,nbt={Item:{tag:{CustomEnchantments:[{id:"infinity",lvl:1b}]}}}] add i.edgecase_checked
+execute if score $temp ca.inf_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/infinity/restore

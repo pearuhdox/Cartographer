@@ -30,6 +30,6 @@
     },
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/trueshot"
-      },
+    },
     "parent": "cartographer_custom_enchantments:tempo_theft"
 }
