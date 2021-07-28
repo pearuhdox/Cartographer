@@ -36,5 +36,8 @@ execute as @s[tag=carapaced] at @s run function cartographer_mob_abilities:abili
 #Run Creation
 execute as @s[tag=ca.creation,tag=!created] at @s run function cartographer_mob_abilities:ability_traits/creation/effect
 
+#Run Horrify Tether on Tethers
+execute as @s[type=marker,tag=horrify_tether] at @s run function cartographer_mob_abilities:ability_traits/horrifying/tether_tick
+
 #Setup Exalted
 execute if entity @s[tag=!setup,tag=exalted] run function cartographer_mob_abilities:passive/exalted_setup

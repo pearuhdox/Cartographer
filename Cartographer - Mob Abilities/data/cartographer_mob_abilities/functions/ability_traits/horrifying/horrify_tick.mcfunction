@@ -1,3 +1,5 @@
+execute if score @s ca.horrified matches 111.. anchored eyes facing entity @e[type=#cartographer_core:hostile,tag=ca.horrifying,sort=nearest,limit=1,distance=..16] eyes positioned ^ ^ ^0.5 rotated as @s positioned ^ ^ ^1 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ~ ~ ~ ~ ~
+
 execute if score @s ca.horrified matches 101.. run attribute @s minecraft:generic.movement_speed modifier add 31-1310-8151-7171-51700 "horrified" -0.5 multiply
 execute if score @s ca.horrified matches 101.. run attribute @s minecraft:generic.attack_speed modifier add 31-1310-8151-7171-51700 "horrified" -0.5 multiply
 execute if score @s ca.horrified matches 101.. run attribute @s minecraft:generic.armor modifier add 31-1310-8151-7171-51700 "horrified" -0.5 multiply
@@ -142,8 +144,6 @@ execute if score @s ca.horrified matches 6 run attribute @s minecraft:generic.ar
 execute if score @s ca.horrified matches 0..2 run attribute @s minecraft:generic.movement_speed modifier remove 31-1310-8151-7171-51700
 execute if score @s ca.horrified matches 0..2 run attribute @s minecraft:generic.attack_speed modifier remove 31-1310-8151-7171-51700
 execute if score @s ca.horrified matches 0..2 run attribute @s minecraft:generic.armor modifier remove 31-1310-8151-7171-51700
-
-
 
 particle minecraft:dust_color_transition 1 0 1 1 0 0 1 ~ ~0.2 ~ 0.3 0.1 0.3 0 2 normal
 
