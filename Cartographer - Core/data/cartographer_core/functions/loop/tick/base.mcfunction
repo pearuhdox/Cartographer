@@ -12,12 +12,14 @@ scoreboard players enable @a lexica
 scoreboard players enable @a menu
 
 #Check if the player used a lexica in creative
-execute as @a[gamemode=!creative] at @s if score @s ca.use_lex matches 1.. if score @s ca.lexica_sneak matches 1.. run function cartographer_core:options/intercept
-execute as @a[gamemode=!creative] at @s if score @s ca.use_lex matches 1.. if score @s ca.lexica_sneak matches 0 run function cartographer_core:lexica/manual
-execute as @a[gamemode=!creative] at @s if score @s ca.use_lex matches 1.. run scoreboard players set @s ca.use_lex 0
+execute as @a[gamemode=!creative,tag=used_lexica] at @s if score @s ca.use_lex matches 1.. if score @s ca.lexica_sneak matches 1.. run function cartographer_core:options/intercept
+execute as @a[gamemode=!creative,tag=used_lexica] at @s if score @s ca.use_lex matches 1.. if score @s ca.lexica_sneak matches 0 run function cartographer_core:lexica/manual
+execute as @a[gamemode=!creative,tag=used_lexica] at @s if score @s ca.use_lex matches 1.. run scoreboard players set @s ca.use_lex 0
 
-execute as @a[gamemode=creative] at @s if score @s ca.use_lex matches 1.. if score @s ca.lexica_count matches 1.. if score @s ca.lexica_sneak matches 1.. run function cartographer_core:options/intercept
-execute as @a[gamemode=creative] at @s if score @s ca.use_lex matches 1.. if score @s ca.lexica_count matches 1.. if score @s ca.lexica_sneak matches 0 run function cartographer_core:lexica/manual
+tag @a remove used_lexica
+
+execute as @a[gamemode=creative] at @s if score @s ca.use_lex matches 1.. if score @s[predicate=cartographer_core:holding_lexica] ca.lexica_count matches 1.. if score @s ca.lexica_sneak matches 1.. run function cartographer_core:options/intercept
+execute as @a[gamemode=creative] at @s if score @s ca.use_lex matches 1.. if score @s[predicate=cartographer_core:holding_lexica] ca.lexica_count matches 1.. if score @s ca.lexica_sneak matches 0 run function cartographer_core:lexica/manual
 execute as @a[gamemode=creative] at @s if score @s ca.use_lex matches 1.. run scoreboard players set @s ca.use_lex 0
 
 #Test if triggers are activated.
