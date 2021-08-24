@@ -25,7 +25,7 @@ execute if score @s[tag=corpse_crawler_egg] ca.lifetime matches 41.. run playsou
 execute if score @s ca.lifetime matches 41.. run kill @e[type=sheep,tag=corpse_crawler_egg_hitbox,sort=nearest,limit=1,distance=..1]
 execute if score @s ca.lifetime matches 41.. run kill @s
 
-execute unless entity @e[distance=..1,type=sheep,tag=corpse_crawler_egg_hitbox] run function cartographer_mob_abilities:passive/corpse_crawler_despawn
+execute unless entity @e[distance=..1,type=sheep,tag=corpse_crawler_egg_hitbox] run function cartographer_mob_abilities:passive/corpse_crawler/despawn
 
 
 scoreboard players add @s ca.lifetime 1

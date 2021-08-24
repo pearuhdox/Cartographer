@@ -39,6 +39,8 @@ scoreboard objectives add ca.evocate_time dummy
 
 scoreboard objectives add ca.touch_check dummy
 
+scoreboard objectives add ca.skin_timer dummy
+
 #Setup all necessary helper scoreboards.
 
 scoreboard objectives add ca.raycast dummy

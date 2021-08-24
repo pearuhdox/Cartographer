@@ -10,13 +10,13 @@ execute if data storage ca.death Data.DuplicateDeath at @s run function cartogra
 execute if data storage ca.death Data.PartingGift at @s run function cartographer_mob_abilities:passive/parting_gift
 
 #Corpse Crawler
-execute if data storage ca.death Data.CorpseCrawler at @s run function cartographer_mob_abilities:passive/corpse_crawler
-execute if data storage ca.death Data.CorpseCrawlerBee at @s run function cartographer_mob_abilities:passive/corpse_crawler_bee
-execute if data storage ca.death Data.CorpseCrawlerDrowned at @s run function cartographer_mob_abilities:passive/corpse_crawler_drowned
-execute if data storage ca.death Data.CorpseCrawlerHusk at @s run function cartographer_mob_abilities:passive/corpse_crawler_husk
-execute if data storage ca.death Data.CorpseCrawlerPiglin at @s run function cartographer_mob_abilities:passive/corpse_crawler_piglin
-execute if data storage ca.death Data.CorpseCrawlerZoglin at @s run function cartographer_mob_abilities:passive/corpse_crawler_zoglin
-execute if data storage ca.death Data.CorpseCrawlerSpider at @s run function cartographer_mob_abilities:passive/corpse_crawler_spider
+execute if data storage ca.death Data.CorpseCrawler at @s run function cartographer_mob_abilities:passive/corpse_crawler/zombie
+execute if data storage ca.death Data.CorpseCrawlerBee at @s run function cartographer_mob_abilities:passive/corpse_crawler/bee
+execute if data storage ca.death Data.CorpseCrawlerDrowned at @s run function cartographer_mob_abilities:passive/corpse_crawler/drowned
+execute if data storage ca.death Data.CorpseCrawlerHusk at @s run function cartographer_mob_abilities:passive/corpse_crawler/husk
+execute if data storage ca.death Data.CorpseCrawlerPiglin at @s run function cartographer_mob_abilities:passive/corpse_crawler/piglin
+execute if data storage ca.death Data.CorpseCrawlerZoglin at @s run function cartographer_mob_abilities:passive/corpse_crawler/zoglin
+execute if data storage ca.death Data.CorpseCrawlerSpider at @s run function cartographer_mob_abilities:passive/corpse_crawler/spider
 #Exalted
 execute if data storage ca.death Data.Exalted at @s run function cartographer_mob_abilities:passive/exalted
 

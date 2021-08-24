@@ -93,6 +93,11 @@ execute as @a at @s if score @s ca.lexica_trig matches 1.. run function cartogra
 execute as @a unless score @s ca.options_trig matches 1.. run scoreboard players set @s ca.options_trig 0
 execute as @a at @s if score @s ca.options_trig matches 1.. run function cartographer_core:options/player/trigger
 
+#Do Checks for Player created projectiles.
+execute as @a[scores={ca.shoot_bow=1..}] at @s run function cartographer_core:helper/tag_player_projectile
+execute as @a[scores={ca.shoot_cross=1..}] at @s run function cartographer_core:helper/tag_player_projectile
+execute as @a[scores={ca.throw_trident=1..}] at @s run function cartographer_core:helper/tag_player_projectile
+
 #Run all ticking entity effects.
 execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/tick
 

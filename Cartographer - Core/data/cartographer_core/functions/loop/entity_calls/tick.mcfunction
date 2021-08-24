@@ -1,8 +1,12 @@
+
 #Run Placed Lexica Effects
 execute if entity @s[type=armor_stand,tag=placed_lexica] run function cartographer_core:lexica/placed
 
 #Run Custom Enchantments Effects
 execute if score $custom_enchantments ca.installed matches 1.. if entity @s[type=#cartographer_core:tracked_for_ce] run function cartographer_custom_enchantments:loop/tick/entity_branch
+
+#Projectile Lifetime Scores - Do this here
+execute if entity @s[type=#cartographer_core:projectile] run scoreboard players add @s ca.lifetime 1
 
 #Run Custom Statuses Effects
 execute if score $custom_statuses ca.installed matches 1.. if entity @s[type=#cartographer_core:hostile] run function cartographer_custom_statuses:loop/tick/entities

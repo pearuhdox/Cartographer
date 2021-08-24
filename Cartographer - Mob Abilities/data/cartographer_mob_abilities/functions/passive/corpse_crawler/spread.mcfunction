@@ -30,4 +30,4 @@ execute positioned ~ 0 ~ if entity @s[distance=233..240] at @s run spreadplayers
 execute positioned ~ 0 ~ if entity @s[distance=241..248] at @s run spreadplayers ~ ~ 0 2 under 250 false @s
 execute positioned ~ 0 ~ if entity @s[distance=249..256] at @s run spreadplayers ~ ~ 0 2 under 258 false @s
 
-schedule function cartographer_mob_abilities:passive/corpse_crawler_push 1t
+schedule function cartographer_mob_abilities:passive/corpse_crawler/push 1t

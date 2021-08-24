@@ -39,5 +39,28 @@ execute as @s[tag=ca.creation,tag=!created] at @s run function cartographer_mob_
 #Run Horrify Tether on Tethers
 execute as @s[type=marker,tag=horrify_tether] at @s run function cartographer_mob_abilities:ability_traits/horrifying/tether_tick
 
+#Run Skin timers for skin entities
+execute as @s[tag=ca.fireskin] at @s run function cartographer_mob_abilities:passive/skin/timer
+execute as @s[tag=ca.gillyskin] at @s run function cartographer_mob_abilities:passive/skin/timer
+execute as @s[tag=ca.scaleskin] at @s run function cartographer_mob_abilities:passive/skin/timer
+execute as @s[tag=ca.scaleskin_2] at @s run function cartographer_mob_abilities:passive/skin/timer
+execute as @s[tag=ca.scaleskin_3] at @s run function cartographer_mob_abilities:passive/skin/timer
+execute as @s[tag=ca.shimmerskin] at @s run function cartographer_mob_abilities:passive/skin/timer
+execute as @s[tag=ca.shroudskin] at @s run function cartographer_mob_abilities:passive/skin/timer
+
+#Run Projectile Replace Passives
+execute as @s[tag=ca.shoot_fire_charge] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[tag=ca.shoot_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[tag=ca.shoot_wither_skull] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[tag=ca.shoot_dragon_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[tag=ca.shoot_shulker_bullet] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[tag=ca.shoot_pufferfish] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+
+#Run Projectile Wither Skull/Dragon Fireball Fix This is Dumb
+execute as @s[tag=passive_fire_charge] at @s run function cartographer_mob_abilities:passive/projectile/fix_projectile
+execute as @s[tag=passive_fireball] at @s run function cartographer_mob_abilities:passive/projectile/fix_projectile
+execute as @s[tag=passive_wither_skull] at @s run function cartographer_mob_abilities:passive/projectile/fix_projectile
+execute as @s[tag=passive_dragon_fireball] at @s run function cartographer_mob_abilities:passive/projectile/fix_projectile
+
 #Setup Exalted
 execute if entity @s[tag=!setup,tag=exalted] run function cartographer_mob_abilities:passive/exalted_setup

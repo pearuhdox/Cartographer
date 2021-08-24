@@ -58,6 +58,10 @@ scoreboard objectives add ca.is_use_ee dummy
 scoreboard objectives add ca.is_hold_shi dummy
 scoreboard objectives add ca.is_hold_tri dummy
 
+scoreboard objectives add ca.shoot_bow minecraft.used:minecraft.bow
+scoreboard objectives add ca.shoot_cross minecraft.used:minecraft.crossbow
+scoreboard objectives add ca.throw_trident minecraft.used:minecraft.trident
+
 #Create raycast score
 scoreboard objectives add ca.raycast dummy
 
