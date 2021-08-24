@@ -3,6 +3,18 @@ Cartographer is a collection of datapacks for Minecraft 1.17.1 that add custom e
 
 Each folder above is a separate datapack which can be dropped into a Minecraft world's "datapack" folder. Once placed inside the datapack folder, and the world has been reloaded, they will add new features to the game.
 
+## Libraries
+
+Cartographer uses a couple different libraries produced by myself and other talented individuals. For your convenience, the Cartographer download includes slightly modified versions of each that allow the pack's reload message to display that they are installed. You are free to use the versions of these libraries provided as is from the other creators directly. Cartographer makes no functional changes to any of these packs.
+
+**Player Data Storage** by Suso (https://github.com/5uso/Player-Data-Storage) - Stores custom nbt data for players.
+
+**Entity ID and Hit Detection System (aka ehid)** by gibbsly (https://github.com/gibbsly/ehid) - Detects when entities and players hit each other.
+
+**Custom Damage Library (aka CDL)** by RockNRed, PearUhDox, and gibbsly (https://github.com/RockNRui/Common-Damage-Library) - Deals custom damage and healing of varying types via function calls (to players and mobs)
+
+Cartographer also features a library called "Core" which schedules and runs all other Datapacks in the collection. Core is the only library which cannot be found outside of Cartographer.
+
 ## Modules
 
 **Custom Enchantments** - An addition of over 50 new Enchantments that can be added to weapons, tools, and armor.
