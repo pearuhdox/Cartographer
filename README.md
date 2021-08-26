@@ -1,17 +1,29 @@
 # Cartographer
-Cartographer is a collection of datapacks for Minecraft 1.16 that add custom enchantments, mob attacks, and more, for use in CTM maps.
+Cartographer is a collection of datapacks for Minecraft 1.17.1 that add custom enchantments, mob attacks, and more, for use in CTM maps.
 
 Each folder above is a separate datapack which can be dropped into a Minecraft world's "datapack" folder. Once placed inside the datapack folder, and the world has been reloaded, they will add new features to the game.
 
+## Libraries
+
+Cartographer uses a couple different libraries produced by myself and other talented individuals. For your convenience, the Cartographer download includes slightly modified versions of each that allow the pack's reload message to display that they are installed. You are free to use the versions of these libraries provided as is from the other creators directly. Cartographer makes no functional changes to any of these packs.
+
+**Player Data Storage** by Suso (https://github.com/5uso/Player-Data-Storage) - Stores custom nbt data for players.
+
+**Entity ID and Hit Detection System (aka ehid)** by gibbsly (https://github.com/gibbsly/ehid) - Detects when entities and players hit each other.
+
+**Custom Damage Library (aka CDL)** by RockNRed, PearUhDox, and gibbsly (https://github.com/RockNRui/Common-Damage-Library) - Deals custom damage and healing of varying types via function calls (to players and mobs)
+
+Cartographer also features a library called "Core" which schedules and runs all other Datapacks in the collection. Core is the only library which cannot be found outside of Cartographer.
+
 ## Modules
 
-**Custom Enchantments** - An addition of over 20 new Enchantments that can be added to weapons, tools, and armor.
+**Custom Enchantments** - An addition of over 50 new Enchantments that can be added to weapons, tools, and armor.
 
-**Custom Statuses** - Additional status effects which can be used on mobs. Currently unfinished, but used by the Custom Enchantments pack.
+**Custom Statuses** - Additional status effects which can be applied to mobs (not players), both beneficial and negative.
 
-**Mimics** - Adds a new mob type to the game: The Mimic. Mimics disguise themselves as chests and attack unsuspecting victims when opened.
+**Mimics** - Adds a new mob to the game: The Mimic. Mimics disguise themselves as chests and attack unsuspecting victims when opened.
 
-**Mob Abilities** - An addition of over 20 new custom ability attacks which can be given to all hostile mobs. Includes active telegraphed attacks with fancy particles, passive traits that can be applied to mobs, and traits that trigger when a mob dies.
+**Mob Abilities** - An addition of over 30 new custom ability attacks which can be given to all hostile mobs. Includes active telegraphed attacks with fancy particles, passive traits that can be applied to mobs, and traits that trigger when a mob dies.
 
 **Repair Stations** - Adds a structure which can be spawned in world which serves as an alternative to anvils. It can repair gear with increasing and controllable costs, and protects gear lost from durability destroying it.
 
