@@ -13,6 +13,14 @@ execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run scoreboard pl
 execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run scoreboard players set @s cdl.Death_ID 310206
 execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run function cd:lib/player/damage/normal
 
+#Trait Effects
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..4.5] at @s unless block ~ ~-0.3 ~ air run tag @s add ability_tagged
+execute if entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..4.5] run function cartographer_mob_abilities:ability_traits/call_all_traits
+
+execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..4.5] if score @s recast_count matches 1 run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+
+tag @a remove ability_tagged
+
 data merge entity @s {Motion:[0.0,0.5,0.0]}
 
 data modify entity @s ActiveEffects append value {Id:28b,Duration:10,Amplifier:0b}

@@ -1,3 +1,5 @@
+function cartographer_mob_abilities:ability_traits/call_trait_warnings
+
 playsound minecraft:entity.ravager.attack hostile @a[distance=..16] ~ ~ ~ 5 0.85
 
 effect give @s glowing 1 0 true

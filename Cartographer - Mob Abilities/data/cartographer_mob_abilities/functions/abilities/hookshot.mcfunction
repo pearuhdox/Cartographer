@@ -3,26 +3,23 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @s ca.raycast 13
-
-scoreboard players set @s mob_move_dis 35
-scoreboard players set @s mob_atk_dis 35
+scoreboard players set @s ca.raycast 12
 
 data merge entity @s {NoAI:0}
 
-playsound minecraft:block.iron_door.close hostile @a[distance=..16] ~ ~ ~ 2 0.5
-
-scoreboard players add $master hook_id 1
-
-scoreboard players operation @s hook_id = $master hook_id
+playsound minecraft:block.iron_door.close hostile @a[distance=..20] ~ ~ ~ 2 0.5 1
+playsound minecraft:entity.zombie.attack_iron_door hostile @a[distance=..20] ~ ~ ~ 1 0.5 1
+playsound minecraft:entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 0.75 2 1
 
 function cartographer_mob_abilities:abilities/hookshot/calc_damage
 
-execute positioned ^ ^0.75 ^1.5 run summon armor_stand ~ ~ ~ {NoGravity:1b,ShowArms:0b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["hook_projectile"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-639877664,1727545686,-2004029853,-632720288],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1MjNlMTVlOTk4NjM1NWExZjg1MWY0M2Y3NTBlZTNmMjNjODlhZTEyMzYzMWRhMjQxZjg3MmJhN2E3ODEifX19"}]}}}}]}
+execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/hookshot/raycast
 
-execute as @e[type=armor_stand,tag=hook_projectile,limit=1,sort=nearest] at @s run function cartographer_mob_abilities:abilities/hookshot/branch
+tag @a[distance=..16] remove hooked
 
-kill @e[type=armor_stand,tag=hookshot_target,limit=1,sort=nearest]
+execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s mob_move_red 101
+execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s ca.hooked 101
+execute if score $hook_check ca.hooked matches 101 run scoreboard players add @s cooldown 4
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/return

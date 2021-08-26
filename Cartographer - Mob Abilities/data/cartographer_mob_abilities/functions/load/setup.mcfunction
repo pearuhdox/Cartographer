@@ -41,6 +41,9 @@ scoreboard objectives add ca.touch_check dummy
 
 scoreboard objectives add ca.skin_timer dummy
 
+scoreboard objectives add ca.hooked dummy
+scoreboard objectives add ca.hook_despawn dummy
+
 #Setup all necessary helper scoreboards.
 
 scoreboard objectives add ca.raycast dummy

@@ -27,4 +27,14 @@ execute as @a[scores={ca.glacial_slow=1..}] at @s run function cartographer_mob_
 #For all players with the horrified debuff, reduce the debuff and run it.
 execute as @a[scores={ca.horrified=1..}] at @s run function cartographer_mob_abilities:ability_traits/horrifying/horrify_tick
 
+#For all players with the hooked debuff, reduce the debuff and run it.
+execute as @a[scores={ca.hooked=1..}] at @s run function cartographer_mob_abilities:abilities/hookshot/player/timer
+
+#Reduce the time of the hook_check dummy score.
+execute if score $hook_check ca.hooked matches 1.. run scoreboard players remove $hook_check ca.hooked 1
+
+#For players we want to test were hit by a shulker bullet, verify that they were hit by a shulker bullet.
+#execute if score $shoot_custom_bullet ca.var matches 1.. as @a[tag=check_custom_shulker_bullet] at @s run function cartographer_mob_abilities:passive/projectile/apply_custom_shulker_effect
+#tag @a remove check_custom_shulker_bullet
+
 #For all players who recently died, run the reset tag.

@@ -1,5 +1,5 @@
 #Run Smash Land Effect
-execute if entity @s[tag=smash] run function cartographer_mob_abilities:loop/tick/smash/branch
+execute if entity @s[tag=smash] run function cartographer_mob_abilities:loop/tick/smash_branch
 
 #Run Sweep Warning
 execute if entity @s[tag=sweep,tag=tokened,scores={cooldown=0}] run particle angry_villager ~ ~1.5 ~ 0 0 0 0 1 normal

@@ -103,8 +103,17 @@ Old Traits (aka Passives) are now called "Passives"
 
 New Passives:
   - Touch: The mob inflicts bonuses from any ability traits it has on melee/ranged attack.
-  
   - Creation: The mob automatically triggers passives when it spawns. (It does not trigger on hits) [TBI]
+
+  - Projectile Series:
+    - These passives replace the existing shot projectile of a mob.
+      - Shoot Fire Charge: Replaces projectiles with Fire Charges (aka small fireballs)
+      - Shoot Fireball: Replaces projectiles with Fireballs (akin to ghasts)
+      - Shoot Wither Skull: Replaces projectiles with Wither skulls
+      - Shoot Dragon Fireball: Replaces projectiles with Dragon Fireballs
+      - Shoot Shulker Bullet: Replaces projectiles with Shulker Bullets. Shulker Bullets can inflict custom effects by copying custom potion data from the mob's offhand.
+      - Shoot Potion: Replaces projectile with Potion (potion data is copied from the mob's offhand)
+
 
 Changes:
 
@@ -117,7 +126,7 @@ Custom Enchantments:
     - Overload and Conductive have been renamed to Electrocute and Electrode
     - Decay and Putrefy have been renamed to Infection and Infect
     - Committed and Pin Down have been renamed to Exposing and Expose
-    - Vanquisher has been renamed to "Unchanting" ()
+    - Vanquisher has been renamed to "Unchanting"
     - Volatile has been renamed to "Explosive"
 
 
@@ -241,6 +250,15 @@ Mob Abilities:
 
   - Hookshot:
     - Damage changed to 50%.
+    - Partially Reworked:
+       - Reverted to hitscan attack.
+       - No longer quickly drags the player to the mob.
+       - Over the next 5 seconds, the victim is slowly dragged towards the attacking mob.
+       - Attacking mob moves at 50% speed while "reeling in" the target.
+       - When the attacking mob hurts the player (at close range) or after 5 seconds, the hook reeling ends.
+       - When hookshot connects with a player, the cooldown is extended by 4 seconds.
+  
+  Developer Commentary: Hookshot being reworked for performance issues and also to make the ability feel more smooth.
 
   - Laser:
     - Attack Damage of the mob now changes the explosion size.
@@ -272,9 +290,6 @@ Mob Abilities:
 
   - Webshot:
     - Damage changed to 150%.
-
-- Passives:
-  - Existing traits have been reworked into the new trait system.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

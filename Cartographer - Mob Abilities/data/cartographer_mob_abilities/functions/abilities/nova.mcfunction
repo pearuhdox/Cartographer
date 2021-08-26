@@ -17,6 +17,10 @@ execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run fun
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run tag @s add ability_tagged
 execute if entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:ability_traits/call_all_traits
 
+execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+
+tag @a remove ability_tagged
+
 playsound minecraft:block.end_portal.spawn player @a[distance=..16] ~ ~ ~ 0.5 1.75
 
 particle minecraft:witch ~ ~ ~ 2.5 0.2 2.5 0.1 150 normal @a

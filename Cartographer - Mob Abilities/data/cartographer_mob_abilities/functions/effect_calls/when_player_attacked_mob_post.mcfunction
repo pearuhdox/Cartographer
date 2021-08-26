@@ -28,4 +28,8 @@ execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={
 execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=true}}] run tag @a[tag=touched] add ability_tagged
 execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=true}}] run function cartographer_mob_abilities:ability_traits/touch/ranged
 
+execute if entity @s[tag=hook_broken] at @s run scoreboard players set @s ca.hooked 2
+
 tag @a remove touched
+
+#execute if entity @a[tag=check_custom_shulker_bullet] run function cartographer_mob_abilities:passive/projectile/shulker_save_data

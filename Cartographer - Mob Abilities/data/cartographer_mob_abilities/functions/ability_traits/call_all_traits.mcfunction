@@ -10,8 +10,6 @@ execute if entity @s[tag=ca.overloading] as @a[tag=ability_tagged] at @s run fun
 execute if entity @s[tag=ca.venemous] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/venemous/player_effect
 execute if entity @s[tag=ca.zephyrous] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/zephyrous/player_effect
 
-tag @a remove ability_tagged
-
 #Position Independent
 execute if entity @s[tag=ca.celestial,tag=ca.touch] if entity @p[distance=..2] store result score $damage ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
 execute if entity @s[tag=ca.celestial] if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:ability_traits/celestial/player_effect
