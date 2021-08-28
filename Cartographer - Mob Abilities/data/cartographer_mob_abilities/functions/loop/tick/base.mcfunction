@@ -34,7 +34,6 @@ execute as @a[scores={ca.hooked=1..}] at @s run function cartographer_mob_abilit
 execute if score $hook_check ca.hooked matches 1.. run scoreboard players remove $hook_check ca.hooked 1
 
 #For players we want to test were hit by a shulker bullet, verify that they were hit by a shulker bullet.
-#execute if score $shoot_custom_bullet ca.var matches 1.. as @a[tag=check_custom_shulker_bullet] at @s run function cartographer_mob_abilities:passive/projectile/apply_custom_shulker_effect
-#tag @a remove check_custom_shulker_bullet
-
+execute as @a[tag=clear_levitation] run effect clear @s levitation
+tag @a[tag=clear_levitation] remove clear_levitation
 #For all players who recently died, run the reset tag.

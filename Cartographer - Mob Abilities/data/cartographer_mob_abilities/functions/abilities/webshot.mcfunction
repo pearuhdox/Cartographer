@@ -9,6 +9,12 @@ scoreboard players set @s mob_move_dis 23
 
 execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/webshot_raycast
 
+#Trait Effects (outside of raycast call)
+execute if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:ability_traits/call_all_traits
+execute unless entity @a[tag=ability_tagged] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+
+tag @a remove ability_tagged
+
 tag @a[distance=..16] remove webbed
 
 data merge entity @s {NoAI:0}

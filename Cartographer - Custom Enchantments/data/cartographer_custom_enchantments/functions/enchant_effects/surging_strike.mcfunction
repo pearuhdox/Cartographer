@@ -11,13 +11,13 @@ execute if score @s ca.sprint matches 1.. if score @s ca.surge_strike matches 1.
 #Get and set score
 execute store result score @s ca.attack_val run attribute @s minecraft:generic.attack_damage get
 
-execute if entity @s[scores={ca.surge_strike=1}] run scoreboard players operation @s ca.attack_val /= $custom_enchant.2 ca.CONSTANT
+execute if entity @s[scores={ca.surge_strike=1}] run scoreboard players operation @s ca.attack_val /= $2 ca.CONSTANT
 
-execute if entity @s[scores={ca.surge_strike=2}] run scoreboard players operation @s ca.attack_val /= $custom_enchant.3 ca.CONSTANT
-execute if entity @s[scores={ca.surge_strike=2}] run scoreboard players operation @s ca.attack_val *= $custom_enchant.2 ca.CONSTANT
+execute if entity @s[scores={ca.surge_strike=2}] run scoreboard players operation @s ca.attack_val /= $3 ca.CONSTANT
+execute if entity @s[scores={ca.surge_strike=2}] run scoreboard players operation @s ca.attack_val *= $2 ca.CONSTANT
 
-execute if entity @s[scores={ca.surge_strike=3}] run scoreboard players operation @s ca.attack_val /= $custom_enchant.4 ca.CONSTANT
-execute if entity @s[scores={ca.surge_strike=3}] run scoreboard players operation @s ca.attack_val *= $custom_enchant.3 ca.CONSTANT
+execute if entity @s[scores={ca.surge_strike=3}] run scoreboard players operation @s ca.attack_val /= $4 ca.CONSTANT
+execute if entity @s[scores={ca.surge_strike=3}] run scoreboard players operation @s ca.attack_val *= $3 ca.CONSTANT
 execute if entity @s[scores={ca.surge_strike=3}] run scoreboard players add @s ca.attack_val 1
 
 scoreboard players operation $melee ca.attack_val = @s ca.attack_val

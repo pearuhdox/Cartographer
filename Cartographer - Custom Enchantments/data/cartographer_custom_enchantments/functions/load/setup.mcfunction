@@ -139,10 +139,6 @@ scoreboard players set $custom_enchant.Hard_MX ca.CONSTANT 15
 scoreboard players set $custom_enchant.Easy_MX ca.CONSTANT 7
 scoreboard players set $custom_enchant.10_MX ca.CONSTANT 10
 
-scoreboard players set $custom_enchant.2 ca.CONSTANT 2
-scoreboard players set $custom_enchant.3 ca.CONSTANT 3
-scoreboard players set $custom_enchant.4 ca.CONSTANT 4
-
 #Setup all necessary helper scoreboards.
 scoreboard objectives add ca.rpt_cdl dummy
 scoreboard objectives add ca.kill_entity totalKillCount

@@ -103,7 +103,6 @@ Old Traits (aka Passives) are now called "Passives"
 
 New Passives:
   - Touch: The mob inflicts bonuses from any ability traits it has on melee/ranged attack.
-  - Creation: The mob automatically triggers passives when it spawns. (It does not trigger on hits) [TBI]
 
   - Projectile Series:
     - These passives replace the existing shot projectile of a mob.
@@ -111,9 +110,12 @@ New Passives:
       - Shoot Fireball: Replaces projectiles with Fireballs (akin to ghasts)
       - Shoot Wither Skull: Replaces projectiles with Wither skulls
       - Shoot Dragon Fireball: Replaces projectiles with Dragon Fireballs
-      - Shoot Shulker Bullet: Replaces projectiles with Shulker Bullets. Shulker Bullets can inflict custom effects by copying custom potion data from the mob's offhand.
+      - Shoot Shulker Bullet: Replaces projectiles with Shulker Bullets. Shulker Bullets can inflict 1 custom effects by copying custom potion data from the mob's offhand. (only 1)
       - Shoot Potion: Replaces projectile with Potion (potion data is copied from the mob's offhand)
 
+  - Potion Bag (Witches)
+    - Potions thrown are replaced (randomly) via potions placed in a hopper in the witch's offhand.
+    - Potions drunk are replaced (randomly) via potions placed in a hopper in the witch's head slot.
 
 Changes:
 
@@ -290,6 +292,11 @@ Mob Abilities:
 
   - Webshot:
     - Damage changed to 150%.
+
+ - Passive Abilities:
+  - Quiver:
+    - Now randomly shoots arrows from a hopper placed in the offhand of the mob.
+    - Applies to all mobs that can fire arrows.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

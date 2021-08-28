@@ -27,6 +27,13 @@ execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run scoreb
 execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run tag @s add swept
 
+execute as @a[gamemode=!spectator,gamemode=!creative,tag=swept] at @s run tag @s add ability_tagged
+execute if entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..6] run function cartographer_mob_abilities:ability_traits/call_all_traits
+
+execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..6] if score @s recast_count matches 1 run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+
+tag @a remove ability_tagged
+
 execute as @a[distance=..5,tag=swept] run tag @s remove swept
 
 data modify entity @s NoAI set value 0

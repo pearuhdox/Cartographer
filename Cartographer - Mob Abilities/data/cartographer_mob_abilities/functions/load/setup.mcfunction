@@ -44,6 +44,11 @@ scoreboard objectives add ca.skin_timer dummy
 scoreboard objectives add ca.hooked dummy
 scoreboard objectives add ca.hook_despawn dummy
 
+scoreboard objectives add ca.cs_id dummy
+scoreboard objectives add ca.cs_dur dummy
+scoreboard objectives add ca.cs_pot dummy
+
+
 #Setup all necessary helper scoreboards.
 
 scoreboard objectives add ca.raycast dummy

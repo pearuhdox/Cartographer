@@ -56,6 +56,10 @@ execute as @s[tag=ca.shoot_dragon_fireball] at @s run function cartographer_mob_
 execute as @s[tag=ca.shoot_shulker_bullet] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
 execute as @s[tag=ca.shoot_potion] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
 
+execute as @s[tag=ca.quiver] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+
+execute as @s[tag=ca.potion_bag] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+
 #Run Projectile Wither Skull/Dragon Fireball Fix This is Dumb
 execute as @s[tag=passive_fire_charge] at @s run function cartographer_mob_abilities:passive/projectile/fix_projectile
 execute as @s[tag=passive_fireball] at @s run function cartographer_mob_abilities:passive/projectile/fix_projectile
@@ -63,6 +67,14 @@ execute as @s[tag=passive_wither_skull] at @s run function cartographer_mob_abil
 execute as @s[tag=passive_dragon_fireball] at @s run function cartographer_mob_abilities:passive/projectile/fix_projectile
 execute as @s[tag=passive_potion] at @s run function cartographer_mob_abilities:passive/projectile/fix_projectile
 
+#Run Custom Particles for Custom Shulker Projectiles
+execute as @s[type=shulker_bullet,scores={ca.cs_id=1..}] at @s run function cartographer_mob_abilities:passive/projectile/custom_shulker_visuals
+
+#Run drinking for Potion Bag on Witches
+execute as @s[type=witch,tag=ca.potion_bag,tag=!witch_drinking,predicate=cartographer_mob_abilities:witch_drinking] at @s run function cartographer_mob_abilities:passive/potion_bag
+execute as @s[type=witch,tag=ca.potion_bag,tag=witch_drinking,predicate=cartographer_mob_abilities:witch_stop_drinking] at @s run tag @s remove witch_drinking
+
+#Run Hookshot Slime Pushers
 execute as @s[type=slime,tag=hooked_push_back] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/back
 execute as @s[type=slime,tag=hooked_push_left] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/left
 execute as @s[type=slime,tag=hooked_push_right] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/right
