@@ -40,6 +40,10 @@ setblock 4206900 5 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"mine
 kill @e[type=armor_stand,tag=vector]
 summon armor_stand 4206900 256 4206900 {Tags:["vector"],NoGravity:1,Invisible:1,Marker:1,Small:1}
 
+#Create var scoreboard
+scoreboard objectives add ca.var dummy
+
+
 #Create vector related scoreboards
 scoreboard objectives add ca.vectorX dummy
 scoreboard objectives add ca.vectorY dummy

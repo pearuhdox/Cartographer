@@ -1,3 +1,5 @@
+execute unless entity @s[scores={ability_charge=1..2}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
+
 execute unless entity @s[scores={ability_charge=1..2}] run playsound minecraft:block.anvil.destroy hostile @a[distance=..20] ~ ~ ~ 2 2
 
 execute unless entity @s[scores={ability_charge=1..2}] run scoreboard players set @s mob_move_red 23

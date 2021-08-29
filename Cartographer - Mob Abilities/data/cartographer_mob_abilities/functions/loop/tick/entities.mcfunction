@@ -23,6 +23,9 @@ execute if entity @s[tag=has_active] run function cartographer_mob_abilities:loo
 execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust 1 0 0 0.7 ~ ~1 ~ 0.3 0.5 0.3 0 2 normal
 execute if entity @s[scores={augment_time=1..}] run particle minecraft:flame ~ ~1 ~ 0.2 0.2 0.2 0.05 1 normal
 
+#Run Trap Traits
+execute if entity @s[type=area_effect_cloud,tag=trap_deployed] at @s run function cartographer_mob_abilities:abilities/trapper/run_traits
+
 #Run Reflection per Tick
 execute if entity @s[tag=reflect_melee] run function cartographer_mob_abilities:loop/tick/reflect/melee
 execute if entity @s[tag=reflect_ranged] run function cartographer_mob_abilities:loop/tick/reflect/ranged
