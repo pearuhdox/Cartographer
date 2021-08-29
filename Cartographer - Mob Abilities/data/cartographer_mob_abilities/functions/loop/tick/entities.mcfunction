@@ -80,6 +80,10 @@ execute as @s[type=slime,tag=hooked_push_left] at @s run function cartographer_m
 execute as @s[type=slime,tag=hooked_push_right] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/right
 
 execute as @s[type=#cartographer_core:hostile,tag=hookshot,scores={ca.hooked=1..}] at @s run scoreboard players remove @s ca.hooked 1
+execute as @s[type=#cartographer_core:hostile,tag=hookshot,scores={ca.hooked=1}] at @s run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+
+execute if entity @s[tag=hook_broken] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+tag @s[tag=hook_broken] remove hook_broken
 
 #Setup Exalted
 execute if entity @s[tag=!setup,tag=exalted] run function cartographer_mob_abilities:passive/exalted_setup

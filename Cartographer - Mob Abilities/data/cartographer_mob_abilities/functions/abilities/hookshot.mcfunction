@@ -15,7 +15,10 @@ function cartographer_mob_abilities:abilities/hookshot/calc_damage
 
 execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/hookshot/raycast
 
-tag @a[distance=..16] remove hooked
+execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+
+tag @a[distance=..18] remove ability_tagged
+tag @a[distance=..18] remove hooked
 
 execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s mob_move_red 101
 execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s ca.hooked 101

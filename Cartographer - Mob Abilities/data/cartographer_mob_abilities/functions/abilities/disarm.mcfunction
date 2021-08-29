@@ -17,6 +17,14 @@ execute positioned ^ ^ ^3 as @a[distance=..2] at @s run scoreboard players set @
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run effect give @s blindness 2 0
 
+
+execute positioned ^ ^ ^3 as @a[gamemode=!spectator,gamemode=!creative,distance=..2] at @s run tag @s add ability_tagged
+
+execute if entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..7] at @s run function cartographer_mob_abilities:ability_traits/call_all_traits
+execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..7] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+
+tag @a remove ability_tagged
+
 execute positioned ^ ^ ^3 if entity @a[distance=..2] as @a[distance=..2] at @s run data modify storage ca.disarm:space Weapon set from entity @s SelectedItem
 execute positioned ^ ^ ^3 if entity @a[distance=..2] run data modify entity @s HandItems[0] set from storage ca.disarm:space Weapon
 

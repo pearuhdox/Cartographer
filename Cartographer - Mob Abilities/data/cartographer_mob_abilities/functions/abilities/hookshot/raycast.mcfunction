@@ -14,6 +14,10 @@ execute as @a[distance=..2,tag=!hooked] run scoreboard players set $hook_check c
 execute as @a[distance=..2,tag=!hooked] run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
 execute as @a[distance=..2,tag=!hooked] run scoreboard players set @s cdl.Death_ID 310205
 execute as @a[distance=..2,tag=!hooked] run function cd:lib/player/damage/normal
+
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,tag=!hooked] at @s run tag @s add ability_tagged
+execute if entity @a[tag=ability_tagged,tag=!hooked,gamemode=!spectator,gamemode=!creative,distance=..18] at @s run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
+
 execute as @a[distance=..2,tag=!hooked] run tag @s add hooked
 
 execute if score @s ca.raycast matches 0 run particle minecraft:cloud ^ ^ ^1 0 0 0 0.1 10 normal
