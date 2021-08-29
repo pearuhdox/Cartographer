@@ -8,6 +8,22 @@ execute if entity @s[scores={ability_charge=1..119}] run scoreboard players set 
 
 scoreboard players operation $laser_charge ability_charge = @s ability_charge
 
+scoreboard players set $laser_bla ca.var 0
+scoreboard players set $laser_gla ca.var 0
+scoreboard players set $laser_ove ca.var 0
+scoreboard players set $laser_ven ca.var 0
+scoreboard players set $laser_zep ca.var 0
+scoreboard players set $laser_hor ca.var 0
+scoreboard players set $laser_vol ca.var 0
+
+execute if entity @s[tag=ca.blazing] run scoreboard players set $laser_bla ca.var 1
+execute if entity @s[tag=ca.glacial] run scoreboard players set $laser_gla ca.var 1
+execute if entity @s[tag=ca.overloading] run scoreboard players set $laser_ove ca.var 1
+execute if entity @s[tag=ca.venemous] run scoreboard players set $laser_ven ca.var 1
+execute if entity @s[tag=ca.zephyrous] run scoreboard players set $laser_zep ca.var 1
+execute if entity @s[tag=ca.horrifying] run scoreboard players set $laser_hor ca.var 1
+execute if entity @s[tag=ca.volatile] run scoreboard players set $laser_vol ca.var 1
+
 execute if entity @s[scores={ability_charge=1..119}] as @e[tag=laser_marker,distance=..1,limit=1] at @s run function cartographer_mob_abilities:charge/laser/branch
 
 execute if entity @s[scores={ability_charge=1..119}] as @a[distance=..32] at @s run playsound minecraft:entity.blaze.shoot hostile @s ~ ~ ~ 0.05 2

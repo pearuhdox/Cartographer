@@ -11,10 +11,15 @@ execute if score $laser_charge ability_charge matches 91..100 run particle minec
 execute if score $laser_charge ability_charge matches 101..110 run particle minecraft:dust 1 0.165 0.165 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
 execute if score $laser_charge ability_charge matches 111..120 run particle minecraft:dust 1 0.063 0.063 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
 
+execute if entity @s[tag=ca.blazing] run particle minecraft:flame ~ ~ ~ 0 0 0 0.01 1 normal
+execute if entity @s[tag=ca.glacial] run particle minecraft:item_snowball ~ ~ ~ 0.15 0.15 0.15 0.5 1 normal
+execute if entity @s[tag=ca.overloading] run particle minecraft:electric_spark ~ ~ ~ 0.15 0.15 0.15 0.6 1 normal
+execute if entity @s[tag=ca.venemous] run particle minecraft:item_slime ~ ~ ~ 0.15 0.15 0.15 0.5 1 normal
+execute if entity @s[tag=ca.zephyrous] run particle minecraft:instant_effect ~ ~ ~ 0 0 0 1 1 normal
+execute if entity @s[tag=ca.horrifying] run particle minecraft:dust_color_transition 1 0 1 1 0 0 1 ~ ~ ~ 0.3 0.3 0.3 0.1 1 normal @a
+
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
 execute if entity @a[distance=..1.5] run scoreboard players set @s ca.raycast 0
-
-execute as @a[distance=..1.5] at @s run particle minecraft:flame ~ ~1 ~ 0 0 0 0.08 2 normal
 
 execute if entity @s[scores={ca.raycast=1..}] positioned ^ ^ ^1 if block ~ ~ ~ #cartographer_core:can_raycast run function cartographer_mob_abilities:charge/laser/raycast
