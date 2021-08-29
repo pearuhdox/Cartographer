@@ -240,6 +240,9 @@ Mob Abilities:
   - Most values have been balanced around an average damage amount of 4. (Meaning abilities will do approximately the same damage they used to do when the mob has 4 attack damage)
 
 - Active Abilities:
+  - Augmenter:
+    - Non on-hit traits (e.g Carapace, Predator, Aftershock, Volatile, Evocative) are applied to all affected mobs when cast.
+
   - Charge:
     - Damage changed to 250%.
   
@@ -248,6 +251,11 @@ Mob Abilities:
 
   - Disarm:
     - Damage changed to 50%.
+
+  - Healer:
+    - Limited to the closest 3 mobs.
+    - Now heals 30% of the mob's maximum health (rather than a flat 8)
+    - Non on-hit traits are applied to all affected mobs when cast.
 
   - Hookshot:
     - Damage changed to 50%.
