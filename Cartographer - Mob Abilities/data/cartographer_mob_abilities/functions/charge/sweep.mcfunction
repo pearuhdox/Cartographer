@@ -1,3 +1,5 @@
+execute unless entity @s[scores={ability_charge=1..2}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
+
 execute unless entity @s[scores={ability_charge=1..2}] run playsound minecraft:entity.iron_golem.hurt hostile @a[distance=..16] ~ ~ ~ 5 1.5
 
 execute unless entity @s[scores={ability_charge=1..2}] run effect give @s glowing 1 0 true

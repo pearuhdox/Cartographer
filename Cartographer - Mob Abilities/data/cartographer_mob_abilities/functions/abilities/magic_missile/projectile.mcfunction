@@ -1,21 +1,24 @@
-particle minecraft:witch ~ ~1 ~ 0.1 0.1 0.1 1 1 normal @a
+tag @s add checked
+
+execute unless entity @s[tag=ca.blazing] unless entity @s[tag=ca.glacial] unless entity @s[tag=ca.overloading] unless entity @s[tag=ca.horrifying] unless entity @s[tag=ca.venemous] unless entity @s[tag=ca.zephyrous] run particle minecraft:witch ~ ~1 ~ 0.1 0.1 0.1 1 1 normal @a
+
+execute if entity @s[tag=ca.blazing] run particle minecraft:flame ~ ~1 ~ 0.1 0.1 0.1 0.07 1 normal @a
+execute if entity @s[tag=ca.glacial] run particle minecraft:item_snowball ~ ~1 ~ 0.1 0.1 0.1 0.3 2 normal @a
+execute if entity @s[tag=ca.overloading] run particle minecraft:electric_spark ~ ~1 ~ 0.1 0.1 0.1 0.5 3 normal @a
+execute if entity @s[tag=ca.venemous] run particle minecraft:item_slime ~ ~1 ~ 0.1 0.1 0.1 0.3 2 normal @a
+execute if entity @s[tag=ca.zephyrous] run particle minecraft:dust 1 1 1 1 ~ ~1 ~ 0.2 0.2 0.2 0.1 4 normal @a
+execute if entity @s[tag=ca.horrifying] run particle minecraft:dust_color_transition 1 0 1 1 0 0 1 ~ ~1 ~ 0.2 0.2 0.2 0.1 4 normal @a
+execute if entity @s[tag=ca.volatile] run particle minecraft:smoke ~ ~1 ~ 0.1 0.1 0.1 0.1 1 normal @a
+
+execute if entity @s[tag=ca.volatile] run playsound minecraft:entity.creeper.primed hostile @a[distance=..10] ~ ~ ~ 1 1.5 0.5
 
 execute anchored eyes facing entity @p feet positioned ^ ^ ^0.8 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.3 ~ ~
 
-execute unless block ~ ~1 ~ #cartographer_core:can_raycast if score @s ca.ability_dmg matches 0..8 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8456074]},{Type:0,Trail:1b,Colors:[I;3932992]}]}}}}
-execute unless block ~ ~1 ~ #cartographer_core:can_raycast if score @s ca.ability_dmg matches 9..16 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8456074]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]}]}}}}
-execute unless block ~ ~1 ~ #cartographer_core:can_raycast if score @s ca.ability_dmg matches 17..24 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8456074]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]}]}}}}
-execute unless block ~ ~1 ~ #cartographer_core:can_raycast if score @s ca.ability_dmg matches 25.. run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8456074]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]}]}}}}
+#Condition 1: Projectile collides with a wall, and will thus detonate.
+execute unless block ~ ~1 ~ #cartographer_core:can_raycast if score @s ca.ability_dmg matches 0..8 run function cartographer_mob_abilities:abilities/magic_missile/detonate
 
+#Condition 2: Projectile is within 0.75 blocks of a player and will thus detonate.
+execute if entity @a[distance=..0.75] if score @s ca.ability_dmg matches 0..8 run function cartographer_mob_abilities:abilities/magic_missile/detonate
 
-execute unless block ~ ~1 ~ #cartographer_core:can_raycast run summon area_effect_cloud ~ ~1 ~ {Particle:"witch",NoGravity:1b,Radius:2.0f,RadiusPerTick:-0.01f,RadiusOnUse:0f,Duration:400,DurationOnUse:0f,Age:0,WaitTime:20,Tags:["magic_missile_projectile"],Potion:"minecraft:mundane",Effects:[{Id:20b,Amplifier:1b,Duration:160}]}
-execute unless block ~ ~1 ~ #cartographer_core:can_raycast run kill @s
-
-execute if entity @a[distance=..1] if score @s ca.ability_dmg matches 0..8 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8456074]},{Type:0,Trail:1b,Colors:[I;3932992]}]}}}}
-execute if entity @a[distance=..1] if score @s ca.ability_dmg matches 9..16 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8456074]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]}]}}}}
-execute if entity @a[distance=..1] if score @s ca.ability_dmg matches 17..24 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8456074]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]}]}}}}
-execute if entity @a[distance=..1] if score @s ca.ability_dmg matches 25.. run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;8456074]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]},{Type:0,Trail:1b,Colors:[I;3932992]}]}}}}
-
-
-execute if entity @a[distance=..1] run summon area_effect_cloud ~ ~1 ~ {Particle:"witch",NoGravity:1b,Radius:2.0f,RadiusPerTick:-0.01f,RadiusOnUse:0f,Duration:400,DurationOnUse:0f,Age:0,WaitTime:20,Tags:["magic_missile_projectile"],Potion:"minecraft:mundane",Effects:[{Id:20b,Amplifier:1b,Duration:160}]}
-execute if entity @a[distance=..1] run kill @s
+#Condition 3: Projectile is attacked by some kind of damage, and will thus detonate.
+execute unless entity @e[type=sheep,distance=..0.5,tag=magic_missile_hitbox] run function cartographer_mob_abilities:abilities/magic_missile/detonate

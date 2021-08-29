@@ -40,7 +40,7 @@ execute if entity @s[tag=webshot,tag=tokened,scores={cooldown=0}] if entity @a[g
 execute if entity @s[tag=disarm,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:charge/disarm
 
 #Magic Missile
-execute if entity @s[tag=magic_missile,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:charge/magic_missile/cast
+execute if entity @s[tag=magic_missile,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:charge/magic_missile
 
 #Fireball
 execute if entity @s[tag=fireball,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:charge/fireball_cast

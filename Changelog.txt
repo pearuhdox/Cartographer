@@ -244,8 +244,7 @@ Mob Abilities:
     - Damage changed to 250%.
   
   - Fireball:
-    - Attack Damage of the mob now changes the explosion size.
-    - Every 8 attack damage increases the explosion size by 1 (up to a size of 4, starting at 1).
+    - Removed as behavior is similar to Magic Missile variations with traits (as well as new passives).
 
   - Disarm:
     - Damage changed to 50%.
@@ -275,6 +274,9 @@ Mob Abilities:
   - Magic Missile:
     - Attack Damage of the mob now changes the projectile damage.
     - Every 8 attack damage increases the number of firework stars by 2 (aka +3 damage).
+    - No longer creates damaging field around its landing site.
+    - Missile can now be detonated by projectiles and attacks (it has 2 health)
+      - Detonated (meaning it deals damage) not destroyed (meaning it does nothing).
 
   - Smash:
     - Damage changed to 200%.
