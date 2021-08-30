@@ -3,6 +3,8 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 execute if score $global helper_diff matches ..2 if entity @s[tag=mitosis] run scoreboard players set @s cooldown 5
 execute if score $global helper_diff matches 3.. if entity @s[tag=mitosis] run scoreboard players set @s cooldown 4
 
+function cartographer_mob_abilities:ability_traits/cooldown_traits
+
 scoreboard players set @s ability_charge 0
 
 scoreboard players set @s mob_move_dis 23
@@ -212,6 +214,8 @@ execute if entity @s[type=wither,scores={copies=3..}] run summon wither ~ ~ ~ {T
 execute as @e[tag=duplicate,tag=!done_dupe,distance=..1.5] at @s run function cartographer_mob_abilities:abilities/duplicator/copy_data
 
 playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..16] ~ ~ ~ 3 1.3
+
+function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/return

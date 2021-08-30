@@ -1,6 +1,8 @@
 execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 15
 execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 12
 
+function cartographer_mob_abilities:ability_traits/cooldown_traits
+
 scoreboard players set @s ability_charge 0
 
 scoreboard players set @e[distance=0.5..15,type=#cartographer_core:hostile,tag=!ca.shimmerskin,tag=!cloaker] ca.effect_cloak 12
