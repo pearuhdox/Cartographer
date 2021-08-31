@@ -16,7 +16,7 @@ tellraw @s {"text":"------------------------------------------","color":"#ACFFA6
 tellraw @s [{"text":"Healer","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"The enemy charges up. After a long channel, they heal all enemies within 10 blocks for 8 health. The healer is immobilized (if ground based) while charging.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"The enemy charges up. After a long channel, they heal the closest 3 enemies within 10 blocks for 30% of their max health. The healer is immobilized (if ground based) while charging. Non-hit traits the Healer has will be cast at the positions of all healed mobs.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Applicable Mobs: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"All Hostile Mobs","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]

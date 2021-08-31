@@ -18,8 +18,6 @@ tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
 tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Afflicted mobs take 2 damage per second, and deal 1 damage per second to mobs within 3 blocks. Each damage tick, there is a 40% chance to either knock hit enemies back, or to stun hit enemies for a half second.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
-tellraw @s [{"text":"Classification: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Damaging, Crowd Control","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
-tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Maximum Level: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"1 (I)","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]

@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Hookshot                 ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy can fire a hook projectile that drags players back towards the enemy."
+        },
+        "icon": {
+            "item": "minecraft:fishing_rod"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.hookshot\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/hookshot"
+    },
+    "parent": "cartographer_mob_abilities:active/healer"
+}

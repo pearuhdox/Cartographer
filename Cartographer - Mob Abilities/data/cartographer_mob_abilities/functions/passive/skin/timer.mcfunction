@@ -1,7 +1,7 @@
 scoreboard players add @s ca.skin_timer 1
 
 execute if score @s[tag=ca.fireskin] ca.skin_timer matches 1 run function cartographer_mob_abilities:passive/skin/fireskin
-execute if score @s[tag=ca.gillyskin] ca.skin_timer matches 1 run function cartographer_mob_abilities:passive/skin/gillyskin
+execute if score @s[tag=ca.waterskin] ca.skin_timer matches 1 run function cartographer_mob_abilities:passive/skin/waterskin
 
 execute if score @s[tag=ca.scaleskin] ca.skin_timer matches 1 run function cartographer_mob_abilities:passive/skin/scaleskin
 execute if score @s[tag=ca.scaleskin_2] ca.skin_timer matches 1 run function cartographer_mob_abilities:passive/skin/scaleskin_2

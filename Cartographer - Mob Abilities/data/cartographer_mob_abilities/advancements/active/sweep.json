@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.sweep\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Sweep                    ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy can slice in a cone in front of it, hurting players."
+        },
+        "icon": {
+            "item": "minecraft:iron_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/sweep"
+    },
+    "parent": "cartographer_mob_abilities:active/smash"
+}

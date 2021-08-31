@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Actives                  ",
+            "color": "yellow",
+            "bold": false
+        },
+        "description": {
+            "bold": false,
+            "color": "white",
+            "text": "Mob attacks and effects which are channeled and have cooldowns."
+        },
+        "icon": {
+            "item": "minecraft:netherite_axe"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "cartographer_mob_abilities:root"
+}

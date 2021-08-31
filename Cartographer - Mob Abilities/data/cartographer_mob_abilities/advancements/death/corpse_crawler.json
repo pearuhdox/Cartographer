@@ -1,0 +1,83 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:zombie_head"
+    },
+    "title": {
+      "text": "Corpse Crawler           ",
+      "color": "white"
+    },
+    "description": {
+      "text": "On death, drops corpse eggs, which hatch into various baby mobs. Eggs can be destroyed by attacks.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "cartographer_mob_abilities:death/blood_sacrificial",
+  "criteria": {
+    "found": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"corpse_crawler\"]}"
+        }
+      }
+    },
+    "found_2": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"corpse_crawler_husk\"]}"
+        }
+      }
+    },
+    "found_3": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"corpse_crawler_drowned\"]}"
+        }
+      }
+    },
+    "found_4": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"corpse_crawler_piglin\"]}"
+        }
+      }
+    },
+    "found_5": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"corpse_crawler_hoglin\"]}"
+        }
+      }
+    },
+    "found_6": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"corpse_crawler_bee\"]}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "found",
+      "found_2",
+      "found_3",
+      "found_4",
+      "found_5",
+      "found_6"
+    ]
+  ],
+  "rewards": {
+    "function": "cartographer_mob_abilities:descriptions/death/corpse_crawler"
+  }
+}

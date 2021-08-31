@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.trapper\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Trapper                  ",
+            "color": "white"
+        },
+        "description": {
+            "text": "The enemy can throw a cone of caltrop traps that slow and hurt players.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:shears"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/trapper"
+    },
+    "parent": "cartographer_mob_abilities:active/sweep"
+}

@@ -33,9 +33,7 @@ title @s[tag=!showing_repeating,scores={ca.ind_val=0,ca.repeating=11..17}] subti
 title @s[tag=!showing_echo,scores={ca.echo=1..}] times 0 45 5
 title @s[tag=!showing_echo,scores={ca.echo=1..}] title {"text":" "}
 
-title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=6}] subtitle [{"text":",","color":"yellow"},{"text":"______","color":"green","italic":false},{"text":",","color":"yellow"}]
-title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=5}] subtitle [{"text":",","color":"yellow"},{"text":"_____","color":"green","italic":false},{"text":",","color":"yellow"}]
-title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=4}] subtitle [{"text":",","color":"yellow"},{"text":"____","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=4..}] subtitle [{"text":",","color":"yellow"},{"text":"____","color":"green","italic":false},{"text":",","color":"yellow"}]
 title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=3}] subtitle [{"text":",","color":"yellow"},{"text":"___","color":"green","italic":false},{"text":",","color":"yellow"}]
 title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=2}] subtitle [{"text":",","color":"yellow"},{"text":"__","color":"green","italic":false},{"text":",","color":"yellow"}]
 title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=1}] subtitle [{"text":",","color":"yellow"},{"text":"_","color":"green","italic":false},{"text":",","color":"yellow"}]

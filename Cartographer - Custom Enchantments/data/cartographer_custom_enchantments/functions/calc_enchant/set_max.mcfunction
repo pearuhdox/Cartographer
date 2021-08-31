@@ -7,13 +7,11 @@ execute if score @s ca.w_cleansing matches 2.. run scoreboard players set @s ca.
 execute if score @s ca.p_cleansing matches 2.. run scoreboard players set @s ca.p_cleansing 1
 execute if score @s ca.wi_cleansing matches 2.. run scoreboard players set @s ca.wi_cleansing 1
 execute if score @s ca.committed matches 4.. run scoreboard players set @s ca.committed 3
-execute if score @s ca.concealed matches 2.. run scoreboard players set @s ca.concealed 1
+execute if score @s ca.concealed matches 7.. run scoreboard players set @s ca.concealed 6
 execute if score @s ca.conductive matches 2.. run scoreboard players set @s ca.conductive 1
 execute if score @s ca.current matches 2.. run scoreboard players set @s ca.current 1
 execute if score @s ca.decay matches 5.. run scoreboard players set @s ca.decay 4
 execute if score @s ca.current matches 2.. run scoreboard players set @s ca.deadeye 1
-execute if score @s despair_wave matches 5.. run scoreboard players set @s despair_wave 4
-execute if score @s destruction_wave matches 7.. run scoreboard players set @s destruction_wave 6
 execute if score @s ca.duelist matches 6.. run scoreboard players set @s ca.duelist 5
 execute if score @s ca.eruption matches 6.. run scoreboard players set @s ca.eruption 5
 execute if score @s ca.evasion matches 21.. run scoreboard players set @s ca.evasion 20

@@ -1,4 +1,4 @@
-scoreboard players add @e[type=#cartographer_core:hostile,tag=has_active,distance=..16] devious_stacks 1
+scoreboard players add @e[type=#cartographer_core:hostile,tag=ca.has_active,distance=..16] devious_stacks 1
 
 scoreboard players add @e[type=#cartographer_core:hostile,tag=!has_active,distance=..16] relent_stacks 1
 

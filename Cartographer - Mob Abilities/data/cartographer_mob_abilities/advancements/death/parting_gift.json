@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Parting Gift             ",
+            "color": "white"
+        },
+        "description": {
+            "text": "On death, drops a block of ignited TNT.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:tnt"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.parting_gift\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/death/parting_gift"
+    },
+    "parent": "cartographer_mob_abilities:death/exalted"
+}

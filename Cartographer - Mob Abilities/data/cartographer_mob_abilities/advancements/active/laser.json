@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Laser                    ",
+            "color": "white"
+        },
+        "description": {
+            "text": "The enemy can channel a laser aimed at the nearest player. When fired, it destroys terrain and deals explosive damage.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:end_rod"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"laser\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/laser"
+    },
+    "parent": "cartographer_mob_abilities:active/hookshot"
+}

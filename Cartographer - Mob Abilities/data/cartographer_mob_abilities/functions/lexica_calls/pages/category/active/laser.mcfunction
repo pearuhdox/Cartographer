@@ -16,7 +16,7 @@ tellraw @s {"text":"------------------------------------------","color":"#ACFFA6
 tellraw @s [{"text":"Laser","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"The enemy becomes immobile (if ground based) and channels a laser at the nearest player. At the end of the channel, the laser casts an explosion at the end of it, dealing 18 splash damage and knocking enemies back. The laser can be blocked by moving out of line of sight of an enemy, exploding instead at the obstruction. The explosion breaks blocks.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"The enemy becomes immobile (if ground based) and channels a laser at the nearest player. At the end of the channel, the laser casts an explosion at the end of it, dealing 18 explosive damage and knocking enemies back. The laser can be blocked by moving out of line of sight of an enemy, exploding instead at the obstruction. The explosion breaks blocks.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Applicable Mobs: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"All Hostile Mobs","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
@@ -24,6 +24,6 @@ tellraw @s [{"text":"Cooldown: ","color":"green","bold":false,"italic":false,"ho
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
-tellraw @s [{"text":"[⏎] ","color":"green","bold":true,"italic":false},{"text":"Return","color":"green","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return up one page.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 302"}}]
+tellraw @s [{"text":"[⏎] ","color":"green","bold":true,"italic":false},{"text":"Return","color":"green","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return up one page.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 301"}}]
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 

@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Cloaker                   ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy can charge up to conceal nearby enemies."
+        },
+        "icon": {
+            "item": "minecraft:phantom_membrane"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.cloaker\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/cloaker"
+    },
+    "parent": "cartographer_mob_abilities:active/charge"
+}

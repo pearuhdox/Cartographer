@@ -13,6 +13,12 @@ data modify storage ca.susu:enchants legs set from storage ca.susu:enchants inv[
 data modify storage ca.susu:enchants feet set from storage ca.susu:enchants inv[{Slot:100b}]
 data modify storage ca.susu:enchants offh set from storage ca.susu:enchants inv[{Slot:-106b}]
 
+scoreboard players set @s ca.armor_count 0
+execute if data storage ca.susu:enchants head.id run scoreboard players add @s ca.armor_count 1
+execute if data storage ca.susu:enchants body.id run scoreboard players add @s ca.armor_count 1
+execute if data storage ca.susu:enchants legs.id run scoreboard players add @s ca.armor_count 1
+execute if data storage ca.susu:enchants feet.id run scoreboard players add @s ca.armor_count 1
+
 execute unless data storage ca.susu:enchants head.tag.CustomEnchantments run data modify storage ca.susu:enchants head set value {}
 execute unless data storage ca.susu:enchants body.tag.CustomEnchantments run data modify storage ca.susu:enchants body set value {}
 execute unless data storage ca.susu:enchants legs.tag.CustomEnchantments run data modify storage ca.susu:enchants legs set value {}

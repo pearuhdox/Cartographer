@@ -17,7 +17,7 @@ execute if entity @s[scores={mob_atk_red=1..}] run function cartographer_mob_abi
 execute if entity @s[scores={mob_sturdy=1..}] run function cartographer_mob_abilities:loop/tick/sturdy/effects
 
 #Run Has Active Effects
-execute if entity @s[tag=has_active] run function cartographer_mob_abilities:loop/tick/actives
+execute if entity @s[tag=ca.has_active] run function cartographer_mob_abilities:loop/tick/actives
 
 #Augment Buff Particles
 execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust 1 0 0 0.7 ~ ~1 ~ 0.3 0.5 0.3 0 2 normal
@@ -44,7 +44,7 @@ execute as @s[type=marker,tag=horrify_tether] at @s run function cartographer_mo
 
 #Run Skin timers for skin entities
 execute as @s[tag=ca.fireskin] at @s run function cartographer_mob_abilities:passive/skin/timer
-execute as @s[tag=ca.gillyskin] at @s run function cartographer_mob_abilities:passive/skin/timer
+execute as @s[tag=ca.waterskin] at @s run function cartographer_mob_abilities:passive/skin/timer
 execute as @s[tag=ca.scaleskin] at @s run function cartographer_mob_abilities:passive/skin/timer
 execute as @s[tag=ca.scaleskin_2] at @s run function cartographer_mob_abilities:passive/skin/timer
 execute as @s[tag=ca.scaleskin_3] at @s run function cartographer_mob_abilities:passive/skin/timer
@@ -82,11 +82,11 @@ execute as @s[type=slime,tag=hooked_push_back] at @s run function cartographer_m
 execute as @s[type=slime,tag=hooked_push_left] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/left
 execute as @s[type=slime,tag=hooked_push_right] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/right
 
-execute as @s[type=#cartographer_core:hostile,tag=hookshot,scores={ca.hooked=1..}] at @s run scoreboard players remove @s ca.hooked 1
-execute as @s[type=#cartographer_core:hostile,tag=hookshot,scores={ca.hooked=1}] at @s run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute as @s[type=#cartographer_core:hostile,tag=ca.hookshot,scores={ca.hooked=1..}] at @s run scoreboard players remove @s ca.hooked 1
+execute as @s[type=#cartographer_core:hostile,tag=ca.hookshot,scores={ca.hooked=1}] at @s run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 execute if entity @s[tag=hook_broken] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 tag @s[tag=hook_broken] remove hook_broken
 
 #Setup Exalted
-execute if entity @s[tag=!setup,tag=exalted] run function cartographer_mob_abilities:passive/exalted_setup
+execute if entity @s[tag=!setup,tag=ca.exalted] run function cartographer_mob_abilities:passive/exalted_setup

@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Blazing                  ",
+            "color": "white"
+        },
+        "description": {
+            "text": "Mob attacks or effects create fire.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:blaze_powder"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.blazing\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/trait/hit/blazing"
+    },
+    "parent": "cartographer_mob_abilities:trait/trait_abilities"
+}

@@ -30,7 +30,7 @@ tag @a remove ability_tagged
 execute positioned ^ ^ ^3 if entity @a[distance=..2] as @a[distance=..2] at @s run data modify storage ca.disarm:space Weapon set from entity @s SelectedItem
 execute positioned ^ ^ ^3 if entity @a[distance=..2] run data modify entity @s HandItems[0] set from storage ca.disarm:space Weapon
 
-execute positioned ^ ^ ^3 if entity @a[distance=..2] at @s run tag @s remove disarm
+execute positioned ^ ^ ^3 if entity @a[distance=..2] at @s run tag @s remove ca.disarm
 execute positioned ^ ^ ^3 if entity @a[distance=..2] at @s run tag @s add used_disarm
 
 execute positioned ^ ^ ^3 if entity @p[distance=..2,nbt={SelectedItem:{id:"minecraft:wooden_axe"}}] run tag @s add smash 

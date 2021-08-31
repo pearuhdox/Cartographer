@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.augmenter\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Augmenter                ",
+            "color": "white"
+        },
+        "description": {
+            "text": "The enemy can charge up to buff the speed, damage, and resistance of nearby mobs.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:lingering_potion"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/augmenter"
+    },
+    "parent": "cartographer_mob_abilities:active/ambush"
+}

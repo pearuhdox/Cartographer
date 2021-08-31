@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Brutal Blood              ",
+            "color": "white"
+        },
+        "description": {
+            "text": "On death, restore nearby enemy health and grant nearby enemies attack damage.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.brutal_blood\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/death/brutal_blood"
+    },
+    "parent": "cartographer_mob_abilities:death/death_abilities"
+}

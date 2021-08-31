@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Overloading                  ",
+            "color": "white"
+        },
+        "description": {
+            "text": "Mob attacks or effects create nearby harmful spark clouds.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:end_rod"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.overloading\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/trait/hit/overloading"
+    },
+    "parent": "cartographer_mob_abilities:trait/hit/horrifying"
+}

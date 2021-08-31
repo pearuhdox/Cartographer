@@ -90,7 +90,8 @@ execute if score @s ca.lexica_trig matches 295 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 301 run function cartographer_mob_abilities:lexica_calls/pages/category/active/main
 execute if score @s ca.lexica_trig matches 302 run function cartographer_mob_abilities:lexica_calls/pages/category/active/main_2
 execute if score @s ca.lexica_trig matches 303 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/main
-execute if score @s ca.lexica_trig matches 304 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/main
+execute if score @s ca.lexica_trig matches 304 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/main
+execute if score @s ca.lexica_trig matches 305 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/main
 
 execute if score @s ca.lexica_trig matches 309 run function cartographer_mob_abilities:lexica_calls/pages/category/active/ambush
 execute if score @s ca.lexica_trig matches 310 run function cartographer_mob_abilities:lexica_calls/pages/category/active/augmenter
@@ -98,21 +99,16 @@ execute if score @s ca.lexica_trig matches 311 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 312 run function cartographer_mob_abilities:lexica_calls/pages/category/active/cloaker
 execute if score @s ca.lexica_trig matches 313 run function cartographer_mob_abilities:lexica_calls/pages/category/active/disarm
 execute if score @s ca.lexica_trig matches 314 run function cartographer_mob_abilities:lexica_calls/pages/category/active/duplicator
-execute if score @s ca.lexica_trig matches 315 run function cartographer_mob_abilities:lexica_calls/pages/category/active/fireball
-execute if score @s ca.lexica_trig matches 316 run function cartographer_mob_abilities:lexica_calls/pages/category/active/nova
-execute if score @s ca.lexica_trig matches 317 run function cartographer_mob_abilities:lexica_calls/pages/category/active/frost_nova
-execute if score @s ca.lexica_trig matches 318 run function cartographer_mob_abilities:lexica_calls/pages/category/active/healer
-execute if score @s ca.lexica_trig matches 319 run function cartographer_mob_abilities:lexica_calls/pages/category/active/hookshot
-execute if score @s ca.lexica_trig matches 320 run function cartographer_mob_abilities:lexica_calls/pages/category/active/laser
-execute if score @s ca.lexica_trig matches 321 run function cartographer_mob_abilities:lexica_calls/pages/category/active/magic_missile
-execute if score @s ca.lexica_trig matches 322 run function cartographer_mob_abilities:lexica_calls/pages/category/active/smash
-execute if score @s ca.lexica_trig matches 323 run function cartographer_mob_abilities:lexica_calls/pages/category/active/soulfire_nova
-execute if score @s ca.lexica_trig matches 324 run function cartographer_mob_abilities:lexica_calls/pages/category/active/sweep
-execute if score @s ca.lexica_trig matches 325 run function cartographer_mob_abilities:lexica_calls/pages/category/active/trapper
-execute if score @s ca.lexica_trig matches 326 run function cartographer_mob_abilities:lexica_calls/pages/category/active/venom_nova
-execute if score @s ca.lexica_trig matches 327 run function cartographer_mob_abilities:lexica_calls/pages/category/active/webshot
-execute if score @s ca.lexica_trig matches 328 run function cartographer_mob_abilities:lexica_calls/pages/category/active/wind_nova
-execute if score @s ca.lexica_trig matches 329 run function cartographer_mob_abilities:lexica_calls/pages/category/active/wither_storm
+execute if score @s ca.lexica_trig matches 315 run function cartographer_mob_abilities:lexica_calls/pages/category/active/nova
+execute if score @s ca.lexica_trig matches 316 run function cartographer_mob_abilities:lexica_calls/pages/category/active/healer
+execute if score @s ca.lexica_trig matches 317 run function cartographer_mob_abilities:lexica_calls/pages/category/active/hookshot
+execute if score @s ca.lexica_trig matches 318 run function cartographer_mob_abilities:lexica_calls/pages/category/active/laser
+execute if score @s ca.lexica_trig matches 319 run function cartographer_mob_abilities:lexica_calls/pages/category/active/magic_missile
+execute if score @s ca.lexica_trig matches 320 run function cartographer_mob_abilities:lexica_calls/pages/category/active/smash
+execute if score @s ca.lexica_trig matches 321 run function cartographer_mob_abilities:lexica_calls/pages/category/active/sweep
+execute if score @s ca.lexica_trig matches 322 run function cartographer_mob_abilities:lexica_calls/pages/category/active/trapper
+execute if score @s ca.lexica_trig matches 323 run function cartographer_mob_abilities:lexica_calls/pages/category/active/webshot
+execute if score @s ca.lexica_trig matches 324 run function cartographer_mob_abilities:lexica_calls/pages/category/active/wither_storm
 
 execute if score @s ca.lexica_trig matches 330 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_brutal
 execute if score @s ca.lexica_trig matches 331 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_devious
@@ -124,11 +120,45 @@ execute if score @s ca.lexica_trig matches 336 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 337 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/pyromania
 execute if score @s ca.lexica_trig matches 338 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/spectral
 
-execute if score @s ca.lexica_trig matches 340 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/breaker
-execute if score @s ca.lexica_trig matches 341 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/enderport
-execute if score @s ca.lexica_trig matches 342 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/permacloak
-execute if score @s ca.lexica_trig matches 343 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/quiver
-execute if score @s ca.lexica_trig matches 344 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/reflect
+execute if score @s ca.lexica_trig matches 3041 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/main
+execute if score @s ca.lexica_trig matches 3042 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/main
+execute if score @s ca.lexica_trig matches 3043 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/main
+
+execute if score @s ca.lexica_trig matches 3411 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/dragon_fireball
+execute if score @s ca.lexica_trig matches 3421 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/fire_charge
+execute if score @s ca.lexica_trig matches 3431 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/fireball
+execute if score @s ca.lexica_trig matches 3441 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/potion
+execute if score @s ca.lexica_trig matches 3451 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/shulker_bullet
+execute if score @s ca.lexica_trig matches 3461 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/wither_skull
+
+execute if score @s ca.lexica_trig matches 3412 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/fireskin
+execute if score @s ca.lexica_trig matches 3422 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/scaleskin
+execute if score @s ca.lexica_trig matches 3432 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/shimmerskin
+execute if score @s ca.lexica_trig matches 3442 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/shroudskin
+execute if score @s ca.lexica_trig matches 3452 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/waterskin
+
+execute if score @s ca.lexica_trig matches 3413 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/breaker
+execute if score @s ca.lexica_trig matches 3423 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/enderport
+execute if score @s ca.lexica_trig matches 3433 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/potion_bag
+execute if score @s ca.lexica_trig matches 3443 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/quiver
+execute if score @s ca.lexica_trig matches 3453 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/reflect
+execute if score @s ca.lexica_trig matches 3463 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/touch
+
+execute if score @s ca.lexica_trig matches 3051 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/main
+execute if score @s ca.lexica_trig matches 3052 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/main
+
+execute if score @s ca.lexica_trig matches 3511 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/blazing
+execute if score @s ca.lexica_trig matches 3521 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/glacial
+execute if score @s ca.lexica_trig matches 3531 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/horrifying
+execute if score @s ca.lexica_trig matches 3541 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/overloading
+execute if score @s ca.lexica_trig matches 3551 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/venemous
+execute if score @s ca.lexica_trig matches 3561 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/zephyrous
+
+execute if score @s ca.lexica_trig matches 3512 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/aftershock
+execute if score @s ca.lexica_trig matches 3522 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/carapace
+execute if score @s ca.lexica_trig matches 3532 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/evocative
+execute if score @s ca.lexica_trig matches 3542 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/predator
+execute if score @s ca.lexica_trig matches 3552 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/volatile
 
 #Reset Lexica Trigger Score
 scoreboard players set @s ca.lexica_trig 0

@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Exalted                  ",
+            "color": "white"
+        },
+        "description": {
+            "text": "On death, drops its weapon, and spawns a nearby soul. Souls attempt to reclaim weapons, respawning the mob if they do.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:iron_chestplate"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.exalted\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/death/exalted"
+    },
+    "parent": "cartographer_mob_abilities:death/corpse_crawler"
+}

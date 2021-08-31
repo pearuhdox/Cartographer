@@ -12,21 +12,6 @@ execute store result score @s ca.decay_max run attribute @s minecraft:generic.ma
 
 scoreboard players operation @s ca.decay_max /= @s ca.decay_min
 
-execute if score @s ca.decay_max matches 1 run attribute @s minecraft:generic.movement_speed modifier add 31-4531-2600-000-01 decay_speed -0.08 multiply
-execute if score @s ca.decay_max matches 1 run attribute @s minecraft:generic.attack_damage modifier add 31-4531-2600-000-02 decay_dmg -0.15 multiply
-
-execute if score @s ca.decay_max matches 2 run attribute @s minecraft:generic.movement_speed modifier add 31-4531-2600-000-01 decay_speed -0.16 multiply
-execute if score @s ca.decay_max matches 2 run attribute @s minecraft:generic.attack_damage modifier add 31-4531-2600-000-02 decay_dmg -0.2 multiply
-
-execute if score @s ca.decay_max matches 3 run attribute @s minecraft:generic.movement_speed modifier add 31-4531-2600-000-01 decay_speed -0.24 multiply
-execute if score @s ca.decay_max matches 3 run attribute @s minecraft:generic.attack_damage modifier add 31-4531-2600-000-02 decay_dmg -0.25 multiply
-
-execute if score @s ca.decay_max matches 4 run attribute @s minecraft:generic.movement_speed modifier add 31-4531-2600-000-01 decay_speed -0.32 multiply
-execute if score @s ca.decay_max matches 4 run attribute @s minecraft:generic.attack_damage modifier add 31-4531-2600-000-02 decay_dmg -0.3 multiply
-
-execute if score @s ca.decay_max matches 5.. run attribute @s minecraft:generic.movement_speed modifier add 31-4531-2600-000-01 decay_speed -0.4 multiply
-execute if score @s ca.decay_max matches 5.. run attribute @s minecraft:generic.attack_damage modifier add 31-4531-2600-000-02 decay_dmg -0.35 multiply
-
 scoreboard players remove @s ca.effect_infect 1
 
 execute as @a[scores={ca.effect_infect=0}] run attribute @s minecraft:generic.movement_speed modifier remove 31-4531-2600-000-01

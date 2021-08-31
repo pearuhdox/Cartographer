@@ -18,3 +18,6 @@ tag @s[tag=skip_cauterize] remove skip_cauterize
 
 #Remove 1 from Cauterize's previous burn time.
 scoreboard players remove @s[scores={ca.cau_prv_time=0..}] ca.cau_prv_time 1
+
+#Set nearby players as in combat
+execute as @a[distance=..12] at @s run scoreboard players set @s ca.combat_time 0

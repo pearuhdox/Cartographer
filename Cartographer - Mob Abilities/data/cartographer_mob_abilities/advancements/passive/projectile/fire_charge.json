@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Armament: Fire Charge         ",
+            "color": "white"
+        },
+        "description": {
+            "text": "Shoots Fire Charges instead of their usual projectile.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:blaze_powder"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.shoot_fire_charge\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/passive/projectile/fire_charge"
+    },
+    "parent": "cartographer_mob_abilities:passive/projectile/dragon_fireball"
+}

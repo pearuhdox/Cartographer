@@ -1,3 +1,11 @@
+#Temporary override on enchant disabler
+scoreboard players set $cu_en_ranged ca.enabler 1
+scoreboard players set $cu_en_kill ca.enabler 1
+scoreboard players set $cu_en_melee ca.enabler 1
+scoreboard players set $cu_en_passive ca.enabler 1
+scoreboard players set $cu_en_player_death ca.enabler 1
+scoreboard players set $cu_en_spawner ca.enabler 1
+
 
 #Reset attack speed and kbr on Echo users
 execute as @a[scores={ca.echo=1..,ca.echo_charges=0..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 "echo_effect_spd" 1024 add
@@ -40,19 +48,20 @@ tag @a[tag=auto_charge_inv_fix] remove auto_charge_inv_fix
 
 # Triggers for enchants that must attempt every tick.
 
-#Passive Trigger
-execute if score $cu_en_passive ca.enabler matches 1.. as @a[tag=has_passive_ench] at @s run function cartographer_custom_enchantments:enchant_calls/passively
+#Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
+execute as @a[tag=has_passive_ench] at @s run function cartographer_custom_enchantments:enchant_calls/passively
 
-#Kill trigger
-execute if score $cu_en_kill ca.enabler matches 1.. as @a[scores={ca.kill_entity=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
+#Kill trigger (if score $cu_en_kill ca.enabler matches 1.. )
+execute as @a[scores={ca.kill_entity=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
 
 #Make ranged attack triggers.
-execute if score $cu_en_ranged ca.enabler matches 1.. as @a[scores={ca.fire_bow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
+#if score $cu_en_ranged ca.enabler matches 1..
+execute as @a[scores={ca.fire_bow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 execute if score $cu_en_ranged ca.enabler matches 1.. as @a[scores={ca.fire_cbow=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 execute if score $cu_en_ranged ca.enabler matches 1.. as @a[scores={ca.throw_trident=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
 
-#Break Spawner Trigger
-execute if score $cu_en_spawner ca.enabler matches 1.. as @a[scores={ca.mine_spawner=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
+#Break Spawner Trigger (if score $cu_en_spawner ca.enabler matches 1.. )
+execute as @a[scores={ca.mine_spawner=1..}] at @s run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
 
 #Player Death Trigger
 execute as @a[scores={ca.death_time=0}] at @s run function cartographer_custom_enchantments:enchant_calls/when_player_dies
@@ -62,9 +71,6 @@ execute as @a[scores={ca.death_time=2..20}] at @s run function cartographer_cust
 
 #Tempo Theft Effect - Players
 execute as @a[scores={ca.temp_warp=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect
-
-#Break Concealed
-execute as @a[scores={ca.concealed=0,ca.conceal_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/concealed/consume
 
 #Infinity 3.0
 execute as @a at @s run function cartographer_custom_enchantments:enchant_effects/infinity/player
@@ -95,6 +101,7 @@ tag @a[tag=doing_auto_charge] remove doing_auto_charge
 execute as @a[scores={ca.adren_time=1..},tag=!kill_buff_checked] at @s run function cartographer_custom_enchantments:enchant_effects/kill_buff_handler
 execute as @a[scores={ca.frenz_time=1..},tag=!kill_buff_checked] at @s run function cartographer_custom_enchantments:enchant_effects/kill_buff_handler
 execute as @a[scores={ca.energ_time=1..},tag=!kill_buff_checked] at @s run function cartographer_custom_enchantments:enchant_effects/kill_buff_handler
+execute as @a[scores={ca.conceal_time=1..},tag=!kill_buff_checked] at @s run function cartographer_custom_enchantments:enchant_effects/kill_buff_handler
 
 tag @a remove kill_buff_checked
 
@@ -114,6 +121,10 @@ execute as @a[scores={ca.ui_loc=2}] at @s run function cartographer_custom_encha
 
 tag @a[scores={ca.repeating=0}] remove showing_repeating
 tag @a[scores={ca.echo=0}] remove showing_echo
+
+#Increment combat time by 1.
+scoreboard players add @a[scores={ca.combat_time=..39}] ca.combat_time 1
+execute as @a unless score @s ca.combat_time matches 0.. run scoreboard players set @s ca.combat_time 0
 
 #Just in case
 execute as @a run function cartographer_custom_enchantments:calc_enchant/slot_change

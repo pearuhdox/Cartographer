@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.pyromania\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Pyromania                ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "On death, the enemy drops a firebringer which creates fire and lava. The firebringer can be destroyed by placing a block on it."
+        },
+        "icon": {
+            "item": "minecraft:campfire"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/death/pyromania"
+    },
+    "parent": "cartographer_mob_abilities:death/parting_gift"
+}

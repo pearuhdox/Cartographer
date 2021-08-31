@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.magic_missile\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Magic Missile            ",
+            "color": "white"
+        },
+        "description": {
+            "text": "The enemy can create a projectile that chases players. When it collides with players, blocks, or attacks, it deals damage to nearby entities.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:crying_obsidian"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/magic_missile"
+    },
+    "parent": "cartographer_mob_abilities:active/laser"
+}

@@ -21,4 +21,4 @@ execute if entity @s[tag=ca.touch] if entity @s[tag=ca.venemous] run scoreboard 
 execute if entity @s[tag=ca.touch] if entity @s[tag=ca.volatile] run scoreboard players set $voatile ca.touch_check 1
 execute if entity @s[tag=ca.touch] if entity @s[tag=ca.zephyrous] run scoreboard players set $zephyrous ca.touch_check 1
 
-execute if entity @s[tag=hookshot,scores={ca.hooked=1..}] run tag @s add hook_broken
+execute if entity @s[tag=ca.hookshot,scores={ca.hooked=1..}] run tag @s add hook_broken

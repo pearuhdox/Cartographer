@@ -13,7 +13,7 @@ execute unless score $global_past helper_diff = $global helper_diff run scoreboa
 execute as @a[tag=!token_reset] at @s run function cartographer_mob_abilities:load/token_reset
 
 #Do a line of sight check on one mob that *doesn't* have Line of Sight.
-execute if score $do_los flag matches 1 as @e[type=#cartographer_core:hostile,tag=!los_checked,tag=has_active,scores={cooldown=0},limit=1,sort=random] at @s run function cartographer_mob_abilities:helper/los_check/scan
+execute if score $do_los flag matches 1 as @e[type=#cartographer_core:hostile,tag=!los_checked,tag=ca.has_active,scores={cooldown=0},limit=1,sort=random] at @s run function cartographer_mob_abilities:helper/los_check/scan
 
 #Unflag the check for needing los
 scoreboard players set $do_los flag 0

@@ -73,6 +73,7 @@ scoreboard objectives add ca.t_knock dummy
 scoreboard objectives add ca.s_adren dummy
 scoreboard objectives add ca.s_frenzy dummy
 scoreboard objectives add ca.s_energ dummy
+scoreboard objectives add ca.s_con dummy
 
 scoreboard objectives add ca.loyalty dummy
 scoreboard objectives add ca.fire_aspect dummy
@@ -108,6 +109,10 @@ scoreboard objectives add ca.cau_prv_time dummy
 
 scoreboard objectives add ca.brittle_time dummy
 scoreboard objectives add ca.brittle_hlth dummy
+
+scoreboard objectives add ca.combat_time dummy
+
+scoreboard objectives add ca.armor_count dummy
 
 #Setup ca.evasion bias score.
 scoreboard objectives add ca.evasion_bias dummy

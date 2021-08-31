@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Morbids                   ",
+            "color": "yellow"
+        },
+        "description": {
+            "text": "Mob attacks and effects that activate when they die.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "cartographer_mob_abilities:root"
+}

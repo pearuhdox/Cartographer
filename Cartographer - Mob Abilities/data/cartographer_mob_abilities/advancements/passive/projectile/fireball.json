@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Armament: Fireball            ",
+            "color": "white"
+        },
+        "description": {
+            "text": "Shoots Fireballs instead of their usual projectile.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:fire_charge"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.shoot_fireball\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/passive/projectile/fireball"
+    },
+    "parent": "cartographer_mob_abilities:passive/projectile/fire_charge"
+}

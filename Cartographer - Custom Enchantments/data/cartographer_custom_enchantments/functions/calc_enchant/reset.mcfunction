@@ -85,6 +85,7 @@ scoreboard players set @s ca.t_knock 0
 scoreboard players set @s ca.s_adren 0
 scoreboard players set @s ca.s_energ 0
 scoreboard players set @s ca.s_frenzy 0
+scoreboard players set @s ca.s_con 0
 
 tag @s remove has_passive_ench
 

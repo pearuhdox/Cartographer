@@ -9,9 +9,6 @@ execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_cu
 #Lifesteal
 execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal
 
-#Concealed Consume
-execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.concealed=1..}] run function cartographer_custom_enchantments:enchant_effects/concealed/consume
-
 #Committed
 execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/committed
 #Decay
@@ -47,8 +44,8 @@ execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.a
 #Echo Charge Restore
 function cartographer_custom_enchantments:enchant_effects/echo_restore
 
-#Concealed Restore
-execute if score $cu_en_passive ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/concealed/restore
+#Concealed Restore (if score $cu_en_passive ca.enabler matches 1..)
+function cartographer_custom_enchantments:enchant_effects/concealed/restore
 
 #Call Invul Timer for Mob Abilities
 scoreboard players set $invul_time_check invul 25

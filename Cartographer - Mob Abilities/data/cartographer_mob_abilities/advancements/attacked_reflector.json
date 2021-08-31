@@ -13,7 +13,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"reflect_ranged\"]}"
+              "nbt": "{Tags:[\"ca.reflect_ranged\"]}"
             }
           }
         ]
@@ -39,7 +39,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"reflect_melee\"]}"
+              "nbt": "{Tags:[\"ca.reflect_melee\"]}"
             }
           }
         ]

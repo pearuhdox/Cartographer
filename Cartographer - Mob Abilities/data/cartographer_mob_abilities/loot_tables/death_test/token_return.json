@@ -24,7 +24,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"heavy_priority\"]}"
+                "nbt": "{Tags:[\"ca.heavy_priority\"]}"
               }
             }
           ]
@@ -50,7 +50,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"light_priority\"]}"
+                "nbt": "{Tags:[\"ca.light_priority\"]}"
               }
             }
           ]
@@ -79,84 +79,56 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"webshot\"]}"
+                    "nbt": "{Tags:[\"ca.webshot\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"trapper\"]}"
+                    "nbt": "{Tags:[\"ca.trapper\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"sweep\"]}"
+                    "nbt": "{Tags:[\"ca.sweep\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"smash\"]}"
+                    "nbt": "{Tags:[\"ca.smash\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"wind_nova\"]}"
+                    "nbt": "{Tags:[\"ca.nova\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"soulfire_nova\"]}"
+                    "nbt": "{Tags:[\"ca.disarm\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"venom_nova\"]}"
+                    "nbt": "{Tags:[\"ca.charge\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"frost_nova\"]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"nova\"]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"disarm\"]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"charge\"]}"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{Tags:[\"ambush\"]}"
+                    "nbt": "{Tags:[\"ca.ambush\"]}"
                   }
                 }
               ]
@@ -167,7 +139,7 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "nbt": "{Tags:[\"heavy_priority\"]}"
+                  "nbt": "{Tags:[\"ca.heavy_priority\"]}"
                 }
               }
             }
@@ -197,14 +169,14 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"wither_storm\"]}"
+                    "nbt": "{Tags:[\"ca.wither_storm\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"magic_missile\"]}"
+                    "nbt": "{Tags:[\"ca.magic_missile\"]}"
                   }
                 },
                 {
@@ -218,35 +190,35 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"hookshot\"]}"
+                    "nbt": "{Tags:[\"ca.hookshot\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"healer\"]}"
+                    "nbt": "{Tags:[\"ca.healer\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"duplicator\"]}"
+                    "nbt": "{Tags:[\"ca.duplicator\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"cloaker\"]}"
+                    "nbt": "{Tags:[\"ca.cloaker\"]}"
                   }
                 },
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"augmenter\"]}"
+                    "nbt": "{Tags:[\"ca.augmenter\"]}"
                   }
                 }
               ]
@@ -257,7 +229,7 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "nbt": "{Tags:[\"light_priority\"]}"
+                  "nbt": "{Tags:[\"ca.light_priority\"]}"
                 }
               }
             }
