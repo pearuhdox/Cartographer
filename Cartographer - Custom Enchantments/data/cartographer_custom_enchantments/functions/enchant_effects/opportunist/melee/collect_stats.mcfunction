@@ -50,10 +50,10 @@ execute if data storage ca.opportunist:enchants offhand{id:"minecraft:netherite_
 execute if data storage ca.opportunist:enchants offhand{id:"minecraft:netherite_axe"} run scoreboard players set @s op_dmg 10
 execute if data storage ca.opportunist:enchants offhand{id:"minecraft:netherite_sword"} run scoreboard players set @s op_dmg 8
 
-execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Committed
+execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Exposing
 scoreboard players operation @s op_com += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Decay
+execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Infection
 scoreboard players operation @s op_dec += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Duelist
@@ -68,7 +68,7 @@ scoreboard players operation @s op_fro += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Hunter
 scoreboard players operation @s op_hun += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Overload
+execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Electrocute
 scoreboard players operation @s op_ove += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Stunning
@@ -77,10 +77,10 @@ scoreboard players operation @s op_stu += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Transfiguration
 scoreboard players operation @s op_tra += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Vanquisher
+execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Unchanting
 scoreboard players operation @s op_van += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Vicious
+execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Bleeding
 scoreboard players operation @s op_vic += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.opportunist:enchants offhand.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl

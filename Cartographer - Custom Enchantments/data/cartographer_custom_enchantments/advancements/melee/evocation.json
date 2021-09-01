@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Evocation                ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Crit, sneaking, and sprint attacks create Evoker fangs when you attack the mobs, at the cost of a longer attack cooldown."
+        },
+        "icon": {
+            "item": "minecraft:shears"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"evocation\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/evocation"
+    },
+    "parent": "cartographer_custom_enchantments:melee/electrocute"
+}

@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Surging Strike            ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Attacks with this melee weapon create \"thrust attacks\" that do damage to enemies in a piercing pattern. Sprinting increases the distance of the pierce.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:stone_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"surging_strike\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/surging_strike"
+    },
+    "parent": "cartographer_custom_enchantments:melee/stunning"
+}

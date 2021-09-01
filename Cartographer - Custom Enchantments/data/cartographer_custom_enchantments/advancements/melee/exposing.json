@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"exposing\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Exposing                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Melee attacks with this weapon inflict Exposed.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/exposing"
+    },
+    "parent": "cartographer_custom_enchantments:melee/executioner"
+}

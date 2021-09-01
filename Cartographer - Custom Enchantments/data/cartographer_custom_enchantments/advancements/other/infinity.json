@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"infinity\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Infinity                 ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "When on a consumable item, grants infinite usage of the item."
+        },
+        "icon": {
+            "item": "minecraft:arrow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/other/infinity"
+    },
+    "parent": "cartographer_custom_enchantments:tree_other"
+}

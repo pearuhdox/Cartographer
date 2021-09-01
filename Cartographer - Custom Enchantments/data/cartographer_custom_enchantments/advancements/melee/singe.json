@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"singe\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Hunter                   ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Melee attacks with this weapon do additional damage to mobs that are on fire (or fiery mobs)."
+        },
+        "icon": {
+            "item": "minecraft:blaze_powder"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/singe"
+    },
+    "parent": "cartographer_custom_enchantments:melee/infection"
+}

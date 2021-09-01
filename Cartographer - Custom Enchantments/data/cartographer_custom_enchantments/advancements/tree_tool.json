@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Tools                    ",
+            "color": "yellow"
+        },
+        "description": {
+            "text": "Enchantments that affect tools.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:iron_pickaxe"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "parent": "cartographer_custom_enchantments:root"
+}

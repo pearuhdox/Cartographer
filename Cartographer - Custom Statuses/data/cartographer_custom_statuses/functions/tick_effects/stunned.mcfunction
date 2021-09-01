@@ -1,10 +1,9 @@
-execute store result score @s ca.stun_resist run attribute @s minecraft:generic.knockback_resistance get 20
-scoreboard players operation @s ca.stun_res_ct = $20 ca.CONSTANT
-scoreboard players operation @s ca.stun_res_ct -= @s ca.stun_resist
+execute unless entity @s[tag=shocked_tick] run execute store result score @s ca.stun_resist run attribute @s minecraft:generic.knockback_resistance get 20
+execute unless entity @s[tag=shocked_tick] run scoreboard players operation @s ca.stun_res_ct = $20 ca.CONSTANT
+execute unless entity @s[tag=shocked_tick] run scoreboard players operation @s ca.stun_res_ct -= @s ca.stun_resist
 
 
 scoreboard players remove @s ca.effect_stun 1
-
 
 execute if score @s ca.stun_resist matches 2.. run scoreboard players add @s ca.stun_res_time 1
 execute if score @s ca.stun_resist matches 2.. if score @s ca.stun_res_time = @s ca.stun_res_ct run scoreboard players operation @s ca.effect_stun -= @s ca.stun_resist

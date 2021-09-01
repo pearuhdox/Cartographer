@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Curse of Regret          ",
+            "color": "red"
+        },
+        "description": {
+            "text": "The user is damaged when they use this item. The higher the level, the more damage is dealt.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"curse_regret\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/curse/regret"
+    },
+    "parent": "cartographer_custom_enchantments:curse/malevolence"
+}

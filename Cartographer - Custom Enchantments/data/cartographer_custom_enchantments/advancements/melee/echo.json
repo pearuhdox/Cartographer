@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"echo\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Echo                     ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Your weapon stores charges when you kill enemies that when attacking, are consumed to instantly refresh your attack meter.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:diamond_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/echo"
+    },
+    "parent": "cartographer_custom_enchantments:melee/duelist"
+}

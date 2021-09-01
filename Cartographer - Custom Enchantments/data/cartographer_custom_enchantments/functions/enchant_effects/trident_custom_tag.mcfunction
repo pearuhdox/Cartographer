@@ -36,10 +36,10 @@ execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.frostbite=3}] 
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.frostbite=4}] run tag @s add is_frostbite_4
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.frostbite=5}] run tag @s add is_frostbite_5
 
-#Committed Ranged Synergy
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.committed=1}] run tag @s add is_committed_1
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.committed=2}] run tag @s add is_committed_2
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.committed=3}] run tag @s add is_committed_3
+#Exposing Ranged Synergy
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.exposing=1}] run tag @s add is_exposing_1
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.exposing=2}] run tag @s add is_exposing_2
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.exposing=3}] run tag @s add is_exposing_3
 
 #Stunning Ranged Synergy
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.stunning=1}] run tag @s add is_stunning_1
@@ -48,20 +48,20 @@ execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.stunning=3}] r
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.stunning=4}] run tag @s add is_stunning_4
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.stunning=5}] run tag @s add is_stunning_5
 
-#Decay Ranged Synergy
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.decay=1}] run tag @s add is_decay_1
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.decay=2}] run tag @s add is_decay_2
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.decay=3}] run tag @s add is_decay_3
+#Infection Ranged Synergy
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.infection=1}] run tag @s add is_infection_1
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.infection=2}] run tag @s add is_infection_2
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.infection=3}] run tag @s add is_infection_3
 
-#Overload Ranged Synergy
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.overload=1}] run tag @s add is_overload_1
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.overload=2}] run tag @s add is_overload_2
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.overload=3}] run tag @s add is_overload_3
+#Electrocute Ranged Synergy
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.electrocute=1}] run tag @s add is_electrocute_1
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.electrocute=2}] run tag @s add is_electrocute_2
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.electrocute=3}] run tag @s add is_electrocute_3
 
-#Vicious Ranged Synergy
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.vicious=1}] run tag @s add is_vicious_1
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.vicious=2}] run tag @s add is_vicious_2
-execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.vicious=3}] run tag @s add is_vicious_3
+#Bleeding Ranged Synergy
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.bleeding=1}] run tag @s add is_bleeding_1
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.bleeding=2}] run tag @s add is_bleeding_2
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.bleeding=3}] run tag @s add is_bleeding_3
 
 #Fire Aspect Ranged Synergy
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.fire_aspect=1}] run tag @s add is_fire_aspect_1

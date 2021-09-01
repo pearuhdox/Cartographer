@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"satiation\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Satiation                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When the user consumes food, gain a brief Absorption shield.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:golden_carrot"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/satiation"
+    },
+    "parent": "cartographer_custom_enchantments:passive/regeneration"
+}

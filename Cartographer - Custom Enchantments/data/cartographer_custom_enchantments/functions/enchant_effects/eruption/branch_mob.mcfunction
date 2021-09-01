@@ -32,25 +32,25 @@ execute if score $eruption ca.frostbite matches 5 as @s run scoreboard players s
 execute if score $eruption ca.frostbite matches 1.. run particle minecraft:item_snowball ~ ~1 ~ 0.3 0.5 0.3 0.5 15 normal
 execute if score $eruption ca.frostbite matches 1.. run scoreboard players set @s ca.frost_time 81
 
-execute if score $eruption ca.decay matches 1 as @s run scoreboard players set @s ca.effect_infect 3
-execute if score $eruption ca.decay matches 2 as @s run scoreboard players set @s ca.effect_infect 5
-execute if score $eruption ca.decay matches 3 as @s run scoreboard players set @s ca.effect_infect 7
-execute if score $eruption ca.decay matches 1.. run particle minecraft:dust 0.1 0 0 0.25 ~ ~1 ~ 0.3 0.5 0.3 0.5 15 normal
+execute if score $eruption ca.infection matches 1 as @s run scoreboard players set @s ca.effect_infect 3
+execute if score $eruption ca.infection matches 2 as @s run scoreboard players set @s ca.effect_infect 5
+execute if score $eruption ca.infection matches 3 as @s run scoreboard players set @s ca.effect_infect 7
+execute if score $eruption ca.infection matches 1.. run particle minecraft:dust 0.1 0 0 0.25 ~ ~1 ~ 0.3 0.5 0.3 0.5 15 normal
 
-execute if score $eruption ca.overload matches 1 as @s run scoreboard players set @s ca.effect_shock 3
-execute if score $eruption ca.overload matches 2 as @s run scoreboard players set @s ca.effect_shock 5
-execute if score $eruption ca.overload matches 3 as @s run scoreboard players set @s ca.effect_shock 7
-execute if score $eruption ca.overload matches 1.. run particle minecraft:firework ~ ~1 ~ 0.5 0.5 0.5 0.2 10 normal
+execute if score $eruption ca.electrocute matches 1 as @s run scoreboard players set @s ca.effect_shock 3
+execute if score $eruption ca.electrocute matches 2 as @s run scoreboard players set @s ca.effect_shock 5
+execute if score $eruption ca.electrocute matches 3 as @s run scoreboard players set @s ca.effect_shock 7
+execute if score $eruption ca.electrocute matches 1.. run particle minecraft:firework ~ ~1 ~ 0.5 0.5 0.5 0.2 10 normal
 
-execute if score $eruption ca.vicious matches 1.. as @s run scoreboard players add @s[scores={ca.effect_bleed=1..},type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] ca.effect_bleed 1
+execute if score $eruption ca.bleeding matches 1.. as @s run scoreboard players add @s[scores={ca.effect_bleed=1..},type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] ca.effect_bleed 1
 
-execute if score $eruption ca.vicious matches 1.. as @s unless entity @s[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players add @s ca.effect_bleed 3
+execute if score $eruption ca.bleeding matches 1.. as @s unless entity @s[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players add @s ca.effect_bleed 3
 
-execute if score $eruption ca.vicious matches 1 run scoreboard players add @s ca.bleed_potency 1
-execute if score $eruption ca.vicious matches 2 run scoreboard players add @s ca.bleed_potency 2
-execute if score $eruption ca.vicious matches 3.. run scoreboard players add @s ca.bleed_potency 3
+execute if score $eruption ca.bleeding matches 1 run scoreboard players add @s ca.bleed_potency 1
+execute if score $eruption ca.bleeding matches 2 run scoreboard players add @s ca.bleed_potency 2
+execute if score $eruption ca.bleeding matches 3.. run scoreboard players add @s ca.bleed_potency 3
 
-execute if score $eruption ca.vicious matches 1.. run particle minecraft:block minecraft:redstone_block ~ ~1 ~ 0.25 0.4 0.25 0 10 normal
+execute if score $eruption ca.bleeding matches 1.. run particle minecraft:block minecraft:redstone_block ~ ~1 ~ 0.25 0.4 0.25 0 10 normal
 
 execute if score $eruption ca.stunning matches 1.. run function cartographer_core:helper/randomize
 execute if score $eruption ca.stunning matches 1.. run scoreboard players operation @s ca.melee_chance = @s random
@@ -73,6 +73,6 @@ execute if score $eruption ca.stunning matches 3 run scoreboard players set @s c
 execute if score $eruption ca.stunning matches 4 run scoreboard players set @s ca.effect_stun 21
 execute if score $eruption ca.stunning matches 5 run scoreboard players set @s ca.effect_stun 21
 
-execute if score $eruption ca.committed matches 1 as @s run effect give @s bad_omen 3 0
-execute if score $eruption ca.committed matches 2 as @s run effect give @s bad_omen 3 1
-execute if score $eruption ca.committed matches 3 as @s run effect give @s bad_omen 3 2
+execute if score $eruption ca.exposing matches 1 as @s run effect give @s bad_omen 3 0
+execute if score $eruption ca.exposing matches 2 as @s run effect give @s bad_omen 3 1
+execute if score $eruption ca.exposing matches 3 as @s run effect give @s bad_omen 3 2

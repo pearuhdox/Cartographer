@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Tempest                  ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Trident throws deal additional damage."
+        },
+        "icon": {
+            "item": "minecraft:trident"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"tempest\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/tempest"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/ricochet"
+}

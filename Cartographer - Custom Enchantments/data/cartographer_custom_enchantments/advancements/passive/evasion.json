@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"evasion\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Evasion                  ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Grants a small chance (per level) to dodge an attack, negating it entirely. When you dodge, blind nearby enemies.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:feather"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/evasion"
+    },
+    "parent": "cartographer_custom_enchantments:passive/energetic"
+}

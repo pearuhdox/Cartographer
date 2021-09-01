@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{RepairCost:60}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Curse of Irreparability  ",
+            "color": "red"
+        },
+        "description": {
+            "color": "white",
+            "text": "This item cannot be repaired by an anvil."
+        },
+        "icon": {
+            "item": "minecraft:damaged_anvil"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/curse/irreparability"
+    },
+    "parent": "cartographer_custom_enchantments:curse/encumbering"
+}

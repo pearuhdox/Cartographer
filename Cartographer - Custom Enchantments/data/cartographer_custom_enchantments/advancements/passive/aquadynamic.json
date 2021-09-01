@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"aquadynamic\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Aquadynamic              ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "The user enters water with Dolphins Grace. The user gains Conduit Power when moving slow in water."
+        },
+        "icon": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/aquadynamic"
+    },
+    "parent": "cartographer_custom_enchantments:passive/agility"
+}

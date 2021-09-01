@@ -7,30 +7,30 @@ execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecra
 execute if entity @s[scores={ca.cauterize=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.cauterize 1
 execute if entity @s[scores={ca.cauterize=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
-execute if entity @s[scores={ca.rend=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.rend 1
-execute if entity @s[scores={ca.rend=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
+execute if entity @s[scores={ca.bleed=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.bleed 1
+execute if entity @s[scores={ca.bleed=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
-execute if entity @s[scores={ca.conductive=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.conductive 1
-execute if entity @s[scores={ca.conductive=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
+execute if entity @s[scores={ca.electrode=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.electrode 1
+execute if entity @s[scores={ca.electrode=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
 execute if entity @s[scores={ca.frost=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.frost 1
 execute if entity @s[scores={ca.frost=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
-execute if entity @s[scores={ca.pin_down=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.pin_down 1
-execute if entity @s[scores={ca.pin_down=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
+execute if entity @s[scores={ca.expose=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.expose 1
+execute if entity @s[scores={ca.expose=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
-execute if entity @s[scores={ca.putrefy=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.putrefy 1
-execute if entity @s[scores={ca.putrefy=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
+execute if entity @s[scores={ca.infect=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.infect 1
+execute if entity @s[scores={ca.infect=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
 execute if entity @s[scores={ca.flash=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
-execute if entity @s[scores={ca.volatile=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.volatile 1
-execute if entity @s[scores={ca.volatile=1..}] as @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] at @s store result score @s ca.vol_dmg run data get entity @s damage 10
-execute if entity @s[scores={ca.volatile=1..}] as @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] at @s run data merge entity @s {damage:0.0d}
-execute if entity @s[scores={ca.volatile=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
+execute if entity @s[scores={ca.explosive=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.explosive 1
+execute if entity @s[scores={ca.explosive=1..}] as @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] at @s store result score @s ca.vol_dmg run data get entity @s damage 10
+execute if entity @s[scores={ca.explosive=1..}] as @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] at @s run data merge entity @s {damage:0.0d}
+execute if entity @s[scores={ca.explosive=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
-execute if entity @s[scores={ca.volatile=1..},nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:flame",lvl:1s}]}}}] at @s run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add vol_flame
-execute if entity @s[scores={ca.volatile=1..},nbt={Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecraft:flame",lvl:1s}]}}]}] at @s run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add vol_flame
+execute if entity @s[scores={ca.explosive=1..},nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:flame",lvl:1s}]}}}] at @s run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add vol_flame
+execute if entity @s[scores={ca.explosive=1..},nbt={Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecraft:flame",lvl:1s}]}}]}] at @s run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add vol_flame
 
 execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}}}] at @s run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.punch 1
 execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:punch",lvl:2s}]}}}] at @s run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.punch 2

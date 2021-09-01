@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"curse_two_handed\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Two Handed               ",
+            "color": "red"
+        },
+        "description": {
+            "color": "white",
+            "text": "While held, disables the offhand slot. Any items placed into the offhand are compressed and unusable until the item is not held."
+        },
+        "icon": {
+            "item": "minecraft:stone_axe"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/curse/two_handed"
+    },
+    "parent": "cartographer_custom_enchantments:curse/shattering"
+}

@@ -10,5 +10,3 @@ execute if entity @s[scores={ca.thorns=1..}] run function cartographer_custom_en
 
 #Concealed ()
 execute if entity @s[scores={ca.conceal_time=1..}] run function cartographer_custom_enchantments:enchant_effects/concealed/consume
-
-say hi

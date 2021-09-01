@@ -23,46 +23,8 @@ Custom Enchantments:
     - Increases by 50% (multiplicative of all bow effects) for each level (max of 3 levels)
     - Each level adds an additional 0.5 seconds to the maximum bonus charge.
 
-  - Added Resourceful:
-    - Grants a 10% chance per level to not consume a given anything.
-      - Includes all consumables, arrows, and durability.
-
 Custom Statuses:
   - Added a Global Option to enable Critical Hits while players are Blind or Slow Falling.
-
-
-  THIS CHANGE YET TO BE MADE
-  - Luck / Bad Luck now have effects on players.
-    - Any chance based effect in Cartographer if it fails, rolls an additional time per positive luck to see if it passes.
-    - Any chance based effect in Cartographer if it passes, rolls an additional time per negative luck to see if it fails.
-      - Based on positive/negative, the pass/fail check is accepted as the actual outcome.
-
-    - This effect can be decoupled from the Luck / Bad Luck attribute via a setting. The scoreboard can still be set and behavior will be the same.
-
-    - With Luck/Unluck, effects that grant buffs have a 20% chance to be rolled for +2/-2 second duration.
-    - Effects that heal the player have a 20% chance to do +1/-1 healing.
-      - Additional points of Luck reroll additional times for favorable/unfavorable outcomes.
-
-    - Effects that count:
-      - Evasion - Done
-      - Stunning
-      - Flash
-      - Transfiguration
-      - Shocked proc-effects (transferred luck coeff from player to mob)
-      - Evocation (at higher levels)
-      - Curse of Regret
-
-    - For healing bonuses:
-      - Sapper
-      - Regeneration
-      - Rally
-      - Lifesteal
-
-    - For duration bonuses:
-      - Frenzy
-      - Adrenaline
-      - Energetic
-      - Tempo Theft
 
 Mob Abilities:
 
@@ -129,7 +91,6 @@ Changes:
 Custom Enchantments:
   - All custom nbt of custom enchantments has been reformatted and revamped.
 
-  THIS CHANGE YET TO BE MADE
   - Some enchantments have received name changes in order to make them easier to understand and differentiate from other effects.
     - Vicious and Rend have been renamed to Bleeding and Bleed
     - Overload and Conductive have been renamed to Electrocute and Electrode

@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Frostbite                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Melee attacks with this weapon inflict Slowness.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:snowball"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"frostbite\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/frostbite"
+    },
+    "parent": "cartographer_custom_enchantments:melee/exposing"
+}

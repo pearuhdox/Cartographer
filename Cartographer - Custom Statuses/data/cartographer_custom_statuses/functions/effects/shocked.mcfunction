@@ -9,7 +9,8 @@ execute if entity @s[scores={random=101..}] run scoreboard players set @s random
 
 execute if entity @s[scores={random=71..85}] unless entity @s[tag=shocked_tick] as @e[type=#cartographer_core:hostile,distance=..3,limit=3,sort=nearest,tag=!shocked_tick] at @s run function cartographer_core:helper/push_third
 execute if entity @s[scores={random=86..100}] unless entity @s[tag=shocked_tick] run scoreboard players set @e[type=#cartographer_core:hostile,distance=..3,limit=3,sort=nearest,tag=!shocked_tick] ca.effect_stun 11
-execute if entity @s[scores={random=..70}] unless entity @s[tag=shocked_tick] run scoreboard players add @s ca.pity_shock 7
+
+execute if entity @s[scores={random=..70}] unless entity @s[tag=shocked_tick] run scoreboard players add @s ca.pity_shock 10
 execute if entity @s[scores={random=71..}] unless entity @s[tag=shocked_tick] run scoreboard players set @s ca.pity_shock 0
 
 execute if entity @s[scores={random=..71}] unless entity @s[tag=shocked_tick] run particle minecraft:electric_spark ~ ~1 ~ 0.35 0.35 0.35 1 10 normal

@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Agility                  ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "The user's jump strength is increased."
+        },
+        "icon": {
+            "item": "minecraft:slime_ball"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"agility\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/agility"
+    },
+    "parent": "cartographer_custom_enchantments:passive/adrenaline"
+}

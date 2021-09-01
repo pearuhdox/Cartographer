@@ -9,23 +9,23 @@ execute if entity @s[scores={ca.frostbite=4}] as @e[type=#cartographer_core:host
 execute if entity @s[scores={ca.frostbite=5..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.frost_tier 5
 execute if entity @s[scores={ca.frostbite=1..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.frost_time 81
 
-execute if entity @s[scores={ca.decay=1}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_infect 3
-execute if entity @s[scores={ca.decay=2}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_infect 5
-execute if entity @s[scores={ca.decay=3..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_infect 7
+execute if entity @s[scores={ca.infection=1}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_infect 3
+execute if entity @s[scores={ca.infection=2}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_infect 5
+execute if entity @s[scores={ca.infection=3..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_infect 7
 
-execute if entity @s[scores={ca.committed=1}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run effect give @s bad_omen 4 0
-execute if entity @s[scores={ca.committed=2}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run effect give @s bad_omen 4 1
-execute if entity @s[scores={ca.committed=3..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run effect give @s bad_omen 4 2
+execute if entity @s[scores={ca.exposing=1}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run effect give @s bad_omen 4 0
+execute if entity @s[scores={ca.exposing=2}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run effect give @s bad_omen 4 1
+execute if entity @s[scores={ca.exposing=3..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run effect give @s bad_omen 4 2
 
-execute if entity @s[scores={ca.vicious=1..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players add @s[scores={ca.effect_bleed=1..},type=#cartographer_core:hostile,nbt=!{HurtTime:0s}] ca.effect_bleed 11
+execute if entity @s[scores={ca.bleeding=1..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players add @s[scores={ca.effect_bleed=1..},type=#cartographer_core:hostile,nbt=!{HurtTime:0s}] ca.effect_bleed 11
 
-execute if entity @s[scores={ca.vicious=1}] as @e[type=#cartographer_core:hostile,distance=..1] at @s unless entity @s[type=#cartographer_core:hostile,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 3
-execute if entity @s[scores={ca.vicious=2}] as @e[type=#cartographer_core:hostile,distance=..1] at @s unless entity @s[type=#cartographer_core:hostile,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 5
-execute if entity @s[scores={ca.vicious=3..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s unless entity @s[type=#cartographer_core:hostile,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 7
+execute if entity @s[scores={ca.bleeding=1}] as @e[type=#cartographer_core:hostile,distance=..1] at @s unless entity @s[type=#cartographer_core:hostile,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 3
+execute if entity @s[scores={ca.bleeding=2}] as @e[type=#cartographer_core:hostile,distance=..1] at @s unless entity @s[type=#cartographer_core:hostile,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 5
+execute if entity @s[scores={ca.bleeding=3..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s unless entity @s[type=#cartographer_core:hostile,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 7
 
-execute if entity @s[scores={ca.overload=1}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_shock 3
-execute if entity @s[scores={ca.overload=2}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_shock 5
-execute if entity @s[scores={ca.overload=3..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_shock 7
+execute if entity @s[scores={ca.electrocute=1}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_shock 3
+execute if entity @s[scores={ca.electrocute=2}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_shock 5
+execute if entity @s[scores={ca.electrocute=3..}] as @e[type=#cartographer_core:hostile,distance=..1] at @s run scoreboard players set @s ca.effect_shock 7
 
 execute if entity @s[scores={ca.stunning=1..}] run function cartographer_core:helper/randomize
 execute if entity @s[scores={ca.stunning=1..}] run scoreboard players operation @s ca.melee_chance = @s random

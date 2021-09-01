@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Tempo Theft              ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Arrows fired from this weapon temporarily steal movement speed from enemies."
+        },
+        "icon": {
+            "item": "minecraft:scute"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"tempo_theft\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/tempo_theft"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/sharpshot"
+}

@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"energetic\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Energetic                ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "When the user slays a mob, they gain a speed boost that shrinks over time."
+        },
+        "icon": {
+            "item": "minecraft:honeycomb"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/energetic"
+    },
+    "parent": "cartographer_custom_enchantments:passive/concealed"
+}

@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Executioner              ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Melee attacks from this weapon finish off enemies left at low health."
+        },
+        "icon": {
+            "item": "minecraft:netherite_axe"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"executioner\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/executioner"
+    },
+    "parent": "cartographer_custom_enchantments:melee/evocation"
+}

@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Lifesteal      ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Restores health when the user kills a mob."
+        },
+        "icon": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"lifesteal\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/lifesteal"
+    },
+    "parent": "cartographer_custom_enchantments:passive/frenzy"
+}

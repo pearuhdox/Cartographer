@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Thorns                   ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When the user is attacked, they retaliate against their attacker, dealing damage. If the armor has on hit melee effect enchantments (such as Fire Aspect) those are also applied.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:dead_bush"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"thorns\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/thorns"
+    },
+    "parent": "cartographer_custom_enchantments:passive/spurs"
+}

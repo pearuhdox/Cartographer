@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Adrenaline               ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When the user slays a mob, they gain a speed boost that shrinks over time.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:sugar"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"adrenaline\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/adrenaline"
+    },
+    "parent": "cartographer_custom_enchantments:tree_passive"
+}

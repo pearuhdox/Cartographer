@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"hunter\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Hunter                   ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Melee attacks with this weapon do additional damage to \"monstrous\" mobs (such as Creepers, Blazes, normal Piglins, and Endermen)."
+        },
+        "icon": {
+            "item": "minecraft:creeper_head"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/hunter"
+    },
+    "parent": "cartographer_custom_enchantments:melee/frostbite"
+}

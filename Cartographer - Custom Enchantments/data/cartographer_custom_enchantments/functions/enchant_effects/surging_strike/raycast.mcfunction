@@ -2,8 +2,8 @@ scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
 execute unless block ^ ^ ^0.5 #cartographer_core:can_raycast run scoreboard players set @s ca.raycast 0
 
-execute unless score $melee ca.fire_aspect matches 1.. unless score $melee ca.frostbite matches 1.. unless score $melee ca.committed matches 1.. unless score $melee ca.decay matches 1.. unless score $melee ca.overload matches 1.. unless score $melee ca.vicious matches 1.. unless score @s ca.raycast matches 0 run particle minecraft:dust 0.875 0.875 0.875 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
-execute unless score $melee ca.fire_aspect matches 1.. unless score $melee ca.frostbite matches 1.. unless score $melee ca.committed matches 1.. unless score $melee ca.decay matches 1.. unless score $melee ca.overload matches 1.. unless score $melee ca.vicious matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.875 0.875 0.875 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute unless score $melee ca.fire_aspect matches 1.. unless score $melee ca.frostbite matches 1.. unless score $melee ca.exposing matches 1.. unless score $melee ca.infection matches 1.. unless score $melee ca.electrocute matches 1.. unless score $melee ca.bleeding matches 1.. unless score @s ca.raycast matches 0 run particle minecraft:dust 0.875 0.875 0.875 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute unless score $melee ca.fire_aspect matches 1.. unless score $melee ca.frostbite matches 1.. unless score $melee ca.exposing matches 1.. unless score $melee ca.infection matches 1.. unless score $melee ca.electrocute matches 1.. unless score $melee ca.bleeding matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.875 0.875 0.875 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
 
 execute if score $melee ca.fire_aspect matches 1.. run particle minecraft:dust 0.973 0.518 0.251 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
 execute if score $melee ca.fire_aspect matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.973 0.518 0.251 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
@@ -11,17 +11,17 @@ execute if score $melee ca.fire_aspect matches 1.. positioned ^ ^ ^-0.25 run par
 execute if score $melee ca.frostbite matches 1.. run particle minecraft:dust 0.196 0.659 0.773 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
 execute if score $melee ca.frostbite matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.196 0.659 0.773 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
 
-execute if score $melee ca.committed matches 1.. run particle minecraft:dust 0.157 0.612 0.514 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
-execute if score $melee ca.committed matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.157 0.612 0.514 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute if score $melee ca.exposing matches 1.. run particle minecraft:dust 0.157 0.612 0.514 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute if score $melee ca.exposing matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.157 0.612 0.514 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
 
-execute if score $melee ca.decay matches 1.. run particle minecraft:dust 0.1 0 0 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
-execute if score $melee ca.decay matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.1 0 0 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute if score $melee ca.infection matches 1.. run particle minecraft:dust 0.1 0 0 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute if score $melee ca.infection matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.1 0 0 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
 
-execute if score $melee ca.overload matches 1.. run particle minecraft:dust 0.518 0.929 1 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
-execute if score $melee ca.overload matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.518 0.929 1 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute if score $melee ca.electrocute matches 1.. run particle minecraft:dust 0.518 0.929 1 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute if score $melee ca.electrocute matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.518 0.929 1 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
 
-execute if score $melee ca.vicious matches 1.. run particle minecraft:dust 0.431 0.055 0.055 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
-execute if score $melee ca.vicious matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.431 0.055 0.055 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute if score $melee ca.bleeding matches 1.. run particle minecraft:dust 0.431 0.055 0.055 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+execute if score $melee ca.bleeding matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.431 0.055 0.055 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
 
 #Ending particle
 execute if score @s ca.raycast matches 0 run particle minecraft:cloud ~ ~ ~ 0.2 0.2 0.2 0.05 12 normal

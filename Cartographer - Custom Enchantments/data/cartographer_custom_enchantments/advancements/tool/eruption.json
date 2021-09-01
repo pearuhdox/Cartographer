@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Eruption                 ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When you break a spawner with this tool, deal damage to enemies near the spawner. Inflict melee effects (like Fire Aspect) when triggered.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:flint_and_steel"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"eruption\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/tool/eruption"
+    },
+    "parent": "cartographer_custom_enchantments:tree_tool"
+}

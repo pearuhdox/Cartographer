@@ -17,29 +17,29 @@ execute if score $melee ca.frostbite matches 4 run scoreboard players set @s ca.
 execute if score $melee ca.frostbite matches 5.. run scoreboard players set @s ca.frost_tier 5
 execute if score $melee ca.frostbite matches 1.. run scoreboard players set @s ca.frost_time 81
 
-#Committed
-execute if score $melee ca.committed matches 1 run effect give @s bad_omen 4 0
-execute if score $melee ca.committed matches 2 run effect give @s bad_omen 4 1
-execute if score $melee ca.committed matches 3.. run effect give @s bad_omen 4 2
+#Exposing
+execute if score $melee ca.exposing matches 1 run effect give @s bad_omen 4 0
+execute if score $melee ca.exposing matches 2 run effect give @s bad_omen 4 1
+execute if score $melee ca.exposing matches 3.. run effect give @s bad_omen 4 2
 
-#Vicious
-execute if score $melee ca.vicious matches 1.. run scoreboard players add @s ca.effect_bleed 0
-execute if score $melee ca.vicious matches 1.. if score @s ca.effect_bleed matches 1.. run scoreboard players add @s ca.effect_bleed 1
-execute if score $melee ca.vicious matches 1.. if score @s ca.effect_bleed matches 0 run scoreboard players set @s ca.effect_bleed 3
+#Bleeding
+execute if score $melee ca.bleeding matches 1.. run scoreboard players add @s ca.effect_bleed 0
+execute if score $melee ca.bleeding matches 1.. if score @s ca.effect_bleed matches 1.. run scoreboard players add @s ca.effect_bleed 1
+execute if score $melee ca.bleeding matches 1.. if score @s ca.effect_bleed matches 0 run scoreboard players set @s ca.effect_bleed 3
 
-execute if score $melee ca.vicious matches 1 run scoreboard players add @s ca.bleed_potency 1
-execute if score $melee ca.vicious matches 2 run scoreboard players add @s ca.bleed_potency 1
-execute if score $melee ca.vicious matches 3.. run scoreboard players add @s ca.bleed_potency 1
+execute if score $melee ca.bleeding matches 1 run scoreboard players add @s ca.bleed_potency 1
+execute if score $melee ca.bleeding matches 2 run scoreboard players add @s ca.bleed_potency 1
+execute if score $melee ca.bleeding matches 3.. run scoreboard players add @s ca.bleed_potency 1
 
-#Overload
-execute if score $melee ca.overload matches 1 run scoreboard players set @s ca.effect_shock 3
-execute if score $melee ca.overload matches 2 run scoreboard players set @s ca.effect_shock 5
-execute if score $melee ca.overload matches 3.. run scoreboard players set @s ca.effect_shock 7
+#Electrocute
+execute if score $melee ca.electrocute matches 1 run scoreboard players set @s ca.effect_shock 3
+execute if score $melee ca.electrocute matches 2 run scoreboard players set @s ca.effect_shock 5
+execute if score $melee ca.electrocute matches 3.. run scoreboard players set @s ca.effect_shock 7
 
-#Decay
-execute if score $melee ca.decay matches 1 run scoreboard players set @s ca.effect_infect 3
-execute if score $melee ca.decay matches 2 run scoreboard players set @s ca.effect_infect 5
-execute if score $melee ca.decay matches 3.. run scoreboard players set @s ca.effect_infect 7
+#Infection
+execute if score $melee ca.infection matches 1 run scoreboard players set @s ca.effect_infect 3
+execute if score $melee ca.infection matches 2 run scoreboard players set @s ca.effect_infect 5
+execute if score $melee ca.infection matches 3.. run scoreboard players set @s ca.effect_infect 7
 
 #Stunning
 execute if score $melee ca.stunning matches 1.. if score $melee ca.melee_chance <= $percent_stun ca.melee_chance run particle minecraft:firework ~ ~1 ~ 0.3 0.5 0.3 0.05 10 normal

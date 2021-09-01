@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"auto_charge\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Auto Charge               ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "When you kill a mob, the crossbow automatically reloads a free shot. (It must be on your hotbar)"
+        },
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/auto_charge"
+    },
+    "parent": "cartographer_custom_enchantments:tree_ranged"
+}

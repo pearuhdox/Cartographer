@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Point Blank              ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Arrows from this weapon deal increased damage to enemies closer to you.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:bow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"point_blank\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/point_blank"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/overcharge"
+}

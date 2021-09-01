@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"curse_shattering\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Curse of Shattering      ",
+            "color": "red"
+        },
+        "description": {
+            "color": "white",
+            "text": "When the user dies and drops this item, it loses a portion of remaining durability."
+        },
+        "icon": {
+            "item": "minecraft:glass"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/curse/shattering"
+    },
+    "parent": "cartographer_custom_enchantments:curse/regret"
+}

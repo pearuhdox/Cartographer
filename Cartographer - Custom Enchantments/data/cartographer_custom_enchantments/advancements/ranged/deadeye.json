@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"deadeye\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Deadeye                ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Instead of arrows, the weapon fires instant traveling bullets dealing high damage. Bullets are aimed at random enemies within range."
+        },
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/deadeye"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/bleed"
+}

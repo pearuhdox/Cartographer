@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Flash                    ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "While being reloaded or drawn back, the user moves at normal walk speed.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:feather"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"fleetfoot\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/fleetfoot"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/flash"
+}

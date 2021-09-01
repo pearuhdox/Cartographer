@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Curse of Malevolence     ",
+            "color": "red"
+        },
+        "description": {
+            "text": "When more than 1 of these items is used at a time, the user is inflicted with Blindness.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:obsidian"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"malevolence\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/curse/malevolence"
+    },
+    "parent": "cartographer_custom_enchantments:curse/irreparability"
+}

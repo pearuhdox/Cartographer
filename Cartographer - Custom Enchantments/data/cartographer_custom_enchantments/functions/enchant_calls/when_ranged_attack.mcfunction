@@ -6,8 +6,8 @@ execute if score $cu_en_ranged ca.enabler matches 1.. at @s if entity @e[distanc
 #Cauterize - Goes first
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_cauterize] at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/ranged
 
-#Conductive
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_conductive] run function cartographer_custom_enchantments:enchant_effects/conductive
+#Electrode
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_electrode] run function cartographer_custom_enchantments:enchant_effects/electrode
 
 #Flash
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_flash] at @s run function cartographer_custom_enchantments:enchant_effects/flash
@@ -22,22 +22,22 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_punch_
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_punch_4] at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_punch_5] at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
 
-#Pin Down
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_pin] run function cartographer_custom_enchantments:enchant_effects/pin_down
+#Expose
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_pin] run function cartographer_custom_enchantments:enchant_effects/expose
 
-#Putrefy
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_decay] run function cartographer_custom_enchantments:enchant_effects/putrefy
+#Infect
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_infection] run function cartographer_custom_enchantments:enchant_effects/infect
 
-#Rend
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_rend] run function cartographer_custom_enchantments:enchant_effects/rend
+#Bleed
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleed] run function cartographer_custom_enchantments:enchant_effects/bleed
 
 #Tempo Theft
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_tempo_1] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_tempo_2] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_tempo_3] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
 
-#Volatile
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_volatile] at @s run function cartographer_custom_enchantments:enchant_effects/volatile
+#Explosive
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_explosive] at @s run function cartographer_custom_enchantments:enchant_effects/explosive
 
 #Current
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_current] run function cartographer_custom_enchantments:enchant_effects/current
@@ -76,10 +76,10 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_singe_
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_singe_5] at @s run function cartographer_custom_enchantments:enchant_effects/singe/ranged
 
 
-#Committed - Trident
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_committed_1] at @s run function cartographer_custom_enchantments:enchant_effects/committed/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_committed_2] at @s run function cartographer_custom_enchantments:enchant_effects/committed/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_committed_3] at @s run function cartographer_custom_enchantments:enchant_effects/committed/ranged
+#Exposing - Trident
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_exposing_1] at @s run function cartographer_custom_enchantments:enchant_effects/exposing/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_exposing_2] at @s run function cartographer_custom_enchantments:enchant_effects/exposing/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_exposing_3] at @s run function cartographer_custom_enchantments:enchant_effects/exposing/ranged
 
 #Fire Aspect - Trident
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_fire_aspect_1] at @s run function cartographer_custom_enchantments:enchant_effects/fire_aspect_ranged
@@ -98,20 +98,20 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_stunni
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_stunning_4] at @s run function cartographer_custom_enchantments:enchant_effects/stunning/ranged
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_stunning_5] at @s run function cartographer_custom_enchantments:enchant_effects/stunning/ranged
 
-#Decay - Trident
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_decay_1] at @s run function cartographer_custom_enchantments:enchant_effects/decay/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_decay_2] at @s run function cartographer_custom_enchantments:enchant_effects/decay/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_decay_3] at @s run function cartographer_custom_enchantments:enchant_effects/decay/ranged
+#Infection - Trident
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_infection_1] at @s run function cartographer_custom_enchantments:enchant_effects/infection/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_infection_2] at @s run function cartographer_custom_enchantments:enchant_effects/infection/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_infection_3] at @s run function cartographer_custom_enchantments:enchant_effects/infection/ranged
 
-#Overload - Trident
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_overload_1] at @s run function cartographer_custom_enchantments:enchant_effects/overload/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_overload_2] at @s run function cartographer_custom_enchantments:enchant_effects/overload/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_overload_3] at @s run function cartographer_custom_enchantments:enchant_effects/overload/ranged
+#Electrocute - Trident
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_electrocute_1] at @s run function cartographer_custom_enchantments:enchant_effects/electrocute/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_electrocute_2] at @s run function cartographer_custom_enchantments:enchant_effects/electrocute/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_electrocute_3] at @s run function cartographer_custom_enchantments:enchant_effects/electrocute/ranged
 
-#Vicious - Trident
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_vicious_1] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_vicious_2] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_vicious_3] at @s run function cartographer_custom_enchantments:enchant_effects/vicious/ranged
+#Bleeding - Trident
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleeding_1] at @s run function cartographer_custom_enchantments:enchant_effects/bleeding/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleeding_2] at @s run function cartographer_custom_enchantments:enchant_effects/bleeding/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleeding_3] at @s run function cartographer_custom_enchantments:enchant_effects/bleeding/ranged
 
 #Loyalty - Hits entity
 execute if score $cu_en_ranged ca.enabler matches 1.. as @e[tag=loyalty] at @s run tag @s add hit_entity

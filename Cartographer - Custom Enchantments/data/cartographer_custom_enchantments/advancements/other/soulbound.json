@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Soulbound:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Soulbound                ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "This item is not dropped on death."
+        },
+        "icon": {
+            "item": "minecraft:nether_star"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/other/soulbound"
+    },
+    "parent": "cartographer_custom_enchantments:other/infinity"
+}

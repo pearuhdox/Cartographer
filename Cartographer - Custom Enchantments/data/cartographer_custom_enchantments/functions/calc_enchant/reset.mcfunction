@@ -7,11 +7,11 @@ scoreboard players set @s ca.f_cleansing 0
 scoreboard players set @s ca.w_cleansing 0
 scoreboard players set @s ca.p_cleansing 0
 scoreboard players set @s ca.wi_cleansing 0
-scoreboard players set @s ca.committed 0
+scoreboard players set @s ca.exposing 0
 scoreboard players set @s ca.concealed 0
-scoreboard players set @s ca.conductive 0
+scoreboard players set @s ca.electrode 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.current 0
-scoreboard players set @s ca.decay 0
+scoreboard players set @s ca.infection 0
 scoreboard players set @s ca.deadeye 0
 scoreboard players set @s despair_wave 0
 scoreboard players set @s destruction_wave 0
@@ -31,15 +31,15 @@ scoreboard players set @s ca.hunter 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.hydraulic 0
 scoreboard players set @s ca.lifesteal 0
 scoreboard players set @s ca.overcharge 0
-scoreboard players set @s ca.overload 0
+scoreboard players set @s ca.electrocute 0
 scoreboard players set @s ca.point_blank 0
-scoreboard players set @s ca.pin_down 0
-scoreboard players set @s ca.putrefy 0
+scoreboard players set @s ca.expose 0
+scoreboard players set @s ca.infect 0
 scoreboard players set @s ca.regen 0
-scoreboard players set @s ca.vanquisher 0
+scoreboard players set @s ca.unchanting 0
 scoreboard players set @s ca.rally 0
 scoreboard players set @s ca.repeating 0
-scoreboard players set @s ca.rend 0
+scoreboard players set @s ca.bleed 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.ricochet 0
 scoreboard players set @s ca.sapper 0
 scoreboard players set @s ca.satiation 0
@@ -56,8 +56,8 @@ scoreboard players set @s[scores={ca.throw_trident=0}] ca.tempest 0
 scoreboard players set @s ca.tempo_theft 0
 scoreboard players set @s ca.trueshot 0
 scoreboard players set @s vengeance 0
-scoreboard players set @s ca.vicious 0
-scoreboard players set @s ca.volatile 0
+scoreboard players set @s ca.bleeding 0
+scoreboard players set @s ca.explosive 0
 scoreboard players set @s ca.thorns 0
 
 scoreboard players set @s ca.loyalty 0
@@ -79,7 +79,7 @@ scoreboard players set @s ca.t_frost 0
 scoreboard players set @s ca.t_vuln 0
 scoreboard players set @s ca.t_shock 0
 scoreboard players set @s ca.t_stun 0
-scoreboard players set @s ca.t_decay 0
+scoreboard players set @s ca.t_infection 0
 scoreboard players set @s ca.t_knock 0
 
 scoreboard players set @s ca.s_adren 0

@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"spurs\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Spurs                    ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "The user breaks nearby flora, webs, and berry bushes."
+        },
+        "icon": {
+            "item": "minecraft:cobweb"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/spurs"
+    },
+    "parent": "cartographer_custom_enchantments:passive/second_wind"
+}

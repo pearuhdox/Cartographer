@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"ricochet\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Ricochet                 ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Throws from this trident bounce to additional nearby enemies.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:trident"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/ricochet"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/hydraulic"
+}

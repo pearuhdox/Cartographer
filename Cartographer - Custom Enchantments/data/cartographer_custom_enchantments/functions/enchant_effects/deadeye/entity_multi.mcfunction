@@ -12,11 +12,11 @@ execute run function cartographer_core:helper/push_half
 
 execute if score $deadeye ca.flame matches 1 run data merge entity @s {Fire:65}
 execute if score $deadeye ca.frost matches 1 run effect give @s slowness 3 1
-execute if score $deadeye ca.pin_down matches 1 run effect give @s bad_omen 3 1
-execute if score $deadeye ca.conductive matches 1 run scoreboard players set @s ca.effect_shock 3
-execute if score $deadeye ca.putrefy matches 1 run scoreboard players set @s ca.effect_infect 3
-execute if score $deadeye ca.rend matches 1 unless entity @s[scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 3
-execute if score $deadeye ca.rend matches 1 if entity @s[scores={ca.effect_bleed=1..}] run scoreboard players add @s ca.effect_bleed 11
+execute if score $deadeye ca.expose matches 1 run effect give @s bad_omen 3 1
+execute if score $deadeye ca.electrode matches 1 run scoreboard players set @s ca.effect_shock 3
+execute if score $deadeye ca.infect matches 1 run scoreboard players set @s ca.effect_infect 3
+execute if score $deadeye ca.bleed matches 1 unless entity @s[scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 3
+execute if score $deadeye ca.bleed matches 1 if entity @s[scores={ca.effect_bleed=1..}] run scoreboard players add @s ca.effect_bleed 11
 
 execute if score $deadeye ca.flash matches 1 run scoreboard players add @s ca.effect_stun 12
 

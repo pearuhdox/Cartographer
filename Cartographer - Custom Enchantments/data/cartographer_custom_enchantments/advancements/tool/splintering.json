@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Splintering              ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "When you break a door, trapdoor, or barrel with this tool, nearby mobs are damaged and stunned."
+        },
+        "icon": {
+            "item": "minecraft:oak_door"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"splintering\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/tool/splintering"
+    },
+    "parent": "cartographer_custom_enchantments:tool/sapper"
+}

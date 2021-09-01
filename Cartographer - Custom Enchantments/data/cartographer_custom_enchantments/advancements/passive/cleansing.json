@@ -1,0 +1,84 @@
+{
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find3",
+            "find4",
+            "find5"
+        ]
+    ],
+    "display": {
+        "title": {
+            "text": "Cleansing                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "While using, cleanses the specified debuff from the player, in exchange for temporary Hunger.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:milk_bucket"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"poison_cleansing\"}]}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"slowness_cleansing\"}]}"
+                    }
+                ]
+            }
+        },
+        "find3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"wither_cleansing\"}]}"
+                    }
+                ]
+            }
+        },
+        "find4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"weakness_cleansing\"}]}"
+                    }
+                ]
+            }
+        },
+        "find5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"fatigue_cleansing\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/cleansing"
+    },
+    "parent": "cartographer_custom_enchantments:passive/cauterize"
+}

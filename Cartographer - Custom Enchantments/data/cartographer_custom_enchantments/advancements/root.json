@@ -16,7 +16,7 @@
         "icon": {
             "item": "minecraft:enchanted_book"
         },
-        "frame": "task",
+        "frame": "challenge",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false,

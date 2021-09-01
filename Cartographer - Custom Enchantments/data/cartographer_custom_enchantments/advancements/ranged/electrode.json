@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Electrode               ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Arrows fired from this weapon inflict Shocked on enemies.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:prismarine_crystals"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"electrode\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/electrode"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/deadeye"
+}

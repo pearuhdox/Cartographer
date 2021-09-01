@@ -69,6 +69,6 @@ execute if score $thorns ca.t_vuln matches 2 run effect give @s bad_omen 4 1
 execute if score $thorns ca.t_vuln matches 3.. run effect give @s bad_omen 4 2
 
 
-execute if score $thorns ca.t_decay matches 1 run scoreboard players set @s ca.effect_infect 3
-execute if score $thorns ca.t_decay matches 2 run scoreboard players set @s ca.effect_infect 5
-execute if score $thorns ca.t_decay matches 3.. run scoreboard players set @s ca.effect_infect 7
+execute if score $thorns ca.t_infection matches 1 run scoreboard players set @s ca.effect_infect 3
+execute if score $thorns ca.t_infection matches 2 run scoreboard players set @s ca.effect_infect 5
+execute if score $thorns ca.t_infection matches 3.. run scoreboard players set @s ca.effect_infect 7

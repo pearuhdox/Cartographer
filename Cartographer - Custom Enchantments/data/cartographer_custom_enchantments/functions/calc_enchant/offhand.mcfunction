@@ -28,8 +28,8 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"concealed"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.concealed += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"conductive"}].lvl
-execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.conductive += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"electrode"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.electrode += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"deadeye"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.deadeye += $temp ca.susu
@@ -61,14 +61,14 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.ena
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"overcharge"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.overcharge += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"pin_down"}].lvl
-execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.pin_down += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"expose"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.expose += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"point_blank"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.point_blank += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"putrefy"}].lvl
-execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.putrefy += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"infect"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.infect += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"rally"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.rally += $temp ca.susu
@@ -80,8 +80,8 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.e
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"regeneration"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.regen += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"rend"}].lvl
-execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.rend += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"bleed"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.bleed += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"ricochet"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.ricochet += $temp ca.susu
@@ -114,8 +114,8 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.e
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"trueshot"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.trueshot += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"volatile"}].lvl
-execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.volatile += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"explosive"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.explosive += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"curse_encumbering"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.curse_encum += $temp ca.susu

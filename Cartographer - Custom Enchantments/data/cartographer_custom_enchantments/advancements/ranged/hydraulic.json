@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"hydraulic\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Hydraulic                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "The trident's throw attack is replaced by a close ranged watery shove that knocks all nearby enemies back and deals damage.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:trident"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/hydraulic"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/current"
+}

@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Bleed                     ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Arrows fired from this weapon inflict Bleeding on enemies."
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"bleed\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/bleed"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/auto_charge"
+}

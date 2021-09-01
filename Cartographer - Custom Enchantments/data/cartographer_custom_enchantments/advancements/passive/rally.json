@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"rally\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Rally                    ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When attacked, the user can restore a percentage of the lost health by attacking quickly. Your damage is increased while recovering health.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:red_dye"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/rally"
+    },
+    "parent": "cartographer_custom_enchantments:passive/opportunist"
+}

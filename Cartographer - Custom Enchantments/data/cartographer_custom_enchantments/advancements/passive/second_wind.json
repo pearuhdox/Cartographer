@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"second_wind\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Second Wind              ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "\"Encourages\" Evasion to protect you from a lethal hit, giving extra Absorption shielding. When triggered, kill a mob to restore health, or suffer the penalty."
+        },
+        "icon": {
+            "item": "minecraft:yellow_dye"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/second_wind"
+    },
+    "parent": "cartographer_custom_enchantments:passive/satiation"
+}

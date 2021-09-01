@@ -6,11 +6,11 @@ execute if score @s ca.f_cleansing matches 2.. run scoreboard players set @s ca.
 execute if score @s ca.w_cleansing matches 2.. run scoreboard players set @s ca.w_cleansing 1
 execute if score @s ca.p_cleansing matches 2.. run scoreboard players set @s ca.p_cleansing 1
 execute if score @s ca.wi_cleansing matches 2.. run scoreboard players set @s ca.wi_cleansing 1
-execute if score @s ca.committed matches 4.. run scoreboard players set @s ca.committed 3
+execute if score @s ca.exposing matches 4.. run scoreboard players set @s ca.exposing 3
 execute if score @s ca.concealed matches 7.. run scoreboard players set @s ca.concealed 6
-execute if score @s ca.conductive matches 2.. run scoreboard players set @s ca.conductive 1
+execute if score @s ca.electrode matches 2.. run scoreboard players set @s ca.electrode 1
 execute if score @s ca.current matches 2.. run scoreboard players set @s ca.current 1
-execute if score @s ca.decay matches 5.. run scoreboard players set @s ca.decay 4
+execute if score @s ca.infection matches 5.. run scoreboard players set @s ca.infection 4
 execute if score @s ca.current matches 2.. run scoreboard players set @s ca.deadeye 1
 execute if score @s ca.duelist matches 6.. run scoreboard players set @s ca.duelist 5
 execute if score @s ca.eruption matches 6.. run scoreboard players set @s ca.eruption 5
@@ -23,16 +23,16 @@ execute if score @s ca.frostbite matches 6.. run scoreboard players set @s ca.fr
 execute if score @s ca.frost matches 2.. run scoreboard players set @s ca.frost 1
 execute if score @s ca.hunter matches 6.. run scoreboard players set @s ca.hunter 5
 execute if score @s ca.overcharge matches 11.. run scoreboard players set @s ca.overcharge 3
-execute if score @s ca.overload matches 4.. run scoreboard players set @s ca.overload 3
+execute if score @s ca.electrocute matches 4.. run scoreboard players set @s ca.electrocute 3
 execute if score @s ca.lifesteal matches 11.. run scoreboard players set @s ca.lifesteal 10
-execute if score @s ca.pin_down matches 2.. run scoreboard players set @s ca.pin_down 1
+execute if score @s ca.expose matches 2.. run scoreboard players set @s ca.expose 1
 execute if score @s ca.point_blank matches 4.. run scoreboard players set @s ca.point_blank 3
-execute if score @s ca.putrefy matches 2.. run scoreboard players set @s ca.putrefy 1
+execute if score @s ca.infect matches 2.. run scoreboard players set @s ca.infect 1
 execute if score @s ca.rally matches 11.. run scoreboard players set @s ca.rally 10
 execute if score @s ca.regen matches 11.. run scoreboard players set @s ca.regen 10
 execute if score @s ca.repeating matches 8..10 run scoreboard players set @s ca.repeating 7
 execute if score @s ca.repeating matches 18.. run scoreboard players set @s ca.repeating 17
-execute if score @s ca.rend matches 2.. run scoreboard players set @s ca.rend 1
+execute if score @s ca.bleed matches 2.. run scoreboard players set @s ca.bleed 1
 execute if score @s ca.ricochet matches 4.. run scoreboard players set @s ca.ricochet 3
 execute if score @s ca.sapper matches 11.. run scoreboard players set @s ca.sapper 10
 execute if score @s ca.singe matches 6.. run scoreboard players set @s ca.singe 5
@@ -49,8 +49,8 @@ execute if score @s ca.tempo_theft matches 3.. run scoreboard players set @s ca.
 execute if score @s ca.tempo_theft matches 3.. run scoreboard players set @s ca.tempo_theft 3
 execute if score @s ca.trueshot matches 1.. run scoreboard players set @s ca.trueshot 1
 execute if score @s vengeance matches 6.. run scoreboard players set @s vengeance 5
-execute if score @s ca.vicious matches 4.. run scoreboard players set @s ca.vicious 3
-execute if score @s ca.volatile matches 2.. run scoreboard players set @s ca.volatile 1
+execute if score @s ca.bleeding matches 4.. run scoreboard players set @s ca.bleeding 3
+execute if score @s ca.explosive matches 2.. run scoreboard players set @s ca.explosive 1
 execute if score @s ca.thorns matches 21.. run scoreboard players set @s ca.thorns 20
 execute if score @s ca.loyalty matches 21.. run scoreboard players set @s ca.loyalty 20
 
@@ -60,7 +60,7 @@ execute if score @s ca.t_bleed matches 4.. run scoreboard players set @s ca.t_bl
 execute if score @s ca.t_shock matches 4.. run scoreboard players set @s ca.t_shock 3
 execute if score @s ca.t_vuln matches 4.. run scoreboard players set @s ca.t_vuln 3
 execute if score @s ca.t_stun matches 6.. run scoreboard players set @s ca.t_stun 5
-execute if score @s ca.t_decay matches 4.. run scoreboard players set @s ca.t_decay 3
+execute if score @s ca.t_infection matches 4.. run scoreboard players set @s ca.t_infection 3
 execute if score @s ca.t_knock matches 6.. run scoreboard players set @s ca.t_knock 5
 
 execute if score @s ca.s_adren matches 7.. run scoreboard players set @s ca.s_adren 6

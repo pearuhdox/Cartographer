@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"cauterize\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Cauterize                ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "While worn or used, extinguishes mobs you attack that are on fire and makes them brittle. Brittle mobs take double damage and bonus knockback from the next attack they receive."
+        },
+        "icon": {
+            "item": "minecraft:flint_and_steel"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/concealed"
+    },
+    "parent": "cartographer_custom_enchantments:passive/aquadynamic"
+}

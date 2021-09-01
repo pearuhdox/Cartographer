@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{Unbreakable:1b}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Unbreakable              ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "This equipment does not have durability.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:anvil"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/other/unbreakable"
+    },
+    "parent": "cartographer_custom_enchantments:other/soulbound"
+}

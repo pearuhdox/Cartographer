@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"regeneration\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Regeneration             ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "The user slowly regenerates health.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:ghast_tear"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/regeneration"
+    },
+    "parent": "cartographer_custom_enchantments:passive/rally"
+}

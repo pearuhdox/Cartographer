@@ -19,23 +19,23 @@ execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecra
 
 kill @e[type=#cartographer_core:arrow,limit=3,sort=nearest]
 
-scoreboard players set $deadeye ca.pin_down 0
-scoreboard players set $deadeye ca.rend 0
-scoreboard players set $deadeye ca.conductive 0
+scoreboard players set $deadeye ca.expose 0
+scoreboard players set $deadeye ca.bleed 0
+scoreboard players set $deadeye ca.electrode 0
 scoreboard players set $deadeye ca.frost 0
 scoreboard players set $deadeye ca.flame 0
 scoreboard players set $deadeye ca.flash 0
-scoreboard players set $deadeye ca.putrefy 0
+scoreboard players set $deadeye ca.infect 0
 scoreboard players set $deadeye ca.trueshot 0
 scoreboard players set $deadeye ca.curse_encum 0
 
-execute if score @s ca.pin_down matches 1 run scoreboard players set $deadeye ca.pin_down 1
-execute if score @s ca.rend matches 1 run scoreboard players set $deadeye ca.rend 1
-execute if score @s ca.conductive matches 1 run scoreboard players set $deadeye ca.conductive 1
+execute if score @s ca.expose matches 1 run scoreboard players set $deadeye ca.expose 1
+execute if score @s ca.bleed matches 1 run scoreboard players set $deadeye ca.bleed 1
+execute if score @s ca.electrode matches 1 run scoreboard players set $deadeye ca.electrode 1
 execute if score @s ca.frost matches 1 run scoreboard players set $deadeye ca.frost 1
 execute if score @s ca.flame matches 1 run scoreboard players set $deadeye ca.flame 1
 execute if score @s ca.flash matches 1 run scoreboard players set $deadeye ca.flash 1
-execute if score @s ca.putrefy matches 1 run scoreboard players set $deadeye ca.putrefy 1
+execute if score @s ca.infect matches 1 run scoreboard players set $deadeye ca.infect 1
 execute if score @s ca.trueshot matches 1 run scoreboard players set $deadeye ca.trueshot 1
 execute if score @s ca.curse_encum matches 1 run scoreboard players set $deadeye ca.curse_encum 1
 

@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"infection\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Infection                    ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Melee attacks with this weapon inflict Infection.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:rotten_flesh"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/infection"
+    },
+    "parent": "cartographer_custom_enchantments:melee/hunter"
+}

@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Duelist                  ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Melee attacks with this weapon do additional damage to \"Illager\" mobs."
+        },
+        "icon": {
+            "item": "minecraft:iron_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"duelist\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/duelist"
+    },
+    "parent": "cartographer_custom_enchantments:melee/bleeding"
+}

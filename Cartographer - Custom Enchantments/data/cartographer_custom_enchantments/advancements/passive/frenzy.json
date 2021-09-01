@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"frenzy\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Frenzy                   ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "When the user slays a mob, they gain a melee damage boost that shrinks over time."
+        },
+        "icon": {
+            "item": "minecraft:blaze_powder"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/frenzy"
+    },
+    "parent": "cartographer_custom_enchantments:passive/evasion"
+}

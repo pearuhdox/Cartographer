@@ -20,12 +20,9 @@ execute as @s[nbt={Item:{tag:{Spread:4}}}] at @s as @e[type=#cartographer_core:h
 #Spread Decay at Tier 5
 execute as @s[nbt={Item:{tag:{Spread:5}}}] at @s as @e[type=#cartographer_core:hostile,scores={ca.effect_infect=0},distance=..6,tag=decay_spread_target] at @s run scoreboard players set @s ca.effect_infect 6
 
-execute as @e[type=#cartographer_core:hostile,tag=decay_spread_target,distance=..6] run attribute @s minecraft:generic.movement_speed modifier add 31-4531-2600-000-01 "decay_speed" -0.15 multiply
-execute as @e[type=#cartographer_core:hostile,tag=decay_spread_target,distance=..6] run attribute @s minecraft:generic.attack_damage modifier add 31-4531-2600-000-02 "decay_dmg" -0.15 multiply
+execute as @e[type=#cartographer_core:hostile,tag=decay_spread_target,distance=..6] at @s run function cartographer_custom_statuses:effects/infect_debilitate
 
-execute unless entity @e[type=#cartographer_core:hostile,tag=decay_spread_target,distance=..6] run effect give @e[type=#cartographer_core:undead,distance=..3] instant_health 1 0
-execute unless entity @e[type=#cartographer_core:hostile,tag=decay_spread_target,distance=..6] run effect give @s[type=!#cartographer_core:undead,distance=..3] instant_damage 1 0
-execute unless entity @e[type=#cartographer_core:hostile,tag=decay_spread_target,distance=..6] run particle minecraft:witch ~ ~0.2 ~ 1.2 0 1.2 0.1 100 normal
+execute unless entity @e[type=#cartographer_core:hostile,tag=decay_spread_target,distance=..6] run function cartographer_custom_statuses:effects/infect_pool
 
 execute if entity @e[type=#cartographer_core:hostile,distance=..6,tag=decay_spread_target] at @s run particle minecraft:witch ~ ~1 ~ 0.15 0.4 0.15 0 10 normal
 

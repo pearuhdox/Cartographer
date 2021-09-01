@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Unchanting                ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Melee attacks with this weapon do additional damage to \"Elite\" mobs. (Mobs with red colored nameplates.)"
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"unchanting\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/unchanting"
+    },
+    "parent": "cartographer_custom_enchantments:melee/transfiguration"
+}

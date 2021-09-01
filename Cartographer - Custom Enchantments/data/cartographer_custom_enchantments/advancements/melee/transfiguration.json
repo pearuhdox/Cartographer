@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Transfiguration           ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "When you hit a hostile mob, this weapon has a small chance to turn that mob into a chicken."
+        },
+        "icon": {
+            "item": "minecraft:egg"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"transfiguration\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/transfiguration"
+    },
+    "parent": "cartographer_custom_enchantments:melee/surging_strike"
+}

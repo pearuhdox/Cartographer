@@ -10,11 +10,11 @@ scoreboard objectives add ca.f_cleansing dummy
 scoreboard objectives add ca.w_cleansing dummy
 scoreboard objectives add ca.p_cleansing dummy
 scoreboard objectives add ca.wi_cleansing dummy
-scoreboard objectives add ca.committed dummy
+scoreboard objectives add ca.exposing dummy
 scoreboard objectives add ca.concealed dummy
-scoreboard objectives add ca.conductive dummy
+scoreboard objectives add ca.electrode dummy
 scoreboard objectives add ca.current dummy
-scoreboard objectives add ca.decay dummy
+scoreboard objectives add ca.infection dummy
 scoreboard objectives add ca.deadeye dummy
 scoreboard objectives add ca.duelist dummy
 scoreboard objectives add ca.echo dummy
@@ -33,15 +33,15 @@ scoreboard objectives add ca.hydraulic dummy
 scoreboard objectives add ca.infinity dummy
 scoreboard objectives add ca.lifesteal dummy
 scoreboard objectives add ca.overcharge dummy
-scoreboard objectives add ca.overload dummy
-scoreboard objectives add ca.pin_down dummy
+scoreboard objectives add ca.electrocute dummy
+scoreboard objectives add ca.expose dummy
 scoreboard objectives add ca.point_blank dummy
-scoreboard objectives add ca.putrefy dummy
-scoreboard objectives add ca.vanquisher dummy
+scoreboard objectives add ca.infect dummy
+scoreboard objectives add ca.unchanting dummy
 scoreboard objectives add ca.rally dummy
 scoreboard objectives add ca.repeating dummy
 scoreboard objectives add ca.regen dummy
-scoreboard objectives add ca.rend dummy
+scoreboard objectives add ca.bleed dummy
 scoreboard objectives add ca.ricochet dummy
 scoreboard objectives add ca.sapper dummy
 scoreboard objectives add ca.satiation dummy
@@ -57,8 +57,8 @@ scoreboard objectives add ca.transfig dummy
 scoreboard objectives add ca.tempest dummy
 scoreboard objectives add ca.tempo_theft dummy
 scoreboard objectives add ca.trueshot dummy
-scoreboard objectives add ca.vicious dummy
-scoreboard objectives add ca.volatile dummy
+scoreboard objectives add ca.bleeding dummy
+scoreboard objectives add ca.explosive dummy
 scoreboard objectives add ca.thorns dummy
 
 scoreboard objectives add ca.t_fire dummy
@@ -67,7 +67,7 @@ scoreboard objectives add ca.t_stun dummy
 scoreboard objectives add ca.t_bleed dummy
 scoreboard objectives add ca.t_shock dummy
 scoreboard objectives add ca.t_vuln dummy
-scoreboard objectives add ca.t_decay dummy
+scoreboard objectives add ca.t_infection dummy
 scoreboard objectives add ca.t_knock dummy
 
 scoreboard objectives add ca.s_adren dummy

@@ -22,20 +22,20 @@ execute if entity @s[scores={ca.singe=1..}] run tag @e[type=trident,limit=1,dist
 execute if entity @s[scores={ca.frostbite=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.frostbite = @s ca.frostbite
 execute if entity @s[scores={ca.frostbite=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
 
-execute if entity @s[scores={ca.committed=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.committed = @s ca.committed
-execute if entity @s[scores={ca.committed=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
+execute if entity @s[scores={ca.exposing=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.exposing = @s ca.exposing
+execute if entity @s[scores={ca.exposing=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
 
 execute if entity @s[scores={ca.stunning=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.stunning = @s ca.stunning
 execute if entity @s[scores={ca.stunning=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
 
-execute if entity @s[scores={ca.decay=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.decay = @s ca.decay
-execute if entity @s[scores={ca.decay=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
+execute if entity @s[scores={ca.infection=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.infection = @s ca.infection
+execute if entity @s[scores={ca.infection=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
 
-execute if entity @s[scores={ca.overload=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.overload = @s ca.overload
-execute if entity @s[scores={ca.overload=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
+execute if entity @s[scores={ca.electrocute=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.electrocute = @s ca.electrocute
+execute if entity @s[scores={ca.electrocute=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
 
-execute if entity @s[scores={ca.vicious=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.vicious = @s ca.vicious
-execute if entity @s[scores={ca.vicious=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
+execute if entity @s[scores={ca.bleeding=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.bleeding = @s ca.bleeding
+execute if entity @s[scores={ca.bleeding=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
 
 execute if entity @s[scores={ca.fire_aspect=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.fire_aspect = @s ca.fire_aspect
 execute if entity @s[scores={ca.fire_aspect=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident

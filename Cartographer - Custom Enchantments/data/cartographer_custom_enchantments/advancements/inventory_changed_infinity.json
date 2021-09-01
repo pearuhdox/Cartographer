@@ -8,7 +8,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Inventory:[{tag:{CustomEnchantments:[{id:\"infinity\",lvl:1b}]}}]}"
+              "nbt": "{Inventory:[{tag:{CustomEnchantments:[{id:\"infinity\"}]}}]}"
             }
           }
         ]
