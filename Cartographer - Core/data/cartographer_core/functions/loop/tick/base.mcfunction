@@ -105,11 +105,10 @@ execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartograp
 scoreboard players set @a[scores={token_kill_check=1..}] token_kill_check 0
 
 #Set defaults on players (new spawns).
-scoreboard players add @a[tag=!spawned] ehp_listen 1
-scoreboard players add @a[tag=!spawned] phe_listen 1
-scoreboard players set @a[tag=!spawned] ca.reload_type 0
-scoreboard players set @a[tag=!spawned] ca.ui_loc 0
-tag @a[tag=!spawned] add spawned
+execute as @a at @s unless score @s ehp_listen matches 0.. run scoreboard players add @s ehp_listen 1
+execute as @a at @s unless score @s phe_listen matches 0.. run scoreboard players add @s phe_listen 1
+execute as @a at @s unless score @s ca.reload_type matches 0.. run scoreboard players set @s ca.reload_type 0
+execute as @a at @s unless score @s ca.ui_loc matches 0.. run scoreboard players set @s ca.ui_loc 0
 
 #Resets
 scoreboard players set @a ca.use_lectern 0

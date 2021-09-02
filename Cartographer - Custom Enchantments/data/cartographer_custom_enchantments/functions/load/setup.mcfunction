@@ -81,8 +81,13 @@ scoreboard objectives add ca.knockback dummy
 scoreboard objectives add ca.punch dummy
 scoreboard objectives add ca.flame dummy
 scoreboard objectives add ca.power dummy
+scoreboard objectives add ca.multishot dummy
+
+scoreboard objectives add ca.ammo_main dummy
+scoreboard objectives add ca.ammo_off dummy
 
 scoreboard objectives add ca.flash_time dummy
+scoreboard objectives add ca.saved_flash dummy
 
 scoreboard objectives add ca.loyalty_slot dummy
 

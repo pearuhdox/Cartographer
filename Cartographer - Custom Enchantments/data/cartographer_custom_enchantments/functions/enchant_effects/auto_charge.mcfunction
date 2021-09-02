@@ -24,7 +24,7 @@ data modify block 4206901 0 4206900 Items append from storage item:load path
 scoreboard players set $auto_repeat ca.repeating 0
 scoreboard players set $auto_repeat ca.auto_charge 0
 
-execute store result score $auto_repeat ca.repeating run data get storage item:load path.tag.Repeating
+execute store result score $auto_repeat ca.repeating run data get storage item:load path.tag.CustomEnchantments[{id:"repeating"}].lvl
 execute store result score $auto_repeat ca.auto_charge run data get storage item:load path.tag.Ammo
 
 scoreboard players add $auto_repeat ca.auto_charge 1

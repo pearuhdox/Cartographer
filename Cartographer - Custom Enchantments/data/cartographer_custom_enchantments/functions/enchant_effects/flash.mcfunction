@@ -1,15 +1,9 @@
-function cartographer_core:helper/randomize
-scoreboard players operation @s ca.dummy = @s random
+particle firework ~ ~1 ~ 0 0 0 0.2 1 normal
 
-execute if score @s ca.flash >= @s ca.dummy run tag @s add do_flash
+scoreboard players operation @s ca.effect_stun = @e[type=#cartographer_core:arrow,sort=nearest,limit=1,scores={ca.flash=1..}] ca.flash
+particle flash ~ ~1 ~ 0 0 0 0 1 force
+playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..24] ~ ~ ~ 5 2
 
-execute if entity @s[tag=do_flash] if score @s ca.flash matches 1..99 run scoreboard players set @s ca.flash_time 21
-execute if entity @s[tag=do_flash] if score @s ca.flash matches 100.. run scoreboard players set @s ca.flash_time 31
-
-execute if entity @s[tag=do_flash] run particle minecraft:firework ~ ~1 ~ 0.25 0.25 0.25 0.1 10 normal
-execute if entity @s[tag=do_flash] run playsound minecraft:entity.firework_rocket.launch hostile @a[distance=..16] ~ ~ ~ 1 0.75
-
-tag @s remove do_flash
 tag @s[type=#cartographer_core:hostile,tag=is_flash] remove is_flash
 
 #Debug Message

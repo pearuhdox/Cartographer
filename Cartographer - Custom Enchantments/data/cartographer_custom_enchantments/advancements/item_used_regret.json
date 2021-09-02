@@ -5,56 +5,11 @@
       "conditions": {
         "player": [],
         "item": {
-          "nbt": "{CurseRegret:1}"
-        }
-      }
-    },
-    "tier_2": {
-      "trigger": "minecraft:item_durability_changed",
-      "conditions": {
-        "player": [],
-        "item": {
-          "nbt": "{CurseRegret:2}"
-        }
-      }
-    },
-    "tier_3": {
-      "trigger": "minecraft:item_durability_changed",
-      "conditions": {
-        "player": [],
-        "item": {
-          "nbt": "{CurseRegret:3}"
-        }
-      }
-    },
-    "tier_4": {
-      "trigger": "minecraft:item_durability_changed",
-      "conditions": {
-        "player": [],
-        "item": {
-          "nbt": "{CurseRegret:4}"
-        }
-      }
-    },
-    "tier_5": {
-      "trigger": "minecraft:item_durability_changed",
-      "conditions": {
-        "player": [],
-        "item": {
-          "nbt": "{CurseRegret:5}"
+          "nbt": "{CustomEnchantments:[{id:\"curse_regret\"}]}"
         }
       }
     }
   },
-  "requirements": [
-    [
-      "tier_5",
-      "tier_4",
-      "tier_3",
-      "tier_2",
-      "tier_1"
-    ]
-  ],
   "rewards": {
     "function": "cartographer_custom_enchantments:enchant_calls/when_item_used"
   }

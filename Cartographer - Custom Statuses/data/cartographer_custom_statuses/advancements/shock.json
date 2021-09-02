@@ -20,39 +20,19 @@
         "find1": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Overload:1}"
-                    }
-                ]
+              "items": [
+                {
+                  "nbt": "{CustomEnchantments:[{id:\"electrocute\"}]}"
+                }
+              ]
             }
-        },
+          },
         "find2": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Overload:2}"
-                    }
-                ]
-            }
-        },
-        "find3": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Overload:3}"
-                    }
-                ]
-            }
-        },
-        "find4": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Conductive:1}"
+                        "nbt": "{CustomEnchantments:[{id:\"electrode\"}]}"
                     }
                 ]
             }
@@ -72,8 +52,6 @@
         [
             "find1",
             "find2",
-            "find3",
-            "find4",
             "find5"
         ]
     ],

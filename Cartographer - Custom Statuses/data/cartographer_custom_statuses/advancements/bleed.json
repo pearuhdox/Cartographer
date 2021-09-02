@@ -23,7 +23,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{Vicious:1}"
+            "nbt": "{CustomEnchantments:[{id:\"bleeding\"}]}"
           }
         ]
       }
@@ -33,27 +33,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{Vicious:2}"
-          }
-        ]
-      }
-    },
-    "find3": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "nbt": "{Vicious:3}"
-          }
-        ]
-      }
-    },
-    "find4": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "nbt": "{Rend:1}"
+            "nbt": "{CustomEnchantments:[{id:\"bleed\"}]}"
           }
         ]
       }
@@ -73,8 +53,6 @@
     [
       "find1",
       "find2",
-      "find3",
-      "find4",
       "find5"
     ]
   ],

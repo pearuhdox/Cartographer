@@ -1,3 +1,6 @@
+#Tell Cartographer this pack is in use
+scoreboard players set $custom_enchantments ca.installed 1
+
 #Temporary override on enchant disabler
 scoreboard players set $cu_en_ranged ca.enabler 1
 scoreboard players set $cu_en_kill ca.enabler 1
@@ -48,6 +51,9 @@ tag @a[tag=auto_charge_inv_fix] remove auto_charge_inv_fix
 
 # Triggers for enchants that must attempt every tick.
 
+#Remove Evading tag if no evasion
+execute as @a unless score @s ca.evasion matches ..0 run tag @s remove evading
+
 #Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
 execute as @a[tag=has_passive_ench] at @s run function cartographer_custom_enchantments:enchant_calls/passively
 
@@ -71,6 +77,9 @@ execute as @a[scores={ca.death_time=2..20}] at @s run function cartographer_cust
 
 #Tempo Theft Effect - Players
 execute as @a[scores={ca.temp_warp=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect
+
+#Flash Crossbows
+execute as @a[scores={ca.flash=1..,ca.load_cro_time=1..},predicate=cartographer_custom_enchantments:hold_crossbow] at @s run function cartographer_custom_enchantments:enchant_effects/flash/crossbow_load
 
 #Infinity 3.0
 execute as @a at @s run function cartographer_custom_enchantments:enchant_effects/infinity/player

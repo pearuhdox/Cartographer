@@ -7,8 +7,14 @@ scoreboard objectives add repairConstant dummy
 scoreboard objectives add repair_tampers dummy
 scoreboard players set helper_repair repairConstant 2
 
-scoreboard players set $repair_max XPcost 50
-scoreboard players set $repair_max LapisCost 25
+execute unless score $repair_max XPcost matches 0.. run scoreboard players set $repair_max XPcost 50
+execute unless score $repair_max LapisCost matches 0.. run scoreboard players set $repair_max LapisCost 25
+
+execute unless score $repair_start XPcost matches 0.. run scoreboard players set $repair_start XPcost 8
+execute unless score $repair_start LapisCost matches 0.. run scoreboard players set $repair_start LapisCost 4
+
+#execute unless score $repair_start MaterialCost matches 0.. run scoreboard players set $repair_start MaterialCost 4
+scoreboard players set $repair_start MaterialCost 4
 
 scoreboard objectives add tesseract dummy
 

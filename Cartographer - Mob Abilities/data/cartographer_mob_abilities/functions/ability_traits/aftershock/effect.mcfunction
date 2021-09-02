@@ -50,7 +50,8 @@ execute store result score $aftershock ca.ability_dmg run attribute @s generic.a
 scoreboard players operation $aftershock ca.ability_dmg /= $2 ca.CONSTANT
 
 scoreboard players operation @a[distance=..3.5] cdl.Damage_Queue = $aftershock ca.ability_dmg
-scoreboard players set @a[distance=..3.5] cdl.Death_ID 310204
+scoreboard players set @a[distance=..3.5,tag=!no_cdl_msg] cdl.Death_ID 310204
+tag @a[distance=..3.5] remove no_cdl_msg
 
 execute as @a[distance=..3.5] at @s run function cd:lib/player/damage/normal
 

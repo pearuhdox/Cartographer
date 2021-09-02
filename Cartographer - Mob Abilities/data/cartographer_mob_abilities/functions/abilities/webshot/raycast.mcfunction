@@ -7,7 +7,8 @@ execute if entity @a[distance=..1.5] if block ~ ~ ~ #cartographer_core:can_rayca
 function cartographer_mob_abilities:abilities/webshot/calc_damage
 
 execute as @a[distance=..2,tag=!webbed] run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute as @a[distance=..2,tag=!webbed] run scoreboard players set @s cdl.Death_ID 310211
+execute as @a[distance=..2,tag=!webbed] unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310211
+execute as @a[distance=..2,tag=!webbed] run tag @s remove no_cdl_msg
 execute as @a[distance=..2,tag=!webbed] run function cd:lib/player/damage/normal
 execute as @a[distance=..2,tag=!webbed] at @s run tag @s add ability_tagged
 execute as @a[distance=..2,tag=!webbed] run tag @s add webbed

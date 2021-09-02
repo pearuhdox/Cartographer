@@ -127,11 +127,9 @@ Custom Enchantments:
     - Duration of Shocked reduced to 4 seconds (from 5 seconds).
 
   - Flash:
-    - Uses time charged on bow rather than arrow velocity for stun chance.
-    - Stun time is now an always constant 1 second.
-    - Bow can be overcharged to increase stun percentage (maxes at 2.5 seconds of draw time)
-    - Now takes 1 second to activate the stun after the arrow lands.
-      - Time is increased to 1.5 seeconds when percentage is maxed.
+    - Uses time charged on bow/crossbow load rather than arrow velocity for stun chance.
+    - Chance to stun is always 100%.
+    - Time to stun is now one third of the time drawn for (max stun time of 1 second).
 
   - Fire Aspect:
     - With Custom Enchantments installed, now applies Fire to all enemies hit by a sweep attack.

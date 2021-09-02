@@ -26,4 +26,4 @@ execute if score $mob_abilities ca.installed matches 1.. if entity @s[type=!item
 #Run Potion Injector Effects - n/a - Currently there are no entity effects for Potion Injector
 
 #Run Repair Station Effects
-execute if score $repair_sations ca.installed matches 1.. if entity @s[type=#cartographer_core:tracked_for_rs] run function cartographer_repair_stations:loop/tick/entities
+execute if score $repair_stations ca.installed matches 1.. if entity @s[type=#cartographer_core:tracked_for_rs] run function cartographer_repair_stations:loop/tick/entities

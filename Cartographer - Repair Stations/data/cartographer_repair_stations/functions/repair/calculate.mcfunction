@@ -3,18 +3,17 @@ execute if entity @s[tag=feet] store result score @s XPcost run data get entity 
 execute if entity @s[tag=legs] store result score @s XPcost run data get entity @s ArmorItems[1].tag.RepairCost
 execute if entity @s[tag=chest] store result score @s XPcost run data get entity @s ArmorItems[2].tag.RepairCost
 execute if entity @s[tag=helm] store result score @s XPcost run data get entity @s ArmorItems[3].tag.RepairCost
-scoreboard players set @s[scores={XPcost=..12}] XPcost 12
+execute if score @s XPcost < $repair_start XPcost run scoreboard players operation @s XPcost = $repair_start XPcost
 
 execute if entity @s[tag=held] store result score @s LapisCost run data get entity @s HandItems[0].tag.LapisCost
 execute if entity @s[tag=feet] store result score @s LapisCost run data get entity @s ArmorItems[0].tag.LapisCost
 execute if entity @s[tag=legs] store result score @s LapisCost run data get entity @s ArmorItems[1].tag.LapisCost
 execute if entity @s[tag=chest] store result score @s LapisCost run data get entity @s ArmorItems[2].tag.LapisCost
 execute if entity @s[tag=helm] store result score @s LapisCost run data get entity @s ArmorItems[3].tag.LapisCost
-scoreboard players set @s[scores={LapisCost=..4}] LapisCost 4
+execute if score @s LapisCost < $repair_start LapisCost run scoreboard players operation @s LapisCost = $repair_start LapisCost
 
-scoreboard players set @s MaterialCost 4
-
-scoreboard players set @s[tag=netherite] MaterialCost 3
+scoreboard players operation @s MaterialCost = $repair_start MaterialCost
+scoreboard players remove @s[tag=netherite] MaterialCost 1
 
 scoreboard players operation @p XPcost = @s XPcost
 scoreboard players operation @p LapisCost = @s LapisCost

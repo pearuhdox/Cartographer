@@ -6,7 +6,8 @@ execute if entity @s[scores={ca.raycast=1}] run particle minecraft:cloud ~ ~ ~ 0
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
 execute as @a[distance=..1.75,tag=!ran_over] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute as @a[distance=..1.75,tag=!ran_over] at @s run scoreboard players set @s cdl.Death_ID 310201
+execute as @a[distance=..1.75,tag=!ran_over] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310201
+execute as @a[distance=..1.75,tag=!ran_over] at @s run tag @s remove no_cdl_msg
 execute as @a[distance=..1.75,tag=!ran_over] at @s run function cd:lib/player/damage/normal
 execute as @a[distance=..1.75,tag=!ran_over] at @s run tag @s add ability_tagged
 execute as @a[distance=..1.75,tag=!ran_over] at @s run tag @s add ran_over

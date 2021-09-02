@@ -1,7 +1,7 @@
 #These effects will activate when the player dies.
 
 #Curse of Shattering
-execute as @e[type=item,nbt={Item:{tag:{CurseShattering:1}}}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_shattering
+execute as @e[type=item,nbt={Item:{tag:{CustomEnchantments:[{id:"curse_shattering"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_shattering
 
 #Soulbound
 function cartographer_custom_enchantments:enchant_effects/soulbound

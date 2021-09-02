@@ -10,4 +10,4 @@ execute if score $hydraul ca.tempest matches 3 run scoreboard players add @s cdl
 execute if score $hydraul ca.tempest matches 4 run scoreboard players add @s cdl.Damage_Queue 8
 execute if score $hydraul ca.tempest matches 5 run scoreboard players add @s cdl.Damage_Queue 10
 
-function cd:lib/mob/damage/true
+function cd:lib/mob/damage/normal

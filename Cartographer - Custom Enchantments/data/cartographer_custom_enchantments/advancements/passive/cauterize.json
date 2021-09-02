@@ -29,7 +29,7 @@
         "hidden": true
     },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/passive/concealed"
+        "function": "cartographer_custom_enchantments:descriptions/passive/cauterize"
     },
     "parent": "cartographer_custom_enchantments:passive/aquadynamic"
 }

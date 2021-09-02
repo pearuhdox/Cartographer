@@ -15,7 +15,8 @@ function cartographer_mob_abilities:abilities/disarm/calc_damage
 
 execute positioned ^ ^ ^3 if entity @a[distance=..2] run scoreboard players set @s cooldown 1
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute positioned ^ ^ ^3 as @a[distance=..2] at @s run scoreboard players set @s cdl.Death_ID 310202
+execute positioned ^ ^ ^3 as @a[distance=..2] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310202
+execute positioned ^ ^ ^3 as @a[distance=..2] at @s run tag @s remove no_cdl_msg
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run effect give @s blindness 2 0
 

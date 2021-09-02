@@ -200,5 +200,13 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.e
 execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"curse_two_handed"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.curse_two_hnd += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Enchantments[{id:"minecraft:multishot"}].lvl
+execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.multishot += $temp ca.susu
+
+#Also get the ammo of a repeating crossbow in the main or offhand
+scoreboard players set @s ca.ammo_main 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Ammo
+execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.ammo_main += $temp ca.susu
+
 #Check if the custom item is a trident, and auto enable the ranged tag.
 execute if data storage ca.susu:enchants main{id:"minecraft:trident"} run scoreboard players set $cu_en_ranged ca.enabler 1

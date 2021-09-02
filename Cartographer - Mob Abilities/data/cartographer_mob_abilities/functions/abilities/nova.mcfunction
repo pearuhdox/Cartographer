@@ -10,7 +10,8 @@ scoreboard players set @s mob_move_dis 12
 function cartographer_mob_abilities:abilities/nova/calc_damage
 
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run scoreboard players set @s cdl.Death_ID 310203
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310203
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run tag @s remove no_cdl_msg
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run function cd:lib/player/damage/normal
 
 #execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run setblock ~ ~ ~ minecraft:fire keep

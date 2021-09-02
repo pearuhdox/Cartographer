@@ -142,3 +142,11 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.e
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"curse_two_handed"}].lvl
 execute if data storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"curse_two_handed"}] run scoreboard players add @s ca.curse_two_hnd 1
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.curse_two_hnd += $temp ca.susu
+
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:multishot"}].lvl
+execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.multishot += $temp ca.susu
+
+#Also get the ammo of a repeating crossbow in the main or offhand
+scoreboard players set @s ca.ammo_off 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.Ammo
+execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.ammo_off += $temp ca.susu

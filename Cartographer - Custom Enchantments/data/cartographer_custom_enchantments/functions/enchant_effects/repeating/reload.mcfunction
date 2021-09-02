@@ -12,24 +12,30 @@ data modify storage suso:pldata working_data.RepeatingList set value []
 scoreboard players set @s ca.ammo 0
 
 #Mainhand
-execute if entity @s[scores={ca.repeating=1},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 2
-execute if entity @s[scores={ca.repeating=2},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 3
-execute if entity @s[scores={ca.repeating=3},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 4
-execute if entity @s[scores={ca.repeating=4},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 5
-execute if entity @s[scores={ca.repeating=5},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 6
-execute if entity @s[scores={ca.repeating=6},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 7
-execute if entity @s[scores={ca.repeating=7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 8
+execute if score @s ca.repeating matches 1 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 2
+execute if score @s ca.repeating matches 2 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 3
+execute if score @s ca.repeating matches 3 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 4
+execute if score @s ca.repeating matches 4 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 5
+execute if score @s ca.repeating matches 5 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 6
+execute if score @s ca.repeating matches 6 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 7
+execute if score @s ca.repeating matches 7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run scoreboard players set @s ca.ammo 8
 
 #Offhand
-execute if entity @s[scores={ca.repeating=11},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 2
-execute if entity @s[scores={ca.repeating=12},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 3
-execute if entity @s[scores={ca.repeating=13},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 4
-execute if entity @s[scores={ca.repeating=14},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 5
-execute if entity @s[scores={ca.repeating=15},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 6
-execute if entity @s[scores={ca.repeating=16},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 7
-execute if entity @s[scores={ca.repeating=17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 8
+execute if score @s ca.repeating matches 11 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 2
+execute if score @s ca.repeating matches 12 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 3
+execute if score @s ca.repeating matches 13 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 4
+execute if score @s ca.repeating matches 14 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 5
+execute if score @s ca.repeating matches 15 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 6
+execute if score @s ca.repeating matches 16 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 7
+execute if score @s ca.repeating matches 17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run scoreboard players set @s ca.ammo 8
 
 scoreboard players set $ammo_save ca.ammo 0
+scoreboard players set $clear_arrow ca.ammo 0
+scoreboard players set $clear_t_arrow ca.ammo 0
+scoreboard players set $clear_s_arrow ca.ammo 0
+scoreboard players set $clear_arrow_count ca.ammo -1
+scoreboard players set $clear_t_arrow_count ca.ammo -1
+scoreboard players set $clear_s_arrow_count ca.ammo -1
 
 #Create our loaded inventory of arrows.
 function cartographer_custom_enchantments:enchant_effects/repeating/recurse
@@ -39,23 +45,23 @@ data modify block 4206900 0 4206901 Items[0].tag.Quiver set value []
 data modify block 4206900 0 4206901 Items[0].tag.Quiver set from storage suso:pldata working_data.RepeatingList
 
 #Fix Crossbow
-execute if entity @s[scores={ca.ammo=1,ca.repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:1,Charged:1b}
-execute if entity @s[scores={ca.ammo=2,ca.repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:2,Charged:1b}
-execute if entity @s[scores={ca.ammo=3,ca.repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:3,Charged:1b}
-execute if entity @s[scores={ca.ammo=4,ca.repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:4,Charged:1b}
-execute if entity @s[scores={ca.ammo=5,ca.repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:5,Charged:1b}
-execute if entity @s[scores={ca.ammo=6,ca.repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:6,Charged:1b}
-execute if entity @s[scores={ca.ammo=7,ca.repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:7,Charged:1b}
-execute if entity @s[scores={ca.ammo=8,ca.repeating=1..7},nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:8,Charged:1b}
+execute if score @s ca.ammo matches 1 if score @s ca.repeating matches 1..7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:1,Charged:1b}
+execute if score @s ca.ammo matches 2 if score @s ca.repeating matches 1..7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:2,Charged:1b}
+execute if score @s ca.ammo matches 3 if score @s ca.repeating matches 1..7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:3,Charged:1b}
+execute if score @s ca.ammo matches 4 if score @s ca.repeating matches 1..7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:4,Charged:1b}
+execute if score @s ca.ammo matches 5 if score @s ca.repeating matches 1..7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:5,Charged:1b}
+execute if score @s ca.ammo matches 6 if score @s ca.repeating matches 1..7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:6,Charged:1b}
+execute if score @s ca.ammo matches 7 if score @s ca.repeating matches 1..7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:7,Charged:1b}
+execute if score @s ca.ammo matches 8 if score @s ca.repeating matches 1..7 if entity @s[nbt={SelectedItem:{tag:{Charged:1b,Ammo:0}}}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:8,Charged:1b}
 
-execute if entity @s[scores={ca.ammo=1,ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:1,Charged:1b}
-execute if entity @s[scores={ca.ammo=2,ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:2,Charged:1b}
-execute if entity @s[scores={ca.ammo=3,ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:3,Charged:1b}
-execute if entity @s[scores={ca.ammo=4,ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:4,Charged:1b}
-execute if entity @s[scores={ca.ammo=5,ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:5,Charged:1b}
-execute if entity @s[scores={ca.ammo=6,ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:6,Charged:1b}
-execute if entity @s[scores={ca.ammo=7,ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:7,Charged:1b}
-execute if entity @s[scores={ca.ammo=8,ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:8,Charged:1b}
+execute if score @s ca.ammo matches 1 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:1,Charged:1b}
+execute if score @s ca.ammo matches 2 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:2,Charged:1b}
+execute if score @s ca.ammo matches 3 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:3,Charged:1b}
+execute if score @s ca.ammo matches 4 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:4,Charged:1b}
+execute if score @s ca.ammo matches 5 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:5,Charged:1b}
+execute if score @s ca.ammo matches 6 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:6,Charged:1b}
+execute if score @s ca.ammo matches 7 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:7,Charged:1b}
+execute if score @s ca.ammo matches 8 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:8,Charged:1b}
 
 #Save the data back to the player array
 function suso.player_data:put/do

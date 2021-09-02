@@ -35,7 +35,7 @@ forceload add 4206890 4206890
 setblock 4206900 0 4206900 purple_shulker_box replace
 
 #Shulker Box for Lexica, so a mapmaker can change the format.
-setblock 4206900 5 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Lexica Cartographia","color":"#FFE0A3","bold":true,"italic":false}',Lore:['{"text":"Your in game guide to all things Cartographer.","color":"dark_gray","italic":false}','{"text":"A compendium that contains all discovered","color":"dark_gray","italic":false}','{"text":"knowledge of custom mechanics and features.","color":"dark_gray","italic":false}','{"text":" "}','[{"text":"[","color":"white","italic":false},{"keybind":"key.use","color":"aqua","italic":false},{"text":"] ","color":"white","italic":false},{"text":"to open this manual.","color":"dark_gray","italic":false}]','[{"text":"[","color":"white","italic":false},{"keybind":"key.use","color":"aqua","italic":false},{"text":" + ","color":"white","italic":false},{"keybind":"key.sneak","color":"aqua","italic":false},{"text":"] ","color":"white","italic":false},{"text":"to configure settings.","color":"dark_gray","italic":false}]']},HideFlags:1,Lexica:1,Enchantments:[{id:"minecraft:mending",lvl:1s}],Recipes:["cartographer_core:lexica_dummy"]}}]} keep
+setblock 4206900 5 4206900 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Lexica Cartographia","color":"#FFE0A3","bold":true,"italic":false}',Lore:['{"text":"Your in game guide to all things Cartographer.","color":"dark_gray","italic":false}','{"text":"A compendium that contains all discovered","color":"dark_gray","italic":false}','{"text":"knowledge of custom mechanics and features.","color":"dark_gray","italic":false}','{"text":" "}','[{"text":"[","color":"white","italic":false},{"keybind":"key.use","color":"aqua","italic":false},{"text":"] ","color":"white","italic":false},{"text":"to open this manual.","color":"dark_gray","italic":false}]','[{"text":"[","color":"white","italic":false},{"keybind":"key.use","color":"aqua","italic":false},{"text":" + ","color":"white","italic":false},{"keybind":"key.sneak","color":"aqua","italic":false},{"text":"] ","color":"white","italic":false},{"text":"to configure settings.","color":"dark_gray","italic":false}]']},HideFlags:1,Lexica:1,Enchantments:[{id:"minecraft:mending",lvl:1s}],Recipes:["cartographer_core:lexica_dummy"]}}]} destroy
 
 kill @e[type=armor_stand,tag=vector]
 summon armor_stand 4206900 256 4206900 {Tags:["vector"],NoGravity:1,Invisible:1,Marker:1,Small:1}
@@ -101,6 +101,10 @@ scoreboard objectives add ca.epf_fire dummy
 scoreboard objectives add ca.epf_fall dummy
 
 scoreboard objectives add ca.epf dummy
+
+#Add the phe_listen and ehp_listen scores
+scoreboard objectives add ehp_listen dummy
+scoreboard objectives add phe_listen dummy
 
 #Create timer variable
 scoreboard objectives add ca.timer dummy

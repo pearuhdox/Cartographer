@@ -22,7 +22,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{Decay:1}"
+                        "nbt": "{CustomEnchantments:[{id:\"infection\"}]}"
                     }
                 ]
             }
@@ -30,33 +30,13 @@
         "find2": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Decay:2}"
-                    }
-                ]
+              "items": [
+                {
+                  "nbt": "{CustomEnchantments:[{id:\"infect\"}]}"
+                }
+              ]
             }
-        },
-        "find3": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Decay:3}"
-                    }
-                ]
-            }
-        },
-        "find4": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{Putrefy:1}"
-                    }
-                ]
-            }
-        },
+          },
         "find5": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
@@ -72,8 +52,6 @@
         [
             "find1",
             "find2",
-            "find3",
-            "find4",
             "find5"
         ]
     ],

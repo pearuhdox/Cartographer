@@ -12,7 +12,8 @@ playsound minecraft:entity.zombie.break_wooden_door hostile @a[distance=..16] ~ 
 function cartographer_mob_abilities:abilities/smash/calc_damage
 
 execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run scoreboard players set @s cdl.Death_ID 310206
+execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310206
+execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run tag @s remove no_cdl_msg
 execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run function cd:lib/player/damage/normal
 
 #Trait Effects

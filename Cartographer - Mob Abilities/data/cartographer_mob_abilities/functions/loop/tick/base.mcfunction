@@ -1,5 +1,11 @@
+#Tell Cartographer this pack is in use
+scoreboard players set $mob_abilities ca.installed 1
+
 #Loop all abilities that need to be played each tick. This includes Laser (active), Hybrid Fighter (NYI), all On-Death Skills, and helper functions for Hookshot.
 #This also sets mob tags properly for active skill mobs and on death mobs.
+
+#Set unregistered players to have a cooldown score.
+execute as @a at @s unless score @s cooldown matches -99..99 run scoreboard players set @s cooldown 0
 
 #Set the score of helper difficulty equal to Minecraft's ca.current difficulty
 execute if score $gl_ind_diff ca.gamerule matches 0 run scoreboard players operation $global_past helper_diff = $global helper_diff
