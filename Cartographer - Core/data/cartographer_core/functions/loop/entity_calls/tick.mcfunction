@@ -23,7 +23,8 @@ execute if score $mimics ca.installed matches 1.. if entity @s[type=#cartographe
 #Run Mob Abilities Effects
 execute if score $mob_abilities ca.installed matches 1.. if entity @s[type=!item_frame] run function cartographer_mob_abilities:loop/tick/entities
 
-#Run Potion Injector Effects - n/a - Currently there are no entity effects for Potion Injector
+#Run Potion Util Effects
+execute if entity @s[type=hopper_minecart] run function cartographer_potion_util:loop/tick/entities
 
 #Run Repair Station Effects
 execute if score $repair_stations ca.installed matches 1.. if entity @s[type=#cartographer_core:tracked_for_rs] run function cartographer_repair_stations:loop/tick/entities

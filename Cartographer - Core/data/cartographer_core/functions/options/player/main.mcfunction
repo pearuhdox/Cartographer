@@ -26,7 +26,7 @@ execute if entity @p run function cartographer_custom_enchantments:options/playe
 #execute if entity @p run function cartographer_loot_additions:load/options/header
 #execute if entity @p run function cartographer_mimics:load/options/header
 #execute if entity @p run function cartographer_mob_abilities:options/header
-#execute if entity @p run function cartographer_pot_injector:load/options/header
+#execute if entity @p run function cartographer_potion_util:load/options/header
 #execute if entity @p run function cartographer_repair_stations:load/options/header
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]

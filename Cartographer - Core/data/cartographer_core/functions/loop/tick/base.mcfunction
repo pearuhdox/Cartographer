@@ -4,7 +4,7 @@ function cartographer_custom_statuses:loop/tick/base
 function cartographer_loot_additions:loop/tick/base
 function cartographer_mimics:loop/tick/base
 function cartographer_mob_abilities:loop/tick/base
-function cartographer_pot_injector:loop/tick/base
+function cartographer_potion_util:loop/tick/base
 function cartographer_repair_stations:loop/tick/base
 
 #Enable triggers
@@ -100,6 +100,9 @@ execute as @a[scores={ca.throw_trident=1..}] at @s run function cartographer_cor
 
 #Run all ticking entity effects.
 execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/tick
+
+#Run post entity tick base clock.
+function cartographer_core:loop/tick/base_post_entity
 
 #Reset token kill check (Mob Abilities)
 scoreboard players set @a[scores={token_kill_check=1..}] token_kill_check 0

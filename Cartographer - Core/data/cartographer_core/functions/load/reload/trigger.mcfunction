@@ -20,7 +20,7 @@ function cartographer_custom_statuses:load/load_message
 function cartographer_loot_additions:load/load_message
 function cartographer_mimics:load/load_message
 function cartographer_mob_abilities:load/load_message
-function cartographer_pot_injector:load/load_message
+function cartographer_potion_util:load/load_message
 function cartographer_repair_stations:load/load_message
 
 tellraw @s {"text":"------------------------------------------","color":"#FFE0A3","bold":true}

@@ -1,21 +1,7 @@
 {
 	"values": [
-		"minecraft:boat",
-		"minecraft:minecart",
-		"minecraft:chest_minecart",
-		"minecraft:command_block_minecart",
-		"minecraft:furnace_minecart",
-		"minecraft:hopper_minecart",
-		"minecraft:spawner_minecart",
-		"minecraft:tnt_minecart",
-		"minecraft:experience_orb",
-		"minecraft:experience_bottle",
-		"minecraft:llama_spit",
-		"minecraft:ender_pearl",
-		"minecraft:eye_of_ender",
-		"minecraft:firework_rocket",
-		"minecraft:tnt",
-		"minecraft:falling_block",
-		"minecraft:painting"
+		"minecraft:wither_skeleton",
+		"minecraft:armor_stand",
+		"minecraft:item"
 	]
 }

@@ -43,7 +43,7 @@ execute if entity @a[tag=!minimal_reload] run function cartographer_custom_statu
 execute if entity @a[tag=!minimal_reload] run function cartographer_loot_additions:load/load_message
 execute if entity @a[tag=!minimal_reload] run function cartographer_mimics:load/load_message
 execute if entity @a[tag=!minimal_reload] run function cartographer_mob_abilities:load/load_message
-execute if entity @a[tag=!minimal_reload] run function cartographer_pot_injector:load/load_message
+execute if entity @a[tag=!minimal_reload] run function cartographer_potion_util:load/load_message
 execute if entity @a[tag=!minimal_reload] run function cartographer_repair_stations:load/load_message
 
 tellraw @a[tag=!minimal_reload] {"text":"------------------------------------------","color":"#FFE0A3","bold":true}

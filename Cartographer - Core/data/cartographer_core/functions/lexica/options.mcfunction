@@ -27,7 +27,7 @@ execute if entity @p run function cartographer_custom_enchantments:load/options
 #execute if entity @p run function cartographer_loot_additions:load/options
 #execute if entity @p run function cartographer_mimics:load/options
 execute if entity @p[gamemode=creative] run function cartographer_mob_abilities:load/options
-#execute if entity @p run function cartographer_pot_injector:load/options
+#execute if entity @p run function cartographer_potion_util:load/options
 #execute if entity @p run function cartographer_repair_stations:load/options
 
 tellraw @p {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
