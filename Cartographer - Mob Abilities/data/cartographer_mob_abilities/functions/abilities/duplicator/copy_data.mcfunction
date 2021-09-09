@@ -26,3 +26,5 @@ tag @s add done_dupe
 
 tag @s remove attacking
 tag @s remove tokened
+
+#say test

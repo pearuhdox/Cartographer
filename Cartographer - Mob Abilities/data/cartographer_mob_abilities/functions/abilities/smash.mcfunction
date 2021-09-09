@@ -1,5 +1,9 @@
-execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
-execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 8
+execute if entity @s[scores={recast_count=1}] if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
+execute if entity @s[scores={recast_count=1}] if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 8
+
+execute if entity @s[scores={recast_count=2..}] run scoreboard players set @s cooldown 1
+
+tag @s remove leaping
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
@@ -46,5 +50,7 @@ execute if entity @s[scores={recast_count=0}] run function cartographer_mob_abil
 execute if entity @s[scores={recast_count=0}] run tag @s remove attacking
 execute if entity @s[scores={recast_count=0}] run tag @s remove tokened
 execute if entity @s[scores={recast_count=0}] run tag @s remove can_see_player
+execute if entity @s[scores={recast_count=0}] run tag @s add recasting
 
-execute if entity @s[scores={recast_count=1..}] run function cartographer_mob_abilities:charge/smash
+execute if entity @s[scores={recast_count=1..}] run tag @s add recasting
+#execute if entity @s[tag=attacking] run #say test

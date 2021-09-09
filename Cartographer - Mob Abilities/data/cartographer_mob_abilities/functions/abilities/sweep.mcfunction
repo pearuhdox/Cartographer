@@ -68,3 +68,5 @@ execute if entity @s[scores={recast_count=0}] run function cartographer_mob_abil
 execute if entity @s[scores={recast_count=0}] run tag @s remove attacking
 execute if entity @s[scores={recast_count=0}] run tag @s remove tokened
 execute if entity @s[scores={recast_count=0}] run tag @s remove can_see_player
+
+#say test

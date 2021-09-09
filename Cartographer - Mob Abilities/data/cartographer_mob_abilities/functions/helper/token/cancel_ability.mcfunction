@@ -1,6 +1,9 @@
 #Reset ability charge
 scoreboard players set @s ability_charge 0
 
+#Set Recast Count to 0
+scoreboard players set @s recast_count 0
+
 #Reset potentially changed stats.
 data merge entity @s {NoAI:0}
 

@@ -32,3 +32,5 @@ function cartographer_mob_abilities:helper/token/return
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player
+
+#say test

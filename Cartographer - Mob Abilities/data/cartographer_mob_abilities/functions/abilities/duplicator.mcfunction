@@ -223,4 +223,6 @@ tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player
 
+#say test
+
 scoreboard players set @s copies 0

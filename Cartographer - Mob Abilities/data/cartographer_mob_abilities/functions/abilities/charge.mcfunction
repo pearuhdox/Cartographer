@@ -29,4 +29,6 @@ tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player
 
+#say test
+
 kill @e[type=armor_stand,tag=charge_marker,limit=1,sort=nearest]

@@ -33,3 +33,5 @@ tag @s remove tokened
 tag @s remove can_see_player
 
 kill @e[type=armor_stand,tag=hook_marker,sort=nearest,limit=1]
+
+#say test

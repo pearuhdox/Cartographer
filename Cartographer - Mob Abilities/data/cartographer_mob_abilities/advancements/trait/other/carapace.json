@@ -21,7 +21,7 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.overloading\"]}"
+                    "nbt": "{Tags:[\"ca.carapace\"]}"
                 }
             }
         }

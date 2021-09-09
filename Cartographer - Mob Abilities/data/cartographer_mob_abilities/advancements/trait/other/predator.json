@@ -21,7 +21,7 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.horrifying\"]}"
+                    "nbt": "{Tags:[\"ca.predator\"]}"
                 }
             }
         }
