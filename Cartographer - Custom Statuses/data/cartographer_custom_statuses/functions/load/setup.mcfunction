@@ -34,4 +34,7 @@ scoreboard objectives add ca.pity_shock dummy
 
 scoreboard objectives add ca.cu_st_dmg minecraft.custom:minecraft.damage_dealt
 
+#Setup LoE data space
+function cartographer_custom_statuses:load/integration/active/clear
+
 #Start initial required looping to trigger enchant effects.

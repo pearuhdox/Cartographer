@@ -247,6 +247,9 @@ scoreboard objectives add ca.rotation dummy
 
 scoreboard objectives add ca.ind_val dummy
 
+#Setup LoE data space
+function cartographer_custom_enchantments:load/integration/active/clear
+
 #Set all needed player constants.
 execute as @a unless entity @s[scores={ca.echo_charges=-1..}] run scoreboard players set @a ca.echo_charges 0
 execute as @a unless entity @s[scores={ca.conceal_time=0..}] run scoreboard players set @a ca.conceal_time 0

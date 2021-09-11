@@ -30,6 +30,7 @@ execute if entity @s[tag=ca.hookshot,tag=!light_priority] run function cartograp
 execute if entity @s[tag=ca.laser,tag=!light_priority] run function cartographer_mob_abilities:helper/token/take/heavy
 execute if entity @s[tag=ca.magic_missile,tag=!light_priority] run function cartographer_mob_abilities:helper/token/take/heavy
 execute if entity @s[tag=ca.wither_storm,tag=!light_priority] run function cartographer_mob_abilities:helper/token/take/heavy
+execute if entity @s[tag=ca.rift,tag=!light_priority] run function cartographer_mob_abilities:helper/token/take/heavy
 
 #Mobs with Heavy Attack Priority
 execute if entity @s[tag=ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/heavy

@@ -21,6 +21,9 @@ scoreboard objectives add tesseract dummy
 scoreboard players set $is_used tesseract -1
 scoreboard players set $item_to_void tesseract -1
 
+#Setup LoE data space
+function cartographer_repair_stations:load/integration/active/clear
+
 #Run loops
 function cartographer_repair_stations:loop/tick/base
 function cartographer_repair_stations:loop/1_second/base

@@ -122,6 +122,7 @@ scoreboard players set $10 ca.CONSTANT 10
 scoreboard players set $15 ca.CONSTANT 15
 scoreboard players set $20 ca.CONSTANT 20
 scoreboard players set $25 ca.CONSTANT 25
+scoreboard players set $30 ca.CONSTANT 30
 scoreboard players set $33 ca.CONSTANT 33
 
 scoreboard players set $50 ca.CONSTANT 50
@@ -178,6 +179,9 @@ scoreboard objectives add ca.use_grind minecraft.custom:minecraft.interact_with_
 
 #Give all players the dummy recipe for Lexica.
 #recipe give @a cartographer_core:lexica_dummy
+
+#Setup LoE data space
+function cartographer_core:load/integration/active/clear
 
 #Schedule the loading message.
 execute as @a at @s run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 1 0.75

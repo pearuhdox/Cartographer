@@ -79,6 +79,9 @@ kill 002f80c0-0001-f879-003a-2a2300005860
 
 schedule function cartographer_mob_abilities:load/create_uuids 3t
 
+#Setup LoE data space
+function cartographer_mob_abilities:load/integration/active/clear
+
 #Set default of independent difficulty.
 execute unless score $gl_ind_diff ca.gamerule matches 0.. run scoreboard players set $gl_ind_diff ca.gamerule 0
 

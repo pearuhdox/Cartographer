@@ -1,0 +1,1 @@
+data modify storage loe:datapacks active_datapacks.cartographer.custom_statuses set value 1

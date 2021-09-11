@@ -34,16 +34,10 @@ Introducing Ability Traits:
 
 Current Ability Traits:
   Damage Modifiers:
-  - Mystic: The mob deals 1.5x damage with abilities (calculated from final amount).
-  - Arcane: The mob deals 2x damage with abilities (calculated from final amount).
-  - Muted: The mob deals 0.75x damage with abilities (calculated from final amount).
-  - Dampened: The mob deals 0.5x damage with abilities (calculated from final amount).
+  - Ability Damage: The mob deals 0.5x / 0.75x / 1.5x / 2x damage with abilities (calculated from final amount).
 
   Cooldown Modifiers:
-  - Quickened: Cooldowns are reduced by 25%.
-  - Hastened: Cooldowns are reduced by 50%.
-  - Fatigued: Cooldowns are increased by 25%.
-  - Sluggish: Cooldowns are increased by 50%.
+  - Ability Haste: Cooldowns are reduced by 25%/50% or increased by 25%/50%.
 
   On Hit Effects:
   - Blazing: The ability lights the ground beneath attacked players on fire.
@@ -81,7 +75,7 @@ New Passives:
 
   - Skin Series:
     - Fireskin: Receives Fire Resistance (0:20) every 20 seconds.
-    - Gillyskin: Receives Water Breathing (0:20) every 20 seconds.
+    - Waterskin: Receives Water Breathing (0:20) every 20 seconds.
     - Scaleskin: Receives Regeneration I/II/III (0:20) every 20 seconds.
     - Permacloak -> Shimmerskin (Duration is now 20 seconds every 20 seconds.)
     - Shroudskin: Receives Invisibility (0:20) every 20 seconds.

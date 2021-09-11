@@ -31,6 +31,7 @@ tellraw @p [{"text":"❰","color":"gold"},{"text":" Matt_97 ","color":"#ACFF1C",
 tellraw @p [{"text":"❰","color":"gold"},{"text":" BeastMasterFTW ","color":"#FF5E74","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Mob Abilities.","color":"#FFE0A3","italic":true}]
 tellraw @p [{"text":"❰","color":"gold"},{"text":" FirelordWeaponry ","color":"#FF8800","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration and ideas for Mob Abilities.","color":"#FFE0A3","italic":true}]
 tellraw @p [{"text":"❰","color":"gold"},{"text":" Vazkii ","color":"#E32EFF","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"Inspiration via the Lexica Botania for Cartographer's manual item.","color":"#FFE0A3","italic":true}]
+tellraw @p [{"text":"❰","color":"gold"},{"text":" CloudWolf ","color":"#2E69FF","bold":false,"italic":false},{"text":"❱ ","color":"gold"},{"text":"CloudWolf's Math Lite Datapack","color":"#FFE0A3","italic":true}]
 
 tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 tellraw @p [{"text":"[⏎]","color":"#33FFF8","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return to the reload panel.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/reload_panel"}}]
