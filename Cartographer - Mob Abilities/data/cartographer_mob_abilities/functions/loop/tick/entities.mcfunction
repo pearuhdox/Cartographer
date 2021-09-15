@@ -91,5 +91,25 @@ execute as @s[type=#cartographer_core:hostile,tag=ca.hookshot,scores={ca.hooked=
 execute if entity @s[tag=hook_broken] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 tag @s[tag=hook_broken] remove hook_broken
 
+#Run Rift Spot Detonation
+execute if entity @s[type=area_effect_cloud,tag=rift_spot] if score @s ca.lifetime matches 1 run function cartographer_mob_abilities:abilities/rift/detonate
+scoreboard players remove @s[type=area_effect_cloud,tag=rift_spot] ca.lifetime 1
+
+#Run Needle Projectiles
+execute if entity @s[type=armor_stand,tag=needle_projectile] run function cartographer_mob_abilities:charge/needle/projectile/travel
+
+#Run Grenadier Projectiles
+execute if entity @s[type=armor_stand,tag=grenadier_projectile] if entity @s[nbt={OnGround:1b}] run function cartographer_mob_abilities:charge/grenadier/projectile/attack
+
 #Setup Exalted
 execute if entity @s[tag=!setup,tag=ca.exalted] run function cartographer_mob_abilities:passive/exalted_setup
+
+#Setup Ambidextrous
+execute if entity @s[tag=!ambi_readied,tag=ca.ambidextrous] run function cartographer_mob_abilities:passive/ambidextrous/initialize
+
+#Swap Ambidextrous - Player Range
+execute if entity @s[tag=ca.ambidextrous,tag=!ca.follow_up,scores={ca.ambi_cool=0}] if entity @a[distance=5..6] run function cartographer_mob_abilities:passive/ambidextrous/swap
+
+#Handle Ambidextrous Cooldown
+scoreboard players remove @s[tag=ca.ambidextrous,scores={ca.ambi_cool=1..}] ca.ambi_cool 1
+execute if entity @s[tag=ca.ambidextrous] unless score @s ca.ambi_cool matches 1.. run scoreboard players set @s ca.ambi_cool 0

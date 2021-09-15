@@ -48,6 +48,7 @@ scoreboard objectives add ca.cs_id dummy
 scoreboard objectives add ca.cs_dur dummy
 scoreboard objectives add ca.cs_pot dummy
 
+scoreboard objectives add ca.ambi_cool dummy
 
 #Setup all necessary helper scoreboards.
 
@@ -72,6 +73,10 @@ scoreboard objectives add mob_move_red dummy
 scoreboard objectives add mob_atk_red dummy
 
 scoreboard objectives add mob_sturdy dummy
+
+scoreboard objectives add ca.rift_cooldown dummy
+
+scoreboard objectives add ca.aim dummy
 
 #Create the UUID armor stands.
 kill 002f80c0-0001-f879-0000-009c001e7bfc

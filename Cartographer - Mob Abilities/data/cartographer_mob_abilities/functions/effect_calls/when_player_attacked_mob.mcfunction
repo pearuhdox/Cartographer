@@ -22,3 +22,5 @@ execute if entity @s[tag=ca.touch] if entity @s[tag=ca.volatile] run scoreboard 
 execute if entity @s[tag=ca.touch] if entity @s[tag=ca.zephyrous] run scoreboard players set $zephyrous ca.touch_check 1
 
 execute if entity @s[tag=ca.hookshot,scores={ca.hooked=1..}] run tag @s add hook_broken
+
+execute if entity @s[tag=ca.ambidextrous,tag=ca.follow_up,scores={ca.ambi_cool=0}] run function cartographer_mob_abilities:passive/ambidextrous/swap

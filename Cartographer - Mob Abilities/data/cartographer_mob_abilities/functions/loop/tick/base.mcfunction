@@ -39,6 +39,9 @@ execute as @a[scores={ca.hooked=1..}] at @s run function cartographer_mob_abilit
 #Reduce the time of the hook_check dummy score.
 execute if score $hook_check ca.hooked matches 1.. run scoreboard players remove $hook_check ca.hooked 1
 
+#Reduce the score of rift cooldown on players by 1
+scoreboard players remove @a[scores={ca.rift_cooldown=1..}] ca.rift_cooldown 1
+
 #For players we want to test were hit by a shulker bullet, verify that they were hit by a shulker bullet.
 execute as @a[tag=clear_levitation] run effect clear @s levitation
 tag @a[tag=clear_levitation] remove clear_levitation

@@ -1,4 +1,4 @@
-execute if score @s ca.horrified matches 21.. anchored eyes facing entity @e[type=#cartographer_core:hostile,tag=ca.horrifying,sort=nearest,limit=1,distance=..7] eyes positioned ^ ^ ^0.5 rotated as @s positioned ^ ^ ^1 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ~ ~ ~ ~ ~
+execute if score @s ca.horrified matches 21.. anchored eyes facing entity @e[type=#cartographer_core:hostile,tag=ca.horrifying,sort=nearest,limit=1,distance=..15] eyes positioned ^ ^ ^0.5 rotated as @s positioned ^ ^ ^1 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ~ ~ ~ ~ ~
 
 execute if score @s ca.horrified matches 21.. run attribute @s minecraft:generic.movement_speed modifier add 7-1310-1751-1515-51700 "horrified" -1.0 multiply
 execute if score @s ca.horrified matches 21.. run attribute @s minecraft:generic.attack_speed modifier add 7-1310-1751-1515-51700 "horrified" -1.0 multiply
