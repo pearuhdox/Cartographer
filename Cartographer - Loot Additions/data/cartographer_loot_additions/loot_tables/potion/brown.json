@@ -1,0 +1,42 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Potion of Resistance\",\"italic\":false}',Lore:['{\"text\":\"Resistance (3:00)\",\"color\":\"blue\",\"italic\":false}']},HideFlags:32,CustomPotionEffects:[{Id:11b,Amplifier:0b,Duration:3600}],Potion:\"minecraft:thick\",CustomPotionColor:10044730}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Potion of Resistance\",\"italic\":false}',Lore:['{\"text\":\"Resistance (3:00)\",\"color\":\"blue\",\"italic\":false}']},HideFlags:32,CustomPotionEffects:[{Id:11b,Amplifier:0b,Duration:3600}],Potion:\"minecraft:thick\",CustomPotionColor:10044730}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Lingering Potion of Resistance\",\"italic\":false}',Lore:['{\"text\":\"Resistance (0:45)\",\"color\":\"blue\",\"italic\":false}']},HideFlags:32,CustomPotionEffects:[{Id:11b,Amplifier:0b,Duration:900}],Potion:\"minecraft:thick\",CustomPotionColor:10044730}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

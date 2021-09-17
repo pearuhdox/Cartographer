@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Lingering Potion of Debilitation\",\"italic\":false}',Lore:['{\"text\":\"Slowness II (0:05)\",\"color\":\"red\",\"italic\":false}','[{\"text\":\"\"},{\"text\":\"Wither II (0:05)\",\"color\":\"red\",\"italic\":false}]','[{\"text\":\"\"},{\"text\":\"Weakness (0:05)\",\"color\":\"red\",\"italic\":false}]']},HideFlags:32,CustomPotionEffects:[{Id:2b,Amplifier:1b,Duration:100},{Id:18b,Amplifier:0b,Duration:100},{Id:20b,Amplifier:1b,Duration:100}],Potion:\"minecraft:thick\",CustomPotionColor:788249}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

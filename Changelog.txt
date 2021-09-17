@@ -57,7 +57,15 @@ Current Ability Traits:
 
 Old Traits (aka Passives) are now called "Passives"
 
+New Actives:
+  - Grenadier: The mob throws 3 grenades in the general direction it is facing. (50% of the mob's total attack damage per needle)
+  - Needle: The mob fires 8 projectiles in quick succession in the general direction of the nearest player. (200% of the mob's total attack damage per grenade)
+  - Rift: The mob charges up and after a delay, creates 3 equidistant shockwaves that travel away from the mob. (300% of the mob's total attack damage when hit)
+
 New Passives:
+  - Ambidextrous: The mob can swap between its main hand and offhand item based on distance to the player.
+    - Alternative option: "ca.follow_up" - The mob swaps between its hands when it deals damage to a player instead.
+
   - Touch: The mob inflicts bonuses from any ability traits it has on melee/ranged attack.
 
   - Projectile Series:

@@ -1,0 +1,1 @@
+data modify storage loe:datapacks active_datapacks.cartographer.loot_additions set value 1

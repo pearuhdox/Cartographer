@@ -1,0 +1,1 @@
+tellraw @a {"text":"Loot Additions Options: ","color":"#FFD712","italic":false}

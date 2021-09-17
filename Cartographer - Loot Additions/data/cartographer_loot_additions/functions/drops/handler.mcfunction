@@ -1,0 +1,1 @@
+execute as @e[type=item,distance=..5,sort=nearest,limit=1,tag=!loot_checked] if entity @s[nbt={Item:{id:"minecraft:player_head",Count:1b}}] at @s run function cartographer_loot_additions:drops/do_drops
