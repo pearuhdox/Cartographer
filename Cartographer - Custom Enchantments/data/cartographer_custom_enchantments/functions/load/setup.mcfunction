@@ -36,6 +36,8 @@ scoreboard objectives add ca.overcharge dummy
 scoreboard objectives add ca.electrocute dummy
 scoreboard objectives add ca.expose dummy
 scoreboard objectives add ca.point_blank dummy
+scoreboard objectives add ca.possession dummy
+scoreboard objectives add ca.possess dummy
 scoreboard objectives add ca.infect dummy
 scoreboard objectives add ca.unchanting dummy
 scoreboard objectives add ca.rally dummy
@@ -69,6 +71,7 @@ scoreboard objectives add ca.t_shock dummy
 scoreboard objectives add ca.t_vuln dummy
 scoreboard objectives add ca.t_infection dummy
 scoreboard objectives add ca.t_knock dummy
+scoreboard objectives add ca.t_poss dummy
 
 scoreboard objectives add ca.s_adren dummy
 scoreboard objectives add ca.s_frenzy dummy
@@ -104,6 +107,7 @@ scoreboard objectives add ca.ral_overflow dummy
 scoreboard objectives add ca.ral_time dummy
 scoreboard objectives add ca.ral_percent dummy
 scoreboard objectives add ca.ral_bank dummy
+scoreboard objectives add ca.ral_charge dummy
 
 scoreboard objectives add ca.ov_tier dummy
 scoreboard objectives add ca.ov_dmg dummy

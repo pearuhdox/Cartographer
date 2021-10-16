@@ -6,8 +6,8 @@
 # Description: The initial load message created by Cartographer on reload.
 ########################################
 
-tag @s add gmr_frozen
-gamerule sendCommandFeedback false
+#scoreboard players set $gmr_freeze ca.mutex 1
+#gamerule sendCommandFeedback false
 
 
 

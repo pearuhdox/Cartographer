@@ -50,6 +50,8 @@ scoreboard objectives add ca.cs_pot dummy
 
 scoreboard objectives add ca.ambi_cool dummy
 
+scoreboard objectives add ca.legion_id dummy
+
 #Setup all necessary helper scoreboards.
 
 scoreboard objectives add ca.raycast dummy

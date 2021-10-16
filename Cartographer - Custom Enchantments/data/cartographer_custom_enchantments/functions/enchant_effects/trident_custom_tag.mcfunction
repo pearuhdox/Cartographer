@@ -41,6 +41,11 @@ execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.exposing=1}] r
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.exposing=2}] run tag @s add is_exposing_2
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.exposing=3}] run tag @s add is_exposing_3
 
+#Possession Ranged Synergy
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.possession=1}] run tag @s add is_possession_1
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.possession=2}] run tag @s add is_possession_2
+execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.possession=3}] run tag @s add is_possession_3
+
 #Stunning Ranged Synergy
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.stunning=1}] run tag @s add is_stunning_1
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.stunning=2}] run tag @s add is_stunning_2

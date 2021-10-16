@@ -42,3 +42,6 @@ execute if entity @s[scores={ca.fire_aspect=1..}] run tag @e[type=trident,limit=
 
 execute if entity @s[scores={ca.cauterize=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.cauterize = @s ca.cauterize
 execute if entity @s[scores={ca.cauterize=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident
+
+execute if entity @s[scores={ca.possession=1..}] run scoreboard players operation @e[type=trident,limit=1,distance=..7,sort=nearest] ca.possession = @s ca.possession
+execute if entity @s[scores={ca.possession=1..}] run tag @e[type=trident,limit=1,distance=..7,sort=nearest] add custom_trident

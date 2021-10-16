@@ -27,6 +27,8 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.fro
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.hunter=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/hunter
 #Electrocute
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.electrocute=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/electrocute
+#Possession
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.possession=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/possession
 #Singe
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.singe=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/singe
 #Stunning

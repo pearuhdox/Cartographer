@@ -1,4 +1,5 @@
 #Run all Cartographer Effects from Core Timers.
+function cartographer_charon:loop/tick/base
 function cartographer_custom_enchantments:loop/tick/base
 function cartographer_custom_statuses:loop/tick/base
 function cartographer_loot_additions:loop/tick/base
@@ -126,9 +127,9 @@ scoreboard players set @a[scores={helper_open_trap=1..}] helper_open_trap 0
 #Add anything else to run per tick above.
 
 #Get Gamerule Settings
-execute unless entity @a[tag=gmr_frozen] run function cartographer_core:load/gamerule_defaults
-execute if entity @a[tag=gmr_frozen,tag=!gmr_fixing] run schedule function cartographer_core:load/fix_gamerules 1t
-execute if entity @a[tag=gmr_frozen] run tag @s add gmr_fixing
+execute unless score $gmr_freeze ca.mutex matches 1.. run function cartographer_core:load/gamerule_defaults
+execute if score $gmr_freeze ca.mutex matches 1 run schedule function cartographer_core:load/fix_gamerules 1t
+execute if score $gmr_freeze ca.mutex matches 1 run scoreboard players set $gmr_freeze ca.mutex 2
 
 scoreboard players add $ca_timer ca.timer 1
 

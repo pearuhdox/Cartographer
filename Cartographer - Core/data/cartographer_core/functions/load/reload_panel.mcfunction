@@ -6,7 +6,7 @@
 # Description: Reruns the reload panel chat popup.
 ########################################
 
-tag @a add gmr_frozen
+scoreboard players set $gmr_freeze ca.mutex 1
 gamerule sendCommandFeedback false
 
 scoreboard players enable @s ca.options_trig 

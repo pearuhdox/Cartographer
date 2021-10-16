@@ -15,6 +15,7 @@ execute if entity @s[tag=!pds_check] run function cartographer_core:load/pds_war
 
 tellraw @s {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
 
+function cartographer_charon:load/load_message
 function cartographer_custom_enchantments:load/load_message
 function cartographer_custom_statuses:load/load_message
 function cartographer_loot_additions:load/load_message

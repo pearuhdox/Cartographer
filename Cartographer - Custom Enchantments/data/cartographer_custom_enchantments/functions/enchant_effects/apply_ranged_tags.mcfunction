@@ -19,6 +19,9 @@ execute if entity @s[scores={ca.frost=1..}] run tag @e[type=#cartographer_core:a
 execute if entity @s[scores={ca.expose=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.expose 1
 execute if entity @s[scores={ca.expose=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 
+execute if entity @s[scores={ca.possess=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.possess 1
+execute if entity @s[scores={ca.possess=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
+
 execute if entity @s[scores={ca.infect=1..}] run scoreboard players set @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] ca.infect 1
 execute if entity @s[scores={ca.infect=1..}] run tag @e[type=#cartographer_core:arrow,limit=3,distance=..7,sort=nearest] add custom_arrow
 

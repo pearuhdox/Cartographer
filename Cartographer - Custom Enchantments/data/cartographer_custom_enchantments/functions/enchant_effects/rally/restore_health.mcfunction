@@ -16,15 +16,12 @@ scoreboard players operation @s ca.rally_rst /= $100 ca.CONSTANT
 
 scoreboard players operation $test_amt ca.rally_rst = @s ca.rally_rst
 
+execute if entity @s[scores={ca.ral_bank=..10}] as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run particle heart ~ ~1 ~ 0.4 0.1 0.4 0 1 force
+
 execute if entity @s[scores={ca.rally_rst=10..,ca.ral_bank=10..}] run function cartographer_custom_enchantments:enchant_effects/rally/calc_health_recursive
 
 execute if entity @s[scores={ca.ral_bank=..9}] run scoreboard players operation @s ca.ral_overflow += @s ca.ral_bank
 execute if entity @s[scores={ca.ral_bank=..9}] run scoreboard players set @s ca.ral_bank 0
 
-execute if entity @s[scores={ca.ral_overflow=10..}] run scoreboard players add @s cdl.Heal_Queue 1
+execute if entity @s[scores={ca.ral_overflow=10..}] run scoreboard players add @s ca.ral_charge 1
 execute if entity @s[scores={ca.ral_overflow=10..}] run scoreboard players remove @s ca.ral_overflow 10
-
-execute if entity @s[scores={cdl.Heal_Queue=1..}] run playsound minecraft:entity.witch.drink player @s ~ ~ ~ 2 2
-execute if entity @s[scores={cdl.Heal_Queue=1..}] as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run particle heart ~ ~1 ~ 0.4 0.1 0.4 0 1 force
-
-execute if entity @s[scores={cdl.Heal_Queue=1..}] run function cd:lib/player/heal

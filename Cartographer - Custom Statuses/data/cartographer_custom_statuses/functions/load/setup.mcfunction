@@ -16,7 +16,8 @@ scoreboard objectives add ca.effect_stun dummy
 scoreboard objectives add ca.effect_shock dummy
 scoreboard objectives add ca.effect_bleed dummy
 scoreboard objectives add ca.bleed_potency dummy
-scoreboard objectives add ca.effect_rage dummy
+scoreboard objectives add ca.eft_possess dummy
+scoreboard objectives add ca.possess_time dummy
 scoreboard objectives add ca.effect_infect dummy
 
 scoreboard objectives add ca.effect_cloak dummy

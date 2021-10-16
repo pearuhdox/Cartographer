@@ -19,6 +19,9 @@ scoreboard players set $mob_abilities ca.installed 0
 scoreboard players set $pot_injector ca.installed 0
 scoreboard players set $repair_stations ca.installed 0
 
+#Create mutex score
+scoreboard objectives add ca.mutex dummy
+
 #Trigger scoreboards for menus and giving lexica.
 scoreboard objectives add lexica trigger
 scoreboard objectives add menu trigger
@@ -134,6 +137,7 @@ scoreboard players set $100 ca.CONSTANT 100
 scoreboard players set $200 ca.CONSTANT 200
 scoreboard players set $300 ca.CONSTANT 300
 scoreboard players set $600 ca.CONSTANT 600
+scoreboard players set $1000 ca.CONSTANT 1000
 scoreboard players set $1200 ca.CONSTANT 1200
 
 scoreboard players set $1 ca.CONSTANT 1

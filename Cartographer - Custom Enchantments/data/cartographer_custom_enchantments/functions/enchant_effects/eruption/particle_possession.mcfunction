@@ -1,0 +1,43 @@
+particle minecraft:soul ~8 ~ ~ 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~7 ~ ~1 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~7 ~ ~2 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~6 ~ ~3 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~6 ~ ~4 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~5 ~ ~5 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~4 ~ ~6 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~3 ~ ~6 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~2 ~ ~7 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~1 ~ ~7 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~ ~ ~8 0.4 0 0.4 0.075 6 normal @a
+
+particle minecraft:soul ~-8 ~ ~ 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-7 ~ ~1 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-7 ~ ~2 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-6 ~ ~3 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-6 ~ ~4 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-5 ~ ~5 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-4 ~ ~6 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-3 ~ ~6 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-2 ~ ~7 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-1 ~ ~7 0.4 0 0.4 0.075 6 normal @a
+
+particle minecraft:soul ~-7 ~ ~-1 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-7 ~ ~-2 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-6 ~ ~-3 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-6 ~ ~-4 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-5 ~ ~-5 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-4 ~ ~-6 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-3 ~ ~-6 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-2 ~ ~-7 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~-1 ~ ~-7 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~ ~ ~-8 0.4 0 0.4 0.075 6 normal @a
+
+particle minecraft:soul ~7 ~ ~-1 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~7 ~ ~-2 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~6 ~ ~-3 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~6 ~ ~-4 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~5 ~ ~-5 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~4 ~ ~-6 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~3 ~ ~-6 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~2 ~ ~-7 0.4 0 0.4 0.075 6 normal @a
+particle minecraft:soul ~1 ~ ~-7 0.4 0 0.4 0.075 6 normal @a

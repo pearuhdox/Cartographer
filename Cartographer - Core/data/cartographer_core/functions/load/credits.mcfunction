@@ -6,7 +6,7 @@
 # Description: The dialogue box for displaying credits.
 ########################################
 
-tag @s add gmr_frozen
+scoreboard players set $gmr_freeze ca.mutex 1
 gamerule sendCommandFeedback false
 
 

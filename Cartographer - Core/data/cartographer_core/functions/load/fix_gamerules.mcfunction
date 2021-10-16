@@ -28,5 +28,4 @@ execute if score $mob_grief ca.gamerule matches 0 run gamerule mobGriefing false
 execute if score $nat_spawn ca.gamerule matches 0 run gamerule doMobSpawning false
 execute if score $uni_anger ca.gamerule matches 0 run gamerule universalAnger false
 
-tag @a remove gmr_frozen
-tag @a remove gmr_fixing
+scoreboard players set $gmr_freeze ca.mutex 0

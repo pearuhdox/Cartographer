@@ -72,3 +72,19 @@ execute if score $thorns ca.t_vuln matches 3.. run effect give @s bad_omen 4 2
 execute if score $thorns ca.t_infection matches 1 run scoreboard players set @s ca.effect_infect 3
 execute if score $thorns ca.t_infection matches 2 run scoreboard players set @s ca.effect_infect 5
 execute if score $thorns ca.t_infection matches 3.. run scoreboard players set @s ca.effect_infect 7
+
+
+#Possession - Random Chance
+execute if score $thorns ca.t_poss matches 1.. run scoreboard players set in math 1
+execute if score $thorns ca.t_poss matches 1.. run scoreboard players set in1 math 100
+
+execute if score $thorns ca.t_poss matches 1.. run function cartographer_core:helper/math/rng/range
+
+execute if score $thorns ca.t_poss matches 1.. run scoreboard players operation $melee ca.melee_chance = out math
+
+#Possession - Run Effect
+execute if score $thorns ca.t_poss matches 1 as @s run scoreboard players set $percent_poss ca.melee_chance 10
+execute if score $thorns ca.t_poss matches 2 as @s run scoreboard players set $percent_poss ca.melee_chance 20
+execute if score $thorns ca.t_poss matches 3.. as @s run scoreboard players set $percent_poss ca.melee_chance 30
+
+execute if score $thorns ca.t_poss matches 1.. as @s run function cartographer_custom_enchantments:enchant_effects/possession/branch

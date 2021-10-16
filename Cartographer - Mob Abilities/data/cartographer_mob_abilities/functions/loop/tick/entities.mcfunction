@@ -8,7 +8,7 @@ execute as @s[type=item,nbt={Item:{tag:{DeathEffect:1}}}] at @s run function car
 execute if score $invul_time_check invul matches 1.. as @s[type=#cartographer_core:hostile] if entity @s[predicate=cartographer_mob_abilities:is_invulnerable] at @s run function cartographer_mob_abilities:loop/tick/invulnerable_test
 
 #Run Enderport
-execute if entity @s[tag=ca.enderport] run execute if entity @e[type=#cartographer_core:projectile,distance=..5] run function cartographer_mob_abilities:passive/enderport
+execute if entity @s[tag=ca.enderport] run execute if entity @e[type=#cartographer_core:projectile,nbt=!{inGround:1b},distance=..5] run function cartographer_mob_abilities:passive/enderport
 
 #Run Movement Disable and Melee Damage Disable
 execute if entity @s[scores={mob_move_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/move
@@ -113,3 +113,6 @@ execute if entity @s[tag=ca.ambidextrous,tag=!ca.follow_up,scores={ca.ambi_cool=
 #Handle Ambidextrous Cooldown
 scoreboard players remove @s[tag=ca.ambidextrous,scores={ca.ambi_cool=1..}] ca.ambi_cool 1
 execute if entity @s[tag=ca.ambidextrous] unless score @s ca.ambi_cool matches 1.. run scoreboard players set @s ca.ambi_cool 0
+
+#Run Auras
+execute if entity @s[tag=ca.vfx_aura] run function cartographer_mob_abilities:aura/run_vfx

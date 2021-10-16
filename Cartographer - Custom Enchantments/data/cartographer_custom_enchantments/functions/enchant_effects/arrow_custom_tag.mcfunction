@@ -9,6 +9,8 @@ execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.fro
 
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.infect=1}] run tag @s add is_infection
 
+execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.possess=1}] run tag @s add is_possess
+
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.flash=1..}] run tag @s add is_flash
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.flash=1..}] run scoreboard players operation @s ca.flash = @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.flash=1..}] ca.flash
 
@@ -22,6 +24,7 @@ execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.exp
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.explosive=1,ca.frost=1}] run tag @s add is_vol_frost
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.explosive=1,ca.infect=1}] run tag @s add is_vol_infection
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.explosive=1,ca.flash=1..}] run tag @s add is_vol_flash
+execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.explosive=1,ca.possess=1..}] run tag @s add is_vol_pos
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.explosive=1,ca.cauterize=1..}] run tag @s add is_vol_cau
 
 execute if entity @e[type=arrow,limit=1,sort=nearest,distance=..7,scores={ca.explosive=1,ca.punch=1}] run tag @s add is_vol_p_1

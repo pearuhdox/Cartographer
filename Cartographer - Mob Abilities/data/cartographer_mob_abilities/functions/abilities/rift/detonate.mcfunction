@@ -2,7 +2,7 @@ particle explosion ~ ~0.25 ~ 0.75 0 0.75 0 6 normal
 playsound minecraft:entity.generic.explode hostile @a[distance=..12] ~ ~ ~ 1 1.3
 
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310203
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310204
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2] at @s run tag @s remove no_cdl_msg
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2] at @s run function cd:lib/player/damage/normal
 

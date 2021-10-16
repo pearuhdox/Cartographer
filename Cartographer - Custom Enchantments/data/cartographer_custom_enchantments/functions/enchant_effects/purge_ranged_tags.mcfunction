@@ -2,6 +2,7 @@ tag @s remove is_bleed
 tag @s remove is_electrode
 tag @s remove is_pin
 tag @s remove is_frost
+tag @s remove is_possess
 tag @s remove is_explosive
 tag @s remove is_tempo_1
 tag @s remove is_tempo_2

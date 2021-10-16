@@ -6,6 +6,7 @@ execute if score @s cdl.Death_ID matches 310205 run tellraw @a [{"selector":"@p"
 execute if score @s cdl.Death_ID matches 310206 run tellraw @a [{"selector":"@p"},{"text":" was squished by ","color":"white"},{"selector":"@e[limit=1,tag=ca.smash,sort=nearest]"}]
 execute if score @s cdl.Death_ID matches 310207 run tellraw @a [{"selector":"@p"},{"text":" saw something they couldn't unsee","color":"white"}]
 execute if score @s cdl.Death_ID matches 310208 run tellraw @a [{"selector":"@p"},{"text":" was cut down by ","color":"white"},{"selector":"@e[limit=1,tag=ca.sweep,sort=nearest]"}]
-execute if score @s cdl.Death_ID matches 310209 run tellraw @a [{"selector":"@p"},{"text":" was drowned in poison by ","color":"white"},{"selector":"@e[limit=1,tag=venom_nova,sort=nearest]"}]
 execute if score @s cdl.Death_ID matches 310210 run tellraw @a [{"selector":"@p"},{"text":" was flung by ","color":"white"},{"selector":"@e[limit=1,tag=wind_nova,sort=nearest]"}]
 execute if score @s cdl.Death_ID matches 310211 run tellraw @a [{"selector":"@p"},{"text":" was webbed by ","color":"white"},{"selector":"@e[limit=1,tag=ca.webshot,sort=nearest]"}]
+execute if score @s cdl.Death_ID matches 310212 run tellraw @a [{"selector":"@p"},{"text":" was blown up by grenades.","color":"white"}]
+execute if score @s cdl.Death_ID matches 310213 run tellraw @a [{"selector":"@p"},{"text":" was poked to death.","color":"white"}]

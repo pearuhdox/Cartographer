@@ -27,6 +27,8 @@ execute if score @s ca.electrocute matches 4.. run scoreboard players set @s ca.
 execute if score @s ca.lifesteal matches 11.. run scoreboard players set @s ca.lifesteal 10
 execute if score @s ca.expose matches 2.. run scoreboard players set @s ca.expose 1
 execute if score @s ca.point_blank matches 4.. run scoreboard players set @s ca.point_blank 3
+execute if score @s ca.possession matches 4.. run scoreboard players set @s ca.possession 3
+execute if score @s ca.possess matches 2.. run scoreboard players set @s ca.possess 1
 execute if score @s ca.infect matches 2.. run scoreboard players set @s ca.infect 1
 execute if score @s ca.rally matches 11.. run scoreboard players set @s ca.rally 10
 execute if score @s ca.regen matches 11.. run scoreboard players set @s ca.regen 10
@@ -62,6 +64,7 @@ execute if score @s ca.t_vuln matches 4.. run scoreboard players set @s ca.t_vul
 execute if score @s ca.t_stun matches 6.. run scoreboard players set @s ca.t_stun 5
 execute if score @s ca.t_infection matches 4.. run scoreboard players set @s ca.t_infection 3
 execute if score @s ca.t_knock matches 6.. run scoreboard players set @s ca.t_knock 5
+execute if score @s ca.t_poss matches 4.. run scoreboard players set @s ca.t_poss 3
 
 execute if score @s ca.s_adren matches 7.. run scoreboard players set @s ca.s_adren 6
 execute if score @s ca.s_energ matches 7.. run scoreboard players set @s ca.s_energ 6

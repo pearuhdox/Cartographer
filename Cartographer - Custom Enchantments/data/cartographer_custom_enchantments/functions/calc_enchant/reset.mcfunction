@@ -33,6 +33,8 @@ scoreboard players set @s ca.lifesteal 0
 scoreboard players set @s ca.overcharge 0
 scoreboard players set @s ca.electrocute 0
 scoreboard players set @s ca.point_blank 0
+scoreboard players set @s ca.possession 0
+scoreboard players set @s ca.possess 0
 scoreboard players set @s ca.expose 0
 scoreboard players set @s ca.infect 0
 scoreboard players set @s ca.regen 0
@@ -82,6 +84,7 @@ scoreboard players set @s ca.t_shock 0
 scoreboard players set @s ca.t_stun 0
 scoreboard players set @s ca.t_infection 0
 scoreboard players set @s ca.t_knock 0
+scoreboard players set @s ca.t_poss 0
 
 scoreboard players set @s ca.s_adren 0
 scoreboard players set @s ca.s_energ 0

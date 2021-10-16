@@ -11,5 +11,6 @@ execute if score $eruption ca.bleeding matches 1.. run function cartographer_cus
 execute if score $eruption ca.infection matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/particle_infection
 execute if score $eruption ca.electrocute matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/particle_shock
 execute if score $eruption ca.exposing matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/particle_commit
+execute if score $eruption ca.possession matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/particle_possession
 
 tag @s remove erupting_xp

@@ -164,6 +164,10 @@ Custom Enchantments:
   Developer Commentary: Reducing the complexity of the enchant as well as adapting it to current limitations of CDL. Overall, the effect will be the same,
   as it will just execute the player if the player's health value is too far below the desired tier's amount (same as what it used to do).
 
+Mimics:
+  - You can now create a "Double Chest Mimic"
+  - Double Chest Mimics act differently to normal mimics, and are stronger.
+
 Custom Statuses:
 
   - Bleeding:

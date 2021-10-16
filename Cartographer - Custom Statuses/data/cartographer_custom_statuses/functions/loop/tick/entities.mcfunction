@@ -3,8 +3,8 @@ execute if entity @s[type=#cartographer_core:hostile,predicate=cartographer_cust
 #Run Stunned
 execute as @s[type=#cartographer_core:hostile,scores={ca.effect_stun=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned
 
-#Run Rage
-execute as @s[type=#cartographer_core:hostile,scores={ca.effect_rage=1..}] at @s run function cartographer_custom_statuses:tick_effects/rage
+#Run Possession
+execute as @s[type=#cartographer_core:hostile,scores={ca.eft_possess=1..}] at @s run function cartographer_custom_statuses:tick_effects/possession/warmup
 
 #Run Vulnerability
 execute as @s[type=#cartographer_core:hostile,predicate=cartographer_custom_statuses:is_exposed] at @s run function cartographer_custom_statuses:effects/vulnerability

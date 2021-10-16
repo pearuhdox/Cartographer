@@ -28,6 +28,7 @@ scoreboard players operation $melee ca.bleeding = @s ca.bleeding
 scoreboard players operation $melee ca.electrocute = @s ca.electrocute
 scoreboard players operation $melee ca.stunning = @s ca.stunning
 scoreboard players operation $melee ca.infection = @s ca.infection
+scoreboard players operation $melee ca.possession = @s ca.possession
 
 execute if score @s ca.surge_strike matches 1.. positioned ~ ~1.2 ~ positioned ^ ^ ^1 run function cartographer_custom_enchantments:enchant_effects/surging_strike/raycast
 
@@ -42,6 +43,7 @@ scoreboard players set $melee ca.bleeding 0
 scoreboard players set $melee ca.electrocute 0
 scoreboard players set $melee ca.stunning 0
 scoreboard players set $melee ca.infection 0
+scoreboard players set $melee ca.possession 0
 
 #Debug Message
 tellraw @a[tag=debug,scores={ca.surge_strike=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Surging Strike.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

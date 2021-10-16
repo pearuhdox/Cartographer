@@ -76,3 +76,18 @@ execute if score $eruption ca.stunning matches 5 run scoreboard players set @s c
 execute if score $eruption ca.exposing matches 1 as @s run effect give @s bad_omen 3 0
 execute if score $eruption ca.exposing matches 2 as @s run effect give @s bad_omen 3 1
 execute if score $eruption ca.exposing matches 3 as @s run effect give @s bad_omen 3 2
+
+#Possession - Random Chance
+execute if score $eruption ca.possession matches 1.. run scoreboard players set in math 1
+execute if score $eruption ca.possession matches 1.. run scoreboard players set in1 math 100
+
+execute if score $eruption ca.possession matches 1.. run function cartographer_core:helper/math/rng/range
+
+execute if score $eruption ca.possession matches 1.. run scoreboard players operation $melee ca.melee_chance = out math
+
+#Possession - Run Effect
+execute if score $eruption ca.possession matches 1 as @s run scoreboard players set $percent_poss ca.melee_chance 10
+execute if score $eruption ca.possession matches 2 as @s run scoreboard players set $percent_poss ca.melee_chance 20
+execute if score $eruption ca.possession matches 3.. as @s run scoreboard players set $percent_poss ca.melee_chance 30
+
+execute if score $eruption ca.possession matches 1.. as @s run function cartographer_custom_enchantments:enchant_effects/possession/branch

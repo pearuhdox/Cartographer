@@ -52,7 +52,7 @@ tag @a[tag=auto_charge_inv_fix] remove auto_charge_inv_fix
 # Triggers for enchants that must attempt every tick.
 
 #Remove Evading tag if no evasion
-execute as @a unless score @s ca.evasion matches ..0 run tag @s remove evading
+execute as @a unless score @s ca.evasion matches 1.. run tag @s remove evading
 
 #Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
 execute as @a[tag=has_passive_ench] at @s run function cartographer_custom_enchantments:enchant_calls/passively
