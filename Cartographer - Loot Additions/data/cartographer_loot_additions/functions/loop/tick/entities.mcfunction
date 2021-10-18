@@ -13,6 +13,16 @@ execute as @s[type=item_frame,tag=loot_holder_ground,tag=filled] if entity @a[ga
 
 execute as @s[type=item_frame,tag=loot_holder_ground,tag=filled] if block ~ ~-1 ~ air run function cartographer_loot_additions:placed/despawn
 
+#Functions for placed on ground glow items.
+execute as @s[type=glow_item_frame,tag=loot_holder_spawn] run function cartographer_loot_additions:placed_glow/initialize
+
+execute as @s[type=glow_item_frame,tag=loot_holder_ground,tag=!filled] if data entity @s Item.id run function cartographer_loot_additions:placed_glow/accepting
+
+execute as @s[type=glow_item_frame,tag=loot_holder_ground,tag=filled] unless entity @a[gamemode=creative,distance=..10] unless data entity @s Item.id run function cartographer_loot_additions:placed_glow/despawn
+execute as @s[type=glow_item_frame,tag=loot_holder_ground,tag=filled] if entity @a[gamemode=creative,distance=..10] unless data entity @s Item.id run function cartographer_loot_additions:placed_glow/revert
+
+execute as @s[type=glow_item_frame,tag=loot_holder_ground,tag=filled] if block ~ ~-1 ~ air run function cartographer_loot_additions:placed_glow/despawn
+
 
 #Functions for mulitchoice structures.
 execute as @s[type=item_frame,tag=loot_multichoice_spawn] run function cartographer_loot_additions:multichoice/initialize
