@@ -1,6 +1,10 @@
 #Tell Cartographer this pack is in use
 scoreboard players set $custom_enchantments ca.installed 1
 
+#Run queues of enchant calculator
+execute as @a[tag=ca.queue_ench_check,tag=!ca.ench_do_not_check] at @s run function cartographer_custom_enchantments:calc_enchant/run
+tag @a remove ca.queue_ench_check
+
 #Temporary override on enchant disabler
 scoreboard players set $cu_en_ranged ca.enabler 1
 scoreboard players set $cu_en_kill ca.enabler 1
@@ -8,7 +12,6 @@ scoreboard players set $cu_en_melee ca.enabler 1
 scoreboard players set $cu_en_passive ca.enabler 1
 scoreboard players set $cu_en_player_death ca.enabler 1
 scoreboard players set $cu_en_spawner ca.enabler 1
-
 
 #Reset attack speed and kbr on Echo users
 execute as @a[scores={ca.echo=1..,ca.echo_charges=0..}] run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 "echo_effect_spd" 1024 add

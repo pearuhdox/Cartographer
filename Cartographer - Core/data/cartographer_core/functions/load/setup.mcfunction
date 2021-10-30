@@ -11,6 +11,8 @@
 scoreboard objectives add ca.enabler dummy
 scoreboard objectives add ca.installed dummy
 
+scoreboard players set $charon ca.installed 0
+scoreboard players set $custom_durability ca.installed 0
 scoreboard players set $custom_enchantments ca.installed 0
 scoreboard players set $custom_statuses ca.installed 0
 scoreboard players set $loot_additions ca.installed 0

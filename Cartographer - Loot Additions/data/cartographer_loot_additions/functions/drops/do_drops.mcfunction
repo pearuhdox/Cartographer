@@ -108,4 +108,4 @@ tag @s add loot_checked
 #Sounds and particles
 stopsound @a[distance=..16] block minecraft:block.stone.break
 
-kill @s
+kill @s[tag=loot_add_custom]

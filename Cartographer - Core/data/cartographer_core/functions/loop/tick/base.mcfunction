@@ -1,5 +1,6 @@
 #Run all Cartographer Effects from Core Timers.
 function cartographer_charon:loop/tick/base
+function cartographer_custom_durability:loop/tick/base
 function cartographer_custom_enchantments:loop/tick/base
 function cartographer_custom_statuses:loop/tick/base
 function cartographer_loot_additions:loop/tick/base
@@ -193,3 +194,7 @@ execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core
 scoreboard players operation $ca_timer_mod ca.timer = $ca_timer ca.timer
 scoreboard players operation $ca_timer_mod ca.timer %= $1200 ca.CONSTANT
 execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core:loop/60_seconds/base
+
+
+#Remove the blocker tag for the Custom Enchantments Custom Durability Conflict
+tag @s remove ca.ench_do_not_check
