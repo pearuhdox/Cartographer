@@ -4,6 +4,7 @@ function cartographer_custom_enchantments:calc_enchant/reset
 #Find Custom Items on the Equipped Slots
 function cartographer_custom_enchantments:calc_enchant/find_custom
 
+
 #For each custom item found, run the proper calculation function.
 execute if entity @s[tag=check_head] run function cartographer_custom_enchantments:calc_enchant/head
 execute if entity @s[tag=check_body] run function cartographer_custom_enchantments:calc_enchant/chest
@@ -21,10 +22,7 @@ function cartographer_custom_enchantments:calc_enchant/set_max
 execute if entity @s[tag=!doing_auto_charge] run function cartographer_custom_enchantments:calc_enchant/auto_charge
 function cartographer_custom_enchantments:calc_enchant/curse_malevolence
 
-function #minecraft:inventory_calculate/extras
-
-#Function tag for extra calculations here:
-function cartographer_custom_enchantments:addito
+function cartographer_custom_enchantments:calc_enchant/has_passive
 
 #Run Two Handed Here
 execute if entity @s[scores={ca.death_time=41..},tag=!processed_two_handed] run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/branch
