@@ -5,4 +5,6 @@ data remove storage suso:pldata working_data.Tokens.HeavyTokens[0]
 
 execute if data entity @s ArmorItems[3].tag.HeldToken.Owner run tag @s add tokened
 
+execute if entity @s[tag=tokened] run scoreboard players add $tokened_total ca.var 1
+
 execute as @p[distance=..30] at @s run function suso.player_data:put/do

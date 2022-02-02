@@ -13,6 +13,10 @@ execute if score @s ca.ral_time matches 0 if entity @s[scores={ca.ral_charge=1..
 execute if score @s ca.ral_time matches 0 run scoreboard players set @s ca.ral_charge 0
 execute if score @s ca.ral_time matches 0 if score @s cdl.Heal_Queue matches 1.. run function cd:lib/player/heal
 
-particle minecraft:dust 0.8 0 0 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 5 normal
+particle minecraft:dust 0.8 0 0 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
+
+execute if entity @s[x_rotation=-90..60] run particle minecraft:dust 0.8 0 0 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
+execute if entity @s[x_rotation=61..80] run particle minecraft:dust 0.8 0 0 1 ~ ~0.2 ~ 0.1 0 0.1 0 1 normal
+
 
 execute if score @s ca.ral_time matches 0 run scoreboard players set @s ca.ral_bank 0

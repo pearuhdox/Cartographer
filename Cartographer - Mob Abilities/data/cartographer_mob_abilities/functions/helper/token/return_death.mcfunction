@@ -26,3 +26,5 @@ function suso.player_data:put/do
 
 tag @s remove light_restore
 tag @s remove heavy_restore
+
+scoreboard players remove $tokened_total ca.var 1

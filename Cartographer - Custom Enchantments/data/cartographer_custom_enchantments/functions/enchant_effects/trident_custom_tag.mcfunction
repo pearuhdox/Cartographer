@@ -75,3 +75,6 @@ execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.fire_aspect=3}
 
 #Cauterize Ranged Synergy
 execute if entity @e[type=trident,limit=1,sort=nearest,scores={ca.cauterize=1}] run tag @s add is_cauterize
+
+#Run Trident Effect Dictionary
+function #minecraft:cartographer_events/dict/trident

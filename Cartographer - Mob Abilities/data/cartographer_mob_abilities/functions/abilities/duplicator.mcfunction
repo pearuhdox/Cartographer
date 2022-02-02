@@ -1,7 +1,7 @@
 execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 15
 execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 12
-execute if score $global helper_diff matches ..2 if entity @s[tag=mitosis] run scoreboard players set @s cooldown 5
-execute if score $global helper_diff matches 3.. if entity @s[tag=mitosis] run scoreboard players set @s cooldown 4
+execute if score $global helper_diff matches ..2 if entity @s[tag=ca.mitosis] run scoreboard players set @s cooldown 5
+execute if score $global helper_diff matches 3.. if entity @s[tag=ca.mitosis] run scoreboard players set @s cooldown 4
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 

@@ -130,8 +130,9 @@ execute store result score $temp ca.susu run data get storage ca.susu:enchants o
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.loyalty += $temp ca.susu
 execute if score @s ca.loyalty matches 1..5 run scoreboard players add @s ca.loyalty 10
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
-scoreboard players operation @s ca.fire_aspect += $temp ca.susu
+# I don't think I need this... Right? Right?
+#execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
+#scoreboard players operation @s ca.fire_aspect += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:flame"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.flame += $temp ca.susu

@@ -29,6 +29,7 @@ execute as @a[scores={ca.fleetfoot=1..,ca.is_draw_bow=1..}] run attribute @s min
 execute as @a[scores={ca.fleetfoot=1..,ca.is_hold_tri=1..}] run attribute @s minecraft:generic.movement_speed modifier add 31-321-514-000-6151520 "fleetfoot_effect_spd" 0.4 add
 
 execute as @a[scores={ca.fleetfoot=0}] run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
+execute as @a[scores={ca.fleetfoot=1..,ca.is_load_cro=0}] unless score @s ca.is_draw_bow matches 1.. unless score @s ca.is_hold_tri matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
 
 #Current recharge attack meter
 execute as @a[scores={ca.ce.cur_spd=2..}] run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "current_effect_spd" 1024 add

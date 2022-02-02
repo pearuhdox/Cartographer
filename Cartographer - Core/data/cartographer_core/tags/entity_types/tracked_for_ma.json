@@ -1,0 +1,13 @@
+{
+	"values": [
+		"#cartographer_core:hostile",
+		"#cartographer_core:projectile",
+		"minecraft:armor_stand",
+		"minecraft:marker",
+		"minecraft:area_effect_cloud",
+		"minecraft:sheep",
+		"minecraft:item",
+		"minecraft:area_effect_cloud",
+		"minecraft:evoker_fangs"
+	]
+}

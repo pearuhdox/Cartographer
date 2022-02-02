@@ -1,8 +1,6 @@
 scoreboard players set $gmr_freeze ca.mutex 1
 gamerule sendCommandFeedback false
 
-
-
 execute as @p at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.5 2
 
 execute unless score $no_anvil ca.gamerule matches 0.. run scoreboard players set $no_anvil ca.gamerule 0

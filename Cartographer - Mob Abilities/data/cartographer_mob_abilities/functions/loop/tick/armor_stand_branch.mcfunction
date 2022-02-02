@@ -25,3 +25,9 @@ execute if entity @s[tag=corpse_crawler_egg,tag=pushed] run function cartographe
 
 #Pyromania Placeholders
 execute if entity @s[tag=pyro_effect] at @s positioned ~ ~0.7 ~ run function cartographer_mob_abilities:passive/pyromania_effect
+
+#Run Needle Projectiles
+execute if entity @s[tag=needle_projectile] run function cartographer_mob_abilities:charge/needle/projectile/travel
+
+#Run Grenadier Projectiles
+execute if entity @s[tag=grenadier_projectile] if entity @s[nbt={OnGround:1b}] run function cartographer_mob_abilities:charge/grenadier/projectile/attack

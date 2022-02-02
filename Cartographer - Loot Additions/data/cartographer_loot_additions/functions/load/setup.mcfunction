@@ -9,7 +9,12 @@ scoreboard objectives add ca.derived_seed dummy
 
 scoreboard objectives add ca.loot_sneak minecraft.custom:minecraft.sneak_time
 
+scoreboard objectives add ca.creative_ct dummy
+
 scoreboard objectives add altar_lock dummy
+
+scoreboard objectives add la.filled_slots dummy
+scoreboard objectives add la.filled_comp dummy
 
 #Create the loot giving box.
 setblock 4206900 2 4206900 purple_shulker_box replace

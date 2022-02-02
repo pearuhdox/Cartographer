@@ -1,9 +1,9 @@
 #Evasion ()
-execute as @a[scores={ca.evasion=1..},tag=evading] at @s run function cartographer_custom_enchantments:enchant_effects/evasion/trigger
-execute as @a[scores={ca.evasion=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/evasion/prime
+execute as @s[scores={ca.evasion=1..},tag=evading] at @s run function cartographer_custom_enchantments:enchant_effects/evasion/trigger
+execute as @s[scores={ca.evasion=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/evasion/prime
 
 #Rally ()
-execute as @a[scores={ca.rally=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/rally
+execute as @s[scores={ca.rally=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/rally
 
 #Thorns ()
 execute if entity @s[scores={ca.thorns=1..}] run function cartographer_custom_enchantments:enchant_effects/thorns

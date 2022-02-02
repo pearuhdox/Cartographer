@@ -4,8 +4,13 @@ playsound minecraft:block.chest.open block @a[distance=..10] ~ ~ ~ 1 1.5
 
 tag @s add spawned
 
+tag @s add ca.la.tracked
+
 execute if block ~ ~ ~ redstone_wire run tag @s add trapped
 execute if block ~ ~ ~ redstone_wire run setblock ~ ~ ~ air replace
+
+scoreboard players set $la.run ca.var 1
+
 
 
 execute if entity @s[tag=pose_sitting] run tp @s ~ ~-0.6 ~ facing entity @p feet

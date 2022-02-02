@@ -101,7 +101,7 @@ execute as @a[scores={ca.shoot_cross=1..}] at @s run function cartographer_core:
 execute as @a[scores={ca.throw_trident=1..}] at @s run function cartographer_core:helper/tag_player_projectile
 
 #Run all ticking entity effects.
-execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/tick
+execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/branch_tick
 
 #Run post entity tick base clock.
 function cartographer_core:loop/tick/base_post_entity

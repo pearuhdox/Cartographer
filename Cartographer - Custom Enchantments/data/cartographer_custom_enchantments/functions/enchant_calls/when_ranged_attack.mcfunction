@@ -1,5 +1,4 @@
 #These effects will activate from the entity itself before the player call.
-
 execute if score $cu_en_ranged ca.enabler matches 1.. at @s if entity @e[distance=..7,type=arrow,limit=1,sort=nearest] run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
 execute if score $cu_en_ranged ca.enabler matches 1.. at @s if entity @e[distance=..7,type=trident,limit=1,sort=nearest] run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag
 
@@ -129,3 +128,9 @@ execute if score $cu_en_ranged ca.enabler matches 1.. as @e[tag=loyalty] at @s r
 
 #Brittle Check. Check if the entity hurt was Brittle and it wasn't from the same hit that applied it (from Cauterize).
 execute if score @s[tag=!cleanse_fire] ca.brittle_time matches 1.. as @s at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/brittle_hurt
+
+#Run the Arrow Hit Datapack Hook
+function #minecraft:cartographer_events/player_hit_mob_arrow
+
+#Run the Trident Hit Datapack Hook
+function #minecraft:cartographer_events/player_hit_mob_trident 

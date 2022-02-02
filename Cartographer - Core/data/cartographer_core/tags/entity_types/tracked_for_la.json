@@ -2,6 +2,7 @@
 	"values": [
 		"minecraft:armor_stand",
 		"minecraft:item_frame",
-		"minecraft:glow_item_frame"
+		"minecraft:glow_item_frame",
+		"minecraft:item"
 	]
 }

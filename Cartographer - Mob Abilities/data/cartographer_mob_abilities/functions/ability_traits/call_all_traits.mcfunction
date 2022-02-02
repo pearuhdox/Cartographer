@@ -23,4 +23,7 @@ execute if entity @s[tag=ca.predator] at @s run function cartographer_mob_abilit
 execute if entity @s[tag=ca.evocative] at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
 execute if entity @s[tag=ca.volatile] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
+execute if entity @s[tag=ca.horrifying,tag=ca.creation,tag=!ca.horrify_create] at @s run function cartographer_mob_abilities:ability_traits/horrifying/creation_tether
+execute if entity @s[tag=ca.horrifying,tag=ca.creation,tag=!ca.horrify_create] at @s run tag @s add ca.horrify_create
+
 #say Running Traits

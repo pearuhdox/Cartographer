@@ -13,4 +13,4 @@ execute if entity @s[tag=ca.laser,tag=tokened,scores={cooldown=0}] unless entity
 #Fix Tags
 execute if entity @s[tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix
 
-execute if entity @s[type=#cartographer_core:hostile,tag=ca.has_active,tag=!los_checked,scores={cooldown=0}] run scoreboard players set $do_los flag 1
+execute if entity @s[type=#cartographer_core:hostile,tag=ca.has_active,tag=!los_checked,scores={cooldown=0}] if entity @a[distance=..40] run scoreboard players set $do_los flag 1

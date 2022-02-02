@@ -10,8 +10,8 @@ execute unless entity @s[scores={ability_charge=1..2}] unless entity @s[scores={
 execute unless entity @s[scores={ability_charge=1..2}] run data modify entity @s NoAI set value 1
 
 
-execute unless entity @s[scores={recast_count=1..}] if entity @s[tag=recast] run scoreboard players set @s recast_count 2
-execute unless entity @s[scores={recast_count=1..}] if entity @s[tag=rerecast] run scoreboard players set @s recast_count 3
+execute unless entity @s[scores={recast_count=1..}] if entity @s[tag=ca.recast] run scoreboard players set @s recast_count 2
+execute unless entity @s[scores={recast_count=1..}] if entity @s[tag=ca.rerecast] run scoreboard players set @s recast_count 3
 execute unless entity @s[scores={recast_count=1..}] run scoreboard players set @s recast_count 1
 
 execute unless entity @s[scores={ability_charge=2}] run scoreboard players add @s ability_charge 1

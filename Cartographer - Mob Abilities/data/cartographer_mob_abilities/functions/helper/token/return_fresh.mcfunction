@@ -15,3 +15,5 @@ execute as @p[tag=player_to_return] at @s run function suso.player_data:put/do
 tag @p[tag=player_to_return] remove player_to_return
 
 scoreboard players set $type_fresh helper_tokens -1
+
+scoreboard players remove $tokened_total ca.var 1

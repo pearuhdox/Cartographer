@@ -31,5 +31,6 @@ execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={
 execute if entity @s[tag=hook_broken] at @s run scoreboard players set @s ca.hooked 2
 
 tag @a remove touched
+tag @a remove ability_tagged
 
 #execute if entity @a[tag=check_custom_shulker_bullet] run function cartographer_mob_abilities:passive/projectile/shulker_save_data

@@ -23,6 +23,7 @@ execute unless entity @s[scores={ability_charge=3}] run data modify storage cart
 execute unless entity @s[scores={ability_charge=3}] run scoreboard players operation $grenadier_damage ca.ability_dmg = $damage ca.ability_dmg
 
 #Save Rotation of Entity
+execute unless entity @s[scores={ability_charge=3}] run tp @s ~ ~ ~ facing entity @p feet
 execute unless entity @s[scores={ability_charge=3}] store result score $g_rot ca.aim run data get entity @s Rotation[0]
 
 execute unless entity @s[scores={ability_charge=3}] as @e[tag=grenadier_projectile,tag=!aimed] at @s run function cartographer_mob_abilities:charge/grenadier/projectile/aim

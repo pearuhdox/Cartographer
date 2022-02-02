@@ -17,7 +17,7 @@ function cartographer_repair_stations:loop/1_second/base
 #Out of Combat Test is done in Enchantments. Set this up here.
 
 #Run all 1 second entity effects from here.
-execute as @e[type=!#cartographer_core:not_tracked,type=!player] at @s run function cartographer_core:loop/entity_calls/1_second
+execute as @e[type=!#cartographer_core:not_tracked,type=!#cartographer_core:item_frames,type=!item,type=!player] at @s run function cartographer_core:loop/entity_calls/1_second
 
 
 #Add any extra functions here!

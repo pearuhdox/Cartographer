@@ -7,8 +7,8 @@ execute unless entity @s[scores={ability_charge=1}] run scoreboard players set @
 
 execute unless entity @s[scores={ability_charge=2}] run scoreboard players add @s ability_charge 1
 
-execute if entity @s[scores={ability_charge=1},tag=triple] run scoreboard players set @s copies 1
-execute if entity @s[scores={ability_charge=1},tag=quadruple] run scoreboard players set @s copies 2
-execute if entity @s[scores={ability_charge=1},tag=quintuple] run scoreboard players set @s copies 3
+execute if entity @s[scores={ability_charge=1},tag=ca.triple] run scoreboard players set @s copies 1
+execute if entity @s[scores={ability_charge=1},tag=ca.quadruple] run scoreboard players set @s copies 2
+execute if entity @s[scores={ability_charge=1},tag=ca.quintuple] run scoreboard players set @s copies 3
 
 execute if entity @s[scores={ability_charge=2}] run function cartographer_mob_abilities:abilities/duplicator

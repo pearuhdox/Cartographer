@@ -1,0 +1,7 @@
+[
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{Ammo:0}"
+        }
+      ]
+      

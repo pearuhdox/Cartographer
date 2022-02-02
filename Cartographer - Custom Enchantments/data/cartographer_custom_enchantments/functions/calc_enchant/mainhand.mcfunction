@@ -216,3 +216,5 @@ execute if score $temp ca.susu matches 1.. run scoreboard players operation @s c
 
 #Check if the custom item is a trident, and auto enable the ranged tag.
 execute if data storage ca.susu:enchants main{id:"minecraft:trident"} run scoreboard players set $cu_en_ranged ca.enabler 1
+
+#say test

@@ -5,12 +5,12 @@ execute unless entity @s[tag=shocked_tick] run scoreboard players operation @s c
 
 scoreboard players remove @s ca.effect_stun 1
 
-execute if score @s ca.stun_resist matches 2.. run scoreboard players add @s ca.stun_res_time 1
-execute if score @s ca.stun_resist matches 2.. if score @s ca.stun_res_time = @s ca.stun_res_ct run scoreboard players operation @s ca.effect_stun -= @s ca.stun_resist
-execute if score @s ca.stun_resist matches 2.. if score @s ca.stun_res_time = @s ca.stun_res_ct run scoreboard players set @s ca.stun_res_time 0
-execute if score @s ca.stun_resist matches 2.. if score @s ca.effect_stun matches ..0 run scoreboard players set @s ca.effect_stun 1
+execute unless entity @s[tag=no_tenacity] if score @s ca.stun_resist matches 2.. run scoreboard players add @s ca.stun_res_time 1
+execute unless entity @s[tag=no_tenacity] if score @s ca.stun_resist matches 2.. if score @s ca.stun_res_time = @s ca.stun_res_ct run scoreboard players operation @s ca.effect_stun -= @s ca.stun_resist
+execute unless entity @s[tag=no_tenacity] if score @s ca.stun_resist matches 2.. if score @s ca.stun_res_time = @s ca.stun_res_ct run scoreboard players set @s ca.stun_res_time 0
+execute unless entity @s[tag=no_tenacity] if score @s ca.stun_resist matches 2.. if score @s ca.effect_stun matches ..0 run scoreboard players set @s ca.effect_stun 1
 
-execute if score @s ca.stun_res_ct matches ..0 run scoreboard players set @s ca.effect_stun 1
+execute unless entity @s[tag=no_tenacity] if score @s ca.stun_res_ct matches ..0 run scoreboard players set @s ca.effect_stun 1
 
 
 execute as @s[scores={ca.effect_stun=2..}] run data merge entity @s {NoAI:1}

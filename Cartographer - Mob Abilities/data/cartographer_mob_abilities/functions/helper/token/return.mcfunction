@@ -10,3 +10,5 @@ data modify entity @s ArmorItems[3].tag.HeldToken set value {}
 execute as @p[tag=player_to_return] at @s run function suso.player_data:put/do
 
 tag @p[tag=player_to_return] remove player_to_return
+
+scoreboard players remove $tokened_total ca.var 1

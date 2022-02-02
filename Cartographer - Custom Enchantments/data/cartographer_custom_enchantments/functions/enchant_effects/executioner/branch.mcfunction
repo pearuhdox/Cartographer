@@ -36,6 +36,11 @@ execute if score $exec ca.executioner matches 1 as @s[scores={ca.exec_low=..100}
 execute if score $exec ca.executioner matches 2 as @s[scores={ca.exec_low=..200}] at @s run particle minecraft:squid_ink ~ ~0.5 ~ 0.2 0.2 0.2 0.2 5 normal
 execute if score $exec ca.executioner matches 3 as @s[scores={ca.exec_low=..300}] at @s run particle minecraft:squid_ink ~ ~0.5 ~ 0.2 0.2 0.2 0.2 5 normal
 
+#Trigger Execute hook
+execute if score $exec ca.executioner matches 1 as @s[scores={ca.exec_low=..100}] at @s run function #minecraft:cartographer_events/execute_mob
+execute if score $exec ca.executioner matches 2 as @s[scores={ca.exec_low=..200}] at @s run function #minecraft:cartographer_events/execute_mob
+execute if score $exec ca.executioner matches 3 as @s[scores={ca.exec_low=..300}] at @s run function #minecraft:cartographer_events/execute_mob
+
 execute if score $exec ca.executioner matches 1 as @s[scores={ca.exec_low=..100}] at @s run kill @s
 execute if score $exec ca.executioner matches 2 as @s[scores={ca.exec_low=..200}] at @s run kill @s
 execute if score $exec ca.executioner matches 3 as @s[scores={ca.exec_low=..300}] at @s run kill @s

@@ -1,0 +1,6 @@
+summon fox ~ ~ ~ {Silent:1b,DeathLootTable:"la_possessed_item",Health:2f,Type:"snow",Tags:["la_possessed_item"],HandItems:[{id:"minecraft:stone_button",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:stone_button",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.27,Operation:1,UUID:[I;1019578236,605964165,-2042386127,-383504210],Slot:"head"}]}}],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:20000000,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2}]}
+data modify entity @e[type=fox,tag=la_possessed_item,distance=..2,limit=1,sort=nearest] HandItems[0] set from entity @e[type=item,distance=..2,limit=1,sort=nearest] Item
+kill @e[type=item,distance=..2,limit=1,sort=nearest]
+playsound minecraft:entity.fox.aggro neutral @a[distance=..10] ~ ~ ~ 2 0.75
+playsound minecraft:entity.shulker_bullet.hit neutral @a[distance=..10] ~ ~ ~ 1 1.5
+particle minecraft:smoke ~ ~ ~ 0.3 0.3 0.3 0.05 15 normal

@@ -12,3 +12,5 @@ execute if entity @s[tag=ca.zephyrous] as @a[tag=ability_tagged,tag=touched] at 
 
 #EXCEPTION: Volatile runs at the player's position.
 execute if entity @s[tag=ca.volatile] as @a[tag=ability_tagged,tag=touched] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
+
+#say test

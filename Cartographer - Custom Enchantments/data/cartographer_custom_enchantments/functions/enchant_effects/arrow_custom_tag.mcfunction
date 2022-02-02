@@ -57,3 +57,6 @@ execute if entity @s[tag=is_punch_2] positioned ~ ~0.5 ~ run data modify entity 
 execute if entity @s[tag=is_punch_3] positioned ~ ~0.5 ~ run data modify entity @s Rotation[1] set value 0f
 execute if entity @s[tag=is_punch_4] positioned ~ ~0.5 ~ run data modify entity @s Rotation[1] set value 0f
 execute if entity @s[tag=is_punch_5] positioned ~ ~0.5 ~ run data modify entity @s Rotation[1] set value 0f
+
+#Run Arrow Effect Dictionary
+function #minecraft:cartographer_events/dict/arrow
