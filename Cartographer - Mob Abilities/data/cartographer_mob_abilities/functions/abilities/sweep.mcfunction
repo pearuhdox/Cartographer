@@ -50,14 +50,14 @@ scoreboard players remove @s[scores={recast_count=1..}] recast_count 1
 execute if entity @s[scores={recast_count=0},tag=!mobile,tag=!unstoppable] run tp @s ^ ^0.5 ^1.5
 execute if entity @s[scores={recast_count=1..},tag=!mobile,tag=!unstoppable] run tp @s ^ ^0.1 ^2 facing entity @p feet
 
-execute if entity @s[scores={recast_count=0},tag=mobile,tag=!unstoppable] run tp @s ^ ^0.5 ^2
-execute if entity @s[scores={recast_count=1..},tag=mobile,tag=!unstoppable] run tp @s ^ ^0.1 ^3 facing entity @p feet
+execute if entity @s[scores={recast_count=0},tag=ca.mobile,tag=!unstoppable] run tp @s ^ ^0.5 ^2
+execute if entity @s[scores={recast_count=1..},tag=ca.mobile,tag=!unstoppable] run tp @s ^ ^0.1 ^3 facing entity @p feet
 
-execute if entity @s[scores={recast_count=0},tag=unstoppable,tag=!mobile] run tp @s ^ ^0.5 ^1.5
-execute if entity @s[scores={recast_count=1..},tag=unstoppable,tag=!mobile] run tp @s ^ ^0.1 ^2
+execute if entity @s[scores={recast_count=0},tag=ca.unstoppable,tag=!mobile] run tp @s ^ ^0.5 ^1.5
+execute if entity @s[scores={recast_count=1..},tag=ca.unstoppable,tag=!mobile] run tp @s ^ ^0.1 ^2
 
-execute if entity @s[scores={recast_count=0},tag=unstoppable,tag=mobile] run tp @s ^ ^0.5 ^2
-execute if entity @s[scores={recast_count=1..},tag=unstoppable,tag=mobile] run tp @s ^ ^0.1 ^3
+execute if entity @s[scores={recast_count=0},tag=ca.unstoppable,tag=ca.mobile] run tp @s ^ ^0.5 ^2
+execute if entity @s[scores={recast_count=1..},tag=ca.unstoppable,tag=ca.mobile] run tp @s ^ ^0.1 ^3
 
 #Recast if there are still casts to make.
 execute if entity @s[scores={recast_count=1..}] run tag @a[distance=..5] remove swept
