@@ -27,6 +27,8 @@ Cartographer also features a library called "Core" which schedules and runs all 
 
 **Repair Stations** - Adds a structure which can be spawned in world which serves as an alternative to anvils. It can repair gear with increasing and controllable costs, and protects gear lost from durability destroying it.
 
+**Loot Additions** - Adds a variety of ways to place custom loot into the world more immersively. From custom player head drops, to special item frames and armor stands, and more!
+
 ## Documentation and Contact
 
 To get started, you can refer to the documentation wiki for Cartographer, which can be found here.
