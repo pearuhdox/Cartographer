@@ -1,0 +1,47 @@
+[
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": " "
+            },
+            {
+              "text": "✎ Two Handed",
+              "color": "red",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "While held, the offhand slot is",
+              "color": "#FFF4D9",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+                "text": "disabled. Any item held in the",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              },
+              {
+                "text": "offhand is temporarily unusable.",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              }
+          ]
+        }
+      ]
+      

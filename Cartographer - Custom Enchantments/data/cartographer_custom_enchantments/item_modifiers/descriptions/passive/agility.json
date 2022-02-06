@@ -1,0 +1,38 @@
+[
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": " "
+            },
+            {
+              "text": "✎ Agility",
+              "color": "#ACFFA6",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "The user's jump",
+              "color": "#FFF4D9",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+                "text": "strength is increased.",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              }
+          ]
+        }
+      ]
+      

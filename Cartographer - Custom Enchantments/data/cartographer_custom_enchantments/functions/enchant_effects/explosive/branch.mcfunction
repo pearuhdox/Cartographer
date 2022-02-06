@@ -15,6 +15,8 @@ execute if score $explosive ca.infection matches 1.. run scoreboard players set 
 
 execute if score $explosive ca.flash matches 1.. run function cartographer_custom_enchantments:enchant_effects/flash
 
+execute if score $explosive ca.possess matches 1.. run function cartographer_custom_enchantments:enchant_effects/possess
+
 #execute if score $explosive ca.punch matches 1 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
 #execute if score $explosive ca.punch matches 2 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]
 #execute if score $explosive ca.punch matches 3 run tp @s ~ ~ ~ facing entity @e[type=#cartographer_core:hostile,distance=..6,limit=1,tag=vol_center]

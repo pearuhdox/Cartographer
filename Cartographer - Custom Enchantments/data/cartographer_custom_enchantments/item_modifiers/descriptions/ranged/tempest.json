@@ -1,0 +1,38 @@
+[
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": " "
+            },
+            {
+              "text": "✎ Tempest",
+              "color": "#ACFFA6",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Ranged attacks from this",
+              "color": "#FFF4D9",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+                "text": "trident deal additional damage.",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              }
+          ]
+        }
+      ]
+      

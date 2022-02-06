@@ -1,0 +1,37 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      {
+        "text": " "
+      },
+      {
+        "text": "✎ Soulbound",
+        "color": "#ACFFA6",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "This item is not",
+        "color": "#FFF4D9",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "dropped on death.",
+          "color": "#FFF4D9",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+    ]
+  }
+]

@@ -11,7 +11,7 @@ execute if score $custom_statuses ca.installed matches 1.. if entity @a[distance
 #function cartographer_loot_additions:loop/tick/entities
 
 #Run Mimic Effects
-#function cartographer_mimics:loop/tick/entities
+execute if score $mimics ca.installed matches 1.. if entity @s[type=wither_skeleton] run function cartographer_mimics:loop/1_second/entities
 
 #Run Mob Abilities Effects
 execute if score $mob_abilities ca.installed matches 1.. if entity @a[distance=..40] run function cartographer_mob_abilities:loop/1_second/entities

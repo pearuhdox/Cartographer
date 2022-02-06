@@ -1,0 +1,46 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      {
+        "text": " "
+      },
+      {
+        "text": "✎ Eruption",
+        "color": "#ACFFA6",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "When you break a spawner, damage",
+        "color": "#FFF4D9",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "nearby hostile mobs. Status effects",
+          "color": "#FFF4D9",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+        "text": "from melee attacks are also applied.",
+            "color": "#FFF4D9",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": " "
+            },
+            {
+              "text": "✎ Tempo Theft",
+              "color": "#ACFFA6",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Arrows steal speed from the mobs they",
+              "color": "#FFF4D9",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+                "text": "hit, giving it to you for a short time.",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              }
+          ]
+        }
+      ]
+      

@@ -1,0 +1,37 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      {
+        "text": " "
+      },
+      {
+        "text": "✎ Auto Charge",
+        "color": "#ACFFA6",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "When you kill a mob, this crossbow",
+        "color": "#FFF4D9",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "automatically reloads (for free).",
+          "color": "#FFF4D9",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+    ]
+  }
+]

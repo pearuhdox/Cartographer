@@ -1,0 +1,37 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      {
+        "text": " "
+      },
+      {
+        "text": "✎ Infinity",
+        "color": "#ACFFA6",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "This consumable is not",
+        "color": "#FFF4D9",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "lost when it is used.",
+          "color": "#FFF4D9",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+    ]
+  }
+]

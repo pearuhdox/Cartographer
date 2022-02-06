@@ -1,0 +1,47 @@
+[
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": " "
+            },
+            {
+              "text": "✎ Second Wind",
+              "color": "#ACFFA6",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Saves you from a lethal hit, giving some",
+              "color": "#FFF4D9",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+                "text": "Absorption shielding. After cheating death, kill a",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              },
+              {
+                "text": "mob quickly to restore health, or suffer the penalty.",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              }
+          ]
+        }
+      ]
+      

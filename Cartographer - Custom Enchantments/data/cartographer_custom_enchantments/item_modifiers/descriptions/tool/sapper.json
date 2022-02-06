@@ -1,0 +1,37 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      {
+        "text": " "
+      },
+      {
+        "text": "✎ Sapper",
+        "color": "#ACFFA6",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "When you break a spawner,",
+        "color": "#FFF4D9",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      },
+      {
+        "text": "restore some health.",
+          "color": "#FFF4D9",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+    ]
+  }
+]

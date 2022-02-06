@@ -101,6 +101,7 @@ execute as @a unless score @s ca.overcharge matches 1.. run scoreboard players s
 execute if score $cu_en_passive ca.enabler matches 1.. as @a[scores={ca.ral_time=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/rally/timer
 
 #Remove Two Handed Processed Tag - Fix Inventory Two Handed Bundled Items
+scoreboard players set @a[predicate=cartographer_custom_enchantments:curse_two_handed/empty_offhand] ca.two_hand_del 0
 execute as @a[scores={ca.two_hand_del=1}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/return_offhand
 
 tag @a[tag=processed_two_handed] remove processed_two_handed

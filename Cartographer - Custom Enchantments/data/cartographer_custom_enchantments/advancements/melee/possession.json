@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Possession                  ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Melee attacks with this weapon have a chance to Possess enemies."
+        },
+        "icon": {
+            "item": "minecraft:slime_ball"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"possession\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/possession"
+    },
+    "parent": "cartographer_custom_enchantments:melee/infection"
+}

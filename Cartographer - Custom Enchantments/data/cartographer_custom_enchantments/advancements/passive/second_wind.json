@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "\"Encourages\" Evasion to protect you from a lethal hit, giving extra Absorption shielding. When triggered, kill a mob to restore health, or suffer the penalty."
+            "text": "Saves you from a lethal hit, giving some Absorption shielding. After cheating death, kill a mob quickly to restore health, or suffer the penalty."
         },
         "icon": {
             "item": "minecraft:yellow_dye"

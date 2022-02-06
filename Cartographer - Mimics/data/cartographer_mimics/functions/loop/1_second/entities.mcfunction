@@ -1,0 +1,3 @@
+execute if entity @s[type=wither_skeleton,tag=active_mimic,tag=enraged,scores={mimic_health=41..59}] run function cartographer_mimics:loop/1_second/heal
+execute if entity @s[type=wither_skeleton,tag=active_mimic,tag=enraged,scores={mimic_health=21..39}] run function cartographer_mimics:loop/1_second/heal
+execute if entity @s[type=wither_skeleton,tag=active_mimic,tag=enraged,scores={mimic_health=1..19}] run function cartographer_mimics:loop/1_second/heal

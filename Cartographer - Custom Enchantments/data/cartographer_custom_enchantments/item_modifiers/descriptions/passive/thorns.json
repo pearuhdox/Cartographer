@@ -1,0 +1,47 @@
+[
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "text": " "
+            },
+            {
+              "text": "✎ Thorns",
+              "color": "#ACFFA6",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "When attacked, retaliate against your",
+              "color": "#FFF4D9",
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+                "text": "attacker, dealing damage. Any melee effect",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              },
+              {
+                  "text": "enchants on the item are also applied.",
+                  "color": "#FFF4D9",
+                  "bold": false,
+                  "italic": false,
+                  "underlined": false,
+                  "strikethrough": false,
+                  "obfuscated": false
+                }
+          ]
+        }
+      ]
+      

@@ -58,5 +58,5 @@
     "rewards": {
         "function": "cartographer_custom_statuses:descriptions/shocked"
     },
-    "parent": "cartographer_custom_statuses:rage"
+    "parent": "cartographer_custom_statuses:possess"
 }
