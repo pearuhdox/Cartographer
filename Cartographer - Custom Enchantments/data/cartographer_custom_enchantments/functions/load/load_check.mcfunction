@@ -1,0 +1,1 @@
+scoreboard players set $custom_enchantments ca.installed 1

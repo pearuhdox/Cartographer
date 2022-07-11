@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "block": "minecraft:honey_block"
+      }
+    }
+  },
+  "rewards": {
+    "function": "bb:lib/sliding_down_honey/tag_add"
+  }
+}

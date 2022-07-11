@@ -62,7 +62,7 @@ execute run function cartographer_mob_abilities:abilities/wither_storm/spread
 function cartographer_mob_abilities:abilities/wither_storm/recurse
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-function cartographer_mob_abilities:helper/token/return
+scoreboard players remove $tokened_total ca.tokens 1
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player

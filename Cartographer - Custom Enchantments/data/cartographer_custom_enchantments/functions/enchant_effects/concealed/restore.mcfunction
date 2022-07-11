@@ -5,7 +5,7 @@ execute if score @s ca.concealed matches 4 run scoreboard players set @s ca.conc
 execute if score @s ca.concealed matches 5 run scoreboard players set @s ca.conceal_time 141
 execute if score @s ca.concealed matches 6.. run scoreboard players set @s ca.conceal_time 161
 
-effect give @e[type=#cartographer_core:hostile,distance=..16] blindness 2 0
+effect give @e[type=#bb:hostile,distance=..16] blindness 2 0
 
 execute if score @s ca.armor_count matches 0 run attribute @s minecraft:generic.attack_damage modifier add 31-1920-51-1220-8 "ca_stealth" 0.5 multiply
 execute if score @s ca.armor_count matches 1 run attribute @s minecraft:generic.attack_damage modifier add 31-1920-51-1220-8 "ca_stealth" 0.45 multiply

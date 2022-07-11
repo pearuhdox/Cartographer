@@ -44,8 +44,6 @@ execute store result score $core.difficulty ca.CONSTANT run difficulty
 #Set defaults for personal set options
 execute as @a at @s unless entity @s[scores={ca.reload_type=0..}] run scoreboard players set @s ca.reload_type 0
 
-#Run the crit check system.
-execute as @a at @s run function cartographer_core:helper/crit_checker
 
 #Reduce the interal attack timer system scores.
 scoreboard players remove @a[scores={ca.atk_time=1..}] ca.atk_time 1

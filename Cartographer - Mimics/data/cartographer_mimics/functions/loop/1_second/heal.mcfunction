@@ -1,2 +1,2 @@
-scoreboard players set @s cdl.Heal_Queue 1
+scoreboard players set @s cdl.heal_queue 1
 function cd:lib/mob/heal

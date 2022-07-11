@@ -1,0 +1,2 @@
+tellraw @s {"text":"A new enchant's description has been added to the item you are holding...","color":"#ACFFA6","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#ACFFA6","italic":false}]}}
+playsound minecraft:ui.cartography_table.take_result player @s ~ ~ ~ 1 1

@@ -1,6 +1,6 @@
 execute at @s run playsound minecraft:entity.slime.attack hostile @a[distance=..16] ~ ~ ~ 1.5 0.5
 
-scoreboard players set @s cdl.Damage_Queue 2
+scoreboard players set @s cdl.damage_queue 2
 
 function cd:lib/mob/damage/normal
 

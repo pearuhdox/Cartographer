@@ -10,6 +10,6 @@ execute if score $bleed_max_health ca.effect_bleed matches 67..99 run scoreboard
 execute if score $bleed_max_health ca.effect_bleed matches 100.. run scoreboard players add $bleed_max_health ca.effect_bleed 4
 
 
-scoreboard players operation @s cdl.Damage_Queue = $bleed_max_health ca.effect_bleed
+scoreboard players operation @s cdl.damage_queue = $bleed_max_health ca.effect_bleed
 
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" affected by Bleeding (Max Stacks).","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

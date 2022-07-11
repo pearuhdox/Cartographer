@@ -14,20 +14,20 @@ playsound minecraft:entity.player.attack.crit hostile @a[distance=..12] ~ ~ ~ 3 
 
 function cartographer_mob_abilities:abilities/sweep/calc_damage
 
-execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310208
+execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
+execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310208
 execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run tag @s remove no_cdl_msg
 execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^0.3 ^1.5 as @a[distance=..1.6,tag=!swept] at @s run tag @s add swept
 
-execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310208
+execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
+execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310208
 execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run tag @s remove no_cdl_msg
 execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^0.3 ^2.5 as @a[distance=..1.4,tag=!swept] at @s run tag @s add swept
 
-execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310208
+execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
+execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310208
 execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run tag @s remove no_cdl_msg
 execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^0.3 ^3.5 as @a[distance=..1.2,tag=!swept] at @s run tag @s add swept
@@ -64,7 +64,7 @@ execute if entity @s[scores={recast_count=1..}] run tag @a[distance=..5] remove 
 execute if entity @s[scores={recast_count=1..}] run function cartographer_mob_abilities:charge/sweep
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-execute if entity @s[scores={recast_count=0}] run function cartographer_mob_abilities:helper/token/return
+execute if entity @s[scores={recast_count=0}] run scoreboard players remove $tokened_total ca.tokens 1
 execute if entity @s[scores={recast_count=0}] run tag @s remove attacking
 execute if entity @s[scores={recast_count=0}] run tag @s remove tokened
 execute if entity @s[scores={recast_count=0}] run tag @s remove can_see_player

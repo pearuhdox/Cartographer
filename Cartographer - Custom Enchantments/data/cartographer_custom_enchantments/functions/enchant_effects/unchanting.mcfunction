@@ -1,6 +1,6 @@
 scoreboard players operation $melee ca.unchanting = @s ca.unchanting
 
-execute if score @s ca.unchanting matches 1.. as @e[type=#cartographer_core:hostile,tag=elite,distance=..5,nbt=!{HurtTime:0s}] at @s run function cartographer_custom_enchantments:enchant_effects/unchanting/branch
+execute if score @s ca.unchanting matches 1.. as @e[type=#bb:hostile,tag=elite,distance=..5,nbt=!{HurtTime:0s}] at @s run function cartographer_custom_enchantments:enchant_effects/unchanting/branch
 
 scoreboard players set $melee ca.unchanting 0
 

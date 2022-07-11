@@ -1,4 +1,4 @@
-scoreboard players operation @s cdl.Damage_Queue = $melee ca.attack_val
+scoreboard players operation @s cdl.damage_queue = $melee ca.attack_val
 function cd:lib/mob/damage/normal
 
 tp @s ~ ~ ~ facing entity @p[scores={ca.surge_strike=1..}] feet

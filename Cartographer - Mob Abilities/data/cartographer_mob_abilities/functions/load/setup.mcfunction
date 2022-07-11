@@ -1,5 +1,6 @@
 
 #Setup all necessary scoreboard commands.
+scoreboard objectives add ca.pldata.id dummy
 
 scoreboard objectives add ca.ability_dmg dummy
 scoreboard objectives add cooldown dummy
@@ -53,6 +54,8 @@ scoreboard objectives add ca.ambi_cool dummy
 scoreboard objectives add ca.legion_id dummy
 
 #Setup all necessary helper scoreboards.
+scoreboard objectives add ca.tokens dummy
+scoreboard objectives add ca.heat dummy
 
 scoreboard objectives add ca.raycast dummy
 scoreboard objectives add helper_random dummy
@@ -79,6 +82,8 @@ scoreboard objectives add mob_sturdy dummy
 scoreboard objectives add ca.rift_cooldown dummy
 
 scoreboard objectives add ca.aim dummy
+
+scoreboard objectives add ca.summon_id dummy
 
 #Create the UUID armor stands.
 kill 002f80c0-0001-f879-0000-009c001e7bfc

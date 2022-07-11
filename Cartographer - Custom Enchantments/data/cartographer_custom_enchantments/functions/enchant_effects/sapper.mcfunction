@@ -1,8 +1,8 @@
-execute if entity @s[scores={ca.sapper=1}] run scoreboard players set @s cdl.Heal_Queue 1
-execute if entity @s[scores={ca.sapper=2}] run scoreboard players set @s cdl.Heal_Queue 2
-execute if entity @s[scores={ca.sapper=3}] run scoreboard players set @s cdl.Heal_Queue 3
-execute if entity @s[scores={ca.sapper=4}] run scoreboard players set @s cdl.Heal_Queue 4
-execute if entity @s[scores={ca.sapper=5..}] run scoreboard players set @s cdl.Heal_Queue 5
+execute if entity @s[scores={ca.sapper=1}] run scoreboard players set @s cdl.heal_queue 1
+execute if entity @s[scores={ca.sapper=2}] run scoreboard players set @s cdl.heal_queue 2
+execute if entity @s[scores={ca.sapper=3}] run scoreboard players set @s cdl.heal_queue 3
+execute if entity @s[scores={ca.sapper=4}] run scoreboard players set @s cdl.heal_queue 4
+execute if entity @s[scores={ca.sapper=5..}] run scoreboard players set @s cdl.heal_queue 5
 
 execute if entity @s[scores={ca.sapper=6}] run effect give @s regeneration 2 1
 execute if entity @s[scores={ca.sapper=7}] run effect give @s regeneration 3 1

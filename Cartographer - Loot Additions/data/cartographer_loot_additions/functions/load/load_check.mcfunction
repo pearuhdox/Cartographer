@@ -1,0 +1,1 @@
+scoreboard players set $loot_additions ca.installed 1

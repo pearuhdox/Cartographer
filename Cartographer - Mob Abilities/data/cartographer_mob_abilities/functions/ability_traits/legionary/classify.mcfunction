@@ -7,11 +7,11 @@ scoreboard players set $monster ca.legion_id 0
 
 scoreboard players set $fiery ca.legion_id 0
 
-execute if entity @s[type=#cartographer_core:undead] run scoreboard players set $undead ca.legion_id 1
-execute if entity @s[type=#cartographer_core:arthropod] run scoreboard players set $arthro ca.legion_id 1
-execute if entity @s[type=#cartographer_core:humanoid] run scoreboard players set $human ca.legion_id 1
-execute if entity @s[type=#cartographer_core:monstrous] run scoreboard players set $monster ca.legion_id 1
-execute if entity @s[type=#cartographer_core:fiery] run scoreboard players set $fiery ca.legion_id 1
+execute if entity @s[type=#bb:undead] run scoreboard players set $undead ca.legion_id 1
+execute if entity @s[type=#bb:arthropod] run scoreboard players set $arthro ca.legion_id 1
+execute if entity @s[type=#bb:humanoid] run scoreboard players set $human ca.legion_id 1
+execute if entity @s[type=#bb:monstrous] run scoreboard players set $monster ca.legion_id 1
+execute if entity @s[type=#bb:fiery] run scoreboard players set $fiery ca.legion_id 1
 
 summon armor_stand ~ ~ ~ {NoGravity:1b,Marker:0b,Invisible:0b,Tags:["legion_spawn"]}
 summon armor_stand ~ ~ ~ {NoGravity:1b,Marker:0b,Invisible:0b,Tags:["legion_spawn"]}

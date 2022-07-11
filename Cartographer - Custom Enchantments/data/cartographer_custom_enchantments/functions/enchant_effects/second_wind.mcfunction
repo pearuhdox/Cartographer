@@ -23,7 +23,7 @@ execute if entity @s[advancements={cartographer_custom_enchantments:second_wind_
 execute if entity @s[scores={ca.rally=1..}] run scoreboard players operation @s ca.rally_amt = @s ca.dmg_resist_sw
 
 #Call a Second Wind damage trigger (if no Evading)
-execute if score @s[tag=fatal_protection,tag=!evading] ca.dmg_resist_sw matches 1.. run function cartographer_custom_enchantments:enchant_effects/second_wind/damage
+execute if score @s[tag=fatal_protection,tag=!evading] ca.dmg_resist_sw matches 1.. unless score @s player.defense matches 1.. run function cartographer_custom_enchantments:enchant_effects/second_wind/damage
 
 #Call an Evasion trigger instead if evading
 execute if score @s[tag=fatal_protection,tag=evading] ca.dmg_resist_sw matches 1.. run function cartographer_custom_enchantments:enchant_effects/evasion/trigger

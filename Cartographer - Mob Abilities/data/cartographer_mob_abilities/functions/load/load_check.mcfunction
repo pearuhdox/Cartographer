@@ -1,0 +1,1 @@
+scoreboard players set $mob_abilities ca.installed 1

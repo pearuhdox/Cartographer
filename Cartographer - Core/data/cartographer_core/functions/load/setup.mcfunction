@@ -75,7 +75,7 @@ scoreboard objectives add ca.throw_trident minecraft.used:minecraft.trident
 scoreboard objectives add ca.raycast dummy
 
 #Create scores for custom damage
-scoreboard objectives add cdl.Damage_Queue dummy
+scoreboard objectives add cdl.damage_queue dummy
 scoreboard objectives add custom_death deathCount
 scoreboard objectives add ca.invul_abs dummy
 scoreboard objectives add helper_health dummy

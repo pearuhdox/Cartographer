@@ -16,3 +16,5 @@ playsound minecraft:block.bell.use hostile @a[distance=..16] ~ ~ ~ 10 0.5
 particle minecraft:firework ~ ~1 ~ 0.5 0.3 0.5 0.2 40 normal
 
 kill @s
+
+#say test

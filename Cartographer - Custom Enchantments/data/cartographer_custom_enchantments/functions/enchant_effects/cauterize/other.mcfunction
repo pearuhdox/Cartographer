@@ -14,4 +14,4 @@ execute if score $brittled ca.cauterize matches 0 run tellraw @a[tag=debug,score
 scoreboard players set $brittled ca.cauterize 0
 scoreboard players set $other ca.cauterize 0
 
-tag @s[type=#cartographer_core:hostile,tag=is_cauterize] remove is_cauterize
+tag @s[type=#bb:hostile,tag=is_cauterize] remove is_cauterize

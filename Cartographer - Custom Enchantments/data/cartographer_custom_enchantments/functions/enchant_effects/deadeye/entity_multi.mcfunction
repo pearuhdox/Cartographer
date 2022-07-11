@@ -3,7 +3,7 @@ execute run playsound minecraft:entity.firework_rocket.blast hostile @a[distance
 execute run playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 1
 
 
-execute run scoreboard players set @s cdl.Damage_Queue 6
+execute run scoreboard players set @s cdl.damage_queue 6
 execute run function cd:lib/mob/damage/normal
 
 execute run tp @s ~ ~ ~ facing entity @p[scores={ca.deadeye=1..}] feet

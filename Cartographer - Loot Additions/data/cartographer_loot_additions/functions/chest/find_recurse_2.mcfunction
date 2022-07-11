@@ -1,2 +1,2 @@
-execute if block ^ ^ ^0.3 #cartographer_core:containers run tag @s add found_container
-execute unless block ^ ^ ^0.3 #cartographer_core:containers as @s positioned ^ ^ ^0.3 run function cartographer_loot_additions:chest/find_recurse_2
+execute if block ^ ^ ^0.3 #bb:containers run tag @s add found_container
+execute unless block ^ ^ ^0.3 #bb:containers as @s positioned ^ ^ ^0.3 run function cartographer_loot_additions:chest/find_recurse_2

@@ -2,7 +2,7 @@
 scoreboard players set $custom_statuses ca.installed 1
 
 #Run Cleansing (Players only)
-execute as @a[nbt={ActiveEffects:[{Id:9b,Amplifier:100b}]}] at @s run function cartographer_custom_statuses:effects/cleansing
+execute as @a[nbt={ActiveEffects:[{Id:9,Amplifier:100b}]}] at @s run function cartographer_custom_statuses:effects/cleansing
 
 #Run Player Blindness and Slow Falling
 tag @a remove pot_add_crit

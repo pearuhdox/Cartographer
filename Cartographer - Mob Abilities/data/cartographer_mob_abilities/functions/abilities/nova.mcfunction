@@ -9,8 +9,8 @@ scoreboard players set @s mob_move_dis 12
 
 function cartographer_mob_abilities:abilities/nova/calc_damage
 
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310203
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310203
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run tag @s remove no_cdl_msg
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s run function cd:lib/player/damage/normal
 
@@ -77,7 +77,7 @@ particle minecraft:witch ~1 ~0.5 ~-7 0.3 0 0.3 0 4 normal @a
 
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-function cartographer_mob_abilities:helper/token/return
+scoreboard players remove $tokened_total ca.tokens 1
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player

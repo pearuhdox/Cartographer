@@ -1,0 +1,12 @@
+{
+    "values": [
+        "minecraft:water",
+        "minecraft:lava",
+        "minecraft:ladder",
+        "minecraft:vine",
+        "minecraft:ladder",
+        "minecraft:weeping_vines",
+        "minecraft:twisting_vines",
+        "minecraft:cobweb"
+    ]
+}

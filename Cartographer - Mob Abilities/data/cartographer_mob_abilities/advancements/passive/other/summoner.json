@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Summoner                 ",
+            "color": "white"
+        },
+        "description": {
+            "text": "Summons other enemies instead of Vexes.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:vex_spawn_egg"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.summoner\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/passive/other/summoner"
+    },
+    "parent": "cartographer_mob_abilities:passive/other/reflect"
+}

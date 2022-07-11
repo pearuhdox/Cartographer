@@ -193,7 +193,7 @@ function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 execute unless entity @a[distance=11..20] as @e[tag=target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~ ~2
 execute if entity @a[distance=11..20] as @e[tag=target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~ ~3
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-function cartographer_mob_abilities:helper/token/return
+scoreboard players remove $tokened_total ca.tokens 1
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player

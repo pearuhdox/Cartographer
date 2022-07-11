@@ -151,7 +151,8 @@ execute if score @s ca.lexica_trig matches 3423 run function cartographer_mob_ab
 execute if score @s ca.lexica_trig matches 3433 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/potion_bag
 execute if score @s ca.lexica_trig matches 3443 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/quiver
 execute if score @s ca.lexica_trig matches 3453 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/reflect
-execute if score @s ca.lexica_trig matches 3463 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/touch
+execute if score @s ca.lexica_trig matches 3463 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/summoner
+execute if score @s ca.lexica_trig matches 3473 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/touch
 
 execute if score @s ca.lexica_trig matches 3051 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/main
 execute if score @s ca.lexica_trig matches 3052 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/main

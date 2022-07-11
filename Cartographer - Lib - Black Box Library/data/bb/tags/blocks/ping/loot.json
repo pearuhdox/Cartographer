@@ -1,0 +1,7 @@
+{
+    "values": [
+        "minecraft:chest",
+        "#minecraft:shulker_boxes",
+        "minecraft:trapped_chest"
+    ]
+}

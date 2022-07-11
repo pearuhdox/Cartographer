@@ -1,1 +1,0 @@
-execute as @a[scores={cdl.Damage_Timer=1..}] at @s run function cd:func/player_damage_true/death_timer/as_player

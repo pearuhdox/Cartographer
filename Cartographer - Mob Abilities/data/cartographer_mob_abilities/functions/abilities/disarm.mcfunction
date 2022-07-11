@@ -14,8 +14,8 @@ data merge entity @s {NoAI:0}
 function cartographer_mob_abilities:abilities/disarm/calc_damage
 
 execute positioned ^ ^ ^3 if entity @a[distance=..2] run scoreboard players set @s cooldown 1
-execute positioned ^ ^ ^3 as @a[distance=..2] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute positioned ^ ^ ^3 as @a[distance=..2] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310202
+execute positioned ^ ^ ^3 as @a[distance=..2] at @s run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
+execute positioned ^ ^ ^3 as @a[distance=..2] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310202
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run tag @s remove no_cdl_msg
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run function cd:lib/player/damage/normal
 execute positioned ^ ^ ^3 as @a[distance=..2] at @s run effect give @s blindness 2 0
@@ -48,7 +48,7 @@ execute positioned ^ ^ ^3 if entity @p[distance=..2,nbt={SelectedItem:{id:"minec
 execute positioned ^ ^ ^3 if entity @a[distance=..2] as @s[tag=!smash,tag=!trapper] at @s positioned ^ ^ ^3 run tag @s add sweep
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-function cartographer_mob_abilities:helper/token/return
+scoreboard players remove $tokened_total ca.tokens 1
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player

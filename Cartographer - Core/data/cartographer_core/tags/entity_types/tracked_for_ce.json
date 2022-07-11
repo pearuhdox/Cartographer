@@ -1,7 +1,7 @@
 {
 	"values": [
-		"#cartographer_core:hostile",
-		"#cartographer_core:arrow",
+		"#bb:hostile",
+		"#bb:arrow",
 		"minecraft:trident",
 		"minecraft:armor_stand",
 		"minecraft:evoker_fangs"

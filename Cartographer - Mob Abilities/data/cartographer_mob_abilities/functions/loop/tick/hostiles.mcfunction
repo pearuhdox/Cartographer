@@ -1,8 +1,12 @@
 #Run Invulnerable Notices
 execute if score $invul_time_check invul matches 1.. if entity @s[predicate=cartographer_mob_abilities:is_invulnerable] at @s run function cartographer_mob_abilities:loop/tick/invulnerable_test
+execute if score $invul_time_check invul matches 1.. if entity @s[predicate=cartographer_mob_abilities:has_proj_prot] at @s run function cartographer_mob_abilities:loop/tick/projectile_resist_test
 
 #Run Enderport
-execute if entity @s[tag=ca.enderport] run execute if entity @e[type=#cartographer_core:projectile,nbt=!{inGround:1b},distance=..5] run function cartographer_mob_abilities:passive/enderport
+execute if entity @s[tag=ca.enderport] if entity @e[type=#bb:projectile,nbt=!{inGround:1b},distance=..5] run function cartographer_mob_abilities:passive/enderport
+
+#Run Evoker Replaces
+execute if entity @s[type=evoker,tag=ca.summoner] if entity @s[nbt={SpellTicks:80}] run function cartographer_mob_abilities:passive/summoner/master
 
 #Run Movement Disable and Melee Damage Disable
 execute if entity @s[scores={mob_move_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/move

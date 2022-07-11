@@ -24,7 +24,7 @@ data merge entity @s {NoAI:0}
 playsound minecraft:entity.spider.death hostile @a[distance=..16] ~ ~ ~ 2 0.5
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-function cartographer_mob_abilities:helper/token/return
+scoreboard players remove $tokened_total ca.tokens 1
 tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player

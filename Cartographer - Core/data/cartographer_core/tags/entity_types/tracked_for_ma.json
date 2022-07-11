@@ -1,7 +1,7 @@
 {
 	"values": [
-		"#cartographer_core:hostile",
-		"#cartographer_core:projectile",
+		"#bb:hostile",
+		"#bb:projectile",
 		"minecraft:armor_stand",
 		"minecraft:marker",
 		"minecraft:area_effect_cloud",

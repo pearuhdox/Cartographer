@@ -1,0 +1,12 @@
+{
+    "values": [
+        "minecraft:dropper",
+        "minecraft:dispenser",
+        "minecraft:furnace",
+        "minecraft:brewing_stand",
+        "minecraft:smoker",
+        "minecraft:blast_furnace",
+        "minecraft:hopper",
+        "minecraft:barrel"
+    ]
+}

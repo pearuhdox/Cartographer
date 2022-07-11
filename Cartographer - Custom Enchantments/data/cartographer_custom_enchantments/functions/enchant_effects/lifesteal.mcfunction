@@ -1,12 +1,12 @@
-execute if entity @s[scores={ca.lifesteal=1,ca.kill_entity=1..}] run scoreboard players set @s cdl.Heal_Queue 1
+execute if entity @s[scores={ca.lifesteal=1,ca.kill_entity=1..}] run scoreboard players set @s cdl.heal_queue 1
 
-execute if entity @s[scores={ca.lifesteal=2,ca.kill_entity=1..}] run scoreboard players set @s cdl.Heal_Queue 2
+execute if entity @s[scores={ca.lifesteal=2,ca.kill_entity=1..}] run scoreboard players set @s cdl.heal_queue 2
 
-execute if entity @s[scores={ca.lifesteal=3,ca.kill_entity=1..}] run scoreboard players set @s cdl.Heal_Queue 3
+execute if entity @s[scores={ca.lifesteal=3,ca.kill_entity=1..}] run scoreboard players set @s cdl.heal_queue 3
 
-execute if entity @s[scores={ca.lifesteal=4,ca.kill_entity=1..}] run scoreboard players set @s cdl.Heal_Queue 4
+execute if entity @s[scores={ca.lifesteal=4,ca.kill_entity=1..}] run scoreboard players set @s cdl.heal_queue 4
 
-execute if entity @s[scores={ca.lifesteal=5..,ca.kill_entity=1..}] run scoreboard players set @s cdl.Heal_Queue 5
+execute if entity @s[scores={ca.lifesteal=5..,ca.kill_entity=1..}] run scoreboard players set @s cdl.heal_queue 5
 
 execute if entity @s[scores={ca.lifesteal=6,ca.kill_entity=1..}] run effect give @s regeneration 2 1
 execute if entity @s[scores={ca.lifesteal=7,ca.kill_entity=1..}] run effect give @s regeneration 3 1

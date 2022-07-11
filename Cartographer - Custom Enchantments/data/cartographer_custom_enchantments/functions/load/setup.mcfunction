@@ -63,6 +63,8 @@ scoreboard objectives add ca.bleeding dummy
 scoreboard objectives add ca.explosive dummy
 scoreboard objectives add ca.thorns dummy
 
+scoreboard objectives add ca.write_ench dummy
+
 scoreboard objectives add ca.t_fire dummy
 scoreboard objectives add ca.t_frost dummy
 scoreboard objectives add ca.t_stun dummy

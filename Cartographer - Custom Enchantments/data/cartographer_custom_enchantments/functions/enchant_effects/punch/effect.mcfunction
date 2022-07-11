@@ -4,7 +4,7 @@ execute if entity @s[tag=is_punch_3] run function cartographer_core:helper/push_
 execute if entity @s[tag=is_punch_4] run function cartographer_core:helper/push_4
 execute if entity @s[tag=is_punch_5] run function cartographer_core:helper/push_5
 
-execute if entity @s[tag=is_punch_3] run say hi
+#execute if entity @s[tag=is_punch_3] run say hi
 
 tag @s remove is_punch_1
 tag @s remove is_punch_2

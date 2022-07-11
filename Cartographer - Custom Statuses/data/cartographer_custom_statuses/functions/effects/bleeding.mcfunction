@@ -1,13 +1,13 @@
 playsound minecraft:entity.generic.hurt hostile @a[distance=..16] ~ ~ ~ 1 0.5
 
-execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=1}] run scoreboard players set @s cdl.Damage_Queue 1
-execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=2}] run scoreboard players set @s cdl.Damage_Queue 2
-execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=3}] run scoreboard players set @s cdl.Damage_Queue 3
-execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=4}] run scoreboard players set @s cdl.Damage_Queue 4
-execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=5}] run scoreboard players set @s cdl.Damage_Queue 5
+execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=1}] run scoreboard players set @s cdl.damage_queue 1
+execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=2}] run scoreboard players set @s cdl.damage_queue 2
+execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=3}] run scoreboard players set @s cdl.damage_queue 3
+execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=4}] run scoreboard players set @s cdl.damage_queue 4
+execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=5}] run scoreboard players set @s cdl.damage_queue 5
 
 execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=6..},tag=!boss] run function cartographer_custom_statuses:effects/bleeding_calc_max
-execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=6..},tag=boss] run scoreboard players set @s cdl.Damage_Queue 6
+execute if entity @s[scores={ca.effect_bleed=1..,ca.bleed_potency=6..},tag=boss] run scoreboard players set @s cdl.damage_queue 6
 
 execute if entity @s[scores={ca.effect_bleed=1..}] run attribute @s minecraft:generic.attack_damage modifier add 31-2125-54-2351-11 "bleeding_weakness" -0.2 multiply
 

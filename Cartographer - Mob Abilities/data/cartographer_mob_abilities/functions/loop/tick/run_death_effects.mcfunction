@@ -40,12 +40,12 @@ execute if data storage ca.death Data.DeviousBlood at @s run function cartograph
 execute if data storage ca.death Data.SacrificialBlood at @s run function cartographer_mob_abilities:passive/sacrificial_blood
 
 #Token Restore
-execute if data storage ca.death Data.ReturnLightToken as @a[scores={token_kill_check=1..}] at @s run tag @s add light_restore
-execute if data storage ca.death Data.ReturnLightToken as @a[scores={token_kill_check=1..}] at @s run function cartographer_mob_abilities:helper/token/return_death
+#execute if data storage ca.death Data.ReturnLightToken as @a[scores={token_kill_check=1..}] at @s run tag @s add light_restore
+#execute if data storage ca.death Data.ReturnLightToken as @a[scores={token_kill_check=1..}] at @s run function cartographer_mob_abilities:helper/token/return_death
 
-execute if data storage ca.death Data.ReturnLightToken run kill @s
+#execute if data storage ca.death Data.ReturnLightToken run kill @s
 
-execute if data storage ca.death Data.ReturnHeavyToken as @a[scores={token_kill_check=1..}] at @s run tag @s add heavy_restore
-execute if data storage ca.death Data.ReturnHeavyToken as @a[scores={token_kill_check=1..}] at @s run function cartographer_mob_abilities:helper/token/return_death
+#execute if data storage ca.death Data.ReturnHeavyToken as @a[scores={token_kill_check=1..}] at @s run tag @s add heavy_restore
+#execute if data storage ca.death Data.ReturnHeavyToken as @a[scores={token_kill_check=1..}] at @s run function cartographer_mob_abilities:helper/token/return_death
 
-execute if data storage ca.death Data.ReturnHeavyToken run kill @s
+#execute if data storage ca.death Data.ReturnHeavyToken run kill @s

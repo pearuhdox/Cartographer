@@ -1,2 +1,2 @@
-execute if block ~ ~-1 ~ #cartographer_core:can_raycast positioned ~ ~-1 ~ run function cartographer_mob_abilities:abilities/smash/place_particle
-execute unless block ~ ~-1 ~ #cartographer_core:can_raycast positioned ~ ~-0.6 ~ run function cartographer_mob_abilities:abilities/smash/run_particle
+execute if block ~ ~-1 ~ #bb:can_raycast positioned ~ ~-1 ~ run function cartographer_mob_abilities:abilities/smash/place_particle
+execute unless block ~ ~-1 ~ #bb:can_raycast positioned ~ ~-0.6 ~ run function cartographer_mob_abilities:abilities/smash/run_particle

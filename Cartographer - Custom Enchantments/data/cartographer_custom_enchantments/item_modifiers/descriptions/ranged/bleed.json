@@ -6,7 +6,7 @@
               "text": " "
             },
             {
-              "text": "✎ Bleeding",
+              "text": "✎ Bleed",
               "color": "#ACFFA6",
               "bold": false,
               "italic": false,
@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This melee weapon inflicts Bleeding,",
+              "text": "This ranged weapon inflicts Bleeding,",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,

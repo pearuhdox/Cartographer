@@ -9,8 +9,8 @@ execute if entity @s[tag=ca.zephyrous] run particle cloud ~ ~0.25 ~ 1.5 0 1.5 0.
 particle explosion ~ ~0.25 ~ 1.5 0 1.5 0 8 normal
 playsound minecraft:entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 2 1
 
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310212
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310212
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s run tag @s remove no_cdl_msg
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s run function cd:lib/player/damage/normal
 

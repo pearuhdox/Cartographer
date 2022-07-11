@@ -16,10 +16,10 @@ execute if score @s ca.lifetime matches 30 run setblock ~ ~-1 ~1 magma_block rep
 execute if score @s ca.lifetime matches 30 run setblock ~ ~-1 ~-1 magma_block replace
 execute if score @s ca.lifetime matches 20 run setblock ~ ~-1 ~ magma_block replace
 
-execute unless block ~ ~ ~ #cartographer_core:can_raycast run playsound minecraft:block.fire.extinguish hostile @a[distance=..12] ~ ~ ~ 1 0.5
-execute unless block ~ ~ ~ #cartographer_core:can_raycast run playsound minecraft:entity.shulker.death hostile @a[distance=..12] ~ ~ ~ 1 1.5
-execute unless block ~ ~ ~ #cartographer_core:can_raycast run particle large_smoke ~ ~0.5 ~ 0.6 0.2 0.6 0.1 40 normal
-execute unless block ~ ~ ~ #cartographer_core:can_raycast run kill @s
+execute unless block ~ ~ ~ #bb:can_raycast run playsound minecraft:block.fire.extinguish hostile @a[distance=..12] ~ ~ ~ 1 0.5
+execute unless block ~ ~ ~ #bb:can_raycast run playsound minecraft:entity.shulker.death hostile @a[distance=..12] ~ ~ ~ 1 1.5
+execute unless block ~ ~ ~ #bb:can_raycast run particle large_smoke ~ ~0.5 ~ 0.6 0.2 0.6 0.1 40 normal
+execute unless block ~ ~ ~ #bb:can_raycast run kill @s
 
 execute if score @s ca.lifetime matches 42 run setblock ~ ~ ~ lava[level=7] replace
 execute if score @s ca.lifetime matches 44 run setblock ~ ~ ~ lava[level=6] replace

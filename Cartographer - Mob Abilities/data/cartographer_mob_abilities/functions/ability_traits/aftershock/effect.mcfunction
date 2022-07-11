@@ -49,8 +49,8 @@ particle minecraft:dust 0.792 0.792 0.792 0.5 ~0.375 ~0.5 ~-2.625 0.4 0 0.4 0.01
 execute store result score $aftershock ca.ability_dmg run attribute @s generic.attack_damage get
 scoreboard players operation $aftershock ca.ability_dmg /= $2 ca.CONSTANT
 
-scoreboard players operation @a[distance=..3.5] cdl.Damage_Queue = $aftershock ca.ability_dmg
-scoreboard players set @a[distance=..3.5,tag=!no_cdl_msg] cdl.Death_ID 310204
+scoreboard players operation @a[distance=..3.5] cdl.damage_queue = $aftershock ca.ability_dmg
+scoreboard players set @a[distance=..3.5,tag=!no_cdl_msg] cdl.death_id 310204
 tag @a[distance=..3.5] remove no_cdl_msg
 
 execute as @a[distance=..3.5] at @s run function cd:lib/player/damage/normal

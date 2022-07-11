@@ -353,4 +353,4 @@ kill @e[limit=1,sort=nearest,tag=repair_instruction_2,distance=..3]
 kill @e[limit=1,sort=nearest,tag=repair_instruction_3,distance=..3]
 kill @e[limit=1,sort=nearest,tag=repair_instruction_4,distance=..3]
 execute as @e[type=villager,tag=void_bag,distance=..5] at @s run function cartographer_repair_stations:void_bag/return_items
-tp @e[type=villager,tag=void_bag,limit=1,distance=..3] ~ -65 ~
+tp @e[type=villager,tag=void_bag,limit=1,distance=..3] ~ -130 ~

@@ -1,8 +1,9 @@
-scoreboard players set @s cdl.Damage_Queue 0
+scoreboard players set @s cdl.damage_queue 0
 
-scoreboard players operation @s cdl.Damage_Queue = $thorns ca.thorns
+scoreboard players operation @s cdl.damage_queue = $thorns ca.thorns
 
-function cd:lib/mob/damage/normal
+function cd:lib/mob/damage/true
+function cd:func/mob_damage_true/invulnerable_tick
 
 execute unless score $thorns ca.t_knock matches 1.. run function cartographer_core:helper/push_half
 
@@ -26,8 +27,12 @@ execute if score $thorns ca.t_frost matches 4 run scoreboard players set @s ca.f
 execute if score $thorns ca.t_frost matches 5.. run scoreboard players set @s ca.frost_tier 5
 execute if score $thorns ca.t_frost matches 1.. run scoreboard players set @s ca.frost_time 81
 
-execute if score $thorns ca.t_stun matches 1.. run function cartographer_core:helper/randomize
-execute if score $thorns ca.t_stun matches 1.. run scoreboard players operation $thorns ca.melee_chance = @s random
+execute if score $thorns ca.t_stun matches 1.. run scoreboard players set in math 1
+execute if score $thorns ca.t_stun matches 1.. run scoreboard players set in1 math 100
+
+execute if score $thorns ca.t_stun matches 1.. run function cartographer_core:helper/math/rng/range
+
+execute if score $thorns ca.t_stun matches 1.. run scoreboard players operation $thorns ca.melee_chance = out math
 
 execute if score $thorns ca.t_stun matches 1 if score $thorns ca.melee_chance matches ..10 run scoreboard players set @s ca.effect_stun 21
 execute if score $thorns ca.t_stun matches 2 if score $thorns ca.melee_chance matches ..20 run scoreboard players set @s ca.effect_stun 21

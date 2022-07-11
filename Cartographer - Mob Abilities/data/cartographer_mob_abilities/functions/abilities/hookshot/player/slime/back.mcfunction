@@ -1,4 +1,4 @@
-execute at @p[scores={ca.hooked=1..},distance=..1.5] facing entity @e[type=#cartographer_core:hostile,scores={ca.hooked=1..},tag=ca.hookshot,limit=1,sort=nearest] feet rotated ~ 0 run tp @s ^ ^ ^-0.4 facing entity @e[type=#cartographer_core:hostile,scores={ca.hooked=1..},tag=ca.hookshot,limit=1,sort=nearest]
+execute at @p[scores={ca.hooked=1..},distance=..1.5] facing entity @e[type=#bb:hostile,scores={ca.hooked=1..},tag=ca.hookshot,limit=1,sort=nearest] feet rotated ~ 0 run tp @s ^ ^ ^-0.4 facing entity @e[type=#bb:hostile,scores={ca.hooked=1..},tag=ca.hookshot,limit=1,sort=nearest]
 
 particle minecraft:block minecraft:chain ^ ^1 ^4 0 0 0 0 1 normal
 particle minecraft:block minecraft:chain ^ ^1 ^0.33 0 0 0 0 1 normal

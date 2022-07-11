@@ -22,4 +22,4 @@ scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
 execute if entity @a[distance=..1.5] run scoreboard players set @s ca.raycast 0
 
-execute if entity @s[scores={ca.raycast=1..}] positioned ^ ^ ^1 if block ~ ~ ~ #cartographer_core:can_raycast run function cartographer_mob_abilities:charge/laser/raycast
+execute if entity @s[scores={ca.raycast=1..}] positioned ^ ^ ^1 if block ~ ~ ~ #bb:can_raycast run function cartographer_mob_abilities:charge/laser/raycast

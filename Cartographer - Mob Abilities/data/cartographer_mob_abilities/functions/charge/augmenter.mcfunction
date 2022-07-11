@@ -15,7 +15,7 @@ execute if entity @s[scores={ability_charge=1}] run particle minecraft:dust 1 0 
 execute if entity @s[scores={ability_charge=2}] run particle minecraft:dust 1 0 0 1 ~ ~1 ~ 0.75 0 0.75 0.1 100 normal @a
 execute if entity @s[scores={ability_charge=3}] run particle minecraft:dust 1 0 0 1 ~ ~1.5 ~ 0.3 1 0.3 0.1 100 normal @a
 
-execute unless entity @s[scores={ability_charge=4..5}] as @e[distance=0.5..15,limit=3,tag=!augmenter,sort=nearest,type=#cartographer_core:hostile] at @s run particle minecraft:dust 1 0 0 1 ~ ~1 ~ 0.35 0.5 0.35 0 40 normal
+execute unless entity @s[scores={ability_charge=4..5}] as @e[distance=0.5..15,limit=3,tag=!augmenter,sort=nearest,type=#bb:hostile] at @s run particle minecraft:dust 1 0 0 1 ~ ~1 ~ 0.35 0.5 0.35 0 40 normal
 
 execute unless entity @s[scores={ability_charge=5}] run scoreboard players add @s ability_charge 1
 

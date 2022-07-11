@@ -1,4 +1,4 @@
-execute as @a[tag=reflect_hit] at @s run scoreboard players operation @s cdl.Damage_Queue = $reflect_pass reflect_diff
+execute as @a[tag=reflect_hit] at @s run scoreboard players operation @s cdl.damage_queue = $reflect_pass reflect_diff
 
 execute as @a[tag=reflect_hit] at @s run function cd:lib/player/damage/normal
 

@@ -1,6 +1,6 @@
 tag @s add erupting_xp
 
-execute as @e[type=#cartographer_core:hostile,distance=..8] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch_mob
+execute as @e[type=#bb:hostile,distance=..8] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch_mob
 
 playsound minecraft:entity.blaze.shoot player @a[distance=..8] ~ ~ ~ 0.5 0.5
 particle minecraft:lava ~ ~ ~ 0.3 0.3 0.3 1 3 normal 

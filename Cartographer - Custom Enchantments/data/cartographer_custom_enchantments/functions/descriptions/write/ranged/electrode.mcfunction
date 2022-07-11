@@ -1,0 +1,2 @@
+item modify entity @s weapon.mainhand cartographer_custom_enchantments:descriptions/ranged/electrode
+function cartographer_custom_enchantments:descriptions/write/effects

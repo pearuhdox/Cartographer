@@ -22,7 +22,7 @@ scoreboard players operation $thorns ca.t_poss = @s ca.t_poss
 
 scoreboard players operation $thorns ca.cauterize = @s ca.cauterize
 
-execute at @s as @e[type=#cartographer_core:hostile,tag=thorns_mark,distance=..30] at @s run function cartographer_custom_enchantments:enchant_effects/thorns/effects
+execute at @s as @e[type=#bb:hostile,tag=thorns_mark,distance=..30] at @s run function cartographer_custom_enchantments:enchant_effects/thorns/effects
 
 execute at @s run playsound minecraft:enchant.thorns.hit ambient @a[distance=..8] ~ ~ ~ 1.5 1
 

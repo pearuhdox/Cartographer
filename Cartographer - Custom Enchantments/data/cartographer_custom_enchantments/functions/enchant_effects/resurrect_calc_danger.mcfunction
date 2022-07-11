@@ -12,7 +12,7 @@ scoreboard players add @s danger_lvl 1
 #All mobs within 16 blocks are considered.
 scoreboard players set @a threat_lvl 0
 
-execute as @e[type=#cartographer_core:hostile,distance=..16] at @s run function cartographer_custom_enchantments:enchant_effects/resurrect_calc_threat
+execute as @e[type=#bb:hostile,distance=..16] at @s run function cartographer_custom_enchantments:enchant_effects/resurrect_calc_threat
 
 #Exceptions:
 # - The player's health is 4 or lower.

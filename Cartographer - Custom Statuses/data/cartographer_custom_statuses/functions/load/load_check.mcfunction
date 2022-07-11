@@ -1,0 +1,1 @@
+scoreboard players set $custom_statuses ca.installed 1

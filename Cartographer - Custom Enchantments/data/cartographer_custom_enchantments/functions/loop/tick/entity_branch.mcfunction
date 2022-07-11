@@ -1,8 +1,8 @@
 # Arrows
-execute as @s[type=#cartographer_core:arrow] at @s run function cartographer_custom_enchantments:loop/tick/arrow
+execute as @s[type=#bb:arrow] at @s run function cartographer_custom_enchantments:loop/tick/arrow
 
 # Hostile Entities
-execute as @s[type=#cartographer_core:hostile] at @s run function cartographer_custom_enchantments:loop/tick/hostile
+execute as @s[type=#bb:hostile] at @s run function cartographer_custom_enchantments:loop/tick/hostile
 
 # Trident
 execute as @s[type=trident] run function cartographer_custom_enchantments:loop/tick/trident

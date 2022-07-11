@@ -209,6 +209,8 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.
 execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Enchantments[{id:"minecraft:multishot"}].lvl
 execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.multishot += $temp ca.susu
 
+execute if score $gl_enc_wr ca.gamerule matches 1.. run function cartographer_custom_enchantments:descriptions/write/main
+
 #Also get the ammo of a repeating crossbow in the main or offhand
 scoreboard players set @s ca.ammo_main 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Ammo

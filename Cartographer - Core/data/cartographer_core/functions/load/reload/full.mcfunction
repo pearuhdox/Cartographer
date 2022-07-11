@@ -6,6 +6,8 @@ tellraw @s {"text":"A set of custom mechanics, made by mappers, for mappers.","c
 tellraw @s {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 tellraw @s [{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":"Core (V1.2)","color":"#F04FF0","hoverEvent":{"action":"show_text","contents":[{"text":"Cartographer's base mechanics. No module will work without  this one!","color":"#FFE0A3","italic":true}]}},{"text":" installed!","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
 
+function bb:load_message
+execute if entity @s[tag=!bbl_check] run function cartographer_core:load/bbl_warning
 function cd:load_message
 execute if entity @s[tag=!cdl_check] run function cartographer_core:load/cdl_warning
 function entityid:load_message
@@ -24,6 +26,16 @@ function cartographer_mimics:load/load_message
 function cartographer_mob_abilities:load/load_message
 function cartographer_potion_util:load/load_message
 function cartographer_repair_stations:load/load_message
+
+function cartographer_charon:load/load_check
+function cartographer_custom_durability:load/load_check
+function cartographer_custom_enchantments:load/load_check
+function cartographer_custom_statuses:load/load_check
+function cartographer_loot_additions:load/load_check
+function cartographer_mimics:load/load_check
+function cartographer_mob_abilities:load/load_check
+function cartographer_potion_util:load/load_check
+function cartographer_repair_stations:load/load_check
 
 tellraw @s {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 #

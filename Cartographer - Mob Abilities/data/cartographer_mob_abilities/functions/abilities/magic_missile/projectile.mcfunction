@@ -18,7 +18,7 @@ execute anchored eyes facing entity @p feet positioned ^ ^ ^0.8 rotated as @s po
 execute unless entity @e[type=sheep,distance=..0.5,tag=magic_missile_hitbox] run function cartographer_mob_abilities:abilities/magic_missile/detonate
 
 #Condition 2: Projectile collides with a wall, and will thus detonate.
-execute unless block ~ ~1 ~ #cartographer_core:can_raycast if score @s ca.ability_dmg matches 0.. run function cartographer_mob_abilities:abilities/magic_missile/detonate
+execute unless block ~ ~1 ~ #bb:can_raycast if score @s ca.ability_dmg matches 0.. run function cartographer_mob_abilities:abilities/magic_missile/detonate
 
 #Condition 3: Projectile is within 0.75 blocks of a player and will thus detonate.
 execute if entity @a[distance=..0.75] if score @s ca.ability_dmg matches 0.. run function cartographer_mob_abilities:abilities/magic_missile/detonate

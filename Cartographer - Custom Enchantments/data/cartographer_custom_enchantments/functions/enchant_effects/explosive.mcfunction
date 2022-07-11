@@ -214,24 +214,24 @@ execute if entity @s[tag=is_vol_p_5] run scoreboard players set $explosive ca.pu
 
 tag @s add vol_center
 
-execute as @e[type=#cartographer_core:hostile,distance=..5.5] at @s run function cartographer_custom_enchantments:enchant_effects/explosive/branch
+execute as @e[type=#bb:hostile,distance=..5.5] at @s run function cartographer_custom_enchantments:enchant_effects/explosive/branch
 
 tag @s remove vol_center
 
-tag @s[type=#cartographer_core:hostile] remove is_explosive
-tag @s[type=#cartographer_core:hostile] remove is_vol_red
-tag @s[type=#cartographer_core:hostile] remove is_vol_con
-tag @s[type=#cartographer_core:hostile] remove is_vol_flame
-tag @s[type=#cartographer_core:hostile] remove is_vol_pin
-tag @s[type=#cartographer_core:hostile] remove is_vol_pos
-tag @s[type=#cartographer_core:hostile] remove is_vol_frost
-tag @s[type=#cartographer_core:hostile] remove is_vol_flash
-tag @s[type=#cartographer_core:hostile] remove is_vol_cau
-tag @s[type=#cartographer_core:hostile] remove is_vol_p_1
-tag @s[type=#cartographer_core:hostile] remove is_vol_p_2
-tag @s[type=#cartographer_core:hostile] remove is_vol_p_3
-tag @s[type=#cartographer_core:hostile] remove is_vol_p_4
-tag @s[type=#cartographer_core:hostile] remove is_vol_p_5
+tag @s[type=#bb:hostile] remove is_explosive
+tag @s[type=#bb:hostile] remove is_vol_red
+tag @s[type=#bb:hostile] remove is_vol_con
+tag @s[type=#bb:hostile] remove is_vol_flame
+tag @s[type=#bb:hostile] remove is_vol_pin
+tag @s[type=#bb:hostile] remove is_vol_pos
+tag @s[type=#bb:hostile] remove is_vol_frost
+tag @s[type=#bb:hostile] remove is_vol_flash
+tag @s[type=#bb:hostile] remove is_vol_cau
+tag @s[type=#bb:hostile] remove is_vol_p_1
+tag @s[type=#bb:hostile] remove is_vol_p_2
+tag @s[type=#bb:hostile] remove is_vol_p_3
+tag @s[type=#bb:hostile] remove is_vol_p_4
+tag @s[type=#bb:hostile] remove is_vol_p_5
 
 scoreboard players set $explosive ca.cauterize 0
 scoreboard players set $explosive ca.flame 0

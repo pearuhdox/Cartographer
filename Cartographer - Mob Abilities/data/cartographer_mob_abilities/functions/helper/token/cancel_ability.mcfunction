@@ -13,6 +13,6 @@ effect clear @s glowing
 scoreboard players set @s cooldown 4
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-function cartographer_mob_abilities:helper/token/return_fresh
+function cartographer_mob_abilities:helper/token/return
 tag @s remove tokened
 tag @s remove attacking

@@ -9,9 +9,9 @@ execute store result score $new_health ca.brittle_hlth run data get entity @s He
 scoreboard players operation $diff ca.brittle_hlth = $old_health ca.brittle_hlth
 scoreboard players operation $diff ca.brittle_hlth -= $new_health ca.brittle_hlth
 
-execute if score $diff ca.brittle_hlth matches 1.. run scoreboard players operation @s cdl.Damage_Queue = $diff ca.brittle_hlth
+execute if score $diff ca.brittle_hlth matches 1.. run scoreboard players operation @s cdl.damage_queue = $diff ca.brittle_hlth
 
-execute if score @s cdl.Damage_Queue matches 1.. run function cd:lib/mob/damage/true
+execute if score @s cdl.damage_queue matches 1.. run function cd:lib/mob/damage/true
 
 playsound minecraft:entity.player.hurt_on_fire hostile @a[distance=..10] ~ ~ ~ 0.5 0.5
 playsound minecraft:entity.player.hurt_on_fire hostile @a[distance=..10] ~ ~ ~ 0.5 1

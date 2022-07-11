@@ -16,7 +16,7 @@ scoreboard players operation @s ca.rally_rst /= $100 ca.CONSTANT
 
 scoreboard players operation $test_amt ca.rally_rst = @s ca.rally_rst
 
-execute if entity @s[scores={ca.ral_bank=..10}] as @e[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run particle heart ~ ~1 ~ 0.4 0.1 0.4 0 1 force
+execute if entity @s[scores={ca.ral_bank=..10}] as @e[type=#bb:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run particle heart ~ ~1 ~ 0.4 0.1 0.4 0 1 force
 
 execute if entity @s[scores={ca.rally_rst=10..,ca.ral_bank=10..}] run function cartographer_custom_enchantments:enchant_effects/rally/calc_health_recursive
 

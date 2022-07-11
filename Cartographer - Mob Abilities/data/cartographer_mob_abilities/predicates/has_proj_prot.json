@@ -1,0 +1,66 @@
+{
+        "condition": "minecraft:alternative",
+        "terms": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "head": {
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:projectile_protection"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "chest": {
+                      "enchantments": [
+                        {
+                          "enchantment": "minecraft:projectile_protection"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "legs": {
+                      "enchantments": [
+                        {
+                          "enchantment": "minecraft:projectile_protection"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "feet": {
+                      "enchantments": [
+                        {
+                          "enchantment": "minecraft:projectile_protection"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+        ]
+      }
+      

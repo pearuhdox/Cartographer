@@ -21,7 +21,7 @@ execute if entity @s[tag=empty] unless entity @a[distance=..7] run kill @e[type=
 execute if entity @s[tag=empty] unless entity @a[distance=..7] run kill @e[type=armor_stand,tag=repair_instruction_3,distance=..5]
 execute if entity @s[tag=empty] unless entity @a[distance=..7] run kill @e[type=armor_stand,tag=repair_instruction_4,distance=..5]
 execute if entity @s[tag=empty] unless entity @a[distance=..7] as @e[type=villager,tag=void_bag,distance=..5] at @s run function cartographer_repair_stations:void_bag/return_items
-execute if entity @s[tag=empty] unless entity @a[distance=..7] run tp @e[type=villager,tag=void_bag,distance=..5] ~ -65 ~
+execute if entity @s[tag=empty] unless entity @a[distance=..7] run tp @e[type=villager,tag=void_bag,distance=..5] ~ -130 ~
 
 tag @s add empty
 execute if data entity @s Item run tag @s remove empty

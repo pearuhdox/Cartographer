@@ -30,10 +30,10 @@ execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.repeating
 execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.sharpshot=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/sharpshot
 
 #Trueshot
-execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.trueshot=1..}] at @s as @e[type=#cartographer_core:arrow,sort=nearest,limit=3,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/trueshot
+execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.trueshot=1..}] at @s as @e[type=#bb:arrow,sort=nearest,limit=3,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/trueshot
 
 #Encumbering
-execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.curse_encum=1..}] at @s as @e[type=#cartographer_core:arrow,sort=nearest,limit=1,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_encumbering
+execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.curse_encum=1..}] at @s as @e[type=#bb:arrow,sort=nearest,limit=1,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_encumbering
 
 #Overcharge Happens Here - Specifically last after all other Bow enchantments
 execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.overcharge=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/overcharge

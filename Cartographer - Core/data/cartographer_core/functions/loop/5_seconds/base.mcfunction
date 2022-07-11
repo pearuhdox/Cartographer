@@ -14,8 +14,7 @@ function cartographer_mob_abilities:loop/5_second/base
 #Run all 5 second entity effects here.
 execute as @e[type=!#cartographer_core:not_tracked,type=!#cartographer_core:item_frames,type=!item] at @s run function cartographer_core:loop/entity_calls/5_seconds
 
-#Add any extra functions here!
+#Run Other Datapack Entity Effects
+execute as @e at @s run function #minecraft:cartographer/entity_clocks/5_second
 
-
-
-#Add any extra functions above.
+function #minecraft:cartographer/clocks/5_second

@@ -17,7 +17,7 @@ execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecra
 execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]}] run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["deadeye_multi_7","deadeye_multi"]}
 
 
-kill @e[type=#cartographer_core:arrow,limit=3,sort=nearest]
+kill @e[type=#bb:arrow,limit=3,sort=nearest]
 
 scoreboard players set $deadeye ca.expose 0
 scoreboard players set $deadeye ca.bleed 0

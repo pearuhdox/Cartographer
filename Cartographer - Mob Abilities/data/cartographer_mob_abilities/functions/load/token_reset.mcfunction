@@ -1,55 +1,38 @@
-function suso.player_data:get/do
+#End Goal - Reset the token count to what it is supposed to be. Run this every 30 seconds if there are no players in combat. This force runs on a /reload.
 
-#say resetting tokens
+#Get the player count first:
+execute store result score $players ca.tokens run execute if entity @a
 
-summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["token_data_transfer"],ArmorItems:[{},{},{},{id:"minecraft:barrier",Count:1b,tag:{Token_Template:{LightToken:{Cooldown:0,Owner:0,Type:0},HeavyToken:{Cooldown:0,Owner:0,Type:1}}}}]}
+#Easy Difficulty aka 1:
+#1 Light Token - Cooldown of 4 seconds
+#1 Heavy Token - Cooldown of 4 seconds
+execute if score $global helper_diff matches 1 run function cartographer_mob_abilities:load/token_reset/easy_param
 
-execute if score $global helper_diff matches 1 run data modify entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken.Cooldown set value 9
-execute if score $global helper_diff matches 2 run data modify entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken.Cooldown set value 5
-execute if score $global helper_diff matches 3..4 run data modify entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken.Cooldown set value 3
-execute if score $global helper_diff matches 5 run data modify entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken.Cooldown set value 1
+#Normal Difficulty aka 2:
+#2 Light Tokens - 3s
+#1 Heavy Token - 3s
+execute if score $global helper_diff matches 2 run function cartographer_mob_abilities:load/token_reset/normal_param
 
-execute if score $global helper_diff matches 1 run data modify entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken.Cooldown set value 5
-execute if score $global helper_diff matches 2 run data modify entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken.Cooldown set value 3
-execute if score $global helper_diff matches 3.. run data modify entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken.Cooldown set value 1
+#Hard aka 3:
+#3 Light Tokens - 3s
+#2 Heavy Tokens - 3s
+execute if score $global helper_diff matches 3 run function cartographer_mob_abilities:load/token_reset/hard_param
 
-execute store result entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken.Owner int 1 run scoreboard players add @s ca.pldata.id 0
-execute store result entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken.Owner int 1 run scoreboard players add @s ca.pldata.id 0
+#4:
+#4 Light Tokens - 2s
+#2 Heavy Tokens - 2s
+execute if score $global helper_diff matches 4 run function cartographer_mob_abilities:load/token_reset/hell_param
 
-data modify storage suso:pldata working_data.Tokens set value {LightTokens:[],HeavyTokens:[],CooldownTokens:[],CurrentCooling:{}}
+#5:
+#5 Light - 1s
+#3 Heavy - 1s
+execute if score $global helper_diff matches 5 run function cartographer_mob_abilities:load/token_reset/arcanic_param
 
-execute if score $global helper_diff matches 1 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 1 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
+scoreboard players set $tokened_total ca.tokens 0
 
-execute if score $global helper_diff matches 2 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 2 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 2 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
+scoreboard players operation $heavy_max ca.tokens = $heavy_avail ca.tokens
+scoreboard players operation $light_max ca.tokens = $light_avail ca.tokens
 
-execute if score $global helper_diff matches 3 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 3 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 3 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 3 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
-execute if score $global helper_diff matches 3 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
+scoreboard players set $timer ca.tokens 0
 
-execute if score $global helper_diff matches 4 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 4 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 4 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 4 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 4 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
-execute if score $global helper_diff matches 4 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
-
-execute if score $global helper_diff matches 5 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 5 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 5 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 5 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 5 run data modify storage suso:pldata working_data.Tokens.LightTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.LightToken
-execute if score $global helper_diff matches 5 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
-execute if score $global helper_diff matches 5 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
-execute if score $global helper_diff matches 5 run data modify storage suso:pldata working_data.Tokens.HeavyTokens append from entity @e[tag=token_data_transfer,limit=1,sort=nearest] ArmorItems[3].tag.Token_Template.HeavyToken
-
-
-kill @e[tag=token_data_transfer,limit=1,sort=nearest]
-
-function suso.player_data:put/do
-
-tag @s add token_reset
+tag @a add token_reset

@@ -1,6 +1,6 @@
 #Run all actives
-execute if entity @s[tag=avail_target] as @s[type=#cartographer_core:hostile,tag=ca.has_active,tag=attacking,scores={cooldown=0}] at @s run function cartographer_mob_abilities:loop/1_second/run_actives
-execute unless entity @s[tag=avail_target] as @s[type=#cartographer_core:hostile,tag=ca.has_active,tag=attacking,scores={cooldown=0}] at @s run function cartographer_mob_abilities:loop/1_second/cancel_actives
+execute if entity @s[tag=avail_target] as @s[type=#bb:hostile,tag=ca.has_active,tag=attacking,scores={cooldown=0}] at @s run function cartographer_mob_abilities:loop/1_second/run_actives
+execute unless entity @s[tag=avail_target] as @s[type=#bb:hostile,tag=ca.has_active,tag=attacking,scores={cooldown=0}] at @s run function cartographer_mob_abilities:loop/1_second/cancel_actives
 
 #Reduce Cooldowns on all enemies with cooldowns.
 scoreboard players remove @s[tag=ca.has_active,scores={cooldown=1..}] cooldown 1

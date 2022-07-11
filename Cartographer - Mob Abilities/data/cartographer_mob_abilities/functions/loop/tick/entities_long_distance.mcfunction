@@ -1,10 +1,10 @@
 #Run Projectile Replace Passives
-execute as @s[type=#cartographer_core:hostile,tag=ca.shoot_fire_charge] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
-execute as @s[type=#cartographer_core:hostile,tag=ca.shoot_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
-execute as @s[type=#cartographer_core:hostile,tag=ca.shoot_wither_skull] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
-execute as @s[type=#cartographer_core:hostile,tag=ca.shoot_dragon_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
-execute as @s[type=#cartographer_core:hostile,tag=ca.shoot_shulker_bullet] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
-execute as @s[type=#cartographer_core:hostile,tag=ca.shoot_potion] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[type=#bb:hostile,tag=ca.shoot_fire_charge] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[type=#bb:hostile,tag=ca.shoot_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[type=#bb:hostile,tag=ca.shoot_wither_skull] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[type=#bb:hostile,tag=ca.shoot_dragon_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[type=#bb:hostile,tag=ca.shoot_shulker_bullet] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[type=#bb:hostile,tag=ca.shoot_potion] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
 
 #Armor Stand Effects
 execute as @s[type=armor_stand] at @s run function cartographer_mob_abilities:loop/tick/armor_stand_branch

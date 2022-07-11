@@ -309,13 +309,13 @@ scoreboard players remove @s[scores={ca.conceal_time=1..}] ca.conceal_time 1
 execute as @a[scores={ca.conceal_time=1}] at @s run function cartographer_custom_enchantments:enchant_effects/concealed/consume
 
 
-execute if score @s[x_rotation=-90..60] ca.adren_time matches 1.. unless block ~ ~-0.5 ~ #cartographer_core:can_raycast run particle minecraft:dust 0 0.8 1 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
-execute if score @s[x_rotation=-90..60] ca.frenz_time matches 1.. unless block ~ ~-0.5 ~ #cartographer_core:can_raycast run particle minecraft:dust 0.8 0 0 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
-execute if score @s[x_rotation=-90..60] ca.energ_time matches 1.. unless block ~ ~-0.5 ~ #cartographer_core:can_raycast run particle minecraft:dust 0.988 0.933 0.459 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
+execute if score @s[x_rotation=-90..60] ca.adren_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0 0.8 1 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
+execute if score @s[x_rotation=-90..60] ca.frenz_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0.8 0 0 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
+execute if score @s[x_rotation=-90..60] ca.energ_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0.988 0.933 0.459 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
 
-execute if score @s[x_rotation=61..80] ca.adren_time matches 1.. unless block ~ ~-0.5 ~ #cartographer_core:can_raycast run particle minecraft:dust 0 0.8 1 1 ~0.5 ~0.2 ~ 0.1 0 0.1 0 1 normal
-execute if score @s[x_rotation=61..80] ca.frenz_time matches 1.. unless block ~ ~-0.5 ~ #cartographer_core:can_raycast run particle minecraft:dust 0.8 0 0 1 ~-0.5 ~0.2 ~-0.5 0.1 0 0.1 0 1 normal
-execute if score @s[x_rotation=61..80] ca.energ_time matches 1.. unless block ~ ~-0.5 ~ #cartographer_core:can_raycast run particle minecraft:dust 0.988 0.933 0.459 1 ~-0.5 ~0.2 ~0.5 0.1 0 0.1 0 1 normal
+execute if score @s[x_rotation=61..80] ca.adren_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0 0.8 1 1 ~0.5 ~0.2 ~ 0.1 0 0.1 0 1 normal
+execute if score @s[x_rotation=61..80] ca.frenz_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0.8 0 0 1 ~-0.5 ~0.2 ~-0.5 0.1 0 0.1 0 1 normal
+execute if score @s[x_rotation=61..80] ca.energ_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0.988 0.933 0.459 1 ~-0.5 ~0.2 ~0.5 0.1 0 0.1 0 1 normal
 
 
 execute if score @s ca.adren_time matches 0 run attribute @s minecraft:generic.movement_speed modifier remove 31-119-1212-2216-0

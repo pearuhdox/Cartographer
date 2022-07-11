@@ -20,9 +20,9 @@ execute if score @s ca.lifetime matches 0.. run particle minecraft:smoke ^ ^ ^-0
 execute if score @s ca.lifetime matches 0.. run particle minecraft:smoke ^ ^ ^-0.75 0 0 0 0 1 force
 execute if score @s ca.lifetime matches 0.. run particle minecraft:smoke ^ ^ ^-1 0 0 0 0 1 force
 
-execute if score @s ca.lifetime matches 0.. run execute unless block ~ ~ ~ #cartographer_core:can_raycast run particle explosion ~ ~ ~ 0.75 0 0.75 0 1 normal
-execute if score @s ca.lifetime matches 0.. run execute unless block ~ ~ ~ #cartographer_core:can_raycast run playsound minecraft:entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 1 2
-execute if score @s ca.lifetime matches 0.. run execute unless block ~ ~ ~ #cartographer_core:can_raycast run kill @s
+execute if score @s ca.lifetime matches 0.. run execute unless block ~ ~ ~ #bb:can_raycast run particle explosion ~ ~ ~ 0.75 0 0.75 0 1 normal
+execute if score @s ca.lifetime matches 0.. run execute unless block ~ ~ ~ #bb:can_raycast run playsound minecraft:entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 1 2
+execute if score @s ca.lifetime matches 0.. run execute unless block ~ ~ ~ #bb:can_raycast run kill @s
 
 
 execute if score @s ca.lifetime matches 81.. run particle explosion ~ ~0.25 ~ 0.75 0 0.75 0 1 normal

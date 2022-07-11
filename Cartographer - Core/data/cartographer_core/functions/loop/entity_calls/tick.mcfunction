@@ -9,10 +9,10 @@ execute if score $charon ca.installed matches 1.. if entity @s run function cart
 execute if score $custom_enchantments ca.installed matches 1.. if entity @s[type=#cartographer_core:tracked_for_ce] run function cartographer_custom_enchantments:loop/tick/entity_branch
 
 #Projectile Lifetime Scores - Do this here
-execute if entity @s[type=#cartographer_core:projectile] run scoreboard players add @s ca.lifetime 1
+execute if entity @s[type=#bb:projectile] run scoreboard players add @s ca.lifetime 1
 
 #Run Custom Statuses Effects
-execute if score $custom_statuses ca.installed matches 1.. if entity @a[distance=..40] if entity @s[type=#cartographer_core:hostile] run function cartographer_custom_statuses:loop/tick/entities
+execute if score $custom_statuses ca.installed matches 1.. if entity @a[distance=..40] if entity @s[type=#bb:hostile] run function cartographer_custom_statuses:loop/tick/entities
 
 #Run Decay Spread
 execute if score $custom_statuses ca.installed matches 1.. if entity @a[distance=..40] if entity @s[type=item] if entity @s[nbt={Item:{tag:{Decaying:1}}}] run function cartographer_custom_statuses:effects/infection_spread
@@ -30,3 +30,6 @@ execute if score $mob_abilities ca.installed matches 1.. if entity @a[distance=.
 
 #Run Repair Station Effects
 execute if score $repair_stations ca.installed matches 1.. if entity @s[type=#cartographer_core:tracked_for_rs] run function cartographer_repair_stations:loop/tick/entities
+
+#Run anything else via the tag
+function #minecraft:cartographer/entity_clocks/tick

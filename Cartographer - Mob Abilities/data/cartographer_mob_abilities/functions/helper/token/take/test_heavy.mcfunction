@@ -1,0 +1,1 @@
+execute if score $heavy_avail ca.tokens matches 1.. run function cartographer_mob_abilities:helper/token/take/heavy

@@ -33,7 +33,7 @@ scoreboard players operation $melee ca.possession = @s ca.possession
 execute if score @s ca.surge_strike matches 1.. positioned ~ ~1.2 ~ positioned ^ ^ ^1 run function cartographer_custom_enchantments:enchant_effects/surging_strike/raycast
 
 #Resets
-execute if entity @s[scores={ca.surge_strike=1..}] as @e[type=#cartographer_core:hostile,tag=thrusted,distance=..15] at @s run tag @s remove thrusted
+execute if entity @s[scores={ca.surge_strike=1..}] as @e[type=#bb:hostile,tag=thrusted,distance=..15] at @s run tag @s remove thrusted
 
 scoreboard players set $melee ca.attack_val 0
 scoreboard players set $melee ca.fire_aspect 0

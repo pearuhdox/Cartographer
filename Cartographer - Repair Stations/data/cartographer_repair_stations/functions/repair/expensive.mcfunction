@@ -25,9 +25,9 @@ scoreboard players operation @p[distance=..5] LapisCost -= @s LapisCost
 scoreboard players operation @p[distance=..5] MaterialCost -= @s MaterialCost
 
 
-execute if entity @p[distance=..5,scores={XPcost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -65 ~
-execute if entity @p[distance=..5,scores={LapisCost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -65 ~
-execute if entity @p[distance=..5,scores={MaterialCost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -65 ~
+execute if entity @p[distance=..5,scores={XPcost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -130 ~
+execute if entity @p[distance=..5,scores={LapisCost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -130 ~
+execute if entity @p[distance=..5,scores={MaterialCost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -130 ~
 execute if entity @p[distance=..5,scores={XPcost=..-1}] run kill @e[type=armor_stand,tag=repair_indicator_confirm,limit=3,distance=..2.7]
 execute if entity @p[distance=..5,scores={LapisCost=..-1}] run kill @e[type=armor_stand,tag=repair_indicator_confirm,limit=3,distance=..2.7]
 execute if entity @p[distance=..5,scores={MaterialCost=..-1}] run kill @e[type=armor_stand,tag=repair_indicator_confirm,limit=3,distance=..2.7]

@@ -22,8 +22,8 @@ scoreboard players operation @s ca.brittle_time = $dur_calc ca.brittle_time
 
 
 #Do the damage here.
-scoreboard players operation @s cdl.Damage_Queue = @s ca.cauter_dmg
-execute if score @s cdl.Damage_Queue matches 1.. run function cd:lib/mob/damage/true
+scoreboard players operation @s cdl.damage_queue = @s ca.cauter_dmg
+execute if score @s cdl.damage_queue matches 1.. run function cd:lib/mob/damage/true
 
 scoreboard players set $brittled ca.cauterize 1
 

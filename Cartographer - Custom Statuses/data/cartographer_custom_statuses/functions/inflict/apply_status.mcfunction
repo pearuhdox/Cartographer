@@ -9,10 +9,12 @@
 # Nausea 17 - Bleeding V
 # Nausea 18 - Cloaked
 
+# Nausea Potency 100 - Cleansing
+
 #say converting
 
 data modify storage ca.custom_status apply set value {}
-data modify storage ca.custom_status apply set from entity @s ActiveEffects[{Id:9b}]
+data modify storage ca.custom_status apply set from entity @s ActiveEffects[{Id:9}]
 
 execute store result score @s ca.time_convert run data get storage ca.custom_status apply.Duration
 scoreboard players remove @s ca.time_convert 1
@@ -40,4 +42,4 @@ execute if entity @s[scores={ca.id_convert=17,ca.effect_bleed=1..}] run scoreboa
 
 execute if entity @s[scores={ca.id_convert=18}] run scoreboard players operation @s ca.effect_cloak = @s ca.time_convert
 
-effect clear @s nausea
+effect clear @s[predicate=!essentials:has_transmutation] nausea

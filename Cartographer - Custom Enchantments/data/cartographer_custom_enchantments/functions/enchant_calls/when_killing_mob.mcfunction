@@ -46,6 +46,3 @@ function cartographer_custom_enchantments:enchant_effects/echo_restore
 
 #Concealed Restore (if score $cu_en_passive ca.enabler matches 1..)
 execute if score @s ca.concealed matches 1.. run function cartographer_custom_enchantments:enchant_effects/concealed/restore
-
-#Call Invul Timer for Mob Abilities
-scoreboard players set $invul_time_check invul 25

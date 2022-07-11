@@ -20,6 +20,7 @@ tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"[➤] ","color":"gray","bold":true,"italic":false},{"bold":false,"text":"Custom Enchantments","color":"gray","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Tweak Vanilla and Core gamerules.","color":"#FFF4D9","italic":true}]}}]
 
 tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Global UI Location","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Set the default location of custom UI elements from Custom Enchantments.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_custom_enchantments:options/globals/ui_location"}}]
+tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Item Descriptions","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Enable or Disable Enchant descriptions appearing on items when held. (The first time they are found.)","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_custom_enchantments:options/globals/enchant_write"}}]
 
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]

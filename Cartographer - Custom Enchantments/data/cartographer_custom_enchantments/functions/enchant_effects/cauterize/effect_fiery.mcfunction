@@ -1,4 +1,4 @@
-scoreboard players set @s cdl.Damage_Queue 2
+scoreboard players set @s cdl.damage_queue 2
 
 function cd:lib/mob/damage/true
 function cd:func/mob_damage_true/half

@@ -9,8 +9,8 @@ particle explosion ~ ~0.25 ~ 0.75 0 0.75 0 1 normal
 playsound minecraft:entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 0.5 2
 playsound minecraft:enchant.thorns.hit hostile @a[distance=..20] ~ ~ ~ 2 0.5
 
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run scoreboard players operation @s cdl.Damage_Queue = $damage ca.ability_dmg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.Death_ID 310213
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310213
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run tag @s remove no_cdl_msg
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run function cd:lib/player/damage/normal
 

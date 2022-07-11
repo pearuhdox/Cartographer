@@ -2,11 +2,11 @@ execute run tp @s ~ ~ ~ facing entity @e[type=experience_orb,tag=erupting_xp,dis
 execute unless score $eruption ca.knockback matches 1.. run function cartographer_core:helper/push_half
 
 
-execute if score $eruption ca.eruption matches 1 as @s run scoreboard players set @s cdl.Damage_Queue 3
-execute if score $eruption ca.eruption matches 2 as @s run scoreboard players set @s cdl.Damage_Queue 6
-execute if score $eruption ca.eruption matches 3 as @s run scoreboard players set @s cdl.Damage_Queue 9
-execute if score $eruption ca.eruption matches 4 as @s run scoreboard players set @s cdl.Damage_Queue 12
-execute if score $eruption ca.eruption matches 5 as @s run scoreboard players set @s cdl.Damage_Queue 15
+execute if score $eruption ca.eruption matches 1 as @s run scoreboard players set @s cdl.damage_queue 3
+execute if score $eruption ca.eruption matches 2 as @s run scoreboard players set @s cdl.damage_queue 6
+execute if score $eruption ca.eruption matches 3 as @s run scoreboard players set @s cdl.damage_queue 9
+execute if score $eruption ca.eruption matches 4 as @s run scoreboard players set @s cdl.damage_queue 12
+execute if score $eruption ca.eruption matches 5 as @s run scoreboard players set @s cdl.damage_queue 15
 
 execute if score $eruption ca.eruption matches 1.. as @s run function cd:lib/mob/damage/normal
 
@@ -42,9 +42,9 @@ execute if score $eruption ca.electrocute matches 2 as @s run scoreboard players
 execute if score $eruption ca.electrocute matches 3 as @s run scoreboard players set @s ca.effect_shock 7
 execute if score $eruption ca.electrocute matches 1.. run particle minecraft:firework ~ ~1 ~ 0.5 0.5 0.5 0.2 10 normal
 
-execute if score $eruption ca.bleeding matches 1.. as @s run scoreboard players add @s[scores={ca.effect_bleed=1..},type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s}] ca.effect_bleed 1
+execute if score $eruption ca.bleeding matches 1.. as @s run scoreboard players add @s[scores={ca.effect_bleed=1..},type=#bb:hostile,distance=..5,nbt=!{HurtTime:0s}] ca.effect_bleed 1
 
-execute if score $eruption ca.bleeding matches 1.. as @s unless entity @s[type=#cartographer_core:hostile,distance=..5,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players add @s ca.effect_bleed 3
+execute if score $eruption ca.bleeding matches 1.. as @s unless entity @s[type=#bb:hostile,distance=..5,nbt=!{HurtTime:0s},scores={ca.effect_bleed=1..}] run scoreboard players add @s ca.effect_bleed 3
 
 execute if score $eruption ca.bleeding matches 1 run scoreboard players add @s ca.bleed_potency 1
 execute if score $eruption ca.bleeding matches 2 run scoreboard players add @s ca.bleed_potency 2

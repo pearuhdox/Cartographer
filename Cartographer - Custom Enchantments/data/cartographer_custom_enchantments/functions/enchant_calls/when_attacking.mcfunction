@@ -55,7 +55,4 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements=
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}},scores={ca.tempo_theft=3}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
 
 #If NOT a projectile attack, cleanse the ranged tags on nearby mobs.
-execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}}] as @e[type=#cartographer_core:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/purge_ranged_tags
-
-#Call Invul Timer for Mob Abilities
-scoreboard players set $invul_time_check invul 25
+execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}}] as @e[type=#bb:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/purge_ranged_tags

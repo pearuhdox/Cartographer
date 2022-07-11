@@ -1,10 +1,9 @@
-execute as @p[distance=..30] at @s run function suso.player_data:get/do
+scoreboard players add @p[distance=..30] ca.heat 1
 
-data modify entity @s ArmorItems[3].tag.HeldToken set from storage suso:pldata working_data.Tokens.LightTokens[0]
-data remove storage suso:pldata working_data.Tokens.LightTokens[0]
+scoreboard players remove $light_avail ca.tokens 1
+scoreboard players add $light_used ca.tokens 1
 
-execute if data entity @s ArmorItems[3].tag.HeldToken.Owner run tag @s add tokened
+scoreboard players add $tokened_total ca.tokens 1
 
-execute if entity @s[tag=tokened] run scoreboard players add $tokened_total ca.var 1
-
-execute as @p[distance=..30] at @s run function suso.player_data:put/do
+tag @s add tokened
+tag @s add ca.takes_light

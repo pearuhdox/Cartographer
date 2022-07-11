@@ -5,6 +5,7 @@ playsound minecraft:block.chest.open block @a[distance=..10] ~ ~ ~ 1 1.5
 tag @s add spawned
 
 tag @s add ca.la.tracked
+tag @s add ca.belongs_la
 
 execute if block ~ ~ ~ redstone_wire run tag @s add trapped
 execute if block ~ ~ ~ redstone_wire run setblock ~ ~ ~ air replace

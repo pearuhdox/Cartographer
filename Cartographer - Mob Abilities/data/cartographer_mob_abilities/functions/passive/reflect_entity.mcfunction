@@ -6,8 +6,8 @@ scoreboard players operation @s reflect_diff /= $2 ca.CONSTANT
 
 scoreboard players operation $reflect_pass reflect_diff = @s reflect_diff
 
-execute if entity @a[distance=..30,tag=reflect_hit] run scoreboard players operation @s cdl.Heal_Queue = @s reflect_diff
-execute if entity @a[distance=..30,tag=reflect_hit] run function cd:lib/mob/heal
+#execute if entity @a[distance=..30,tag=reflect_hit] run scoreboard players operation @s cdl.heal_queue = @s reflect_diff
+#execute if entity @a[distance=..30,tag=reflect_hit] run function cd:lib/mob/heal
 
 execute if entity @a[distance=..30,tag=reflect_hit] run playsound minecraft:item.shield.block hostile @a[distance=..12] ~ ~ ~ 0.5 0.5
 execute if entity @a[distance=..30,tag=reflect_hit] run playsound minecraft:entity.shulker.hurt_closed hostile @a[distance=..12] ~ ~ ~ 2 0.5
@@ -21,4 +21,4 @@ execute if entity @a[distance=..30,tag=reflect_hit] run scoreboard players set @
 execute if entity @a[distance=..30,tag=reflect_hit] run scoreboard players set @s mob_atk_red 41
 execute if entity @a[distance=..30,tag=reflect_hit] run scoreboard players set @s ca.raycast 0
 
-#say entity doing reflection
+execute if entity @a[distance=..30,tag=reflect_hit] at @s run function cartographer_mob_abilities:passive/reflected_notice
