@@ -1,5 +1,5 @@
 #writing into storage {Ambient: 0b, ShowIcon: 0b, ShowParticles: 0b, Duration: 20, Id: 11b, Amplifier: 0b}
-data modify storage ca_core:resistance_true effect set from entity @s ActiveEffects[{Id:11b}] 
+data modify storage ca_core:resistance_true effect set from entity @s ActiveEffects[{Id:11}] 
 
 execute store result score @s ca.res.amp run data get storage ca_core:resistance_true effect.Amplifier
 execute store result score @s ca.res.dur run data get storage ca_core:resistance_true effect.Duration

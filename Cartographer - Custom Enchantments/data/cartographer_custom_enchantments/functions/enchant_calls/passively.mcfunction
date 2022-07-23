@@ -3,7 +3,7 @@ function cartographer_custom_enchantments:enchant_effects/agility
 #Aquadynamic
 function cartographer_custom_enchantments:enchant_effects/aquadynamic
 #Cleansing (only when no hunger)
-execute if entity @s[nbt=!{ActiveEffects:[{Id:17b}]}] run function cartographer_custom_enchantments:enchant_effects/cleansing
+execute if entity @s[nbt=!{ActiveEffects:[{Id:17}]}] run function cartographer_custom_enchantments:enchant_effects/cleansing
 #Concealed
 function cartographer_custom_enchantments:enchant_effects/concealed
 

@@ -1,4 +1,3 @@
-scoreboard players operation $sw_abs_check ca.second_wind /= $10 ca.CONSTANT
 
 scoreboard players operation @s cdl.heal_queue = $sw_abs_check ca.second_wind
 

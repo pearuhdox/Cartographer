@@ -9,7 +9,7 @@
 execute store result score $player.absorption cdl.temp run data get entity @s AbsorptionAmount
 
 #Saving absorption and clearing it
-data modify storage cdl:true_damage_absorption effect set from entity @s ActiveEffects[{Id:22b}]
+data modify storage cdl:true_damage_absorption effect set from entity @s ActiveEffects[{Id:22}]
 effect clear @s minecraft:absorption
 
 #Total calculation

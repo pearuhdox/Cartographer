@@ -55,7 +55,7 @@ execute if score @s ca.sw_time matches 10 run playsound minecraft:block.netherit
 execute if score @s ca.sw_time matches 5 run playsound minecraft:block.bell.use player @s ~ ~ ~ 1 2
 execute if score @s ca.sw_time matches 5 run playsound minecraft:block.netherite_block.place player @s ~ ~ ~ 1 0.5
 
-execute store result score $sw_abs_check ca.second_wind run data get entity @s AbsorptionAmount 10
+execute store result score $sw_abs_check ca.second_wind run data get entity @s AbsorptionAmount
 
 execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_effects/second_wind/reward
 

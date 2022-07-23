@@ -1,14 +1,14 @@
 # Arrows
-execute as @s[type=#bb:arrow] at @s run function cartographer_custom_enchantments:loop/tick/arrow
+execute if entity @s[type=#bb:arrow] run function cartographer_custom_enchantments:loop/tick/arrow
 
 # Hostile Entities
-execute as @s[type=#bb:hostile] at @s run function cartographer_custom_enchantments:loop/tick/hostile
+execute if entity @s[type=#bb:hostile] run function cartographer_custom_enchantments:loop/tick/hostile
 
 # Trident
-execute as @s[type=trident] run function cartographer_custom_enchantments:loop/tick/trident
+execute if entity @s[type=trident] run function cartographer_custom_enchantments:loop/tick/trident
 
 # Armor Stand
-execute as @s[type=armor_stand] at @s run function cartographer_custom_enchantments:loop/tick/armor_stand
+execute if entity @s[type=armor_stand] run function cartographer_custom_enchantments:loop/tick/armor_stand
 
 # Evoker Fangs from Evocation
-execute as @s[type=evoker_fangs,tag=from_evocation] at @s run function cartographer_custom_enchantments:loop/tick/evoker_fangs
+execute if entity @s[type=evoker_fangs,tag=from_evocation] run function cartographer_custom_enchantments:loop/tick/evoker_fangs

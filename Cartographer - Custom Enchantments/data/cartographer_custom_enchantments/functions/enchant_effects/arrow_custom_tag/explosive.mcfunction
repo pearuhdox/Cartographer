@@ -1,0 +1,9 @@
+execute if score $bleed ca.var matches 1.. run tag @s add is_vol_bleed
+execute if score $conductive ca.var matches 1.. run tag @s add is_vol_con
+execute if score $flame ca.var matches 1.. run tag @s add is_vol_flame
+execute if score $expose ca.var matches 1.. run tag @s add is_vol_pin
+execute if score $frost ca.var matches 1.. run tag @s add is_vol_frost
+execute if score $infect ca.var matches 1.. run tag @s add is_vol_infection
+execute if score $flash ca.var matches 1.. run tag @s add is_vol_flash
+execute if score $possess ca.var matches 1.. run tag @s add is_vol_pos
+execute if score $cauterize ca.var matches 1.. run tag @s add is_vol_cau

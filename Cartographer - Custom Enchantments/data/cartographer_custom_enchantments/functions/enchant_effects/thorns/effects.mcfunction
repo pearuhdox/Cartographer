@@ -2,8 +2,7 @@ scoreboard players set @s cdl.damage_queue 0
 
 scoreboard players operation @s cdl.damage_queue = $thorns ca.thorns
 
-function cd:lib/mob/damage/true
-function cd:func/mob_damage_true/invulnerable_tick
+function cd:lib/mob/damage/normal
 
 execute unless score $thorns ca.t_knock matches 1.. run function cartographer_core:helper/push_half
 
@@ -20,37 +19,16 @@ execute if score $thorns ca.t_fire matches 3.. run data modify entity @s Fire se
 
 execute if score $thorns ca.cauterize matches 1.. run function cartographer_custom_enchantments:enchant_effects/cauterize/other
 
-execute if score $thorns ca.t_frost matches 1 run scoreboard players set @s ca.frost_tier 1
-execute if score $thorns ca.t_frost matches 2 run scoreboard players set @s ca.frost_tier 2
-execute if score $thorns ca.t_frost matches 3 run scoreboard players set @s ca.frost_tier 3
-execute if score $thorns ca.t_frost matches 4 run scoreboard players set @s ca.frost_tier 4
-execute if score $thorns ca.t_frost matches 5.. run scoreboard players set @s ca.frost_tier 5
+scoreboard players operation @s ca.frost_tier = $thorns ca.t_frost
+execute if score $thorns ca.t_frost matches 6.. run scoreboard players set @s ca.frost_tier 5
 execute if score $thorns ca.t_frost matches 1.. run scoreboard players set @s ca.frost_time 81
 
-execute if score $thorns ca.t_stun matches 1.. run scoreboard players set in math 1
-execute if score $thorns ca.t_stun matches 1.. run scoreboard players set in1 math 100
+execute if score $thorns ca.t_stun matches 1.. run function cartographer_core:helper/randomize
+execute if score $thorns ca.t_stun matches 1.. run scoreboard players operation $thorns ca.melee_chance = @s random
 
-execute if score $thorns ca.t_stun matches 1.. run function cartographer_core:helper/math/rng/range
-
-execute if score $thorns ca.t_stun matches 1.. run scoreboard players operation $thorns ca.melee_chance = out math
-
-execute if score $thorns ca.t_stun matches 1 if score $thorns ca.melee_chance matches ..10 run scoreboard players set @s ca.effect_stun 21
-execute if score $thorns ca.t_stun matches 2 if score $thorns ca.melee_chance matches ..20 run scoreboard players set @s ca.effect_stun 21
-execute if score $thorns ca.t_stun matches 3 if score $thorns ca.melee_chance matches ..30 run scoreboard players set @s ca.effect_stun 21
-execute if score $thorns ca.t_stun matches 4 if score $thorns ca.melee_chance matches ..40 run scoreboard players set @s ca.effect_stun 21
-execute if score $thorns ca.t_stun matches 5.. if score $thorns ca.melee_chance matches ..50 run scoreboard players set @s ca.effect_stun 21
-
-execute if score $thorns ca.t_stun matches 1 if score $thorns ca.melee_chance matches ..10 run playsound minecraft:entity.firework_rocket.twinkle player @a[distance=..16] ~ ~ ~ 0.5 1.25
-execute if score $thorns ca.t_stun matches 2 if score $thorns ca.melee_chance matches ..20 run playsound minecraft:entity.firework_rocket.twinkle player @a[distance=..16] ~ ~ ~ 0.5 1.25
-execute if score $thorns ca.t_stun matches 3 if score $thorns ca.melee_chance matches ..30 run playsound minecraft:entity.firework_rocket.twinkle player @a[distance=..16] ~ ~ ~ 0.5 1.25
-execute if score $thorns ca.t_stun matches 4 if score $thorns ca.melee_chance matches ..40 run playsound minecraft:entity.firework_rocket.twinkle player @a[distance=..16] ~ ~ ~ 0.5 1.25
-execute if score $thorns ca.t_stun matches 5.. if score $thorns ca.melee_chance matches ..50 run playsound minecraft:entity.firework_rocket.twinkle player @a[distance=..16] ~ ~ ~ 0.5 1.25
-
-execute if score $thorns ca.t_stun matches 1 if score $thorns ca.melee_chance matches ..10 run particle minecraft:firework ~ ~1 ~ 0.3 0.5 0.3 0.05 10 normal
-execute if score $thorns ca.t_stun matches 2 if score $thorns ca.melee_chance matches ..20 run particle minecraft:firework ~ ~1 ~ 0.3 0.5 0.3 0.05 10 normal
-execute if score $thorns ca.t_stun matches 3 if score $thorns ca.melee_chance matches ..30 run particle minecraft:firework ~ ~1 ~ 0.3 0.5 0.3 0.05 10 normal
-execute if score $thorns ca.t_stun matches 4 if score $thorns ca.melee_chance matches ..40 run particle minecraft:firework ~ ~1 ~ 0.3 0.5 0.3 0.05 10 normal
-execute if score $thorns ca.t_stun matches 5.. if score $thorns ca.melee_chance matches ..50 run particle minecraft:firework ~ ~1 ~ 0.3 0.5 0.3 0.05 10 normal
+scoreboard players set $temp ca.melee_chance 10
+scoreboard players operation $temp ca.melee_chance *= $thorns ca.t_stun
+execute if score $thorns ca.melee_chance <= $temp ca.melee_chance run function cartographer_custom_enchantments:enchant_effects/thorns/branch/do_stun
 
 scoreboard players set $thorns ca.melee_chance 0
 
@@ -80,16 +58,4 @@ execute if score $thorns ca.t_infection matches 3.. run scoreboard players set @
 
 
 #Possession - Random Chance
-execute if score $thorns ca.t_poss matches 1.. run scoreboard players set in math 1
-execute if score $thorns ca.t_poss matches 1.. run scoreboard players set in1 math 100
-
-execute if score $thorns ca.t_poss matches 1.. run function cartographer_core:helper/math/rng/range
-
-execute if score $thorns ca.t_poss matches 1.. run scoreboard players operation $melee ca.melee_chance = out math
-
-#Possession - Run Effect
-execute if score $thorns ca.t_poss matches 1 as @s run scoreboard players set $percent_poss ca.melee_chance 10
-execute if score $thorns ca.t_poss matches 2 as @s run scoreboard players set $percent_poss ca.melee_chance 20
-execute if score $thorns ca.t_poss matches 3.. as @s run scoreboard players set $percent_poss ca.melee_chance 30
-
-execute if score $thorns ca.t_poss matches 1.. as @s run function cartographer_custom_enchantments:enchant_effects/possession/branch
+execute if score $thorns ca.t_poss matches 1.. run function cartographer_custom_enchantments:enchant_effects/thorns/branch/posession

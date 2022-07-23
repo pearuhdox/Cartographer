@@ -25,4 +25,4 @@ execute if score $mob_abilities ca.installed matches 1.. if entity @a[distance=.
 execute if score $repair_stations ca.installed matches 1.. run function cartographer_repair_stations:loop/1_second/entities
 
 #Run Other Datapack Effects
-#function #minecraft:cartographer/entity_clocks/1_second
+function #minecraft:cartographer/entity_clocks/1_second

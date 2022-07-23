@@ -1,7 +1,5 @@
-execute if score @s ca.curse_regret matches 1 run scoreboard players set @s cdl.damage_queue 2
-execute if score @s ca.curse_regret matches 2 run scoreboard players set @s cdl.damage_queue 4
-execute if score @s ca.curse_regret matches 3 run scoreboard players set @s cdl.damage_queue 6
-execute if score @s ca.curse_regret matches 4 run scoreboard players set @s cdl.damage_queue 8
+execute if score @s ca.curse_regret matches 1..4 run scoreboard players set @s cdl.damage_queue 2
+execute if score @s ca.curse_regret matches 2..4 run scoreboard players operation @s cdl.damage_queue *= @s ca.curse_regret
 execute if score @s ca.curse_regret matches 5.. run scoreboard players set @s cdl.damage_queue 10
 
 execute unless entity @s[tag=no_cdl_msg] if score @s ca.curse_regret matches 1.. run scoreboard players set @s cdl.death_id 310102

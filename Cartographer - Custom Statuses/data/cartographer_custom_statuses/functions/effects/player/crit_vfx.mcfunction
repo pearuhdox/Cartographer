@@ -1,1 +1,0 @@
-particle minecraft:crit ~ ~1 ~ 0.45 0.45 0.45 0.2 25 normal

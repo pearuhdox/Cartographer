@@ -100,9 +100,9 @@ tag @s remove check_feet
 tag @s remove check_offh
 
 #Turn features dynamically off by default. We will turn them back on as we find we need them.
-scoreboard players set $cu_en_melee ca.enabler 0
-scoreboard players set $cu_en_ranged ca.enabler 0
-scoreboard players set $cu_en_passive ca.enabler 0
-scoreboard players set $cu_en_kill ca.enabler 0
-scoreboard players set $cu_en_spawner ca.enabler 0
-scoreboard players set $cu_en_player_death ca.enabler 0
+#scoreboard players set $cu_en_melee ca.enabler 0
+#scoreboard players set $cu_en_ranged ca.enabler 0
+#scoreboard players set $cu_en_passive ca.enabler 0
+#scoreboard players set $cu_en_kill ca.enabler 0
+#scoreboard players set $cu_en_spawner ca.enabler 0
+#scoreboard players set $cu_en_player_death ca.enabler 0

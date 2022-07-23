@@ -1,1 +1,0 @@
-execute positioned ~ ~1.5 ~ run function cartographer_custom_statuses:tick_effects/indicators/indicator_first_branch

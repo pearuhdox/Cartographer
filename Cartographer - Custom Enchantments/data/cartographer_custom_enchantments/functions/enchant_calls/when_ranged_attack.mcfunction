@@ -1,6 +1,40 @@
+#Reset All Scores I am Crying
+scoreboard players set $bleed ca.var 0
+scoreboard players set $electrode ca.var 0
+scoreboard players set $expose ca.var 0
+scoreboard players set $frost ca.var 0
+scoreboard players set $infect ca.var 0
+scoreboard players set $possess ca.var 0
+scoreboard players set $flash ca.var 0
+scoreboard players set $cauterize ca.var 0
+scoreboard players set $explosive ca.var 0
+scoreboard players set $vol_dmg ca.vol_dmg 0
+scoreboard players set $tempo_theft ca.var 0
+scoreboard players set $punch ca.var 0
+
+scoreboard players set $current ca.var 0
+scoreboard players set $ricochet ca.var 0
+scoreboard players set $tempest ca.var 0
+scoreboard players set $duelist ca.var 0
+scoreboard players set $hunter ca.var 0
+scoreboard players set $singe ca.var 0
+scoreboard players set $frostbite ca.var 0
+scoreboard players set $exposing ca.var 0
+scoreboard players set $possession ca.var 0
+scoreboard players set $stunning ca.var 0
+scoreboard players set $infection ca.var 0
+scoreboard players set $electrocute ca.var 0
+scoreboard players set $bleeding ca.var 0
+scoreboard players set $fire_aspect ca.var 0
+scoreboard players set $cauterize ca.var 0
+
+#Grab All Relevant Data from the Arrow in question.
+execute as @e[distance=..7,type=#cartographer_core:arrow,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch
+execute as @e[distance=..7,type=trident,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch_trident
+
 #These effects will activate from the entity itself before the player call.
-execute if score $cu_en_ranged ca.enabler matches 1.. at @s if entity @e[distance=..7,type=arrow,limit=1,sort=nearest] run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
-execute if score $cu_en_ranged ca.enabler matches 1.. at @s if entity @e[distance=..7,type=trident,limit=1,sort=nearest] run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag
+execute if score $cu_en_ranged ca.enabler matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
+execute if score $cu_en_ranged ca.enabler matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag
 
 #Cauterize - Goes first
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_cauterize] at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/ranged
@@ -134,3 +168,33 @@ function #minecraft:cartographer_events/player_hit_mob_arrow
 
 #Run the Trident Hit Datapack Hook
 function #minecraft:cartographer_events/player_hit_mob_trident 
+
+#Reset All Scores I am Crying
+scoreboard players set $bleed ca.var 0
+scoreboard players set $electrode ca.var 0
+scoreboard players set $expose ca.var 0
+scoreboard players set $frost ca.var 0
+scoreboard players set $infect ca.var 0
+scoreboard players set $possess ca.var 0
+scoreboard players set $flash ca.var 0
+scoreboard players set $cauterize ca.var 0
+scoreboard players set $explosive ca.var 0
+scoreboard players set $vol_dmg ca.vol_dmg 0
+scoreboard players set $tempo_theft ca.var 0
+scoreboard players set $punch ca.var 0
+
+scoreboard players set $current ca.var 0
+scoreboard players set $ricochet ca.var 0
+scoreboard players set $tempest ca.var 0
+scoreboard players set $duelist ca.var 0
+scoreboard players set $hunter ca.var 0
+scoreboard players set $singe ca.var 0
+scoreboard players set $frostbite ca.var 0
+scoreboard players set $exposing ca.var 0
+scoreboard players set $possession ca.var 0
+scoreboard players set $stunning ca.var 0
+scoreboard players set $infection ca.var 0
+scoreboard players set $electrocute ca.var 0
+scoreboard players set $bleeding ca.var 0
+scoreboard players set $fire_aspect ca.var 0
+scoreboard players set $cauterize ca.var 0

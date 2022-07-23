@@ -14,7 +14,6 @@ execute if score $core.difficulty ca.CONSTANT matches 1 run scoreboard players a
 
 #Analyze the power on a bow, if exists. (Skeletons and Illusioners only)
 #No Power
-#execute as @e[type=skeleton,nbt={HandItems:[{id:"minecraft:bow",Count:1b},{}]},distance=..1] at @s run say hi
 execute if entity @s[type=skeleton,nbt={HandItems:[{},{id:"minecraft:bow",Count:1b}]}] run scoreboard players set @s threat_level 5
 #Power 1
 execute if entity @s[type=skeleton,nbt={HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:1s}]}},{}]}] run scoreboard players set @s threat_level 5
