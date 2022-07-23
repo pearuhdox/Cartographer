@@ -1,12 +1,10 @@
 #These effects will activate when the player dies.
 
-#Suso DE: Commented this out, grave compatiblity
 #Curse of Shattering
-#execute as @e[type=item,distance=..5,nbt={Item:{tag:{CustomEnchantments:[{id:"curse_shattering"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_shattering
+execute as @e[type=item,distance=..5,nbt={Item:{tag:{CustomEnchantments:[{id:"curse_shattering"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_shattering
 
-#Suso DE: Commented this out, grave compatiblity
 #Soulbound
-#function cartographer_custom_enchantments:enchant_effects/soulbound
+function cartographer_custom_enchantments:enchant_effects/soulbound
 
 #Second Wind Reset
 #End the Second Wind effect if a player dies. Also reset their tier and remove second wind triggers.

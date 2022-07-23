@@ -14,6 +14,9 @@ execute if score @s ca.use_lex matches 1.. run function cartographer_core:loop/t
 execute if score @s lexica matches 1.. run function cartographer_core:give_lexica
 execute if score @s menu matches 1.. run function cartographer_core:load/reload/trigger
 
+#Check if the player used the options menu
+execute if score @s ca.options_trig matches 1.. run function cartographer_core:options/player/trigger
+execute if score @s ca.lexica_trig matches 1.. run function cartographer_core:lexica/trigger
 
 #Reduce the interal attack timer system scores.
 execute if score @s ca.atk_time matches 1.. run scoreboard players remove @s ca.atk_time 1

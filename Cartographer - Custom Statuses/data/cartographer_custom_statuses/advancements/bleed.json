@@ -1,0 +1,62 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_wart_block"
+    },
+    "title": {
+      "text": "Bleeding                 ",
+      "color": "#CC73FF"
+    },
+    "description": {
+      "text": "Afflicted takes damage every second based on the level of Bleeding. If Bleeding is reapplied, the potency is increased, instead of resetting the duration.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "cartographer_custom_statuses:negative_tree",
+  "criteria": {
+    "find1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomEnchantments:[{id:\"bleeding\"}]}"
+          }
+        ]
+      }
+    },
+    "find2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomEnchantments:[{id:\"bleed\"}]}"
+          }
+        ]
+      }
+    },
+    "find5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:13b}]}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "find1",
+      "find2",
+      "find5"
+    ]
+  ],
+  "rewards": {
+    "function": "cartographer_custom_statuses:descriptions/bleeding"
+  }
+}

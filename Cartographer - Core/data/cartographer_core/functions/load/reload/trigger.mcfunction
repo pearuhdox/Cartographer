@@ -32,6 +32,8 @@ tellraw @s {"text":"------------------------------------------","color":"#FFE0A3
 tag @s remove ehid_check
 tag @s remove pds_check
 tag @s remove cdl_check
+tag @s remove inv_check
+tag @s remove bbl_check
 
 scoreboard players set @s menu 0
 

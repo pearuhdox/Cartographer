@@ -1,0 +1,62 @@
+{
+    "display": {
+        "title": {
+            "text": "Infection                ",
+            "color": "#CC73FF"
+        },
+        "description": {
+            "text": "Afflicted takes damage every second. They are also slowed and weakened depending on how much health they are missing. When they die, the effect is spread to un-infected enemies.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:black_concrete_powder"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"infection\"}]}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "nbt": "{CustomEnchantments:[{id:\"infect\"}]}"
+                }
+              ]
+            }
+          },
+        "find5": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:12b}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2",
+            "find5"
+        ]
+    ],
+    "rewards": {
+        "function": "cartographer_custom_statuses:descriptions/infected"
+    },
+    "parent": "cartographer_custom_statuses:vulnerability"
+}

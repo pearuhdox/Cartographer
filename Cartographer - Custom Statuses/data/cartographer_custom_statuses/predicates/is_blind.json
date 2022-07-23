@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "effects": {
+      "minecraft:blindness": {
+        "amplifier": {
+          "min": 0,
+          "max": 127
+        }
+      }
+    }
+  }
+}

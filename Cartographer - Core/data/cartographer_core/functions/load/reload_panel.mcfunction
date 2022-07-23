@@ -19,8 +19,8 @@ execute if score $gl_reload_msg ca.gamerule matches 1 as @a[scores={ca.reload_ty
 execute as @a[scores={ca.reload_type=1}] at @s run function cartographer_core:load/reload/full
 execute as @a[scores={ca.reload_type=2}] at @s run function cartographer_core:load/reload/minimal
 
-
-tag @a remove ehid_check
-tag @a remove pds_check
-tag @a remove cdl_check
-
+tag @s remove ehid_check
+tag @s remove pds_check
+tag @s remove cdl_check
+tag @s remove inv_check
+tag @s remove bbl_check

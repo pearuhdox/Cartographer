@@ -34,9 +34,11 @@ execute if entity @p[tag=!minimal_reload] run function cd:load_message
 execute if entity @p[tag=!minimal_reload,tag=!cdl_check] run function cartographer_core:load/cdl_warning
 tellraw @a[tag=!minimal_reload] {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
 
-tag @a remove ehid_check
-tag @a remove pds_check
-tag @a remove cdl_check
+tag @s remove ehid_check
+tag @s remove pds_check
+tag @s remove cdl_check
+tag @s remove inv_check
+tag @s remove bbl_check
 
 execute if entity @a[tag=!minimal_reload] run function cartographer_custom_enchantments:load/load_message
 execute if entity @a[tag=!minimal_reload] run function cartographer_custom_statuses:load/load_message

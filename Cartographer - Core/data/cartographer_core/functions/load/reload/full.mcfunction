@@ -14,6 +14,8 @@ function entityid:load_message
 execute if entity @s[tag=!ehid_check] run function cartographer_core:load/ehid_warning
 function suso.player_data:load_message
 execute if entity @s[tag=!pds_check] run function cartographer_core:load/pds_warning
+function inv:load_message
+execute if entity @s[tag=!inv_check] run function cartographer_core:load/pds_warning
 
 tellraw @s {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
 
@@ -24,7 +26,6 @@ function cartographer_custom_statuses:load/load_message
 function cartographer_loot_additions:load/load_message
 function cartographer_mimics:load/load_message
 function cartographer_mob_abilities:load/load_message
-function cartographer_potion_util:load/load_message
 function cartographer_repair_stations:load/load_message
 
 function cartographer_charon:load/load_check
@@ -34,7 +35,6 @@ function cartographer_custom_statuses:load/load_check
 function cartographer_loot_additions:load/load_check
 function cartographer_mimics:load/load_check
 function cartographer_mob_abilities:load/load_check
-function cartographer_potion_util:load/load_check
 function cartographer_repair_stations:load/load_check
 
 tellraw @s {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
