@@ -48,6 +48,8 @@ summon armor_stand 4206900 256 4206900 {Tags:["vector"],NoGravity:1,Invisible:1,
 #Create var scoreboard
 scoreboard objectives add ca.var dummy
 
+#Create logout scoreboard
+scoreboard objectives add ca.logout minecraft.custom:minecraft.leave_game
 
 #Create vector related scoreboards
 scoreboard objectives add ca.vectorX dummy

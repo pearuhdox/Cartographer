@@ -80,3 +80,6 @@ execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core
 scoreboard players operation $ca_timer_mod ca.timer = $ca_timer ca.timer
 scoreboard players operation $ca_timer_mod ca.timer %= $1200 ca.CONSTANT
 execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core:loop/60_seconds/base
+
+#Specifically reset logout score here as the last possible thing to ever be run
+scoreboard players set @a ca.logout 0

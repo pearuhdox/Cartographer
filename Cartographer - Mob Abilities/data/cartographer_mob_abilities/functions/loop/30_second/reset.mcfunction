@@ -1,0 +1,1 @@
+execute unless entity @a[tag=!no_near_mobs] run tag @a remove token_reset

@@ -36,3 +36,5 @@ scoreboard players operation $light_max ca.tokens = $light_avail ca.tokens
 scoreboard players set $timer ca.tokens 0
 
 tag @a add token_reset
+
+#say Tokens Resetting
