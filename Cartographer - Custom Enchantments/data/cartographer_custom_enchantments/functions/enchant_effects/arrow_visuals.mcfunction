@@ -10,4 +10,4 @@ execute if entity @s[scores={ca.tempo_theft=1..}] run particle minecraft:witch ~
 execute if entity @s[scores={ca.ov_tier=1..}] run particle minecraft:wax_off ~ ~ ~ 0.2 0.2 0.2 1 2 normal
 execute if entity @s[scores={ca.ov_tier=1..}] run particle minecraft:poof ~ ~ ~ 0.2 0.2 0.2 0.05 1 normal
 
-execute if entity @s[nbt={inGround:1b}] run tag @s remove custom_arrow
+execute if entity @s[nbt={inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/arrow_reset

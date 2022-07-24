@@ -28,9 +28,10 @@ scoreboard players set $bleeding ca.var 0
 scoreboard players set $fire_aspect ca.var 0
 scoreboard players set $cauterize ca.var 0
 
+
 #Grab All Relevant Data from the Arrow in question.
-execute as @e[distance=..7,type=#cartographer_core:arrow,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch
-execute as @e[distance=..7,type=trident,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch_trident
+execute at @s as @e[distance=..7,type=#cartographer_core:arrow,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch
+execute at @s as @e[distance=..7,type=trident,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch_trident
 
 #These effects will activate from the entity itself before the player call.
 execute if score $cu_en_ranged ca.enabler matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
@@ -46,7 +47,7 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_electr
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_flash] at @s run function cartographer_custom_enchantments:enchant_effects/flash
 
 #Frost
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_frost] run function cartographer_custom_enchantments:enchant_effects/frost
+execute if entity @s[tag=is_frost] run function cartographer_custom_enchantments:enchant_effects/frost
 
 #Punch - Crossbows
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_punch_1] at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect

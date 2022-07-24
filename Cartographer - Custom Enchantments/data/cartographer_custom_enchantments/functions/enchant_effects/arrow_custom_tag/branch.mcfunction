@@ -20,3 +20,5 @@ scoreboard players operation $vol_dmg ca.vol_dmg = @s ca.vol_dmg
 scoreboard players operation $tempo_theft ca.var = @s ca.tempo_theft
 
 scoreboard players operation $punch ca.var = @s ca.punch
+
+scoreboard players operation $flame ca.var = @s ca.flame
