@@ -1,5 +1,4 @@
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
-tp @s ^ ^ ^1
 
 execute positioned ^ ^ ^ run function cartographer_custom_enchantments:enchant_effects/deadeye/raycast_extra_particle
 
@@ -19,11 +18,7 @@ execute if entity @s[scores={ca.raycast=1..}] if score $hit_check ca.deadeye mat
 scoreboard players set $hit_check ca.deadeye 0
 
 execute if entity @s[scores={ca.raycast=1..}] if block ~ ~ ~ #bb:can_raycast positioned ^ ^ ^1 run function cartographer_custom_enchantments:enchant_effects/deadeye/raycast
+
+
+
 execute if entity @s[scores={ca.raycast=1..}] unless block ~ ~ ~ #bb:can_raycast positioned ^ ^ ^ run function cartographer_custom_enchantments:enchant_effects/deadeye/raycast_svfx
-
-
-execute unless entity @s[scores={ca.raycast=1..}] run kill @s
-
-execute if entity @s[scores={ca.raycast=1..}] unless block ~ ~ ~ #bb:can_raycast run kill @s
-
-tag @a[tag=is_firing_deadeye] remove is_firing_deadeye

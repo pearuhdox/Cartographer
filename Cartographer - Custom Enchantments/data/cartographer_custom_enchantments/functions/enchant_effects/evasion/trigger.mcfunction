@@ -1,6 +1,4 @@
-effect give @e[type=#bb:hostile,distance=..8] minecraft:blindness 3 0
-execute as @e[type=#bb:hostile,distance=..8] at @s run tp @s ~ ~ ~ facing entity @p feet
-execute as @e[type=#bb:hostile,distance=..8] at @s run function cartographer_core:helper/push_half
+execute as @e[type=#bb:hostile,distance=..8] at @s run function cartographer_custom_enchantments:enchant_effects/evasion/mob_branch
 
 playsound minecraft:entity.firework_rocket.launch player @a[distance=..8] ~ ~ ~ 5 1.5
 

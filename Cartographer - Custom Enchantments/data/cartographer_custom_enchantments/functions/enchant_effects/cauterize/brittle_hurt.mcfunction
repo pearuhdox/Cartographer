@@ -24,4 +24,6 @@ particle minecraft:explosion ~ ~0.2 ~ 0 0 0 0 1 force
 
 scoreboard players set @s ca.brittle_time 1
 
-function cartographer_core:helper/push
+scoreboard players set @s co_y 3
+scoreboard players set @s co_send -8
+function motion:motion/push

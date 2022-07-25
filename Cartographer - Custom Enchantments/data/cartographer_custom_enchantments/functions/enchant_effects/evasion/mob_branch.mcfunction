@@ -1,5 +1,4 @@
-scoreboard players set @s cdl.damage_queue 4
-function cd:lib/mob/damage/normal
+effect give @s minecraft:blindness 3 0
 scoreboard players set @s co_y 2
 scoreboard players set @s co_send -5
 

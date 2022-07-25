@@ -1,8 +1,12 @@
-execute if entity @s[tag=is_punch_1] run function cartographer_core:helper/push
-execute if entity @s[tag=is_punch_2] run function cartographer_core:helper/push_2
-execute if entity @s[tag=is_punch_3] run function cartographer_core:helper/push_3
-execute if entity @s[tag=is_punch_4] run function cartographer_core:helper/push_4
-execute if entity @s[tag=is_punch_5] run function cartographer_core:helper/push_5
+scoreboard players set @s co_y 2
+
+execute if entity @s[tag=is_punch_1] run scoreboard players set @s co_send -10
+execute if entity @s[tag=is_punch_2] run scoreboard players set @s co_send -14
+execute if entity @s[tag=is_punch_3] run scoreboard players set @s co_send -20
+execute if entity @s[tag=is_punch_4] run scoreboard players set @s co_send -25
+execute if entity @s[tag=is_punch_5] run scoreboard players set @s co_send -33
+
+function motion:motion/push
 
 tag @s remove is_punch_1
 tag @s remove is_punch_2

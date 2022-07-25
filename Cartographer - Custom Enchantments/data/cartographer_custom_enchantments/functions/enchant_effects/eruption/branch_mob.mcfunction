@@ -1,6 +1,18 @@
 execute run tp @s ~ ~ ~ facing entity @e[type=experience_orb,tag=erupting_xp,distance=..8,limit=1,sort=nearest] feet
-execute unless score $eruption ca.knockback matches 1.. run function cartographer_core:helper/push_half
 
+scoreboard players set @s co_y 2
+scoreboard players set @s co_send -5
+
+#Do Knockback first so its all done at top of function
+execute if score $eruption ca.knockback matches 1.. run scoreboard players set @s co_y 3
+
+execute if score $eruption ca.knockback matches 1 run scoreboard players set @s co_send -8
+execute if score $eruption ca.knockback matches 2 run scoreboard players set @s co_send -12
+execute if score $eruption ca.knockback matches 3 run scoreboard players set @s co_send -18
+execute if score $eruption ca.knockback matches 4 run scoreboard players set @s co_send -23
+execute if score $eruption ca.knockback matches 5 run scoreboard players set @s co_send -31
+
+function motion:motion/push
 
 execute if score $eruption ca.eruption matches 1 as @s run scoreboard players set @s cdl.damage_queue 3
 execute if score $eruption ca.eruption matches 2 as @s run scoreboard players set @s cdl.damage_queue 6
@@ -9,12 +21,6 @@ execute if score $eruption ca.eruption matches 4 as @s run scoreboard players se
 execute if score $eruption ca.eruption matches 5 as @s run scoreboard players set @s cdl.damage_queue 15
 
 execute if score $eruption ca.eruption matches 1.. as @s run function cd:lib/mob/damage/normal
-
-execute if score $eruption ca.knockback matches 1 run function cartographer_core:helper/push
-execute if score $eruption ca.knockback matches 2 run function cartographer_core:helper/push_2
-execute if score $eruption ca.knockback matches 3 run function cartographer_core:helper/push_3
-execute if score $eruption ca.knockback matches 4 run function cartographer_core:helper/push_4
-execute if score $eruption ca.knockback matches 5 run function cartographer_core:helper/push_5
 
 execute if score $eruption ca.cauterize matches 1 as @s run function cartographer_custom_enchantments:enchant_effects/cauterize/other
 

@@ -1,0 +1,63 @@
+Welcome to MotionLib (by CooleyBrekka) for 1.19!
+
+This library is designed to more easily manipulate the motion of non-player entities for various mob abilities and custom items. It does not feature any pre-made uses (but may in a future update).
+
+The document you are reading (or skimming through) details the basic features and usage of the pack. 
+
+- Compatible with multiplayer
+
+- Compatible with multiple motion changes simultaneously
+
+- Stop motion:
+  - Entity motion can be cleared, causing the mob to instantly stop moving by running `function motion:motion/stop` as the entity
+
+- Mob motion:
+  - Entities can be pushed in cardinal directions or according to their rotation
+  - To do this, set the desired scores for an entity from the following list and run `function motion:motion/push` as the entity (see examples below if this does not make sense)
+  - Scores include [co_x, co_y, co_z, co_pitch, co_yaw, co_send], and can be positive or negative
+    -  x, y, and z throw the entity along the corresponding axis
+    -  pitch, yaw, and send throw the entity in the desired direction based on their rotation
+  - Mobs affected by this will still obey normal collision and gravity rules
+  - The numbers used do not represent blocks traveled, instead they are arbitrary and used as small increments. Consider using 10 to test and then adjust the numbers from there.
+
+- Mob lockon:
+  - The push function, by default, forces the entity to use the nearest player's feet as the motion anchor point
+  - This can be changed with several tags:
+    - `co_rotation_lock` applied to the ENTITY: the entity will use the angle they are rotated as the motion anchor point (useful if you would like the mob to telegraph an ability by stopping for a short time)
+    - `co_target_player` applied to any PLAYER: the closest player that has this tag will be used as the motion anchor point (useful in multiplayer if you would like the mob to get pushed away from a certain player or single out a certain player)
+
+- Mob motion examples:
+  - Force all entities tagged with "jump" to jump:
+    - `execute as @e[tag=jump] run function ex:ample1`
+
+    - {ex:ample1} ->
+    - [scoreboard players set @s co_y 7     ]
+    - [function motion:motion/push          ]
+
+  - Force all zombies to leap at the player closest to them:
+    - `execute as @e[type=zombie] run function ex:ample2`
+
+    - {ex:ample2} ->
+    - [scoreboard players set @s co_y 2     ]
+    - [scoreboard players set @s co_send 7  ]
+    - [function motion:motion/push          ]
+
+  - Force all entities tagged with "dodge" to strafe counter-clockwise around the player closest to them:
+    - `execute as @e[tag=dodge] run scoreboard players set @s timer 30`
+
+    - {ex:e_check} ->
+    - [execute if score @s timer matches 1.. run function ex:ample3                    ]
+    - [execute if score @s timer matches 1.. run scoreboard players remove @s timer 1  ]
+
+    - {ex:ample3} ->
+    - [scoreboard players set @s co_yaw -6  ]
+    - [function motion:motion/push          ]
+
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ execute if entity @s run scoreboard players operation @s random += @s ca.pity_sh
 execute if block ~ ~ ~ water run scoreboard players add @s random 30
 execute if entity @s[scores={random=101..}] run scoreboard players set @s random 100
 
-execute if entity @s[scores={random=71..85}] unless entity @s[tag=shocked_tick] as @e[type=#bb:hostile,distance=..3,limit=3,sort=nearest,tag=!shocked_tick] at @s run function cartographer_core:helper/push_third
+execute if entity @s[scores={random=71..85}] unless entity @s[tag=shocked_tick] as @e[type=#bb:hostile,distance=..3,limit=3,sort=nearest,tag=!shocked_tick] at @s run function cartographer_custom_statuses:effects/shocked/group_knockback
 execute if entity @s[scores={random=86..100}] unless entity @s[tag=shocked_tick] run scoreboard players set @e[type=#bb:hostile,distance=..3,limit=3,sort=nearest,tag=!shocked_tick] ca.effect_stun 11
 
 execute if entity @s[scores={random=..70}] unless entity @s[tag=shocked_tick] run scoreboard players add @s ca.pity_shock 10

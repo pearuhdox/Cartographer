@@ -4,14 +4,17 @@ scoreboard players operation @s cdl.damage_queue = $thorns ca.thorns
 
 function cd:lib/mob/damage/normal
 
-execute unless score $thorns ca.t_knock matches 1.. run function cartographer_core:helper/push_half
+scoreboard players set @s co_y 2
+scoreboard players set @s co_send -5
 
-execute if score $thorns ca.t_knock matches 1 run function cartographer_core:helper/push
-execute if score $thorns ca.t_knock matches 2 run function cartographer_core:helper/push_2
-execute if score $thorns ca.t_knock matches 3 run function cartographer_core:helper/push_3
-execute if score $thorns ca.t_knock matches 4 run function cartographer_core:helper/push_4
-execute if score $thorns ca.t_knock matches 5.. run function cartographer_core:helper/push_5
+execute if score $thorns ca.t_knock matches 1.. run scoreboard players set @s co_y 3
+execute if score $thorns ca.t_knock matches 1 run scoreboard players set @s co_send -8
+execute if score $thorns ca.t_knock matches 2 run scoreboard players set @s co_send -12
+execute if score $thorns ca.t_knock matches 3 run scoreboard players set @s co_send -18
+execute if score $thorns ca.t_knock matches 4 run scoreboard players set @s co_send -23
+execute if score $thorns ca.t_knock matches 5.. run scoreboard players set @s co_send -31
 
+execute if score $thorns ca.t_knock matches 1.. run function motion:motion/push
 
 execute if score $thorns ca.t_fire matches 1 run data modify entity @s Fire set value 101
 execute if score $thorns ca.t_fire matches 2 run data modify entity @s Fire set value 181
@@ -30,7 +33,7 @@ scoreboard players set $temp ca.melee_chance 10
 scoreboard players operation $temp ca.melee_chance *= $thorns ca.t_stun
 execute if score $thorns ca.melee_chance <= $temp ca.melee_chance run function cartographer_custom_enchantments:enchant_effects/thorns/branch/do_stun
 
-scoreboard players set $thorns ca.melee_chance 0
+#scoreboard players set $thorns ca.melee_chance 0
 
 
 execute if score $thorns ca.t_bleed matches 1.. run scoreboard players add @s[scores={ca.effect_bleed=1..}] ca.effect_bleed 1
@@ -56,6 +59,8 @@ execute if score $thorns ca.t_infection matches 1 run scoreboard players set @s 
 execute if score $thorns ca.t_infection matches 2 run scoreboard players set @s ca.effect_infect 5
 execute if score $thorns ca.t_infection matches 3.. run scoreboard players set @s ca.effect_infect 7
 
+#Orian if you complain about this one more time I swear to God I will gut France like a fish
+execute if entity @s[type=#minecraft:skeletons] run effect give @s blindness 1 0
 
 #Possession - Random Chance
 execute if score $thorns ca.t_poss matches 1.. run function cartographer_custom_enchantments:enchant_effects/thorns/branch/posession

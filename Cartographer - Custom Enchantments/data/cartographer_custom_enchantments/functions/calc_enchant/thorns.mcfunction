@@ -24,9 +24,6 @@ scoreboard players operation @s ca.t_shock += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"exposing"}].lvl
 scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"infection"}].lvl
 scoreboard players operation @s ca.t_infection += $temp ca.susu
 
@@ -56,9 +53,6 @@ scoreboard players operation @s ca.t_shock += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"exposing"}].lvl
 scoreboard players operation @s ca.t_vuln += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"infection"}].lvl
 scoreboard players operation @s ca.t_infection += $temp ca.susu
@@ -90,9 +84,6 @@ scoreboard players operation @s ca.t_shock += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"exposing"}].lvl
 scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"infection"}].lvl
 scoreboard players operation @s ca.t_infection += $temp ca.susu
 
@@ -122,9 +113,6 @@ scoreboard players operation @s ca.t_shock += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"exposing"}].lvl
 scoreboard players operation @s ca.t_vuln += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"infection"}].lvl
 scoreboard players operation @s ca.t_infection += $temp ca.susu
@@ -156,9 +144,6 @@ scoreboard players operation @s ca.t_shock += $temp ca.susu
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"exposing"}].lvl
 scoreboard players operation @s ca.t_vuln += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"infection"}].lvl
 scoreboard players operation @s ca.t_infection += $temp ca.susu
 
@@ -188,9 +173,6 @@ scoreboard players operation @s ca.t_shock += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"exposing"}].lvl
 scoreboard players operation @s ca.t_vuln += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"infection"}].lvl
 scoreboard players operation @s ca.t_infection += $temp ca.susu

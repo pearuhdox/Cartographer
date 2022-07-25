@@ -16,7 +16,8 @@ function suso.player_data:load_message
 execute if entity @s[tag=!pds_check] run function cartographer_core:load/pds_warning
 function inv:load_message
 execute if entity @s[tag=!inv_check] run function cartographer_core:load/pds_warning
-
+function motion:load_message
+execute if entity @s[tag=!mot_check] run function cartographer_core:load/mot_warning
 tellraw @s {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
 
 function cartographer_charon:load/load_message

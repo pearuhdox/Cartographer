@@ -1,16 +1,19 @@
-execute run particle smoke ~ ~1 ~ 0.5 0.5 0.5 0.1 20 force
-execute run playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
-execute run playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
-execute run playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
-execute run playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
+particle smoke ~ ~1 ~ 0.5 0.5 0.5 0.1 20 force
+playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
+playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
+playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
+playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
 
 
-execute run scoreboard players set @s cdl.damage_queue 10
-execute run function cd:lib/mob/damage/normal
+scoreboard players set @s cdl.damage_queue 10
+function cd:lib/mob/damage/normal
 
-execute run tp @s ~ ~ ~ facing entity @p[tag=is_firing_deadeye] feet
+tp @s ~ ~ ~ facing entity @p[tag=is_firing_deadeye] feet
 
-execute run function cartographer_core:helper/push_half
+scoreboard players set @s co_y 2
+scoreboard players set @s co_send -5
+
+function motion:motion/push
 
 execute if score $deadeye ca.flame matches 1 run data merge entity @s {Fire:85}
 execute if score $deadeye ca.frost matches 1 run effect give @s slowness 5 1
@@ -23,3 +26,5 @@ execute if score $deadeye ca.bleed matches 1 if entity @s[scores={ca.effect_blee
 execute if score $deadeye ca.flash matches 1 run scoreboard players add @s ca.effect_stun 15
 
 scoreboard players set $hit_check ca.deadeye 1
+
+scoreboard players add @s ca.deadeye 1

@@ -185,7 +185,9 @@ scoreboard players operation @e[tag=trap_projectile,sort=nearest,tag=!checked,li
 tag @e[tag=trap_projectile,sort=nearest,tag=!checked,limit=5] add checked
 
 tp @s ~ ~ ~ facing entity @p feet
-function cartographer_core:helper/push
+scoreboard players set @s co_y 3
+scoreboard players set @s co_send -8
+function motion:motion/push
 
 #Run not on hit traits
 function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit

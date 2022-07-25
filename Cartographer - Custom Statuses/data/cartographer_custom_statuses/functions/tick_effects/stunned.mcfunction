@@ -1,6 +1,6 @@
-execute unless entity @s[tag=shocked_tick] run execute store result score @s ca.stun_resist run attribute @s minecraft:generic.knockback_resistance get 20
-execute unless entity @s[tag=shocked_tick] run scoreboard players operation @s ca.stun_res_ct = $20 ca.CONSTANT
-execute unless entity @s[tag=shocked_tick] run scoreboard players operation @s ca.stun_res_ct -= @s ca.stun_resist
+execute unless entity @s[tag=thorns_no_tenacity] unless entity @s[tag=shocked_tick] run execute store result score @s ca.stun_resist run attribute @s minecraft:generic.knockback_resistance get 20
+execute unless entity @s[tag=thorns_no_tenacity] run scoreboard players operation @s ca.stun_res_ct = $20 ca.CONSTANT
+execute unless entity @s[tag=thorns_no_tenacity] run scoreboard players operation @s ca.stun_res_ct -= @s ca.stun_resist
 
 
 scoreboard players remove @s ca.effect_stun 1
@@ -12,11 +12,11 @@ execute unless entity @s[tag=no_tenacity] if score @s ca.stun_resist matches 2..
 
 execute unless entity @s[tag=no_tenacity] if score @s ca.stun_res_ct matches ..0 run scoreboard players set @s ca.effect_stun 1
 
-
 execute as @s[scores={ca.effect_stun=2..}] run data merge entity @s {NoAI:1}
 
 execute as @s[scores={ca.effect_stun=1}] run data merge entity @s {NoAI:0}
 
+execute as @s[scores={ca.effect_stun=1}] run tag @s remove thorns_no_tenacity
 execute as @s[scores={ca.effect_stun=1}] run scoreboard players set @s ca.effect_stun 0
 
 execute as @s[scores={ca.effect_stun=2..}] at @s if block ~ ~-0.1 ~ air run tp @s ~ ~-0.1 ~

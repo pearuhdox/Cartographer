@@ -1,8 +1,10 @@
 scoreboard players operation @s cdl.damage_queue = $melee ca.attack_val
 function cd:lib/mob/damage/normal
 
-tp @s ~ ~ ~ facing entity @p[scores={ca.surge_strike=1..}] feet
-function cartographer_core:helper/push_half
+scoreboard players set @s co_y 2
+scoreboard players set @s co_send -5
+
+function motion:motion/push
 
 #Fire Aspect
 execute if score $melee ca.fire_aspect matches 1 run data modify entity @s Fire set value 101

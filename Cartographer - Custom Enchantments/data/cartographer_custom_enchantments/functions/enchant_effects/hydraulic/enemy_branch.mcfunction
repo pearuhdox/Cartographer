@@ -1,6 +1,8 @@
 tp @s ~ ~ ~ facing entity @p[scores={ca.hydraulic=1..}] feet
 
-function cartographer_core:helper/push
+scoreboard players set @s co_y 3
+scoreboard players set @s co_send -8
+function motion:motion/push
 
 scoreboard players set @s cdl.damage_queue 6
 

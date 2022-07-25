@@ -21,3 +21,11 @@ execute if score @s ca.cau_prv_time matches 0.. run scoreboard players remove @s
 
 #Set nearby players as in combat
 scoreboard players set @a[distance=..12] ca.combat_time 0
+
+#Remove Deadeye Tag
+tag @s remove deadeye_marked
+
+
+#Do bonus damage to Multishot Deadeye and reset
+execute if score @s ca.deadeye matches 2.. run function cartographer_custom_enchantments:enchant_effects/deadeye/multi_hit
+scoreboard players set @s ca.deadeye 0

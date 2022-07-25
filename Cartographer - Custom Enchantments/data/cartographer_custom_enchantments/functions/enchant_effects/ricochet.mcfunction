@@ -21,8 +21,7 @@ execute as @e[type=#bb:hostile,tag=ricochet_hit,tag=rt_4] at @s run scoreboard p
 execute as @e[type=#bb:hostile,tag=ricochet_hit,tag=rt_5] at @s run scoreboard players add @s cdl.damage_queue 15
 
 
-execute as @e[type=#bb:hostile,tag=ricochet_hit] at @s run function cd:lib/mob/damage/normal
-execute as @e[type=#bb:hostile,tag=ricochet_hit] at @s run function cartographer_core:helper/push_half
+execute as @e[type=#bb:hostile,tag=ricochet_hit] at @s run function cartographer_custom_enchantments:enchant_effects/ricochet/hit_effect
 
 tag @e[tag=ricochet_hit] remove rt_1
 tag @e[tag=ricochet_hit] remove rt_2
