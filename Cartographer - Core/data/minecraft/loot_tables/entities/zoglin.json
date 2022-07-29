@@ -15,15 +15,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "cartographer_mob_abilities:death_test/token_return"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:loot_table",
           "name": "cartographer_custom_statuses:death_test/test"
         }
       ]

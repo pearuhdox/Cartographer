@@ -10,3 +10,4 @@ execute if score @s cdl.death_id matches 310210 run tellraw @a [{"selector":"@p"
 execute if score @s cdl.death_id matches 310211 run tellraw @a [{"selector":"@p"},{"text":" was webbed by ","color":"white"},{"selector":"@e[limit=1,tag=ca.webshot,sort=nearest]"}]
 execute if score @s cdl.death_id matches 310212 run tellraw @a [{"selector":"@p"},{"text":" was blown up by grenades.","color":"white"}]
 execute if score @s cdl.death_id matches 310213 run tellraw @a [{"selector":"@p"},{"text":" was poked to death.","color":"white"}]
+execute if score @s cdl.death_id matches 310214 run tellraw @a [{"selector":"@p"},{"text":" was parried to death.","color":"white"}]

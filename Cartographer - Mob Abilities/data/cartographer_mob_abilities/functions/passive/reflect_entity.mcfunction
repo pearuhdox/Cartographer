@@ -21,4 +21,7 @@ execute if entity @a[distance=..30,tag=reflect_hit] run scoreboard players set @
 execute if entity @a[distance=..30,tag=reflect_hit] run scoreboard players set @s mob_atk_red 41
 execute if entity @a[distance=..30,tag=reflect_hit] run scoreboard players set @s ca.raycast 0
 
+scoreboard players operation @s cdl.heal_queue = $reflect_pass reflect_diff
+function cd:lib/mob/heal
+
 execute if entity @a[distance=..30,tag=reflect_hit] at @s run function cartographer_mob_abilities:passive/reflected_notice

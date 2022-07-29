@@ -28,8 +28,8 @@ execute if entity @s[scores={augment_time=1..}] run particle minecraft:flame ~ ~
 execute if entity @s[type=area_effect_cloud,tag=trap_deployed] at @s run function cartographer_mob_abilities:abilities/trapper/run_traits
 
 #Run Reflection per Tick
-execute if entity @s[tag=reflect_melee] run function cartographer_mob_abilities:loop/tick/reflect/melee
-execute if entity @s[tag=reflect_ranged] run function cartographer_mob_abilities:loop/tick/reflect/ranged
+execute if entity @s[tag=ca.reflect_melee] run function cartographer_mob_abilities:loop/tick/reflect/pre_run
+execute if entity @s[tag=ca.reflect_ranged] run function cartographer_mob_abilities:loop/tick/reflect/pre_run
 
 #Run Aftershock time reduction
 execute if entity @s[scores={ca.aftershock=1..}] run function cartographer_mob_abilities:ability_traits/aftershock/windup

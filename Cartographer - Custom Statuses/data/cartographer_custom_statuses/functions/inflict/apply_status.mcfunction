@@ -42,4 +42,4 @@ execute if entity @s[scores={ca.id_convert=17,ca.effect_bleed=1..}] run scoreboa
 
 execute if entity @s[scores={ca.id_convert=18}] run scoreboard players operation @s ca.effect_cloak = @s ca.time_convert
 
-effect clear @s[predicate=!essentials:has_transmutation] nausea
+execute if score @s ca.id_convert matches 10..20 run effect clear @s[predicate=!essentials:has_transmutation] nausea
