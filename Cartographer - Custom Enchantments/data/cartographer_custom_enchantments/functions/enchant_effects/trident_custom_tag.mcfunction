@@ -76,5 +76,8 @@ execute if score $fire_aspect ca.var matches 3 run tag @s add is_fire_aspect_3
 #Cauterize Ranged Synergy
 execute if score $cauterize ca.var matches 1 run tag @s add is_cauterize
 
+#Loyalty Synergy
+execute if score $loyalty ca.var matches 1 run tag @s add is_loyalty
+
 #Run Trident Effect Dictionary
 function #minecraft:cartographer_events/dict/trident

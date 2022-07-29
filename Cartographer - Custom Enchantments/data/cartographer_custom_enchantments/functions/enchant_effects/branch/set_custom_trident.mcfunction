@@ -13,4 +13,5 @@ scoreboard players operation @s ca.bleeding = @p ca.bleeding
 scoreboard players operation @s ca.fire_aspect = @p ca.fire_aspect
 scoreboard players operation @s ca.cauterize = @p ca.cauterize
 scoreboard players operation @s ca.possession = @p ca.possession
+scoreboard players operation @s ca.loyalty = @p ca.loyalty
 tag @s add custom_trident

@@ -22,7 +22,7 @@ execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_load_cro matches 
 #Current recharge attack meter
 execute if score @s ca.ce.cur_spd matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "current_effect_spd" 1024 add
 execute if score @s ca.ce.cur_spd matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-321-1818-514-20
-execute if score @s ca.ce.cur_spd matches 1 run scoreboard players remove @s ca.ce.cur_spd 1
+execute if score @s ca.ce.cur_spd matches 1.. run scoreboard players remove @s ca.ce.cur_spd 1
 
 #Apply the attack speed debuff for Evocation.
 execute if score @s ca.evo_burn matches 2..20 run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.3 multiply

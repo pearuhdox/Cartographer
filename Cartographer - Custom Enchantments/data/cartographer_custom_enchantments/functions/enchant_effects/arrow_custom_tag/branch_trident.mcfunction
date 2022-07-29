@@ -13,3 +13,5 @@ scoreboard players operation $electrocute ca.var = @s ca.electrocute
 scoreboard players operation $bleeding ca.var = @s ca.bleeding
 scoreboard players operation $fire_aspect ca.var = @s ca.fire_aspect
 scoreboard players operation $cauterize ca.var = @s ca.cauterize
+
+scoreboard players operation $loyalty ca.var = @s ca.loyalty
