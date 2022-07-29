@@ -19,6 +19,7 @@ function cartographer_repair_stations:loop/1_second/base
 #Run all 1 second entity effects from here.
 execute as @e[type=!#cartographer_core:not_tracked,type=!#cartographer_core:item_frames,type=!item,type=!player] at @s run function cartographer_core:loop/entity_calls/1_second
 
+execute as @a at @s run function cartographer_core:loop/player/1_second/base
 
 function #minecraft:cartographer/clocks/1_second
 

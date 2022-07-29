@@ -1,6 +1,6 @@
 execute if entity @s[scores={ca.kill_entity=1..,ca.echo=1..,ca.echo_charges=..-1}] run scoreboard players set @s ca.echo_charges -1
 
-execute if entity @s[scores={ca.combat_time=..40,ca.kill_entity=1..,ca.echo=1..}] run scoreboard players add @s ca.echo_charges 1
+execute if entity @s[scores={ca.kill_entity=1..,ca.echo=1..}] run scoreboard players add @s ca.echo_charges 1
 
 execute if entity @s[scores={ca.echo=1,ca.echo_charges=..1}] run scoreboard players add @s ca.echo_charges 1
 execute if entity @s[scores={ca.echo=2,ca.echo_charges=..2}] run scoreboard players add @s ca.echo_charges 1

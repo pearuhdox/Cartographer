@@ -57,6 +57,8 @@ scoreboard objectives add ca.vectorY dummy
 scoreboard objectives add ca.vectorZ dummy
 
 #Create scoreboards for drawing bows, holding tridents, loading crossbows, using ender eyes, and holding up shields.
+scoreboard objectives add ca.combat_timer dummy
+
 scoreboard objectives add ca.draw_bow_time dummy
 scoreboard objectives add ca.load_cro_time dummy
 scoreboard objectives add ca.use_ee_time dummy

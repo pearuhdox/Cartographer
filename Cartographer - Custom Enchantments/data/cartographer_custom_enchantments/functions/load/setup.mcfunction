@@ -121,7 +121,6 @@ scoreboard objectives add ca.cau_prv_time dummy
 scoreboard objectives add ca.brittle_time dummy
 scoreboard objectives add ca.brittle_hlth dummy
 
-scoreboard objectives add ca.combat_time dummy
 
 scoreboard objectives add ca.armor_count dummy
 

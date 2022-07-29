@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": []
+      }
+    }
+  },
+  "rewards": {
+    "function": "cartographer_core:helper/combat/in_combat_hit"
+  }
+}

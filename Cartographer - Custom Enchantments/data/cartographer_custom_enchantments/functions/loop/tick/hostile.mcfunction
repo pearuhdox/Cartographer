@@ -19,9 +19,6 @@ tag @s remove skip_cauterize
 #Remove 1 from Cauterize's previous burn time.
 execute if score @s ca.cau_prv_time matches 0.. run scoreboard players remove @s ca.cau_prv_time 1
 
-#Set nearby players as in combat
-scoreboard players set @a[distance=..12] ca.combat_time 0
-
 #Remove Deadeye Tag
 tag @s remove deadeye_marked
 

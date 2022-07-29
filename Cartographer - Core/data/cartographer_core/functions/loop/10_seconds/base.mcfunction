@@ -9,8 +9,6 @@
 
 #Run all Cartographer Effects from Core Timers.
 
-#Add any extra functions here!
-
-
+function cartographer_mob_abilities:loop/10_second/reset
 
 #Add any extra functions above.

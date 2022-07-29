@@ -9,8 +9,4 @@
 
 #Run all Cartographer Effects from Core Timers.
 
-#Add any extra functions here!
-
-
-
 #Add any extra functions above.

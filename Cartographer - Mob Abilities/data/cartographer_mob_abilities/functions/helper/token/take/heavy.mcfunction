@@ -7,3 +7,5 @@ scoreboard players add $tokened_total ca.tokens 1
 
 tag @s add tokened
 tag @s add ca.takes_heavy
+
+scoreboard players set @p ca.combat_timer 10

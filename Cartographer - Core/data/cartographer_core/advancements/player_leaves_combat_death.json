@@ -1,0 +1,14 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:entity_killed_player",
+        "conditions": {
+          "player": []
+        }
+      }
+    },
+    "rewards": {
+      "function": "cartographer_core:helper/combat/leave_combat"
+    }
+  }
+  

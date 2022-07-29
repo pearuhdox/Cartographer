@@ -117,9 +117,5 @@ execute if score @s ca.ui_loc matches 2 run function cartographer_custom_enchant
 execute if score @s ca.repeating matches 0 run tag @s remove showing_repeating
 execute if score @s ca.echo matches 0 run tag @s remove showing_echo
 
-#Increment combat time by 1.
-execute if score @s ca.combat_time matches ..39 run scoreboard players add @s ca.combat_time 1
-execute unless score @s ca.combat_time matches 0.. run scoreboard players set @s ca.combat_time 0
-
 #Just in case
 function cartographer_custom_enchantments:calc_enchant/slot_change
