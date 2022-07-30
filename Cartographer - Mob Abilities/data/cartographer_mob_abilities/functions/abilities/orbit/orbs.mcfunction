@@ -1,20 +1,20 @@
-particle minecraft:sculk_charge_pop ~ ~ ~ 0.25 0.25 0.25 0.1 5 normal
+particle minecraft:sculk_charge_pop ~ ~ ~ 0.15 0.15 0.15 0.05 5 normal
 particle minecraft:cloud ~ ~ ~ 0 0 0 0 1 force
 
 #Runs as/at the player's position
-execute if entity @s[tag=ca.blazing] run particle minecraft:flame ~ ~ ~ 0.15 0.15 0.15 0.05 3 normal @a
-execute if entity @s[tag=ca.glacial] run particle minecraft:snowflake ~ ~ ~ 0.15 0.15 0.15 0.02 3 normal @a
-execute if entity @s[tag=ca.horrifying] run particle minecraft:dust 0.259 0.094 0.639 1 ~ ~ ~ 0.15 0.15 0.15 0.1 3 normal @a
+execute if entity @s[tag=ca.blazing] run particle minecraft:flame ~ ~ ~ 0.05 0.05 0.05 0.02 1 normal @a
+execute if entity @s[tag=ca.glacial] run particle minecraft:snowflake ~ ~ ~ 0.05 0.05 0.05 0.02 1 normal @a
+execute if entity @s[tag=ca.horrifying] run particle minecraft:dust 0.259 0.094 0.639 1 ~ ~ ~ 0.05 0.05 0.05 0.1 1 normal @a
 
 #(Overloading runs twice)
-execute if entity @s[tag=ca.overloading] run particle minecraft:wax_off ~ ~ ~ 0.15 0.15 0.15 1 3 normal @a
+execute if entity @s[tag=ca.overloading] run particle minecraft:wax_off ~ ~ ~ 0.05 0.05 0.05 1 1 normal @a
 
-execute if entity @s[tag=ca.venemous] run particle minecraft:item_slime ~ ~ ~ 0.15 0.15 0.15 0.1 3 normal @a
-execute if entity @s[tag=ca.zephyrous] run particle minecraft:dust 0.741 0.98 0.949 1 ~ ~ ~ 0.15 0.15 0.15 0.1 3 normal @a
+execute if entity @s[tag=ca.venemous] run particle minecraft:item_slime ~ ~ ~ 0.05 0.05 0.05 0.1 1 normal @a
+execute if entity @s[tag=ca.zephyrous] run particle minecraft:dust 0.741 0.98 0.949 1 ~ ~ ~ 0.05 0.05 0.05 0.1 1 normal @a
 
 #Position Independent
-execute if entity @s[tag=ca.celestial] run particle minecraft:soul_fire_flame ~ ~ ~ 0.15 0.15 0.15 0.05 3 normal @a
-execute if entity @s[tag=ca.volatile] run particle minecraft:smoke ~ ~ ~ 0.15 0.15 0.15 0.05 5 normal @a
+execute if entity @s[tag=ca.celestial] run particle minecraft:soul_fire_flame ~ ~ ~ 0.05 0.05 0.05 0.05 1 normal @a
+execute if entity @s[tag=ca.volatile] run particle minecraft:smoke ~ ~ ~ 0.05 0.05 0.05 0.05 5 normal @a
 
 execute if entity @s[tag=ca.volatile] run playsound minecraft:entity.creeper.primed hostile @a[distance=..7] ~ ~ ~ 1 1 0.5
 
