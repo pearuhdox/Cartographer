@@ -20,6 +20,9 @@ execute if entity @s[scores={mob_sturdy=1..}] run function cartographer_mob_abil
 #Run Has Active Effects
 execute if entity @s[tag=ca.has_active] run function cartographer_mob_abilities:loop/tick/actives
 
+#Run Orbit Effect
+execute if score @s ca.orbit_timer matches 1.. run function cartographer_mob_abilities:abilities/orbit/tick_effect
+
 #Augment Buff Particles
 execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust 1 0 0 0.7 ~ ~1 ~ 0.3 0.5 0.3 0 2 normal
 execute if entity @s[scores={augment_time=1..}] run particle minecraft:flame ~ ~1 ~ 0.2 0.2 0.2 0.05 1 normal

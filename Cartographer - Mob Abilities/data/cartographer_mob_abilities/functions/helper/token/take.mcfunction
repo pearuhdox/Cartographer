@@ -4,7 +4,7 @@
 #Light Attacks with no Heavy Attack Priority
 execute if entity @s[tag=ca.ambush,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.charge,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
-execute if entity @s[tag=ca.disarm,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
+execute if entity @s[tag=ca.orbit,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.nova,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.smash,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.sweep,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light

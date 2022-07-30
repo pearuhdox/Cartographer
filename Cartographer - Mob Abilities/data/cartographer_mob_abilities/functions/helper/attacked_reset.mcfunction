@@ -1,5 +1,5 @@
 tag @a remove ran_over
-tag @a remove disarmed
+tag @a remove orbed
 tag @a remove novad
 tag @a remove frost_novad
 tag @a remove hooked

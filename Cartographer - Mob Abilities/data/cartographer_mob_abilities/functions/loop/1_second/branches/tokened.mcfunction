@@ -7,7 +7,7 @@ execute if entity @s[tag=ca.augmenter,scores={cooldown=0}] if entity @a[gamemode
 execute if entity @s[tag=ca.cloaker,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..25] run tag @s add avail_target
 execute if entity @s[tag=ca.hookshot,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=ca.webshot,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
-execute if entity @s[tag=ca.disarm,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..8] run tag @s add avail_target
+execute if entity @s[tag=ca.orbit,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
 execute if entity @s[tag=ca.smash,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..15] run tag @s add avail_target
 execute if entity @s[tag=ca.magic_missile,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..24] run tag @s add avail_target
 execute if entity @s[tag=ca.trapper,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target

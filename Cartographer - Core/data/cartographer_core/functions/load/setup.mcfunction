@@ -202,6 +202,5 @@ schedule function cartographer_core:load/reload_panel 5t
 schedule function cartographer_core:load/force_load 1t
 
 #Analyse what gamerules feedback and death messages are set to.
-#function cartographer_core:load/gamerule_states
 
 #Schedule core clocks.

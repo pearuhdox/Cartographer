@@ -31,6 +31,8 @@ scoreboard objectives add token_kill_check totalKillCount
 
 scoreboard objectives add invul dummy
 
+scoreboard objectives add ca.orbit_timer dummy
+
 scoreboard objectives add ca.glacial_slow dummy
 scoreboard objectives add ca.horrified dummy
 scoreboard objectives add ca.overload_pos dummy

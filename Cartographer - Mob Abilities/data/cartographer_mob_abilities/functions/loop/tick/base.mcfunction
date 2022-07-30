@@ -48,3 +48,5 @@ scoreboard players remove @a[scores={ca.rift_cooldown=1..}] ca.rift_cooldown 1
 execute as @a[tag=clear_levitation] run effect clear @s levitation
 tag @a[tag=clear_levitation] remove clear_levitation
 #For all players who recently died, run the reset tag.
+
+scoreboard players remove @a[scores={ca.orbit_timer=1..}] ca.orbit_timer 1

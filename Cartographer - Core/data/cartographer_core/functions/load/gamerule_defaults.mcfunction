@@ -8,7 +8,7 @@
 
 execute store result score $cmd_fdbk ca.gamerule run gamerule sendCommandFeedback
 execute store result score $day_cycle ca.gamerule run gamerule doDaylightCycle
-execute store result score $death_msg ca.gamerule run gamerule showDeathMessages
+#execute store result score $death_msg ca.gamerule run gamerule showDeathMessages
 execute store result score $forgive ca.gamerule run gamerule forgiveDeadPlayers
 execute store result score $imd_res ca.gamerule run gamerule doImmediateRespawn
 execute store result score $insomnia ca.gamerule run gamerule doInsomnia

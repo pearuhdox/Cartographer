@@ -8,7 +8,7 @@
 
 execute if score $cmd_fdbk ca.gamerule matches 1 run gamerule sendCommandFeedback true
 execute if score $day_cycle ca.gamerule matches 1 run gamerule doDaylightCycle true
-execute if score $death_msg ca.gamerule matches 1 run gamerule showDeathMessages true
+#execute if score $death_msg ca.gamerule matches 1 run gamerule showDeathMessages true
 execute if score $forgive ca.gamerule matches 1 run gamerule forgiveDeadPlayers true
 execute if score $imd_res ca.gamerule matches 1 run gamerule doImmediateRespawn true
 execute if score $insomnia ca.gamerule matches 1 run gamerule doInsomnia true
@@ -19,7 +19,7 @@ execute if score $uni_anger ca.gamerule matches 1 run gamerule universalAnger tr
 
 execute if score $cmd_fdbk ca.gamerule matches 0 run gamerule sendCommandFeedback false
 execute if score $day_cycle ca.gamerule matches 0 run gamerule doDaylightCycle false
-execute if score $death_msg ca.gamerule matches 0 run gamerule showDeathMessages false
+#execute if score $death_msg ca.gamerule matches 0 run gamerule showDeathMessages false
 execute if score $forgive ca.gamerule matches 0 run gamerule forgiveDeadPlayers false
 execute if score $imd_res ca.gamerule matches 0 run gamerule doImmediateRespawn false
 execute if score $insomnia ca.gamerule matches 0 run gamerule doInsomnia false
