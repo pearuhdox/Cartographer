@@ -98,7 +98,7 @@ Custom Enchantments:
     - Overload and Conductive have been renamed to Electrocute and Electrode
     - Decay and Putrefy have been renamed to Infection and Infect
     - Committed and Pin Down have been renamed to Exposing and Expose
-    - Vanquisher has been renamed to "Unchanting"
+    - Vanquisher has been renamed to "First Strike"
     - Volatile has been renamed to "Explosive"
 
   - Bleeding:

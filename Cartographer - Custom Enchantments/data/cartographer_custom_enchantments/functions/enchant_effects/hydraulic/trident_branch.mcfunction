@@ -11,8 +11,8 @@ execute positioned ^ ^ ^3 run function cartographer_custom_enchantments:enchant_
 
 execute positioned ^ ^ ^3 as @e[type=#bb:hostile,distance=..3] at @s run function cartographer_custom_enchantments:enchant_effects/hydraulic/enemy_branch
 
-execute if score @s ca.loyalty matches 1.. run tag @s add hydraul_loyalty_interaction
-execute if score @s ca.loyalty matches 1.. run schedule function cartographer_custom_enchantments:enchant_effects/hydraulic/loyalty_interaction 1t
+execute if score @s[gamemode=!creative] ca.loyalty matches 1.. run tag @s add hydraul_loyalty_interaction
+execute if score @s[gamemode=!creative] ca.loyalty matches 1.. run schedule function cartographer_custom_enchantments:enchant_effects/hydraulic/loyalty_interaction 1t
 
 
 function #minecraft:cartographer_events/hydraulic

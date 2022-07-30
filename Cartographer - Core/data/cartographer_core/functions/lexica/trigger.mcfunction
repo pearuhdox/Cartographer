@@ -39,7 +39,7 @@ execute if score @s ca.lexica_trig matches 221 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 222 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/stunning
 execute if score @s ca.lexica_trig matches 223 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/surging_strike
 execute if score @s ca.lexica_trig matches 224 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/transfiguration
-execute if score @s ca.lexica_trig matches 225 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/unchanting
+execute if score @s ca.lexica_trig matches 225 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/first_strike
 
 execute if score @s ca.lexica_trig matches 230 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/adrenaline
 execute if score @s ca.lexica_trig matches 231 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/agility

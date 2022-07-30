@@ -39,7 +39,7 @@ scoreboard objectives add ca.point_blank dummy
 scoreboard objectives add ca.possession dummy
 scoreboard objectives add ca.possess dummy
 scoreboard objectives add ca.infect dummy
-scoreboard objectives add ca.unchanting dummy
+scoreboard objectives add ca.first_strike dummy
 scoreboard objectives add ca.rally dummy
 scoreboard objectives add ca.repeating dummy
 scoreboard objectives add ca.regen dummy

@@ -43,8 +43,9 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.sur
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.transfig=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/transfiguration
 #Bleeding
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.bleeding=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/bleeding
-#Unchanting
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.unchanting=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/unchanting
+
+#First Strike
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.first_strike=1..},tag=can_first_strike,advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/first_strike
 
 #Rally - Can trigger on any type of attack.
 execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.rally=1..,ca.atk_time=0}] run function cartographer_custom_enchantments:enchant_effects/rally/restore_health
@@ -56,3 +57,5 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements=
 
 #If NOT a projectile attack, cleanse the ranged tags on nearby mobs.
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}}] as @e[type=#bb:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/purge_ranged_tags
+
+tag @s remove can_first_strike

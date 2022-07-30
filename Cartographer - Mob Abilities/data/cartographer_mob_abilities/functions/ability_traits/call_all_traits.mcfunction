@@ -1,7 +1,7 @@
 #Runs as/at the player's position
 execute if entity @s[tag=ca.blazing] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/blazing/player_effect
 execute if entity @s[tag=ca.glacial] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/glacial/player_effect
-execute if entity @s[tag=ca.horrifying] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/horrifying/create_tether
+execute if entity @s[tag=ca.horrifying] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/horrifying/player_effect
 
 #(Overloading runs twice)
 execute if entity @s[tag=ca.overloading] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/overloading/player_effect
@@ -22,8 +22,5 @@ execute if entity @s[tag=ca.legionary] at @s run function cartographer_mob_abili
 execute if entity @s[tag=ca.predator] at @s run function cartographer_mob_abilities:ability_traits/predator/effect
 execute if entity @s[tag=ca.evocative] at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
 execute if entity @s[tag=ca.volatile] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
-
-execute if entity @s[tag=ca.horrifying,tag=ca.creation,tag=!ca.horrify_create] at @s run function cartographer_mob_abilities:ability_traits/horrifying/creation_tether
-execute if entity @s[tag=ca.horrifying,tag=ca.creation,tag=!ca.horrify_create] at @s run tag @s add ca.horrify_create
 
 #say Running Traits

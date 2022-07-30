@@ -21,7 +21,6 @@ tellraw @s [{"text":"---[➤] ","color":"gray","bold":true,"italic":false},{"bol
 
 execute if entity @s[advancements={cartographer_custom_enchantments:tool/eruption=true}] run tellraw @s [{"text":"------[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Eruption","color":"#8AFFEB","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View information for Eruption.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 270"}}]
 execute if entity @s[advancements={cartographer_custom_enchantments:tool/sapper=true}] run tellraw @s [{"text":"------[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Sapper","color":"#8AFFEB","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View information for Sapper.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 271"}}]
-execute if entity @s[advancements={cartographer_custom_enchantments:tool/splintering=true}] run tellraw @s [{"text":"------[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Splintering","color":"#8AFFEB","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View information for Splintering.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 272"}}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 

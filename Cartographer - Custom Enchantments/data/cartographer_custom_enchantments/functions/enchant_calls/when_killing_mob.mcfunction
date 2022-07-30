@@ -35,8 +35,8 @@ execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_c
 execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/transfiguration
 #Bleeding
 execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/bleeding
-#Unchanting
-execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/unchanting
+#First Strike
+execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/first_strike
 
 #Loyalty - Trigger the nearest Loyalty trident to return
 execute if entity @s[tag=waiting_loyalty] as @e[type=trident,tag=ca.loyalty,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty/convert

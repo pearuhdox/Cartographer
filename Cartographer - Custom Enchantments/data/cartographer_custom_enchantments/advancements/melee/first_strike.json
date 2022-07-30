@@ -1,12 +1,12 @@
 {
     "display": {
         "title": {
-            "text": "Unchanting                ",
+            "text": "First Strike                ",
             "color": "aqua"
         },
         "description": {
             "color": "white",
-            "text": "Melee attacks with this weapon do additional damage to \"Elite\" mobs. (Mobs with red colored nameplates.)"
+            "text": "The first melee attack you make in an instance of combat deals extra damage. This buff refreshes when you leave combat."
         },
         "icon": {
             "item": "minecraft:netherite_sword"
@@ -22,14 +22,14 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"unchanting\"}]}"
+                        "nbt": "{CustomEnchantments:[{id:\"first_strike\"}]}"
                     }
                 ]
             }
         }
     },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/melee/unchanting"
+        "function": "cartographer_custom_enchantments:descriptions/melee/first_strike"
     },
     "parent": "cartographer_custom_enchantments:melee/transfiguration"
 }

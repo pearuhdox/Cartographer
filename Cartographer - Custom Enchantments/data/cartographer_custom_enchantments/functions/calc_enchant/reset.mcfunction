@@ -38,7 +38,7 @@ scoreboard players set @s ca.possess 0
 scoreboard players set @s ca.expose 0
 scoreboard players set @s ca.infect 0
 scoreboard players set @s ca.regen 0
-scoreboard players set @s ca.unchanting 0
+scoreboard players set @s ca.first_strike 0
 scoreboard players set @s ca.rally 0
 scoreboard players set @s ca.repeating 0
 scoreboard players set @s ca.bleed 0
