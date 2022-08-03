@@ -1,3 +1,5 @@
+function suso.player_data:get/do
+
 execute if entity @s[tag=!is_two_handing] run playsound minecraft:item.trident.return player @s ~ ~ ~ .3 .3 .3
 execute if entity @s[tag=!is_two_handing] run playsound minecraft:entity.enderman.teleport player @s ~ ~ ~ .5 1.3 .5
 
