@@ -9,3 +9,6 @@ execute if entity @s[tag=ca.overloading] as @a[tag=ability_tagged,distance=..2] 
 
 execute if entity @s[tag=ca.venemous] as @a[tag=ability_tagged,distance=..2] at @s run function cartographer_mob_abilities:ability_traits/venemous/player_effect
 execute if entity @s[tag=ca.zephyrous] as @a[tag=ability_tagged,distance=..2] at @s run function cartographer_mob_abilities:ability_traits/zephyrous/player_effect
+
+execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:ability_traits/alchemist/get_effects
+execute if entity @s[tag=ca.alchemist] as @a[tag=ability_tagged,distance=..2] at @s run function cartographer_mob_abilities:ability_traits/alchemist/player_effect

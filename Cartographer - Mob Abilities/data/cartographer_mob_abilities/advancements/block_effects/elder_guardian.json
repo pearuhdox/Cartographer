@@ -1,0 +1,26 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:effects_changed",
+        "conditions": {
+          "effects": {
+            "minecraft:mining_fatigue": {}
+          },
+          "source": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:elder_guardian",
+                "nbt": "{Tags:[\"ca.block_effects\"]}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "cartographer_mob_abilities:passive/block_effects/elder_guardian"
+    }
+  }
+  
