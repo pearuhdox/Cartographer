@@ -106,6 +106,8 @@ function cartographer_custom_enchantments:enchant_effects/loyalty/player_track
 #Reset Function for scores
 function cartographer_custom_enchantments:loop/tick/reset
 
+#Remove Tag that checks if player already lost an Echo charge.
+tag @s remove ca.echo_charge_taken
 
 #Action bar indicators for Repeating, Echo, and Second Wind
 execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 0 run function cartographer_custom_enchantments:helper/indicators/action_bar

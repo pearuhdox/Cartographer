@@ -6,6 +6,7 @@ execute if entity @s[scores={ca.echo=1..,ca.echo_charges=0..}] run playsound min
 execute if entity @s[scores={ca.echo=1..,ca.echo_charges=0..}] run playsound minecraft:entity.player.attack.sweep player @s ~ ~ ~ 2 2
 
 execute if entity @s[scores={ca.echo=1..,ca.echo_charges=0..}] run scoreboard players remove @s ca.echo_charges 1
+execute if entity @s[scores={ca.echo=1..,ca.echo_charges=0..}] run tag @s add ca.echo_charge_taken
 execute if entity @s[scores={ca.echo=1..,ca.echo_charges=-1}] run playsound minecraft:entity.player.attack.sweep player @s ~ ~ ~ 2 0.5
 
 tag @a[scores={ca.ui_location=1,ca.echo=1..}] remove showing_echo

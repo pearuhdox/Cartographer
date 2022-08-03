@@ -16,7 +16,7 @@ execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_c
 #Duelist
 execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/duelist
 #Echo
-execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/echo
+execute if score $cu_en_melee ca.enabler matches 1.. unless entity @s[tag=!ca.echo_charge_taken] run function cartographer_custom_enchantments:enchant_effects/echo
 #Evocation
 execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/evocation
 #Executioner
