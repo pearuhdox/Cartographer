@@ -10,11 +10,11 @@ execute if score @s ca.lifetime matches 40.. run setblock ~-1 ~ ~ fire keep
 execute if score @s ca.lifetime matches 40.. run setblock ~ ~ ~1 fire keep
 execute if score @s ca.lifetime matches 40.. run setblock ~ ~ ~-1 fire keep
 
-execute if score @s ca.lifetime matches 30 run setblock ~1 ~-1 ~ magma_block replace
-execute if score @s ca.lifetime matches 30 run setblock ~-1 ~-1 ~ magma_block replace
-execute if score @s ca.lifetime matches 30 run setblock ~ ~-1 ~1 magma_block replace
-execute if score @s ca.lifetime matches 30 run setblock ~ ~-1 ~-1 magma_block replace
-execute if score @s ca.lifetime matches 20 run setblock ~ ~-1 ~ magma_block replace
+execute if score @s ca.lifetime matches 30 unless block ~1 ~-1 ~ #cartographer_mob_abilities:unbreakable run setblock ~1 ~-1 ~ magma_block replace
+execute if score @s ca.lifetime matches 30 unless block ~-1 ~-1 ~ #cartographer_mob_abilities:unbreakable run setblock ~-1 ~-1 ~ magma_block replace
+execute if score @s ca.lifetime matches 30 unless block ~ ~-1 ~1 #cartographer_mob_abilities:unbreakable run setblock ~ ~-1 ~1 magma_block replace
+execute if score @s ca.lifetime matches 30 unless block ~ ~-1 ~-1 #cartographer_mob_abilities:unbreakable run setblock ~ ~-1 ~-1 magma_block replace
+execute if score @s ca.lifetime matches 20 unless block ~ ~-1 ~ #cartographer_mob_abilities:unbreakable run setblock ~ ~-1 ~ magma_block replace
 
 execute unless block ~ ~ ~ #bb:can_raycast run playsound minecraft:block.fire.extinguish hostile @a[distance=..12] ~ ~ ~ 1 0.5
 execute unless block ~ ~ ~ #bb:can_raycast run playsound minecraft:entity.shulker.death hostile @a[distance=..12] ~ ~ ~ 1 1.5
