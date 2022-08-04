@@ -1,0 +1,14 @@
+{
+    "function": "minecraft:copy_nbt",
+    "source": {
+        "type": "minecraft:storage",
+        "source": "os:main"
+    },
+    "ops": [
+        {
+            "source": "weapon.tag.CustomModelData",
+            "target": "CustomModelData",
+            "op": "replace"
+        }
+    ]
+}

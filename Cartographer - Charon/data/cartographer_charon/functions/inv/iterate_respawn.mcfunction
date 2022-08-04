@@ -1,0 +1,1 @@
+execute if data storage inv:main inv.all[] run function inv:load

@@ -1,0 +1,2 @@
+execute if score $trader charon.gmr matches 1.. run function cartographer_charon:vill/add_to_villager
+execute if score $death_drop charon.gmr matches 1.. run function cartographer_charon:death_drop/create
