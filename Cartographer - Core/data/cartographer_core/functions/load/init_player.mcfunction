@@ -10,4 +10,4 @@ execute unless score @s ca.ui_loc matches 0.. run scoreboard players set @s ca.u
 
 tag @s add ca.init
 
-say Initialize
+#say Initialize
