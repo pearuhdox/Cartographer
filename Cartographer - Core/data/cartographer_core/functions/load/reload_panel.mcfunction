@@ -9,9 +9,18 @@
 scoreboard players set $gmr_freeze ca.mutex 1
 gamerule sendCommandFeedback false
 
-scoreboard players enable @s ca.options_trig 
+scoreboard players enable @a ca.options_trig 
 
 execute as @a at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
+
+function cartographer_charon:load/load_check
+function cartographer_custom_durability:load/load_check
+function cartographer_custom_enchantments:load/load_check
+function cartographer_custom_statuses:load/load_check
+function cartographer_loot_additions:load/load_check
+function cartographer_mimics:load/load_check
+function cartographer_mob_abilities:load/load_check
+function cartographer_repair_stations:load/load_check
 
 execute if score $gl_reload_msg ca.gamerule matches 0 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/full
 execute if score $gl_reload_msg ca.gamerule matches 1 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/minimal
