@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ #cartographer_core:can_raycast positioned ~ ~ ~ run function cartographer_charon:death_drop/create_normal
+execute unless block ~ ~ ~ #cartographer_core:can_raycast positioned ~ ~1 ~ run function cartographer_charon:death_drop/find_spot

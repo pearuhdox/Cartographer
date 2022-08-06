@@ -1,7 +1,9 @@
-summon glow_item_frame ~ -63 ~ {Glowing:1b,Facing:1b,Invisible:1b,Tags:["charon.bundle_drop","new"],Item:{}}
+summon glow_item_frame ~ -63 ~ {Silent:1b,Glowing:1b,Facing:1b,Invisible:1b,Tags:["charon.bundle_drop","new"],Item:{}}
 
 setblock ~ -64 ~ glass keep
 setblock ~ ~-63 ~ air
+
+setblock ~ ~ ~ air replace
 
 stopsound @s * entity.glow_item_frame.add_item
 

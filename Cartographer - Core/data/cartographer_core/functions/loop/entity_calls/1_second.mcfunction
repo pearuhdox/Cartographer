@@ -1,3 +1,6 @@
+#Run Charon Effects
+#execute if score $charon ca.installed matches 1.. run function cartographer_charon:loop/1_second/entities
+
 #Run Custom Enchantments Effects
 execute if score $custom_enchantments ca.installed matches 1.. run function cartographer_custom_enchantments:loop/1_second/entities
 

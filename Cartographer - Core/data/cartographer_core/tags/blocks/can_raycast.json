@@ -86,6 +86,9 @@
     "#minecraft:bee_growables",
     "#minecraft:wall_signs",
     "#minecraft:signs",
-    "#minecraft:underwater_bonemeals"
+    "#minecraft:underwater_bonemeals",
+    "minecraft:sculk_vein",
+    "#minecraft:candles",
+    "minecraft:sea_pickle"
   ]
 }
