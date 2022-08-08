@@ -47,6 +47,7 @@ execute unless score @s ca.evasion matches 1.. run tag @s remove evading
 #Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
 execute if entity @s[tag=has_passive_ench] run function cartographer_custom_enchantments:enchant_calls/passively
 
+
 #Kill trigger (if score $cu_en_kill ca.enabler matches 1.. )
 execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
 

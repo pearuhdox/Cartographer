@@ -11,8 +11,8 @@ execute as @s[scores={ca.second_wind=1..}] at @s run function cartographer_custo
 #Evasion
 execute as @s[scores={ca.evasion=1..},tag=evading] at @s run function cartographer_custom_enchantments:enchant_effects/evasion
 
-execute as @s[scores={ca.repeating=1..7}] at @s unless data entity @s SelectedItem.tag.Ammo run item modify entity @s weapon.mainhand cartographer_custom_enchantments:fix_ammo
-execute as @s[scores={ca.repeating=11..17}] at @s unless data entity @s Inventory[{Slot:-106b}].tag.Ammo run item modify entity @s weapon.offhand cartographer_custom_enchantments:fix_ammo
+execute as @s[scores={ca.repeating=1..7}] at @s if data entity @s SelectedItem{id:"minecraft:crossbow"} unless data entity @s SelectedItem.tag.Ammo run item modify entity @s weapon.mainhand cartographer_custom_enchantments:fix_ammo
+execute as @s[scores={ca.repeating=11..17}] at @s if data entity @s Inventory[{id:"minecraft:crossbow",Slot:-106b}] unless data entity @s Inventory[{Slot:-106b}].tag.Ammo run item modify entity @s weapon.offhand cartographer_custom_enchantments:fix_ammo
 
 #Repeating Reloading and Rearming Mechs
 execute as @s[scores={ca.repeating=1..7,ca.rpt_cdl=1},nbt={SelectedItem:{tag:{Charged:0b}}}] at @s run function cartographer_custom_enchantments:enchant_effects/repeating
