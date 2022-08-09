@@ -1,3 +1,3 @@
-execute run tp @s ~ ~ ~ facing entity @p[tag=waiting_loyalty]
+execute run tp @s ~ ~ ~ facing entity @p[scores={ca.loyalty_wait=1..}]
 
-execute if entity @a[tag=waiting_loyalty] run tag @s add is_seeking
+execute if entity @a[scores={ca.loyalty_wait=1..}] run tag @s add is_seeking

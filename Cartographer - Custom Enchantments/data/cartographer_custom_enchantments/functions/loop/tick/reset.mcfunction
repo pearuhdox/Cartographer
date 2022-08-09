@@ -83,5 +83,8 @@ scoreboard players set @s ca.sw_fall 0
 scoreboard players set @s ca.rally_amt 0
 scoreboard players set @s ca.rally_rst 0
 
+scoreboard players set @s ca.dmg_resist_check 0
+scoreboard players set @s ca.dmg_resist_evaded 0
+
 advancement revoke @s only cartographer_custom_enchantments:second_wind_projectile
 advancement revoke @s only cartographer_custom_enchantments:second_wind_explosion

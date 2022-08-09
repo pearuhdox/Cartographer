@@ -56,3 +56,5 @@ data modify storage suso:pldata working_data.Loyalty_Item set value {}
 data modify storage suso:pldata working_data.Loyalty set value {}
 
 function suso.player_data:put/do
+
+execute if score @s ca.loyalty_slot matches 0.. run scoreboard players remove @s ca.loyalty_count 1

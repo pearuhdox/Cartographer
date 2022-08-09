@@ -10,7 +10,8 @@ execute if entity @s[gamemode=!creative,scores={ca.loyalty=11..}] run scoreboard
 execute if entity @s[gamemode=!creative,scores={ca.loyalty=1..10}] in minecraft:overworld run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206899 air{drop_contents:1b}
 execute if entity @s[gamemode=!creative,scores={ca.loyalty=11..20}] in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206899 air{drop_contents:1b}
 
-tag @s add waiting_loyalty
+scoreboard players add @s ca.loyalty_wait 1
+scoreboard players add @s ca.loyalty_throws 1
 
 #Debug Message
 tellraw @a[tag=debug,scores={ca.loyalty=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Loyalty.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

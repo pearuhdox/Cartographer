@@ -47,6 +47,12 @@ execute unless score @s ca.evasion matches 1.. run tag @s remove evading
 #Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
 execute if entity @s[tag=has_passive_ench] run function cartographer_custom_enchantments:enchant_calls/passively
 
+#Return Loyalty Tridents
+execute if score @s ca.loyalty_count matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/return_item
+execute if score @s ca.loyalty_wait matches 1.. run scoreboard players add @s ca.loyalty_wait 1
+
+execute if score @s ca.loyalty_wait matches 601.. if score @s ca.loyalty_count matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/return_item
+
 
 #Kill trigger (if score $cu_en_kill ca.enabler matches 1.. )
 execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
@@ -103,6 +109,11 @@ tag @s remove kill_buff_checked
 
 #Check if a player has a Loyalty Placeholder
 function cartographer_custom_enchantments:enchant_effects/loyalty/player_track
+
+#Check Evasion
+execute if entity @s[scores={ca.dmg_resist_evaded=1..,ca.evasion=1..},tag=evading] run function cartographer_custom_enchantments:enchant_effects/evasion/trigger
+execute if entity @s[scores={ca.dmg_resist_check=1..,ca.evasion=1..}] run function cartographer_custom_enchantments:enchant_effects/evasion/prime
+
 
 #Reset Function for scores
 function cartographer_custom_enchantments:loop/tick/reset

@@ -95,6 +95,9 @@ scoreboard objectives add ca.flash_time dummy
 scoreboard objectives add ca.saved_flash dummy
 
 scoreboard objectives add ca.loyalty_slot dummy
+scoreboard objectives add ca.loyalty_count dummy
+scoreboard objectives add ca.loyalty_throws dummy
+scoreboard objectives add ca.loyalty_wait dummy
 
 scoreboard objectives add ca.curse_mal dummy
 scoreboard objectives add ca.curse_regret dummy
@@ -134,6 +137,10 @@ scoreboard players set SecondWindHelper ca.second_wind 10
 scoreboard objectives add ca.sw_time dummy
 scoreboard objectives add ca.sw_tier dummy
 scoreboard objectives add ca.dmg_resist_sw minecraft.custom:minecraft.damage_resisted
+
+scoreboard objectives add ca.dmg_resist_check minecraft.custom:minecraft.damage_taken
+scoreboard objectives add ca.dmg_resist_evaded minecraft.custom:minecraft.damage_resisted
+
 scoreboard objectives add ca.sw_fall minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add ca.sw_tenths dummy
 

@@ -1,7 +1,3 @@
-#Evasion ()
-execute as @s[scores={ca.evasion=1..},tag=evading] at @s run function cartographer_custom_enchantments:enchant_effects/evasion/trigger
-execute as @s[scores={ca.evasion=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/evasion/prime
-
 #Rally ()
 execute as @s[scores={ca.rally=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/rally
 
