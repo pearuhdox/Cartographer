@@ -80,8 +80,8 @@ scoreboard players set @s ca.sneak 0
 scoreboard players set @s ca.dmg_resist_sw 0
 scoreboard players set @s ca.sw_fall 0
 
-scoreboard players set @s ca.rally_amt 0
-scoreboard players set @s ca.rally_rst 0
+scoreboard players set @s ca.rally_amount 0
+scoreboard players set @s ca.rally_damage 0
 
 scoreboard players set @s ca.dmg_resist_check 0
 scoreboard players set @s ca.dmg_resist_evaded 0

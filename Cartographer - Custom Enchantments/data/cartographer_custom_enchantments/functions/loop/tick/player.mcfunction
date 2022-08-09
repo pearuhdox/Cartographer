@@ -90,7 +90,7 @@ execute if score @s ca.overcharge matches 1.. if score @s ca.draw_bow_time match
 execute unless score @s ca.overcharge matches 1.. run scoreboard players set @s ca.ov_tier 0
 
 #Rally Timer
-execute if score @s ca.ral_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/timer
+execute if score @s ca.rally_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/timer
 
 #Remove Two Handed Processed Tag - Fix Inventory Two Handed Bundled Items
 execute if predicate cartographer_custom_enchantments:curse_two_handed/empty_offhand run scoreboard players set @s ca.two_hand_del 0

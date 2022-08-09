@@ -36,8 +36,8 @@ execute at @s as @e[distance=..7,type=#cartographer_core:arrow,limit=1,sort=near
 execute at @s as @e[distance=..7,type=trident,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch_trident
 
 #These effects will activate from the entity itself before the player call.
-execute if score $cu_en_ranged ca.enabler matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
-execute if score $cu_en_ranged ca.enabler matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag
+execute if score $cu_en_ranged ca.enabler matches 1.. at @s[type=!player] run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
+execute if score $cu_en_ranged ca.enabler matches 1.. at @s[type=!player] run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag
 
 #Cauterize - Goes first
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_cauterize] at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/ranged

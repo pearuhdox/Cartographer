@@ -17,7 +17,7 @@
             "color": "aqua"
         },
         "description": {
-            "text": "When attacked, the user can restore a percentage of the lost health by attacking quickly. Your damage is increased while recovering health.",
+            "text": "When attacked, the user can restore up to 50% of the lost health by attacking quickly.",
             "color": "white"
         },
         "icon": {

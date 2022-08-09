@@ -104,9 +104,11 @@ scoreboard objectives add ca.curse_regret dummy
 scoreboard objectives add ca.curse_two_hnd dummy
 scoreboard objectives add ca.curse_encum dummy
 
-scoreboard objectives add ca.rally_amt minecraft.custom:minecraft.damage_taken
-scoreboard objectives add ca.rally_rst dummy
-scoreboard objectives add ca.rally_crt dummy
+scoreboard objectives add ca.rally_amount minecraft.custom:minecraft.damage_taken
+scoreboard objectives add ca.rally_bank dummy
+scoreboard objectives add ca.rally_time dummy
+scoreboard objectives add ca.rally_damage minecraft.custom:minecraft.damage_dealt
+
 
 scoreboard objectives add ca.ral_overflow dummy
 scoreboard objectives add ca.ral_time dummy

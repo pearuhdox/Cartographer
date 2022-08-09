@@ -42,7 +42,7 @@ execute if score $cu_en_melee ca.enabler matches 1.. run function cartographer_c
 execute if entity @s[scores={ca.loyalty_wait=1..}] as @e[type=trident,tag=ca.loyalty,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty/convert
 
 #Rally - Can trigger on any type of attack.
-execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.atk_time=0}] run function cartographer_custom_enchantments:enchant_effects/rally/restore_health
+execute if score $cu_en_passive ca.enabler matches 1.. if score @s ca.rally_time matches 1.. run scoreboard players set @s ca.rally_damage 80
 
 #Echo Charge Restore
 function cartographer_custom_enchantments:enchant_effects/echo_restore
