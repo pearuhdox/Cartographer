@@ -12,7 +12,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:cave_spider",
-              "nbt": "{Tags:[\"ca.block_effects\"]}"
+              "nbt": "{Tags:[\"ca.prevent_effects\"]}"
             }
           }
         ]

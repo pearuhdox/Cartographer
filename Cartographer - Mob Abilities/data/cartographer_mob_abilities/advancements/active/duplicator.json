@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/active/duplicator"
     },
-    "parent": "cartographer_mob_abilities:active/orbit"
+    "parent": "cartographer_mob_abilities:active/cloaker"
 }

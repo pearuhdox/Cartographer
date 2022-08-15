@@ -14,3 +14,6 @@ data remove storage cartographer_mob_abilities:info ambidextrous.SwapPast.tag.Sw
 data modify storage cartographer_mob_abilities:info ambidextrous.Swap.tag.Swap set from storage cartographer_mob_abilities:info ambidextrous.SwapPast
 
 data modify entity @s HandItems[0] set from storage cartographer_mob_abilities:info ambidextrous.Swap
+
+execute if entity @s[type=#skeletons] run effect give @s slowness 2 1 true
+execute if entity @s[type=#skeletons] run effect give @s slowness 1 2 true
