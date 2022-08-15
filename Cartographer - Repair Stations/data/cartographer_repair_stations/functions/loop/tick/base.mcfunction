@@ -1,6 +1,13 @@
 #Tell Cartographer this pack is in use
 scoreboard players set $repair_stations ca.installed 1
 
+#Set default repair station amounts
+execute unless score $repair_max XPcost matches 0.. run scoreboard players set $repair_max XPcost 50
+execute unless score $repair_max LapisCost matches 0.. run scoreboard players set $repair_max LapisCost 25
+
+execute unless score $repair_start XPcost matches 0.. run scoreboard players set $repair_start XPcost 8
+execute unless score $repair_start LapisCost matches 0.. run scoreboard players set $repair_start LapisCost 4
+
 # Master Repair Frame Sign
 execute as 31182015-1851-6191-8131-192058000000 at @s run function cartographer_repair_stations:loop/tick/master
 
