@@ -1,5 +1,3 @@
-execute as @p run function suso.player_data:get/do
+execute if data storage cartographer_repair_stations:tesseract Data.Queue[0] run function cartographer_repair_stations:void_bag/add_items_recurse
 
-data modify storage suso:pldata working_data.VoidedItemsCopy set from storage suso:pldata working_data.VoidedItems
-
-execute if data storage suso:pldata working_data.VoidedItemsCopy[0] run function cartographer_repair_stations:void_bag/pick_trade_recurse
+tag @s add set

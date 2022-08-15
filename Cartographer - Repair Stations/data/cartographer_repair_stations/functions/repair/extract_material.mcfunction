@@ -1,18 +1,18 @@
-execute if entity @e[type=armor_stand,tag=repair_display,tag=wood] run clear @s #minecraft:planks 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=stone] run clear @s minecraft:cobblestone 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=iron] run clear @s minecraft:iron_ingot 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=gold] run clear @s minecraft:gold_ingot 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=diamond] run clear @s minecraft:diamond 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=netherite] run clear @s minecraft:netherite_ingot 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=leather] run clear @s minecraft:leather 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=chain] run clear @s minecraft:chain 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=scute] run clear @s minecraft:scute 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=string] run clear @s minecraft:string 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=quartz] run clear @s minecraft:quartz 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=carrot] run clear @s minecraft:carrot 1
-execute if entity @e[type=armor_stand,tag=repair_display,tag=warped_fungus] run clear @s minecraft:warped_fungus 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=wood] run clear @p #minecraft:planks 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=stone] run clear @p minecraft:cobblestone 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=iron] run clear @p minecraft:iron_ingot 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=gold] run clear @p minecraft:gold_ingot 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=diamond] run clear @p minecraft:diamond 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=netherite] run clear @p minecraft:netherite_ingot 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=leather] run clear @p minecraft:leather 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=chain] run clear @p minecraft:chain 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=scute] run clear @p minecraft:scute 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=string] run clear @p minecraft:string 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=quartz] run clear @p minecraft:quartz 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=carrot] run clear @p minecraft:carrot 1
+execute as 31182015-1851-6191-0000-914162120 if entity @s[tag=warped_fungus] run clear @p minecraft:warped_fungus 1
 
 
-scoreboard players remove @s MaterialCost 1
+scoreboard players remove @p MaterialCost 1
 
-execute if entity @s[scores={MaterialCost=1..}] run function cartographer_repair_stations:repair/extract_material
+execute if entity @p[scores={MaterialCost=1..}] run function cartographer_repair_stations:repair/extract_material

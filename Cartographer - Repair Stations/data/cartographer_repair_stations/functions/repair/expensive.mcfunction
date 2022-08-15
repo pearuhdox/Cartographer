@@ -25,12 +25,12 @@ scoreboard players operation @p[distance=..5] LapisCost -= @s LapisCost
 scoreboard players operation @p[distance=..5] MaterialCost -= @s MaterialCost
 
 
-execute if entity @p[distance=..5,scores={XPcost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -130 ~
-execute if entity @p[distance=..5,scores={LapisCost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -130 ~
-execute if entity @p[distance=..5,scores={MaterialCost=..-1}] run tp @e[type=sheep,tag=repair_interact_confirm,limit=3,distance=..2.7] ~ -130 ~
-execute if entity @p[distance=..5,scores={XPcost=..-1}] run kill @e[type=armor_stand,tag=repair_indicator_confirm,limit=3,distance=..2.7]
-execute if entity @p[distance=..5,scores={LapisCost=..-1}] run kill @e[type=armor_stand,tag=repair_indicator_confirm,limit=3,distance=..2.7]
-execute if entity @p[distance=..5,scores={MaterialCost=..-1}] run kill @e[type=armor_stand,tag=repair_indicator_confirm,limit=3,distance=..2.7]
+execute if entity @p[distance=..5,scores={XPcost=..-1}] run tp 31182015-1851-6191-0000-19213351919 ~ -130 ~
+execute if entity @p[distance=..5,scores={LapisCost=..-1}] run tp 31182015-1851-6191-0000-19213351919 ~ -130 ~
+execute if entity @p[distance=..5,scores={MaterialCost=..-1}] run tp 31182015-1851-6191-0000-19213351919 ~ -130 ~
+execute if entity @p[distance=..5,scores={XPcost=..-1}] run kill 31182015-1851-6191-0000-19213351919
+execute if entity @p[distance=..5,scores={LapisCost=..-1}] run kill 31182015-1851-6191-0000-19213351919
+execute if entity @p[distance=..5,scores={MaterialCost=..-1}] run kill 31182015-1851-6191-0000-19213351919
 
 
 execute unless entity @s[scores={XPcost=51..}] if entity @p[distance=..5,scores={XPcost=..-1}] run summon armor_stand ~ ~0.25 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_xp_cost","too_expensive"],DisabledSlots:4144959,CustomName:'{"text":"✕              ✕","color":"red"}'}
