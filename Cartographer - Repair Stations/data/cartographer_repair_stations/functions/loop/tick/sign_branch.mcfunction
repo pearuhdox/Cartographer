@@ -50,9 +50,37 @@ execute unless entity @e[type=item_frame,tag=repair_intput,distance=..3] run kil
 execute if block ~ ~ ~1 air run kill @e[type=item,distance=..1,nbt={Item:{id:"minecraft:lime_stained_glass",Count:1b}}]
 execute if block ~ ~ ~1 air run setblock ~ ~ ~1 lime_stained_glass replace
 
-execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=item_frame,distance=..2]
-execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=armor_stand,distance=..4]
-execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=sheep,distance=..5]
-execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=sheep,distance=..5]
-execute if entity @s[scores={repair_tampers=30..}] run kill @e[type=villager,tag=void_bag,distance=..5]
 execute if entity @s[scores={repair_tampers=30..}] run summon creeper ~ ~1 ~1 {ExplosionRadius:8b,Fuse:1,ignited:1b,CustomName:'{"text":"a certain exasperated repair station"}'}
+
+# Input Frame
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-8914-162120000000
+
+# Display Armor Stand
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-914162120
+
+# Success Sheep
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-19213351919
+
+# Fail Sheep
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-31143512
+
+# Villager Void Bag
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-221594217
+
+# Line 1
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-1291451
+
+# Line 2
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-1291452
+
+# Line 3
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-1291453
+
+# Line 4
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-1291454
+
+# Line 5
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-0000-1291455
+
+# Master Frame for position
+execute if entity @s[scores={repair_tampers=30..}] run kill 31182015-1851-6191-8131-192058000000
