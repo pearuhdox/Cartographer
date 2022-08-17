@@ -11,5 +11,8 @@ execute as @s[type=item_frame,tag=loot_multichoice_side] run function cartograph
 execute as @s[type=armor_stand,tag=altar_core] at @s run function cartographer_loot_additions:loop/tick/branches/altar/cosmetic
 execute as @s[type=item_frame,tag=loot_altar_holder] run function cartographer_loot_additions:loop/tick/branches/altar
 
+#Functions for soul chests
+execute as @s[type=armor_stand,tag=loot_soul_chest] at @s run function cartographer_loot_additions:loop/tick/branches/soul_chest/tick
+
 #Functions for all armor stand holders.
 execute as @s[type=armor_stand,tag=loot_holder_armor] run function cartographer_loot_additions:loop/tick/branches/loot_holder_armor

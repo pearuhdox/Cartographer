@@ -26,6 +26,9 @@ scoreboard players set @a[scores={token_kill_check=1..}] token_kill_check 0
 #Mimic Reset
 scoreboard players set @a[scores={helper_open_trap=1..}] helper_open_trap 0
 
+#Loot Additions Resets
+scoreboard players set @a ca.get_soul 0
+
 #Add anything else to run per tick here!
 #
 #
