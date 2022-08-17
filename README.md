@@ -1,5 +1,5 @@
 # Cartographer
-Cartographer is a collection of datapacks for Minecraft 1.17.1 that add custom enchantments, mob attacks, and more, for use in CTM maps.
+Cartographer is a collection of datapacks for Minecraft 1.19.1 that add custom enchantments, mob attacks, and more, for use in CTM maps.
 
 Each folder above is a separate datapack which can be dropped into a Minecraft world's "datapack" folder. Once placed inside the datapack folder, and the world has been reloaded, they will add new features to the game.
 
