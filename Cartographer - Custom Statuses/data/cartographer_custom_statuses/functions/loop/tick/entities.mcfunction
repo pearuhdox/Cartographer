@@ -4,7 +4,7 @@ execute if entity @s[type=#bb:hostile,predicate=cartographer_custom_statuses:is_
 execute as @s[type=#bb:hostile,scores={ca.effect_stun=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned
 
 #Run Possession
-execute as @s[type=#bb:hostile,scores={ca.eft_possess=1..}] at @s run function cartographer_custom_statuses:tick_effects/possession/warmup
+execute as @s[type=#bb:hostile,scores={ca.possess_time=1..}] at @s run function cartographer_custom_statuses:tick_effects/possession/warmup
 
 #Run Vulnerability
 execute as @s[type=#bb:hostile,predicate=cartographer_custom_statuses:is_exposed] at @s run function cartographer_custom_statuses:effects/vulnerability

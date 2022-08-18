@@ -15,3 +15,5 @@ execute if entity @s[tag=ca.alchemist] as @a[tag=ability_tagged] at @s run funct
 
 #Position Independent
 execute if entity @s[tag=ca.celestial] if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:ability_traits/celestial/player_effect
+
+function #minecraft:cartographer/events/custom_traits

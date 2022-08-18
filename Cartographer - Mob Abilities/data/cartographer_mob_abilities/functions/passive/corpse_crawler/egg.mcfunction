@@ -1,7 +1,7 @@
 execute if score @s ca.lifetime matches 2.. run tp @s ~ ~ ~ ~5 ~
 execute if score @s ca.lifetime matches 21.. run tp @s ~ ~ ~ ~30 ~
 
-execute if score @s[tag=corpse_crawler_egg_bee] ca.lifetime matches 41.. run summon bee ~ ~1 ~ {Motion:[0.0,0.3,0.0],Health:5f,AngerTime:332767,CustomName:'{"text":"Corpse Crawler"}',Attributes:[{Name:"generic.max_health",Base:5},{Name:"minecraft:generic.attack_damage",Base:1}]}
+execute if score @s[tag=corpse_crawler_egg_bee] ca.lifetime matches 41.. run summon bee ~ ~1 ~ {Motion:[0.0,0.3,0.0],Health:5f,AngerTime:32767,CustomName:'{"text":"Corpse Crawler"}',Attributes:[{Name:"generic.max_health",Base:5},{Name:"minecraft:generic.attack_damage",Base:1}]}
 execute if score @s[tag=corpse_crawler_egg_spider] ca.lifetime matches 41.. run summon cave_spider ~ ~1 ~ {Motion:[0.0,0.3,0.0],Health:5f,CustomName:'{"text":"Corpse Crawler"}',Attributes:[{Name:"generic.max_health",Base:5},{Name:"minecraft:generic.attack_damage",Base:1},{Name:"generic.movement_speed",Base:0.25}]}
 
 execute if score @s[tag=corpse_crawler_egg_drowned] ca.lifetime matches 41.. run summon drowned ~ ~1 ~ {Motion:[0.0,0.3,0.0],Health:15f,IsBaby:1b,CustomName:'{"text":"Corpse Crawler"}',Attributes:[{Name:"generic.max_health",Base:15},{Name:"generic.movement_speed",Base:0.2}]}

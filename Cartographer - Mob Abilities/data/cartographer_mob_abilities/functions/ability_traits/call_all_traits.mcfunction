@@ -26,4 +26,6 @@ execute if entity @s[tag=ca.predator] at @s run function cartographer_mob_abilit
 execute if entity @s[tag=ca.evocative] at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
 execute if entity @s[tag=ca.volatile] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
+function #minecraft:cartographer/events/custom_traits
+
 #say Running Traits
