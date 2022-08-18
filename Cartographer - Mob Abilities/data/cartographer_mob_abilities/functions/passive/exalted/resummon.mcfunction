@@ -16,6 +16,6 @@ playsound minecraft:entity.zombie_villager.converted hostile @s ~ ~ ~ 2 1
 
 data modify storage exalted EntityData set from entity @s HandItems[0].tag.EntityData
 
-execute as @e[tag=exalted_respawn,sort=nearest,limit=1,distance=..2] at @s run function cartographer_mob_abilities:passive/exalted_data
+execute as @e[tag=exalted_respawn,sort=nearest,limit=1,distance=..2] at @s run function cartographer_mob_abilities:passive/exalted/data
 
 kill @s

@@ -21,9 +21,5 @@ execute as @e[type=!#cartographer_core:not_tracked,type=!#cartographer_core:item
 
 execute as @a at @s run function cartographer_core:loop/player/1_second/base
 
-function #minecraft:cartographer/clocks/1_second
-
-#Add any extra functions here!
-
-
-#Add any extra functions above.
+#Function Tag for running things on Cartographer's Clocks
+#function #minecraft:cartographer/clocks/1_second

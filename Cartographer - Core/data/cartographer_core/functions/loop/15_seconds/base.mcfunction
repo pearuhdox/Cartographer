@@ -7,6 +7,5 @@
 # Additional functions can be added to it.
 ########################################
 
-#Run all Cartographer Effects from Core Timers.
-
-#Add any extra functions above.
+#Function Tag for running things on Cartographer's Clocks
+#function #minecraft:cartographer/clocks/15_seconds

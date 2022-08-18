@@ -17,8 +17,6 @@ execute as @a at @s run function cartographer_core:loop/tick/player
 #Run all ticking entity effects.
 execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/branch_tick
 
-#Run post entity tick base clock. PEAR CHECK THIS LATER
-#function cartographer_core:loop/tick/base_post_entity
 
 #Reset token kill check (Mob Abilities)
 scoreboard players set @a[scores={token_kill_check=1..}] token_kill_check 0

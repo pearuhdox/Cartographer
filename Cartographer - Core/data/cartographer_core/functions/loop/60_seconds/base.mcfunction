@@ -16,4 +16,5 @@
 
 
 
-#Add any extra functions above.
+#Function Tag for running things on Cartographer's Clocks
+#function #minecraft:cartographer/clocks/60_seconds

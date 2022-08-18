@@ -18,8 +18,5 @@ execute as @e[type=!#cartographer_core:not_tracked,type=!#cartographer_core:item
 scoreboard players set $la.run ca.var 0
 execute as @e[type=#cartographer_core:tracked_for_la] run function cartographer_core:loop/3_seconds/la_branch
 
-#Add any extra functions here!
-
-
-
-#Add any extra functions above.
+#Function Tag for running things on Cartographer's Clocks
+#function #minecraft:cartographer/clocks/3_seconds

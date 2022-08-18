@@ -13,4 +13,5 @@
 
 function cartographer_mob_abilities:loop/30_second/reset
 
-#Add any extra functions above.
+#Function Tag for running things on Cartographer's Clocks
+#function #minecraft:cartographer/clocks/30_seconds

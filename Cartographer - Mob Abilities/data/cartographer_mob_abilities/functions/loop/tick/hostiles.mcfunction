@@ -80,7 +80,7 @@ execute if entity @s[tag=hook_broken] run function cartographer_mob_abilities:ab
 tag @s[tag=hook_broken] remove hook_broken
 
 #Setup Exalted
-execute if entity @s[tag=!setup,tag=ca.exalted] run function cartographer_mob_abilities:passive/exalted_setup
+execute if entity @s[tag=!setup,tag=ca.exalted] run function cartographer_mob_abilities:passive/exalted/setup
 
 #Setup Ambidextrous
 execute if entity @s[tag=!ambi_readied,tag=ca.ambidextrous] run function cartographer_mob_abilities:passive/ambidextrous/initialize
