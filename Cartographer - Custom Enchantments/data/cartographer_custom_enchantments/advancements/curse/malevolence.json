@@ -22,7 +22,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"malevolence\"}]}"
+                        "nbt": "{CustomEnchantments:[{id:\"curse_malevolence\"}]}"
                     }
                 ]
             }

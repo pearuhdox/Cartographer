@@ -1,0 +1,2 @@
+function cartographer_mob_abilities:passive/projectile/potion_bag/splash/rng
+execute as @e[type=potion,tag=!passive_replaced_projectile,limit=1,distance=..4,sort=nearest] unless score @s ca.lifetime matches 1.. run function cartographer_mob_abilities:passive/projectile/potion_bag/splash/modify_potion

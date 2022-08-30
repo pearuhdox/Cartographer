@@ -1,0 +1,4 @@
+execute if data storage cartographer_mob_abilities:passive_projectile Projectile.power[0] run function cartographer_mob_abilities:passive/projectile/modify_speed_motion
+execute unless data storage cartographer_mob_abilities:passive_projectile Projectile.power[0] run function cartographer_mob_abilities:passive/projectile/cut_potion_speed
+
+function cartographer_mob_abilities:passive/projectile/helper/apply_potion_effects

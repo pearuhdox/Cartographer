@@ -1,7 +1,8 @@
 execute if entity @s[type=#bb:hostile,predicate=cartographer_custom_statuses:is_dummy_effected] run function cartographer_custom_statuses:inflict/apply_status
 
 #Run Stunned
-execute as @s[type=#bb:hostile,scores={ca.effect_stun=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned
+execute as @s[type=#bb:hostile,scores={ca.effect_stun=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned/tenacity_calculate
+execute as @s[type=#bb:hostile,scores={ca.effect_stun_duration=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned/effect
 
 #Run Possession
 execute as @s[type=#bb:hostile,scores={ca.possess_time=1..}] at @s run function cartographer_custom_statuses:tick_effects/possession/warmup

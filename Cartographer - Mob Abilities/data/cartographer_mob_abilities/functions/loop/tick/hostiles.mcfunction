@@ -47,9 +47,6 @@ execute as @s[tag=carapaced] at @s run function cartographer_mob_abilities:abili
 #Run Creation
 execute as @s[tag=ca.creation,tag=!created] at @s run function cartographer_mob_abilities:ability_traits/creation/effect
 
-#Run Horrify Tether on Tethers
-execute as @s[type=marker,tag=horrify_tether] at @s run function cartographer_mob_abilities:ability_traits/horrifying/tether_tick
-
 #Run Skin timers for skin entities
 execute as @s[tag=ca.fireskin] at @s run function cartographer_mob_abilities:passive/skin/timer
 execute as @s[tag=ca.waterskin] at @s run function cartographer_mob_abilities:passive/skin/timer
@@ -60,9 +57,9 @@ execute as @s[tag=ca.shimmerskin] at @s run function cartographer_mob_abilities:
 execute as @s[tag=ca.shroudskin] at @s run function cartographer_mob_abilities:passive/skin/timer
 
 
-execute as @s[tag=ca.quiver] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[tag=ca.quiver] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 
-execute as @s[tag=ca.potion_bag] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile
+execute as @s[tag=ca.potion_bag] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 
 #Run drinking for Potion Bag on Witches
 execute as @s[type=witch,tag=ca.potion_bag,tag=!witch_drinking,predicate=cartographer_mob_abilities:witch_drinking] at @s run function cartographer_mob_abilities:passive/potion_bag

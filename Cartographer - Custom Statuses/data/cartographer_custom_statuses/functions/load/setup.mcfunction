@@ -13,6 +13,8 @@ scoreboard objectives add ca.stun_res_ct dummy
 scoreboard objectives add ca.stun_res_time dummy
 
 scoreboard objectives add ca.effect_stun dummy
+scoreboard objectives add ca.effect_stun_duration dummy
+
 scoreboard objectives add ca.effect_shock dummy
 scoreboard objectives add ca.effect_bleed dummy
 scoreboard objectives add ca.bleed_potency dummy

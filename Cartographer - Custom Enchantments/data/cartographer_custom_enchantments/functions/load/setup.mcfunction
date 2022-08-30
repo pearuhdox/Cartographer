@@ -245,6 +245,7 @@ scoreboard objectives add ca.inf_var dummy
 scoreboard objectives add ca.loyal_check dummy
 
 scoreboard objectives add ca.two_hand_del dummy
+scoreboard objectives add ca.two_hand_time dummy
 
 scoreboard objectives add ca.dummy dummy
 scoreboard objectives add ca.var dummy

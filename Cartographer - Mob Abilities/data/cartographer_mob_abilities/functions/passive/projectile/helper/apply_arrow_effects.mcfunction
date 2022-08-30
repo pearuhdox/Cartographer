@@ -1,0 +1,2 @@
+data modify entity @s CustomPotionEffects set from storage cartographer_mob_abilities:projectile data.effects
+data modify entity @s CustomPotionColor set from storage cartographer_mob_abilities:projectile data.color

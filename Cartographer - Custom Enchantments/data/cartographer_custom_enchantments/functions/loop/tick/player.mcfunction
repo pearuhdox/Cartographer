@@ -80,9 +80,6 @@ execute if score @s ca.flash matches 1.. if score @s ca.load_cro_time matches 1.
 #Infinity 3.0
 function cartographer_custom_enchantments:enchant_effects/infinity/player
 
-#Splintering
-execute if score @s ca.splintering matches 1.. run function cartographer_custom_enchantments:enchant_effects/splintering
-
 #Charge Overcharge
 execute if score @s ca.overcharge matches 1.. if score @s ca.draw_bow_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/overcharge/tier
 
@@ -92,9 +89,10 @@ execute unless score @s ca.overcharge matches 1.. run scoreboard players set @s 
 #Rally Timer
 execute if score @s ca.rally_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/timer
 
-#Remove Two Handed Processed Tag - Fix Inventory Two Handed Bundled Items
-execute if predicate cartographer_custom_enchantments:curse_two_handed/empty_offhand run scoreboard players set @s ca.two_hand_del 0
-execute if score @s ca.two_hand_del matches 1 run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/return_offhand
+#Run Two Handed
+execute if score @s ca.curse_two_hnd matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/master
+execute unless score @s ca.curse_two_hnd matches 1.. if score @s ca.two_hand_time matches 1.. run scoreboard players remove @s ca.two_hand_time 1
+execute if score @s ca.curse_two_hnd matches 0 if score @s ca.two_hand_time matches 0 if data entity @s Inventory[{Slot:-106b}].tag.Compressed run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/unpackage
 
 tag @s remove processed_two_handed
 execute if score @s ca.two_hand_del matches 1.. run scoreboard players remove @s ca.two_hand_del 1

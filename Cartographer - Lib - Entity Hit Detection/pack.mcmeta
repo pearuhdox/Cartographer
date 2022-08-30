@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 7,
+		"pack_format": 10,
 		"description": "§7Cartographer: Lib - Entity Hit Detection \n§7Author: §agibbsly \n§7[§egithub.com/gibbsly/ehid§7]\n§8(based on a concept by ncfunction)"
 	}
 }

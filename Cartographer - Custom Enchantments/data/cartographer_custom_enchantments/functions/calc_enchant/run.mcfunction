@@ -24,9 +24,6 @@ function cartographer_custom_enchantments:calc_enchant/curse_malevolence
 
 function cartographer_custom_enchantments:calc_enchant/has_passive
 
-#Run Two Handed Here
-execute if entity @s[scores={ca.death_time=41..},tag=!processed_two_handed] run function cartographer_custom_enchantments:enchant_effects/curse_two_handed/branch
-
 #Uncompress Items taken out of the offhand and put in the normal inventory
 function cartographer_custom_enchantments:enchant_effects/curse_two_handed/inv_fix
 
