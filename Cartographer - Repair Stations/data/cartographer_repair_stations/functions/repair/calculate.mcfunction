@@ -21,17 +21,17 @@ scoreboard players operation @p LapisCost = @s LapisCost
 execute unless score @s XPcost > $repair_max XPcost unless score @s LapisCost > $repair_max LapisCost run summon armor_stand ~ ~0.25 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_xp_cost"],DisabledSlots:4144959,CustomName:'{"text":"to fix level grumble grumble","color":"#82FF4D"}'}
 execute unless score @s XPcost > $repair_max XPcost unless score @s LapisCost > $repair_max LapisCost run summon armor_stand ~ ~0 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_lapis_cost"],DisabledSlots:4144959,CustomName:'{"text":"to fix lapis grumble grumble","color":"#263CFF"}'}
 
-execute positioned ~1 -63 ~ run setblock ~ ~ ~ oak_sign replace
-execute positioned ~-1 -63 ~ run setblock ~ ~ ~ oak_sign replace
+execute positioned 4206896 0 4206900 run setblock ~ ~ ~ oak_sign replace
+execute positioned 4206895 0 4206900 run setblock ~ ~ ~ oak_sign replace
 
-data modify block ~1 -63 ~ Text1 set value '[{"score":{"name":"@p","objective":"XPcost"},"color":"#82FF4D","italic":false},{"text":" Levels","color":"#82FF4D","italic":false}]'
-data modify block ~-1 -63 ~ Text1 set value '[{"score":{"name":"@p","objective":"LapisCost"},"color":"#263CFF","italic":false},{"text":" Lapis Lazuli","color":"#263CFF","italic":false}]'
+data modify block 4206896 0 4206900 Text1 set value '[{"score":{"name":"@p","objective":"XPcost"},"color":"#82FF4D","italic":false},{"text":" Levels","color":"#82FF4D","italic":false}]'
+data modify block 4206895 0 4206900 Text1 set value '[{"score":{"name":"@p","objective":"LapisCost"},"color":"#263CFF","italic":false},{"text":" Lapis Lazuli","color":"#263CFF","italic":false}]'
 
-execute positioned ~1 -63 ~ as @s run data modify entity @e[type=armor_stand,tag=repair_xp_cost,limit=1] CustomName set from block ~ -63 ~ Text1
-execute positioned ~-1 -63 ~ as @s run data modify entity @e[type=armor_stand,tag=repair_lapis_cost,limit=1] CustomName set from block ~ -63 ~ Text1
+execute positioned 4206896 0 4206900 as @s run data modify entity @e[type=armor_stand,tag=repair_xp_cost,limit=1] CustomName set from block ~ ~ ~ Text1
+execute positioned 4206895 0 4206900 as @s run data modify entity @e[type=armor_stand,tag=repair_lapis_cost,limit=1] CustomName set from block ~ ~ ~ Text1
 
-execute positioned ~1 -63 ~ run setblock ~ ~ ~ bedrock replace
-execute positioned ~-1 -63 ~ run setblock ~ ~ ~ bedrock replace
+execute positioned 4206896 0 4206900 run setblock ~ ~ ~ bedrock replace
+execute positioned 4206895 0 4206900 run setblock ~ ~ ~ bedrock replace
 
 execute if entity @s[scores={MaterialCost=4},tag=wood] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 Wooden Planks","color":"#856A46"}'}
 execute if entity @s[scores={MaterialCost=4},tag=stone] run summon armor_stand ~ ~0.5 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_material_cost"],DisabledSlots:4144959,CustomName:'{"text":"4 Cobblestone","color":"#696969"}'}
@@ -52,8 +52,8 @@ execute if entity @s[scores={MaterialCost=4},tag=membrane] run summon armor_stan
 execute if score @s XPcost > $repair_max XPcost run summon armor_stand ~ ~0.75 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_xp_cost","too_expensive"],DisabledSlots:4144959,CustomName:'{"text":"Too Expensive!","color":"red"}'}
 execute if score @s LapisCost > $repair_max LapisCost run summon armor_stand ~ ~0.75 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_lapis_cost","too_expensive"],DisabledSlots:4144959,CustomName:'{"text":"Too Expensive!","color":"red"}'}
 
-execute positioned ~ -63 ~ run setblock ~ ~ ~ oak_sign replace
-data modify block ~ -63 ~ Text1 set value '[{"selector":"@p","color":"gold","italic":false},{"text":"\'s item!","color":"white","italic":false}]'
+execute positioned 4206896 0 4206900 run setblock ~ ~ ~ oak_sign replace
+data modify block 4206896 0 4206900 Text1 set value '[{"selector":"@p","color":"gold","italic":false},{"text":"\'s item!","color":"white","italic":false}]'
 
 execute unless score @s XPcost > $repair_max XPcost unless score @s LapisCost > $repair_max LapisCost run summon armor_stand ~2 ~-0.1 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_indicator_confirm","repair_indicator_text"],DisabledSlots:4144959,CustomName:'[{"text":"[","color":"white"},{"keybind":"key.attack","color":"aqua"},{"text":"]"}]'}
 execute unless score @s XPcost > $repair_max XPcost unless score @s LapisCost > $repair_max LapisCost run summon armor_stand ~2 ~-0.35 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:0b,Tags:["repair_indicator_confirm","repair_indicator_text"],DisabledSlots:4144959,CustomName:'{"text":"to repair","color":"white"}'}
@@ -68,6 +68,5 @@ summon armor_stand ~-2 ~-0.6 ~ {CustomNameVisible:1b,NoGravity:1b,ShowArms:1b,Sm
 
 summon sheep ~-2 ~ ~ {UUID:[I;823664661,407986577,0,823407890],Sheared:1b,NoGravity:1b,Silent:1b,CustomNameVisible:1b,DeathLootTable:"no",NoAI:1b,Health:1000f,Size:0,Tags:["repair_interact_return"],CustomName:'[{"text":"[","color":"white"},{"keybind":"key.attack","color":"aqua"},{"text":"] to return item!"}]',Attributes:[{Name:generic.max_health,Base:1000}]}
 
-execute positioned ~ -63 ~ as @e[type=armor_stand,tag=player_tag_indicator] run data modify entity @s CustomName set from block ~ -63 ~ Text1
-
-execute positioned ~ -63 ~ run setblock ~ ~ ~ bedrock replace
+execute positioned 4206896 0 4206900 as @e[type=armor_stand,tag=player_tag_indicator] run data modify entity @s CustomName set from block ~ ~ ~ Text1
+execute positioned 4206896 0 4206900 run setblock ~ ~ ~ bedrock replace
