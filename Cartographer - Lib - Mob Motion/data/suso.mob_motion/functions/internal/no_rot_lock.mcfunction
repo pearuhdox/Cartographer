@@ -1,0 +1,2 @@
+execute facing entity @p[tag=co_target_player] feet run function suso.mob_motion:internal/do
+execute unless entity @p[tag=co_target_player] facing entity @p feet run function suso.mob_motion:internal/do

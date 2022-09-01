@@ -1,7 +1,1 @@
-{ 
-	"replace":false,
-	"values": 
-	[ 
-		"motion:load" 
-	] 
-}
+{"values":["suso.mob_motion:load"],"replace":false}
