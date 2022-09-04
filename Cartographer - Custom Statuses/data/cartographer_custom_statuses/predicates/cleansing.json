@@ -5,8 +5,8 @@
     "effects": {
       "minecraft:nausea": {
         "amplifier": {
-          "min": 10,
-          "max": 127
+          "min": 100,
+          "max": 100
         }
       }
     }

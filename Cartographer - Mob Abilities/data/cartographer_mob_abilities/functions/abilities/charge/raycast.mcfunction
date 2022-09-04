@@ -15,9 +15,13 @@ execute as @a[distance=..1.75,tag=!ran_over] at @s run tag @s add ran_over
 
 tp @s ^ ^ ^0.5
 
+execute if entity @s[tag=ca.grab] positioned ^ ^ ^2 run effect give @p[limit=1,sort=nearest,tag=ran_over] blindness 2 0 true
+execute if entity @s[tag=ca.grab] positioned ^ ^ ^2 run tp @p[limit=1,sort=nearest,tag=ran_over] ~ ~ ~ facing entity @s feet
+
 execute unless block ^ ^ ^0.5 #bb:can_raycast run scoreboard players set @s ca.raycast 0
 
 execute if score @s ca.raycast matches 0 run tp @s ^ ^-0.1 ^
+
 
 execute as @s[scores={ca.raycast=0}] at @s positioned ~ ~-0.5 ~ run function cartographer_mob_abilities:passive/breaker
 

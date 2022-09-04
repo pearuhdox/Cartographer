@@ -10,8 +10,6 @@ execute if score $custom_statuses ca.installed matches 1.. if entity @a[distance
 #Run Charon Effects
 execute if score $charon ca.installed matches 1.. if entity @a[distance=..40] if entity @s[type=#bb:hostile] run function cartographer_charon:loop/1_second/entities
 
-#Run Decay Spread
-#execute if entity @s[type=item,nbt={Item:{tag:{Decaying:1}}}] run function cartographer_custom_statuses:effects/infection_spread
 
 #in minecraft:overworld run loot Additions Effects
 #function cartographer_loot_additions:loop/tick/entities

@@ -8,8 +8,7 @@ execute as @s[type=#bb:hostile,scores={ca.effect_stun_duration=1..}] at @s run f
 execute as @s[type=#bb:hostile,scores={ca.possess_time=1..}] at @s run function cartographer_custom_statuses:tick_effects/possession/warmup
 
 #Run Vulnerability
-execute as @s[type=#bb:hostile,predicate=cartographer_custom_statuses:is_exposed] at @s run function cartographer_custom_statuses:effects/vulnerability
-execute as @s[type=#bb:hostile,predicate=cartographer_custom_statuses:is_exposed] at @s run function cartographer_custom_statuses:tick_effects/vulnerability
+execute as @s[type=#bb:hostile,predicate=cartographer_custom_statuses:is_exposed] at @s run function cartographer_custom_statuses:tick_effects/vulnerability/effect
 
 #Run Blindness
 execute as @s[type=#bb:hostile,predicate=cartographer_custom_statuses:is_blind] at @s run function cartographer_custom_statuses:effects/blindness

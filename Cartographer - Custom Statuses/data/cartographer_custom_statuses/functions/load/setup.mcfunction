@@ -33,7 +33,7 @@ scoreboard objectives add ca.exposed_hit dummy
 scoreboard objectives add ca.decay_min dummy
 scoreboard objectives add ca.decay_max dummy
 
-scoreboard objectives add ca.pity_shock dummy
+scoreboard objectives add ca.voltage_shocked dummy
 
 scoreboard objectives add ca.cu_st_dmg minecraft.custom:minecraft.damage_dealt
 

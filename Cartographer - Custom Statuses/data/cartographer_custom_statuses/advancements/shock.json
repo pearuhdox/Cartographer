@@ -5,7 +5,7 @@
             "color": "#CC73FF"
         },
         "description": {
-            "text": "Afflicted takes damage every second, also dealing (less) damage every second to nearby enemies, with a chance of disrupting them.",
+            "text": "Afflicted takes damage every second and damages nearby enemies. After enough shocks, afflicted is stunned and neighbors are knocked back.",
             "color": "white"
         },
         "icon": {
