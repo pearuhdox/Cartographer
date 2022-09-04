@@ -193,24 +193,6 @@ scoreboard objectives add ca.fire_cbow minecraft.used:minecraft.crossbow
 scoreboard objectives add ca.arrow_dmg dummy
 scoreboard objectives add ca.throw_trident minecraft.used:minecraft.trident
 
-scoreboard objectives add ca.br_barrel minecraft.mined:minecraft.barrel
-scoreboard objectives add ca.br_oak_dr minecraft.mined:minecraft.oak_door
-scoreboard objectives add ca.br_spr_dr minecraft.mined:minecraft.spruce_door
-scoreboard objectives add ca.br_bir_dr minecraft.mined:minecraft.birch_door
-scoreboard objectives add ca.br_jun_dr minecraft.mined:minecraft.jungle_door
-scoreboard objectives add ca.br_aca_dr minecraft.mined:minecraft.acacia_door
-scoreboard objectives add ca.br_drk_dr minecraft.mined:minecraft.dark_oak_door
-scoreboard objectives add ca.br_cri_dr minecraft.mined:minecraft.crimson_door
-scoreboard objectives add ca.br_war_dr minecraft.mined:minecraft.warped_door
-scoreboard objectives add ca.br_oka_trap minecraft.mined:minecraft.oak_trapdoor
-scoreboard objectives add ca.br_spr_trap minecraft.mined:minecraft.spruce_trapdoor
-scoreboard objectives add ca.br_bir_trap minecraft.mined:minecraft.birch_trapdoor
-scoreboard objectives add ca.br_jun_trap minecraft.mined:minecraft.jungle_trapdoor
-scoreboard objectives add ca.br_aca_trap minecraft.mined:minecraft.acacia_trapdoor
-scoreboard objectives add ca.br_drk_trap minecraft.mined:minecraft.dark_oak_trapdoor
-scoreboard objectives add ca.br_cri_trap minecraft.mined:minecraft.crimson_trapdoor
-scoreboard objectives add ca.br_war_trap minecraft.mined:minecraft.warped_trapdoor
-
 scoreboard objectives add ca.use_pearl minecraft.used:minecraft.ender_pearl
 scoreboard objectives add ca.use_splashpot minecraft.used:minecraft.splash_potion
 scoreboard objectives add ca.use_lingerpot minecraft.used:minecraft.lingering_potion
