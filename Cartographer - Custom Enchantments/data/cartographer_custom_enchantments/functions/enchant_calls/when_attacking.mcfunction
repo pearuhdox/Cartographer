@@ -20,8 +20,6 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.due
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[tag=!ca.echo_charge_taken,scores={ca.echo=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/echo
 #Evocation
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.evocation=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/evocation
-#Executioner
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.executioner=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/executioner
 #Frostbite
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.frostbite=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/frostbite
 #Hunter
@@ -51,6 +49,10 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.fir
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}},scores={ca.tempo_theft=1}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}},scores={ca.tempo_theft=2}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}},scores={ca.tempo_theft=3}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
+
+#Executioner - Happens last in chain for health reasons
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.executioner=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/executioner
+
 
 #If NOT a projectile attack, cleanse the ranged tags on nearby mobs.
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}}] as @e[type=#bb:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/purge_ranged_tags
