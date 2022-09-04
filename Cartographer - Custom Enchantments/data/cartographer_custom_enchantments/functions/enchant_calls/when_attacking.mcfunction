@@ -54,5 +54,3 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements=
 
 #If NOT a projectile attack, cleanse the ranged tags on nearby mobs.
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}}] as @e[type=#bb:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/purge_ranged_tags
-
-tag @s remove can_first_strike

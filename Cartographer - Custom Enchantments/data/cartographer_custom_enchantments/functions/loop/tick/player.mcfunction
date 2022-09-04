@@ -37,6 +37,9 @@ execute if score @s ca.evo_burn matches 1 run scoreboard players remove @s ca.ev
 execute if score @s ca.evo_burn matches 20 run scoreboard players set @s ca.evo_burn 0
 execute if score @s ca.evo_burn matches 40 run scoreboard players set @s ca.evo_burn 0
 
+#Run The Notification that First Strike is available
+execute if entity @s[tag=ca.used_first_strike] if score @s ca.combat_timer matches 0 run function cartographer_custom_enchantments:enchant_effects/first_strike/notify_available
+
 #Run an inventory calc the tick after using Auto Charge
 execute if entity @s[tag=auto_charge_inv_fix] run function cartographer_custom_enchantments:inventory_changed
 tag @s remove auto_charge_inv_fix
