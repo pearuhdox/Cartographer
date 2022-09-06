@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+      "#cartographer_repair_stations:slots/held",
+      "#cartographer_repair_stations:slots/head",
+      "#cartographer_repair_stations:slots/body",
+      "#cartographer_repair_stations:slots/legs",
+      "#cartographer_repair_stations:slots/feet"
+    ]
+  }
+  

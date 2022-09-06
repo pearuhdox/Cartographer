@@ -1,3 +1,5 @@
+data modify entity @s Invulnerable set value 0b
+
 execute if entity @s[nbt={Item:{id:"minecraft:wooden_sword"}}] run data modify entity 31182015-1851-6191-0000-914162120 HandItems[0] set from entity @s Item
 execute if entity @s[nbt={Item:{id:"minecraft:wooden_axe"}}] run data modify entity 31182015-1851-6191-0000-914162120 HandItems[0] set from entity @s Item
 execute if entity @s[nbt={Item:{id:"minecraft:wooden_shovel"}}] run data modify entity 31182015-1851-6191-0000-914162120 HandItems[0] set from entity @s Item
@@ -275,12 +277,17 @@ execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:netherite_
 
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:bow"}}] run tag @s add string
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:crossbow"}}] run tag @s add string
+
+##
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:trident"}}] run tag @s add quartz
 
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:shield"}}] run tag @s add iron
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:fishing_rod"}}] run tag @s add string
+
+##
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:carrot_on_a_stick"}}] run tag @s add carrot
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:warped_fungus_on_a_stick"}}] run tag @s add fungus
+
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:shears"}}] run tag @s add iron
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:flint_and_steel"}}] run tag @s add iron
 
@@ -290,6 +297,8 @@ execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:chainmail_
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:iron_helmet"}}] run tag @s add iron
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:diamond_helmet"}}] run tag @s add diamond
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:netherite_helmet"}}] run tag @s add netherite
+
+##
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:turtle_helmet"}}] run tag @s add scute
 
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:leather_chestplate"}}] run tag @s add leather
@@ -298,6 +307,8 @@ execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:chainmail_
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:iron_chestplate"}}] run tag @s add iron
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:diamond_chestplate"}}] run tag @s add diamond
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:netherite_chestplate"}}] run tag @s add netherite
+
+##
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:elytra"}}] run tag @s add membrane
 
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:leather_leggings"}}] run tag @s add leather
@@ -313,6 +324,8 @@ execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:chainmail_
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:iron_boots"}}] run tag @s add iron
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:diamond_boots"}}] run tag @s add diamond
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:netherite_boots"}}] run tag @s add netherite
+
+
 
 execute as @s[tag=held] at @s if entity @a[distance=..7] as 31182015-1851-6191-0000-914162120 at @s run tag @s add held
 execute as @s[tag=helm] at @s if entity @a[distance=..7] as 31182015-1851-6191-0000-914162120 at @s run tag @s add helm
@@ -342,7 +355,6 @@ execute unless entity @s[tag=valid] run kill 31182015-1851-6191-0000-914162120
 execute if entity @s[tag=!valid,tag=!full] unless entity 31182015-1851-6191-0000-1291455 run summon armor_stand ~ ~0.35 ~ {UUID:[I;823664661,407986577,0,19469397],Marker:1b,Invisible:1b,Tags:["repair_invalid"],CustomNameVisible:1,CustomName:'[{"text":"This item cannot be repaired!","color":"red"}]'}
 execute if entity @s[tag=!valid,tag=full] unless entity 31182015-1851-6191-0000-1291455 run summon armor_stand ~ ~0.35 ~ {UUID:[I;823664661,407986577,0,19469397],Marker:1b,Invisible:1b,Tags:["repair_invalid"],CustomNameVisible:1,CustomName:'[{"text":"This item is at full durability!","color":"red"}]'}
 execute if entity @s[tag=!valid,tag=full] run tag @s remove full
-
 
 kill 31182015-1851-6191-0000-1291451
 kill 31182015-1851-6191-0000-1291452
