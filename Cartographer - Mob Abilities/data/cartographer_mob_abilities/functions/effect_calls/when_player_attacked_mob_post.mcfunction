@@ -23,7 +23,7 @@ execute if entity @s[tag=ca.touch] if entity @s[tag=ca.zephyrous] run scoreboard
 
 
 execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] run tag @a[tag=touched] add ability_tagged
-execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] run function cartographer_mob_abilities:ability_traits/call_all_traits
+execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits
 
 execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=true}}] run tag @a[tag=touched] add ability_tagged
 execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=true}}] run function cartographer_mob_abilities:ability_traits/touch/ranged

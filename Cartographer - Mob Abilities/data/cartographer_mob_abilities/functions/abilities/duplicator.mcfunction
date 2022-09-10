@@ -215,7 +215,7 @@ execute as @e[tag=duplicate,tag=!done_dupe,distance=..1.5] at @s run function ca
 
 playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..16] ~ ~ ~ 3 1.3
 
-function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 scoreboard players remove $tokened_total ca.tokens 1

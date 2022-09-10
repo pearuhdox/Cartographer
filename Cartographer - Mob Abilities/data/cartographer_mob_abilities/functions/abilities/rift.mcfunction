@@ -13,13 +13,7 @@ function cartographer_mob_abilities:abilities/rift/calc_damage
 data remove storage cartographer_mob_abilities:info rift.Tags
 
 #Copy trait tags to storage
-execute if entity @s[tag=ca.blazing] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.blazing"
-execute if entity @s[tag=ca.glacial] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.glacial"
-execute if entity @s[tag=ca.horrifying] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.horrifying"
-execute if entity @s[tag=ca.overloading] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.overloading"
-execute if entity @s[tag=ca.venemous] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.venemous"
-execute if entity @s[tag=ca.zephyrous] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.zephyrous"
-execute if entity @s[tag=ca.volatile] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.volatile"
+execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:abilities/rift/trait_copy
 
 data modify storage cartographer_mob_abilities:info rift.Tags append value "rift_spot"
 
@@ -28,7 +22,7 @@ scoreboard players operation $rift_damage ca.ability_dmg = $damage ca.ability_dm
 
 execute as @e[type=area_effect_cloud,tag=rift_spot,distance=..18] at @s run function cartographer_mob_abilities:abilities/rift/spot_branch
 
-function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 tag @a remove ability_tagged
 

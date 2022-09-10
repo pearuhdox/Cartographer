@@ -17,7 +17,7 @@ function cartographer_mob_abilities:abilities/hookshot/calc_damage
 
 execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/hookshot/raycast
 
-execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..18] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 tag @a[distance=..18] remove ability_tagged
 tag @a[distance=..18] remove hooked

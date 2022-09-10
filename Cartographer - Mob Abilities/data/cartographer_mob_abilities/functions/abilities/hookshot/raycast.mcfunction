@@ -17,7 +17,7 @@ execute as @a[distance=..2,tag=!hooked] run tag @s remove no_cdl_msg
 execute as @a[distance=..2,tag=!hooked] run function cd:lib/player/damage/normal
 
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,tag=!hooked] at @s run tag @s add ability_tagged
-execute if entity @a[tag=ability_tagged,tag=!hooked,gamemode=!spectator,gamemode=!creative,distance=..18] at @s run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
+execute if entity @a[tag=ability_tagged,tag=!hooked,gamemode=!spectator,gamemode=!creative,distance=..18] at @s run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 
 execute as @a[distance=..2,tag=!hooked] run tag @s add hooked
 

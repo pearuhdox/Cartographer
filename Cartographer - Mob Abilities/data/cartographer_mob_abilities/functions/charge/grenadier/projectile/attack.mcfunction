@@ -1,9 +1,10 @@
-execute if entity @s[tag=ca.blazing] run particle lava ~ ~0.25 ~ 1.5 0 1.5 0 15 normal
-execute if entity @s[tag=ca.glacial] run particle item_snowball ~ ~0.25 ~ 1.5 0 1.5 0 15 normal
-execute if entity @s[tag=ca.horrifying] run particle dust 0.302 0.2 0.761 1 ~ ~0.25 ~ 1.5 0 1.5 0 15 normal
-execute if entity @s[tag=ca.overloading] run particle wax_off ~ ~0.25 ~ 1.5 0 1.5 1 15 normal
-execute if entity @s[tag=ca.venemous] run particle item_slime ~ ~0.25 ~ 1.5 0 1.5 0.1 15 normal
-execute if entity @s[tag=ca.zephyrous] run particle cloud ~ ~0.25 ~ 1.5 0 1.5 0.05 15 normal
+execute if entity @s[tag=ca.blazing] run particle lava ~ ~0.4 ~ 2 0.3 2 0 20 normal
+execute if entity @s[tag=ca.glacial] run particle item_snowball ~ ~0.4 ~ 2 0.3 2 0 40 normal
+execute if entity @s[tag=ca.horrifying] run particle sculk_soul ~ ~0.4 ~ 2 0.3 2 0.1 30 normal
+execute if entity @s[tag=ca.overloading] run particle electric_spark ~ ~0.4 ~ 2 0.3 2 1 40 normal
+execute if entity @s[tag=ca.venemous] run particle item_slime ~ ~0.4 ~ 2 0.3 2 0.1 40 normal
+execute if entity @s[tag=ca.zephyrous] run particle cloud ~ ~0.4 ~ 2 0.3 2 0.05 40 normal
+execute if entity @s[tag=ca.alchemist] run particle effect ~ ~0.4 ~ 2 0.3 2 0.05 40 normal
 
 
 particle explosion ~ ~0.25 ~ 1.5 0 1.5 0 8 normal

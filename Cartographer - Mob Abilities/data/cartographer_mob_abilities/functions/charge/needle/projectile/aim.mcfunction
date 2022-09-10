@@ -17,6 +17,8 @@ execute if score @s ca.aim matches 6 facing entity @p eyes rotated ~-3 ~-2 run t
 #Transfer parent tags over to AEC
 data modify entity @s Tags set from storage cartographer_mob_abilities:info needle.Tags
 
+execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:charge/needle/projectile/alchemist_aim
+
 #Transfer damage amount over to AEC
 scoreboard players operation @s ca.ability_dmg = $needle_damage ca.ability_dmg
 

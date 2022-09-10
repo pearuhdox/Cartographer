@@ -30,3 +30,6 @@ execute if entity @s[scores={ca.horrified=1..}] run function cartographer_mob_ab
 
 #For all players with the hooked debuff, reduce the debuff and run it.
 execute if entity @s[scores={ca.hooked=1..}] run function cartographer_mob_abilities:abilities/hookshot/player/timer
+
+#Reduce the cooldown timer on parting gift cloud application
+execute if score @s ca.linger_cooldown matches 1.. run scoreboard players remove @s ca.linger_cooldown 1

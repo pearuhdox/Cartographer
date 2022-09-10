@@ -31,7 +31,7 @@ execute if entity @s[tag=ca.volatile] run scoreboard players set $laser_vol ca.v
 execute as @e[tag=laser_marker,distance=..1,limit=1] at @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/laser/raycast
 
 #Run non onhit traits
-function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 

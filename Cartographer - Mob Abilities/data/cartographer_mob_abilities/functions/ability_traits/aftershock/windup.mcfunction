@@ -1,4 +1,4 @@
-playsound minecraft:entity.zombie.break_wooden_door hostile @a[distance=..16] ~ ~ ~ 0.2 1
+playsound minecraft:entity.zombie.break_wooden_door hostile @a[distance=..16] ~ ~ ~ 0.1 1
 particle minecraft:block minecraft:dirt ~ ~0.25 ~ 0.5 0 0.5 0 3 normal
 
 particle minecraft:dust 0.792 0.792 0.792 0.5 ~3 ~0.5 ~ 0.4 0 0.4 0.01 3 normal @a

@@ -19,7 +19,7 @@ execute if entity @s[tag=ca.evocative] run scoreboard players set $aug_evo ca.va
 
 execute as @e[distance=0.5..15,limit=3,tag=!augmenter,sort=nearest,type=#bb:hostile] at @s run function cartographer_mob_abilities:abilities/augmenter/effect
 
-function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 playsound minecraft:entity.illusioner.prepare_blindness hostile @a[distance=..16] ~ ~ ~ 4 1
 playsound minecraft:entity.zombie.infect hostile @a[distance=..16] ~ ~ ~ 2 0.5

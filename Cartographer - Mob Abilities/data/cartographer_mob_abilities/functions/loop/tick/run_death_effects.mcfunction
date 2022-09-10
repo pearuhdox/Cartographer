@@ -7,10 +7,10 @@ execute if data storage ca.death Data.DuplicateDeath at @s run function cartogra
 
 
 #Parting Gift
-execute if data storage ca.death Data.PartingGift at @s run function cartographer_mob_abilities:passive/parting_gift
+execute if data storage ca.death Data.PartingGift at @s run function cartographer_mob_abilities:passive/parting_gift/drop
 
 #Corpse Crawler
-execute if data storage ca.death Data.CorpseCrawler at @s run function cartographer_mob_abilities:passive/corpse_crawler/zombie
+execute if data storage ca.death Data.CorpseCrawler at @s run function cartographer_mob_abilities:passive/corpse_crawler/master
 execute if data storage ca.death Data.CorpseCrawlerBee at @s run function cartographer_mob_abilities:passive/corpse_crawler/bee
 execute if data storage ca.death Data.CorpseCrawlerDrowned at @s run function cartographer_mob_abilities:passive/corpse_crawler/drowned
 execute if data storage ca.death Data.CorpseCrawlerHusk at @s run function cartographer_mob_abilities:passive/corpse_crawler/husk

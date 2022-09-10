@@ -8,6 +8,7 @@ execute if entity @s[tag=ca.overloading] run particle minecraft:electric_spark ~
 execute if entity @s[tag=ca.venemous] run particle minecraft:item_slime ~ ~1 ~ 0.1 0.1 0.1 0.3 2 normal @a
 execute if entity @s[tag=ca.zephyrous] run particle minecraft:dust 1 1 1 1 ~ ~1 ~ 0.2 0.2 0.2 0.1 4 normal @a
 execute if entity @s[tag=ca.horrifying] run particle minecraft:dust_color_transition 1 0 1 1 0 0 1 ~ ~1 ~ 0.2 0.2 0.2 0.1 4 normal @a
+execute if entity @s[tag=ca.alchemist] run particle minecraft:effect ~ ~1 ~ 0.1 0.1 0.1 0.1 1 normal @a
 execute if entity @s[tag=ca.volatile] run particle minecraft:smoke ~ ~1 ~ 0.1 0.1 0.1 0.1 1 normal @a
 
 execute if entity @s[tag=ca.volatile] run playsound minecraft:entity.creeper.primed hostile @a[distance=..10] ~ ~ ~ 1 1.5 0.5

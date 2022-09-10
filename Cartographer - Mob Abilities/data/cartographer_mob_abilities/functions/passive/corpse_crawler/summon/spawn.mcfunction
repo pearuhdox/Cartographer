@@ -1,0 +1,39 @@
+execute if score @s ca.summon_id matches 1 run summon zombie ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 2 run summon husk ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 3 run summon drowned ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 4 run summon skeleton ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 5 run summon stray ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 6 run summon wither_skeleton ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 7 run summon zombified_piglin ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 8 run summon phantom ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 9 run summon spider ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 10 run summon cave_spider ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 11 run summon silverfish ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 12 run summon endermite ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 13 run summon creeper ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 14 run summon enderman ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 15 run summon blaze ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 16 run summon slime ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 17 run summon magma_cube ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 18 run summon ghast ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 19 run summon vindicator ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 20 run summon evoker ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 21 run summon pillager ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 22 run summon vex ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 23 run summon ravager ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 24 run summon guardian ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 25 run summon elder_guardian ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 26 run summon shulker ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 27 run summon zombie_villager ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 28 run summon bee ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 29 run summon piglin ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 30 run summon piglin_brute ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 31 run summon hoglin ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 32 run summon zoglin ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 33 run summon illusioner ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 34 run summon wolf ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 35 run summon rabbit ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+execute if score @s ca.summon_id matches 36 run summon iron_golem ~ ~1 ~ {Tags:["ca.corpse_crawler_summoned"]}
+
+scoreboard players set $run_corpse_@e ca.summon_id 1
+data modify storage cartographer_mob_abilities:summoner data set from entity @s HandItems[1]

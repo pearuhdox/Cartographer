@@ -21,6 +21,10 @@ scoreboard objectives add copies dummy
 
 scoreboard objectives add exalted dummy
 
+scoreboard objectives add ca.death_traits dummy
+
+scoreboard objectives add ca.linger_cooldown dummy
+
 scoreboard objectives add reflect_past dummy
 scoreboard objectives add reflect_check dummy
 scoreboard objectives add reflect_diff dummy

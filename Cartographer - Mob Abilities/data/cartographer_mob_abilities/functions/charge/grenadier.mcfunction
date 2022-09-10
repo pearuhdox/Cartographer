@@ -1,6 +1,6 @@
 execute unless entity @s[scores={ability_charge=1..3}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
 
-execute unless entity @s[scores={ability_charge=3}] run summon armor_stand ~ ~1.5 ~ {Small:1b,Invisible:1b,NoBasePlate:1b,Pose:{Head:[180f,0f,0f]},Tags:["grenadier_projectile"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1794540134,-610646290,-1585350842,353223711],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWIyMGZmMTczYmQxN2IyYzRmMmViMjFmM2M0YjQzODQxYTE0YjMxZGZiZmQzNTRhM2JlYzgyNjNhZjU2MmIifX19"}]}}}}]}
+execute unless entity @s[scores={ability_charge=3}] run summon armor_stand ~ ~1.5 ~ {ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:1b,Tags:["grenadier_projectile"],Pose:{LeftArm:[310f,90f,0f],RightArm:[310f,270f,0f],Head:[180f,0f,0f]},ArmorItems:[{},{},{},{id:'minecraft:player_head',Count:1b,tag:{SkullOwner:{Id:[I;-1794540134,-610646290,-1585350842,353223711],Properties:{textures:[{Value:'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWIyMGZmMTczYmQxN2IyYzRmMmViMjFmM2M0YjQzODQxYTE0YjMxZGZiZmQzNTRhM2JlYzgyNjNhZjU2MmIifX19'}]}}}}]}
 
 #Calc Damage
 execute unless entity @s[scores={ability_charge=3}] run function cartographer_mob_abilities:charge/grenadier/projectile/calc_damage
@@ -9,13 +9,7 @@ execute unless entity @s[scores={ability_charge=3}] run function cartographer_mo
 data remove storage cartographer_mob_abilities:info grenadier.Tags
 
 #Copy trait tags to storage
-execute unless entity @s[scores={ability_charge=3}] if entity @s[tag=ca.blazing] run data modify storage cartographer_mob_abilities:info grenadier.Tags append value "ca.blazing"
-execute unless entity @s[scores={ability_charge=3}] if entity @s[tag=ca.glacial] run data modify storage cartographer_mob_abilities:info grenadier.Tags append value "ca.glacial"
-execute unless entity @s[scores={ability_charge=3}] if entity @s[tag=ca.horrifying] run data modify storage cartographer_mob_abilities:info grenadier.Tags append value "ca.horrifying"
-execute unless entity @s[scores={ability_charge=3}] if entity @s[tag=ca.overloading] run data modify storage cartographer_mob_abilities:info grenadier.Tags append value "ca.overloading"
-execute unless entity @s[scores={ability_charge=3}] if entity @s[tag=ca.venemous] run data modify storage cartographer_mob_abilities:info grenadier.Tags append value "ca.venemous"
-execute unless entity @s[scores={ability_charge=3}] if entity @s[tag=ca.zephyrous] run data modify storage cartographer_mob_abilities:info grenadier.Tags append value "ca.zephyrous"
-execute unless entity @s[scores={ability_charge=3}] if entity @s[tag=ca.volatile] run data modify storage cartographer_mob_abilities:info grenadier.Tags append value "ca.volatile"
+execute unless entity @s[tag=ca.ignore_traits_active] unless entity @s[scores={ability_charge=3}] run function cartographer_mob_abilities:charge/grenadier/projectile/trait_copy
 
 execute unless entity @s[scores={ability_charge=3}] run data modify storage cartographer_mob_abilities:info grenadier.Tags append value "grenadier_projectile"
 

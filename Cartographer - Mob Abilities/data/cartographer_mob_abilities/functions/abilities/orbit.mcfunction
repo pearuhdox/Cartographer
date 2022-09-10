@@ -3,7 +3,7 @@ execute if score $global helper_diff matches 3.. run scoreboard players set @s c
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
-function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 scoreboard players set @s ability_charge 0
 

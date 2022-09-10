@@ -190,7 +190,7 @@ scoreboard players set @s co_send -8
 function motion:motion/push
 
 #Run not on hit traits
-function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 execute unless entity @a[distance=11..20] as @e[tag=target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~ ~2
 execute if entity @a[distance=11..20] as @e[tag=target,tag=trap_projectile] at @s run tp @s ~ ~ ~ ~ ~3

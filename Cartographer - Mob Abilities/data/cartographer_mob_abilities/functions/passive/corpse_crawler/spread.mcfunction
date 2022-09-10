@@ -30,4 +30,12 @@ execute positioned ~ 0 ~ if entity @s[distance=233..240] at @s run spreadplayers
 execute positioned ~ 0 ~ if entity @s[distance=241..248] at @s run spreadplayers ~ ~ 0 2 under 250 false @s
 execute positioned ~ 0 ~ if entity @s[distance=249..256] at @s run spreadplayers ~ ~ 0 2 under 258 false @s
 
+scoreboard players operation @s ca.summon_id = $corpse_crawler ca.summon_id
+
+execute if score @s ca.summon_id matches 2.. run function cartographer_mob_abilities:passive/corpse_crawler/skin
+
+data modify entity @s HandItems[1] set from storage cartographer_mob_abilities:summoner data
+
+tag @s add ca.spread
+
 schedule function cartographer_mob_abilities:passive/corpse_crawler/push 1t

@@ -22,9 +22,9 @@ execute as @a[distance=..4.5] at @s unless block ~ ~-0.3 ~ air run function cd:l
 
 #Trait Effects
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..4.5] at @s unless block ~ ~-0.3 ~ air run tag @s add ability_tagged
-execute if entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..4.5] run function cartographer_mob_abilities:ability_traits/call_all_traits
+execute if entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..4.5] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits
 
-execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..4.5] if score @s recast_count matches 1 run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
+execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..4.5] if score @s recast_count matches 1 run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 tag @a remove ability_tagged
 

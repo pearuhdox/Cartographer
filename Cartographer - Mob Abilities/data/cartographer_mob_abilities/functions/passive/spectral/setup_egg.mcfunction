@@ -1,0 +1,1 @@
+data modify entity @s Item set from storage ca.death Data.Entity[0]

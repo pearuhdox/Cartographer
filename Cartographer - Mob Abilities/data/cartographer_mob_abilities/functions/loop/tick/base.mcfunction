@@ -32,3 +32,6 @@ execute if score $block_effects_creeper ca.var matches 1.. run scoreboard player
 
 #Reduce dragon fireball checker timer by 1
 execute if score $dragon_fireball_shooter ca.var matches 1.. run scoreboard players remove $dragon_fireball_shooter ca.var 1
+
+#Reduce parting gift timer by 1
+execute if score $parting_gift_active ca.var matches 1.. run scoreboard players remove $parting_gift_active ca.var 1
