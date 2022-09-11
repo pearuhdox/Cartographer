@@ -1,6 +1,6 @@
-data modify entity @s[tag=is_fire_aspect_1] Fire set value 81
-data modify entity @s[tag=is_fire_aspect_2] Fire set value 161
-data modify entity @s[tag=is_fire_aspect_3] Fire set value 221
+data modify entity @s[tag=is_fire_aspect_1] Fire set value 101
+data modify entity @s[tag=is_fire_aspect_2] Fire set value 181
+data modify entity @s[tag=is_fire_aspect_3] Fire set value 241
 
 tag @s[type=#bb:hostile,tag=is_fire_aspect_1] remove is_fire_aspect_1
 tag @s[type=#bb:hostile,tag=is_fire_aspect_2] remove is_fire_aspect_2

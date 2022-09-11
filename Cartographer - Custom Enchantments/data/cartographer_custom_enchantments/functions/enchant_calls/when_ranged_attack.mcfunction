@@ -29,7 +29,7 @@ scoreboard players set $fire_aspect ca.var 0
 scoreboard players set $cauterize ca.var 0
 
 scoreboard players set $loyalty ca.var 0
-
+scoreboard players set $wavedash ca.var 0
 
 #Grab All Relevant Data from the Arrow in question.
 execute at @s as @e[distance=..7,type=#cartographer_core:arrow,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch
@@ -159,9 +159,9 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleedi
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleeding_2] at @s run function cartographer_custom_enchantments:enchant_effects/bleeding/ranged
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleeding_3] at @s run function cartographer_custom_enchantments:enchant_effects/bleeding/ranged
 
-#Loyalty - Hits entity
-execute if score $cu_en_ranged ca.enabler matches 1.. as @e[type=trident,tag=ca.loyalty] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty/convert
-execute if score $cu_en_ranged ca.enabler matches 1.. run tag @s remove is_loyalty
+#Wavedash
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_wavedash] at @s run function cartographer_custom_enchantments:enchant_effects/wavedash/teleport_start
+
 
 #Brittle Check. Check if the entity hurt was Brittle and it wasn't from the same hit that applied it (from Cauterize).
 execute if score @s[tag=!cleanse_fire] ca.brittle_time matches 1.. as @s at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/brittle_hurt
@@ -171,6 +171,10 @@ function #minecraft:cartographer_events/player_hit_mob_arrow
 
 #Run the Trident Hit Datapack Hook
 function #minecraft:cartographer_events/player_hit_mob_trident 
+
+#Run Loyalty Giveback Program
+execute if score $loyalty ca.var matches 1.. at @s as @a[distance=..8.5,tag=ca.made_ranged_attack] at @s if score @s ca.loyalty_time matches 0.. run scoreboard players add @s ca.loyalty_time 20
+execute if score $loyalty ca.var matches 1.. at @s as @a[distance=..4.5,tag=ca.made_ranged_attack] at @s if score @s ca.loyalty_time matches 0.. run scoreboard players add @s ca.loyalty_time 20
 
 #Reset All Scores I am Crying
 scoreboard players set $bleed ca.var 0

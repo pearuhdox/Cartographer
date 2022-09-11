@@ -16,3 +16,4 @@ tag @s remove is_current
 tag @s remove is_ricochet_1
 tag @s remove is_ricochet_2
 tag @s remove is_ricochet_3
+tag @s remove is_wavedash

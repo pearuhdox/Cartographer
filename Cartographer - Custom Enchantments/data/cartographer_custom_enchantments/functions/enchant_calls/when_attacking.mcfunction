@@ -53,6 +53,12 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements=
 #Executioner - Happens last in chain for health reasons
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.executioner=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/executioner
 
+#If a projectile attack, we attempt to give loyalty charges back
+#If the player is recharging loyalty, give them 6 ticks of time back (3 seconds)
+execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}}] if score @s ca.loyalty_time matches 0.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund
 
 #If NOT a projectile attack, cleanse the ranged tags on nearby mobs.
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}}] as @e[type=#bb:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/purge_ranged_tags
+
+#Check for ranged attack
+execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}}] run tag @s add ca.made_ranged_attack

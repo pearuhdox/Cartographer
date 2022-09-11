@@ -79,5 +79,8 @@ execute if score $cauterize ca.var matches 1 run tag @s add is_cauterize
 #Loyalty Synergy
 execute if score $loyalty ca.var matches 1 run tag @s add is_loyalty
 
+#Wavedash
+execute if score $wavedash ca.var matches 1 run tag @s add is_wavedash
+
 #Run Trident Effect Dictionary
 function #minecraft:cartographer_events/dict/trident

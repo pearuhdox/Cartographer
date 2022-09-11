@@ -8,7 +8,7 @@
       "color": "white"
     },
     "description": {
-      "text": "On death, drops corpse eggs, which hatch into various baby mobs. Eggs can be destroyed by attacks.",
+      "text": "On death, drops corpse eggs, which hatch into various mobs. Eggs can be destroyed by attacks.",
       "color": "white"
     },
     "frame": "task",
@@ -22,59 +22,14 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "nbt": "{Tags:[\"corpse_crawler\"]}"
-        }
-      }
-    },
-    "found_2": {
-      "trigger": "minecraft:player_killed_entity",
-      "conditions": {
-        "entity": {
-          "nbt": "{Tags:[\"corpse_crawler_husk\"]}"
-        }
-      }
-    },
-    "found_3": {
-      "trigger": "minecraft:player_killed_entity",
-      "conditions": {
-        "entity": {
-          "nbt": "{Tags:[\"corpse_crawler_drowned\"]}"
-        }
-      }
-    },
-    "found_4": {
-      "trigger": "minecraft:player_killed_entity",
-      "conditions": {
-        "entity": {
-          "nbt": "{Tags:[\"corpse_crawler_piglin\"]}"
-        }
-      }
-    },
-    "found_5": {
-      "trigger": "minecraft:player_killed_entity",
-      "conditions": {
-        "entity": {
-          "nbt": "{Tags:[\"corpse_crawler_hoglin\"]}"
-        }
-      }
-    },
-    "found_6": {
-      "trigger": "minecraft:player_killed_entity",
-      "conditions": {
-        "entity": {
-          "nbt": "{Tags:[\"corpse_crawler_bee\"]}"
+          "nbt": "{Tags:[\"ca.corpse_crawler\"]}"
         }
       }
     }
   },
   "requirements": [
     [
-      "found",
-      "found_2",
-      "found_3",
-      "found_4",
-      "found_5",
-      "found_6"
+      "found"
     ]
   ],
   "rewards": {

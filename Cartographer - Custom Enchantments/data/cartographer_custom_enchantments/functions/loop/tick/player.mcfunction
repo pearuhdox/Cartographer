@@ -1,3 +1,6 @@
+#Place The Trident Hit Checker Above Enchant Calculator to solve loyalty check bug
+execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.throw_trident matches 1.. unless score @s ca.deal_mel_dmg matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
+
 #Run queues of enchant calculator
 execute if entity @s[tag=ca.queue_ench_check,tag=!ca.ench_do_not_check] run function cartographer_custom_enchantments:calc_enchant/run
 tag @s remove ca.queue_ench_check
@@ -19,11 +22,6 @@ execute if score @s ca.fleetfoot matches 1.. if score $temp ca.fleetfoot matches
 execute if score @s ca.fleetfoot matches 0 run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
 execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_load_cro matches 0 unless score @s ca.is_draw_bow matches 1.. unless score @s ca.is_hold_tri matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
 
-#Current recharge attack meter
-execute if score @s ca.ce.cur_spd matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "current_effect_spd" 1024 add
-execute if score @s ca.ce.cur_spd matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-321-1818-514-20
-execute if score @s ca.ce.cur_spd matches 1.. run scoreboard players remove @s ca.ce.cur_spd 1
-
 #Apply the attack speed debuff for Evocation.
 execute if score @s ca.evo_burn matches 2..20 run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.3 multiply
 execute if score @s ca.evo_burn matches 22..40 run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.5 multiply
@@ -36,6 +34,11 @@ execute if score @s ca.evo_burn matches 41 run attribute @s minecraft:generic.at
 execute if score @s ca.evo_burn matches 1 run scoreboard players remove @s ca.evo_burn 1
 execute if score @s ca.evo_burn matches 20 run scoreboard players set @s ca.evo_burn 0
 execute if score @s ca.evo_burn matches 40 run scoreboard players set @s ca.evo_burn 0
+
+#Custom Loyalty recharge attack meter
+execute if score @s ca.loyalty_speed matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "loyalty_effect_spd" 1024 add
+execute if score @s ca.loyalty_speed matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-321-1818-514-20
+execute if score @s ca.loyalty_speed matches 1.. run scoreboard players remove @s ca.loyalty_speed 1
 
 #Run The Notification that First Strike is available
 execute if entity @s[tag=ca.used_first_strike] if score @s ca.combat_timer matches 0 run function cartographer_custom_enchantments:enchant_effects/first_strike/notify_available
@@ -50,11 +53,11 @@ execute unless score @s ca.evasion matches 1.. run tag @s remove evading
 #Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
 execute if entity @s[tag=has_passive_ench] run function cartographer_custom_enchantments:enchant_calls/passively
 
-#Return Loyalty Tridents
-execute if score @s ca.loyalty_count matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/return_item
-execute if score @s ca.loyalty_wait matches 1.. run scoreboard players add @s ca.loyalty_wait 1
+#Ramp up Loyalty Time
+execute if score @s ca.loyalty_time matches 1.. run scoreboard players add @s ca.loyalty_time 1
 
-execute if score @s ca.loyalty_wait matches 601.. if score @s ca.loyalty_count matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/return_item
+#If a second has been reached, run the Loyalty Inventory Check System
+execute if score @s ca.loyalty_time matches 5.. run function cartographer_custom_enchantments:enchant_effects/loyalty/return/get_inventory
 
 
 #Kill trigger (if score $cu_en_kill ca.enabler matches 1.. )
@@ -63,7 +66,6 @@ execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_
 #Make ranged attack triggers.
 execute if score @s ca.fire_bow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.fire_cbow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
-execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.throw_trident matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
 
 #Break Spawner Trigger (if score $cu_en_spawner ca.enabler matches 1.. )
 execute if score @s ca.mine_spawner matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
@@ -134,3 +136,8 @@ execute if score @s ca.echo matches 0 run tag @s remove showing_echo
 
 #Just in case
 function cartographer_custom_enchantments:calc_enchant/slot_change
+
+execute store result score $current_return ca.loyalty run clear @s structure_void{TridentRemnantDelete:1b}
+execute if score $current_return ca.loyalty matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund
+
+tag @s remove ca.made_ranged_attack

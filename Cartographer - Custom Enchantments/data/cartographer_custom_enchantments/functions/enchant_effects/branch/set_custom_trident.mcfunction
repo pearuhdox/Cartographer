@@ -14,4 +14,18 @@ scoreboard players operation @s ca.fire_aspect = @p ca.fire_aspect
 scoreboard players operation @s ca.cauterize = @p ca.cauterize
 scoreboard players operation @s ca.possession = @p ca.possession
 scoreboard players operation @s ca.loyalty = @p ca.loyalty
+scoreboard players operation @s ca.wavedash = @p ca.wavedash
+
+scoreboard players operation @s ca.duelist += @p ca.off_duelist
+scoreboard players operation @s ca.hunter += @p ca.off_hunter
+scoreboard players operation @s ca.singe += @p ca.off_singe
+scoreboard players operation @s ca.frostbite += @p ca.off_frostbite
+scoreboard players operation @s ca.exposing += @p ca.off_exposing
+scoreboard players operation @s ca.stunning += @p ca.off_stunning
+scoreboard players operation @s ca.infection += @p ca.off_infection
+scoreboard players operation @s ca.electrocute += @p ca.off_electrocute
+scoreboard players operation @s ca.bleeding += @p ca.off_bleeding
+scoreboard players operation @s ca.fire_aspect += @p ca.off_fire_aspect
+scoreboard players operation @s ca.possession += @p ca.off_possession
+
 tag @s add custom_trident

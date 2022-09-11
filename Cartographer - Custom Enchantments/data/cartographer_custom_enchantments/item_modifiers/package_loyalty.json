@@ -1,0 +1,17 @@
+[
+    {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "cartographer_custom_enchantments:loyalty"
+      },
+      "ops": [
+        {
+          "source": "Item",
+          "target": "StoredTrident",
+          "op": "replace"
+        }
+      ]
+    }
+  ]
+  

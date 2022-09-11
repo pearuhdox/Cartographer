@@ -78,6 +78,7 @@ execute if score @s ca.lexica_trig matches 266 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 267 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/tempest
 execute if score @s ca.lexica_trig matches 268 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/tempo_theft
 execute if score @s ca.lexica_trig matches 269 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/trueshot
+execute if score @s ca.lexica_trig matches 279 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/wavedash
 
 execute if score @s ca.lexica_trig matches 270 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/eruption
 execute if score @s ca.lexica_trig matches 271 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/sapper

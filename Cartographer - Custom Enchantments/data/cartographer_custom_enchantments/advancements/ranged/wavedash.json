@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"wavedash\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Wavedash                 ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Trident ranged attacks with this weapon teleport the user to the hit target."
+        },
+        "icon": {
+            "item": "minecraft:trident"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/wavedash"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/tempest"
+}

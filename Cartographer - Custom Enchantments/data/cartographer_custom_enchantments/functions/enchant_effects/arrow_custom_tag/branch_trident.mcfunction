@@ -15,3 +15,7 @@ scoreboard players operation $fire_aspect ca.var = @s ca.fire_aspect
 scoreboard players operation $cauterize ca.var = @s ca.cauterize
 
 scoreboard players operation $loyalty ca.var = @s ca.loyalty
+scoreboard players operation $wavedash ca.var = @s ca.wavedash
+
+#Get the Wavedash ID if Wavedash exists
+execute if score @s ca.wavedash matches 1.. run function cartographer_custom_enchantments:enchant_effects/wavedash/get_id

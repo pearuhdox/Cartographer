@@ -63,6 +63,21 @@ scoreboard objectives add ca.bleeding dummy
 scoreboard objectives add ca.explosive dummy
 scoreboard objectives add ca.thorns dummy
 
+scoreboard objectives add ca.off_duelist dummy
+scoreboard objectives add ca.off_hunter dummy
+scoreboard objectives add ca.off_singe dummy
+scoreboard objectives add ca.off_frostbite dummy
+scoreboard objectives add ca.off_exposing dummy
+scoreboard objectives add ca.off_stunning dummy
+scoreboard objectives add ca.off_infection dummy
+scoreboard objectives add ca.off_electrocute dummy
+scoreboard objectives add ca.off_bleeding dummy
+scoreboard objectives add ca.off_fire_aspect dummy
+scoreboard objectives add ca.off_possession dummy
+
+scoreboard objectives add ca.wavedash dummy
+scoreboard objectives add ca.wavedash_time dummy
+
 scoreboard objectives add ca.write_ench dummy
 
 scoreboard objectives add ca.t_fire dummy
@@ -94,10 +109,8 @@ scoreboard objectives add ca.ammo_off dummy
 scoreboard objectives add ca.flash_time dummy
 scoreboard objectives add ca.saved_flash dummy
 
-scoreboard objectives add ca.loyalty_slot dummy
-scoreboard objectives add ca.loyalty_count dummy
-scoreboard objectives add ca.loyalty_throws dummy
-scoreboard objectives add ca.loyalty_wait dummy
+scoreboard objectives add ca.loyalty_time dummy
+scoreboard objectives add ca.loyalty_speed dummy
 
 scoreboard objectives add ca.curse_mal dummy
 scoreboard objectives add ca.curse_regret dummy
@@ -146,23 +159,6 @@ scoreboard objectives add ca.dmg_resist_evaded minecraft.custom:minecraft.damage
 scoreboard objectives add ca.sw_fall minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add ca.sw_tenths dummy
 
-#Set all needed constants.
-scoreboard players set $custom_enchant.TrueshotDouble ca.CONSTANT 2
-scoreboard players set $custom_enchant.TrueshotApprox ca.CONSTANT 18
-scoreboard players set $custom_enchant.Reflect_I ca.CONSTANT 200
-scoreboard players set $custom_enchant.Reflect_II ca.CONSTANT 100
-scoreboard players set $custom_enchant.Reflect_III ca.CONSTANT 6
-scoreboard players set $custom_enchant.Reflect_IV ca.CONSTANT 4
-scoreboard players set $custom_enchant.Reflect_V ca.CONSTANT 3
-scoreboard players set $custom_enchant.Reflect_VI ca.CONSTANT 3
-scoreboard players set $custom_enchant.Reflect_VII ca.CONSTANT 3
-scoreboard players set $custom_enchant.Reflect_VIII ca.CONSTANT 3
-scoreboard players set $custom_enchant.Reflect_IX ca.CONSTANT 3
-scoreboard players set $custom_enchant.Reflect_X ca.CONSTANT 20
-scoreboard players set $custom_enchant.Hard_MX ca.CONSTANT 15
-scoreboard players set $custom_enchant.Easy_MX ca.CONSTANT 7
-scoreboard players set $custom_enchant.10_MX ca.CONSTANT 10
-
 #Setup all necessary helper scoreboards.
 scoreboard objectives add ca.rpt_cdl dummy
 scoreboard objectives add ca.kill_entity totalKillCount
@@ -204,8 +200,6 @@ scoreboard objectives add ca.ce.true_x dummy
 scoreboard objectives add ca.ce.true_y dummy
 scoreboard objectives add ca.ce.true_z dummy
 scoreboard objectives add ca.ce.true_dmg dummy
-
-scoreboard objectives add ca.ce.cur_spd dummy
 
 scoreboard objectives add ca.swim minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add ca.water_walk minecraft.custom:minecraft.walk_under_water_one_cm

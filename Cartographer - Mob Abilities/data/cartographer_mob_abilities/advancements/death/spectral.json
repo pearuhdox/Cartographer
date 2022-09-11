@@ -15,7 +15,7 @@
             "color": "white"
         },
         "description": {
-            "text": "On death, a Spectre variant spawns.",
+            "text": "On death, drops a remnant which creates a single mob shortly after.",
             "color": "white"
         },
         "icon": {
@@ -27,7 +27,7 @@
         "hidden": true
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/spectral"
+        "function": "cartographer_mob_abilities:descriptions/death/spectral"
     },
     "parent": "cartographer_mob_abilities:death/pyromania"
 }

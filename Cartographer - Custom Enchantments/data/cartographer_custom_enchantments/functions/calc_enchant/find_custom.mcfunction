@@ -43,3 +43,6 @@ execute if data storage ca.susu:enchants offh.tag.CustomEnchantments run tag @s 
 execute if data storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:power"}] run tag @s add check_offh
 execute if data storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:punch"}] run tag @s add check_offh
 execute if data storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:flame"}] run tag @s add check_offh
+
+#Check if the player has loyalty stones in their inventory
+execute unless score @s ca.loyalty_time matches 0.. if data storage ca.susu:enchants inv[{tag:{StoredTrident:{}}}] run scoreboard players set @s ca.loyalty_time 1

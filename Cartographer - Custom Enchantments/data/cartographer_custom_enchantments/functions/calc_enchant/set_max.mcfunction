@@ -54,7 +54,21 @@ execute if score @s vengeance matches 6.. run scoreboard players set @s vengeanc
 execute if score @s ca.bleeding matches 4.. run scoreboard players set @s ca.bleeding 3
 execute if score @s ca.explosive matches 2.. run scoreboard players set @s ca.explosive 1
 execute if score @s ca.thorns matches 21.. run scoreboard players set @s ca.thorns 20
-execute if score @s ca.loyalty matches 21.. run scoreboard players set @s ca.loyalty 20
+execute if score @s ca.loyalty matches 11..99 run scoreboard players set @s ca.loyalty 10
+execute if score @s ca.loyalty matches 111.. run scoreboard players set @s ca.loyalty 110
+execute if score @s ca.wavedash matches 2.. run scoreboard players set @s ca.wavedash 1
+
+execute if score @s ca.off_duelist matches 6.. run scoreboard players set @s ca.off_duelist 5
+execute if score @s ca.off_hunter matches 6.. run scoreboard players set @s ca.off_hunter 5
+execute if score @s ca.off_singe matches 6.. run scoreboard players set @s ca.off_singe 5
+execute if score @s ca.off_frostbite matches 6.. run scoreboard players set @s ca.off_frostbite 5
+execute if score @s ca.off_exposing matches 4.. run scoreboard players set @s ca.off_exposing 3
+execute if score @s ca.off_stunning matches 6.. run scoreboard players set @s ca.off_stunning 5
+execute if score @s ca.off_infection matches 4.. run scoreboard players set @s ca.off_infection 3
+execute if score @s ca.off_electrocute matches 4.. run scoreboard players set @s ca.off_electrocute 3
+execute if score @s ca.off_bleeding matches 4.. run scoreboard players set @s ca.off_bleeding 3
+execute if score @s ca.off_fire_aspect matches 4.. run scoreboard players set @s ca.off_fire_aspect 3
+execute if score @s ca.off_possession matches 4.. run scoreboard players set @s ca.off_possession 3
 
 execute if score @s ca.t_fire matches 4.. run scoreboard players set @s ca.t_fire 3
 execute if score @s ca.t_frost matches 6.. run scoreboard players set @s ca.t_frost 5

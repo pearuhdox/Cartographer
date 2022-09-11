@@ -62,6 +62,7 @@ scoreboard players set @s ca.bleeding 0
 scoreboard players set @s ca.explosive 0
 scoreboard players set @s ca.thorns 0
 scoreboard players set @s ca.multishot 0
+scoreboard players set @s ca.wavedash 0
 
 scoreboard players set @s ca.loyalty 0
 scoreboard players set @s ca.fire_aspect 0
@@ -90,6 +91,19 @@ scoreboard players set @s ca.s_adren 0
 scoreboard players set @s ca.s_energ 0
 scoreboard players set @s ca.s_frenzy 0
 scoreboard players set @s ca.s_con 0
+
+scoreboard players set @s ca.off_duelist 0
+scoreboard players set @s ca.off_hunter 0
+scoreboard players set @s ca.off_singe 0
+scoreboard players set @s ca.off_frostbite 0
+scoreboard players set @s ca.off_exposing 0
+scoreboard players set @s ca.off_stunning 0
+scoreboard players set @s ca.off_infection 0
+scoreboard players set @s ca.off_electrocute 0
+scoreboard players set @s ca.off_bleeding 0
+scoreboard players set @s ca.off_fire_aspect 0
+scoreboard players set @s ca.off_possession 0
+
 
 tag @s remove has_passive_ench
 

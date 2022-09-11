@@ -8,4 +8,4 @@ execute if entity @s[scores={ca.current=1..}] run particle minecraft:rain ~ ~ ~ 
 
 execute if entity @s[nbt={inGround:1b}] run tag @s remove custom_trident
 
-execute positioned ~ -64 ~ if entity @s[tag=custom_trident,scores={ca.loyalty=1..},distance=..3] run function cartographer_custom_enchantments:enchant_effects/loyalty/convert
+execute if entity @s[tag=loyalty_checked,tag=!custom_trident,tag=!current_loyalty_trident] run kill @s
