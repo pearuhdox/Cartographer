@@ -5,11 +5,11 @@
             "color": "white"
         },
         "description": {
-            "text": "Mob attacks or effects create boundaries players cannot cross (without penalties).",
+            "text": "Mob attacks or effects temporarily suppress the player's senses (visual and auditory).",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:dragon_head"
+            "item": "minecraft:sculk_shrieker"
         },
         "frame": "task",
         "show_toast": true,

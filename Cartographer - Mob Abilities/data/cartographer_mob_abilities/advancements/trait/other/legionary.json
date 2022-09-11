@@ -5,11 +5,11 @@
             "color": "white"
         },
         "description": {
-            "text": "Ability casts launch the mob towards or away from players.",
+            "text": "Ability casts spawn reinforcement mobs.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:feather"
+            "item": "minecraft:zombie_spawn_egg"
         },
         "frame": "task",
         "show_toast": true,
@@ -21,13 +21,13 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.predator\"]}"
+                    "nbt": "{Tags:[\"ca.legionary\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/trait/other/predator"
+        "function": "cartographer_mob_abilities:descriptions/trait/other/legionary"
     },
-    "parent": "cartographer_mob_abilities:trait/other/legionary"
+    "parent": "cartographer_mob_abilities:trait/other/evocative"
 }

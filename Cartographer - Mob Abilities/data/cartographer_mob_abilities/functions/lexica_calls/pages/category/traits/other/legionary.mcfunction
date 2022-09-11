@@ -13,17 +13,15 @@ tellraw @s [{"text":"❰","color":"green","bold":true},{"text":"⊰ Lexica Carto
 tellraw @s {"text":"Your comprehensive guide to foreign facts.","color":"#ACFFA6","bold":false,"italic":true}
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 
-tellraw @s [{"text":"Horrifying","color":"yellow","bold":true,"italic":false}]
+tellraw @s [{"text":"Legionary","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Ability damage inflicts 15 seconds of Paranoia. While inflicted, the player cannot hear hostile mob sounds around them, will hear a continuous heartbeat and static sound, and will be afflicted with Darkness.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the mob finishes casting an ability, it spawns in 2 mob reinforcements. The spawn egg in the mob's offhand determines the reinforcements.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Applicable Mobs: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"All Hostile Mobs","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
-#tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
-#tellraw @s [{"text":"Cooldown: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"1 (I)","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
-tellraw @s [{"text":"[⏎] ","color":"green","bold":true,"italic":false},{"text":"Return","color":"green","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return up one page.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 3051"}}]
+tellraw @s [{"text":"[⏎] ","color":"green","bold":true,"italic":false},{"text":"Return","color":"green","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return up one page.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 3052"}}]
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 
