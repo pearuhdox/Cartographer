@@ -37,13 +37,9 @@ execute if entity @s[tag=ca.alchemist] unless entity @s[tag=ca.ignore_traits_act
 execute unless entity @s[tag=ca.ignore_traits_active] as @e[type=armor_stand,tag=magic_missile_projectile,limit=1,sort=nearest] run function cartographer_mob_abilities:abilities/magic_missile/set_traits
 
 
+function cartographer_mob_abilities:abilities/magic_missile/calc_damage
 
-execute store result score @s ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
-
-scoreboard players operation @e[tag=magic_missile_projectile,sort=nearest,tag=!checked,limit=1] ca.ability_dmg = @s ca.ability_dmg
-
-tp @e[type=armor_stand,tag=magic_missile_projectile,distance=..1,limit=1,sort=nearest] @s
-execute as @e[type=armor_stand,tag=magic_missile_projectile,distance=..1,limit=1,sort=nearest] at @s run tp @s ~ ~2 ~ ~ -90
+execute as @e[tag=magic_missile_projectile,sort=nearest,tag=!checked,limit=1] at @s run function cartographer_mob_abilities:abilities/magic_missile/apply_stats
 
 #Run not on hit traits
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit

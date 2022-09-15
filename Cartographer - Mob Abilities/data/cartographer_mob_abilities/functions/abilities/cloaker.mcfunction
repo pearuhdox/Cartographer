@@ -4,7 +4,7 @@ function cartographer_mob_abilities:ability_traits/cooldown_traits
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @e[distance=0.5..15,type=#bb:hostile,tag=!ca.shimmerskin,tag=!cloaker] ca.effect_cloak 12
+scoreboard players set @e[distance=0.5..15,type=#bb:hostile,tag=!ca.shimmerskin,tag=!ca.cloaker] ca.effect_cloak 12
 
 particle minecraft:dust 0.5 0 1 1 ~ ~1.5 ~ 5 1 5 0.1 700 normal @a
 

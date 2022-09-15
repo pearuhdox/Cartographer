@@ -1,9 +1,14 @@
-execute if score @s ca.ability_dmg matches 0..8 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;13119699]},{Type:0,Trail:1b,Colors:[I;16177656]}]}}}}
-execute if score @s ca.ability_dmg matches 9..16 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;13119699]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]}]}}}}
-execute if score @s ca.ability_dmg matches 17..24 run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;13119699]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]}]}}}}
-execute if score @s ca.ability_dmg matches 25.. run summon minecraft:firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Colors:[I;13119699]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]},{Type:0,Trail:1b,Colors:[I;16177656]}]}}}}
+particle minecraft:explosion ~ ~1 ~ 0 0 0 0 1 normal
+particle minecraft:firework ~ ~1 ~ 0 0 0 0.2 30 normal
 
-tag @a[distance=..2] add ability_tagged
+playsound minecraft:entity.allay.hurt hostile @a[distance=..16] ~ ~ ~ 0.8 1
+playsound minecraft:entity.firework_rocket.launch hostile @a[distance=..16] ~ ~ ~ 1 1
+playsound minecraft:entity.firework_rocket.twinkle hostile @a[distance=..16] ~ ~ ~ 1 1
+playsound minecraft:entity.allay.death hostile @a[distance=..16] ~ ~ ~ 0.8 1
+
+scoreboard players operation $missile_dmg ca.ability_dmg = @s ca.ability_dmg
+
+execute positioned ~ ~1 ~ unless block ~ ~ ~ #bb:can_raycast as @a[distance=..2] at @s run function cartographer_mob_abilities:abilities/magic_missile/detonate_player
 
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits
 

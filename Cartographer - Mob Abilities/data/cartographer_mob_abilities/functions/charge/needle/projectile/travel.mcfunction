@@ -5,12 +5,7 @@ execute if score @s ca.lifetime matches 1 run playsound minecraft:enchant.thorns
 
 execute if score @s ca.lifetime matches 0.. run tp @s ^ ^ ^1.25
 
-execute if entity @s[tag=ca.blazing] run particle flame ~ ~ ~ 0.5 0 0.5 0 1 normal
-execute if entity @s[tag=ca.glacial] run particle item_snowball ~ ~ ~ 0.5 0 0.5 0 1 normal
-execute if entity @s[tag=ca.horrifying] run particle dust 0.302 0.2 0.761 1 ~ ~ ~ 0.5 0 0.5 0 1 normal
-execute if entity @s[tag=ca.overloading] run particle wax_off ~ ~ ~ 0.5 0 0.5 0 1 normal
-execute if entity @s[tag=ca.venemous] run particle item_slime ~ ~ ~ 0.5 0 0.5 0 1 normal
-execute if entity @s[tag=ca.zephyrous] run particle dust 0.7 0.7 0.8 1 ~ ~ ~ 0.5 0 0.5 0 1 normal
+function cartographer_mob_abilities:ability_traits/trait_warnings/projectile
 
 execute if score @s ca.lifetime matches 0.. run particle minecraft:firework ~ ~ ~ 0 0 0 0.03 1 force
 

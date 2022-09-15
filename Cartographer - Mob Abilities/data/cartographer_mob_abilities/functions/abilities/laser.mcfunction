@@ -1,5 +1,5 @@
 #Trait warning visual
-function cartographer_mob_abilities:ability_traits/call_trait_warnings
+function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 12
 

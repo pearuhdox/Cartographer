@@ -1,5 +1,6 @@
 particle minecraft:smoke ~ ~ ~ 0.85 0.75 0.85 0.05 15 normal
 particle minecraft:cloud ~ ~ ~ 0 0 0 0.1 1 force
+execute positioned ~ ~ ~ run function cartographer_mob_abilities:ability_traits/trait_warnings/raycast
 
 execute if entity @s[scores={ca.raycast=1}] run particle minecraft:cloud ~ ~ ~ 0 0.3 0 0.15 15 normal
 

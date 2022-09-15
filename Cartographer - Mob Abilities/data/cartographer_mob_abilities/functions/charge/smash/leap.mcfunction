@@ -1,4 +1,4 @@
-function cartographer_mob_abilities:ability_traits/call_trait_warnings
+function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 playsound minecraft:entity.ravager.attack hostile @a[distance=..16] ~ ~ ~ 5 0.85
 

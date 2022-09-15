@@ -14,7 +14,7 @@ playsound minecraft:entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 0.75 
 
 function cartographer_mob_abilities:abilities/hookshot/calc_damage
 
-execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/hookshot/raycast
+execute as @s anchored eyes run function cartographer_mob_abilities:abilities/hookshot/raycast
 
 execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..18] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 

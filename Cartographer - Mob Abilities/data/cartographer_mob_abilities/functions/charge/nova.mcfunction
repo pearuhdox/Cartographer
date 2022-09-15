@@ -9,7 +9,7 @@ execute if entity @s[scores={ability_charge=2}] run playsound minecraft:block.en
 
 execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:landing_obsidian_tear ~ ~0.05 ~ 3 0 3 0 100 normal @a
 
-execute unless entity @s[scores={ability_charge=3..4}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
+execute unless entity @s[scores={ability_charge=3..4}] run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~8 ~0.5 ~ 0.3 0 0.3 0 6 normal @a
 execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~7 ~0.5 ~1 0.3 0 0.3 0 6 normal @a

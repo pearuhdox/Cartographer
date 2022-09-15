@@ -1,0 +1,65 @@
+{
+    "display": {
+        "title": {
+            "text": "Amplify                  ",
+            "color": "white"
+        },
+        "description": {
+            "text": "Ability casts add stacking buffs to the caster.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found_b": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.brutal_amplify\"]}"
+                }
+            }
+        },
+        "found_r": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.relentless_amplify\"]}"
+                }
+            }
+        },
+        "found_d": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.devious_amplify\"]}"
+                }
+            }
+        },
+        "found_s": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.sacrificial_amplify\"]}"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "found_b",
+            "found_r",
+            "found_d",
+            "found_s"
+        ]
+    ],
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/trait/other/amplify"
+    },
+    "parent": "cartographer_mob_abilities:trait/other/aftershock"
+}

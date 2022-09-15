@@ -1,4 +1,4 @@
-execute unless entity @s[scores={ability_charge=1..2}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
+execute unless entity @s[scores={ability_charge=1..2}] run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 execute unless entity @s[scores={ability_charge=1..2}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 

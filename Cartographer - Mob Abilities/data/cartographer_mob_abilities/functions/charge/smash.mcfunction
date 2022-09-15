@@ -1,4 +1,4 @@
-execute unless score @s ability_charge matches 1.. run function cartographer_mob_abilities:ability_traits/call_trait_warnings
+execute unless score @s ability_charge matches 1.. run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 execute unless score @s ability_charge matches 1.. run playsound minecraft:entity.zombie.attack_iron_door player @a[distance=..16] ~ ~ ~ 0.6 0.75
 execute unless score @s ability_charge matches 1.. run playsound minecraft:entity.zombie.attack_iron_door player @a[distance=..16] ~ ~ ~ 0.6 1.25
 execute unless score @s ability_charge matches 1.. run playsound minecraft:entity.zombie.attack_iron_door player @a[distance=..16] ~ ~ ~ 0.6 1.75

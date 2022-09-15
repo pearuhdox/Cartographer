@@ -8,7 +8,7 @@ scoreboard players set @s ca.raycast 13
 
 scoreboard players set @s mob_move_dis 23
 
-execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/webshot/raycast
+execute as @s anchored eyes run function cartographer_mob_abilities:abilities/webshot/raycast
 
 #Trait Effects (outside of raycast call)
 execute if entity @a[tag=ability_tagged] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits

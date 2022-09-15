@@ -10,11 +10,21 @@ scoreboard players set $heal_vol ca.var 0
 scoreboard players set $heal_aft ca.var 0
 scoreboard players set $heal_evo ca.var 0
 
-execute if entity @s[tag=ca.carapace] run scoreboard players set $heal_car ca.var 1
-execute if entity @s[tag=ca.predator] run scoreboard players set $heal_pre ca.var 1
-execute if entity @s[tag=ca.volatile] run scoreboard players set $heal_vol ca.var 1
-execute if entity @s[tag=ca.aftershock] run scoreboard players set $heal_aft ca.var 1
-execute if entity @s[tag=ca.evocative] run scoreboard players set $heal_evo ca.var 1
+scoreboard players set $heal_amp_b ca.var 0
+scoreboard players set $heal_amp_r ca.var 0
+scoreboard players set $heal_amp_d ca.var 0
+scoreboard players set $heal_amp_s ca.var 0
+
+execute if entity @s[tag=ca.carapace,tag=!ca.ignore_traits_active] run scoreboard players set $heal_car ca.var 1
+execute if entity @s[tag=ca.predator,tag=!ca.ignore_traits_active] run scoreboard players set $heal_pre ca.var 1
+execute if entity @s[tag=ca.volatile,tag=!ca.ignore_traits_active] run scoreboard players set $heal_vol ca.var 1
+execute if entity @s[tag=ca.aftershock,tag=!ca.ignore_traits_active] run scoreboard players set $heal_aft ca.var 1
+execute if entity @s[tag=ca.evocative,tag=!ca.ignore_traits_active] run scoreboard players set $heal_evo ca.var 1
+
+execute if entity @s[tag=ca.brutal_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_b ca.var 1
+execute if entity @s[tag=ca.relentless_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_r ca.var 1
+execute if entity @s[tag=ca.devious_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_d ca.var 1
+execute if entity @s[tag=ca.sacrificial_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_s ca.var 1
 
 execute as @e[distance=0.5..10,tag=!healer,type=#bb:hostile,sort=nearest,limit=3] at @s run function cartographer_mob_abilities:abilities/healer/effect
 

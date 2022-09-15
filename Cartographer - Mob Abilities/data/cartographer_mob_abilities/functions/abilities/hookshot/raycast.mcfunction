@@ -6,6 +6,8 @@ particle minecraft:smoke ^ ^ ^ 0 0 0 0 3 normal
 particle minecraft:smoke ^ ^ ^0.33 0 0 0 0 3 normal
 particle minecraft:smoke ^ ^ ^0.66 0 0 0 0 3 normal
 
+execute positioned ^ ^ ^0.33 run function cartographer_mob_abilities:ability_traits/trait_warnings/raycast
+
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
 scoreboard players set $projectile ca.dmg_type 1

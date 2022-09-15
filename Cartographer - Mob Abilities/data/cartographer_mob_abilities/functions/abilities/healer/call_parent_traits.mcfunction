@@ -7,4 +7,9 @@ execute if score $heal_pre ca.var matches 1.. at @s run function cartographer_mo
 execute if score $heal_evo ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
 execute if score $heal_vol ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
+execute if score $heal_amp_b ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/amplify/brutal
+execute if score $heal_amp_r ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/amplify/relentless
+execute if score $heal_amp_d ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/amplify/devious
+execute if score $heal_amp_s ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/amplify/sacrificial
+
 #say Running Traits

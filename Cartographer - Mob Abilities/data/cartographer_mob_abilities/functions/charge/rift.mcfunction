@@ -1,4 +1,4 @@
-execute unless entity @s[scores={ability_charge=1..3}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
+execute unless entity @s[scores={ability_charge=1..3}] run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 execute unless entity @s[scores={ability_charge=1..3}] run playsound minecraft:entity.iron_golem.death hostile @a[distance=..24] ~ ~ ~ 2 0.5
 execute unless entity @s[scores={ability_charge=1..3}] run scoreboard players set @s mob_move_dis 53
 execute unless entity @s[scores={ability_charge=1..3}] run scoreboard players set @s mob_sturdy 53
