@@ -22,11 +22,6 @@ execute if entity @p[distance=12.01..18] run scoreboard players set @s co_y 12
 
 function motion:motion/push
 
-execute unless entity @s[scores={recast_count=0..}] run scoreboard players set @s recast_count 0
-
-execute unless entity @s[scores={recast_count=1..}] if entity @s[tag=ca.recast] run scoreboard players set @s recast_count 2
-execute unless entity @s[scores={recast_count=1..}] if entity @s[tag=ca.rerecast] run scoreboard players set @s recast_count 3
-execute unless entity @s[scores={recast_count=1..}] run scoreboard players set @s recast_count 1
 
 execute unless entity @s[scores={ability_charge=2..}] run scoreboard players add @s ability_charge 1
 

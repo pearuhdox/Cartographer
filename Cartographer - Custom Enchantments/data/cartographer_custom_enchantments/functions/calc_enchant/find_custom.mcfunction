@@ -1,5 +1,5 @@
 data modify storage ca.susu:enchants inv set value {}
-data modify storage ca.susu:enchants inv set from entity @s Inventory
+data modify storage ca.susu:enchants inv set from storage cartographer_core:player_inventory Inventory
 
 data modify storage ca.susu:enchants head set value {}
 data modify storage ca.susu:enchants body set value {}

@@ -5,3 +5,5 @@ setblock ~1 ~ ~ minecraft:fire keep
 setblock ~-1 ~ ~ minecraft:fire keep
 setblock ~ ~ ~1 minecraft:fire keep
 setblock ~ ~ ~-1 minecraft:fire keep
+
+scoreboard players set $fire ca.dmg_type 1

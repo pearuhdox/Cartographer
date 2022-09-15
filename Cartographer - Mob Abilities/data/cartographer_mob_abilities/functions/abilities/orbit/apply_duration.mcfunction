@@ -1,0 +1,1 @@
+scoreboard players operation @s ca.orbit_timer = $duration ca.orbit_timer

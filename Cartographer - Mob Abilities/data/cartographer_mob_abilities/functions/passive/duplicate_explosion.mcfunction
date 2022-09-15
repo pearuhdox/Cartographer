@@ -1,5 +1,9 @@
-scoreboard players set @a[distance=..2] cdl.damage_queue 4
+scoreboard players set $explosion ca.dmg_type 1
+
+scoreboard players set @a[distance=..2] cdl.damage_queue 6
+execute as @a[distance=..2] at @s run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
 execute as @a[distance=..2] at @s run function cd:lib/player/damage/normal
+
 execute as @e[type=#bb:hostile,distance=..2] at @s run function cartographer_mob_abilities:passive/duplicate_explosion_mob 
 
 playsound minecraft:entity.generic.explode hostile @a[distance=..12] ~ ~ ~ 1 2

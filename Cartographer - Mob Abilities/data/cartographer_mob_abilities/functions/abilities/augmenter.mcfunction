@@ -1,5 +1,4 @@
 execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 15
-execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 12
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
@@ -25,9 +24,6 @@ playsound minecraft:entity.illusioner.prepare_blindness hostile @a[distance=..16
 playsound minecraft:entity.zombie.infect hostile @a[distance=..16] ~ ~ ~ 2 0.5
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-#scoreboard players remove $tokened_total ca.tokens 1
-tag @s remove attacking
-tag @s remove tokened
-tag @s remove can_see_player
+function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
 #say test

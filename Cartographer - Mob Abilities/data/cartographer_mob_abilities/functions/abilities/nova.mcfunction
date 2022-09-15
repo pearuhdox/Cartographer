@@ -1,5 +1,4 @@
 execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
-execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 8
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
@@ -77,9 +76,6 @@ particle minecraft:witch ~1 ~0.5 ~-7 0.3 0 0.3 0 4 normal @a
 
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-scoreboard players remove $tokened_total ca.tokens 1
-tag @s remove attacking
-tag @s remove tokened
-tag @s remove can_see_player
+function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
 #say test

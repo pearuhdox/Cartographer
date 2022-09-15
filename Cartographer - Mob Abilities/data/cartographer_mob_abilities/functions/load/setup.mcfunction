@@ -23,6 +23,8 @@ scoreboard objectives add exalted dummy
 
 scoreboard objectives add ca.death_traits dummy
 
+scoreboard objectives add ca.trap_traits dummy
+
 scoreboard objectives add ca.linger_cooldown dummy
 
 scoreboard objectives add reflect_past dummy
@@ -59,9 +61,20 @@ scoreboard objectives add ca.ambi_cool dummy
 
 scoreboard objectives add ca.legion_id dummy
 
+#Setup EPF Checkers
+scoreboard objectives add ca.ma_epf_proj dummy
+scoreboard objectives add ca.ma_epf_blast dummy
+scoreboard objectives add ca.ma_epf_fire dummy
+scoreboard objectives add ca.ma_epf_prot dummy
+
+scoreboard objectives add ca.ma_epf_data dummy
+scoreboard objectives add ca.dmg_type dummy
+
 #Setup all necessary helper scoreboards.
 scoreboard objectives add ca.tokens dummy
 scoreboard objectives add ca.heat dummy
+
+scoreboard objectives add ca.accelerate_stacks dummy
 
 scoreboard objectives add ca.raycast dummy
 scoreboard objectives add helper_random dummy

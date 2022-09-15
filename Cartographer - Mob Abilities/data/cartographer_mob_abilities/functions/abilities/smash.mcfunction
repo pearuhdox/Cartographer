@@ -46,11 +46,4 @@ tag @s remove airborne_10
 scoreboard players remove @s[scores={recast_count=1..}] recast_count 1
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-execute if entity @s[scores={recast_count=0}] run scoreboard players remove $tokened_total ca.tokens 1
-execute if entity @s[scores={recast_count=0}] run tag @s remove attacking
-execute if entity @s[scores={recast_count=0}] run tag @s remove tokened
-execute if entity @s[scores={recast_count=0}] run tag @s remove can_see_player
-execute if entity @s[scores={recast_count=0}] run tag @s add recasting
-
-execute if entity @s[scores={recast_count=1..}] run tag @s add recasting
-#execute if entity @s[tag=attacking] run #say test
+function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate

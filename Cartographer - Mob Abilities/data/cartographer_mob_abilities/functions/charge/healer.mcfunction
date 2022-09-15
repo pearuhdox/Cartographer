@@ -1,5 +1,8 @@
 execute unless entity @s[scores={ability_charge=1..}] run playsound minecraft:block.bell.resonate hostile @a[distance=..16] ~ ~ ~ 3 2
 execute unless entity @s[scores={ability_charge=1..}] run playsound minecraft:entity.illusioner.cast_spell hostile @a[distance=..16] ~ ~ ~ 2 0.6
+
+execute unless entity @s[scores={ability_charge=1..}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
+
 execute if entity @s[scores={ability_charge=1}] run playsound minecraft:entity.illusioner.cast_spell hostile @a[distance=..16] ~ ~ ~ 2 1
 execute if entity @s[scores={ability_charge=2}] run playsound minecraft:entity.illusioner.cast_spell hostile @a[distance=..16] ~ ~ ~ 2 1.4
 execute if entity @s[scores={ability_charge=2}] run playsound minecraft:block.bell.resonate hostile @a[distance=..16] ~ ~ ~ 3 1.5

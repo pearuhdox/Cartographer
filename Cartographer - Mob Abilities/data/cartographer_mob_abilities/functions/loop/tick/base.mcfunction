@@ -1,9 +1,6 @@
 #Tell Cartographer this pack is in use
 scoreboard players set $mob_abilities ca.installed 1
 
-#Loop all player effects
-execute as @a at @s run function cartographer_mob_abilities:loop/tick/player
-
 #Loop all abilities that need to be played each tick. This includes Laser (active), Hybrid Fighter (NYI), all On-Death Skills, and helper functions for Hookshot.
 #This also sets mob tags properly for active skill mobs and on death mobs.
 

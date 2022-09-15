@@ -1,5 +1,7 @@
 execute unless entity @s[scores={ability_charge=1..3}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
 
+execute unless entity @s[scores={ability_charge=1..3}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
+
 execute unless entity @s[scores={ability_charge=4}] run summon armor_stand ^2 ^1 ^-2 {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Small:1b,Pose:{LeftArm:[320f,90f,0f],RightArm:[320f,270f,0f]},Tags:["needle_projectile"]}
 execute unless entity @s[scores={ability_charge=4}] run summon armor_stand ^-2 ^1 ^-2 {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Small:1b,Pose:{LeftArm:[320f,90f,0f],RightArm:[320f,270f,0f]},Tags:["needle_projectile"]}
 

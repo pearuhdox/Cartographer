@@ -1,4 +1,7 @@
 execute unless entity @s[scores={ability_charge=1..2}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
+
+execute unless entity @s[scores={ability_charge=1..2}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
+
 execute unless entity @s[scores={ability_charge=1..2}] run playsound minecraft:entity.enderman.scream hostile @a[distance=..16] ~ ~ ~ 3 0.5
 execute unless entity @s[scores={ability_charge=1..2}] run scoreboard players set @s mob_move_dis 23
 execute unless entity @s[scores={ability_charge=1..2}] run tp @s ~ ~ ~ facing entity @p feet

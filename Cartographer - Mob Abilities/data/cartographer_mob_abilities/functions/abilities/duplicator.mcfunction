@@ -1,7 +1,5 @@
 execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 15
-execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 12
 execute if score $global helper_diff matches ..2 if entity @s[tag=ca.mitosis] run scoreboard players set @s cooldown 5
-execute if score $global helper_diff matches 3.. if entity @s[tag=ca.mitosis] run scoreboard players set @s cooldown 4
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
@@ -218,10 +216,7 @@ playsound minecraft:entity.illusioner.mirror_move hostile @a[distance=..16] ~ ~ 
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-scoreboard players remove $tokened_total ca.tokens 1
-tag @s remove attacking
-tag @s remove tokened
-tag @s remove can_see_player
+function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
 #say test
 

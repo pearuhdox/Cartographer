@@ -1,11 +1,21 @@
 execute if entity @s[tag=!ca.init] run function cartographer_core:load/init_player
 
+execute if entity @s[tag=ca.core_check_inv] run function cartographer_core:helper/inventory/do_inventory_check
+
 function cartographer_custom_enchantments:loop/tick/player
 function cartographer_custom_statuses:loop/tick/player
+function cartographer_mob_abilities:loop/tick/player
+
+#Remove the inventory check from core here so it can be used in other functionality
+tag @s remove ca.core_check_inv
 
 #Enable triggers
 scoreboard players enable @s lexica
 scoreboard players enable @s menu
+
+#Get the count of lexica on the player
+scoreboard players operation $old_lex_count ca.lexica_count = @s ca.lexica_count
+execute store result score @s ca.lexica_count run clear @s minecraft:knowledge_book{Lexica:1} 0
 
 #Check if the player used a lexica in creative
 execute if score @s ca.use_lex matches 1.. run function cartographer_core:loop/tick/branch/lexica_use

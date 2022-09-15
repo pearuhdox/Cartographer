@@ -21,6 +21,8 @@ execute if entity @s[tag=ca.volatile] run playsound minecraft:entity.creeper.pri
 
 function cartographer_mob_abilities:abilities/orbit/calc_damage
 
+scoreboard players set $projectile ca.dmg_type 1
+
 execute as @a[distance=..2.15] at @s unless score @s ca.orbit_timer matches 1.. run function cartographer_mob_abilities:abilities/orbit/player_effect
 
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit

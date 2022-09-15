@@ -8,3 +8,6 @@ execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:a
 
 #Transfer damage amount over to AEC
 scoreboard players operation @s ca.ability_dmg = $rift_damage ca.ability_dmg
+
+#Prevents them from being tagged again by recasts
+tag @s add branch_checked

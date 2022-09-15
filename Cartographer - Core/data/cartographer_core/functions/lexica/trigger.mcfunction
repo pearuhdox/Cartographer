@@ -135,12 +135,13 @@ execute if score @s ca.lexica_trig matches 3041 run function cartographer_mob_ab
 execute if score @s ca.lexica_trig matches 3042 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/main
 execute if score @s ca.lexica_trig matches 3043 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/main
 
-execute if score @s ca.lexica_trig matches 3411 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/dragon_fireball
-execute if score @s ca.lexica_trig matches 3421 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/fire_charge
-execute if score @s ca.lexica_trig matches 3431 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/fireball
-execute if score @s ca.lexica_trig matches 3441 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/potion
-execute if score @s ca.lexica_trig matches 3451 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/shulker_bullet
-execute if score @s ca.lexica_trig matches 3461 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/wither_skull
+execute if score @s ca.lexica_trig matches 3411 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/arrow
+execute if score @s ca.lexica_trig matches 3421 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/dragon_fireball
+execute if score @s ca.lexica_trig matches 3431 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/fire_charge
+execute if score @s ca.lexica_trig matches 3441 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/fireball
+execute if score @s ca.lexica_trig matches 3451 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/potion
+execute if score @s ca.lexica_trig matches 3461 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/shulker_bullet
+execute if score @s ca.lexica_trig matches 3471 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/wither_skull
 
 execute if score @s ca.lexica_trig matches 3412 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/fireskin
 execute if score @s ca.lexica_trig matches 3422 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/scaleskin

@@ -1,5 +1,7 @@
 execute unless entity @s[scores={ability_charge=1..3}] run function cartographer_mob_abilities:ability_traits/call_trait_warnings
 
+execute unless entity @s[scores={ability_charge=1..3}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
+
 execute unless entity @s[scores={ability_charge=3}] run summon armor_stand ~ ~1.5 ~ {ShowArms:1b,Small:1b,Invisible:1b,NoBasePlate:1b,Tags:["grenadier_projectile"],Pose:{LeftArm:[310f,90f,0f],RightArm:[310f,270f,0f],Head:[180f,0f,0f]},ArmorItems:[{},{},{},{id:'minecraft:player_head',Count:1b,tag:{SkullOwner:{Id:[I;-1794540134,-610646290,-1585350842,353223711],Properties:{textures:[{Value:'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWIyMGZmMTczYmQxN2IyYzRmMmViMjFmM2M0YjQzODQxYTE0YjMxZGZiZmQzNTRhM2JlYzgyNjNhZjU2MmIifX19'}]}}}}]}
 
 #Calc Damage

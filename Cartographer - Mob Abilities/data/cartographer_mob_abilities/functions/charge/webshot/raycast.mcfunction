@@ -1,4 +1,5 @@
 particle minecraft:block minecraft:cobweb ~ ~ ~ 0.3 0.3 0.3 0 30 normal
+particle minecraft:cloud ~ ~ ~ 0.1 0.1 0.1 0.05 2 normal
 
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 

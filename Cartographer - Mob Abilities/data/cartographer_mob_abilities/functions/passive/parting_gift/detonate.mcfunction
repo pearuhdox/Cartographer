@@ -10,6 +10,8 @@ execute if entity @s[tag=ca.zephyrous] run particle minecraft:cloud ~ ~0.5 ~ 1 0
 execute if entity @s[tag=ca.celestial] run particle minecraft:soul_fire_flame ~ ~0.5 ~ 1 0.2 1 0.15 20 normal
 execute if entity @s[tag=ca.horrifying] run particle minecraft:sculk_soul ~ ~0.5 ~ 1 0.2 1 0.15 20 normal
 
+scoreboard players set $explosion ca.dmg_type 1
+
 scoreboard players add @a[distance=..4] cdl.damage_queue 2
 scoreboard players add @a[distance=..3.5] cdl.damage_queue 2
 scoreboard players add @a[distance=..3] cdl.damage_queue 3
@@ -21,7 +23,8 @@ execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_
 execute if entity @s[tag=ca.celestial] as @e[type=#bb:hostile,distance=..4] at @s run function cartographer_mob_abilities:passive/parting_gift/celestial_heal
 
 tag @a[distance=..4] remove ability_tagged
-
+execute as @a[distance=..4] at @s run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
+execute as @a[distance=..4] at @s run scoreboard players set @s cdl.death_id 310215
 execute as @a[distance=..4] at @s run function cd:lib/player/damage/normal
 
 execute if entity @s[tag=ca.lingering] run function cartographer_mob_abilities:passive/parting_gift/cloud/spawn

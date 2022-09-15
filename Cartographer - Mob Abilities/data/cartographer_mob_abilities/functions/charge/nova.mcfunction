@@ -1,5 +1,7 @@
 scoreboard players set @s mob_move_red 23
 
+execute unless entity @s[scores={ability_charge=1..}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
+
 execute unless entity @s[scores={ability_charge=3..4}] run playsound minecraft:block.fire.ambient hostile @a[distance=..16] ~ ~ ~ 2 0.5
 execute unless entity @s[scores={ability_charge=1..}] run playsound minecraft:block.end_portal_frame.fill player @a[distance=..16] ~ ~ ~ 2 0.5
 execute if entity @s[scores={ability_charge=1}] run playsound minecraft:block.end_portal_frame.fill player @a[distance=..16] ~ ~ ~ 2 0.7

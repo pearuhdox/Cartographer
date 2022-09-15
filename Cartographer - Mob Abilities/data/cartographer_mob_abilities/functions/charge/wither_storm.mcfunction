@@ -1,6 +1,8 @@
 scoreboard players set @s mob_move_dis 41
 effect give @s blindness 2 0 false
 
+execute unless entity @s[scores={ability_charge=1..}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
+
 execute unless entity @s[scores={ability_charge=3..4}] run playsound minecraft:entity.wither.ambient hostile @a[distance=..24] ~ ~ ~ 2 2
 
 execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:large_smoke ~ ~4 ~ 2 0.2 2 0.05 400 normal

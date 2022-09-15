@@ -1,6 +1,5 @@
 scoreboard players remove @s ca.raycast 1
 
-#execute if score @s ca.raycast matches 0 run say deleting
 execute if score @s ca.raycast matches 0 run kill @s
 
 #End the recursion if the block it is in is raycastable and the block it is beneath is solid.

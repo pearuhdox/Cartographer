@@ -2,7 +2,6 @@
 function cartographer_mob_abilities:ability_traits/call_trait_warnings
 
 execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 12
-execute if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 9
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
@@ -37,9 +36,6 @@ execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_
 
 kill @e[type=armor_stand,tag=laser_marker,distance=..1,limit=1]
 
-scoreboard players remove $tokened_total ca.tokens 1
-tag @s remove attacking
-tag @s remove tokened
-tag @s remove can_see_player
+function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
 #say test

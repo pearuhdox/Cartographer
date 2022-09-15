@@ -1,5 +1,7 @@
 execute unless entity @s[scores={ability_charge=120}] run scoreboard players add @s ability_charge 1
 
+execute if entity @s[scores={ability_charge=1}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
+
 execute if entity @s[scores={ability_charge=1}] run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["laser_marker","ability_marker"]}
 
 execute if entity @s[scores={ability_charge=1..119}] run effect give @s glowing 1 0 true

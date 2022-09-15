@@ -21,6 +21,8 @@ scoreboard players set $mob_abilities ca.installed 0
 scoreboard players set $pot_injector ca.installed 0
 scoreboard players set $repair_stations ca.installed 0
 
+
+
 #Create mutex score
 scoreboard objectives add ca.mutex dummy
 
