@@ -6,3 +6,6 @@ execute if score $temp ca.ma_epf_fire matches 1.. run scoreboard players operati
 
 execute store result score $temp ca.ma_epf_proj run data get storage cartographer_mob_abilities:epf_calc head[{id:"minecraft:projectile_protection"}].lvl
 execute if score $temp ca.ma_epf_proj matches 1.. run scoreboard players operation @s ca.ma_epf_proj += $temp ca.ma_epf_proj
+
+execute store result score $temp ca.ma_epf_prot run data get storage cartographer_mob_abilities:epf_calc head[{id:"minecraft:protection"}].lvl
+execute if score $temp ca.ma_epf_prot matches 1.. run scoreboard players operation @s ca.ma_epf_prot += $temp ca.ma_epf_prot

@@ -11,14 +11,10 @@ execute if score $laser_charge ability_charge matches 91..100 run particle minec
 execute if score $laser_charge ability_charge matches 101..110 run particle minecraft:dust 1 0.165 0.165 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
 execute if score $laser_charge ability_charge matches 111..120 run particle minecraft:dust 1 0.063 0.063 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
 
-function cartographer_mob_abilities:ability_traits/trait_warnings/raycast
+scoreboard players operation $laser_mod ability_charge = $laser_charge ability_charge
+scoreboard players operation $laser_mod ability_charge %= $4 ca.CONSTANT
 
-execute if entity @s[tag=ca.blazing] run particle minecraft:flame ~ ~ ~ 0 0 0 0.01 1 normal
-execute if entity @s[tag=ca.glacial] run particle minecraft:item_snowball ~ ~ ~ 0.15 0.15 0.15 0.5 1 normal
-execute if entity @s[tag=ca.overloading] run particle minecraft:electric_spark ~ ~ ~ 0.15 0.15 0.15 0.6 1 normal
-execute if entity @s[tag=ca.venemous] run particle minecraft:item_slime ~ ~ ~ 0.15 0.15 0.15 0.5 1 normal
-execute if entity @s[tag=ca.zephyrous] run particle minecraft:instant_effect ~ ~ ~ 0 0 0 1 1 normal
-execute if entity @s[tag=ca.horrifying] run particle minecraft:dust_color_transition 1 0 1 1 0 0 1 ~ ~ ~ 0.3 0.3 0.3 0.1 1 normal @a
+execute if score $laser_mod ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/projectile
 
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 

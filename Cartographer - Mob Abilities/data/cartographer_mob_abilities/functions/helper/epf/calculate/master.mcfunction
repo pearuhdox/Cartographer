@@ -26,7 +26,4 @@ scoreboard players operation @s ca.ma_epf_prot *= $4 ca.CONSTANT
 execute if score @s ca.ma_epf_blast matches 81.. run scoreboard players set @s ca.ma_epf_blast 80
 execute if score @s ca.ma_epf_proj matches 81.. run scoreboard players set @s ca.ma_epf_proj 80
 execute if score @s ca.ma_epf_fire matches 81.. run scoreboard players set @s ca.ma_epf_fire 80
-
-execute if score @s ca.ma_epf_prot matches 1.. if score @s ca.ma_epf_blast matches 1.. run scoreboard players operation @s ca.ma_epf_blast -= @s ca.ma_epf_prot
-execute if score @s ca.ma_epf_prot matches 1.. if score @s ca.ma_epf_proj matches 1.. run scoreboard players operation @s ca.ma_epf_proj -= @s ca.ma_epf_prot
-execute if score @s ca.ma_epf_prot matches 1.. if score @s ca.ma_epf_fire matches 1.. run scoreboard players operation @s ca.ma_epf_fire -= @s ca.ma_epf_prot
+execute if score @s ca.ma_epf_prot matches 81.. run scoreboard players set @s ca.ma_epf_prot 80

@@ -7,9 +7,8 @@ function cartographer_mob_abilities:ability_traits/cooldown_traits
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @e[tag=laser_marker,distance=..1,limit=1] ca.raycast 32
-
 execute store result score $laser ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+
 
 scoreboard players set $laser_bla ca.var 0
 scoreboard players set $laser_gla ca.var 0
@@ -18,6 +17,7 @@ scoreboard players set $laser_ven ca.var 0
 scoreboard players set $laser_zep ca.var 0
 scoreboard players set $laser_hor ca.var 0
 scoreboard players set $laser_vol ca.var 0
+scoreboard players set $laser_alc ca.var 0
 
 execute if entity @s[tag=ca.blazing] run scoreboard players set $laser_bla ca.var 1
 execute if entity @s[tag=ca.glacial] run scoreboard players set $laser_gla ca.var 1
@@ -26,8 +26,10 @@ execute if entity @s[tag=ca.venemous] run scoreboard players set $laser_ven ca.v
 execute if entity @s[tag=ca.zephyrous] run scoreboard players set $laser_zep ca.var 1
 execute if entity @s[tag=ca.horrifying] run scoreboard players set $laser_hor ca.var 1
 execute if entity @s[tag=ca.volatile] run scoreboard players set $laser_vol ca.var 1
+execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:abilities/laser/alchemist_save
 
-execute as @e[tag=laser_marker,distance=..1,limit=1] at @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/laser/raycast
+scoreboard players set @s ca.raycast 32
+execute as @s positioned ~ ~1 ~ facing entity @p feet run function cartographer_mob_abilities:abilities/laser/raycast
 
 #Run non onhit traits
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit

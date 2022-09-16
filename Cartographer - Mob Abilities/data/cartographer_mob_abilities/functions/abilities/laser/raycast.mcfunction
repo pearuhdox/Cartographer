@@ -4,14 +4,17 @@ scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
 execute if entity @a[distance=..1.5] run scoreboard players set @s ca.raycast 0
 
-execute if entity @s[scores={ca.raycast=1..}] if score $laser ca.ability_dmg matches 0..12 positioned ^ ^ ^1 unless block ~ ~ ~ #bb:can_raycast run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:1,ignited:1b,CustomName:'{"text":"thermal disencouragement"}'}
-execute if entity @s[scores={ca.raycast=1..}] if score $laser ca.ability_dmg matches 13..24 positioned ^ ^ ^1 unless block ~ ~ ~ #bb:can_raycast run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:1,ignited:1b,CustomName:'{"text":"thermal disencouragement"}'}
-execute if entity @s[scores={ca.raycast=1..}] if score $laser ca.ability_dmg matches 25.. positioned ^ ^ ^1 unless block ~ ~ ~ #bb:can_raycast run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:1,ignited:1b,CustomName:'{"text":"thermal disencouragement"}'}
+scoreboard players set $laser_detonate ca.var 0
+scoreboard players set $laser_blocked ca.var 0
 
-execute as @a[distance=..2] if score $laser ca.ability_dmg matches 0..12 run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:2,ignited:1b,Tags:["laser_explosion"],CustomName:'{"text":"thermal disencouragement"}'}
-execute as @a[distance=..2] if score $laser ca.ability_dmg matches 13..24 run summon creeper ~ ~ ~ {ExplosionRadius:3b,Fuse:2,ignited:1b,Tags:["laser_explosion"],CustomName:'{"text":"thermal disencouragement"}'}
-execute as @a[distance=..2] if score $laser ca.ability_dmg matches 25.. run summon creeper ~ ~ ~ {ExplosionRadius:4b,Fuse:2,ignited:1b,Tags:["laser_explosion"],CustomName:'{"text":"thermal disencouragement"}'}
+function cartographer_mob_abilities:abilities/laser/calc_damage
 
-execute as @e[type=creeper,tag=laser_explosion] at @s run function cartographer_mob_abilities:abilities/laser/set_and_run_traits
+execute if entity @s[scores={ca.raycast=1..}] positioned ^ ^ ^1 unless block ~ ~ ~ #bb:can_raycast run function cartographer_mob_abilities:abilities/laser/if_block
+execute unless score $laser_detonate ca.var matches 1 if entity @s[scores={ca.raycast=0}] positioned ^ ^ ^ run function cartographer_mob_abilities:abilities/laser/if_player
+
+execute if score $laser_detonate ca.var matches 1 as @e[type=creeper,tag=laser_explosion,distance=..4] at @s run function cartographer_mob_abilities:abilities/laser/set_and_run_traits
+execute if score $laser_detonate ca.var matches 1 as @a[distance=..4] at @s run function cartographer_mob_abilities:abilities/laser/at_player
+execute if score $laser_detonate ca.var matches 1 unless score $laser_blocked ca.var matches 1.. positioned as @s run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
+execute if score $laser_detonate ca.var matches 1 positioned as @s run tag @a[distance=..32] remove ability_tagged
 
 execute if entity @s[scores={ca.raycast=1..}] positioned ^ ^ ^1 if block ~ ~ ~ #bb:can_raycast run function cartographer_mob_abilities:abilities/laser/raycast

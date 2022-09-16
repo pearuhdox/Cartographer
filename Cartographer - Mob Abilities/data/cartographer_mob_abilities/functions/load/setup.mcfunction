@@ -39,6 +39,8 @@ scoreboard objectives add invul dummy
 
 scoreboard objectives add ca.orbit_timer dummy
 
+scoreboard objectives add ca.laser_damage minecraft.custom:minecraft.damage_resisted
+
 scoreboard objectives add ca.glacial_slow dummy
 scoreboard objectives add ca.horrified dummy
 scoreboard objectives add ca.overload_pos dummy
