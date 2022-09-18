@@ -91,3 +91,6 @@ execute if entity @s[tag=ca.ambidextrous] unless score @s ca.ambi_cool matches 1
 
 #Run Auras
 execute if entity @s[tag=ca.vfx_aura] run function cartographer_mob_abilities:aura/run_vfx
+
+#Run Sonic Charge Attacks
+execute if score @s ca.sc_time matches 1.. run function cartographer_mob_abilities:passive/projectile/sonic_charge/tick

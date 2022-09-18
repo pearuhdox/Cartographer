@@ -8,7 +8,7 @@ playsound minecraft:entity.allay.death hostile @a[distance=..16] ~ ~ ~ 0.8 1
 
 scoreboard players operation $missile_dmg ca.ability_dmg = @s ca.ability_dmg
 
-execute positioned ~ ~1 ~ unless block ~ ~ ~ #bb:can_raycast as @a[distance=..2] at @s run function cartographer_mob_abilities:abilities/magic_missile/detonate_player
+execute positioned ~ ~1 ~ if block ~ ~ ~ #bb:can_raycast as @a[distance=..2] at @s run function cartographer_mob_abilities:abilities/magic_missile/detonate_player
 
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits
 

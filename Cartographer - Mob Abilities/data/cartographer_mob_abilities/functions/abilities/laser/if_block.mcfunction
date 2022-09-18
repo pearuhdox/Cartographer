@@ -2,3 +2,6 @@ summon creeper ~ ~ ~ {Silent:1b,Tags:["laser_explosion"],ActiveEffects:[{Id:14,D
 
 scoreboard players set $laser_detonate ca.var 1
 scoreboard players set $laser_blocked ca.var 10
+
+playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..32] ~ ~ ~ 2 1.5
+playsound minecraft:entity.warden.tendril_clicks hostile @a[distance=..16] ~ ~ ~ 2 0.65

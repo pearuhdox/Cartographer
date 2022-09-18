@@ -1,4 +1,4 @@
-execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
+scoreboard players set @s cooldown 10
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
@@ -7,8 +7,8 @@ scoreboard players set @s ability_charge 0
 particle minecraft:lava ~ ~1 ~ 0.5 0.5 0.5 1 10 normal @a
 particle minecraft:poof ~ ~0.5 ~ 0.25 0 0.25 0.3 20 normal
 
-playsound minecraft:entity.wither.shoot hostile @a[distance=..32] ~ ~ ~ 4 2
-playsound minecraft:block.anvil.land hostile @a[distance=..32] ~ ~ ~ 4 2
+playsound minecraft:entity.wither.shoot hostile @a[distance=..20] ~ ~ ~ 2 2
+playsound minecraft:block.anvil.land hostile @a[distance=..20] ~ ~ ~ 2 2
 
 
 

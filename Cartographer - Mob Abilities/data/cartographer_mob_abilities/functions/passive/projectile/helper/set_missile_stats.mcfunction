@@ -1,0 +1,19 @@
+scoreboard players operation @s ca.ability_dmg = $projectile_damage ca.ability_dmg
+
+tp @s ~ ~ ~ ~ -90
+
+data modify entity @s Tags set from storage cartographer_mob_abilities:projectile_tag_save Tags
+data modify entity @s Tags append value "magic_missile_projectile"
+data modify entity @s Tags append value "passive_missile"
+data modify entity @s Tags append value "checked"
+
+execute if entity @s[tag=ca.blazing] run item replace entity @s armor.head with minecraft:player_head{display:{Name:"{\"text\":\"Fire Orb\"}"},SkullOwner:{Id:[I;506271496,-186691926,-1902844364,1414935678],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzM2ODdlMjVjNjMyYmNlOGFhNjFlMGQ2NGMyNGU2OTRjM2VlYTYyOWVhOTQ0ZjRjZjMwZGNmYjRmYmNlMDcxIn19fQ=="}]}}} 1
+execute if entity @s[tag=ca.glacial] run item replace entity @s armor.head with minecraft:player_head{display:{Name:"{\"text\":\"Fairy\"}"},SkullOwner:{Id:[I;-1444605975,252136752,-2112308494,-227294081],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTM2ODAyMTY1OGJmYzIxY2NjNDRjZjExZTQwNThmZDE3ZjMzNWMyNmE4MjY1ZGQ4NzBkMTkyNGExYThkNmQ2NSJ9fX0="}]}}} 1
+execute if entity @s[tag=ca.overloading] run item replace entity @s armor.head with minecraft:player_head{display:{Name:"{\"text\":\"Orb (pink)\"}"},SkullOwner:{Id:[I;419713612,-205960051,-1897764286,1459512019],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTllY2JkY2I1NTQxMjNmYTRkMzE4NzY1MzhiYzdmYjI0NzQ5NGFlYTMyNWJkMjY1OTU2OTQ1MDVhZWJkMTBlZCJ9fX0="}]}}} 1
+execute if entity @s[tag=ca.venemous] run item replace entity @s armor.head with minecraft:player_head{display:{Name:"{\"text\":\"Slime Ball (Sludge Juice)\"}"},SkullOwner:{Id:[I;196718720,-1059240884,-2025752404,856144120],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTAxY2U2ODg0MjA3NGRkZTA1MzE4NWIyMThlMzRlZTMyNTljYjM2YWM0NzFkODA5OThmOWNiMDFmMzJlNTFjNyJ9fX0="}]}}} 1
+execute if entity @s[tag=ca.zephyrous] run item replace entity @s armor.head with minecraft:player_head{display:{Name:"{\"text\":\"Air Orb\"}"},SkullOwner:{Id:[I;1901391180,-981119600,-1617867937,795265780],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjgyMjAyODJmMmVlNTk5NTExYjRmYzc0NjExMWM5NzM2ZDdiNDkxZThiY2ZiNjQ4YThhMTU2MjkyODFlZTUifX19"}]}}} 1
+execute if entity @s[tag=ca.horrifying] run item replace entity @s armor.head with minecraft:player_head{display:{Name:"{\"text\":\"Sculk Mouth\"}"},SkullOwner:{Id:[I;1594892811,20400759,-1492556847,-1874399426],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNThhYzhkMTExYzI2OWJiN2VmYzZiNTY2MGI2ZDM3OWQ4MGQxZThhZDNmOTNjNGEwZWJhNWNjZWRjMWU3M2NiZSJ9fX0="}]}}} 1
+execute if entity @s[tag=ca.volatile] run item replace entity @s armor.head with minecraft:player_head{display:{Name:"{\"text\":\"TNT (purple)\"}"},SkullOwner:{Id:[I;74006677,1113408302,-2031464240,1928709901],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWE2YzZlMzU3NTk0ZWQzYTQxOGU0ZTE4MjIzYjEzMWNiMGEyYzY4NjQ0MTg0NjU4OGM1YTI0YTVmZjRjIn19fQ=="}]}}} 1
+
+execute if entity @s[tag=ca.alchemist] run data modify entity @s HandItems[0] set from storage cartographer_mob_abilities:alchemist PotionCopy
+execute if entity @s[tag=ca.alchemist] run data modify entity @s HandItems[1] set from storage cartographer_mob_abilities:alchemist PotionCopy

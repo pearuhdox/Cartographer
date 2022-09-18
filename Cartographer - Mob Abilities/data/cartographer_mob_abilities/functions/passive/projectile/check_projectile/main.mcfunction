@@ -8,6 +8,8 @@ data modify storage cartographer_mob_abilities:projectile data.id set from entit
 execute store result score $passive_proj_attack_dmg ca.var run attribute @s generic.attack_damage get
 scoreboard players operation $passive_proj_attack_dmg ca.var /= $2 ca.CONSTANT
 
+scoreboard players set $was_arrow ca.var 0
+
 execute as @s[type=!ghast] run function cartographer_mob_abilities:passive/projectile/check_projectile/not_ghast_branch
 execute as @s[type=ghast] run function cartographer_mob_abilities:passive/projectile/check_projectile/ghast_branch
 

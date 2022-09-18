@@ -3,6 +3,8 @@ summon dragon_fireball ~ ~0.8 ~ {Tags:["new_proj_replace","passive_dragon_fireba
 
 function cartographer_mob_abilities:passive/projectile/helper/reset_get_data
 
+execute if entity @s[type=minecraft:shulker_bullet] run function cartographer_mob_abilities:passive/projectile/helper/shulker_bullet_swap/get_motion_value_power
+
 execute as @e[tag=passive_dragon_fireball,tag=new_proj_replace,limit=1,sort=nearest] at @s run function cartographer_mob_abilities:passive/projectile/helper/apply_data_power
 
 function cartographer_mob_abilities:passive/projectile/helper/remove_other_sounds

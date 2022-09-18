@@ -1,4 +1,4 @@
-execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 15
+scoreboard players set @s cooldown 15
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 

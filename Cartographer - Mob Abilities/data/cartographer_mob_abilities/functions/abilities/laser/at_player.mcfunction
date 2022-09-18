@@ -10,4 +10,5 @@ tag @s add ca.hit_by_laser
 function cd:lib/player/normal
 
 tag @s add ability_tagged
+
 #Run the next section in "player get hurt EHID section"

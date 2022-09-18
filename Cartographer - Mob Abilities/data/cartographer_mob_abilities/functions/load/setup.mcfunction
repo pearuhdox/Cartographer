@@ -41,6 +41,12 @@ scoreboard objectives add ca.orbit_timer dummy
 
 scoreboard objectives add ca.laser_damage minecraft.custom:minecraft.damage_resisted
 
+scoreboard objectives add ca.needle_convert dummy
+
+scoreboard objectives add ca.sb_convert dummy
+
+scoreboard objectives add ca.sc_time dummy
+
 scoreboard objectives add ca.glacial_slow dummy
 scoreboard objectives add ca.horrified dummy
 scoreboard objectives add ca.overload_pos dummy
@@ -109,6 +115,10 @@ scoreboard objectives add ca.summon_id dummy
 #Create the UUID armor stands.
 kill 002f80c0-0001-f879-0000-009c001e7bfc
 kill 002f80c0-0001-f879-003a-2a2300005860
+
+#Create UUID Marker for Needle Positioning
+# 0000001f-00de-140d-0000-0000000276ef
+summon marker 4206900 50 4206900 {UUID:[I;31,14554125,0,161519],Tags:["ca.needle_positioner"]}
 
 schedule function cartographer_mob_abilities:load/create_uuids 3t
 

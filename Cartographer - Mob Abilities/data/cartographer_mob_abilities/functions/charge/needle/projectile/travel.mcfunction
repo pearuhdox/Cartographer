@@ -24,4 +24,4 @@ execute if score @s ca.lifetime matches 81.. run particle explosion ~ ~0.25 ~ 0.
 execute if score @s ca.lifetime matches 81.. run playsound minecraft:entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 1 2
 execute if score @s ca.lifetime matches 81.. run kill @s
 
-execute if score @s ca.lifetime matches 0.. run execute if entity @a[distance=..2] run function cartographer_mob_abilities:charge/needle/projectile/attack
+execute if score @s ca.lifetime matches 0.. run execute if entity @a[dx=0] positioned ~-0.35 ~-0.35 ~-0.35 if entity @a[dx=0] positioned ~0.35 ~0.35 ~0.35 run function cartographer_mob_abilities:charge/needle/projectile/attack

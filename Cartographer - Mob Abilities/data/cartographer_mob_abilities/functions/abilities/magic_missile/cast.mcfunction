@@ -1,4 +1,4 @@
-execute if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
+scoreboard players set @s cooldown 10
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
@@ -8,8 +8,8 @@ particle minecraft:falling_obsidian_tear ~ ~1 ~ 0.75 0.75 0.75 0 50 normal @a
 particle minecraft:witch ~ ~1 ~ 0.5 0.5 0.5 1 20 normal @a
 particle minecraft:poof ~ ~0.5 ~ 0.25 0 0.25 0.3 20 normal
 
-playsound minecraft:entity.wither.shoot hostile @a[distance=..32] ~ ~ ~ 4 2
-playsound minecraft:entity.zombie_villager.converted hostile @a[distance=..32] ~ ~ ~ 4 2
+playsound minecraft:entity.wither.shoot hostile @a[distance=..24] ~ ~ ~ 2 2
+playsound minecraft:entity.zombie_villager.converted hostile @a[distance=..24] ~ ~ ~ 2 2
 
 #Cast a generic missile
 summon armor_stand ~ ~ ~ {NoGravity:1b,ShowArms:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["magic_missile_projectile"],Pose:{LeftArm:[275f,25f,0f],RightArm:[275f,335f,0f]},Passengers:[{id:"minecraft:sheep",NoGravity:1b,Silent:1b,DeathLootTable:"no_lol",NoAI:1b,Health:2f,Sheared:1b,Tags:["magic_missile_hitbox"],ActiveEffects:[{Id:14,Amplifier:0b,Duration:1000000,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:2}]}],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;2039807386,-1704571837,-1153980447,-93675964],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmY3NzhmNzJlYWNhNDUyZWUwMTM4OTNlMmJjNTNkOGQ1YjFmY2E0NGNmZTI3MDM4NjViMDU0YzI4YTNkZDcifX19"}]}}}}]}

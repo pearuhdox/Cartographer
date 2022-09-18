@@ -7,10 +7,6 @@ execute unless entity @s[tag=avail_target] as @s[type=#bb:hostile,tag=ca.has_act
 #Reset near player check
 #tag @s remove avail_target
 
-#Check if mobs with abilities have needed players in range.
-#execute if entity @s[tag=ca.needle,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..18] run tag @s add avail_target
-#execute if entity @s[tag=ca.rift,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..18] run tag @s add avail_target
-#execute if entity @s[tag=ca.sweep,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..12] run tag @s add avail_target
 
 #Run Rift Spot Particles
 execute if score $rift_vfx ability_charge matches 1.. as @s[type=area_effect_cloud,tag=rift_spot,tag=checked] at @s run function cartographer_mob_abilities:charge/rift/particle_spot

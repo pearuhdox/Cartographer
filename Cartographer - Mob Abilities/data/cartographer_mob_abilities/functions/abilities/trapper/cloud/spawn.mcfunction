@@ -1,4 +1,5 @@
-summon area_effect_cloud ~ ~0.15 ~ {Particle:"crit",Radius:2.5f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:600,WaitTime:30,Motion:[0.0,0.0,0.0],Tags:["ca.trapper_cloud","ca.new_trap_cloud"]}
+execute if entity @s[tag=!passive_trap] run summon area_effect_cloud ~ ~0.15 ~ {Particle:"crit",Radius:2.5f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:600,WaitTime:30,Motion:[0.0,0.0,0.0],Tags:["ca.trapper_cloud","ca.new_trap_cloud"]}
+execute if entity @s[tag=passive_trap] run summon area_effect_cloud ~ ~0.15 ~ {Particle:"crit",Radius:2.5f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:600,WaitTime:10,Motion:[0.0,0.0,0.0],Tags:["ca.trapper_cloud","ca.new_trap_cloud","passive_trap_cloud"]}
 
 
 scoreboard players set $blazing ca.trap_traits 0

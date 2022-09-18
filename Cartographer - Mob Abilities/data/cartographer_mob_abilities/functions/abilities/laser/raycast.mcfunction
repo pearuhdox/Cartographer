@@ -1,4 +1,5 @@
-particle minecraft:dust 1 0 0 1 ~ ~ ~ 0.15 0.15 0.15 1 3 normal
+particle minecraft:dust 0.1 0.1 0.1 1 ~ ~ ~ 0.15 0.15 0.15 1 3 normal
+particle minecraft:sonic_boom ~ ~ ~ 0.15 0.15 0.15 1 1 normal
 
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 

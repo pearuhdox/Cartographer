@@ -1,6 +1,7 @@
 #This mob has been told it can take a token.
 #It will either take a light or heavy token, depending on it's attack type.
 
+
 #Light Attacks with no Heavy Attack Priority
 execute if entity @s[tag=ca.ambush,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.charge,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light

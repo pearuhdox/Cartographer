@@ -3,6 +3,8 @@ summon potion ~ ~1 ~ {Motion:[0.0,0.0,0.0],Tags:["new_proj_replace","passive_pot
 
 function cartographer_mob_abilities:passive/projectile/helper/reset_get_data
 
+execute if entity @s[type=minecraft:shulker_bullet] run function cartographer_mob_abilities:passive/projectile/helper/shulker_bullet_swap/get_motion_value_potion
+
 execute as @e[tag=passive_potion,tag=new_proj_replace,limit=1,sort=nearest] at @s run function cartographer_mob_abilities:passive/projectile/helper/apply_data_motion
 
 function cartographer_mob_abilities:passive/projectile/helper/remove_other_sounds

@@ -6,5 +6,6 @@ execute if entity @s[tag=ca.carapace] run function cartographer_mob_abilities:ab
 
 
 #Runs at the mob position
+execute if entity @s[tag=ca.legionary] at @s run function cartographer_mob_abilities:ability_traits/legionary/master
 execute if entity @s[tag=ca.predator] at @s run function cartographer_mob_abilities:ability_traits/predator/effect
 execute if entity @s[tag=ca.evocative] at @s run function cartographer_mob_abilities:ability_traits/evocative/effect

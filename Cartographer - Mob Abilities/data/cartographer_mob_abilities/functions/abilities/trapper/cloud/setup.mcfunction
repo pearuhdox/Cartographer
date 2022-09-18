@@ -22,4 +22,6 @@ execute if score $alchemist ca.trap_traits matches 1.. run function cartographer
 
 scoreboard players operation @s ca.ability_dmg = $damage ca.trap_traits
 
+execute if entity @s[tag=passive_trap_cloud] run scoreboard players add @s ca.lifetime 20
+
 tag @s remove ca.new_trap_cloud
