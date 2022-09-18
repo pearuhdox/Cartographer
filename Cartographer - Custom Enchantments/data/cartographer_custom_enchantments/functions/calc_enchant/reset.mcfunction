@@ -63,6 +63,7 @@ scoreboard players set @s ca.explosive 0
 scoreboard players set @s ca.thorns 0
 scoreboard players set @s ca.multishot 0
 scoreboard players set @s ca.wavedash 0
+scoreboard players set @s ca.respiration 0
 
 scoreboard players set @s ca.loyalty 0
 scoreboard players set @s ca.fire_aspect 0

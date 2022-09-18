@@ -62,6 +62,7 @@ scoreboard objectives add ca.trueshot dummy
 scoreboard objectives add ca.bleeding dummy
 scoreboard objectives add ca.explosive dummy
 scoreboard objectives add ca.thorns dummy
+scoreboard objectives add ca.respiration dummy
 
 scoreboard objectives add ca.off_duelist dummy
 scoreboard objectives add ca.off_hunter dummy

@@ -57,6 +57,7 @@ execute if score @s ca.thorns matches 21.. run scoreboard players set @s ca.thor
 execute if score @s ca.loyalty matches 11..99 run scoreboard players set @s ca.loyalty 10
 execute if score @s ca.loyalty matches 111.. run scoreboard players set @s ca.loyalty 110
 execute if score @s ca.wavedash matches 2.. run scoreboard players set @s ca.wavedash 1
+execute if score @s ca.respiration matches 11.. run scoreboard players set @s ca.respiration 10
 
 execute if score @s ca.off_duelist matches 6.. run scoreboard players set @s ca.off_duelist 5
 execute if score @s ca.off_hunter matches 6.. run scoreboard players set @s ca.off_hunter 5

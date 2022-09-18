@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The user enters water with Dolphins Grace. The user gains Conduit Power when moving slow in water."
+            "text": "When the user enters water they receive Conduit Power and Dolphins Grace. Kills underwater refresh the duration."
         },
         "icon": {
             "item": "minecraft:heart_of_the_sea"
