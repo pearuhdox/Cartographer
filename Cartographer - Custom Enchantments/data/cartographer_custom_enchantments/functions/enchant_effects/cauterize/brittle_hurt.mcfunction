@@ -9,6 +9,19 @@ execute store result score $new_health ca.brittle_hlth run data get entity @s He
 scoreboard players operation $diff ca.brittle_hlth = $old_health ca.brittle_hlth
 scoreboard players operation $diff ca.brittle_hlth -= $new_health ca.brittle_hlth
 
+scoreboard players operation $diff_check ca.brittle_hlth = $diff ca.brittle_hlth
+
+scoreboard players operation $diff ca.brittle_hlth *= @s ca.cauter_dmg
+scoreboard players operation $diff ca.brittle_hlth /= $100 ca.CONSTANT
+
+scoreboard players operation $kb ca.cauter_dmg = @s ca.cauter_dmg
+scoreboard players operation $kb ca.cauter_dmg /= $20 ca.CONSTANT
+
+execute if score $kb ca.cauter_dmg matches 13.. run scoreboard players set $kb ca.cauter_dmg 12
+execute if score $kb ca.cauter_dmg matches ..3 run scoreboard players set $kb ca.cauter_dmg 4
+
+scoreboard players operation $kb ca.cauter_dmg *= $-1 ca.CONSTANT
+
 execute if score $diff ca.brittle_hlth matches 1.. run scoreboard players operation @s cdl.damage_queue = $diff ca.brittle_hlth
 
 execute if score @s cdl.damage_queue matches 1.. run function cd:lib/mob/damage/true
@@ -24,6 +37,6 @@ particle minecraft:explosion ~ ~0.2 ~ 0 0 0 0 1 force
 
 scoreboard players set @s ca.brittle_time 1
 
-scoreboard players set @s co_y 3
-scoreboard players set @s co_send -8
+scoreboard players set @s co_y 4
+scoreboard players operation @s co_send = $kb ca.cauter_dmg
 function motion:motion/push

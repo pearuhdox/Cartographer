@@ -1,29 +1,14 @@
-scoreboard players set @s ca.cauter_dmg 0
-scoreboard players set $round ca.cauter_dmg 0
+scoreboard players set $time ca.brittle_time 0
 
-execute store result score @s ca.cauter_dmg run data get entity @s Fire 0.1
+execute store result score $time ca.brittle_time run data get entity @s Fire
+execute store result score $amt ca.cauter_dmg run data get entity @s Fire
 
-scoreboard players operation @s ca.cauter_dmg /= $2 ca.CONSTANT
-
-scoreboard players operation @s ca.cauter_dmg -= $1 ca.CONSTANT
-
-scoreboard players operation $round ca.cauter_dmg = @s ca.cauter_dmg
-scoreboard players operation $round ca.cauter_dmg %= $2 ca.CONSTANT
-
-scoreboard players operation @s ca.cauter_dmg += $round ca.cauter_dmg
-
-scoreboard players operation @s ca.cauter_dmg /= $2 ca.CONSTANT
-
-scoreboard players operation $dur_calc ca.brittle_time = @s ca.cauter_dmg
-scoreboard players operation $dur_calc ca.brittle_time *= $10 ca.CONSTANT
-scoreboard players operation $dur_calc ca.brittle_time *= $4 ca.CONSTANT
-
-scoreboard players operation @s ca.brittle_time = $dur_calc ca.brittle_time
-
+scoreboard players add $time ca.brittle_time 40
+scoreboard players remove $amt ca.cauter_dmg 20
 
 #Do the damage here.
-scoreboard players operation @s cdl.damage_queue = @s ca.cauter_dmg
-execute if score @s cdl.damage_queue matches 1.. run function cd:lib/mob/damage/true
+scoreboard players operation @s ca.brittle_time = $time ca.brittle_time
+scoreboard players operation @s ca.cauter_dmg = $amt ca.cauter_dmg
 
 scoreboard players set $brittled ca.cauterize 1
 

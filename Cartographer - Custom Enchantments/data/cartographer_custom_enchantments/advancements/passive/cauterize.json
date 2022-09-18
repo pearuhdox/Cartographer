@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "While worn or used, extinguishes mobs you attack that are on fire and makes them brittle. Brittle mobs take double damage and bonus knockback from the next attack they receive."
+            "text": "While worn or used, extinguishes mobs you attack that are on fire and makes them brittle. Brittle mobs take bonus damage and knockback from the next attack they receive (proportional to the burn time)."
         },
         "icon": {
             "item": "minecraft:flint_and_steel"
