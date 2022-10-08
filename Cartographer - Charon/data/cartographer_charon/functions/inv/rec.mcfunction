@@ -9,6 +9,10 @@ execute if data storage cartographer_charon:player temp.tag{Enchantments:[{id:"m
 
 #modify slot
 scoreboard players remove $rand_t dt.var 1
+
+#If Drop All Allowed is on, then set the score here to 0
+execute if score $drop_all_allowed charon.gmr matches 1.. run scoreboard players set $rand_t dt.var 0
+
 execute if score $rand_t dt.var matches ..0 run function cartographer_charon:inv/never_steal
 execute if score $rand_t dt.var matches 1.. run function cartographer_charon:inv/always_steal
 

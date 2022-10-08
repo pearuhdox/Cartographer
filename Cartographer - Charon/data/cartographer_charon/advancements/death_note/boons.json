@@ -1,0 +1,35 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:sunflower"
+      },
+      "title": {
+        "text": "Boons                      ",
+        "color": "yellow",
+        "bold": false
+      },
+      "description": {
+        "text": "----------------------- While you have these, you are immune to any negative death effects, and lose a boon instead. Can be acquired via Ambrosia items or potentially other methods. -----------------------",
+        "color": "white",
+        "bold": false
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/root",
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "nbt": "{CartographerAmbrosia:1b}"
+            }
+          ]
+        }
+      }
+    }
+  }
+  

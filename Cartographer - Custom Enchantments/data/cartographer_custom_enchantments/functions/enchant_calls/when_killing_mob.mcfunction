@@ -11,7 +11,7 @@ execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_cu
 
 #Aquadynamic Refresh
 #Lifesteal
-execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/aquadynamic/refresh_kill
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.aquadynamic matches 1.. run function cartographer_custom_enchantments:enchant_effects/aquadynamic/refresh_kill
 
 #Melee effects run on melee kills only
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.deal_mel_dmg matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee

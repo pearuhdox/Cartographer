@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:consume_item",
+        "conditions": {
+          "item": {
+            "nbt": "{CartographerAmbrosia:1b}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "cartographer_charon:boons/ambrosia"
+    }
+  }
+  

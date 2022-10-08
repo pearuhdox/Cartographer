@@ -10,4 +10,8 @@ scoreboard players set @s dt.death 0
 
 tag @s remove watched_die_already
 
+execute if score $give_compass charon.gmr matches 1.. run function cartographer_charon:give/timepiece
+
 #say watch die
+
+execute unless score $no_death_note charon.gmr matches 1.. run advancement grant @s only cartographer_charon:death_note/root

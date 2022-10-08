@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:crying_obsidian"
+      },
+      "title": {
+        "text": "Void Return                    ",
+        "color": "#BEA0ED",
+        "bold": false
+      },
+      "description": {
+        "text": "--------------------------- Players that fall into the void take damage and are returned to the last stable ground they stood on. The damage received is proportional to the distance fallen. Death effects occur at the last stable ground you stood on. ---------------------------",
+        "color": "white",
+        "bold": false
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/void_lift",
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }
+  

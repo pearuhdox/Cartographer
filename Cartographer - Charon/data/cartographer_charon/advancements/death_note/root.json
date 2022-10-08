@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:wither_rose"
+      },
+      "title": {
+        "text": "Lexica: Death Note               ",
+        "color": "#EB87FF"
+      },
+      "description": {
+        "text": "Listed in these pages is every active death modifier in this world.",
+        "color": "white"
+      },
+      "background": "minecraft:textures/block/bone_block_side.png",
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:impossible"
+      }
+    },
+    "rewards": {
+      "function": "cartographer_charon:description"
+    }
+  }

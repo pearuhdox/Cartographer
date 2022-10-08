@@ -1,0 +1,35 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:recovery_compass"
+      },
+      "title": {
+        "text": "Death Timepiece        ",
+        "color": "yellow",
+        "bold": false
+      },
+      "description": {
+        "text": "----------------------- Death grants you a timepiece (special Recovery Compass) that points back to your last death location. -----------------------",
+        "color": "white",
+        "bold": false
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/boons",
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "nbt": "{DeathTimepiece:1b}"
+            }
+          ]
+        }
+      }
+    }
+  }
+  

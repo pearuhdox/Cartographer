@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Collector                ",
+            "color": "aqua",
+            "bold": true
+        },
+        "description": {
+            "bold": false,
+            "color": "white",
+            "text": "-------------------------- On death, a Collector spawns and holds some of your items. Killing the Collector will drop your items in a bundle. --------------------------"
+        },
+        "icon": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+        "frame": "challenge",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/death_drop"
+}

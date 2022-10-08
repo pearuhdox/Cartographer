@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Caged                    ",
+            "color": "aqua",
+            "bold": true
+        },
+        "description": {
+            "bold": false,
+            "color": "white",
+            "text": "-------------------------- On death, a random spawner near you stores a cache that contains some of your items. When broken, your items are returned. --------------------------"
+        },
+        "icon": {
+            "item": "minecraft:spawner"
+        },
+        "frame": "challenge",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/trader"
+}

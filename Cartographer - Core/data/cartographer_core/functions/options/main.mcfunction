@@ -21,13 +21,10 @@ tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"tex
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-execute if entity @p run function cartographer_custom_enchantments:options/header
-execute if entity @p run function cartographer_custom_statuses:options/header
-#execute if entity @p run function cartographer_loot_additions:load/options/header
-#execute if entity @p run function cartographer_mimics:load/options/header
-execute if entity @p run function cartographer_mob_abilities:options/header
-#execute if entity @p run function cartographer_potion_util:load/options/header
-#execute if entity @p run function cartographer_repair_stations:load/options/header
+function cartographer_charon:options/header
+function cartographer_custom_enchantments:options/header
+function cartographer_custom_statuses:options/header
+function cartographer_mob_abilities:options/header
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}

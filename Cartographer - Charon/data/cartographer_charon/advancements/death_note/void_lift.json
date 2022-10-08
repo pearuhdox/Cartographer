@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:feather"
+      },
+      "title": {
+        "text": "Void Lift                       ",
+        "color": "#BEA0ED",
+        "bold": false
+      },
+      "description": {
+        "text": "--------------------------- Players that fall into the void take damage and receive levitation and are lifted out of it. The levitation and damage received is proportional to the distance fallen. Death effects occur at the last stable ground you stood on. ---------------------------",
+        "color": "white",
+        "bold": false
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/void_execute",
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }
+  

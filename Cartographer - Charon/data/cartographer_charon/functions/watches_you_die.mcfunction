@@ -5,7 +5,11 @@ tag @s add the_one_dying
 
 data modify storage cartographer_charon:player inv set value []
 
-execute if data storage inv:main inv.all[] run function cartographer_charon:inv/iterate_death
+#Run the death mechanic if the player has inventory unless they have a boon.
+#Take away a boon if they have one and have inventory to lose. (Even if those items would be protected by other rules)
+execute if data storage inv:main inv.all[] unless score @s ca.boons matches 1.. run function cartographer_charon:inv/iterate_death
+execute if data storage inv:main inv.all[] if score @s ca.boons matches 1.. run function cartographer_charon:boons/remove
+
 tag @s add watched_die_already
 
 tag @s remove the_one_dying

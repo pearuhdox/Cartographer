@@ -14,7 +14,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:paper"
+            "item": "minecraft:splash_potion"
         },
         "frame": "task",
         "show_toast": false,

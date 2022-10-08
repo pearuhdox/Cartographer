@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Trader                   ",
+            "color": "aqua",
+            "bold": true
+        },
+        "description": {
+            "bold": false,
+            "color": "white",
+            "text": "-------------------------- On death, some of your items are taken and stored in a bundle. The bundle is held by a trader who will sell the items back to you. --------------------------"
+        },
+        "icon": {
+            "item": "minecraft:emerald"
+        },
+        "frame": "challenge",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/collector"
+}

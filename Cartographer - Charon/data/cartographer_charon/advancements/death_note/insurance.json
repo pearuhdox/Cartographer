@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:nether_star"
+      },
+      "title": {
+        "text": "Insurance                    ",
+        "color": "yellow",
+        "bold": false
+      },
+      "description": {
+        "text": "-------------------------- Items are not taken from you on death. They will still be taxed if death taxes are active. --------------------------",
+        "color": "white",
+        "bold": false
+      },
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/protected_backpack",
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }
+  

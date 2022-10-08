@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Death Drop               ",
+            "color": "aqua",
+            "bold": true
+        },
+        "description": {
+            "bold": false,
+            "color": "white",
+            "text": "-------------------------- On death, some of your items are dropped into a bundle on the ground. The bundle cannot be destroyed or despawn. (While it rests on the ground in this way). --------------------------"
+        },
+        "icon": {
+            "item": "minecraft:bundle"
+        },
+        "frame": "challenge",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/root"
+}

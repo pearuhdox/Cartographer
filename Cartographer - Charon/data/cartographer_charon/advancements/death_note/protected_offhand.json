@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:shield"
+      },
+      "title": {
+        "text": "Offhand Protection             ",
+        "color": "yellow",
+        "bold": false
+      },
+      "description": {
+        "text": "-------------------------- Items in your offhand cannot be taken or taxed by death systems. --------------------------",
+        "color": "white",
+        "bold": false
+      },
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/protected_armor",
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }
+  

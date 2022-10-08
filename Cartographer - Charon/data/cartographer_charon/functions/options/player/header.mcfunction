@@ -1,0 +1,1 @@
+tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Custom Enchantments","color":"#8AFFEB","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View information for Custom Enchantments.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.options_trig set 4"}}]
