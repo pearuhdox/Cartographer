@@ -63,6 +63,9 @@ execute if score @s ca.ammo matches 6 if score @s ca.repeating matches 11..17 if
 execute if score @s ca.ammo matches 7 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:7,Charged:1b}
 execute if score @s ca.ammo matches 8 if score @s ca.repeating matches 11..17 if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] run data modify block 4206900 0 4206901 Items[0].tag merge value {Ammo:8,Charged:1b}
 
+#Allow reload to use multiple recoils - Reload must happen on ground
+execute if score @s ca.recoil matches 1.. unless block ~ ~-1 ~ #cartographer_core:can_raycast run scoreboard players operation @s ca.recoil_count = @s ca.ammo
+
 #Save the data back to the player array
 function suso.player_data:put/do
 

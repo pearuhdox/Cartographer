@@ -15,6 +15,7 @@ scoreboard players operation @s ca.cauterize = @p ca.cauterize
 scoreboard players operation @s ca.possession = @p ca.possession
 scoreboard players operation @s ca.loyalty = @p ca.loyalty
 scoreboard players operation @s ca.wavedash = @p ca.wavedash
+scoreboard players operation @s ca.collapse = @p ca.collapse
 
 scoreboard players operation @s ca.duelist += @p ca.off_duelist
 scoreboard players operation @s ca.hunter += @p ca.off_hunter

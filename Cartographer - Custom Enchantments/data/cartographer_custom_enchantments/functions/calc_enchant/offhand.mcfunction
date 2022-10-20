@@ -141,6 +141,15 @@ execute unless predicate cartographer_custom_enchantments:hold_ranged_weapon sto
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.explosive += $temp ca.susu
 
 scoreboard players set $temp ca.susu 0
+execute unless predicate cartographer_custom_enchantments:hold_ranged_weapon store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"recoil"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.recoil += $temp ca.susu
+
+scoreboard players set $temp ca.susu 0
+execute unless predicate cartographer_custom_enchantments:hold_ranged_weapon store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"collapse"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.collapse += $temp ca.susu
+
+
+scoreboard players set $temp ca.susu 0
 execute unless predicate cartographer_custom_enchantments:hold_ranged_weapon store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"curse_encumbering"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.curse_encum += $temp ca.susu
 

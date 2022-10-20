@@ -13,6 +13,10 @@ execute if score @s ca.frost_time matches 1.. run function cartographer_custom_e
 #Current Drag Effects
 execute as @s[tag=current_drag] run function cartographer_custom_enchantments:enchant_effects/current_drag
 
+#Recoil movement pieces
+execute as @s[type=creeper,tag=ca.recoil_movement,tag=ca.needs_move] at @s run function cartographer_custom_enchantments:enchant_effects/recoil/move_creeper
+execute as @s[type=slime,tag=ca.recoil_blocker,tag=ca.needs_move] at @s run function cartographer_custom_enchantments:enchant_effects/recoil/move_slime
+
 #Cleanse the Skip Smouldering Tag
 tag @s remove skip_cauterize
 

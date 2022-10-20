@@ -18,7 +18,7 @@
       "announce_to_chat": false,
       "hidden": true
     },
-    "parent": "cartographer_charon:death_note/drop_boxes",
+    "parent": "cartographer_charon:death_note/spawner_defenses",
     "criteria": {
       "tick": {
         "trigger": "minecraft:impossible"

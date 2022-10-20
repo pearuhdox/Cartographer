@@ -59,6 +59,10 @@ execute if score @s ca.loyalty_time matches 1.. run scoreboard players add @s ca
 #If a second has been reached, run the Loyalty Inventory Check System
 execute if score @s ca.loyalty_time matches 5.. run function cartographer_custom_enchantments:enchant_effects/loyalty/return/get_inventory
 
+#Recoil Time
+execute if score @s ca.recoil_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/recoil/time
+execute unless block ~ ~-0.2 ~ #cartographer_core:can_raycast unless score @s ca.recoil_time matches 1.. unless score @s ca.recoil_count matches 1.. run function cartographer_custom_enchantments:enchant_effects/recoil/count_fix
+
 
 #Kill trigger (if score $cu_en_kill ca.enabler matches 1.. )
 execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob

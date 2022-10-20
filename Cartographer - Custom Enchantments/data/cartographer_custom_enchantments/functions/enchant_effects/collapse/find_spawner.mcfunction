@@ -1,0 +1,20 @@
+execute positioned ~ ~0.1 ~ if block ~ ~ ~ spawner align xyz run summon armor_stand ~0.5 ~0.25 ~0.5 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:["ca.collapsing_stand"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-494756349,-526955692,-1655766865,-1946868088],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2QyMmFkNGEyMTY1YTlhMDI5ZjI5NTYwMDhlMGVmMjQ2NmYyNDMwNzdhNzgxZTY3MGUzNmFjOWY0OGRjNmU3NiJ9fX0="}]}}}}]}
+execute positioned ~ ~0.1 ~ if block ~ ~ ~ spawner align xyz run tag @s add ca.spawner_found
+
+execute positioned ~ ~-0.1 ~ if block ~ ~ ~ spawner align xyz run summon armor_stand ~0.5 ~0.25 ~0.5 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:["ca.collapsing_stand"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-494756349,-526955692,-1655766865,-1946868088],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2QyMmFkNGEyMTY1YTlhMDI5ZjI5NTYwMDhlMGVmMjQ2NmYyNDMwNzdhNzgxZTY3MGUzNmFjOWY0OGRjNmU3NiJ9fX0="}]}}}}]}
+execute positioned ~ ~-0.1 ~ if block ~ ~ ~ spawner align xyz run tag @s add ca.spawner_found
+
+execute positioned ~0.1 ~ ~ if block ~ ~ ~ spawner align xyz run summon armor_stand ~0.5 ~0.25 ~0.5 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:["ca.collapsing_stand"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-494756349,-526955692,-1655766865,-1946868088],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2QyMmFkNGEyMTY1YTlhMDI5ZjI5NTYwMDhlMGVmMjQ2NmYyNDMwNzdhNzgxZTY3MGUzNmFjOWY0OGRjNmU3NiJ9fX0="}]}}}}]}
+execute positioned ~0.1 ~ ~ if block ~ ~ ~ spawner align xyz run tag @s add ca.spawner_found
+
+execute positioned ~-0.1 ~ ~ if block ~ ~ ~ spawner align xyz run summon armor_stand ~0.5 ~0.25 ~0.5 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:["ca.collapsing_stand"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-494756349,-526955692,-1655766865,-1946868088],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2QyMmFkNGEyMTY1YTlhMDI5ZjI5NTYwMDhlMGVmMjQ2NmYyNDMwNzdhNzgxZTY3MGUzNmFjOWY0OGRjNmU3NiJ9fX0="}]}}}}]}
+execute positioned ~-0.1 ~ ~ if block ~ ~ ~ spawner align xyz run tag @s add ca.spawner_found
+
+execute positioned ~ ~ ~0.1 if block ~ ~ ~ spawner align xyz run summon armor_stand ~0.5 ~0.25 ~0.5 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:["ca.collapsing_stand"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-494756349,-526955692,-1655766865,-1946868088],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2QyMmFkNGEyMTY1YTlhMDI5ZjI5NTYwMDhlMGVmMjQ2NmYyNDMwNzdhNzgxZTY3MGUzNmFjOWY0OGRjNmU3NiJ9fX0="}]}}}}]}
+execute positioned ~ ~ ~0.1 if block ~ ~ ~ spawner align xyz run tag @s add ca.spawner_found
+
+execute positioned ~ ~ ~-0.1 if block ~ ~ ~ spawner align xyz run summon armor_stand ~0.5 ~0.25 ~0.5 {NoGravity:1b,Silent:1b,Invulnerable:1b,Small:1b,Invisible:1b,Tags:["ca.collapsing_stand"],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-494756349,-526955692,-1655766865,-1946868088],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2QyMmFkNGEyMTY1YTlhMDI5ZjI5NTYwMDhlMGVmMjQ2NmYyNDMwNzdhNzgxZTY3MGUzNmFjOWY0OGRjNmU3NiJ9fX0="}]}}}}]}
+execute positioned ~ ~ ~-0.1 if block ~ ~ ~ spawner align xyz run tag @s add ca.spawner_found
+
+execute if entity @s[tag=ca.spawner_found] run function cartographer_custom_enchantments:enchant_effects/collapse/get_enchant_data
+tag @s remove ca.spawner_found

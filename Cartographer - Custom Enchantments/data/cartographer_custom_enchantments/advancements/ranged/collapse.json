@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"collapse\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Collapse                 ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Ranged throws that hit spawners spawn an entity that breaks the spawner over time.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:spawner"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/collapse"
+    },
+    "parent": "cartographer_custom_enchantments:tree_ranged"
+}

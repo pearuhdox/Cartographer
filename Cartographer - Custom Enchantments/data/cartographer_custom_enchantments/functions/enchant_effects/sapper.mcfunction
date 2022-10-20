@@ -45,5 +45,5 @@ execute if entity @s[scores={ca.sapper=1..,ca.s_con=4}] run scoreboard players s
 execute if entity @s[scores={ca.sapper=1..,ca.s_con=5}] run scoreboard players set @s ca.conceal_time 141
 execute if entity @s[scores={ca.sapper=1..,ca.s_con=6..}] run scoreboard players set @s ca.conceal_time 161
 
-execute run playsound minecraft:entity.witch.drink player @a[distance=..8] ~ ~ ~ 0.5 2
+playsound minecraft:entity.witch.drink player @a[distance=..8] ~ ~ ~ 0.5 2
 execute as @s at @e[type=minecraft:experience_orb,limit=1,sort=nearest] run particle minecraft:heart ~ ~ ~ 0.3 0.3 0.3 1 5 normal 

@@ -39,6 +39,6 @@ execute if score $exec ca.executioner matches 1 as @s[scores={ca.exec_low=..10}]
 execute if score $exec ca.executioner matches 2 as @s[scores={ca.exec_low=..20}] at @s run function #minecraft:cartographer_events/execute_mob
 execute if score $exec ca.executioner matches 3 as @s[scores={ca.exec_low=..30}] at @s run function #minecraft:cartographer_events/execute_mob
 
-execute if score $exec ca.executioner matches 1 as @s[scores={ca.exec_low=..10}] at @s run kill @s
-execute if score $exec ca.executioner matches 2 as @s[scores={ca.exec_low=..20}] at @s run kill @s
-execute if score $exec ca.executioner matches 3 as @s[scores={ca.exec_low=..30}] at @s run kill @s
+execute if score $exec ca.executioner matches 1 as @s[scores={ca.exec_low=..10}] at @s run function cartographer_custom_enchantments:enchant_effects/executioner/kill_branch
+execute if score $exec ca.executioner matches 2 as @s[scores={ca.exec_low=..20}] at @s run function cartographer_custom_enchantments:enchant_effects/executioner/kill_branch
+execute if score $exec ca.executioner matches 3 as @s[scores={ca.exec_low=..30}] at @s run function cartographer_custom_enchantments:enchant_effects/executioner/kill_branch

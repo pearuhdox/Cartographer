@@ -26,6 +26,9 @@ execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.point_bla
 execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.repeating=1..7,ca.fire_cbow=1..},nbt={SelectedItem:{tag:{Charged:0b}}}] at @s run scoreboard players set @s ca.rpt_cdl 3
 execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.repeating=11..17,ca.fire_cbow=1..},nbt={Inventory:[{Slot:-106b,tag:{Charged:0b}}]}] at @s run scoreboard players set @s ca.rpt_cdl 3
 
+#Recoil Trigger
+execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.recoil=1..,ca.fire_cbow=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/recoil/master
+
 #Sharpshot
 execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.sharpshot=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/sharpshot
 

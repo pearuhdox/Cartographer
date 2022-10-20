@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"recoil\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Auto Charge               ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "Shooting this crossbow (while not sneaking) knocks you back based on the direction you are looking."
+        },
+        "icon": {
+            "item": "minecraft:crossbow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/recoil"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/possess"
+}

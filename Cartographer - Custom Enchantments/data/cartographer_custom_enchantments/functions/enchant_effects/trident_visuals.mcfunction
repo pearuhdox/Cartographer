@@ -6,6 +6,8 @@ execute if entity @s[scores={ca.fire_aspect=1..}] run data modify entity @s Fire
 
 execute if entity @s[scores={ca.current=1..}] run particle minecraft:rain ~ ~ ~ 0.2 0.2 0.2 1 10 normal
 
-execute if entity @s[nbt={inGround:1b}] run tag @s remove custom_trident
+execute if entity @s[scores={ca.collapse=1..}] run particle minecraft:enchanted_hit ~ ~ ~ 0.2 0.2 0.2 0.05 4 normal
+
+execute if entity @s[nbt={inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/trident_ground_branch
 
 execute if entity @s[tag=loyalty_checked,tag=!custom_trident,tag=!current_loyalty_trident] run kill @s

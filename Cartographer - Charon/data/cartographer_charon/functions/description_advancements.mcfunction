@@ -10,6 +10,7 @@ execute if score $cage charon.gmr matches 1.. run advancement grant @s only cart
 
 #Negative Advancement Popups
 execute if score $always_drop_boxes charon.gmr matches 1.. run advancement grant @s only cartographer_charon:death_note/drop_boxes
+execute if score $spawner_defenses charon.gmr matches 1.. run advancement grant @s only cartographer_charon:death_note/spawner_defenses
 execute if score $tax_count charon.gmr matches 1.. run advancement grant @s only cartographer_charon:death_note/tax_count
 execute if score $tax_durability charon.gmr matches 1.. run advancement grant @s only cartographer_charon:death_note/tax_durability
 execute if score $tax_vanish charon.gmr matches 1.. run advancement grant @s only cartographer_charon:death_note/tax_vanish

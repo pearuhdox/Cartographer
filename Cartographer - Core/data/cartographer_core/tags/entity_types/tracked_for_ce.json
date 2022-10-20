@@ -4,6 +4,7 @@
 		"#bb:arrow",
 		"minecraft:trident",
 		"minecraft:armor_stand",
-		"minecraft:evoker_fangs"
+		"minecraft:evoker_fangs",
+		"minecraft:falling_block"
 	]
 }

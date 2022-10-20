@@ -31,5 +31,6 @@ scoreboard players operation $temp ca.var += @s ca.off_bleeding
 scoreboard players operation $temp ca.var += @s ca.off_fire_aspect
 scoreboard players operation $temp ca.var += @s ca.off_possession
 
+scoreboard players operation $temp ca.var += @s ca.collapse
 
 execute if score $temp ca.var matches 1.. at @s as @e[type=trident,limit=1,distance=..7,sort=nearest] run function cartographer_custom_enchantments:enchant_effects/branch/set_custom_trident

@@ -100,3 +100,5 @@ tag @s remove showing_repeating
 
 scoreboard players set $auto_repeat ca.repeating 0
 scoreboard players set $auto_repeat ca.auto_charge 0
+
+execute unless score @s ca.recoil_count matches 1.. run scoreboard players add @s ca.recoil_count 1

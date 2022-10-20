@@ -63,6 +63,10 @@ scoreboard objectives add ca.bleeding dummy
 scoreboard objectives add ca.explosive dummy
 scoreboard objectives add ca.thorns dummy
 scoreboard objectives add ca.respiration dummy
+scoreboard objectives add ca.recoil dummy
+scoreboard objectives add ca.collapse dummy
+
+scoreboard objectives add ca.efficiency dummy
 
 scoreboard objectives add ca.off_duelist dummy
 scoreboard objectives add ca.off_hunter dummy
@@ -140,6 +144,9 @@ scoreboard objectives add ca.cau_prv_time dummy
 scoreboard objectives add ca.brittle_time dummy
 scoreboard objectives add ca.brittle_hlth dummy
 
+scoreboard objectives add ca.recoil_time dummy
+scoreboard objectives add ca.recoil_count dummy
+scoreboard objectives add ca.recoil_mode dummy
 
 scoreboard objectives add ca.armor_count dummy
 
@@ -238,6 +245,7 @@ scoreboard objectives add ca.dmg_to_deal dummy
 scoreboard objectives add ca.rotation dummy
 
 scoreboard objectives add ca.ind_val dummy
+
 
 #Setup LoE data space
 function cartographer_custom_enchantments:load/integration/active/clear

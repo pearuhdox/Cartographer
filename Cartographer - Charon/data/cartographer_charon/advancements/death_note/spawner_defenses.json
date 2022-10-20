@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:spawner"
+      },
+      "title": {
+        "text": "Spawner Defenses",
+        "color": "#C8B69F",
+        "bold": false
+      },
+      "description": {
+        "text": "-------------------- When players die, spawners within 32 blocks will prime themselves instantly. --------------------",
+        "color": "white",
+        "bold": false
+      },
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_charon:death_note/drop_boxes",
+    "criteria": {
+      "tick": {
+        "trigger": "minecraft:impossible"
+      }
+    }
+  }
+  

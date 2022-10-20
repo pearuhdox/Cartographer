@@ -32,7 +32,7 @@ execute if score @s ca.lexica_trig matches 1.. run function cartographer_core:le
 execute if score @s ca.atk_time matches 1.. run scoreboard players remove @s ca.atk_time 1
 execute if score @s ca.atk_time_true matches 1.. run scoreboard players remove @s ca.atk_time_true 1
 
-#Run the lexica. PEAR CHECK THIS LATER
+#Run the lexica.
 #execute as @a at @s run function cartographer_core:lexica/is_holding
 #execute as @a[scores={ca.use_lexica=1..},tag=holding_lexica] at @s run function cartographer_core:lexica/open
 execute if score @s ca.lexica_time matches 1 run function cartographer_core:loop/tick/branch/lexica_time
