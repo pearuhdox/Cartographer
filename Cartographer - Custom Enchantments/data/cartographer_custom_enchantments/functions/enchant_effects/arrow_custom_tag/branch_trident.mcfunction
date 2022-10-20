@@ -5,6 +5,7 @@ scoreboard players operation $duelist ca.var = @s ca.duelist
 scoreboard players operation $hunter ca.var = @s ca.hunter
 scoreboard players operation $singe ca.var = @s ca.singe
 scoreboard players operation $frostbite ca.var = @s ca.frostbite
+scoreboard players operation $executioner ca.var = @s ca.executioner
 scoreboard players operation $exposing ca.var = @s ca.exposing
 scoreboard players operation $possession ca.var = @s ca.possession
 scoreboard players operation $stunning ca.var = @s ca.stunning
@@ -19,3 +20,5 @@ scoreboard players operation $loyalty ca.var = @s ca.loyalty
 
 #Get the Wavedash ID if Wavedash exists
 execute if score @s ca.wavedash matches 1.. run function cartographer_custom_enchantments:enchant_effects/wavedash/get_id
+
+scoreboard players operation $test ca.var = @s ca.executioner

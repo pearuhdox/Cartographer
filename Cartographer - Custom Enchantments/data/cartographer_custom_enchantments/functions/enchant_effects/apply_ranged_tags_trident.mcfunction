@@ -18,6 +18,7 @@ scoreboard players operation $temp ca.var += @s ca.cauterize
 scoreboard players operation $temp ca.var += @s ca.possession
 scoreboard players operation $temp ca.var += @s ca.loyalty
 scoreboard players operation $temp ca.var += @s ca.wavedash
+scoreboard players operation $temp ca.var += @s ca.executioner
 
 scoreboard players operation $temp ca.var += @s ca.off_duelist
 scoreboard players operation $temp ca.var += @s ca.off_hunter
@@ -30,6 +31,7 @@ scoreboard players operation $temp ca.var += @s ca.off_electrocute
 scoreboard players operation $temp ca.var += @s ca.off_bleeding
 scoreboard players operation $temp ca.var += @s ca.off_fire_aspect
 scoreboard players operation $temp ca.var += @s ca.off_possession
+scoreboard players operation $temp ca.var += @s ca.off_executioner
 
 scoreboard players operation $temp ca.var += @s ca.collapse
 

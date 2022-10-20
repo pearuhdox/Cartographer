@@ -19,6 +19,7 @@ scoreboard players set $duelist ca.var 0
 scoreboard players set $hunter ca.var 0
 scoreboard players set $singe ca.var 0
 scoreboard players set $frostbite ca.var 0
+scoreboard players set $executioner ca.var 0
 scoreboard players set $exposing ca.var 0
 scoreboard players set $possession ca.var 0
 scoreboard players set $stunning ca.var 0
@@ -162,6 +163,11 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleedi
 
 #Wavedash
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_wavedash] at @s run function cartographer_custom_enchantments:enchant_effects/wavedash/teleport_start
+
+#Executioner - Trident
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_executioner_1] at @s run function cartographer_custom_enchantments:enchant_effects/executioner/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_executioner_2] at @s run function cartographer_custom_enchantments:enchant_effects/executioner/ranged
+execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_executioner_3] at @s run function cartographer_custom_enchantments:enchant_effects/executioner/ranged
 
 
 #Brittle Check. Check if the entity hurt was Brittle and it wasn't from the same hit that applied it (from Cauterize).

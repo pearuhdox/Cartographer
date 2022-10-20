@@ -36,6 +36,11 @@ execute if score $frostbite ca.var matches 3 run tag @s add is_frostbite_3
 execute if score $frostbite ca.var matches 4 run tag @s add is_frostbite_4
 execute if score $frostbite ca.var matches 5 run tag @s add is_frostbite_5
 
+#Executioner Ranged Synergy
+execute if score $executioner ca.var matches 1 run tag @s add is_executioner_1
+execute if score $executioner ca.var matches 2 run tag @s add is_executioner_2
+execute if score $executioner ca.var matches 3 run tag @s add is_executioner_3
+
 #Exposing Ranged Synergy
 execute if score $exposing ca.var matches 1 run tag @s add is_exposing_1
 execute if score $exposing ca.var matches 2 run tag @s add is_exposing_2
