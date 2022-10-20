@@ -78,11 +78,12 @@ execute if score @s ca.t_fire matches 4.. run scoreboard players set @s ca.t_fir
 execute if score @s ca.t_frost matches 6.. run scoreboard players set @s ca.t_frost 5
 execute if score @s ca.t_bleed matches 4.. run scoreboard players set @s ca.t_bleed 3
 execute if score @s ca.t_shock matches 4.. run scoreboard players set @s ca.t_shock 3
-execute if score @s ca.t_vuln matches 4.. run scoreboard players set @s ca.t_vuln 3
+execute if score @s ca.t_expose matches 4.. run scoreboard players set @s ca.t_expose 3
 execute if score @s ca.t_stun matches 6.. run scoreboard players set @s ca.t_stun 5
 execute if score @s ca.t_infection matches 4.. run scoreboard players set @s ca.t_infection 3
 execute if score @s ca.t_knock matches 6.. run scoreboard players set @s ca.t_knock 5
 execute if score @s ca.t_poss matches 4.. run scoreboard players set @s ca.t_poss 3
+execute if score @s ca.t_exec matches 4.. run scoreboard players set @s ca.t_exec 3
 
 execute if score @s ca.s_adren matches 7.. run scoreboard players set @s ca.s_adren 6
 execute if score @s ca.s_energ matches 7.. run scoreboard players set @s ca.s_energ 6

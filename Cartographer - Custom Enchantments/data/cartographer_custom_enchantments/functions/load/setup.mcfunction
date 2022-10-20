@@ -90,10 +90,11 @@ scoreboard objectives add ca.t_frost dummy
 scoreboard objectives add ca.t_stun dummy
 scoreboard objectives add ca.t_bleed dummy
 scoreboard objectives add ca.t_shock dummy
-scoreboard objectives add ca.t_vuln dummy
+scoreboard objectives add ca.t_expose dummy
 scoreboard objectives add ca.t_infection dummy
 scoreboard objectives add ca.t_knock dummy
 scoreboard objectives add ca.t_poss dummy
+scoreboard objectives add ca.t_exec dummy
 
 scoreboard objectives add ca.s_adren dummy
 scoreboard objectives add ca.s_frenzy dummy

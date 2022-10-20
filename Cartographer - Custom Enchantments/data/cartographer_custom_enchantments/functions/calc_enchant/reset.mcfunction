@@ -83,12 +83,13 @@ scoreboard players set @s ca.curse_encum 0
 scoreboard players set @s ca.t_fire 0
 scoreboard players set @s ca.t_bleed 0
 scoreboard players set @s ca.t_frost 0
-scoreboard players set @s ca.t_vuln 0
+scoreboard players set @s ca.t_expose 0
 scoreboard players set @s ca.t_shock 0
 scoreboard players set @s ca.t_stun 0
 scoreboard players set @s ca.t_infection 0
 scoreboard players set @s ca.t_knock 0
 scoreboard players set @s ca.t_poss 0
+scoreboard players set @s ca.t_exec 0
 
 scoreboard players set @s ca.s_adren 0
 scoreboard players set @s ca.s_energ 0
