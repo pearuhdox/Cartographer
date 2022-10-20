@@ -4,9 +4,14 @@ scoreboard players set $total_tenacity ca.var 100
 scoreboard players operation $total_tenacity ca.var -= $has_tenacity ca.var
 execute if score $total_tenacity ca.var matches ..-1 run scoreboard players set $total_tenacity ca.var 0
 
+#If the mob is being damaged by CDL and thus has full kb immunity we ignore this condition
+execute if entity @s[tag=cdl.damaging_mob] run scoreboard players set $total_tenacity ca.var 100
+
 #Total Tenacity equals percentage to multiply effect_stun by
 scoreboard players operation @s ca.effect_stun *= $total_tenacity ca.var
 scoreboard players operation @s ca.effect_stun /= $100 ca.CONSTANT
+
+scoreboard players operation @s ca.stunning = @s ca.effect_stun
 
 
 #Execute except if the entity is marked cannot_stun or if the entity has NoAI.

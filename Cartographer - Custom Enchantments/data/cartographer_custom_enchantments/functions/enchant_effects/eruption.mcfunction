@@ -11,6 +11,7 @@ scoreboard players operation $eruption ca.bleeding = @s ca.bleeding
 scoreboard players operation $eruption ca.electrocute = @s ca.electrocute
 scoreboard players operation $eruption ca.possession = @s ca.possession
 scoreboard players operation $eruption ca.evocation = @s ca.evocation
+scoreboard players operation $eruption ca.executioner = @s ca.executioner
 
 #Run branching on the xp orb here.
 execute as @e[type=minecraft:experience_orb,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch
@@ -18,7 +19,7 @@ execute as @e[type=minecraft:experience_orb,limit=1,sort=nearest] at @s run func
 #If no xp orb, approximate instead
 execute unless entity @e[type=minecraft:experience_orb,limit=1,sort=nearest,distance=..6] as @s positioned ^ ^ ^3 run function cartographer_custom_enchantments:enchant_effects/eruption/recursion
 
-scoreboard players set $eruption ca.eruption 0
+#scoreboard players set $eruption ca.eruption 0
 
 scoreboard players set $eruption ca.cauterize 0
 scoreboard players set $eruption ca.fire_aspect 0
@@ -31,6 +32,7 @@ scoreboard players set $eruption ca.bleeding 0
 scoreboard players set $eruption ca.electrocute 0
 scoreboard players set $eruption ca.possession 0
 scoreboard players set $eruption ca.evocation 0
+scoreboard players set $eruption ca.executioner 0
 
 #Debug Message
 tellraw @a[tag=debug,scores={ca.eruption=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Eruption.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

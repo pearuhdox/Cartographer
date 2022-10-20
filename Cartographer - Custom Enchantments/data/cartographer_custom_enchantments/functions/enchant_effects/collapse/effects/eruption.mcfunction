@@ -10,5 +10,6 @@ scoreboard players operation $eruption ca.stunning = @s ca.stunning
 scoreboard players operation $eruption ca.knockback = @s ca.knockback
 scoreboard players operation $eruption ca.evocation = @s ca.evocation
 scoreboard players operation $eruption ca.fire_aspect = @s ca.fire_aspect
+scoreboard players operation $eruption ca.executioner = @s ca.executioner
 
 function cartographer_custom_enchantments:enchant_effects/eruption/branch

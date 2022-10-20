@@ -14,6 +14,7 @@ execute store result score $stunning ca.collapse run data get entity @s Trident.
 execute store result score $possession ca.collapse run data get entity @s Trident.tag.CustomEnchantments[{id:"possession"}].lvl
 execute store result score $evocation ca.collapse run data get entity @s Trident.tag.CustomEnchantments[{id:"evocation"}].lvl
 execute store result score $exposing ca.collapse run data get entity @s Trident.tag.CustomEnchantments[{id:"exposing"}].lvl
+execute store result score $executioner ca.collapse run data get entity @s Trident.tag.CustomEnchantments[{id:"executioner"}].lvl
 
 
 execute store result score $adrenaline ca.collapse run data get entity @s Trident.tag.CustomEnchantments[{id:"adrenaline"}].lvl
