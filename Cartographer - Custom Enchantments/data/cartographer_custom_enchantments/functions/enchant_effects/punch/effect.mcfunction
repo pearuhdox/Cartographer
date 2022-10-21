@@ -1,3 +1,6 @@
+tp @s ~ ~ ~ facing entity @p[scores={ca.recently_fired_weapon=1..}] feet
+tp @s ~ ~ ~ ~ 5
+tag @s add co_rotation_lock
 scoreboard players set @s co_y 2
 
 execute if entity @s[tag=is_punch_1] run scoreboard players set @s co_send -10
@@ -13,6 +16,8 @@ tag @s remove is_punch_2
 tag @s remove is_punch_3
 tag @s remove is_punch_4
 tag @s remove is_punch_5
+
+tag @s remove co_rotation_lock
 
 #Debug Message
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Punch (crossbow).","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

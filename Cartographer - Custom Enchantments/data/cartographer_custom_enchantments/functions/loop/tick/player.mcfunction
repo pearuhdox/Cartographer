@@ -23,17 +23,14 @@ execute if score @s ca.fleetfoot matches 0 run attribute @s minecraft:generic.mo
 execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_load_cro matches 0 unless score @s ca.is_draw_bow matches 1.. unless score @s ca.is_hold_tri matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
 
 #Apply the attack speed debuff for Evocation.
-execute if score @s ca.evo_burn matches 2..20 run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.3 multiply
-execute if score @s ca.evo_burn matches 22..40 run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.5 multiply
-execute if score @s ca.evo_burn matches 42..60 run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -0.7 multiply
+execute if score @s[tag=ca.evocation_penalty] ca.atk_time matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -1 multiply
+execute if score @s[tag=ca.evocation_penalty] ca.atk_time matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
+execute if score @s[tag=ca.evocation_penalty] ca.atk_time matches 1 run scoreboard players set @s ca.evo_burn 26
 
-execute if score @s ca.evo_burn matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
-execute if score @s ca.evo_burn matches 21 run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
-execute if score @s ca.evo_burn matches 41 run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
-
-execute if score @s ca.evo_burn matches 1 run scoreboard players remove @s ca.evo_burn 1
-execute if score @s ca.evo_burn matches 20 run scoreboard players set @s ca.evo_burn 0
-execute if score @s ca.evo_burn matches 40 run scoreboard players set @s ca.evo_burn 0
+execute if score @s[tag=ca.evocation_penalty] ca.evo_burn matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -1 multiply
+execute if score @s[tag=ca.evocation_penalty] ca.evo_burn matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
+execute if score @s[tag=ca.evocation_penalty] ca.evo_burn matches 1 run tag @s remove ca.evocation_penalty
+execute if score @s ca.evo_burn matches 1.. run scoreboard players remove @s ca.evo_burn 1
 
 #Custom Loyalty recharge attack meter
 execute if score @s ca.loyalty_speed matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "loyalty_effect_spd" 1024 add
@@ -121,6 +118,8 @@ function cartographer_custom_enchantments:enchant_effects/loyalty/player_track
 execute if entity @s[scores={ca.dmg_resist_evaded=1..,ca.evasion=1..},tag=evading] run function cartographer_custom_enchantments:enchant_effects/evasion/trigger
 execute if entity @s[scores={ca.dmg_resist_check=1..,ca.evasion=1..}] run function cartographer_custom_enchantments:enchant_effects/evasion/prime
 
+#Reduce Ranged Weapon Recently Fired Counter
+execute if score @s ca.recently_fired_weapon matches 1.. run scoreboard players remove @s ca.recently_fired_weapon 1
 
 #Reset Function for scores
 function cartographer_custom_enchantments:loop/tick/reset

@@ -42,6 +42,8 @@ execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.curse_enc
 execute if score $cu_en_ranged ca.enabler matches 1.. as @s[scores={ca.overcharge=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/overcharge
 
 
+scoreboard players set @s ca.recently_fired_weapon 80
+
 
 #Reset Fleetfoot
 attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520

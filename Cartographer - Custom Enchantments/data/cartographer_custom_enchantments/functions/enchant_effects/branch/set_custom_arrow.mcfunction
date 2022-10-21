@@ -9,7 +9,7 @@ scoreboard players operation @s ca.infect = @p ca.infect
 # Check this one vvv
 scoreboard players operation @s ca.flash = @p ca.flash
 scoreboard players operation @s ca.explosive = @p ca.explosive
-scoreboard players operation @s ca.punch = @p ca.punch
+execute if entity @p[predicate=cartographer_custom_enchantments:hold_crossbow] run scoreboard players operation @s ca.punch = @p ca.punch
 scoreboard players operation @s ca.tempo_theft = @p ca.tempo_theft
 
 execute if score @s ca.explosive matches 1.. store result score @s ca.vol_dmg run data get entity @s damage 10

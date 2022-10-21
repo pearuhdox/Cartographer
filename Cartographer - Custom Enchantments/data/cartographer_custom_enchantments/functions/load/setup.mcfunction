@@ -154,6 +154,8 @@ scoreboard objectives add ca.armor_count dummy
 #Setup ca.evasion bias score.
 scoreboard objectives add ca.evasion_bias dummy
 
+scoreboard objectives add ca.recently_fired_weapon dummy
+
 #Setup dummy player score for Second Wind calculations.
 scoreboard players set SecondWindHelper ca.second_wind 10
 
