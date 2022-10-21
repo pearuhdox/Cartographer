@@ -74,6 +74,7 @@ scoreboard players set @s ca.flame 0
 scoreboard players set @s ca.power 0
 scoreboard players set @s ca.punch 0
 
+scoreboard players set @s ca.swift_sneak 0
 
 scoreboard players set @s ca.curse_mal 0
 scoreboard players set @s ca.curse_two_hnd 0

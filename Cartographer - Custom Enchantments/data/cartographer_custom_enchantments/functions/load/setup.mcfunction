@@ -66,6 +66,7 @@ scoreboard objectives add ca.respiration dummy
 scoreboard objectives add ca.recoil dummy
 scoreboard objectives add ca.collapse dummy
 
+scoreboard objectives add ca.swift_sneak dummy
 scoreboard objectives add ca.efficiency dummy
 
 scoreboard objectives add ca.off_duelist dummy

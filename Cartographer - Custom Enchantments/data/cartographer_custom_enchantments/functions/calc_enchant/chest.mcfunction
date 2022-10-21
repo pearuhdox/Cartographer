@@ -61,3 +61,6 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants body.tag.Enchantments[{id:"minecraft:respiration"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.respiration += $temp ca.susu
+
+execute store result score $temp ca.susu run data get storage ca.susu:enchants body.tag.Enchantments[{id:"minecraft:swift_sneak"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.swift_sneak += $temp ca.susu

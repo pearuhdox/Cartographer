@@ -61,6 +61,8 @@ execute if score @s ca.respiration matches 11.. run scoreboard players set @s ca
 execute if score @s ca.recoil matches 6.. run scoreboard players set @s ca.recoil 5
 execute if score @s ca.collapse matches 2.. run scoreboard players set @s ca.recoil 1
 
+execute if score @s ca.swift_sneak matches 11.. run scoreboard players set @s ca.swift_sneak 10
+
 
 execute if score @s ca.off_duelist matches 6.. run scoreboard players set @s ca.off_duelist 5
 execute if score @s ca.off_hunter matches 6.. run scoreboard players set @s ca.off_hunter 5

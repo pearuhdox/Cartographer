@@ -121,6 +121,13 @@ execute if entity @s[scores={ca.dmg_resist_check=1..,ca.evasion=1..}] run functi
 #Reduce Ranged Weapon Recently Fired Counter
 execute if score @s ca.recently_fired_weapon matches 1.. run scoreboard players remove @s ca.recently_fired_weapon 1
 
+#Check if sneaking for Swift Sneak
+execute if score @s[tag=ca.added_swift_sneak] ca.sneak matches 0 if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/remove
+execute if score @s[tag=!ca.added_swift_sneak] ca.sneak matches 1.. if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/add
+
+#Check if under Soul Sand for Soul Speed
+
+
 #Reset Function for scores
 function cartographer_custom_enchantments:loop/tick/reset
 
