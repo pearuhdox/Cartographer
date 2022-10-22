@@ -22,6 +22,14 @@ scoreboard players set $pot_injector ca.installed 0
 scoreboard players set $repair_stations ca.installed 0
 
 
+scoreboard players set $#lib_bbl ca.installed 0
+scoreboard players set $#lib_cdl ca.installed 0
+scoreboard players set $#lib_ehid ca.installed 0
+scoreboard players set $#lib_inv ca.installed 0
+scoreboard players set $#lib_pds ca.installed 0
+scoreboard players set $#lib_mot ca.installed 0
+
+
 
 #Create mutex score
 scoreboard objectives add ca.mutex dummy

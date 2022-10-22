@@ -4,5 +4,3 @@ data modify storage cartographer_charon:player inv set value []
 function cartographer_charon:bundle/rec_inv
 data modify storage inv:main inv.all set from storage cartographer_charon:player inv
 function inv:load
-
-clear @s recovery_compass{DeathTimepiece:1b}
