@@ -67,6 +67,9 @@ scoreboard objectives add ca.recoil dummy
 scoreboard objectives add ca.collapse dummy
 
 scoreboard objectives add ca.swift_sneak dummy
+scoreboard objectives add ca.soul_speed dummy
+scoreboard objectives add ca.frost_walker dummy
+
 scoreboard objectives add ca.efficiency dummy
 
 scoreboard objectives add ca.off_duelist dummy
@@ -184,6 +187,7 @@ scoreboard objectives add ca.mine_spawner minecraft.mined:minecraft.spawner
 scoreboard objectives add ca.lifetime dummy
 scoreboard objectives add ca.death_time minecraft.custom:minecraft.time_since_death
 scoreboard objectives add ca.sprint minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add ca.walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add ca.sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add ca.echo_charges dummy
 scoreboard objectives add ca.ammo dummy

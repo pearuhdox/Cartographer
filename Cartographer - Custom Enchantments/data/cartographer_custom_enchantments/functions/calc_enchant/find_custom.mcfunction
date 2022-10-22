@@ -42,6 +42,17 @@ execute if data storage ca.susu:enchants body.tag.Enchantments[{id:"minecraft:sw
 execute if data storage ca.susu:enchants legs.tag.Enchantments[{id:"minecraft:swift_sneak"}] run tag @s add check_legs
 execute if data storage ca.susu:enchants feet.tag.Enchantments[{id:"minecraft:swift_sneak"}] run tag @s add check_feet
 
+execute if data storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:soul_speed"}] run tag @s add check_offh
+execute if data storage ca.susu:enchants head.tag.Enchantments[{id:"minecraft:soul_speed"}] run tag @s add check_head
+execute if data storage ca.susu:enchants body.tag.Enchantments[{id:"minecraft:soul_speed"}] run tag @s add check_body
+execute if data storage ca.susu:enchants legs.tag.Enchantments[{id:"minecraft:soul_speed"}] run tag @s add check_legs
+execute if data storage ca.susu:enchants feet.tag.Enchantments[{id:"minecraft:soul_speed"}] run tag @s add check_feet
+
+execute if data storage ca.susu:enchants offh.tag.Enchantments[{id:"minecraft:frost_walker"}] run tag @s add check_offh
+execute if data storage ca.susu:enchants head.tag.Enchantments[{id:"minecraft:frost_walker"}] run tag @s add check_head
+execute if data storage ca.susu:enchants body.tag.Enchantments[{id:"minecraft:frost_walker"}] run tag @s add check_body
+execute if data storage ca.susu:enchants legs.tag.Enchantments[{id:"minecraft:frost_walker"}] run tag @s add check_legs
+execute if data storage ca.susu:enchants feet.tag.Enchantments[{id:"minecraft:frost_walker"}] run tag @s add check_feet
 
 execute unless entity @s[tag=check_head] unless data storage ca.susu:enchants head.tag.CustomEnchantments run data modify storage ca.susu:enchants head set value {}
 execute unless entity @s[tag=check_body] unless data storage ca.susu:enchants body.tag.CustomEnchantments run data modify storage ca.susu:enchants body set value {}

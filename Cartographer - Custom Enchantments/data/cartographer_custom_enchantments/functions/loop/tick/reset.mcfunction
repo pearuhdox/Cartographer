@@ -8,6 +8,8 @@ scoreboard players set @s ca.fire_cbow 0
 scoreboard players set @s ca.throw_trident 0
 scoreboard players set @s[scores={ca.sprint=5..}] ca.sprint 5
 scoreboard players remove @s[scores={ca.sprint=1..}] ca.sprint 1
+scoreboard players set @s[scores={ca.walk=5..}] ca.walk 5
+scoreboard players remove @s[scores={ca.walk=1..}] ca.walk 1
 scoreboard players set @s[scores={ca.swim=1..}] ca.swim 0
 scoreboard players set @s[scores={ca.water_walk=201..}] ca.water_walk 200
 scoreboard players remove @s[scores={ca.water_walk=5..}] ca.water_walk 5

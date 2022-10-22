@@ -122,11 +122,31 @@ execute if entity @s[scores={ca.dmg_resist_check=1..,ca.evasion=1..}] run functi
 execute if score @s ca.recently_fired_weapon matches 1.. run scoreboard players remove @s ca.recently_fired_weapon 1
 
 #Check if sneaking for Swift Sneak
-execute if score @s[tag=ca.added_swift_sneak] ca.sneak matches 0 if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/remove
-execute if score @s[tag=!ca.added_swift_sneak] ca.sneak matches 1.. if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/add
+execute if score @s ca.death_time matches 60.. if score @s[tag=ca.added_swift_sneak] ca.sneak matches 0 if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/remove
+execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_swift_sneak] ca.sneak matches 1.. if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/add
 
 #Check if under Soul Sand for Soul Speed
+execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft:soul_speed_blocks unless score @s[tag=ca.added_soul_speed] ca.sneak matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
+execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft:soul_speed_blocks unless score @s[tag=ca.added_soul_speed] ca.sprint matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
+execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft:soul_speed_blocks unless score @s[tag=ca.added_soul_speed] ca.walk matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
 
+
+execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed] ca.sneak matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
+execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed] ca.sprint matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
+execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed] ca.walk matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
+
+#Check if walking for Frost Walker
+execute if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/find_block
+
+execute if score @s ca.death_time matches 60.. unless score @s[tag=ca.added_frost_walker,tag=!ca.enable_frost_walker] ca.sneak matches 1.. if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/remove
+execute if score @s ca.death_time matches 60.. unless score @s[tag=ca.added_frost_walker,tag=!ca.enable_frost_walker] ca.sprint matches 1.. if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/remove
+execute if score @s ca.death_time matches 60.. unless score @s[tag=ca.added_frost_walker,tag=!ca.enable_frost_walker] ca.walk matches 1.. if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/remove
+
+execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_frost_walker,tag=ca.enable_frost_walker] ca.sneak matches 1.. if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/add
+execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_frost_walker,tag=ca.enable_frost_walker] ca.sprint matches 1.. if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/add
+execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_frost_walker,tag=ca.enable_frost_walker] ca.walk matches 1.. if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/add
+
+tag @s remove ca.enable_frost_walker
 
 #Reset Function for scores
 function cartographer_custom_enchantments:loop/tick/reset
