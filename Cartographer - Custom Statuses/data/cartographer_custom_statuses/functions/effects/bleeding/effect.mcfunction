@@ -1,10 +1,10 @@
 playsound minecraft:entity.generic.hurt hostile @a[distance=..16] ~ ~ ~ 1 0.5
 
-execute if score @s ca.effect_bleed matches 1.. if score @s ca.effect_bleed_potency matches 1..5 run scoreboard players operation @s cdl.damage_queue = @s ca.bleed_potency
+execute if score @s ca.effect_bleed matches 1.. if score @s ca.bleed_potency matches 1..6 run scoreboard players operation @s cdl.damage_queue = @s ca.bleed_potency
 scoreboard players remove @s cdl.damage_queue 1
 
-execute if score @s ca.bleed_potency matches 6.. unless entity @s[tag=boss] run function cartographer_custom_statuses:effects/bleeding/calc_max
-execute if score @s ca.bleed_potency matches 6.. if entity @s[tag=boss] run scoreboard players set @s cdl.damage_queue 5
+execute if score @s ca.bleed_potency matches 7.. unless entity @s[tag=boss] run function cartographer_custom_statuses:effects/bleeding/calc_max
+execute if score @s ca.bleed_potency matches 7.. if entity @s[tag=boss] run scoreboard players set @s cdl.damage_queue 6
 
 attribute @s minecraft:generic.attack_damage modifier add 31-2125-54-2351-11 "bleeding_weakness" -0.2 multiply
 

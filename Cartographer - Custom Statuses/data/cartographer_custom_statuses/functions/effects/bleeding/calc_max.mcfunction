@@ -2,13 +2,11 @@ scoreboard players set $bleed_max_health ca.effect_bleed 0
 
 execute as @s store result score $bleed_max_health ca.effect_bleed run attribute @s minecraft:generic.max_health get
 
-scoreboard players operation $bleed_max_health ca.effect_bleed /= $3 ca.CONSTANT
+execute unless entity @s[tag=elite] run scoreboard players operation $bleed_max_health ca.effect_bleed /= $4 ca.CONSTANT
+execute if entity @s[tag=elite] run scoreboard players operation $bleed_max_health ca.effect_bleed /= $5 ca.CONSTANT
 
-execute if score $bleed_max_health ca.effect_bleed matches 1..33 run scoreboard players add $bleed_max_health ca.effect_bleed 1
-execute if score $bleed_max_health ca.effect_bleed matches 34..66 run scoreboard players add $bleed_max_health ca.effect_bleed 2
-execute if score $bleed_max_health ca.effect_bleed matches 67..99 run scoreboard players add $bleed_max_health ca.effect_bleed 3
-execute if score $bleed_max_health ca.effect_bleed matches 100.. run scoreboard players add $bleed_max_health ca.effect_bleed 4
-
+#Always does a minimum of 6 damage which is the max bleed stacks can do.
+execute if score $bleed_max_health ca.effect_bleed matches 1..5 run scoreboard players set $bleed_max_health ca.effect_bleed 6
 
 scoreboard players operation @s cdl.damage_queue = $bleed_max_health ca.effect_bleed
 
