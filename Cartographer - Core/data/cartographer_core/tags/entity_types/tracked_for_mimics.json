@@ -1,7 +1,6 @@
 {
 	"values": [
-		"minecraft:wither_skeleton",
-		"minecraft:magma_cube",
+		"#bb:hostile",
 		"minecraft:armor_stand",
 		"minecraft:item"
 	]

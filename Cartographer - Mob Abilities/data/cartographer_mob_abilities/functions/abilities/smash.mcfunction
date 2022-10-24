@@ -1,11 +1,9 @@
-execute if entity @s[scores={recast_count=1}] if score $global helper_diff matches ..2 run scoreboard players set @s cooldown 10
-execute if entity @s[scores={recast_count=1}] if score $global helper_diff matches 3.. run scoreboard players set @s cooldown 8
-
-execute if entity @s[scores={recast_count=2..}] run scoreboard players set @s cooldown 1
-
-tag @s remove leaping
+scoreboard players set @s cooldown 8
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
+
+
+tag @s remove leaping
 
 scoreboard players set @s ability_charge 0
 

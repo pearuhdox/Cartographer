@@ -4,11 +4,7 @@ data modify entity @s {} merge from storage cartographer_mob_abilities:summoner 
 
 tp @s ~ ~ ~ facing entity @p feet
 
-execute if score $legionary_close ca.var matches 1 run scoreboard players set @s co_send -6
-execute if score $legionary_close ca.var matches 2 run scoreboard players set @s co_send 9
-
-execute if score $legionary_close ca.var matches 1 run scoreboard players set @s co_y 3
-execute if score $legionary_close ca.var matches 2 run scoreboard players set @s co_y 4
+scoreboard players set @s co_y 2
 
 function motion:motion/push
 
