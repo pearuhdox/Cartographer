@@ -6,7 +6,7 @@ execute unless entity @s[tag=elite] run scoreboard players operation $bleed_max_
 execute if entity @s[tag=elite] run scoreboard players operation $bleed_max_health ca.effect_bleed /= $5 ca.CONSTANT
 
 #Always does a minimum of 6 damage which is the max bleed stacks can do.
-execute if score $bleed_max_health ca.effect_bleed matches 1..5 run scoreboard players set $bleed_max_health ca.effect_bleed 6
+execute if score $bleed_max_health ca.effect_bleed matches 1..4 run scoreboard players set $bleed_max_health ca.effect_bleed 5
 
 scoreboard players operation @s cdl.damage_queue = $bleed_max_health ca.effect_bleed
 
