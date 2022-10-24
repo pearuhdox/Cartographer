@@ -35,12 +35,17 @@ execute if entity @s[scores={ca.id_convert=13..17}] run scoreboard players add @
 execute if entity @s[scores={ca.id_convert=13..17,ca.effect_bleed=1..}] run scoreboard players add @s ca.effect_bleed 1
 execute if entity @s[scores={ca.id_convert=13..17,ca.effect_bleed=0}] run scoreboard players operation @s ca.effect_bleed = @s ca.time_convert
 
+execute if score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=13,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 1
+execute if score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=14,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 1
+execute if score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=15,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 1
+execute if score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=16,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 1
+execute if score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=17,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 1
 
-execute if entity @s[scores={ca.id_convert=13,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 1
-execute if entity @s[scores={ca.id_convert=14,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 2
-execute if entity @s[scores={ca.id_convert=15,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 3
-execute if entity @s[scores={ca.id_convert=16,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 4
-execute if entity @s[scores={ca.id_convert=17,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 5
+execute unless score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=13,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 1
+execute unless score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=14,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 2
+execute unless score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=15,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 3
+execute unless score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=16,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 4
+execute unless score @s ca.bleed_potency matches 1.. if entity @s[scores={ca.id_convert=17,ca.effect_bleed=1..}] run scoreboard players add @s ca.bleed_potency 5
 
 execute if entity @s[scores={ca.id_convert=18}] run scoreboard players operation @s ca.effect_cloak = @s ca.time_convert
 
