@@ -33,7 +33,11 @@ execute if score $thorns ca.t_fire matches 3 as @s run data modify entity @s Fir
 execute if score $thorns ca.t_fire matches 4 as @s run data modify entity @s Fire set value 321
 execute if score $thorns ca.t_fire matches 5.. as @s run data modify entity @s Fire set value 401
 
-execute if score $thorns ca.t_fire matches 1.. as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 3 0 true
+execute if score $thorns ca.t_fire matches 1 as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 6 0 true
+execute if score $thorns ca.t_fire matches 2 as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 11 0 true
+execute if score $thorns ca.t_fire matches 3 as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 16 0 true
+execute if score $thorns ca.t_fire matches 4 as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 21 0 true
+execute if score $thorns ca.t_fire matches 5.. as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 26 0 true
 
 #Frostbite
 scoreboard players operation $fb ca.frostbite = $thorns ca.t_frost
@@ -74,4 +78,4 @@ execute if score $thorns ca.t_exec matches 1.. run function cartographer_custom_
 scoreboard players set $exec_dmg ca.thorns 0
 
 #Orian if you complain about this one more time I swear to God I will gut France like a fish
-execute if entity @s[type=#minecraft:skeletons] unless entity @a[scores={ca.thorns=1..},distance=..1.6] run effect give @s blindness 1 0
+execute if entity @s[type=#minecraft:skeletons] unless entity @a[scores={ca.thorns=1..},distance=..1.6] run effect give @s blindness 1 0 true

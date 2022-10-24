@@ -7,3 +7,5 @@ execute if score $spawner_defenses charon.gmr matches 2.. store result block ~0.
 
 particle minecraft:soul_fire_flame ~0.5 ~0.5 ~0.5 0.2 0.2 0.2 0.02 25 normal
 playsound minecraft:entity.zombie.infect block @a[distance=..8] ~0.5 ~0.5 ~0.5 1 0.5
+
+kill @s

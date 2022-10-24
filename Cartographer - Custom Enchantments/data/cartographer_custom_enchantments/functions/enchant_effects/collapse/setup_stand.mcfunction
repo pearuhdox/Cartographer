@@ -19,6 +19,7 @@ scoreboard players operation @s ca.frostbite = $frostbite ca.collapse
 scoreboard players operation @s ca.exposing = $exposing ca.collapse
 scoreboard players operation @s ca.possession = $possession ca.collapse
 scoreboard players operation @s ca.knockback = $knockback ca.collapse
+scoreboard players operation @s ca.executioner = $executioner ca.collapse
 
 playsound minecraft:entity.elder_guardian.death player @a[distance=..12] ~ ~ ~ 0.5 2
 playsound minecraft:entity.shulker.open player @a[distance=..12] ~ ~ ~ 1.5 0.5
