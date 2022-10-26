@@ -1,10 +1,5 @@
 {
 	"values": [
-		"bb:clocks/1_tick/loop",
-	    "bb:clocks/5_ticks/loop",
-		"bb:clocks/1_second/loop",
-		"bb:clocks/2_seconds/loop",
-		"bb:clocks/5_seconds/loop",
 		"bb:sys/load"
 	]
 }

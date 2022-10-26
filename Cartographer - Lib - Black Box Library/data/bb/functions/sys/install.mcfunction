@@ -1,13 +1,12 @@
 # Datapack  : Black Box Archive
 # Author(s) : RockNRed
 # Created   : 7/21/21
-# Last Edit : 8/1/22
+# Last Edit : 4/17/22
 # Name      : Install
 # Use       : Installs various dependant scores aswell as the forceloaded chunk.
 
 #Forceload chunk.
 forceload add 4206857 4206872
-
 
 #Add scoreboards
 #\Score Storage Location
@@ -43,9 +42,20 @@ scoreboard objectives add bbl.relco.Z2 dummy "RelCo Z Coordinate 2"
 scoreboard objectives add bbl.relco.XD dummy "RelCo Relative X Coordinate"
 scoreboard objectives add bbl.relco.YD dummy "RelCo Relative Y Coordinate"
 scoreboard objectives add bbl.relco.ZD dummy "RelCo Relative Z Coordinate"
+#\ID scoreboard
+scoreboard objectives add bbl.id dummy
+#\Clocks
+scoreboard objectives add bbl.clock dummy
+#\Slot changes
+scoreboard objectives add bbl.slot_change.past dummy
+scoreboard objectives add bbl.slot_change.present dummy
+#\Gamemode changes
+scoreboard objectives add bbl.gamemode_change.past dummy
+scoreboard objectives add bbl.gamemode_change.present dummy
+scoreboard objectives add bbl.gamemode_change.old_gamemode dummy
 
-
-
+#Next ID init
+execute unless score $next_id bbl.storage matches -99999..99999 run scoreboard players set $next_id bbl.storage 1
 
 #Set constants
 scoreboard players set $-1 bbl.constant -1
@@ -76,6 +86,7 @@ scoreboard players set $80 bbl.constant 80
 scoreboard players set $90 bbl.constant 90
 
 scoreboard players set $100 bbl.constant 100
+scoreboard players set $110 bbl.constant 110
 scoreboard players set $115 bbl.constant 115
 scoreboard players set $200 bbl.constant 200
 scoreboard players set $300 bbl.constant 300

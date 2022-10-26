@@ -7,4 +7,4 @@
 
 execute unless block ~ ~ ~ #bb:no_crit unless block ~ ~1 ~ #bb:no_crit run tag @s[tag=!sliding_down_honey_block] add can_crit
 
-execute unless score $blind_crit ca.gamerule matches 1.. if entity @s[predicate=bb:has_blindness] run tag @s remove can_crit
+execute unless score $blind_crit ca.ganerule matches 1.. if entity @s[predicate=bb:has_blindness] run tag @s remove can_crit

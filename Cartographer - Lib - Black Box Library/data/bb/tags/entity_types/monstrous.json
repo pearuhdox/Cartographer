@@ -1,20 +1,20 @@
 {
-  "values":[
-	"minecraft:blaze",
-	"minecraft:creeper",
-	"minecraft:enderman",
-	"minecraft:ender_dragon",
-	"minecraft:guardian",
-	"minecraft:elder_guardian",
-	"minecraft:shulker",
-	"minecraft:zombified_piglin",
-	"minecraft:piglin",
-	"minecraft:piglin_brute",
-	"minecraft:slime",
-	"minecraft:magma_cube",
-	"minecraft:hoglin",
-	"minecraft:zoglin",
-	"minecraft:wolf",
-	"minecraft:rabbit"
-  ]
+	"values": [
+		"minecraft:blaze",
+		"minecraft:creeper",
+		"minecraft:enderman",
+		"minecraft:ender_dragon",
+		"minecraft:guardian",
+		"minecraft:elder_guardian",
+		"minecraft:shulker",
+		"minecraft:zombified_piglin",
+		"minecraft:piglin",
+		"minecraft:piglin_brute",
+		"minecraft:slime",
+		"minecraft:magma_cube",
+		"minecraft:hoglin",
+		"minecraft:zoglin",
+		"minecraft:wolf",
+		"minecraft:rabbit"
+	]
 }

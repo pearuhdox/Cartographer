@@ -1,0 +1,9 @@
+{
+    "values": [
+        "entityid:load",
+		{
+			"id": "example:load",
+			"required": false
+		}
+    ]
+}

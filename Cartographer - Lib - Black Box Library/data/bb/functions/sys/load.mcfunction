@@ -11,6 +11,14 @@ function bb:sys/install
 #Set datapack active
 function bb:integration/active/clear
 
+#Reset clocks
+scoreboard players set $1_tick bbl.clock 0
+scoreboard players set $5_ticks bbl.clock 0
+scoreboard players set $1_second bbl.clock 0
+scoreboard players set $2_seconds bbl.clock 0
+scoreboard players set $5_seconds bbl.clock 0
+scoreboard players set $10_seconds bbl.clock 0
+
 #Set up RNG
 #\User-scores
 scoreboard players set $value bbl.rng 0
