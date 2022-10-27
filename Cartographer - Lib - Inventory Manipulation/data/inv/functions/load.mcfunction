@@ -1,7 +1,7 @@
 function inv:internal/sort
 
 data modify block 4206900 77 4206900 Items set from storage inv:main inv.inventory
-loot replace entity @s inventory.0 mine 4206901 77 4206900 air{drop_contents:1b}
+loot replace entity @s inventory.0 mine 4206900 77 4206900 air{drop_contents:1b}
 
 data modify block 4206900 77 4206900 Items set from storage inv:main inv.hotbar
 loot replace entity @s hotbar.0 9 mine 4206900 77 4206900 air{drop_contents:1b}
