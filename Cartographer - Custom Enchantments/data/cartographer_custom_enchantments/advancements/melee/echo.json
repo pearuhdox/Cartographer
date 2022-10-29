@@ -17,7 +17,7 @@
             "color": "aqua"
         },
         "description": {
-            "text": "Your weapon stores charges when you kill enemies that when attacking, are consumed to instantly refresh your attack meter.",
+            "text": "Your weapon stores charges when you kill enemies that when attacking, are consumed to instantly refresh your attack meter. The weapon swings slower when out of charges.",
             "color": "white"
         },
         "icon": {

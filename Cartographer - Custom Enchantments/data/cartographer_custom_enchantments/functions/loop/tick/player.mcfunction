@@ -14,6 +14,12 @@ execute if score @s ca.echo matches 1.. if score @s ca.echo_charges matches 0.. 
 execute if score @s ca.echo matches 1.. if score @s ca.echo_charges matches -1 run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
 execute if score @s ca.echo matches 0 run attribute @s minecraft:generic.knockback_resistance modifier remove 5-3-8-15-180504192124
 
+#Penalty for Echo at 0 charges
+execute if score @s ca.echo matches 1.. if score @s ca.echo_charges matches ..0 run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192125 "echo_effect_penalty" -0.2 multiply
+execute if score @s ca.echo matches 1.. if score @s ca.echo_charges matches 1.. run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192125
+execute if score @s ca.echo matches 0 run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192125
+
+
 scoreboard players operation $temp ca.fleetfoot = @s ca.is_load_cro
 scoreboard players operation $temp ca.fleetfoot += @s ca.is_draw_bow
 scoreboard players operation $temp ca.fleetfoot += @s ca.is_hold_tri
