@@ -20,6 +20,8 @@ function cartographer_custom_enchantments:calc_enchant/sapper
 function cartographer_custom_enchantments:calc_enchant/set_max
 
 execute if entity @s[tag=!doing_auto_charge] run function cartographer_custom_enchantments:calc_enchant/auto_charge
+function cartographer_custom_enchantments:calc_enchant/combat_resetters
+
 function cartographer_custom_enchantments:calc_enchant/curse_malevolence
 
 function cartographer_custom_enchantments:calc_enchant/has_passive

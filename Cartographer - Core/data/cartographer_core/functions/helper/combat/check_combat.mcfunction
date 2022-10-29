@@ -1,0 +1,1 @@
+execute unless entity @s[tag=ca.soft_combat_checked] if score @s ca.combat_timer matches 1.. unless entity @e[type=#bb:hostile,distance=..24,limit=1] run function cartographer_core:helper/combat/leave_combat_soft

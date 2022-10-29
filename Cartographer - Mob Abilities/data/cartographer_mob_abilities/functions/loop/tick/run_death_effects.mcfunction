@@ -41,14 +41,3 @@ execute if data storage ca.death Data.SacrificialBlood at @s run function cartog
 
 #Run the Death Events tag to check for non Cartographer added events.
 function #minecraft:cartographer/events/death_ability_proc
-
-#Token Restore
-#execute if data storage ca.death Data.ReturnLightToken as @a[scores={token_kill_check=1..}] at @s run tag @s add light_restore
-#execute if data storage ca.death Data.ReturnLightToken as @a[scores={token_kill_check=1..}] at @s run function cartographer_mob_abilities:helper/token/return_death
-
-#execute if data storage ca.death Data.ReturnLightToken run kill @s
-
-#execute if data storage ca.death Data.ReturnHeavyToken as @a[scores={token_kill_check=1..}] at @s run tag @s add heavy_restore
-#execute if data storage ca.death Data.ReturnHeavyToken as @a[scores={token_kill_check=1..}] at @s run function cartographer_mob_abilities:helper/token/return_death
-
-#execute if data storage ca.death Data.ReturnHeavyToken run kill @s

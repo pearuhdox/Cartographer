@@ -1,5 +1,4 @@
 #say creating a trap
-say alksfhalksdhl
 scoreboard players set $layer cage.var 0
 
 #Scan up to a max of 30 spawners in the area.
