@@ -17,7 +17,7 @@
             "color": "aqua"
         },
         "description": {
-            "text": "Your weapon stores charges when you kill enemies that when attacking, are consumed to instantly refresh your attack meter. The weapon swings slower when out of charges.",
+            "text": "The weapon stores charges over time and from kills. Charges are used when attacking to recharge your cooldown. When out of charges, the weapon is slower.",
             "color": "white"
         },
         "icon": {
