@@ -29,9 +29,9 @@ execute if score @s ca.glacial_slow matches 91 run attribute @s minecraft:generi
 execute if score @s ca.glacial_slow matches 96 run attribute @s minecraft:generic.attack_speed modifier add 31-1315-2129-1212-71213 "glacial_slow" -0.475 multiply
 execute if score @s ca.glacial_slow matches 91 run attribute @s minecraft:generic.attack_speed modifier remove 31-1315-2129-1212-71213
 
-execute if score @s ca.glacial_slow matches 91 run attribute @s minecraft:generic.movement_speed modifier add 31-1315-2129-1212-71213 "glacial_slow" -0.4 multiply
+execute if score @s ca.glacial_slow matches 91 run attribute @s minecraft:generic.movement_speed modifier add 31-1315-2129-1212-71213 "glacial_slow" -0.45 multiply
 execute if score @s ca.glacial_slow matches 86 run attribute @s minecraft:generic.movement_speed modifier remove 31-1315-2129-1212-71213
-execute if score @s ca.glacial_slow matches 91 run attribute @s minecraft:generic.attack_speed modifier add 31-1315-2129-1212-71213 "glacial_slow" -0.4 multiply
+execute if score @s ca.glacial_slow matches 91 run attribute @s minecraft:generic.attack_speed modifier add 31-1315-2129-1212-71213 "glacial_slow" -0.45 multiply
 execute if score @s ca.glacial_slow matches 86 run attribute @s minecraft:generic.attack_speed modifier remove 31-1315-2129-1212-71213
 
 execute if score @s ca.glacial_slow matches 86 run attribute @s minecraft:generic.movement_speed modifier add 31-1315-2129-1212-71213 "glacial_slow" -0.425 multiply
