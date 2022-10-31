@@ -3,6 +3,8 @@ execute if entity @s[tag=ca.blazing] run particle minecraft:flame ~ ~ ~ 0 0 0 0.
 execute if entity @s[tag=ca.glacial] run particle minecraft:snowflake ~ ~ ~ 0 0 0 0.2 1 normal @a
 execute if entity @s[tag=ca.horrifying] run particle minecraft:sculk_soul ~ ~ ~ 0 0 0 0.05 1 normal @a
 
+execute if entity @s[tag=ca.webbing] run particle minecraft:block minecraft:webbing ~ ~ ~ 0 0 0 0.05 1 normal @a
+
 #(Overloading runs twice)
 execute if entity @s[tag=ca.overloading] run particle minecraft:wax_off ~ ~ ~ 0.2 0.2 0.2 1 1 normal @a
 
