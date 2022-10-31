@@ -32,3 +32,6 @@ execute if score $dragon_fireball_shooter ca.var matches 1.. run scoreboard play
 
 #Reduce parting gift timer by 1
 execute if score $parting_gift_active ca.var matches 1.. run scoreboard players remove $parting_gift_active ca.var 1
+
+#Reduce the webbing cooldown timer by 1
+execute if score $block_webbing_time ca.var matches 1.. run scoreboard players remove $block_webbing_time ca.var 1

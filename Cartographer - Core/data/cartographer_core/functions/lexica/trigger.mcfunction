@@ -170,7 +170,8 @@ execute if score @s ca.lexica_trig matches 3531 run function cartographer_mob_ab
 execute if score @s ca.lexica_trig matches 3541 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/horrifying
 execute if score @s ca.lexica_trig matches 3551 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/overloading
 execute if score @s ca.lexica_trig matches 3561 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/venemous
-execute if score @s ca.lexica_trig matches 3571 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/zephyrous
+execute if score @s ca.lexica_trig matches 3571 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/webbing
+execute if score @s ca.lexica_trig matches 3581 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/hit/zephyrous
 
 execute if score @s ca.lexica_trig matches 3512 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/aftershock
 execute if score @s ca.lexica_trig matches 3522 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/amplify

@@ -23,6 +23,7 @@ scoreboard players set $mm_zep ca.var 0
 scoreboard players set $mm_hor ca.var 0
 scoreboard players set $mm_vol ca.var 0
 scoreboard players set $mm_alc ca.var 0
+scoreboard players set $mm_web ca.var 0
 
 execute if entity @s[tag=ca.blazing] run scoreboard players set $mm_bla ca.var 1
 execute if entity @s[tag=ca.glacial] run scoreboard players set $mm_gla ca.var 1
@@ -31,6 +32,7 @@ execute if entity @s[tag=ca.venemous] run scoreboard players set $mm_ven ca.var 
 execute if entity @s[tag=ca.zephyrous] run scoreboard players set $mm_zep ca.var 1
 execute if entity @s[tag=ca.horrifying] run scoreboard players set $mm_hor ca.var 1
 execute if entity @s[tag=ca.volatile] run scoreboard players set $mm_vol ca.var 1
+execute if entity @s[tag=ca.webbing] run scoreboard players set $mm_web ca.var 1
 
 execute if entity @s[tag=ca.alchemist] unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:abilities/magic_missile/alchemist_save
 

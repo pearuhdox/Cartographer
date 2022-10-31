@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Zephyrous                ",
+            "text": "Venemous                 ",
             "color": "white"
         },
         "description": {
-            "text": "Mob attacks or effects create clouds that launch players into the air.",
+            "text": "Mob attacks or effects create temporary webs around the player.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:white_wool"
+            "item": "minecraft:cobweb"
         },
         "frame": "task",
         "show_toast": true,
@@ -17,17 +17,17 @@
         "hidden": true
     },
     "criteria": {
-        "found1": {
+        "found": {
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.zephyrous\"]}"
+                    "nbt": "{Tags:[\"ca.webbing\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/trait/hit/zephyrous"
+        "function": "cartographer_mob_abilities:descriptions/trait/hit/webbing"
     },
-    "parent": "cartographer_mob_abilities:trait/hit/webbing"
+    "parent": "cartographer_mob_abilities:trait/hit/venemous"
 }

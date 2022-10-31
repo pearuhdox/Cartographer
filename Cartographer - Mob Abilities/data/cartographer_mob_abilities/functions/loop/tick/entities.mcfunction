@@ -1,12 +1,8 @@
 #Run Hostile Mob Effects
 execute as @s[type=#bb:hostile] at @s run function cartographer_mob_abilities:loop/tick/hostiles
 
-execute if score $block_effects_creeper ca.var matches 1.. as @s[type=area_effect_cloud,nbt={Effects:[{Id:32,Amplifier:127b}]}] at @s run function cartographer_mob_abilities:passive/block_effects/creepers/kill_clouds
-
-execute if score $dragon_fireball_shooter ca.var matches 1.. as @s[type=area_effect_cloud,tag=!fix_clouds_dragon] at @s run function cartographer_mob_abilities:passive/projectile/fix_dragon_cloud
-
-execute as @s[type=area_effect_cloud,tag=ca.parting_gift_cloud] at @s run function cartographer_mob_abilities:passive/parting_gift/cloud/tick
-execute as @s[type=area_effect_cloud,tag=ca.trapper_cloud] at @s run function cartographer_mob_abilities:abilities/trapper/cloud/tick
+#Run at AECs
+execute as @s[type=area_effect_cloud] at @s run function cartographer_mob_abilities:loop/tick/aec
 
 #Run Auras
 execute if entity @s[tag=ca.vfx_aura] run function cartographer_mob_abilities:aura/run_vfx

@@ -4,6 +4,7 @@ execute if entity @s[tag=ca.horrifying] run particle dust 0.302 0.2 0.761 1 ~ ~0
 execute if entity @s[tag=ca.overloading] run particle wax_off ~ ~0.25 ~ 0.5 0 0.5 1 15 normal
 execute if entity @s[tag=ca.venemous] run particle item_slime ~ ~0.25 ~ 0.5 0 0.5 0.1 15 normal
 execute if entity @s[tag=ca.zephyrous] run particle cloud ~ ~0.25 ~ 0.5 0 0.5 0.05 15 normal
+execute if entity @s[tag=ca.webbing] run particle block minecraft:cobweb ~ ~0.25 ~ 0.5 0 0.5 0.05 15 normal
 
 particle explosion ~ ~0.25 ~ 0.75 0 0.75 0 1 normal
 playsound minecraft:entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 0.5 2

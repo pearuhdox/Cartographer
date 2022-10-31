@@ -3,6 +3,8 @@ execute if entity @s[tag=ca.blazing] as @a[tag=ability_tagged,distance=..3] at @
 execute if entity @s[tag=ca.glacial] as @a[tag=ability_tagged,distance=..3] at @s run function cartographer_mob_abilities:ability_traits/glacial/player_effect
 execute if entity @s[tag=ca.horrifying] as @a[tag=ability_tagged,distance=..3] at @s run function cartographer_mob_abilities:ability_traits/horrifying/player_effect
 
+execute if entity @s[tag=ca.webbing] as @a[tag=ability_tagged,distance=..3] at @s run function cartographer_mob_abilities:ability_traits/webbing/player_effect
+
 #(Overloading runs twice)
 execute if entity @s[tag=ca.overloading] as @a[tag=ability_tagged,distance=..3] at @s run function cartographer_mob_abilities:ability_traits/overloading/player_effect
 execute if entity @s[tag=ca.overloading] as @a[tag=ability_tagged,distance=..3] at @s run function cartographer_mob_abilities:ability_traits/overloading/player_effect
