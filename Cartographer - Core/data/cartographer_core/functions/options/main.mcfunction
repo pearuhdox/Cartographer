@@ -17,7 +17,7 @@ tellraw @s {"text":"------------------------------------------","color":"#FFE0A3
 tellraw @s [{"text":"Click on an option to see more information!","color":"#FFF4D9","italic":true}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"text":"Core and Gamerules","color":"#F04FF0","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Tweak Vanilla and Core gamerules.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules"}}]
+tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"text":"Core and Gamerules","color":"#F04FF0","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Tweak Cartographer Core gamerules that affect all packs.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:options/gamerules"}}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 

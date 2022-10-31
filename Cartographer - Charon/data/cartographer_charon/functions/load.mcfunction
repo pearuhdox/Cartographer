@@ -24,6 +24,8 @@ scoreboard objectives add void_home.z dummy
 scoreboard objectives add taxes.var dummy
 scoreboard objectives add taxes.time minecraft.custom:minecraft.time_since_death
 
+scoreboard objectives add charon.player_stats dummy
+
 team add CharonCageVisual
 team modify CharonCageVisual color dark_aqua
 

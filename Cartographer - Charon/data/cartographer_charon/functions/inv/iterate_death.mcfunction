@@ -1,3 +1,4 @@
+
 data modify storage cartographer_charon:player inv set value []
 function suso.rng:seed
 function cartographer_charon:inv/calculate_max_interval

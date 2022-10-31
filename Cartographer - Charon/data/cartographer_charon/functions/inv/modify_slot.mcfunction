@@ -1,3 +1,4 @@
+#Run modification
 scoreboard players set $vanish_flag taxes.var 0
 
 execute if score $tax_count charon.gmr matches 1.. run function cartographer_charon:taxes/count

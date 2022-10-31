@@ -15,4 +15,5 @@ execute if score $never_drop_armor charon.gmr matches 1.. if score $slot dt.var 
 execute if score $never_drop_hotbar charon.gmr matches 1.. if score $slot dt.var matches 0..8 run scoreboard players set $rand_t dt.var 1
 execute if score $never_drop_backpack charon.gmr matches 1.. if score $slot dt.var matches 9..36 run scoreboard players set $rand_t dt.var 1
 
+#Modify the slot if not set to never steal
 execute if score $rand_t dt.var matches ..0 run function cartographer_charon:inv/modify_slot
