@@ -15,7 +15,7 @@ execute as @p at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 
 
 execute as @p run function cartographer_core:load/spacer
 
-tellraw @a[tag=!minimal_reload] [{"text":"❰","color":"green","bold":true},{"text":"⊰ Lexica Cartographia ⊱","color":"#ACFFA6","bold":true},{"text":"❱","color":"green","bold":true},{"text":"---------------------------","color":"#ACFFA6","bold":true}]
+tellraw @a[tag=!minimal_reload] [{"text":"❰","color":"green","bold":true},{"text":"⊰ Lexica Cartographia ⊱","color":"#ACFFA6","bold":true},{"text":"❱","color":"green","bold":true},{"text":"---------------------","color":"#ACFFA6","bold":true}]
 tellraw @a[tag=!minimal_reload] {"text":"A list of options that can be configured in Cartographer.","color":"#ACFFA6","bold":false,"italic":true}
 tellraw @a[tag=!minimal_reload] {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 

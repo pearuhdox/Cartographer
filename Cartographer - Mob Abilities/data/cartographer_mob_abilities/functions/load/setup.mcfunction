@@ -47,6 +47,9 @@ scoreboard objectives add ca.sb_convert dummy
 
 scoreboard objectives add ca.sc_time dummy
 
+scoreboard objectives add ca.mob_var dummy
+
+
 scoreboard objectives add ca.glacial_slow dummy
 scoreboard objectives add ca.horrified dummy
 scoreboard objectives add ca.overload_pos dummy

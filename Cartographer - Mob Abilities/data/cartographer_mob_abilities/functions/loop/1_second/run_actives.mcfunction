@@ -22,9 +22,6 @@ execute if entity @s[tag=ca.hookshot,tag=tokened,scores={cooldown=0}] if entity 
 #Smash
 execute if entity @s[tag=ca.smash,tag=tokened,tag=!leaping,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:charge/smash
 
-#Webshot
-execute if entity @s[tag=ca.webshot,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:charge/webshot
-
 #Disarm
 execute if entity @s[tag=ca.orbit,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:charge/orbit
 

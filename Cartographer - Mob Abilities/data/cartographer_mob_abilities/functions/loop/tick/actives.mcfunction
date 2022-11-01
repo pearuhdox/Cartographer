@@ -1,8 +1,10 @@
 #Run Smash Land Effect
 execute if entity @s[tag=ca.smash] run function cartographer_mob_abilities:loop/tick/smash_branch
 
-#Run Sweep Warning
-execute if entity @s[tag=ca.sweep,tag=tokened,scores={cooldown=0}] run particle angry_villager ~ ~1.5 ~ 0 0 0 0 1 normal
+#Run Sweep and Quickdraw Warning
+execute if entity @s[tag=ca.sweep,tag=tokened,tag=!warned,scores={cooldown=0}] run function cartographer_mob_abilities:loop/tick/fast_attack_warning
+execute if entity @s[tag=ca.quickdraw,tag=tokened,tag=!warned,scores={cooldown=0}] run function cartographer_mob_abilities:loop/tick/fast_attack_warning
+execute if entity @s[tag=ca.needle,tag=tokened,tag=!warned,scores={cooldown=0}] run function cartographer_mob_abilities:loop/tick/fast_attack_warning
 
 #Laser
 execute if entity @s[tag=ca.laser,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..32] run function cartographer_mob_abilities:charge/laser

@@ -14,7 +14,7 @@ gamerule sendCommandFeedback false
 execute as @p run function cartographer_core:load/spacer
 
 execute as @p at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
-tellraw @p [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------------","color":"#FFE0A3","bold":true}]
+tellraw @p [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------","color":"#FFE0A3","bold":true}]
 tellraw @p {"text":"A list of those who brought you what you're using.","color":"#FFE0A3","bold":false,"italic":true}
 tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 

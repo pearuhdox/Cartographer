@@ -16,7 +16,7 @@ execute as @a at @s run playsound minecraft:ui.cartography_table.take_result mas
 execute as @a[tag=!minimal_reload] run function cartographer_core:load/spacer
 
 #Run for players without minimal reload
-tellraw @a[tag=!minimal_reload] [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------------","color":"#FFE0A3","bold":true}]
+tellraw @a[tag=!minimal_reload] [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------","color":"#FFE0A3","bold":true}]
 tellraw @a[tag=!minimal_reload] {"text":"A set of custom mechanics, made by mappers, for mappers.","color":"#FFE0A3","bold":false,"italic":true}
 tellraw @a[tag=!minimal_reload] {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 

@@ -10,7 +10,7 @@ execute if entity @s[tag=ca.nova,tag=!ca.heavy_priority] run function cartograph
 execute if entity @s[tag=ca.smash,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.sweep,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.trapper,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
-execute if entity @s[tag=ca.webshot,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
+execute if entity @s[tag=ca.quickdraw,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.needle,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 
 #Heavy Attacks with no Light Attack Priority

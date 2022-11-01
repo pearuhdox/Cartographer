@@ -79,7 +79,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"ca.webshot\"]}"
+                    "nbt": "{Tags:[\"ca.quickdraw\"]}"
                   }
                 },
                 {

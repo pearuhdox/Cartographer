@@ -14,7 +14,7 @@ gamerule sendCommandFeedback false
 function cartographer_core:load/spacer
 
 playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
-tellraw @s [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------------","color":"#FFE0A3","bold":true}]
+tellraw @s [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer ⊱","color":"#FFE0A3","bold":true},{"text":"❱","color":"gold","bold":true},{"text":"---------------------","color":"#FFE0A3","bold":true}]
 tellraw @s {"text":"All currently installed library packs.","color":"#FFE0A3","bold":false,"italic":true}
 tellraw @s {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 

@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Webshot                  ",
+            "text": "Quickdraw                ",
             "color": "white"
         },
         "description": {
             "color": "white",
-            "text": "The enemy can spit web at the player, damaging and ensaring them in a cobweb."
+            "text": "The enemy can launch a surprise attack with a fast ranged attack."
         },
         "icon": {
-            "item": "minecraft:cobweb"
+            "item": "minecraft:crossbow"
         },
         "frame": "task",
         "show_toast": true,
@@ -21,13 +21,13 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.webshot\"]}"
+                    "nbt": "{Tags:[\"ca.quickdraw\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/active/webshot"
+        "function": "cartographer_mob_abilities:descriptions/active/quickdraw"
     },
-    "parent": "cartographer_mob_abilities:active/trapper"
+    "parent": "cartographer_mob_abilities:active/orbit"
 }

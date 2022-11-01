@@ -8,4 +8,4 @@ tag @a remove soulfire_novad
 tag @a remove swept
 tag @a remove venom_novad
 tag @a remove wind_novad
-tag @a remove webbed
+tag @a remove quickdrawn
