@@ -45,3 +45,5 @@ execute as @s[scores={brutal_stacks=1..}] run particle minecraft:dust 1 0 0 1 ~ 
 execute as @s[scores={relent_stacks=1..}] run particle minecraft:dust 0.796 1 0.957 1 ~ ~1 ~ 0.5 0.5 0.5 0 10 normal
 execute as @s[scores={devious_stacks=1..}] run particle minecraft:dust 1 0 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 10 normal
 execute as @s[scores={sacrifice_stacks=1..}] run particle minecraft:dust 0.941 0.753 0.353 1 ~ ~1 ~ 0.5 0.5 0.5 0 10 normal
+
+tag @s add ca.stacks_managed

@@ -179,7 +179,8 @@ execute if score @s ca.lexica_trig matches 3532 run function cartographer_mob_ab
 execute if score @s ca.lexica_trig matches 3542 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/evocative
 execute if score @s ca.lexica_trig matches 3552 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/legionary
 execute if score @s ca.lexica_trig matches 3562 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/predator
-execute if score @s ca.lexica_trig matches 3572 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/volatile
+execute if score @s ca.lexica_trig matches 3572 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/shrieker
+execute if score @s ca.lexica_trig matches 3582 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/volatile
 
 #Reset Lexica Trigger Score
 scoreboard players set @s ca.lexica_trig 0

@@ -6,10 +6,12 @@ execute unless entity @s[tag=avail_target] as @s[type=#bb:hostile,tag=ca.has_act
 scoreboard players remove @s[tag=ca.has_active,scores={cooldown=1..}] cooldown 1
 
 #Stack Manager
-execute as @s[scores={brutal_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
-execute as @s[scores={relent_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
-execute as @s[scores={devious_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
-execute as @s[scores={sacrifice_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute as @s[tag=!ca.stacks_managed,scores={brutal_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute as @s[tag=!ca.stacks_managed,scores={relent_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute as @s[tag=!ca.stacks_managed,scores={devious_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+execute as @s[tag=!ca.stacks_managed,scores={sacrifice_stacks=1..}] run function cartographer_mob_abilities:passive/stack_manager
+
+tag @s remove ca.stacks_managed
 
 #Reset near player check
 tag @s remove avail_target
