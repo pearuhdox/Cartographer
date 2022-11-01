@@ -4,19 +4,8 @@ function cartographer_mob_abilities:ability_traits/cooldown_traits
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @s ca.raycast 10
-
-scoreboard players set @s mob_move_red 23
-
-execute as @s anchored eyes run function cartographer_mob_abilities:abilities/quickdraw/raycast
-
-#Trait Effects (outside of raycast call)
-execute if entity @a[tag=ability_tagged] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits
-execute unless entity @a[tag=ability_tagged] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
-
-tag @a remove ability_tagged
-
-tag @a[distance=..16] remove quickdrawn
+execute unless entity @s[tag=ca.pulse_shot] run function cartographer_mob_abilities:abilities/quickdraw/normal
+execute if entity @s[tag=ca.pulse_shot] run function cartographer_mob_abilities:abilities/quickdraw/pulse_shot/create
 
 execute if entity @s[tag=ca.warpshot] run function cartographer_mob_abilities:abilities/quickdraw/warpshot
 

@@ -7,8 +7,8 @@ execute if entity @s[tag=ca.zephyrous] run particle cloud ~ ~0.25 ~ 0.5 0 0.5 0.
 execute if entity @s[tag=ca.webbing] run particle block minecraft:cobweb ~ ~0.25 ~ 0.5 0 0.5 0.05 15 normal
 
 particle explosion ~ ~0.25 ~ 0.75 0 0.75 0 1 normal
-playsound minecraft:entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 0.5 2
-playsound minecraft:enchant.thorns.hit hostile @a[distance=..20] ~ ~ ~ 2 0.5
+playsound minecraft:entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 0.35 2
+playsound minecraft:item.trident.hit hostile @a[distance=..20] ~ ~ ~ 2 0.5
 
 scoreboard players set $projectile ca.dmg_type 1
 
@@ -20,6 +20,6 @@ execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,l
 
 #Trait Effects
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run tag @s add ability_tagged
-execute if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:abilities/quickdraw/projectile/call_traits
+execute if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:abilities/quickdraw/pulse_shot/projectile/call_traits
 
 kill @s
