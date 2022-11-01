@@ -1,9 +1,6 @@
 #Magic Missile Projectile
 execute as @s[tag=magic_missile_projectile] at @s run function cartographer_mob_abilities:abilities/magic_missile/projectile
 
-#Fireball Projectile
-execute as @s[tag=pulse_shot_projectile] at @s run function cartographer_mob_abilities:abilities/quickdraw/pulse_shot/projectile/travel
-
 #Trap Projectile
 execute as @s[tag=trap_projectile] at @s run function cartographer_mob_abilities:abilities/trapper/projectile
 
