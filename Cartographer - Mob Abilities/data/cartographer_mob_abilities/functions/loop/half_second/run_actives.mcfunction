@@ -1,5 +1,9 @@
 #tag @s remove avail_target
 
+#Nova - With Pulse Tag
+execute if entity @s[tag=ca.nova,tag=ca.pulse,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:charge/nova
+
+
 #Needle
 execute if entity @s[tag=ca.needle,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:charge/needle
 

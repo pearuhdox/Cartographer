@@ -1,4 +1,5 @@
-scoreboard players set @s mob_move_red 23
+execute unless entity @s[tag=ca.pulse] run scoreboard players set @s mob_move_red 23
+execute if entity @s[scores={ability_charge=2..3}] if entity @s[tag=ca.pulse] run scoreboard players set @s mob_move_red 8
 
 execute unless entity @s[scores={ability_charge=1..}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
@@ -7,53 +8,10 @@ execute unless entity @s[scores={ability_charge=1..}] run playsound minecraft:bl
 execute if entity @s[scores={ability_charge=1}] run playsound minecraft:block.end_portal_frame.fill player @a[distance=..16] ~ ~ ~ 2 0.7
 execute if entity @s[scores={ability_charge=2}] run playsound minecraft:block.end_portal_frame.fill player @a[distance=..16] ~ ~ ~ 2 0.9
 
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:landing_obsidian_tear ~ ~0.05 ~ 3 0 3 0 100 normal @a
-
 execute unless entity @s[scores={ability_charge=3..4}] run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~8 ~0.5 ~ 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~7 ~0.5 ~1 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~7 ~0.5 ~2 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~6 ~0.5 ~3 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~6 ~0.5 ~4 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~5 ~0.5 ~5 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~4 ~0.5 ~6 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~3 ~0.5 ~6 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~2 ~0.5 ~7 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~1 ~0.5 ~7 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~ ~0.5 ~8 0.3 0 0.3 0 6 normal @a
-
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-8 ~0.5 ~ 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-7 ~0.5 ~1 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-7 ~0.5 ~2 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-6 ~0.5 ~3 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-6 ~0.5 ~4 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-5 ~0.5 ~5 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-4 ~0.5 ~6 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-3 ~0.5 ~6 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-2 ~0.5 ~7 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-1 ~0.5 ~7 0.3 0 0.3 0 6 normal @a
-
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-7 ~0.5 ~-1 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-7 ~0.5 ~-2 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-6 ~0.5 ~-3 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-6 ~0.5 ~-4 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-5 ~0.5 ~-5 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-4 ~0.5 ~-6 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-3 ~0.5 ~-6 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-2 ~0.5 ~-7 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~-1 ~0.5 ~-7 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~ ~0.5 ~-8 0.3 0 0.3 0 6 normal @a
-
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~7 ~0.5 ~-1 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~7 ~0.5 ~-2 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~6 ~0.5 ~-3 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~6 ~0.5 ~-4 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~5 ~0.5 ~-5 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~4 ~0.5 ~-6 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~3 ~0.5 ~-6 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~2 ~0.5 ~-7 0.3 0 0.3 0 6 normal @a
-execute unless entity @s[scores={ability_charge=3..4}] run particle minecraft:witch ~1 ~0.5 ~-7 0.3 0 0.3 0 6 normal @a
+execute unless entity @s[scores={ability_charge=3..4}] if entity @s[tag=ca.pulse] run function cartographer_mob_abilities:charge/nova/pulse/vfx
+execute unless entity @s[scores={ability_charge=3..4}] unless entity @s[tag=ca.pulse] run function cartographer_mob_abilities:charge/nova/normal/vfx
 
 execute unless entity @s[scores={ability_charge=3..4}] run effect give @s glowing 1 0 true
 
