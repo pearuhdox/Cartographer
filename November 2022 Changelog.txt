@@ -62,12 +62,12 @@ Custom Statuses:
 	- Bleeding max stacks have been reduced to 5 (was 6).
 	- Bleeding now always inflicts maximum health damage.
 
-	- Bleeding inflicts 5% max health damage per stack.
-	- This effect is reduced to 3% per stack on enemies with the "elite" tag.
+	- Bleeding inflicts 4% max health damage per stack.
+	- This effect is reduced to 2% per stack on enemies with the "elite" tag.
 	- This effect is reduced to 1% per stack on enemies with the "boss" tag.
 
 	- Bleeding will never do less damage than the potency (so always 1 per stack).
-	- Bleeding will never do more damage than 3 times the potency (so 3 per stack).
+	- Bleeding will never do more total damage than 2 times the potency (so 2 per stack).
 
 	- Bleeding's melee damage weakness reduced to 15% (was 20%).
 
