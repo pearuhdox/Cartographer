@@ -60,10 +60,16 @@ Custom Statuses:
 
 - Bleeding has been rebalanced:
 	- Bleeding max stacks have been reduced to 5 (was 6).
-	- Bleeding max health damage at max stacks reduced to 25% (was 33%).
-	- Elites now take reduced max health damage at 20%.
-	- Bosses now take 5 damage (was 6) at max stacks.
-	- Enemies suffering from Max Health damage will always take a minimum of 5 damage.
+	- Bleeding now always inflicts maximum health damage.
+
+	- Bleeding inflicts 5% max health damage per stack.
+	- This effect is reduced to 3% per stack on enemies with the "elite" tag.
+	- This effect is reduced to 1% per stack on enemies with the "boss" tag.
+
+	- Bleeding will never do less damage than the potency (so always 1 per stack).
+	- Bleeding will never do more damage than 3 times the potency (so 3 per stack).
+
+	- Bleeding's melee damage weakness reduced to 15% (was 20%).
 
 	- Enchantment related nerfs:
 		- Bleeding melee enchant now inflicts stacks equal to its level only on non-bleeding targets.

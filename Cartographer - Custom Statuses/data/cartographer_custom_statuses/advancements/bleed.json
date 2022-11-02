@@ -8,7 +8,7 @@
       "color": "#CC73FF"
     },
     "description": {
-      "text": "Afflicted takes damage every second based on the level of Bleeding. If Bleeding is reapplied, the potency is increased, instead of resetting the duration.",
+      "text": "Afflicted takes damage every second based on the level of Bleeding and their max health. If Bleeding is reapplied, the potency is increased, instead of resetting the duration.",
       "color": "white"
     },
     "frame": "task",
