@@ -1,0 +1,135 @@
+November Changelog 2022:
+
+Core Changes:
+- Combat timer has been adjusted.
+	- When you kill a mob under certain conditions, Cartographer will scan the player for nearby mobs within 24 blocks. When it finds no mobs, it will automatically set Combat Time to 1 second (and tick out immediately).
+	- These conditions include:
+		- Killing a mob with an Echo or First Strike weapon in your hotbar.
+		- Killing a mob that is currently holding a token.
+
+- The first time you receive a popup, Core will now give a Lexica Cartographia.
+- This can be disabled via a new gamerule to disable First Lexica (in Core).
+
+Charon:
+- Now a public module with too much detail to go into. Since this is the first time this module is officially released, the wiki page will contain the changes/how to use.
+
+Custom Enchantments:
+
+- New Trident Enchantments:
+	- Wavedash: When you hit a mob with a ranged attack, you teleport to the mob.
+	- Collapse: When you hit a spawner with a ranged attack, it will break over time.
+		- You must stay near the spawner for Collapse to break it.
+		- Efficiency, Sapper, Eruption, and etc work with Collapse in the expected synergies.
+
+- New Crossbow Enchantment:
+	- Recoil: Firing the crossbow while not sneaking knocks the player back opposite to the direction/trajectory they are shooting at.
+		- Can be used once per airborne, except when combined with Auto Charge reload and Repeating, which gives additional shots based on Ammo max.
+
+- Custom Loyalty has been revised and reimplemented. Functions on a throw rate set by the level of loyalty instead of return time.
+
+- Aquadynamic Retrospective:
+	- Aquadynamic now provides 15 seconds of Conduit Power X and Dolphins Grace.
+	- Kills refresh the duration.
+	- Additional duration provided with levels of Respiration and Turtle Helmets.
+	- Kills add 15 seconds of duration if under the Respiration/Turtle Helmet cap.
+
+- Cauterize Retrospective:
+	- Cauterize no longer deals half the damage of the remaining fire tick.
+	- Cauterize's brittle debuff scales the multiplier off the remaining fire time.
+		- The scaling is equal to the number of ticks on fire (so 5 seconds -> 100 ticks -> 100% extra damage)
+
+- Swift Sneak, Frost Walker, and Soul Speed work on other slots than their default slots (Leggings or Boots).
+
+- Auto Charge now counts breaking a spawner as a kill, and reloads when you break a spawner.
+
+- Tridents can now proc Executioner
+
+- Eruption can proc Executioner
+- Stunning now rolls individually on each mob for stun chance rather than the entire group at once.
+
+- Thorns can proc Executioner
+
+- Evocation now inflicts a flat Attack Speed penalty (Existing Attack Speed + 1 Second) for all levels.
+- Evocation fangs take longer to activate based on level (faster at higher levels).
+
+- Echo now applies a 25% attack speed penalty when out of charges.
+- Echo now scales to Level 4, and provides 1 charge per level (was 2 charges at level 1, plus 1 per extra level).
+[With Combat Timers having a soft reset, Echo has been nerfed slightly to retain the current power level.]
+
+Custom Statuses:
+
+- Bleeding has been rebalanced:
+	- Bleeding max stacks have been reduced to 5 (was 6).
+	- Bleeding max health damage at max stacks reduced to 25% (was 33%).
+	- Elites now take reduced max health damage at 20%.
+	- Bosses now take 5 damage (was 6) at max stacks.
+	- Enemies suffering from Max Health damage will always take a minimum of 5 damage.
+
+	- Enchantment related nerfs:
+		- Bleeding melee enchant now inflicts stacks equal to its level only on non-bleeding targets.
+		- Bleeding potions now inflict stacks equal to its level on non-bleeding targets.
+		- Bleeding ranged enchant now inflicts 3 stacks only on non-bleeding targets.
+
+		- Bleeding targets gain 1 additional stack only from all of these effects.
+
+
+Mob Abilities:
+- Added Webbing, a mob trait which spawns a temporary web field on players hit by its effects or damage.
+
+- Removed Webshot, replaced with Quickdraw.
+
+- Added Quickdraw, a mob active attack in which the mob "prepares" and after a couple seconds, attacks fast with a short distance ranged attack.
+
+- Added Legionary, a mob trait which summons mobs to attack the player when abilities complete. The mob summoned is dependent on the offhand of the mob with the tag. (Spawn Egg determined)
+
+- Added Shrieker, a new trait. Shrieker is set on a mob instead of the "ca.has_active" tag. When a Shrieker mob reaches 50% or less Health, it screeches, immediately attacking with its set Active Attack. It can only do this once and never uses its active after or before that.
+
+- Added Accelerate, a new trait. (ca.accelerate+ / ++ / +++) Accelerate allows mobs to recast their ability when it finishes, the number of recasts is equal to the + count.
+
+- Added Ability Damage and Ability Haste at +++/--- tiers.
+
+- Added Amplification Stack traits. These add stacks of Brutal/Relentless/Devious/Sacrificial Blood when an ability is casted. The amplification gives the mob 2 stacks, and Healer/Augmenter apply the stacks to targets they affect.
+
+- Added a new variant of Nova Burst called "Pulse". (ca.pulse). Pulse Novas are half the radius, but activate twice as fast. The mob is also not slowed during the warmup.
+
+- Added Shulker Projectile Replacement. Shulkers can fire any supported replace projectile.
+- Added Arrows and Tridents to list of supported replace projectiles.
+- Magic Missiles, Needles, Grenades, and Traps from their various abilities are now supported projectiles. These projectiles pull from base damage exactly rather than their traditional scaling. They also require ca.touch to use traits.
+- Sonic Charge (a weaker and Line of Sight blocked version of the Warden's Sonic attack) is a supported projectile replacement.
+
+- Laser now scales off Attack Damage, dealing 500% of the mob's attack damage. It now also has innate vertical knockback in the explosion. Laser cooldown adjusted to 16 seconds. Visual and Sound effects updated.
+
+- Magic Missile now has scaling instead of the old system, 200% of base damage, and now is both Projectile and Explosion damage.
+
+- Trapper reworked, launches less projectiles, projectiles are gravity affected, and properly works with traits.
+
+- Orbit duration is now equal to cooldown. Orbits that are recasted apply orbs to nearby mobs instead.
+
+- Corpse Crawler now uses the Spawn Egg in the offhand to determine what spawns.
+- Corpse Crawler no longer has variants.
+
+- Spectral now uses the Spawn Egg in the offhand to determine what spawns.
+
+- Parting Gift uses mob traits, drops custom bombs instead of TNT.
+- Volatile Parting Gift drops TNT (original behavior).
+
+- Evocative now uses a melee ring when the player is close.
+
+- Some Cartographer Mob Abilities are now affected by Projectile and Blast Protection. (That were not previously)
+- Duplicate explosion damage is now 6 (was 4). [This is to account for the damage now being blocked by Blast Protection.]
+
+- Difficulty now adjusts the duration and coverage size of Blazing, Glacial, Overloading, Venemous, and Horrifying. Durations are longer on Hard, shorter on Easy. Size of Blazing Fire, Overloading fields, and Evocative fang length is larger on Hard and smaller on Easy.
+
+- Easy now adds 25% additional Cooldown to active attacks on the mob.
+
+Mimics:
+- Removed Double Mimic Feature
+
+Bug Fixes:
+- Punch and Crossbows no longer have vertical knockback (again).
+- Fixed a bug that would hold mob active attacks for extra time than they should, causing extra delay and holding tokens hostage. Mobs should feel more responsive especially in groups and with faster cooldowns.
+- Added Alchemist Description
+- Fixed warning trait particles and made them more clear on projectile attacks.
+- Alchemist works on abilities it did not work on previously. (Custom Projectile related abilities)
+- Fixed Descriptions in Lexica and Advancements/Descriptions
+- Rift direction is no longer static and always aims one prong of the explosions at the player.
