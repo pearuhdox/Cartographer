@@ -250,6 +250,52 @@
             },
             {
               "function": "minecraft:set_nbt",
+              "tag": "{Webbing:1}",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "nbt": "{Tags:[\"ca.webbing\"]}"
+                  }
+                },
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                      "nbt": "{Tags:[\"ca.ignore_traits_death\"]}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Cursing:1}",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "nbt": "{Tags:[\"ca.cursing\"]}"
+                  }
+                },
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                      "nbt": "{Tags:[\"ca.ignore_traits_death\"]}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
               "tag": "{Volatile:1}",
               "conditions": [
                 {

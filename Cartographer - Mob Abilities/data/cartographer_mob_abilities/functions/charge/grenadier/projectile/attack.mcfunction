@@ -5,6 +5,8 @@ execute if entity @s[tag=ca.overloading] run particle electric_spark ~ ~0.4 ~ 2 
 execute if entity @s[tag=ca.venemous] run particle item_slime ~ ~0.4 ~ 2 0.3 2 0.1 40 normal
 execute if entity @s[tag=ca.zephyrous] run particle cloud ~ ~0.4 ~ 2 0.3 2 0.05 40 normal
 execute if entity @s[tag=ca.alchemist] run particle effect ~ ~0.4 ~ 2 0.3 2 0.05 40 normal
+execute if entity @s[tag=ca.webbing] run particle block cobweb ~ ~0.4 ~ 2 0.3 2 0.05 40 normal
+execute if entity @s[tag=ca.cursing] run particle squid_ink ~ ~0.4 ~ 2 0.3 2 0.05 1 normal
 
 
 particle explosion ~ ~0.25 ~ 1.5 0 1.5 0 8 normal

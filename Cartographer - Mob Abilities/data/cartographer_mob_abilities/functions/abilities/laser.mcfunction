@@ -18,6 +18,8 @@ scoreboard players set $laser_zep ca.var 0
 scoreboard players set $laser_hor ca.var 0
 scoreboard players set $laser_vol ca.var 0
 scoreboard players set $laser_alc ca.var 0
+scoreboard players set $laser_web ca.var 0
+scoreboard players set $laser_cur ca.var 0
 
 execute if entity @s[tag=ca.blazing] run scoreboard players set $laser_bla ca.var 1
 execute if entity @s[tag=ca.glacial] run scoreboard players set $laser_gla ca.var 1
@@ -26,6 +28,9 @@ execute if entity @s[tag=ca.venemous] run scoreboard players set $laser_ven ca.v
 execute if entity @s[tag=ca.zephyrous] run scoreboard players set $laser_zep ca.var 1
 execute if entity @s[tag=ca.horrifying] run scoreboard players set $laser_hor ca.var 1
 execute if entity @s[tag=ca.volatile] run scoreboard players set $laser_vol ca.var 1
+execute if entity @s[tag=ca.webbing] run scoreboard players set $laser_web ca.var 1
+execute if entity @s[tag=ca.cursing] run scoreboard players set $laser_cur ca.var 1
+
 execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:abilities/laser/alchemist_save
 
 scoreboard players set @s ca.raycast 32

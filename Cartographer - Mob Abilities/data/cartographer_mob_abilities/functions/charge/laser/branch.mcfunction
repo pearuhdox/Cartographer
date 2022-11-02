@@ -5,6 +5,8 @@ execute if score $laser_ven ca.var matches 1 run tag @s add ca.venemous
 execute if score $laser_zep ca.var matches 1 run tag @s add ca.zephyrous
 execute if score $laser_hor ca.var matches 1 run tag @s add ca.horrifying
 execute if score $laser_vol ca.var matches 1 run tag @s add ca.volatile
+execute if score $laser_web ca.var matches 1 run tag @s add ca.webbing
+execute if score $laser_cur ca.var matches 1 run tag @s add ca.cursing
 
 execute positioned as @e[type=#bb:hostile,tag=ca.laser,limit=1,distance=..2] run tp @s ~ ~ ~ facing entity @p feet
 scoreboard players set @s ca.raycast 32

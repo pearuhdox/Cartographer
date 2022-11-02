@@ -28,6 +28,8 @@ scoreboard players set $trap_zep ca.var 0
 scoreboard players set $trap_hor ca.var 0
 scoreboard players set $trap_vol ca.var 0
 scoreboard players set $trap_alc ca.var 0
+scoreboard players set $trap_web ca.var 0
+scoreboard players set $trap_cur ca.var 0
 
 execute if entity @s[tag=ca.blazing] run scoreboard players set $trap_bla ca.var 1
 execute if entity @s[tag=ca.glacial] run scoreboard players set $trap_gla ca.var 1
@@ -36,6 +38,9 @@ execute if entity @s[tag=ca.venemous] run scoreboard players set $trap_ven ca.va
 execute if entity @s[tag=ca.zephyrous] run scoreboard players set $trap_zep ca.var 1
 execute if entity @s[tag=ca.horrifying] run scoreboard players set $trap_hor ca.var 1
 execute if entity @s[tag=ca.volatile] run scoreboard players set $trap_vol ca.var 1
+execute if entity @s[tag=ca.webbing] run scoreboard players set $trap_web ca.var 1
+execute if entity @s[tag=ca.cursing] run scoreboard players set $trap_cur ca.var 1
+
 execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:abilities/trapper/alchemist_save
 
 execute as @e[type=armor_stand,tag=trap_projectile,tag=!checked,limit=3,sort=nearest] run function cartographer_mob_abilities:abilities/trapper/set_traits

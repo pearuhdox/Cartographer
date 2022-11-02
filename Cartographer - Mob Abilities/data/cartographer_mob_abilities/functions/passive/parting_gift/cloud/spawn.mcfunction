@@ -22,5 +22,10 @@ execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zephyrous ca.
 scoreboard players set $celestial ca.death_traits 0
 execute if entity @s[tag=ca.celestial] run scoreboard players set $celestial ca.death_traits 1
 
+scoreboard players set $webbing ca.death_traits 0
+execute if entity @s[tag=ca.webbing] run scoreboard players set $webbing ca.death_traits 1
+
+scoreboard players set $cursing ca.death_traits 0
+execute if entity @s[tag=ca.cursing] run scoreboard players set $cursing ca.death_traits 1
 
 execute as @e[type=area_effect_cloud,tag=ca.new_cloud,limit=1] at @s run function cartographer_mob_abilities:passive/parting_gift/cloud/setup

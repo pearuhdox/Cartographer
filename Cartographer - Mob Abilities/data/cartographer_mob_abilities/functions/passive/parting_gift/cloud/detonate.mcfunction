@@ -9,4 +9,4 @@ execute if entity @s[tag=ca.venemous] run scoreboard players set $cloud_dmg ca.d
 
 execute if entity @s[tag=ca.celestial] as @e[type=#bb:hostile,distance=..8,limit=2,sort=nearest] at @s run function cartographer_mob_abilities:passive/parting_gift/cloud/celestial_heal
 
-execute positioned ~-2.5 ~ ~-2.5 as @a[dx=2.5,dy=0.01,dz=2.5,tag=ability_tagged] at @s run function cartographer_mob_abilities:passive/parting_gift/cloud/detonate_player
+execute positioned ~-1.5 ~ ~-1.5 as @a[dx=3,dy=0.01,dz=3,tag=ability_tagged] at @s run function cartographer_mob_abilities:passive/parting_gift/cloud/detonate_player

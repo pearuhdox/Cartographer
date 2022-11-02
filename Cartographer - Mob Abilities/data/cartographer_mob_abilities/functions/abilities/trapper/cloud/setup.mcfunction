@@ -6,6 +6,10 @@ execute if score $zephyrous ca.trap_traits matches 1.. run tag @s add ca.zephyro
 execute if score $horrifying ca.trap_traits matches 1.. run tag @s add ca.horrifying
 execute if score $celestial ca.trap_traits matches 1.. run tag @s add ca.celestial
 execute if score $alchemist ca.trap_traits matches 1.. run tag @s add ca.alchemist
+execute if score $webbing ca.trap_traits matches 1.. run tag @s add ca.webbing
+execute if score $cursing ca.trap_traits matches 1.. run tag @s add ca.cursing
+
+
 execute if score $volatile ca.trap_traits matches 1.. run tag @s add ca.volatile
 
 execute if score $blazing ca.trap_traits matches 1.. run data modify entity @s Particle set value "flame"
@@ -16,6 +20,9 @@ execute if score $zephyrous ca.trap_traits matches 1.. run data modify entity @s
 execute if score $horrifying ca.trap_traits matches 1.. run data modify entity @s Particle set value "sculk_soul"
 execute if score $celestial ca.trap_traits matches 1.. run data modify entity @s Particle set value "soul_fire_flame"
 execute if score $volatile ca.trap_traits matches 1.. run data modify entity @s Particle set value "smoke"
+execute if score $webbing ca.trap_traits matches 1.. run data modify entity @s Particle set value "block white_wool"
+execute if score $cursing ca.trap_traits matches 1.. run data modify entity @s Particle set value "witch"
+
 execute if score $alchemist ca.trap_traits matches 1.. run data modify entity @s Particle set value "effect"
 
 execute if score $alchemist ca.trap_traits matches 1.. run function cartographer_mob_abilities:abilities/trapper/cloud/alchemist_apply

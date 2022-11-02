@@ -12,5 +12,3 @@ execute as @s[tag=ca.shoot_grenade] at @s run function cartographer_mob_abilitie
 execute as @s[tag=ca.shoot_trap] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 execute as @s[tag=ca.shoot_magic_missile] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 execute as @s[tag=ca.shoot_sonic_charge] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
-
-execute as @s[type=wither_skeleton,tag=ca.prevent_effects] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main

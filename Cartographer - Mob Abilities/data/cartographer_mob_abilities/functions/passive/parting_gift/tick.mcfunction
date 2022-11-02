@@ -13,6 +13,10 @@ execute if entity @s[tag=ca.venemous] run particle minecraft:item_slime ~ ~0.75 
 execute if entity @s[tag=ca.zephyrous] run particle minecraft:cloud ~ ~0.75 ~ 0 0 0 0.05 1 normal
 execute if entity @s[tag=ca.celestial] run particle minecraft:soul_fire_flame ~ ~0.5 ~ 0 0 0 0.05 1 normal
 execute if entity @s[tag=ca.horrifying] run particle minecraft:sculk_soul ~ ~0.75 ~ 0 0 0 0.05 1 normal
+execute if entity @s[tag=ca.webbing] run particle minecraft:block minecraft:cobweb ~ ~0.5 ~ 0.3 0.3 0.3 0.05 1 normal
+execute if entity @s[tag=ca.curse] run particle minecraft:ash ~ ~0.75 ~ 0.3 0.3 0.3 0.05 8 normal
+
+
 execute if entity @s[tag=ca.lingering] run particle minecraft:effect ~ ~0.75 ~ 0.15 0 0.15 0.05 1 normal
 
 execute if entity @s[tag=on_ground] run tp @s ~ ~ ~ ~25 ~

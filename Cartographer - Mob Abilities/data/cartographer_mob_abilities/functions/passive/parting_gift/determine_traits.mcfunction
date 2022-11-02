@@ -16,6 +16,12 @@ execute if data storage ca.death Data.Horrifying run scoreboard players set $hor
 scoreboard players set $zephyrous ca.death_traits 0
 execute if data storage ca.death Data.Zephyrous run scoreboard players set $zephyrous ca.death_traits 1
 
+scoreboard players set $webbing ca.death_traits 0
+execute if data storage ca.death Data.Webbing run scoreboard players set $webbing ca.death_traits 1
+
+scoreboard players set $cursing ca.death_traits 0
+execute if data storage ca.death Data.Cursing run scoreboard players set $cursing ca.death_traits 1
+
 scoreboard players set $volatile ca.death_traits 0
 execute if data storage ca.death Data.Volatile run scoreboard players set $volatile ca.death_traits 1
 

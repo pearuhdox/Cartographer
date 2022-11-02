@@ -5,6 +5,9 @@ execute if score $venemous ca.death_traits matches 1.. run tag @s add ca.venemou
 execute if score $zephyrous ca.death_traits matches 1.. run tag @s add ca.zephyrous
 execute if score $horrifying ca.death_traits matches 1.. run tag @s add ca.horrifying
 execute if score $celestial ca.death_traits matches 1.. run tag @s add ca.celestial
+execute if score $webbing ca.death_traits matches 1.. run tag @s add ca.webbing
+execute if score $cursing ca.death_traits matches 1.. run tag @s add ca.cursing
+
 execute if score $aftershock ca.death_traits matches 1.. run tag @s add ca.aftershock
 execute if score $predator ca.death_traits matches 1.. run tag @s add ca.predator
 execute if score $lingering ca.death_traits matches 1.. run tag @s add ca.lingering
@@ -16,6 +19,8 @@ execute if score $venemous ca.death_traits matches 1.. run item replace entity @
 execute if score $zephyrous ca.death_traits matches 1.. run item replace entity @s armor.head with player_head{SkullOwner:{Id:[I;-1587504128,-731886705,-1173024139,642039009],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM1MDYzZjk1NzY1NzBhODkzOTAwNjIwNzY1OTk4OWZmODFiOWM4N2EyOGNlMzQxN2NhYWU4MmI2ZTdkNjJlIn19fQ=="}]}}} 1
 execute if score $horrifying ca.death_traits matches 1.. run item replace entity @s armor.head with player_head{SkullOwner:{Id:[I;962553342,1524713861,-1319432986,842621010],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjhmOTIzNTNmZDUyZDBlZWQ2NTdkOTk3ZWE4MTQ5YzgyNWQzNjZiMDI4YzE1MTRiZDllY2FhZjI0M2ZiN2JjNiJ9fX0="}]}}} 1
 execute if score $celestial ca.death_traits matches 1.. run item replace entity @s armor.head with player_head{SkullOwner:{Id:[I;-1553575444,-1709092903,-1913489431,-818916169],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTNjMjQ4NzBhNjVlNGYzZmE0M2I5MmYxOTRhM2M2ZjdlYzllNmNkNmM1MmYxZTY2MjRlNWMyNmI4ZGQ1ZDkifX19"}]}}} 1
+execute if score $webbing ca.death_traits matches 1.. run item replace entity @s armor.head with player_head{display:{Name:'{"text":"Firework Star (white)"}'},SkullOwner:{Id:[I;-1587504128,-731886705,-1173024139,642039009],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM1MDYzZjk1NzY1NzBhODkzOTAwNjIwNzY1OTk4OWZmODFiOWM4N2EyOGNlMzQxN2NhYWU4MmI2ZTdkNjJlIn19fQ=="}]}}} 1
+execute if score $cursing ca.death_traits matches 1.. run item replace entity @s armor.head with player_head{display:{Name:'{"text":"Firework Star (black)"}'},SkullOwner:{Id:[I;-1665004126,1472875603,-1597624572,-79688559],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ3NDk5NWQ2Y2RhMmI4YTI0NzcyYWY5NjllZjA3N2FlM2E4NWUyMzU3YzZmNjExOWI4YTI1MDYwNDFhNDQ4YiJ9fX0="}]}}} 1
 
 execute if score $aftershock ca.death_traits matches 1.. run scoreboard players set @s ca.aftershock 20
 

@@ -23,6 +23,12 @@ execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zephyrous ca.
 scoreboard players set $celestial ca.trap_traits 0
 execute if entity @s[tag=ca.celestial] run scoreboard players set $celestial ca.trap_traits 1
 
+scoreboard players set $webbing ca.trap_traits 0
+execute if entity @s[tag=ca.webbing] run scoreboard players set $webbing ca.trap_traits 1
+
+scoreboard players set $cursing ca.trap_traits 0
+execute if entity @s[tag=ca.cursing] run scoreboard players set $cursing ca.trap_traits 1
+
 scoreboard players set $alchemist ca.trap_traits 0
 execute if entity @s[tag=ca.alchemist] run scoreboard players set $alchemist ca.trap_traits 1
 
