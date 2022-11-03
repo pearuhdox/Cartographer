@@ -12,4 +12,4 @@ execute unless entity @s[tag=avail_target] as @s[type=#bb:hostile,tag=ca.has_act
 execute if score $rift_vfx ability_charge matches 1.. as @s[type=area_effect_cloud,tag=rift_spot,tag=checked] at @s run function cartographer_mob_abilities:charge/rift/particle_spot
 
 #Run Wither Blast Particles
-execute as @s[type=armor_stand,tag=wither_blast] at @s run function cartographer_mob_abilities:abilities/wither_storm/visual
+execute as @s[type=armor_stand,tag=wither_blast] at @s run function cartographer_mob_abilities:abilities/storm/visual

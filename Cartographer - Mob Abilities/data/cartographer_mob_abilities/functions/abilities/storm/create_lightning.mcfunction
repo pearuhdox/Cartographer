@@ -1,0 +1,1 @@
+summon area_effect_cloud ~ ~0.2 ~ {Tags:["ca.storm_lightning_cloud"],Particle:"cloud",ReapplicationDelay:10000,Radius:1f,RadiusPerTick:0.0f,RadiusOnUse:-10f,Duration:40,DurationOnUse:0,Age:0,WaitTime:100,Effects:[]}

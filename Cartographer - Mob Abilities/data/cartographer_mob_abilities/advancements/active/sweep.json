@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/active/sweep"
     },
-    "parent": "cartographer_mob_abilities:active/smash"
+    "parent": "cartographer_mob_abilities:active/storm"
 }

@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Wither Storm               ",
+            "text": "Storm                      ",
             "color": "white"
         },
         "description": {
             "color": "white",
-            "text": "The enemy can create a storm of wither skull rain around it."
+            "text": "The enemy summons mini-lightning strikes around nearby players or itself."
         },
         "icon": {
-            "item": "minecraft:nether_star"
+            "item": "minecraft:lightning_rod"
         },
         "frame": "task",
         "show_toast": true,
@@ -21,13 +21,13 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.wither_storm\"]}"
+                    "nbt": "{Tags:[\"ca.storm\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/active/wither_storm"
+        "function": "cartographer_mob_abilities:descriptions/active/storm"
     },
-    "parent": "cartographer_mob_abilities:active/quickdraw"
+    "parent": "cartographer_mob_abilities:active/smash"
 }

@@ -11,7 +11,6 @@ execute if entity @s[tag=ca.smash,scores={cooldown=0}] if entity @a[gamemode=!cr
 execute if entity @s[tag=ca.magic_missile,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..24] run tag @s add avail_target
 execute if entity @s[tag=ca.trapper,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=ca.duplicator,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
-execute if entity @s[tag=ca.wither_storm,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..25] run tag @s add avail_target
 execute if entity @s[tag=ca.grenadier,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
 
 #Half Second Checks
@@ -19,3 +18,4 @@ execute if entity @s[tag=ca.needle,tag=tokened,scores={cooldown=0}] if entity @a
 execute if entity @s[tag=ca.rift,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..18] run tag @s add avail_target
 execute if entity @s[tag=ca.sweep,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..12] run tag @s add avail_target
 execute if entity @s[tag=ca.quickdraw,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..11] run tag @s add avail_target
+execute if entity @s[tag=ca.storm,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..18] run tag @s add avail_target

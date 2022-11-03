@@ -9,7 +9,7 @@ execute as @s[tag=hook_projectile] at @s run function cartographer_mob_abilities
 scoreboard players add @s[tag=hook_projectile] ca.lifetime 1
 
 #Wither Storm Blasts
-execute if entity @s[tag=wither_blast] run function cartographer_mob_abilities:abilities/wither_storm/blasts
+execute if entity @s[tag=wither_blast] run function cartographer_mob_abilities:abilities/storm/blasts
 
 #Exalted Souls
 execute if entity @s[tag=exalted_soul_stand] run function cartographer_mob_abilities:passive/exalted/soul

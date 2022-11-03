@@ -6,3 +6,11 @@ playsound minecraft:entity.firework_rocket.twinkle_far hostile @a[distance=..16]
 playsound minecraft:entity.firework_rocket.twinkle_far hostile @a[distance=..16] ~ ~ ~ 1.2 1.5
 playsound minecraft:entity.firework_rocket.twinkle_far hostile @a[distance=..16] ~ ~ ~ 1.2 1.2
 playsound minecraft:entity.firework_rocket.twinkle_far hostile @a[distance=..16] ~ ~ ~ 1.2 2
+
+data modify entity @s Tags set from storage cartographer_mob_abilities:storm_tags Tags
+
+execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:abilities/storm/alchemist_apply
+
+tag @s add setup
+
+scoreboard players operation @s ca.ability_dmg = $damage ca.ability_dmg

@@ -169,7 +169,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"ca.wither_storm\"]}"
+                    "nbt": "{Tags:[\"ca.storm\"]}"
                   }
                 },
                 {

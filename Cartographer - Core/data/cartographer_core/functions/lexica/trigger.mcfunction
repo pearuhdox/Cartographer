@@ -123,7 +123,7 @@ execute if score @s ca.lexica_trig matches 323 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 324 run function cartographer_mob_abilities:lexica_calls/pages/category/active/sweep
 execute if score @s ca.lexica_trig matches 325 run function cartographer_mob_abilities:lexica_calls/pages/category/active/trapper
 execute if score @s ca.lexica_trig matches 326 run function cartographer_mob_abilities:lexica_calls/pages/category/active/quickdraw
-execute if score @s ca.lexica_trig matches 327 run function cartographer_mob_abilities:lexica_calls/pages/category/active/wither_storm
+execute if score @s ca.lexica_trig matches 327 run function cartographer_mob_abilities:lexica_calls/pages/category/active/storm
 
 execute if score @s ca.lexica_trig matches 330 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_brutal
 execute if score @s ca.lexica_trig matches 331 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_devious

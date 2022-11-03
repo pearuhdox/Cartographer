@@ -9,7 +9,7 @@ scoreboard objectives add brutal_stacks dummy
 scoreboard objectives add relent_stacks dummy
 scoreboard objectives add devious_stacks dummy
 scoreboard objectives add sacrifice_stacks dummy
-scoreboard objectives add wither_storms dummy
+scoreboard objectives add storms dummy
 scoreboard objectives add storm_height dummy
 scoreboard objectives add recast_count dummy
 
