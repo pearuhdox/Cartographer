@@ -6,7 +6,7 @@ execute if entity @s[tag=ca.horrifying] run particle minecraft:sculk_soul ~ ~ ~ 
 execute if entity @s[tag=ca.webbing] run particle minecraft:block minecraft:cobweb ~ ~ ~ 0.3 0.3 0.3 0.1 10 normal @a
 
 #(Overloading runs twice)
-execute if entity @s[tag=ca.overloading] run particle minecraft:wax_off ~ ~ ~ 0.3 0.3 0.3 1 10 normal @a
+execute if entity @s[tag=ca.overloading] run particle minecraft:wax_off ~ ~ ~ 0.25 0.3 0.25 1 4 normal @a
 
 execute if entity @s[tag=ca.venemous] run particle minecraft:item_slime ~ ~ ~ 0.3 0.3 0.3 0.1 10 normal @a
 execute if entity @s[tag=ca.zephyrous] run particle minecraft:dust 0.741 0.98 0.949 1 ~ ~ ~ 0.3 0.3 0.3 0.1 10 normal @a

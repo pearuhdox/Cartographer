@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "Mob attacks or effects create nearby harmful spark clouds.",
+            "text": "Mob attacks or effects create nearby mini lightning strikes that damage players shortly after.",
             "color": "white"
         },
         "icon": {

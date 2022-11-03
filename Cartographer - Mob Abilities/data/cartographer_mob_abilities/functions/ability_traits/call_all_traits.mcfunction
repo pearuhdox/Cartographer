@@ -9,8 +9,6 @@ execute if entity @s[tag=ca.cursing] as @a[tag=ability_tagged] at @s run functio
 #For melee-touched, push the mob out of the webbing zone.
 execute if entity @s[tag=ca.webbing,tag=ca.touch] if entity @a[tag=ability_tagged,distance=..2] run function cartographer_mob_abilities:ability_traits/webbing/touch_pushback
 
-#(Overloading runs twice)
-execute if entity @s[tag=ca.overloading] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/overloading/player_effect
 execute if entity @s[tag=ca.overloading] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/overloading/player_effect
 
 execute if entity @s[tag=ca.venemous] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/venemous/player_effect

@@ -121,10 +121,12 @@ Mob Abilities:
 
 - Evocative now uses a melee ring when the player is close.
 
+- Overloading has been reworked to spawn lightning strikes of damage and brief Weakness instead.
+
 - Some Cartographer Mob Abilities are now affected by Projectile and Blast Protection. (That were not previously)
 - Duplicate explosion damage is now 6 (was 4). [This is to account for the damage now being blocked by Blast Protection.]
 
-- Difficulty now adjusts the duration and coverage size of Blazing, Glacial, Overloading, Venemous, and Horrifying. Durations are longer on Hard, shorter on Easy. Size of Blazing Fire, Overloading fields, and Evocative fang length is larger on Hard and smaller on Easy.
+- Difficulty now adjusts the duration and coverage size of Blazing, Glacial, Overloading, Venemous, and Horrifying. Durations are longer on Hard, shorter on Easy. Size of Blazing Fire, length of Overloading lightning warmup time, and Evocative fang length is larger on Hard and smaller on Easy.
 
 - Easy now adds 25% additional Cooldown to active attacks on the mob.
 
