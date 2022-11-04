@@ -15,4 +15,6 @@ function cartographer_mob_abilities:abilities/storm/call_storm_traits
 execute as @a[distance=..2] at @s run function cartographer_mob_abilities:abilities/storm/detonate_player
 execute positioned ~-0.5 ~2 ~-0.5 as @a[dx=0,dz=0,dy=4] at @s run function cartographer_mob_abilities:abilities/storm/detonate_player
 
+execute if entity @a[distance=..2] if entity @s[tag=ca.restrike] run function cartographer_mob_abilities:abilities/storm/restrike
+
 kill @s
