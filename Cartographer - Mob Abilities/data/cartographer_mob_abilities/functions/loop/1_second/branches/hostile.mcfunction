@@ -19,6 +19,7 @@ tag @s remove avail_target
 execute as @s[tag=tokened] at @s run function cartographer_mob_abilities:loop/1_second/branches/tokened
 
 #Tick down particle display time for Augmenter
+execute if score @s augment_time matches 1.. run function cartographer_mob_abilities:ability_traits/trait_warnings/augmented_mob
 scoreboard players remove @s[scores={augment_time=1..}] augment_time 1
 
 #Tick down duplicator copy cooldown. Remove duplicates

@@ -28,16 +28,16 @@ execute if data storage ca.death Data.Pyromania at @s run function cartographer_
 execute if data storage ca.death Data.Spectral at @s run function cartographer_mob_abilities:passive/spectral
 
 #Brutal Blood
-execute if data storage ca.death Data.BrutalBlood at @s run function cartographer_mob_abilities:passive/brutal_blood
+execute if data storage ca.death Data.BrutalBlood at @s run function cartographer_mob_abilities:passive/blood/brutal
 
 #Relentless Blood
-execute if data storage ca.death Data.RelentlessBlood at @s run function cartographer_mob_abilities:passive/relentless_blood
+execute if data storage ca.death Data.RelentlessBlood at @s run function cartographer_mob_abilities:passive/blood/relentless
 
 #Devious Blood
-execute if data storage ca.death Data.DeviousBlood at @s run function cartographer_mob_abilities:passive/devious_blood
+execute if data storage ca.death Data.DeviousBlood at @s run function cartographer_mob_abilities:passive/blood/devious
 
 #Sacrificial Blood
-execute if data storage ca.death Data.SacrificialBlood at @s run function cartographer_mob_abilities:passive/sacrificial_blood
+execute if data storage ca.death Data.SacrificialBlood at @s run function cartographer_mob_abilities:passive/blood/sacrificial
 
 #Run the Death Events tag to check for non Cartographer added events.
 function #minecraft:cartographer/events/death_ability_proc

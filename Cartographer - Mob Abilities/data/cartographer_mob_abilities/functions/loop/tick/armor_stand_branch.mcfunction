@@ -8,8 +8,8 @@ execute as @s[tag=trap_projectile] at @s run function cartographer_mob_abilities
 execute as @s[tag=hook_projectile] at @s run function cartographer_mob_abilities:abilities/hookshot/projectile
 scoreboard players add @s[tag=hook_projectile] ca.lifetime 1
 
-#Wither Storm Blasts
-execute if entity @s[tag=wither_blast] run function cartographer_mob_abilities:abilities/storm/blasts
+#Haunting Shade
+execute if entity @s[tag=ca.haunting_shade] run function cartographer_mob_abilities:abilities/haunt/shade/tick
 
 #Exalted Souls
 execute if entity @s[tag=exalted_soul_stand] run function cartographer_mob_abilities:passive/exalted/soul

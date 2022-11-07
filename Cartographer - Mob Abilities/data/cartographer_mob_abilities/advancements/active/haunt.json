@@ -1,0 +1,33 @@
+{
+    "display": {
+        "title": {
+            "text": "Haunt                    ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy creates an invulnerable spectre that chases players, damaging them if close."
+        },
+        "icon": {
+            "item": "minecraft:bone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.haunt\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/haunt"
+    },
+    "parent": "cartographer_mob_abilities:active/grenadier"
+}

@@ -26,13 +26,32 @@ execute if entity @s[tag=ca.relentless_amplify,tag=!ca.ignore_traits_active] run
 execute if entity @s[tag=ca.devious_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_d ca.var 1
 execute if entity @s[tag=ca.sacrificial_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_s ca.var 1
 
+scoreboard players set $heal_count ca.mob_var 0
+
 execute as @e[distance=0.5..10,tag=!healer,type=#bb:hostile,sort=nearest,limit=3] at @s run function cartographer_mob_abilities:abilities/healer/effect
 
-particle minecraft:firework ~ ~1 ~ 0 0 0 0.6 100 normal
-particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.3 100 normal
+execute if score $heal_count ca.mob_var matches 0 run function cartographer_mob_abilities:abilities/healer/effect
 
-playsound minecraft:entity.zombie_villager.converted hostile @a[distance=..16] ~ ~ ~ 3 2
-playsound minecraft:entity.player.levelup hostile @a[distance=..16] ~ ~ ~ 3 1.5
+particle minecraft:firework ~ ~1 ~ 0 0 0 0.2 40 normal
+particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.2 40 normal
+
+playsound minecraft:entity.zombie_villager.converted hostile @a[distance=..16] ~ ~ ~ 1 2
+playsound minecraft:entity.player.levelup hostile @a[distance=..16] ~ ~ ~ 1 1.5
+
+playsound minecraft:block.note_block.chime hostile @a[distance=..16] ~ ~ ~ 0.75 0.5
+playsound minecraft:block.note_block.bell hostile @a[distance=..16] ~ ~ ~ 0.75 0.5
+
+playsound minecraft:block.note_block.chime hostile @a[distance=..16] ~ ~ ~ 0.75 1
+playsound minecraft:block.note_block.bell hostile @a[distance=..16] ~ ~ ~ 0.75 1
+
+playsound minecraft:block.note_block.chime hostile @a[distance=..16] ~ ~ ~ 1.25 2
+playsound minecraft:block.note_block.bell hostile @a[distance=..16] ~ ~ ~ 1.25 2
+
+playsound minecraft:block.note_block.chime hostile @a[distance=..16] ~ ~ ~ 0.75 0.75
+playsound minecraft:block.note_block.bell hostile @a[distance=..16] ~ ~ ~ 0.75 0.75
+
+playsound minecraft:block.note_block.chime hostile @a[distance=..16] ~ ~ ~ 1.25 1.5
+playsound minecraft:block.note_block.bell hostile @a[distance=..16] ~ ~ ~ 1.25 1.5
 
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 

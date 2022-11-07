@@ -9,3 +9,5 @@ function cd:lib/mob/heal
 particle minecraft:heart ~ ~1 ~ 0.5 0.5 0.5 0.05 15
 
 function cartographer_mob_abilities:abilities/healer/call_parent_traits
+
+scoreboard players add $heal_count ca.mob_var 1

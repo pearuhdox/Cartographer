@@ -5,6 +5,9 @@ execute if entity @s[tag=ca.horrifying] at @s run particle minecraft:sculk_soul 
 
 execute if entity @s[tag=ca.webbing] at @s run particle minecraft:block minecraft:cobweb ~ ~1 ~ 0.5 0.5 0.5 0.1 30 normal @a
 
+execute if entity @s[tag=ca.cursing] at @s run particle minecraft:witch ~ ~1 ~ 0.5 0.5 0.5 0.1 30 normal @a
+execute if entity @s[tag=ca.cursing] at @s run particle minecraft:ash ~ ~1 ~ 0.5 0.5 0.5 0.1 50 normal @a
+
 #(Overloading runs twice)
 execute if entity @s[tag=ca.overloading] at @s run particle minecraft:wax_off ~ ~1 ~ 0.5 0.5 0.5 1 30 normal @a
 

@@ -109,21 +109,22 @@ execute if score @s ca.lexica_trig matches 309 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 310 run function cartographer_mob_abilities:lexica_calls/pages/category/active/augmenter
 execute if score @s ca.lexica_trig matches 311 run function cartographer_mob_abilities:lexica_calls/pages/category/active/charge
 execute if score @s ca.lexica_trig matches 312 run function cartographer_mob_abilities:lexica_calls/pages/category/active/cloaker
-execute if score @s ca.lexica_trig matches 313 run function cartographer_mob_abilities:lexica_calls/pages/category/active/orbit
-execute if score @s ca.lexica_trig matches 314 run function cartographer_mob_abilities:lexica_calls/pages/category/active/duplicator
-execute if score @s ca.lexica_trig matches 315 run function cartographer_mob_abilities:lexica_calls/pages/category/active/nova
+execute if score @s ca.lexica_trig matches 313 run function cartographer_mob_abilities:lexica_calls/pages/category/active/duplicator
+execute if score @s ca.lexica_trig matches 314 run function cartographer_mob_abilities:lexica_calls/pages/category/active/nova
+execute if score @s ca.lexica_trig matches 315 run function cartographer_mob_abilities:lexica_calls/pages/category/active/haunt
 execute if score @s ca.lexica_trig matches 316 run function cartographer_mob_abilities:lexica_calls/pages/category/active/healer
 execute if score @s ca.lexica_trig matches 317 run function cartographer_mob_abilities:lexica_calls/pages/category/active/hookshot
 execute if score @s ca.lexica_trig matches 318 run function cartographer_mob_abilities:lexica_calls/pages/category/active/grenadier
 execute if score @s ca.lexica_trig matches 319 run function cartographer_mob_abilities:lexica_calls/pages/category/active/laser
 execute if score @s ca.lexica_trig matches 320 run function cartographer_mob_abilities:lexica_calls/pages/category/active/magic_missile
 execute if score @s ca.lexica_trig matches 321 run function cartographer_mob_abilities:lexica_calls/pages/category/active/needle
-execute if score @s ca.lexica_trig matches 322 run function cartographer_mob_abilities:lexica_calls/pages/category/active/rift
-execute if score @s ca.lexica_trig matches 323 run function cartographer_mob_abilities:lexica_calls/pages/category/active/smash
-execute if score @s ca.lexica_trig matches 324 run function cartographer_mob_abilities:lexica_calls/pages/category/active/sweep
-execute if score @s ca.lexica_trig matches 325 run function cartographer_mob_abilities:lexica_calls/pages/category/active/trapper
-execute if score @s ca.lexica_trig matches 326 run function cartographer_mob_abilities:lexica_calls/pages/category/active/quickdraw
-execute if score @s ca.lexica_trig matches 327 run function cartographer_mob_abilities:lexica_calls/pages/category/active/storm
+execute if score @s ca.lexica_trig matches 322 run function cartographer_mob_abilities:lexica_calls/pages/category/active/orbit
+execute if score @s ca.lexica_trig matches 323 run function cartographer_mob_abilities:lexica_calls/pages/category/active/rift
+execute if score @s ca.lexica_trig matches 324 run function cartographer_mob_abilities:lexica_calls/pages/category/active/smash
+execute if score @s ca.lexica_trig matches 325 run function cartographer_mob_abilities:lexica_calls/pages/category/active/sweep
+execute if score @s ca.lexica_trig matches 326 run function cartographer_mob_abilities:lexica_calls/pages/category/active/trapper
+execute if score @s ca.lexica_trig matches 327 run function cartographer_mob_abilities:lexica_calls/pages/category/active/quickdraw
+execute if score @s ca.lexica_trig matches 328 run function cartographer_mob_abilities:lexica_calls/pages/category/active/storm
 
 execute if score @s ca.lexica_trig matches 330 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_brutal
 execute if score @s ca.lexica_trig matches 331 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_devious
@@ -181,6 +182,7 @@ execute if score @s ca.lexica_trig matches 3552 run function cartographer_mob_ab
 execute if score @s ca.lexica_trig matches 3562 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/predator
 execute if score @s ca.lexica_trig matches 3572 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/shrieker
 execute if score @s ca.lexica_trig matches 3582 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/volatile
+execute if score @s ca.lexica_trig matches 3582 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/warping
 
 #Reset Lexica Trigger Score
 scoreboard players set @s ca.lexica_trig 0

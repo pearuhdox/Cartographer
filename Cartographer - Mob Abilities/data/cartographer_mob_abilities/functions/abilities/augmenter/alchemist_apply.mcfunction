@@ -1,0 +1,2 @@
+data modify entity @s HandItems[1].tag.Potion set from storage cartographer_mob_abilities:alchemist PotionCopy.tag.Potion
+data modify entity @s HandItems[1].tag.CustomPotionEffects set from storage cartographer_mob_abilities:alchemist PotionCopy.tag.CustomPotionEffects

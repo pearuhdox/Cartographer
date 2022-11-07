@@ -5,7 +5,7 @@ tellraw @s [{"text":"❰","color":"gold","bold":true},{"text":"⊰ Cartographer 
 tellraw @s {"text":"A set of custom mechanics, made by mappers, for mappers.","color":"#FFE0A3","bold":false,"italic":true}
 tellraw @s {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 
-tellraw @s [{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":"Version: ","color":"#C4FFFF","bold":false},{"text":"Oct-2022 Beta for MC 1.19.2","color":"white","underlined":true}]
+tellraw @s [{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":"Version: ","color":"#C4FFFF","bold":false},{"text":"Nov-2022 Beta for MC 1.19.2","color":"white","underlined":true}]
 
 tellraw @s {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
 

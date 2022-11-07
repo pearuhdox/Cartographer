@@ -28,8 +28,12 @@ execute if entity @s[tag=ca.has_active] run function cartographer_mob_abilities:
 execute if score @s ca.orbit_timer matches 1.. run function cartographer_mob_abilities:abilities/orbit/tick_effect
 
 #Augment Buff Particles
-execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust 1 0 0 0.7 ~ ~1 ~ 0.3 0.5 0.3 0 2 normal
-execute if entity @s[scores={augment_time=1..}] run particle minecraft:flame ~ ~1 ~ 0.2 0.2 0.2 0.05 1 normal
+execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust_color_transition 1 0 0 1 1 1 1 ~ ~1 ~ 0.3 0.5 0.3 0 1 normal
+execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust_color_transition 1 0 0 1 0 0 0 ~ ~1 ~ 0.3 0.5 0.3 0 1 normal
+
+#Augment Reset
+execute if entity @s[scores={augment_time=1}] run function cartographer_mob_abilities:abilities/augmenter/remove_augment
+
 
 #Run Trap Traits
 execute if entity @s[type=area_effect_cloud,tag=trap_deployed] at @s run function cartographer_mob_abilities:abilities/trapper/run_traits
