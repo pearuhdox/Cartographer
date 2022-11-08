@@ -7,7 +7,7 @@ execute unless entity @s[scores={ability_charge=1..2}] run playsound minecraft:b
 execute unless entity @s[scores={ability_charge=1..2}] run playsound minecraft:entity.pillager.hurt hostile @a[distance=..16] ~ ~ ~ 2 1.5
 execute unless entity @s[scores={ability_charge=1..2}] run playsound minecraft:entity.blaze.hurt hostile @a[distance=..16] ~ ~ ~ 2 1.5
 
-execute unless entity @s[scores={ability_charge=1..2}] run scoreboard players set @s mob_move_red 23
+execute unless entity @s[scores={ability_charge=1..2}] run scoreboard players set @s mob_dis_red 23
 
 execute unless entity @s[scores={ability_charge=1..2}] run data merge entity @s {NoAI:1}
 

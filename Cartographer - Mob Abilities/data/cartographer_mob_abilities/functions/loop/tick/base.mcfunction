@@ -27,6 +27,9 @@ execute if score $hook_check ca.hooked matches 1.. run scoreboard players remove
 #Reduce the time of the creeper cloud killer timer by 1
 execute if score $block_effects_creeper ca.var matches 1.. run scoreboard players remove $block_effects_creeper ca.var 1
 
+#Reduce the time of the creeper cloud killer timer by 1
+execute if score $deathbomb_creeper ca.var matches 1.. run scoreboard players remove $deathbomb_creeper ca.var 1
+
 #Reduce dragon fireball checker timer by 1
 execute if score $dragon_fireball_shooter ca.var matches 1.. run scoreboard players remove $dragon_fireball_shooter ca.var 1
 

@@ -1,5 +1,6 @@
 execute if entity @s[tag=ca.aftershock] run function cartographer_mob_abilities:ability_traits/aftershock/prime
 execute if entity @s[tag=ca.carapace] run function cartographer_mob_abilities:ability_traits/carapace/effect
+execute if entity @s[tag=ca.cloaking] at @s run function cartographer_mob_abilities:ability_traits/cloaking/effect
 
 
 #Runs at the mob position

@@ -108,7 +108,7 @@ execute if score @s ca.lexica_trig matches 305 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 309 run function cartographer_mob_abilities:lexica_calls/pages/category/active/ambush
 execute if score @s ca.lexica_trig matches 310 run function cartographer_mob_abilities:lexica_calls/pages/category/active/augmenter
 execute if score @s ca.lexica_trig matches 311 run function cartographer_mob_abilities:lexica_calls/pages/category/active/charge
-execute if score @s ca.lexica_trig matches 312 run function cartographer_mob_abilities:lexica_calls/pages/category/active/cloaker
+execute if score @s ca.lexica_trig matches 312 run function cartographer_mob_abilities:lexica_calls/pages/category/active/command
 execute if score @s ca.lexica_trig matches 313 run function cartographer_mob_abilities:lexica_calls/pages/category/active/duplicator
 execute if score @s ca.lexica_trig matches 314 run function cartographer_mob_abilities:lexica_calls/pages/category/active/nova
 execute if score @s ca.lexica_trig matches 315 run function cartographer_mob_abilities:lexica_calls/pages/category/active/haunt

@@ -9,6 +9,7 @@ scoreboard players set $heal_pre ca.var 0
 scoreboard players set $heal_vol ca.var 0
 scoreboard players set $heal_aft ca.var 0
 scoreboard players set $heal_evo ca.var 0
+scoreboard players set $heal_clo ca.var 0
 
 scoreboard players set $heal_amp_b ca.var 0
 scoreboard players set $heal_amp_r ca.var 0
@@ -20,6 +21,7 @@ execute if entity @s[tag=ca.predator,tag=!ca.ignore_traits_active] run scoreboar
 execute if entity @s[tag=ca.volatile,tag=!ca.ignore_traits_active] run scoreboard players set $heal_vol ca.var 1
 execute if entity @s[tag=ca.aftershock,tag=!ca.ignore_traits_active] run scoreboard players set $heal_aft ca.var 1
 execute if entity @s[tag=ca.evocative,tag=!ca.ignore_traits_active] run scoreboard players set $heal_evo ca.var 1
+execute if entity @s[tag=ca.cloaking,tag=!ca.ignore_traits_active] run scoreboard players set $heal_clo ca.var 1
 
 execute if entity @s[tag=ca.brutal_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_b ca.var 1
 execute if entity @s[tag=ca.relentless_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_r ca.var 1
@@ -28,7 +30,7 @@ execute if entity @s[tag=ca.sacrificial_amplify,tag=!ca.ignore_traits_active] ru
 
 scoreboard players set $heal_count ca.mob_var 0
 
-execute as @e[distance=0.5..10,tag=!healer,type=#bb:hostile,sort=nearest,limit=3] at @s run function cartographer_mob_abilities:abilities/healer/effect
+execute as @e[distance=0.5..10,tag=!ca.healer,type=#bb:hostile,sort=nearest,limit=3] at @s run function cartographer_mob_abilities:abilities/healer/effect
 
 execute if score $heal_count ca.mob_var matches 0 run function cartographer_mob_abilities:abilities/healer/effect
 

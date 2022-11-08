@@ -1,5 +1,6 @@
 execute if score $heal_aft ca.var matches 1.. run function cartographer_mob_abilities:ability_traits/aftershock/prime
 execute if score $heal_car ca.var matches 1.. run function cartographer_mob_abilities:ability_traits/carapace/effect
+execute if score $heal_clo ca.var matches 1.. run function cartographer_mob_abilities:ability_traits/cloaking/effect
 
 
 #Runs at the mob position

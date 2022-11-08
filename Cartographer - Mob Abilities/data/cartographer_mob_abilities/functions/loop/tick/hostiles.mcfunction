@@ -5,9 +5,10 @@ execute if score $invul_time_check invul matches 1.. if entity @s[predicate=cart
 #Run Enderport
 execute if entity @s[tag=ca.enderport] if entity @e[type=#bb:projectile,nbt=!{inGround:1b},distance=..5] run function cartographer_mob_abilities:passive/enderport
 
-#Run Creeper Block Effects
-execute if entity @s[type=creeper,tag=ca.prevent_effects,tag=!ca.prevent_effects_creeper_applied] run function cartographer_mob_abilities:passive/block_effects/creepers/apply_creeper
-execute if entity @s[type=creeper,tag=ca.prevent_effects_creeper_applied] run scoreboard players set $block_effects_creeper ca.var 2
+#Run Creeper Effects
+execute if entity @s[type=creeper] run function cartographer_mob_abilities:loop/tick/creeper
+
+execute if entity @s[type=#cartographer_mob_abilities:has_size] run function cartographer_mob_abilities:loop/tick/has_size
 
 #Run Evoker Replaces
 execute if entity @s[type=evoker,tag=ca.summoner] if entity @s[nbt={SpellTicks:80}] run function cartographer_mob_abilities:passive/summoner/master

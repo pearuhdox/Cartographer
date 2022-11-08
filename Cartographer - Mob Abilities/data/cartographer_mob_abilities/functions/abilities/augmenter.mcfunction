@@ -9,6 +9,7 @@ scoreboard players set $aug_pre ca.var 0
 scoreboard players set $aug_vol ca.var 0
 scoreboard players set $aug_aft ca.var 0
 scoreboard players set $aug_evo ca.var 0
+scoreboard players set $aug_clo ca.var 0
 
 scoreboard players set $aug_amp_b ca.var 0
 scoreboard players set $aug_amp_r ca.var 0
@@ -31,6 +32,7 @@ execute if entity @s[tag=ca.predator,tag=!ca.ignore_traits_active] run scoreboar
 execute if entity @s[tag=ca.volatile,tag=!ca.ignore_traits_active] run scoreboard players set $aug_vol ca.var 1
 execute if entity @s[tag=ca.aftershock,tag=!ca.ignore_traits_active] run scoreboard players set $aug_aft ca.var 1
 execute if entity @s[tag=ca.evocative,tag=!ca.ignore_traits_active] run scoreboard players set $aug_evo ca.var 1
+execute if entity @s[tag=ca.cloaking,tag=!ca.ignore_traits_active] run scoreboard players set $aug_clo ca.var 1
 
 execute if entity @s[tag=ca.brutal_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $aug_amp_b ca.var 1
 execute if entity @s[tag=ca.relentless_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $aug_amp_r ca.var 1
@@ -53,7 +55,7 @@ execute if entity @s[tag=ca.alchemist,tag=!ca.ignore_traits_active] run function
 
 scoreboard players set $augment_count ca.mob_var 0
 
-execute as @e[distance=0.5..15,limit=3,tag=!augmenter,sort=nearest,type=#bb:hostile] at @s run function cartographer_mob_abilities:abilities/augmenter/effect
+execute as @e[distance=0.5..15,limit=3,tag=!ca.augmenter,sort=nearest,type=#bb:hostile] at @s run function cartographer_mob_abilities:abilities/augmenter/effect
 
 execute if score $augment_count ca.mob_var matches 0 run function cartographer_mob_abilities:abilities/augmenter/effect
 

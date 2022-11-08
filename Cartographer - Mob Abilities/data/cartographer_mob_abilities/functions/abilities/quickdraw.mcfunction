@@ -17,5 +17,3 @@ playsound minecraft:entity.firework_rocket.twinkle_far hostile @a[distance=..16]
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
-
-#say test

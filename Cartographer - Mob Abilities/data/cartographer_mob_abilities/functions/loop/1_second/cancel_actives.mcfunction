@@ -4,7 +4,7 @@ execute if entity @s[tag=ca.nova,tag=tokened,scores={cooldown=0}] run function c
 execute if entity @s[tag=ca.ambush,tag=tokened,scores={cooldown=0}] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.healer,tag=tokened,scores={cooldown=0}] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.augmenter,tag=tokened,scores={cooldown=0}] run function cartographer_mob_abilities:helper/token/cancel_ability
-execute if entity @s[tag=ca.cloaker,tag=tokened,scores={cooldown=0}] run function cartographer_mob_abilities:helper/token/cancel_ability
+execute if entity @s[tag=ca.command,tag=tokened,scores={cooldown=0}] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.hookshot,tag=tokened,scores={cooldown=0}] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.orbit,tag=tokened,scores={cooldown=0}] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.smash,tag=tokened,scores={cooldown=0}] run function cartographer_mob_abilities:helper/token/cancel_ability

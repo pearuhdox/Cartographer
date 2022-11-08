@@ -128,6 +128,13 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
+                    "nbt": "{Tags:[\"ca.storm\"]}"
+                  }
+                },
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
                     "nbt": "{Tags:[\"ca.ambush\"]}"
                   }
                 }
@@ -169,7 +176,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"ca.storm\"]}"
+                    "nbt": "{Tags:[\"ca.haunt\"]}"
                   }
                 },
                 {
@@ -183,7 +190,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"laser\"]}"
+                    "nbt": "{Tags:[\"ca.laser\"]}"
                   }
                 },
                 {
@@ -211,7 +218,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"ca.cloaker\"]}"
+                    "nbt": "{Tags:[\"ca.command\"]}"
                   }
                 },
                 {

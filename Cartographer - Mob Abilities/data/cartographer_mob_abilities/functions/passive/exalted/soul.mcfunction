@@ -5,7 +5,7 @@ particle minecraft:firework ~ ~1 ~ 0.1 0.1 0.1 0.15 1 normal @a
 execute unless entity @s[scores={ca.lifetime=40..}] run tp @s ~ ~0.05 ~ ~2 ~
 scoreboard players add @s ca.lifetime 1
 
-execute if entity @s[scores={ca.lifetime=40..}] unless entity @e[type=armor_stand,tag=exalted_weapon,sort=nearest,limit=1,distance=..0.5] anchored eyes facing entity @e[type=armor_stand,tag=exalted_weapon,sort=nearest,limit=1,distance=0.4..] feet positioned ^ ^ ^0.75 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.25 ~ ~
+execute if entity @s[scores={ca.lifetime=40..}] unless entity @e[type=armor_stand,tag=exalted_weapon,sort=nearest,limit=1,distance=..0.5] anchored eyes facing entity @e[type=armor_stand,tag=exalted_weapon,sort=nearest,limit=1,distance=0.4..] feet positioned ^ ^ ^0.8 rotated as @s positioned ^ ^ ^5 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.25 ~ ~
 
 execute unless entity @e[type=sheep,tag=exalted_soul_hitbox,distance=..1] run function cartographer_mob_abilities:passive/exalted/soul_branch
 

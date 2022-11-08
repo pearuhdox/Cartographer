@@ -1,0 +1,1 @@
+execute if entity @s[tag=!size_setup,tag=ca.size_shrink] run function cartographer_mob_abilities:passive/size/shrink_setup

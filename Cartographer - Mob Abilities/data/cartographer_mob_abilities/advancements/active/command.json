@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Cloaker                   ",
+            "text": "Command                   ",
             "color": "white"
         },
         "description": {
             "color": "white",
-            "text": "The enemy can charge up to conceal nearby enemies."
+            "text": "The enemy bolsters nearby allies with any traits it has."
         },
         "icon": {
-            "item": "minecraft:phantom_membrane"
+            "item": "minecraft:goat_horn"
         },
         "frame": "task",
         "show_toast": true,
@@ -21,13 +21,13 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.cloaker\"]}"
+                    "nbt": "{Tags:[\"ca.command\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/active/cloaker"
+        "function": "cartographer_mob_abilities:descriptions/active/command"
     },
     "parent": "cartographer_mob_abilities:active/charge"
 }
