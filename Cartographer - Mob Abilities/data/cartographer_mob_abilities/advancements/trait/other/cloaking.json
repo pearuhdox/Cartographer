@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Evocative                   ",
+            "text": "Carapace                     ",
             "color": "white"
         },
         "description": {
-            "text": "Ability casts launch magic fangs towards players.",
+            "text": "Ability casts temporarily Cloak the mob.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:leather"
+            "item": "minecraft:phantom_membrane"
         },
         "frame": "task",
         "show_toast": true,
@@ -21,13 +21,13 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.evocative\"]}"
+                    "nbt": "{Tags:[\"ca.cloaking\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/trait/other/evocative"
+        "function": "cartographer_mob_abilities:descriptions/trait/other/cloaking"
     },
-    "parent": "cartographer_mob_abilities:trait/other/cloaking"
+    "parent": "cartographer_mob_abilities:trait/other/carapace"
 }
