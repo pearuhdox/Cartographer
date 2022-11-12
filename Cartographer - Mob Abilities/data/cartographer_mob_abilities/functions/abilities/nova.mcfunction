@@ -13,7 +13,8 @@ execute unless entity @s[tag=ca.pulse] run function cartographer_mob_abilities:a
 
 playsound minecraft:block.end_portal.spawn player @a[distance=..16] ~ ~ ~ 0.5 1.75
 
+
+
+
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
-
-#say test

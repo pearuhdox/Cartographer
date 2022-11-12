@@ -1,0 +1,1 @@
+tag @s add ca.airborne_slam_waiting

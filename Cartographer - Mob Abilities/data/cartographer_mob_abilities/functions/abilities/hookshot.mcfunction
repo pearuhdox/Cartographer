@@ -4,7 +4,7 @@ function cartographer_mob_abilities:ability_traits/cooldown_traits
 
 scoreboard players set @s ability_charge 0
 
-scoreboard players set @s ca.raycast 12
+scoreboard players set @s ca.raycast 14
 
 data merge entity @s {NoAI:0}
 
@@ -24,6 +24,8 @@ tag @a[distance=..18] remove hooked
 execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s mob_move_red 101
 execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s ca.hooked 101
 execute if score $hook_check ca.hooked matches 101 run scoreboard players add @s cooldown 4
+
+
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate

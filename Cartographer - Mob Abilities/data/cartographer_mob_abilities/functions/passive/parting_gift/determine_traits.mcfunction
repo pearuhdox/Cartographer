@@ -31,8 +31,8 @@ execute if data storage ca.death Data.Celestial run scoreboard players set $cele
 scoreboard players set $aftershock ca.death_traits 0
 execute if data storage ca.death Data.Aftershock run scoreboard players set $aftershock ca.death_traits 1
 
-scoreboard players set $predator ca.death_traits 0
-execute if data storage ca.death Data.Predator run scoreboard players set $predator ca.death_traits 1
+scoreboard players set $acrobatic ca.death_traits 0
+execute if data storage ca.death Data.Acrobatic run scoreboard players set $acrobatic ca.death_traits 1
 
 scoreboard players set $lingering ca.death_traits 0
 execute if data storage ca.death Data.Lingering run scoreboard players set $lingering ca.death_traits 1

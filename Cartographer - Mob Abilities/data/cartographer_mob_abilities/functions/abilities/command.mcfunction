@@ -1,7 +1,6 @@
 scoreboard players set @s ability_charge 0
 
 scoreboard players set $com_car ca.var 0
-scoreboard players set $com_pre ca.var 0
 scoreboard players set $com_vol ca.var 0
 scoreboard players set $com_aft ca.var 0
 scoreboard players set $com_evo ca.var 0
@@ -23,8 +22,15 @@ scoreboard players set $com_web ca.var 0
 scoreboard players set $com_hor ca.var 0
 scoreboard players set $com_alc ca.var 0
 
+scoreboard players set $com_acr_dy ca.var 0
+scoreboard players set $com_acr_st ca.var 0
+scoreboard players set $com_acr_gc ca.var 0
+scoreboard players set $com_acr_re ca.var 0
+scoreboard players set $com_acr_kn ca.var 0
+scoreboard players set $com_acr_kf ca.var 0
+scoreboard players set $com_acr_ks ca.var 0
+
 execute if entity @s[tag=ca.carapace,tag=!ca.ignore_traits_active] run scoreboard players set $com_car ca.var 1
-execute if entity @s[tag=ca.predator,tag=!ca.ignore_traits_active] run scoreboard players set $com_pre ca.var 1
 execute if entity @s[tag=ca.volatile,tag=!ca.ignore_traits_active] run scoreboard players set $com_vol ca.var 1
 execute if entity @s[tag=ca.aftershock,tag=!ca.ignore_traits_active] run scoreboard players set $com_aft ca.var 1
 execute if entity @s[tag=ca.evocative,tag=!ca.ignore_traits_active] run scoreboard players set $com_evo ca.var 1
@@ -44,6 +50,14 @@ execute if entity @s[tag=ca.webbing,tag=!ca.ignore_traits_active] run scoreboard
 execute if entity @s[tag=ca.horrifying,tag=!ca.ignore_traits_active] run scoreboard players set $com_hor ca.var 1
 execute if entity @s[tag=ca.volatile,tag=!ca.ignore_traits_active] run scoreboard players set $com_vol ca.var 1
 execute if entity @s[tag=ca.zephyrous,tag=!ca.ignore_traits_active] run scoreboard players set $com_zep ca.var 1
+
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_dynamic_after] run scoreboard players set $com_acr_dy ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_strafe_after] run scoreboard players set $com_acr_st ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_gap_close_after] run scoreboard players set $com_acr_gc ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_retreat_after] run scoreboard players set $com_acr_re ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_after] run scoreboard players set $com_acr_kn ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_forward_after] run scoreboard players set $com_acr_kf ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_strafe_after] run scoreboard players set $com_acr_ks ca.var 1
 
 scoreboard players set $command_count ca.mob_var 0
 

@@ -54,6 +54,10 @@ scoreboard objectives add ca.sb_convert dummy
 
 scoreboard objectives add ca.sc_time dummy
 
+scoreboard objectives add ca.acrobat_passive_cooldown dummy
+
+scoreboard objectives add ca.elytra_deploy_time dummy
+
 scoreboard objectives add ca.mob_var dummy
 
 

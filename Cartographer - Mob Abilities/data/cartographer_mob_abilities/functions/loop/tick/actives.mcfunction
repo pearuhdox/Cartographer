@@ -1,5 +1,6 @@
 #Run Smash Land Effect
 execute if entity @s[tag=ca.smash] run function cartographer_mob_abilities:loop/tick/smash_branch
+execute if entity @s[type=blaze,tag=ca.airborne_slam_waiting,tag=ca.smash] run function cartographer_mob_abilities:abilities/smash/slam/move_down
 
 #Run Sweep and Quickdraw Warning
 execute if entity @s[tag=ca.sweep,tag=tokened,tag=!warned,scores={cooldown=0}] run function cartographer_mob_abilities:loop/tick/fast_attack_warning

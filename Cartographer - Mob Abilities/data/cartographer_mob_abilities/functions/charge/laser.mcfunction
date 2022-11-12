@@ -2,13 +2,20 @@ execute unless entity @s[scores={ability_charge=120}] run scoreboard players add
 
 execute if entity @s[scores={ability_charge=1}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
-execute if entity @s[scores={ability_charge=1}] run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["laser_marker","ability_marker"]}
-
 execute if entity @s[scores={ability_charge=1..119}] run effect give @s glowing 1 0 true
 
 execute if entity @s[scores={ability_charge=1..119}] run scoreboard players set @s mob_move_red 23
 
 scoreboard players operation $laser_charge ability_charge = @s ability_charge
+
+scoreboard players operation $laser_mod ability_charge = $laser_charge ability_charge
+scoreboard players operation $laser_mod ability_charge %= $21 ca.CONSTANT
+
+execute if score @s ability_charge matches 1 unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/acrobatic/run_kite/ability
+
+execute if entity @s[tag=ca.has_kited] if score $laser_mod ability_charge matches 0 run effect give @s jump_boost 2 6 true
+execute if entity @s[tag=ca.has_kited] if score $laser_mod ability_charge matches 0 run effect give @s levitation 1 0 true
+execute if entity @s[tag=ca.has_kited] if score $laser_mod ability_charge matches 0 run particle minecraft:cloud ~ ~-0.5 ~ 0.3 0 0.3 0.05 15 normal
 
 scoreboard players set $laser_bla ca.var 0
 scoreboard players set $laser_gla ca.var 0
@@ -30,7 +37,7 @@ execute if entity @s[tag=ca.volatile] run scoreboard players set $laser_vol ca.v
 execute if entity @s[tag=ca.webbing] run scoreboard players set $laser_web ca.var 1
 execute if entity @s[tag=ca.cursing] run scoreboard players set $laser_cur ca.var 1
 
-execute if entity @s[scores={ability_charge=1..119}] as @e[tag=laser_marker,distance=..1,limit=1] at @s run function cartographer_mob_abilities:charge/laser/branch
+execute if entity @s[scores={ability_charge=1..119}] at @s run function cartographer_mob_abilities:charge/laser/branch
 
 execute if entity @s[scores={ability_charge=1..119}] as @a[distance=..32] at @s run playsound minecraft:entity.blaze.shoot hostile @s ~ ~ ~ 0.05 2
 execute if entity @s[scores={ability_charge=1}] as @a[distance=..32] at @s run playsound minecraft:entity.warden.sonic_charge hostile @s ~ ~ ~ 1.2 0.5

@@ -9,7 +9,7 @@ execute if score $webbing ca.death_traits matches 1.. run tag @s add ca.webbing
 execute if score $cursing ca.death_traits matches 1.. run tag @s add ca.cursing
 
 execute if score $aftershock ca.death_traits matches 1.. run tag @s add ca.aftershock
-execute if score $predator ca.death_traits matches 1.. run tag @s add ca.predator
+execute if score $acrobatic ca.death_traits matches 1.. run tag @s add ca.acrobatic
 execute if score $lingering ca.death_traits matches 1.. run tag @s add ca.lingering
 
 execute if score $blazing ca.death_traits matches 1.. run item replace entity @s armor.head with player_head{SkullOwner:{Id:[I;-958993567,502546692,-1492283202,207113608],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGM4MjNjOGU1M2QzYWU3NTNjMTkxYzUxZmU2Njc5MTE1MjczMzA2NDFhMDE2YTEzMzI1MDIzYTM5OWYwMTcyYSJ9fX0="}]}}} 1
@@ -26,7 +26,7 @@ execute if score $aftershock ca.death_traits matches 1.. run scoreboard players 
 
 scoreboard players set @s ca.death_traits 30
 execute if score $aftershock ca.death_traits matches 1.. run scoreboard players set @s ca.death_traits 40
-execute if score $predator ca.death_traits matches 1.. run scoreboard players set @s ca.death_traits 60
+execute if score $acrobatic ca.death_traits matches 1.. run scoreboard players set @s ca.death_traits 60
 
 #Can these be branched? Sure. Are they score checks on a singular constant value and thus I don't care enough to cause its not needed for performance? Yes.
 execute if score $value bbl.rng matches 1 if score $cluster ca.death_traits matches 1.. if entity @s[tag=ca.left_bomb] run scoreboard players remove @s ca.lifetime 10
@@ -46,8 +46,8 @@ scoreboard players set @s co_y 1
 execute unless entity @s[tag=ca.left_bomb] unless entity @s[tag=ca.right_bomb] run scoreboard players set @s co_send -3
 execute if entity @s[tag=ca.cluster_bomb] run scoreboard players set @s co_send -1
 
-execute if score $predator ca.death_traits matches 1.. run scoreboard players set @s co_y 3
-execute if score $predator ca.death_traits matches 1.. run scoreboard players set @s co_send -4
+execute if score $acrobatic ca.death_traits matches 1.. run scoreboard players set @s co_y 3
+execute if score $acrobatic ca.death_traits matches 1.. run scoreboard players set @s co_send -4
 
 execute if entity @s[tag=ca.left_bomb] run scoreboard players set @s co_yaw -5
 execute if entity @s[tag=ca.right_bomb] run scoreboard players set @s co_yaw 5

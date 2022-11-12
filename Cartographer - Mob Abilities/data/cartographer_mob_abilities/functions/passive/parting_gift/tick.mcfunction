@@ -21,7 +21,7 @@ execute if entity @s[tag=ca.lingering] run particle minecraft:effect ~ ~0.75 ~ 0
 
 execute if entity @s[tag=on_ground] run tp @s ~ ~ ~ ~25 ~
 
-scoreboard players operation $predator_mod ca.death_traits = @s ca.lifetime
-scoreboard players operation $predator_mod ca.death_traits %= $15 ca.CONSTANT
+scoreboard players operation $acrobatic_mod ca.death_traits = @s ca.lifetime
+scoreboard players operation $acrobatic_mod ca.death_traits %= $15 ca.CONSTANT
 
-execute if score @s ca.lifetime matches 1.. if entity @s[tag=ca.predator,tag=on_ground] if score $predator_mod ca.death_traits matches 0 run function cartographer_mob_abilities:passive/parting_gift/predator_bounce
+execute if score @s ca.lifetime matches 1.. if entity @s[tag=ca.acrobatic,tag=on_ground] if score $acrobatic_mod ca.death_traits matches 0 run function cartographer_mob_abilities:passive/parting_gift/acrobatic_bounce

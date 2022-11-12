@@ -47,7 +47,13 @@ scoreboard players set @s mob_atk_dis 12
 
 scoreboard players remove @s[scores={recast_count=1..}] recast_count 1
 
-tp @s ^ ^0.5 ^2
+
+#Gap CLose Runs After Ability
+execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/acrobatic/run_effects/strafe
+
+
+
+execute unless entity @s[tag=ca.has_kited] unless entity @s[tag=ca.has_retreated] run tp @s ^ ^0.5 ^2
 
 #Recast if there are still casts to make.
 execute if entity @s[scores={recast_count=1..}] run tag @a[distance=..5] remove swept

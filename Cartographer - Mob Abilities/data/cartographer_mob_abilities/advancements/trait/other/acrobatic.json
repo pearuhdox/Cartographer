@@ -1,0 +1,128 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:feather"
+    },
+    "title": {
+      "text": "Acrobatic                 ",
+      "color": "white"
+    },
+    "description": {
+      "text": "Ability casts launch the mob towards or away from players.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "cartographer_mob_abilities:trait/trait_abilities",
+  "criteria": {
+    "basic": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"ca.acrobatic\"]}"
+        }
+      }
+    },
+    "strafe": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"ca.acrobatic_strafe\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "gap_close": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"ca.acrobatic_gap_close\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "retreat": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"ca.acrobatic_retreat\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kite": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"ca.acrobatic_kite\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kite_forward": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"ca.acrobatic_kite_forward\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kite_strafe": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"ca.acrobatic_kite_strafe\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "basic",
+      "strafe",
+      "gap_close",
+      "retreat",
+      "kite",
+      "kite_forward",
+      "kite_strafe"
+    ]
+  ],
+  "rewards": {
+    "function": "cartographer_mob_abilities:descriptions/trait/other/acrobatic"
+  }
+}

@@ -17,6 +17,8 @@ particle minecraft:sculk_charge_pop ~ ~1 ~ 1.2 1.2 1.2 0.2 50
 playsound minecraft:entity.warden.sonic_boom hostile @a[distance=..16] ~ ~ ~ 2 2
 playsound minecraft:block.beacon.activate hostile @a[distance=..16] ~ ~ ~ 1.5 1
 
+
+
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 

@@ -8,6 +8,5 @@ execute if score $laser_vol ca.var matches 1 run tag @s add ca.volatile
 execute if score $laser_web ca.var matches 1 run tag @s add ca.webbing
 execute if score $laser_cur ca.var matches 1 run tag @s add ca.cursing
 
-execute positioned as @e[type=#bb:hostile,tag=ca.laser,limit=1,distance=..2] run tp @s ~ ~ ~ facing entity @p feet
 scoreboard players set @s ca.raycast 32
-execute positioned ~ ~1 ~ run function cartographer_mob_abilities:charge/laser/raycast
+execute facing entity @p feet positioned ^ ^1 ^ run function cartographer_mob_abilities:charge/laser/raycast

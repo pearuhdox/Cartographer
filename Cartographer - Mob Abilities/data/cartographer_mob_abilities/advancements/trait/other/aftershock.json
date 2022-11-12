@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/trait/other/aftershock"
     },
-    "parent": "cartographer_mob_abilities:trait/trait_abilities"
+    "parent": "cartographer_mob_abilities:trait/other/acrobatic"
 }

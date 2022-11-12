@@ -1,4 +1,4 @@
-scoreboard players set @s ca.raycast 10
+scoreboard players set @s ca.raycast 12
 
 scoreboard players set @s mob_move_red 23
 

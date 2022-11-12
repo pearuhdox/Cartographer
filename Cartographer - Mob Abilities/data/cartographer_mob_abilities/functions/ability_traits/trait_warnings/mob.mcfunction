@@ -21,7 +21,7 @@ execute if entity @s[tag=ca.aftershock] run particle minecraft:block dirt ~ ~0.3
 execute if entity @s[tag=ca.alchemist] run particle minecraft:ambient_entity_effect ~ ~1 ~ 0.5 0.5 0.5 1 30 normal @a
 
 #Runs at the mob position
-execute if entity @s[tag=ca.predator] at @s run particle minecraft:cloud ~ ~0.2 ~ 0 0 0 0.1 10 normal @a
+execute if entity @s[tag=ca.acrobatic] at @s run particle minecraft:cloud ~ ~0.2 ~ 0 0 0 0.1 10 normal @a
 execute if entity @s[tag=ca.evocative] at @s run particle minecraft:crit ~ ~1 ~ 0.5 0.5 0.5 0.05 30 normal @a
 execute if entity @s[tag=ca.volatile] at @s run playsound minecraft:entity.creeper.primed hostile @a[distance=..20] ~ ~ ~ 2 0.75 0.75
 

@@ -16,3 +16,10 @@ scoreboard players set @s cooldown 4
 function cartographer_mob_abilities:helper/token/return
 tag @s remove tokened
 tag @s remove attacking
+
+tag @s remove ca.has_kited
+tag @s remove ca.has_gap_closed
+tag @s remove ca.has_strafed
+tag @s remove ca.has_retreated
+
+tag @s remove warned

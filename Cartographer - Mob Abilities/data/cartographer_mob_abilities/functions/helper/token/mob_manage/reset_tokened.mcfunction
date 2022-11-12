@@ -3,6 +3,11 @@ tag @s remove attacking
 tag @s remove tokened
 tag @s remove can_see_player
 
+tag @s remove ca.has_kited
+tag @s remove ca.has_gap_closed
+tag @s remove ca.has_strafed
+tag @s remove ca.has_retreated
+
 tag @s remove warned
 
 tag @s remove ca.temp_token

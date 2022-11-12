@@ -4,7 +4,7 @@ execute if score $com_clo ca.var matches 1.. run function cartographer_mob_abili
 
 
 #Runs at the mob position
-execute if score $com_pre ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/predator/effect
+execute if score $com_acr ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
 execute if score $com_evo ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
 execute if score $com_vol ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
@@ -13,4 +13,11 @@ execute if score $com_amp_r ca.var matches 1.. at @s run function cartographer_m
 execute if score $com_amp_d ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/amplify/devious
 execute if score $com_amp_s ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/amplify/sacrificial
 
+execute if score $com_acr_dy ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
+execute if score $com_acr_st ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
+execute if score $com_acr_gc ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/gap_close
+execute if score $com_acr_re ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/retreat
+execute if score $com_acr_kn ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite
+execute if score $com_acr_kf ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_forward
+execute if score $com_acr_ks ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_strafe
 #say Running Traits

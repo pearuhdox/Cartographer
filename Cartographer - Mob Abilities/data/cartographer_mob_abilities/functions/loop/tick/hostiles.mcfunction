@@ -35,6 +35,9 @@ execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust_colo
 #Augment Reset
 execute if entity @s[scores={augment_time=1}] run function cartographer_mob_abilities:abilities/augmenter/remove_augment
 
+#Elytra Deploy
+execute if score @s[tag=ca.acrobatic_kite_elytra] ca.elytra_deploy_time matches 11.. run function cartographer_mob_abilities:loop/1_second/branches/give_fall_flying_branch
+execute if score @s ca.elytra_deploy_time matches 1.. run scoreboard players add @s ca.elytra_deploy_time 1
 
 #Run Trap Traits
 execute if entity @s[type=area_effect_cloud,tag=trap_deployed] at @s run function cartographer_mob_abilities:abilities/trapper/run_traits

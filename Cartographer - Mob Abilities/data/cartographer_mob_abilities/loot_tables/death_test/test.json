@@ -66,13 +66,13 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Predator:1}",
+              "tag": "{Acrobatic:1}",
               "conditions": [
                 {
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"ca.predator\"]}"
+                    "nbt": "{Tags:[\"ca.acrobatic\"]}"
                   }
                 },
                 {

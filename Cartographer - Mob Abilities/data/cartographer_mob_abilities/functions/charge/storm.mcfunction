@@ -1,15 +1,19 @@
-scoreboard players set @s mob_move_red 16
+scoreboard players add @s ability_charge 1
 
-execute unless entity @s[scores={ability_charge=1..}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
+execute if score @s ability_charge matches 1 run scoreboard players set @s mob_move_red 21
 
-execute unless entity @s[scores={ability_charge=1..2}] run playsound minecraft:item.trident.thunder player @a[distance=..20] ~ ~ ~ 1.5 1.25
+execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
-execute unless entity @s[scores={ability_charge=1..2}] at @a[distance=..16] positioned ~ ~8 ~ run particle minecraft:cloud ~ ~ ~ 2 0.2 2 0.01 200 normal
-execute unless entity @s[scores={ability_charge=1..2}] at @s positioned ~ ~4 ~ run particle minecraft:cloud ~ ~ ~ 1 0.2 1 0.01 80 normal
+execute if score @s ability_charge matches 1 run playsound minecraft:item.trident.thunder player @a[distance=..20] ~ ~ ~ 1.5 1.25
 
-execute unless entity @s[scores={ability_charge=1..2}] run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 at @a[distance=..16] positioned ~ ~8 ~ run particle minecraft:cloud ~ ~ ~ 2 0.2 2 0.01 200 normal
+execute if score @s ability_charge matches 1 at @s positioned ~ ~4 ~ run particle minecraft:cloud ~ ~ ~ 1 0.2 1 0.01 80 normal
 
-execute unless entity @s[scores={ability_charge=2}] run scoreboard players add @s ability_charge 1
+execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
 
-execute if entity @s[scores={ability_charge=2}] run function cartographer_mob_abilities:abilities/storm
+execute if score @s[tag=ca.has_kited] ability_charge matches 1 run effect give @s jump_boost 2 6 true
+execute if score @s[tag=ca.has_kited] ability_charge matches 1 run effect give @s levitation 1 0 true
+execute if score @s[tag=ca.has_kited] ability_charge matches 1 run particle minecraft:cloud ~ ~-0.5 ~ 0.3 0 0.3 0.05 15 normal
+
+execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/storm
 
