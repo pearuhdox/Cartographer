@@ -15,6 +15,7 @@ scoreboard players operation $flash ca.var = @s ca.flash
 scoreboard players operation $cauterize ca.var = @s ca.cauterize
 
 scoreboard players operation $explosive ca.var = @s ca.explosive
+
 scoreboard players operation $vol_dmg ca.vol_dmg = @s ca.vol_dmg
 
 scoreboard players operation $tempo_theft ca.var = @s ca.tempo_theft

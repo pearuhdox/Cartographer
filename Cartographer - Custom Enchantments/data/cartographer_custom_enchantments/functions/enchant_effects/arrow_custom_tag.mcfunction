@@ -19,7 +19,7 @@ execute if score $cauterize ca.var matches 1.. run tag @s add is_cauterize
 execute if score $explosive ca.var matches 1.. run tag @s add is_explosive
 execute if score $explosive ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/explosive
 
-scoreboard players operation @s ca.vol_dmg = $vol_dmg ca.var
+scoreboard players operation @s ca.vol_dmg = $vol_dmg ca.vol_dmg
 
 execute if score $tempo_theft ca.var matches 1 run tag @s add is_tempo_1
 execute if score $tempo_theft ca.var matches 2 run tag @s add is_tempo_1

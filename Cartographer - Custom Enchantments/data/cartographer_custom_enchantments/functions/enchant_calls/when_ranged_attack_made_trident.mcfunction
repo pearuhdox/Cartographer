@@ -2,16 +2,16 @@
 
 
 #Hydraulic
-execute if score $cu_en_ranged ca.enabler matches 1.. as @a[scores={ca.hydraulic=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/hydraulic
+execute as @s[scores={ca.hydraulic=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/hydraulic
 
 #Do all ranged checks.
-execute if score $cu_en_ranged ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/apply_ranged_tags_trident
+execute run function cartographer_custom_enchantments:enchant_effects/apply_ranged_tags_trident
 
 #Do Loyalty After
-execute if score $cu_en_ranged ca.enabler matches 1.. run execute as @s[scores={ca.loyalty=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty
+execute run execute as @s[scores={ca.loyalty=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/loyalty
 
 #Do Wavedashing Throw
-execute if score $cu_en_ranged ca.enabler matches 1.. run execute as @s[scores={ca.wavedash=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/wavedash/throw
+execute run execute as @s[scores={ca.wavedash=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/wavedash/throw
 
 #Reset Fleetfoot
 attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
