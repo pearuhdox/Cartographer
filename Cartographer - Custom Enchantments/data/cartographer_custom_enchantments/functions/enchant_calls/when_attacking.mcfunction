@@ -55,7 +55,7 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.exe
 
 #If a projectile attack, we attempt to give loyalty charges back
 #If the player is recharging loyalty, give them 6 ticks of time back (3 seconds)
-execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}}] if score @s ca.loyalty_time matches 0.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund
+execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}}] if score @s ca.loyalty_time matches 0.. unless score @s ca.loyalty_refund_cooldown matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund
 
 #If NOT a projectile attack, cleanse the ranged tags on nearby mobs.
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}}] as @e[type=#bb:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/purge_ranged_tags

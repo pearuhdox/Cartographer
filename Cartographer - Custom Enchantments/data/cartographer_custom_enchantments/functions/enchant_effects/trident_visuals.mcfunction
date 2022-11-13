@@ -10,4 +10,9 @@ execute if entity @s[scores={ca.collapse=1..}] run particle minecraft:enchanted_
 
 execute if entity @s[nbt={inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/trident_ground_branch
 
+execute if entity @s[tag=is_ricocheting,nbt={DealtDamage:1b}] positioned ~ ~1.3 ~ run function cartographer_custom_enchantments:enchant_effects/ricochet/trident_position
+
+
 execute if entity @s[tag=loyalty_checked,tag=!custom_trident,tag=!current_loyalty_trident] run kill @s
+
+execute if score @s ca.ricochet_cooldown matches 1.. run function cartographer_custom_enchantments:enchant_effects/ricochet/scheduled

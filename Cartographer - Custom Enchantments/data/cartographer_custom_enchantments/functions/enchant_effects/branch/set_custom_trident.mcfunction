@@ -34,4 +34,6 @@ scoreboard players operation @s ca.fire_aspect += @p ca.off_fire_aspect
 scoreboard players operation @s ca.possession += @p ca.off_possession
 scoreboard players operation @s ca.executioner += @p ca.off_executioner
 
+execute if score @s ca.ricochet matches 1.. run tag @s add is_ricocheting
+
 tag @s add custom_trident

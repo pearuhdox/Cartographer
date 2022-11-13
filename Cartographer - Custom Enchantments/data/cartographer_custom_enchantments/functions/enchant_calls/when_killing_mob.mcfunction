@@ -17,7 +17,7 @@ execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.aquadynamic m
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.deal_mel_dmg matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
 
 #Loyalty kickbacks only if the player can recharge loyalty tridents
-execute unless score @s ca.deal_mel_dmg matches 1.. if score @s ca.loyalty_time matches 0.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund
+execute unless score @s ca.deal_mel_dmg matches 1.. if score @s ca.loyalty_time matches 0.. unless score @s ca.loyalty_refund_cooldown matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund
 
 #Wavedash triggers on the TRIDENT only if applicable - And only if not melee kill
 execute if score @s ca.wavedash_time matches 1.. unless score @s ca.deal_mel_dmg matches 1.. as @e[type=trident,tag=custom_trident,scores={ca.wavedash=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/wavedash/teleport_start_kill

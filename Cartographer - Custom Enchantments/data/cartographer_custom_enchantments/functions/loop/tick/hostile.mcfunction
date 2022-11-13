@@ -23,6 +23,9 @@ tag @s remove skip_cauterize
 #Remove 1 from Cauterize's previous burn time.
 execute if score @s ca.cau_prv_time matches 0.. run scoreboard players remove @s ca.cau_prv_time 1
 
+execute unless score @s ca.ricochet_cooldown matches 0.. run scoreboard players set @s ca.ricochet_cooldown 0
+execute if score @s ca.ricochet_cooldown matches 1.. run scoreboard players remove @s ca.ricochet_cooldown 1
+
 #Remove Deadeye Tag
 tag @s remove deadeye_marked
 

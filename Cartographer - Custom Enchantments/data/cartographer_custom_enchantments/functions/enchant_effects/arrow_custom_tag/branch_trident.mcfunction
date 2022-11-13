@@ -16,6 +16,8 @@ scoreboard players operation $fire_aspect ca.var = @s ca.fire_aspect
 scoreboard players operation $cauterize ca.var = @s ca.cauterize
 scoreboard players operation $collapse ca.var = @s ca.collapse
 
+scoreboard players operation $wavedash ca.var = @s ca.wavedash
+
 scoreboard players operation $loyalty ca.var = @s ca.loyalty
 
 #Get the Wavedash ID if Wavedash exists

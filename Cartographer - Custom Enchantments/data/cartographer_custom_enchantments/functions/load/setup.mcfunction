@@ -123,6 +123,7 @@ scoreboard objectives add ca.saved_flash dummy
 
 scoreboard objectives add ca.loyalty_time dummy
 scoreboard objectives add ca.loyalty_speed dummy
+scoreboard objectives add ca.loyalty_refund_cooldown dummy
 
 scoreboard objectives add ca.curse_mal dummy
 scoreboard objectives add ca.curse_regret dummy
@@ -154,6 +155,8 @@ scoreboard objectives add ca.brittle_hlth dummy
 scoreboard objectives add ca.recoil_time dummy
 scoreboard objectives add ca.recoil_count dummy
 scoreboard objectives add ca.recoil_mode dummy
+
+scoreboard objectives add ca.ricochet_cooldown dummy
 
 scoreboard objectives add ca.armor_count dummy
 

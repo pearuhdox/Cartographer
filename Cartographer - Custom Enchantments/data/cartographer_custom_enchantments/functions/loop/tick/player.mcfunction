@@ -177,3 +177,5 @@ execute store result score $current_return ca.loyalty run clear @s structure_voi
 execute if score $current_return ca.loyalty matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund
 
 tag @s remove ca.made_ranged_attack
+
+execute if score @s ca.loyalty_refund_cooldown matches 1.. run scoreboard players remove @s ca.loyalty_refund_cooldown 1
