@@ -34,6 +34,9 @@ scoreboard objectives add ca.size_max dummy
 scoreboard objectives add ca.size_min dummy
 scoreboard objectives add ca.size_cur dummy
 
+scoreboard objectives add ca.sweep_animation dummy
+scoreboard objectives add ca.sweep_side dummy
+
 scoreboard objectives add reflect_past dummy
 scoreboard objectives add reflect_check dummy
 scoreboard objectives add reflect_diff dummy

@@ -58,4 +58,7 @@ execute if entity @a[distance=..3.5] run execute unless entity @s[tag=ca.ignore_
 
 tag @a[distance=..3.5] remove ability_tagged
 
-data modify entity @s[type=!armor_stand] Motion[1] set value 0.4
+scoreboard players set @s co_send 3
+scoreboard players set @s co_y 4
+
+function motion:motion/push
