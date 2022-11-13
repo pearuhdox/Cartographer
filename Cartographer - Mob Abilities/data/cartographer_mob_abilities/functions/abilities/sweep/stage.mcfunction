@@ -4,11 +4,9 @@ particle minecraft:sweep_attack ^ ^0.75 ^1 0.25 0.1 0.25 0 3 normal
 particle minecraft:sweep_attack ^ ^0.75 ^2 0.25 0.1 0.25 0 3 normal
 particle minecraft:sweep_attack ^ ^0.75 ^3 0.25 0.1 0.25 0 3 normal
 
-execute positioned ^ ^0.5 ^1 as @a[distance=..1.15] at @s run function cartographer_mob_abilities:abilities/sweep/hit
-execute positioned ^ ^0.5 ^2 as @a[distance=..1.15] at @s run function cartographer_mob_abilities:abilities/sweep/hit
-execute positioned ^ ^0.5 ^3 as @a[distance=..1.15] at @s run function cartographer_mob_abilities:abilities/sweep/hit
-
-playsound minecraft:entity.player.attack.sweep hostile @a[distance=..12] ~ ~ ~ 0.5 1
+execute positioned ^ ^0.5 ^1 as @a[tag=!sweep_tagged,distance=..1.15] at @s run function cartographer_mob_abilities:abilities/sweep/hit
+execute positioned ^ ^0.5 ^2 as @a[tag=!sweep_tagged,distance=..1.15] at @s run function cartographer_mob_abilities:abilities/sweep/hit
+execute positioned ^ ^0.5 ^3 as @a[tag=!sweep_tagged,distance=..1.15] at @s run function cartographer_mob_abilities:abilities/sweep/hit
 
 execute if entity @a[tag=!sweep_tagged,tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..4] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 

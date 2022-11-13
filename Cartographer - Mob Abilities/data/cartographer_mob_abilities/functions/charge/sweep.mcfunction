@@ -8,8 +8,11 @@ execute if score @s ability_charge matches 1 run playsound minecraft:entity.iron
 
 execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
 
-execute if score @s ability_charge matches 1 run particle minecraft:crit ~ ~1 ~ 0.7 1 0.7 0.2 80 normal
-execute if score @s ability_charge matches 1 run particle minecraft:sweep_attack ^ ^0.75 ^1.25 0.25 0.1 0.25 0.2 10 normal
-execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:charge/sweep/warn
+execute if score @s ability_charge matches 1 run data modify entity @s NoAI set value 1b
+
+execute if score @s ability_charge matches 1 run tp @s ~ ~ ~ facing entity @p feet
+
+execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 positioned ~ ~0.75 ~ run function cartographer_mob_abilities:charge/sweep/place_lines
+execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 positioned ~ ~0.5 ~ run function cartographer_mob_abilities:charge/sweep/warn
 
 execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/sweep
