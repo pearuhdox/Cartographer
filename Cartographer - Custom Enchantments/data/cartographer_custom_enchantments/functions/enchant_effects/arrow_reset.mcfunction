@@ -1,3 +1,5 @@
+execute if score @s ca.explosive matches 1.. run function cartographer_custom_enchantments:enchant_effects/explosive
+
 scoreboard players set @s ca.bleed 0
 scoreboard players set @s ca.electrode 0
 scoreboard players set @s ca.expose 0
