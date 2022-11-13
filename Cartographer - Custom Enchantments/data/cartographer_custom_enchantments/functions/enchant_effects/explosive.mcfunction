@@ -36,6 +36,7 @@ scoreboard players operation $damage ca.explosive /= $2 ca.CONSTANT
 scoreboard players operation $damage ca.explosive *= $67 ca.CONSTANT
 scoreboard players operation $damage ca.explosive /= $100 ca.CONSTANT
 
+execute positioned ~ ~0.25 ~ run function cartographer_custom_enchantments:enchant_effects/explosive/particle_ring
 
 tag @s add ca.vol_center
 
