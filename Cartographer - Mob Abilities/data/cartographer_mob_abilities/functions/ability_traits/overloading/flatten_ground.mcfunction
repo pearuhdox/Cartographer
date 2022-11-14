@@ -1,0 +1,2 @@
+execute unless block ~ ~-1 ~ #cartographer_core:can_raycast run function cartographer_mob_abilities:ability_traits/overloading/create_overload
+execute if block ~ ~-1 ~ #cartographer_core:can_raycast positioned ~ ~-1 ~ run function cartographer_mob_abilities:ability_traits/overloading/create_overload
