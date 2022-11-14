@@ -1,0 +1,2 @@
+execute unless block ~ ~-1 ~ #cartographer_core:can_raycast run function cartographer_mob_abilities:abilities/storm/create_lightning
+execute if block ~ ~-1 ~ #cartographer_core:can_raycast positioned ~ ~-1 ~ run function cartographer_mob_abilities:abilities/storm/flatten_ground
