@@ -55,7 +55,7 @@ execute if entity @s[tag=ca.reflect_ranged] run function cartographer_mob_abilit
 execute if entity @s[scores={ca.aftershock=1..}] run function cartographer_mob_abilities:ability_traits/aftershock/windup
 
 #Run Carapaces
-execute as @s[tag=carapaced] at @s run function cartographer_mob_abilities:ability_traits/carapace/carapaced
+execute if score @s ca.carapace_stacks matches 1.. at @s run function cartographer_mob_abilities:ability_traits/carapace/carapaced
 
 #Run Creation
 execute as @s[tag=ca.creation,tag=!created] at @s run function cartographer_mob_abilities:ability_traits/creation/effect

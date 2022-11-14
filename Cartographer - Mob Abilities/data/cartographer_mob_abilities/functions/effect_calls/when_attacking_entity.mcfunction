@@ -11,4 +11,4 @@ execute if entity @s[tag=ca.size_shrink] at @s run function cartographer_mob_abi
 execute if entity @s[tag=ca.acrobatic_passive] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/passive/chance_hit
 
 
-execute if entity @s[tag=carapaced] at @s run function cartographer_mob_abilities:ability_traits/carapace/remove
+execute if score @s ca.carapace_stacks matches 1.. at @s run function cartographer_mob_abilities:ability_traits/carapace/remove

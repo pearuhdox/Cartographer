@@ -1,6 +1,10 @@
 execute if score $aug_aft ca.var matches 1.. run function cartographer_mob_abilities:ability_traits/aftershock/prime
-execute if score $aug_car ca.var matches 1.. run function cartographer_mob_abilities:ability_traits/carapace/effect
 execute if score $aug_clo ca.var matches 1.. run function cartographer_mob_abilities:ability_traits/cloaking/effect
+
+execute if score $aug_car ca.var matches 1 run function cartographer_mob_abilities:ability_traits/carapace/apply/1
+execute if score $aug_car ca.var matches 2 run function cartographer_mob_abilities:ability_traits/carapace/apply/2
+execute if score $aug_car ca.var matches 3 run function cartographer_mob_abilities:ability_traits/carapace/apply/3
+execute if score $aug_car ca.var matches 4.. run function cartographer_mob_abilities:ability_traits/carapace/apply/4
 
 
 #Runs at the mob position

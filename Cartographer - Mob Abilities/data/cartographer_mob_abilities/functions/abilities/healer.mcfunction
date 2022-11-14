@@ -24,7 +24,11 @@ scoreboard players set $heal_acr_kn ca.var 0
 scoreboard players set $heal_acr_kf ca.var 0
 scoreboard players set $heal_acr_ks ca.var 0
 
-execute if entity @s[tag=ca.carapace,tag=!ca.ignore_traits_active] run scoreboard players set $heal_car ca.var 1
+execute if entity @s[tag=ca.carapace+,tag=!ca.ignore_traits_active] run scoreboard players set $heal_car ca.var 1
+execute if entity @s[tag=ca.carapace++,tag=!ca.ignore_traits_active] run scoreboard players set $heal_car ca.var 2
+execute if entity @s[tag=ca.carapace+++,tag=!ca.ignore_traits_active] run scoreboard players set $heal_car ca.var 3
+execute if entity @s[tag=ca.carapace++++,tag=!ca.ignore_traits_active] run scoreboard players set $heal_car ca.var 4
+
 execute if entity @s[tag=ca.acrobatic,tag=!ca.ignore_traits_active] run scoreboard players set $heal_acr ca.var 1
 execute if entity @s[tag=ca.volatile,tag=!ca.ignore_traits_active] run scoreboard players set $heal_vol ca.var 1
 execute if entity @s[tag=ca.aftershock,tag=!ca.ignore_traits_active] run scoreboard players set $heal_aft ca.var 1

@@ -35,7 +35,11 @@ scoreboard players set $aug_acr_kf ca.var 0
 scoreboard players set $aug_acr_ks ca.var 0
 
 
-execute if entity @s[tag=ca.carapace,tag=!ca.ignore_traits_active] run scoreboard players set $aug_car ca.var 1
+execute if entity @s[tag=ca.carapace+,tag=!ca.ignore_traits_active] run scoreboard players set $aug_car ca.var 1
+execute if entity @s[tag=ca.carapace++,tag=!ca.ignore_traits_active] run scoreboard players set $aug_car ca.var 2
+execute if entity @s[tag=ca.carapace+++,tag=!ca.ignore_traits_active] run scoreboard players set $aug_car ca.var 3
+execute if entity @s[tag=ca.carapace++++,tag=!ca.ignore_traits_active] run scoreboard players set $aug_car ca.var 4
+
 execute if entity @s[tag=ca.volatile,tag=!ca.ignore_traits_active] run scoreboard players set $aug_vol ca.var 1
 execute if entity @s[tag=ca.aftershock,tag=!ca.ignore_traits_active] run scoreboard players set $aug_aft ca.var 1
 execute if entity @s[tag=ca.evocative,tag=!ca.ignore_traits_active] run scoreboard players set $aug_evo ca.var 1
