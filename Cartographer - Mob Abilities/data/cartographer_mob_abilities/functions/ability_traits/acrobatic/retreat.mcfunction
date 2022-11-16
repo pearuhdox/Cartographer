@@ -16,3 +16,5 @@ execute if entity @a[distance=..4] run scoreboard players set @s co_send -16
 function motion:motion/push
 
 tag @s add ca.has_retreated
+
+scoreboard players set @s ca.acrobatic_cooldown 3

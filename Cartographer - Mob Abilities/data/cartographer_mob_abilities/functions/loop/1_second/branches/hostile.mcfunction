@@ -7,6 +7,7 @@ execute unless entity @s[tag=avail_target] as @s[type=#bb:hostile,tag=ca.has_act
 
 #Run Acrobat Passive
 execute if entity @s[tag=ca.acrobatic_passive] unless score @s ca.acrobat_passive_cooldown matches 1.. run function cartographer_mob_abilities:ability_traits/acrobatic/passive/chance
+execute if entity @s[tag=ca.acrobatic] if score @s ca.acrobatic_cooldown matches 1.. run scoreboard players remove @s ca.acrobatic_cooldown 1
 
 #Reduce Cooldowns on all enemies with cooldowns.
 scoreboard players remove @s[tag=ca.has_active,scores={cooldown=1..}] cooldown 1

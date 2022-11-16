@@ -22,3 +22,5 @@ scoreboard players set @s co_send 3
 function motion:motion/push
 
 tag @s add ca.has_strafed
+
+scoreboard players set @s ca.acrobatic_cooldown 3
