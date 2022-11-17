@@ -1,5 +1,9 @@
 setblock 4206900 2 4206900 air replace
 
+
+#Chest Cache
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1936692059,-2066265281,-1789187408,-1837397849],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWM5NmJlNzg4NmViN2RmNzU1MjVhMzYzZTVmNTQ5NjI2YzIxMzg4ZjBmZGE5ODhhNmU4YmY0ODdhNTMifX19"}]}}}}}] run function cartographer_loot_additions:drops/do_drops/caches/chest_cache
+
 #Supply Caches
 execute if entity @s[type=item,nbt={Item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTNjZTc2NjAyZDNmZWM3YzAyNzNkYTYwMDA5MDA3YmU0MTQwYWM5ZmFjMDM0MTQ1MGMwNzU3ZTUzZDc1MTU3NyJ9fX0="}]},Id:[I;218269152,1739148954,-2122940369,1409776583]}}}}] run function cartographer_loot_additions:drops/do_drops/caches/supply/feathers
 execute if entity @s[type=item,nbt={Item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODIyYTQ4YTU3NTllZGRlZjllMjkxOGZjODU5OTZmODQ5MWNjOTI1NzhkNTRkY2Q2MmUyYjZkOTEzYmZiNDIxZSJ9fX0="}]},Id:[I;570072899,880430595,-1197170054,-300354481]}}}}] run function cartographer_loot_additions:drops/do_drops/caches/supply/gunpowder

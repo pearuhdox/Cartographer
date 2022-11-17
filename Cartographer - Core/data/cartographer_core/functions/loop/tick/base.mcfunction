@@ -14,6 +14,9 @@ function cartographer_repair_stations:loop/tick/base
 
 execute as @a at @s run function cartographer_core:loop/tick/player
 
+#Set Setup Mode to on if no acceptable value found
+execute unless score $setup_mode ca.gamerule matches 0.. run scoreboard players set $setup_mode ca.gamerule 1
+
 #Run all ticking entity effects.
 execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/branch_tick
 

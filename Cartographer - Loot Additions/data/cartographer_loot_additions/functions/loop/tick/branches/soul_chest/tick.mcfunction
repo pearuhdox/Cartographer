@@ -5,4 +5,6 @@ execute if entity @s[tag=!approached] if entity @a[distance=..16,gamemode=!spect
 
 
 #Remove the armor stand when chest is gone.
-execute unless block ~ ~ ~ chest run function cartographer_loot_additions:loop/tick/branches/soul_chest/destroy
+execute if entity @s[tag=!approached] unless block ~ ~ ~ chest run kill @s
+
+execute if entity @s[tag=approached] unless block ~ ~ ~ chest run function cartographer_loot_additions:loop/tick/branches/soul_chest/destroy

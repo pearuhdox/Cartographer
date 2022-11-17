@@ -14,5 +14,3 @@ data modify entity @s HandItems[0] set from block 4206900 10 4206900 Items[0]
 kill @e[type=chicken,tag=chicken_loot_random]
 
 tag @s remove random_main
-
-say randomizing loot
