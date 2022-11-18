@@ -1,7 +1,7 @@
 setblock ~ ~1 ~ reinforced_deepslate replace
 
 
-summon item_frame ~ ~2 ~ {Glowing:1b,Silent:1b,CustomNameVisible:1b,Facing:1b,Tags:["ca.belongs_la","ca.la.tracked","loot_altar_holder","loot_holder"],CustomName:'{"text":"Loot Placeholder","italic":false}',Item:{}}
+summon glow_item_frame ~ ~2 ~ {Glowing:1b,Silent:1b,CustomNameVisible:1b,Facing:1b,Tags:["ca.belongs_la","ca.la.tracked","loot_altar_holder","loot_holder"],CustomName:'{"text":"Loot Placeholder","italic":false}',Item:{}}
 
 particle minecraft:end_rod ~ ~1.25 ~ 0 0 0 0.05 10 normal
 

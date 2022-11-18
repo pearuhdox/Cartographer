@@ -7,6 +7,8 @@ playsound minecraft:entity.shulker_bullet.hit block @a[distance=..16] ~ ~ ~ 1 1.
 
 particle minecraft:cloud ~ ~ ~ 0 0 0 0.1 3 force
 
+particle minecraft:poof ~ ~-1 ~ 0.35 0 0.35 0.0 15 normal
+
 particle minecraft:block minecraft:sculk ~ ~ ~ 0.15 0.35 0.15 0.1 50 normal
 particle minecraft:block minecraft:sculk ~ ~-0.6 ~ 0.35 0.15 0.35 0.1 50 normal
 
