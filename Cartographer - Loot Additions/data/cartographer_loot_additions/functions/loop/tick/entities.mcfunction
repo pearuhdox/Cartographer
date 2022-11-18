@@ -8,7 +8,6 @@ execute as @s[type=armor_stand,tag=multichoice_core] run function cartographer_l
 execute as @s[type=item_frame,tag=loot_multichoice_side] run function cartographer_loot_additions:loop/tick/branches/multichoice_side
 
 #Functions for altar structures
-execute as @s[type=armor_stand,tag=altar_core] at @s run function cartographer_loot_additions:loop/tick/branches/altar/cosmetic
 execute as @s[type=item_frame,tag=loot_altar_holder] run function cartographer_loot_additions:loop/tick/branches/altar
 
 #Functions for soul chests
