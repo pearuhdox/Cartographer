@@ -18,7 +18,7 @@ execute if entity @s[tag=ca.needle,tag=tokened,scores={cooldown=0}] if entity @a
 execute if entity @s[tag=ca.quickdraw,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..11] run function cartographer_mob_abilities:charge/quickdraw
 
 #Rift
-execute if entity @s[tag=ca.rift,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:charge/rift
+execute unless block ~ ~-1 ~ #bb:raycast if entity @s[tag=ca.rift,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:charge/rift
 
 #Sweep
 execute if entity @s[tag=ca.sweep,tag=tokened,scores={cooldown=0}] unless score @s ca.sweep_animation matches 1.. if entity @a[gamemode=!spectator,gamemode=!creative,distance=..10] run function cartographer_mob_abilities:charge/sweep

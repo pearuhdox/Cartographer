@@ -11,3 +11,7 @@ execute if entity @s[tag=ca.webbing] run data modify storage cartographer_mob_ab
 execute if entity @s[tag=ca.cursing] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.cursing"
 
 execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:abilities/rift/alchemist_save
+
+
+execute if entity @s[tag=ca.inverse] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.inverse"
+execute if entity @s[tag=ca.chase] run data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.chase"

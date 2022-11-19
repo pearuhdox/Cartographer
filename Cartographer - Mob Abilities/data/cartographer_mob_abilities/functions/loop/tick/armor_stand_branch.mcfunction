@@ -26,6 +26,9 @@ execute if entity @s[tag=pyro_effect] at @s positioned ~ ~0.7 ~ run function car
 #Run Needle Projectiles
 execute if entity @s[tag=needle_projectile] run function cartographer_mob_abilities:charge/needle/projectile/travel
 
+#Run Rift "Projectiles"
+execute if entity @s[type=armor_stand,tag=ca.rift_projectile] as @s at @s run function cartographer_mob_abilities:abilities/rift/projectile/mod_check
+
 #Run Grenadier Projectiles
 execute if entity @s[tag=grenadier_projectile] run function cartographer_mob_abilities:charge/grenadier/projectile/tick
 

@@ -1,5 +1,5 @@
 #Runs the needle projectile passive
-summon armor_stand ~ ~1.2 ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Small:1b,Pose:{LeftArm:[320f,90f,0f],RightArm:[320f,270f,0f]},Tags:["needle_projectile","passive_needle","new_proj_replace"]}
+summon armor_stand ~ ~-0.5 ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Small:1b,Pose:{LeftArm:[320f,90f,0f],RightArm:[320f,270f,0f]},Tags:["needle_projectile","passive_needle","new_proj_replace"]}
 
 function cartographer_mob_abilities:passive/projectile/helper/reset_get_data
 
