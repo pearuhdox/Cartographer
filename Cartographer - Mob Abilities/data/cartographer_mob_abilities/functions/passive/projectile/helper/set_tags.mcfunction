@@ -1,6 +1,6 @@
 scoreboard players operation @s ca.ability_dmg = $projectile_damage ca.ability_dmg
 
-execute if entity @s[tag=grenadier_projectile] run data modify storage cartographer_mob_abilities:projectile_tag_save Tags append value "grenadier_projectile"
+execute if entity @s[tag=grenade_projectile] run data modify storage cartographer_mob_abilities:projectile_tag_save Tags append value "grenade_projectile"
 execute if entity @s[tag=passive_grenade] run data modify storage cartographer_mob_abilities:projectile_tag_save Tags append value "passive_grenade"
 
 execute if entity @s[tag=trap_projectile] run data modify storage cartographer_mob_abilities:projectile_tag_save Tags append value "trap_projectile"

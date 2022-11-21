@@ -1,8 +1,5 @@
 scoreboard players add @s ca.lifetime 1
 
-execute if score @s ca.lifetime matches 1 run playsound minecraft:entity.firework_rocket.launch hostile @a[distance=..20] ~ ~ ~ 2 1.6
-execute if score @s ca.lifetime matches 1 run playsound minecraft:enchant.thorns.hit hostile @a[distance=..20] ~ ~ ~ 1.5 1.5
-
 execute if score @s ca.lifetime matches 0.. run tp @s ^ ^ ^1.25
 
 function cartographer_mob_abilities:ability_traits/trait_warnings/projectile

@@ -89,6 +89,8 @@ scoreboard objectives add ca.ambi_cool dummy
 
 scoreboard objectives add ca.legion_id dummy
 
+scoreboard objectives add ca.arm_time dummy
+
 #Setup EPF Checkers
 scoreboard objectives add ca.ma_epf_proj dummy
 scoreboard objectives add ca.ma_epf_blast dummy
@@ -131,6 +133,9 @@ scoreboard objectives add ca.rift_cooldown dummy
 scoreboard objectives add ca.aim dummy
 
 scoreboard objectives add ca.summon_id dummy
+
+scoreboard objectives add ca.proj_registry dummy
+scoreboard objectives add ca.xyz_convert dummy
 
 #Create the UUID armor stands.
 kill 002f80c0-0001-f879-0000-009c001e7bfc

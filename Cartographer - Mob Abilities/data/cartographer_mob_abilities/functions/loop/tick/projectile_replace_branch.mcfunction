@@ -1,5 +1,5 @@
 #Run Projectile Replace Passives
-execute as @s[tag=ca.shoot_fire_charge] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
+execute as @s[tag=ca.shoot_small_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 execute as @s[tag=ca.shoot_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 execute as @s[tag=ca.shoot_wither_skull] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 execute as @s[tag=ca.shoot_dragon_fireball] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main

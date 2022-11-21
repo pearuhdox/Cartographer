@@ -1,13 +1,11 @@
-#Runs the potion projectile passive
-summon potion ~ ~1 ~ {Motion:[0.0,0.0,0.0],Tags:["new_proj_replace","passive_potion","passive_replaced_projectile"],Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:mundane",CustomPotionColor:16777215,Enchantments:[{}]}}}
-
-function cartographer_mob_abilities:passive/projectile/helper/reset_get_data
-
-execute if entity @s[type=minecraft:shulker_bullet] run function cartographer_mob_abilities:passive/projectile/helper/shulker_bullet_swap/get_motion_value_potion
-
-execute as @e[tag=passive_potion,tag=new_proj_replace,limit=1,sort=nearest] at @s run function cartographer_mob_abilities:passive/projectile/helper/apply_data_motion
-
 function cartographer_mob_abilities:passive/projectile/helper/remove_other_sounds
-playsound minecraft:entity.skeleton.shoot hostile @a[distance=..20] ~ ~ ~ 1.5 1.2 1
+
+data modify storage cartographer_mob_abilities:projectiles DataTemplate.Owner set from entity @s Owner
+
+execute unless data entity @s power[0] run function cartographer_mob_abilities:projectiles/target/along_motion
+execute if data entity @s power[0] run function cartographer_mob_abilities:projectiles/target/along_power
+
+function cartographer_mob_abilities:projectiles/create/potion
+
 
 kill @s

@@ -11,9 +11,6 @@ execute if entity @s[tag=ca.charge,tag=tokened,scores={cooldown=0}] if entity @a
 #Healer
 execute if entity @s[tag=ca.healer,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:charge/healer
 
-#Needle
-execute if entity @s[tag=ca.needle,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:charge/needle
-
 #Quickdraw
 execute if entity @s[tag=ca.quickdraw,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..11] run function cartographer_mob_abilities:charge/quickdraw
 

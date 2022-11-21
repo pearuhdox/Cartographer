@@ -13,6 +13,12 @@ execute if entity @s[tag=ca.laser,tag=tokened,scores={cooldown=0}] if entity @a[
 #Laser Animation Cancel
 execute if entity @s[tag=ca.laser,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..32] run function cartographer_mob_abilities:helper/token/cancel_ability
 
+#Run Needle Channeling Here
+execute if entity @s[tag=ca.needle,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:charge/needle
+
+#Laser Animation Cancel
+execute if entity @s[tag=ca.needle,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:helper/token/cancel_ability
+
 #Fix Tags
 execute if entity @s[tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix
 

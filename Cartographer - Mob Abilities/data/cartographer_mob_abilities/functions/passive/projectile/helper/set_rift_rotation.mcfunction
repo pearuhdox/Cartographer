@@ -30,6 +30,7 @@ execute rotated as @s run tp @s ~ ~ ~ ~ 0
 
 tp 0000001f-00de-140d-0000-0000000276ef 4206900 50 4206900
 
+scoreboard players set @s ca.raycast 120
 function cartographer_mob_abilities:passive/projectile/helper/lower_rift_to_ground
 
 scoreboard players operation @s ca.ability_dmg = $projectile_damage ca.ability_dmg

@@ -38,3 +38,6 @@ execute if score $parting_gift_active ca.var matches 1.. run scoreboard players 
 
 #Reduce the webbing cooldown timer by 1
 execute if score $block_webbing_time ca.var matches 1.. run scoreboard players remove $block_webbing_time ca.var 1
+
+#Run All UUID Custom Projectile Cleanup
+function cartographer_mob_abilities:projectiles/cleanup/master

@@ -30,7 +30,7 @@ execute if entity @s[tag=needle_projectile] run function cartographer_mob_abilit
 execute if entity @s[type=armor_stand,tag=ca.rift_projectile] as @s at @s run function cartographer_mob_abilities:abilities/rift/projectile/mod_check
 
 #Run Grenadier Projectiles
-execute if entity @s[tag=grenadier_projectile] run function cartographer_mob_abilities:charge/grenadier/projectile/tick
+execute if entity @s[tag=grenade_projectile] run function cartographer_mob_abilities:charge/grenadier/projectile/tick
 
 #Run Parting Gift
 execute if score $parting_gift_active ca.var matches 1.. if entity @s[tag=ca.parting_gift_drop] run function cartographer_mob_abilities:passive/parting_gift/tick
