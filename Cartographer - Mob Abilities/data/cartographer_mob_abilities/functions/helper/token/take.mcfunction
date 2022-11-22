@@ -11,8 +11,9 @@ execute if entity @s[tag=ca.smash,tag=!ca.heavy_priority] run function cartograp
 execute if entity @s[tag=ca.sweep,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.trapper,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.quickdraw,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
-execute if entity @s[tag=ca.needle,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.storm,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
+execute if entity @s[tag=ca.sidearm,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
+execute if entity @s[tag=ca.sniper_shot,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 
 #Heavy Attacks with no Light Attack Priority
 execute if entity @s[tag=ca.augmenter,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
@@ -21,10 +22,9 @@ execute if entity @s[tag=ca.duplicator,tag=!ca.light_priority] run function cart
 execute if entity @s[tag=ca.healer,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.hookshot,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.laser,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
-execute if entity @s[tag=ca.magic_missile,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.rift,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
-execute if entity @s[tag=ca.grenadier,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.haunt,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
+execute if entity @s[tag=ca.barrage,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 
 #Mobs with Heavy Attack Priority
 execute if entity @s[tag=ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy

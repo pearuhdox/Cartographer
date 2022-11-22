@@ -6,4 +6,4 @@ execute if entity @s[tag=ca.ability_dmg+++] run summon creeper ~ ~ ~ {Tags:["spa
 
 execute if entity @s[tag=ca.ability_dmg-] run summon creeper ~ ~ ~ {Tags:["spawn_checked"],NoGravity:1b,Silent:1b,ExplosionRadius:1b,Fuse:1,ignited:1b,CustomName:'{"text":"weak volatile magic"}'}
 execute if entity @s[tag=ca.ability_dmg--] run summon creeper ~ ~ ~ {Tags:["spawn_checked"],NoGravity:1b,Silent:1b,ExplosionRadius:1b,Fuse:1,ignited:1b,CustomName:'{"text":"weak volatile magic"}'}
-execute if entity @s[tag=ca.ability_dmg--] run summon creeper ~ ~ ~ {Tags:["spawn_checked"],NoGravity:1b,Silent:1b,ExplosionRadius:1b,Fuse:1,ignited:1b,CustomName:'{"text":"weak volatile magic"}'}
+execute if entity @s[tag=ca.ability_dmg---] run summon creeper ~ ~ ~ {Tags:["spawn_checked"],NoGravity:1b,Silent:1b,ExplosionRadius:1b,Fuse:1,ignited:1b,CustomName:'{"text":"weak volatile magic"}'}

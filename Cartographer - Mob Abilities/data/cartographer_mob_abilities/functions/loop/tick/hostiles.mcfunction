@@ -46,7 +46,7 @@ execute if score @s[tag=ca.acrobatic_kite_elytra] ca.elytra_deploy_time matches 
 execute if score @s ca.elytra_deploy_time matches 1.. run scoreboard players add @s ca.elytra_deploy_time 1
 
 #Run Trap Traits
-execute if entity @s[type=area_effect_cloud,tag=trap_deployed] at @s run function cartographer_mob_abilities:abilities/trapper/run_traits
+execute if entity @s[type=area_effect_cloud,tag=trap_deployed] at @s run function cartographer_mob_abilities:projectiles/behavior/trap/run_traits
 
 #Run Reflection per Tick
 execute if entity @s[tag=ca.reflect_melee] run function cartographer_mob_abilities:loop/tick/reflect/pre_run

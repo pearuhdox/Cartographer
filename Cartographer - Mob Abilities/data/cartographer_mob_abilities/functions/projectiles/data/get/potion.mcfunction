@@ -1,0 +1,2 @@
+data modify storage cartographer_mob_abilities:projectiles DataTemplate.Offhand set value {}
+data modify storage cartographer_mob_abilities:projectiles DataTemplate.Offhand set from entity @s HandItems[1]

@@ -9,7 +9,3 @@ execute as @s[type=#bb:hostile] at @s run function cartographer_mob_abilities:lo
 
 #Run Projectile Wither Skull/Dragon Fireball Fix This is Dumb
 execute as @s[tag=passive_replaced_projectile,tag=!fixed_custom_projectile] at @s run function cartographer_mob_abilities:loop/tick/fix_projectile_branch
-
-#Run Rift Spot Detonation
-execute if entity @s[type=area_effect_cloud,tag=rift_spot] if score @s ca.lifetime matches 1 run function cartographer_mob_abilities:abilities/rift/detonate
-scoreboard players remove @s[type=area_effect_cloud,tag=rift_spot] ca.lifetime 1

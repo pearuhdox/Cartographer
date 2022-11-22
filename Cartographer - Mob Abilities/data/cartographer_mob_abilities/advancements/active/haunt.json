@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/active/haunt"
     },
-    "parent": "cartographer_mob_abilities:active/grenadier"
+    "parent": "cartographer_mob_abilities:active/duplicator"
 }

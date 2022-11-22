@@ -26,7 +26,7 @@ execute if entity @s[tag=ca.webbing] run data modify entity @s ArmorItems[3] set
 execute if entity @s[tag=ca.cursing] run item replace entity @s armor.head with minecraft:player_head{display:{Name:'{"text":"Wither Melon"}'},SkullOwner:{Id:[I;-621658704,-950974674,-1647852493,-1935243219],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTNmZDljNjMwNjE3MzhkYjJkODNkZDE4MGI4YjUwZjdlOWYyMmUzZTc4NGM0Njc2NzgyMDIwYzU0YzA3ZTY5MiJ9fX0="}]}}} 1
 
 
-execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:charge/grenadier/projectile/alchemist_aim
+execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:projectiles/behavior/grenade/alchemist_aim
 
 
 #Change the grenade visual as well if necessary

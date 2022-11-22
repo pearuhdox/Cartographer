@@ -183,7 +183,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"ca.magic_missile\"]}"
+                    "nbt": "{Tags:[\"ca.sniper_shot\"]}"
                   }
                 },
                 {

@@ -58,6 +58,7 @@ execute if entity @s[tag=ca.zephyrous,tag=!ca.ignore_traits_active] run scoreboa
 
 execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_dynamic_after] run scoreboard players set $com_acr_dy ca.var 1
 execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_strafe_after] run scoreboard players set $com_acr_st ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_strafe_back_after] run scoreboard players set $com_acr_bk_st ca.var 1
 execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_gap_close_after] run scoreboard players set $com_acr_gc ca.var 1
 execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_retreat_after] run scoreboard players set $com_acr_re ca.var 1
 execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_after] run scoreboard players set $com_acr_kn ca.var 1

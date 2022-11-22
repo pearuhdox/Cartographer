@@ -1,5 +1,5 @@
 execute as @s[tag=ca.parting_gift_cloud] at @s run function cartographer_mob_abilities:passive/parting_gift/cloud/tick
-execute as @s[tag=ca.trapper_cloud] at @s run function cartographer_mob_abilities:abilities/trapper/cloud/tick
+execute as @s[tag=ca.trapper_cloud] at @s run function cartographer_mob_abilities:projectiles/behavior/trap/cloud/tick
 execute as @s[tag=ca.webbing_cloud] at @s run function cartographer_mob_abilities:ability_traits/webbing/webbing_tick
 execute as @s[tag=ca.overloading_lightning_cloud] at @s run function cartographer_mob_abilities:ability_traits/overloading/cloud_tick
 execute as @s[tag=ca.storm_lightning_cloud] at @s run function cartographer_mob_abilities:abilities/storm/cloud_tick

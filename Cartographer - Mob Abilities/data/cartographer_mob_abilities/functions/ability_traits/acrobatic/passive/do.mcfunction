@@ -1,4 +1,5 @@
 execute if entity @s[tag=ca.acrobatic_strafe_passive] run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
+execute if entity @s[tag=ca.acrobatic_strafe_back_passive] run function cartographer_mob_abilities:ability_traits/acrobatic/strafe_back
 execute if entity @s[tag=ca.acrobatic_retreat_passive] run function cartographer_mob_abilities:ability_traits/acrobatic/retreat
 execute if entity @s[tag=ca.acrobatic_gap_close_passive] run function cartographer_mob_abilities:ability_traits/acrobatic/gap_close
 execute if entity @s[tag=ca.acrobatic_kite_passive] run function cartographer_mob_abilities:ability_traits/acrobatic/kite

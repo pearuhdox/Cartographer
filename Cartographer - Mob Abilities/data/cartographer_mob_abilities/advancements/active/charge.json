@@ -29,5 +29,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/active/charge"
     },
-    "parent": "cartographer_mob_abilities:active/augmenter"
+    "parent": "cartographer_mob_abilities:active/barrage"
 }

@@ -13,4 +13,4 @@ execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
 execute if score @s ability_charge matches 1 run particle minecraft:crit ~ ~1 ~ 0.75 0.75 0.75 0.3 50 normal @a
 execute if score @s ability_charge matches 1 run particle minecraft:sneeze ~ ~1 ~ 0.5 0.5 0.5 0 5 normal @a
 
-execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/trapper/cast
+execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:projectiles/behavior/trap/cast

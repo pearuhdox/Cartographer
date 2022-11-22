@@ -41,6 +41,7 @@ execute if entity @s[tag=ca.volatile] at @s run function cartographer_mob_abilit
 
 execute if entity @s[tag=ca.acrobatic_dynamic] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
 execute if entity @s[tag=ca.acrobatic_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
+execute if entity @s[tag=ca.acrobatic_strafe_back_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe_back
 execute if entity @s[tag=ca.acrobatic_gap_close_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/gap_close
 execute if entity @s[tag=ca.acrobatic_retreat_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/retreat
 execute if entity @s[tag=ca.acrobatic_kite_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite

@@ -2,7 +2,7 @@ tag @s add co_rotation_lock
 
 tp @s ~ ~ ~ facing entity 0000001f-00de-140d-0000-0000000276ef feet
 
-scoreboard players add @s co_send 16
+scoreboard players add @s co_send 13
 scoreboard players remove @s co_y 3
 execute unless entity @a[distance=..5] run scoreboard players add @s co_y 1
 execute unless entity @a[distance=..8] run scoreboard players add @s co_y 1

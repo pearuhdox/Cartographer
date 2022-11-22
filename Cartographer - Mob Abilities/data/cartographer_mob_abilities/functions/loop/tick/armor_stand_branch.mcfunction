@@ -1,8 +1,8 @@
-#Magic Missile Projectile
-execute as @s[tag=magic_missile_projectile] at @s run function cartographer_mob_abilities:abilities/magic_missile/projectile
+#Sniper Shot Projectile
+execute as @s[tag=magic_missile_projectile] at @s run function cartographer_mob_abilities:projectiles/behavior/magic_missile/projectile
 
 #Trap Projectile
-execute as @s[tag=trap_projectile] at @s run function cartographer_mob_abilities:abilities/trapper/projectile
+execute as @s[tag=trap_projectile] at @s run function cartographer_mob_abilities:projectiles/behavior/trap/projectile
 
 #Hook Projectile
 execute as @s[tag=hook_projectile] at @s run function cartographer_mob_abilities:abilities/hookshot/projectile
@@ -24,13 +24,13 @@ execute if entity @s[tag=corpse_crawler_egg,tag=pushed] run function cartographe
 execute if entity @s[tag=pyro_effect] at @s positioned ~ ~0.7 ~ run function cartographer_mob_abilities:passive/pyromania_effect
 
 #Run Needle Projectiles
-execute if entity @s[tag=needle_projectile] run function cartographer_mob_abilities:charge/needle/projectile/travel
+execute if entity @s[tag=needle_projectile] run function cartographer_mob_abilities:projectiles/behavior/needle/travel
 
 #Run Rift "Projectiles"
-execute if entity @s[type=armor_stand,tag=ca.rift_projectile] as @s at @s run function cartographer_mob_abilities:abilities/rift/projectile/mod_check
+execute if entity @s[type=armor_stand,tag=ca.rift_projectile] as @s at @s run function cartographer_mob_abilities:projectiles/behavior/rift/mod_check
 
 #Run Grenadier Projectiles
-execute if entity @s[tag=grenade_projectile] run function cartographer_mob_abilities:charge/grenadier/projectile/tick
+execute if entity @s[tag=grenade_projectile] run function cartographer_mob_abilities:projectiles/behavior/grenade/tick
 
 #Run Parting Gift
 execute if score $parting_gift_active ca.var matches 1.. if entity @s[tag=ca.parting_gift_drop] run function cartographer_mob_abilities:passive/parting_gift/tick

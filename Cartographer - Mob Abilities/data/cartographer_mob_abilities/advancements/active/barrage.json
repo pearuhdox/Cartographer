@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "found": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"ca.barrage\"]}"
+                }
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Barrage                 ",
+            "color": "white"
+        },
+        "description": {
+            "color": "white",
+            "text": "The enemy rapidly shoots projectiles at the nearest player."
+        },
+        "icon": {
+            "item": "minecraft:bow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_mob_abilities:descriptions/active/barrage"
+    },
+    "parent": "cartographer_mob_abilities:active/augmenter"
+}

@@ -11,7 +11,7 @@ execute if entity @s[tag=ca.carapace++++] run function cartographer_mob_abilitie
 execute if entity @s[tag=ca.legionary] at @s run function cartographer_mob_abilities:ability_traits/legionary/master
 execute if entity @s[tag=ca.warping] at @s run function cartographer_mob_abilities:ability_traits/warping/effect
 execute if entity @s[tag=ca.evocative] at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
-execute if entity @s[tag=ca.volatile] unless entity @s[tag=ca.storm] unless entity @s[tag=ca.orbit] unless entity @s[tag=ca.magic_missile] unless entity @s[tag=ca.trapper] unless entity @s[tag=ca.grenadier] unless entity @s[tag=ca.needle] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
+execute if entity @s[tag=ca.volatile] unless entity @s[tag=ca.storm] unless entity @s[tag=ca.orbit] unless entity @s[tag=ca.sniper_shot] unless entity @s[tag=ca.trapper] unless entity @s[tag=ca.sidearm] unless entity @s[tag=ca.barrage] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
 execute if entity @s[tag=ca.brutal_amplify] run function cartographer_mob_abilities:ability_traits/amplify/brutal
 execute if entity @s[tag=ca.relentless_amplify] run function cartographer_mob_abilities:ability_traits/amplify/relentless
@@ -21,6 +21,7 @@ execute if entity @s[tag=ca.sacrificial_amplify] run function cartographer_mob_a
 
 execute if entity @s[tag=ca.acrobatic_dynamic] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
 execute if entity @s[tag=ca.acrobatic_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
+execute if entity @s[tag=ca.acrobatic_strafe_back_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe_back
 execute if entity @s[tag=ca.acrobatic_gap_close_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/gap_close
 execute if entity @s[tag=ca.acrobatic_retreat_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/retreat
 execute if entity @s[tag=ca.acrobatic_kite_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite
