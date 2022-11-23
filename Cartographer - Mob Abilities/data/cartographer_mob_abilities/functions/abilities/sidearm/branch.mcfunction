@@ -11,18 +11,18 @@ execute if entity @s[tag=ca.shoot_trident] as 0000001f-00de-140d-0000-0000000276
 
 execute if entity @s[tag=ca.shoot_trap] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~3 ~
 
-execute if entity @s[tag=ca.shoot_grenade] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
+execute if entity @s[tag=ca.shoot_grenade] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~3 ~
 
-execute if entity @s[tag=ca.shoot_shulker_bullet] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~4 ~
+execute if entity @s[tag=ca.shoot_shulker_bullet] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.25 ~
 
-execute if entity @s[tag=ca.shoot_magic_missile] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~9 ~
+execute if entity @s[tag=ca.shoot_magic_missile] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
 
 execute if entity @s[tag=ca.shoot_needle] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
 
-execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_wither_skull] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.5 ~
-execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_small_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.5 ~
-execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
-execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_dragon_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_wither_skull] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.75 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_small_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.75 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.2 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_dragon_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.2 ~
 
 particle minecraft:poof ~ ~ ~ 0 0 0 0.04 1 normal
 
@@ -43,7 +43,7 @@ execute if entity @s[tag=ca.shoot_grenade] run scoreboard players set $inaccurac
 execute if entity @s[tag=ca.shoot_grenade] run scoreboard players set $inaccuracy_pitch_min ca.xyz_convert -3
 execute if entity @s[tag=ca.shoot_grenade] run scoreboard players set $inaccuracy_pitch_max ca.xyz_convert 3
 
-execute unless entity @s[tag=ca.shoot_grenade] run scoreboard players set $reduced_power ca.xyz_convert 4
+execute unless entity @s[tag=ca.shoot_trap] unless entity @s[tag=ca.shoot_grenade] run scoreboard players set $reduced_power ca.xyz_convert 4
 
 #Grab Starting Attack Damage Value
 execute store result score $damage ca.ability_dmg run attribute @s minecraft:generic.attack_damage get

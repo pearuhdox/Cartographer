@@ -15,14 +15,14 @@ playsound minecraft:entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 2 1
 scoreboard players set $explosion ca.dmg_type 1
 scoreboard players set $projectile ca.dmg_type 1
 
-scoreboard players operation @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] cdl.damage_queue = @s ca.ability_dmg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310212
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s run tag @s remove no_cdl_msg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s run function cd:lib/player/damage/normal
+scoreboard players operation @a[gamemode=!spectator,gamemode=!creative,distance=..3.5,sort=nearest,limit=1] cdl.damage_queue = @s ca.ability_dmg
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3.5,sort=nearest,limit=1] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310212
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3.5,sort=nearest,limit=1] at @s run tag @s remove no_cdl_msg
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3.5,sort=nearest,limit=1] at @s run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3.5,sort=nearest,limit=1] at @s run function cd:lib/player/damage/normal
 
 #Trait Effects
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3,sort=nearest,limit=1] at @s run tag @s add ability_tagged
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3.5,sort=nearest,limit=1] at @s run tag @s add ability_tagged
 execute if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:projectiles/behavior/grenade/call_traits
 
 kill @s

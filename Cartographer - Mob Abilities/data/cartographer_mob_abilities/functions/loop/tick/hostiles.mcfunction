@@ -18,7 +18,6 @@ execute if entity @s[tag=ca.sweep] if score @s ability_charge matches 1.. run fu
 
 execute if score @s ca.sweep_animation matches 1.. run function cartographer_mob_abilities:abilities/sweep/animation
 
-
 #Run Movement Disable and Melee Damage Disable
 execute if entity @s[scores={mob_move_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/move
 execute if entity @s[scores={mob_atk_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/attack
@@ -108,3 +107,6 @@ execute if entity @s[tag=ca.vfx_aura] run function cartographer_mob_abilities:au
 
 #Run Sonic Charge Attacks
 execute if score @s ca.sc_time matches 1.. run function cartographer_mob_abilities:passive/projectile/sonic_charge/tick
+
+#Setup Orbit Timer
+execute unless score @s ca.orbit_timer matches 0.. run scoreboard players set @s ca.orbit_timer 0
