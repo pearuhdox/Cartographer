@@ -33,9 +33,9 @@ execute if score @s ability_charge matches 18 run playsound minecraft:item.cross
 execute if score @s ability_charge matches 19 run playsound minecraft:item.crossbow.loading_end hostile @a[distance=..20] ~ ~ ~ 1.5 1.4
 execute if score @s ability_charge matches 20 run playsound minecraft:item.crossbow.loading_end hostile @a[distance=..20] ~ ~ ~ 1.5 1.45
 
-execute if score @s ability_charge matches 1..40 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..5 run effect give @s glowing 1 0 true
 
-execute if score @s ability_charge matches 1 run tp @s ~ ~ ~ facing entity @p feet
+execute if score @s ability_charge matches 1..5 run tp @s ~ ~ ~ facing entity @p feet
 
 execute if score @s ability_charge matches 1 run scoreboard players set @s ca.mob_move_mode 2
 execute if score @s ability_charge matches 1 run scoreboard players set @s ca.mob_move_time 21

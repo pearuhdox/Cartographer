@@ -94,6 +94,8 @@ scoreboard objectives add ca.arm_time dummy
 scoreboard objectives add ca.mob_move_time dummy
 scoreboard objectives add ca.mob_move_mode dummy
 
+scoreboard objectives add ca.sidearm_windup dummy
+
 #Setup EPF Checkers
 scoreboard objectives add ca.ma_epf_proj dummy
 scoreboard objectives add ca.ma_epf_blast dummy

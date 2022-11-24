@@ -19,6 +19,10 @@ execute if entity @s[tag=ca.devious_amplify] run function cartographer_mob_abili
 execute if entity @s[tag=ca.sacrificial_amplify] run function cartographer_mob_abilities:ability_traits/amplify/sacrificial
 
 
+#Sidearm After
+execute if entity @s[tag=ca.sidearm_after] at @s run function cartographer_mob_abilities:passive/sidearm/channel
+
+#Acrobatic Traits
 execute if entity @s[tag=ca.acrobatic_dynamic] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
 execute if entity @s[tag=ca.acrobatic_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
 execute if entity @s[tag=ca.acrobatic_strafe_back_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe_back

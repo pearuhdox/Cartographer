@@ -40,6 +40,8 @@ execute unless score @s ca.acrobatic_cooldown matches 1.. if entity @s[tag=ca.vo
 #Run Volley Canceling Here
 execute if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:helper/token/cancel_ability
 
+#Run Sidearm after ability here
+execute if score @s[tag=ca.sidearm_after] ca.sidearm_windup matches 1.. run function cartographer_mob_abilities:passive/sidearm/channel
 
 #Fix Tags
 execute if entity @s[tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix

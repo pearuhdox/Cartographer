@@ -1,13 +1,33 @@
 {
     "criteria": {
-        "found": {
+        "normal": {
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
-                "entity": {
+              "entity": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
                     "nbt": "{Tags:[\"ca.sidearm\"]}"
+                  }
                 }
+              ]
             }
-        }
+          },
+          "after": {
+            "trigger": "minecraft:player_killed_entity",
+            "conditions": {
+              "entity": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "nbt": "{Tags:[\"ca.sidearm_after\"]}"
+                  }
+                }
+              ]
+            }
+          }
     },
     "display": {
         "title": {
@@ -26,6 +46,12 @@
         "announce_to_chat": false,
         "hidden": true
     },
+    "requirements": [
+        [
+          "normal",
+          "after"
+        ]
+      ],
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/active/sidearm"
     },
