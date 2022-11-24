@@ -37,6 +37,12 @@ execute if entity @s[tag=ca.aug_temp_touch] at @s if entity @a[tag=touched] run 
 execute if entity @s[tag=ca.aug_temp_touch] at @s if entity @a[tag=touched] run function cartographer_mob_abilities:ability_traits/touch/augment/touch_effect
 
 
+#Feeble Tag
+execute if entity @s[tag=ca.feeble] run scoreboard players set @s cdl.damage_queue 100
+execute if entity @s[tag=ca.feeble] at @s run function cd:lib/mob/damage/normal
+
+execute if entity @s[tag=ca.feeble_void] at @s run tp @s ~ -256 ~
+
 execute if entity @s[tag=hook_broken] at @s run scoreboard players set @s ca.hooked 2
 
 tag @a remove touched
