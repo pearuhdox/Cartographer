@@ -1,4 +1,24 @@
-execute as @s at @s run function bb:lib/get_target_status/get_percentage_health
+#Manual Call of Function because I have no choice - "Its Bad Practice to Change Libraries Yourself"
+
+#Get player's max health
+execute store result score $target_max_health bbl.storage run attribute @s minecraft:generic.max_health get
+#Get player's current health
+function bb:lib/get_target_status/get_health
+
+scoreboard players operation $target_health bbl.storage -= $exec_dmg bbl.storage
+
+#Multiply current health by 100
+scoreboard players operation $target_health bbl.storage *= $100 bbl.constant
+#Divide current health by max health
+scoreboard players operation $target_health bbl.storage /= $target_max_health bbl.storage
+#Set intermediary score
+scoreboard players operation $percentage_health_remaining bbl.storage = $target_health bbl.storage
+
+#End of Manual Get Percent Health Call
+
+#Reset Extra Scores
+scoreboard players set $exec_dmg bbl.storage 0
+
 scoreboard players operation @s ca.exec_low = $percentage_health_remaining bbl.storage
 
 execute if score $exec ca.executioner matches 1 as @s[scores={ca.exec_low=..10}] at @s run playsound minecraft:entity.player.attack.crit player @a[distance=..8] ~ ~ ~ 1 0.5

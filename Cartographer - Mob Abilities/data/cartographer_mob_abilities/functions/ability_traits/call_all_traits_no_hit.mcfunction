@@ -31,3 +31,9 @@ execute if entity @s[tag=ca.acrobatic_retreat_after] at @s run function cartogra
 execute if entity @s[tag=ca.acrobatic_kite_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite
 execute if entity @s[tag=ca.acrobatic_kite_forward_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_forward
 execute if entity @s[tag=ca.acrobatic_kite_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_strafe
+
+#Feeble Tag
+execute if entity @s[tag=ca.feeble] run scoreboard players set @s cdl.damage_queue 150
+execute if entity @s[tag=ca.feeble] at @s run function cd:lib/mob/damage/normal
+
+execute if entity @s[tag=ca.feeble_void] at @s run tp @s ~ -256 ~

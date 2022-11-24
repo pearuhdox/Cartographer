@@ -18,8 +18,8 @@ scoreboard players set @s cdl.damage_queue 0
 scoreboard players operation @s cdl.damage_queue = $thorns ca.thorns
 
 #Save For Executioner
-scoreboard players set $exec_dmg ca.thorns 0
-scoreboard players operation $exec_dmg ca.thorns = @s cdl.damage_queue
+scoreboard players set $exec_dmg bbl.storage 0
+scoreboard players operation $exec_dmg bbl.storage = @s cdl.damage_queue
 
 function cd:lib/mob/damage/normal
 
@@ -75,7 +75,7 @@ execute if score $thorns ca.t_exec matches 1.. run function cartographer_custom_
 
 
 #Reset this stat
-scoreboard players set $exec_dmg ca.thorns 0
+scoreboard players set $exec_dmg bbl.storage 0
 
 #Orian if you complain about this one more time I swear to God I will gut France like a fish
 execute if entity @s[type=#minecraft:skeletons] unless entity @a[scores={ca.thorns=1..},distance=..1.6] run effect give @s blindness 1 0 true

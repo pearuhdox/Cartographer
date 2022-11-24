@@ -18,8 +18,8 @@ function motion:motion/push
 scoreboard players set @s cdl.damage_queue 3
 scoreboard players operation @s cdl.damage_queue *= $eruption ca.eruption
 
-scoreboard players set $exec_dmg ca.eruption 0
-scoreboard players operation $exec_dmg ca.eruption = @s cdl.damage_queue
+scoreboard players set $exec_dmg bbl.storage 0
+scoreboard players operation $exec_dmg bbl.storage = @s cdl.damage_queue
 
 execute if score $eruption ca.eruption matches 1.. as @s run function cd:lib/mob/damage/normal
 
@@ -68,4 +68,4 @@ scoreboard players operation $exec ca.executioner = $eruption ca.executioner
 execute if score $eruption ca.executioner matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 #Reset this stat
-scoreboard players set $exec_dmg ca.eruption 0
+scoreboard players set $exec_dmg bbl.storage 0
