@@ -18,6 +18,7 @@ execute if score $com_amp_s ca.var matches 1.. at @s run function cartographer_m
 
 execute if score $com_acr_dy ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
 execute if score $com_acr_st ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
+execute if score $com_acr_bk_st ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe_back
 execute if score $com_acr_gc ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/gap_close
 execute if score $com_acr_re ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/retreat
 execute if score $com_acr_kn ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite

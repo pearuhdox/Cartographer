@@ -12,6 +12,9 @@ execute if score @s ability_charge matches 1 run data modify entity @s NoAI set 
 
 execute if score @s ability_charge matches 1 run tp @s ~ ~ ~ facing entity @p feet
 
+scoreboard players set @s ca.mob_move_mode 1
+scoreboard players set @s ca.mob_move_time 22
+
 execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 positioned ~ ~0.75 ~ run function cartographer_mob_abilities:charge/sweep/place_lines
 execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 positioned ~ ~0.5 ~ run function cartographer_mob_abilities:charge/sweep/warn
 

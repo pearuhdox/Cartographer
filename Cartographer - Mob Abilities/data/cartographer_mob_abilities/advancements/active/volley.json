@@ -4,22 +4,22 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.trapper\"]}"
+                    "nbt": "{Tags:[\"ca.volley\"]}"
                 }
             }
         }
     },
     "display": {
         "title": {
-            "text": "Trapper                  ",
+            "text": "Volley                   ",
             "color": "white"
         },
         "description": {
-            "text": "The enemy can throw a cone of traps that hurt and displace players.",
+            "text": "The enemy charges up and throws a cone of projectiles at the player.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:shears"
+            "item": "minecraft:arrow"
         },
         "frame": "task",
         "show_toast": true,
@@ -27,7 +27,7 @@
         "hidden": true
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/active/trapper"
+        "function": "cartographer_mob_abilities:descriptions/active/volley"
     },
     "parent": "cartographer_mob_abilities:active/sweep"
 }

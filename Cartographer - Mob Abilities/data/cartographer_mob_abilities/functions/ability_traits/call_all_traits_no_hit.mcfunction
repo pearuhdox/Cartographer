@@ -11,7 +11,7 @@ execute if entity @s[tag=ca.carapace++++] run function cartographer_mob_abilitie
 execute if entity @s[tag=ca.legionary] at @s run function cartographer_mob_abilities:ability_traits/legionary/master
 execute if entity @s[tag=ca.warping] at @s run function cartographer_mob_abilities:ability_traits/warping/effect
 execute if entity @s[tag=ca.evocative] at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
-execute if entity @s[tag=ca.volatile] unless entity @s[tag=ca.storm] unless entity @s[tag=ca.orbit] unless entity @s[tag=ca.sniper_shot] unless entity @s[tag=ca.trapper] unless entity @s[tag=ca.sidearm] unless entity @s[tag=ca.barrage] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
+execute if entity @s[tag=ca.volatile] unless entity @s[tag=ca.storm] unless entity @s[tag=ca.orbit] unless entity @s[tag=ca.sniper_shot] unless entity @s[tag=ca.volley] unless entity @s[tag=ca.sidearm] unless entity @s[tag=ca.barrage] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
 execute if entity @s[tag=ca.brutal_amplify] run function cartographer_mob_abilities:ability_traits/amplify/brutal
 execute if entity @s[tag=ca.relentless_amplify] run function cartographer_mob_abilities:ability_traits/amplify/relentless

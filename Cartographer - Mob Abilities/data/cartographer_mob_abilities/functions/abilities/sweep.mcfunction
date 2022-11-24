@@ -11,6 +11,9 @@ execute if score @s ca.sweep_side matches 2 as @s at @s run tp @s ~ ~ ~ ~35 ~
 
 scoreboard players set @s ca.sweep_animation 16
 
+scoreboard players set @s ca.mob_move_mode 1
+scoreboard players set @s ca.mob_move_time 16
+
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown. - Check Accelerate Stacks First
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate

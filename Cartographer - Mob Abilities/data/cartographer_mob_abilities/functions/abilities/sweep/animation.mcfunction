@@ -20,8 +20,6 @@ execute if score @s ca.sweep_animation matches 1 run playsound minecraft:entity.
 
 function cartographer_mob_abilities:abilities/sweep/stage
 
-function cartographer_mob_abilities:abilities/sweep/move
-
 execute if score @s ca.sweep_animation matches 1 run function cartographer_mob_abilities:abilities/sweep/end
 
 scoreboard players remove @s ca.sweep_animation 1

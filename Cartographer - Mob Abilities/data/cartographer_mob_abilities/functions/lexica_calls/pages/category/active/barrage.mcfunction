@@ -13,7 +13,7 @@ tellraw @s [{"text":"❰","color":"green","bold":true},{"text":"⊰ Lexica Carto
 tellraw @s {"text":"A guide by a cartographer about Cartographer.","color":"#ACFFA6","bold":false,"italic":true}
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 
-tellraw @s [{"text":"Needle","color":"yellow","bold":true,"italic":false}]
+tellraw @s [{"text":"Barrage","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
 tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"The mob charges up and then launches a rapid flurry of projectiles at the nearest player. 8 projectiles are fired over 4 seconds. The mob moves slower while firing.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]

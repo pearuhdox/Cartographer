@@ -9,7 +9,7 @@ execute if entity @s[tag=ca.orbit,tag=!ca.heavy_priority] run function cartograp
 execute if entity @s[tag=ca.nova,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.smash,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.sweep,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
-execute if entity @s[tag=ca.trapper,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
+execute if entity @s[tag=ca.volley,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.quickdraw,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.storm,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.sidearm,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy

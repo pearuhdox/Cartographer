@@ -17,6 +17,7 @@ execute if score $heal_amp_s ca.var matches 1.. at @s run function cartographer_
 
 execute if score $heal_acr_dy ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
 execute if score $heal_acr_st ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
+execute if score $heal_acr_bk_st ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe_back
 execute if score $heal_acr_gc ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/gap_close
 execute if score $heal_acr_re ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/retreat
 execute if score $heal_acr_kn ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite

@@ -10,7 +10,6 @@ execute if entity @s[tag=ca.quickdraw,tag=tokened,tag=!warned,scores={cooldown=0
 execute if entity @s[tag=ca.acrobatic,tag=!ca.command,tag=tokened,tag=!ca.has_kited,tag=!ca.has_gap_closed,tag=!ca.has_strafed,tag=!ca.has_retreated,scores={cooldown=0}] run function cartographer_mob_abilities:ability_traits/acrobatic/run_effects/call_all_pre_ability
 
 
-
 #Laser
 execute unless score @s ca.acrobatic_cooldown matches 1.. if entity @s[tag=ca.laser,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..32] run function cartographer_mob_abilities:charge/laser
 
@@ -34,6 +33,13 @@ execute if entity @s[tag=ca.sidearm,tag=tokened,scores={cooldown=0}] if entity @
 
 #Run Sidearm Channeling Here
 execute if entity @s[tag=ca.sidearm,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..12] run function cartographer_mob_abilities:helper/token/cancel_ability
+
+#Run Volley Channeling Here
+execute unless score @s ca.acrobatic_cooldown matches 1.. if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:charge/volley
+
+#Run Volley Canceling Here
+execute if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:helper/token/cancel_ability
+
 
 #Fix Tags
 execute if entity @s[tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix

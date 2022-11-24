@@ -14,9 +14,10 @@ execute if entity @s[type=#cartographer_mob_abilities:has_size] run function car
 execute if entity @s[type=evoker,tag=ca.summoner] if entity @s[nbt={SpellTicks:80}] run function cartographer_mob_abilities:passive/summoner/master
 
 #Run Sweep Animations
-execute if entity @s[tag=ca.sweep] if score @s ability_charge matches 1.. run function cartographer_mob_abilities:abilities/sweep/move
-
 execute if score @s ca.sweep_animation matches 1.. run function cartographer_mob_abilities:abilities/sweep/animation
+
+#Run Move Animations
+execute if score @s ca.mob_move_time matches 1.. run function cartographer_mob_abilities:move_mode/master
 
 #Run Movement Disable and Melee Damage Disable
 execute if entity @s[scores={mob_move_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/move
