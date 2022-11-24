@@ -43,6 +43,9 @@ execute if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] unless entit
 #Run Sidearm after ability here
 execute if score @s[tag=ca.sidearm_after] ca.sidearm_windup matches 1.. run function cartographer_mob_abilities:passive/sidearm/channel
 
+#Attack Override Run
+execute if entity @s[tag=ca.attack_override] run function cartographer_mob_abilities:helper/attack_override
+
 #Fix Tags
 execute if entity @s[tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix
 
