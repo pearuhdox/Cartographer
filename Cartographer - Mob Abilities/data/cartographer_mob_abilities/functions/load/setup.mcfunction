@@ -67,6 +67,8 @@ scoreboard objectives add ca.mob_var dummy
 
 scoreboard objectives add ca.acrobatic_cooldown dummy
 
+scoreboard objectives add ca.trigger_trait_cooldown dummy
+
 scoreboard objectives add ca.glacial_slow dummy
 scoreboard objectives add ca.horrified dummy
 scoreboard objectives add ca.overload_pos dummy
