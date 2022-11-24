@@ -21,6 +21,6 @@ execute if score @s[tag=ca.single_wave] ability_charge matches 2 facing entity @
 execute if score @s ability_charge matches 1 facing entity @p eyes run function cartographer_mob_abilities:charge/rift/particles/branch
 execute if score @s ability_charge matches 2..3 run function cartographer_mob_abilities:charge/rift/particles/branch
 
-execute if score @s ability_charge matches 1..3 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..3 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 4 run function cartographer_mob_abilities:abilities/rift

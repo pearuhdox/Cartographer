@@ -67,7 +67,7 @@ execute if score @s ability_charge matches 5 run particle minecraft:firework ~ ~
 execute if score @s ability_charge matches 5 run particle minecraft:end_rod ~ ~1.5 ~ 0 0.5 0 0.05 40 normal @a
 
 
-execute if score @s ability_charge matches 1..5 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..5 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 1..5 run scoreboard players set @s mob_move_dis 23
 

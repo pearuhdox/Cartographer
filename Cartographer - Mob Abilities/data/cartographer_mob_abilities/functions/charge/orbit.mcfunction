@@ -6,7 +6,7 @@ execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stack
 
 execute if score @s ability_charge matches 1 run playsound minecraft:entity.warden.emerge hostile @a[distance=..16] ~ ~ ~ 1 2
 
-execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s[tag=ca.has_kited] ability_charge matches 1 run effect give @s jump_boost 2 6 true
 execute if score @s[tag=ca.has_kited] ability_charge matches 1 run effect give @s levitation 1 0 true

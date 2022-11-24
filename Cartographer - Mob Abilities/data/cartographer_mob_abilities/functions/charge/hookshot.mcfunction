@@ -13,7 +13,7 @@ execute if score @s ability_charge matches 1 run data merge entity @s {NoAI:1}
 
 execute if score @s ability_charge matches 1 run tag @s add is_casting
 
-execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 
 execute if score @s ability_charge matches 1 at @s run function cartographer_mob_abilities:charge/hookshot/branch

@@ -32,7 +32,7 @@ execute if score @s ability_charge matches 5 run particle minecraft:dust_color_t
 #At enemy particles
 execute if score @s ability_charge matches 1..5 as @e[distance=0.5..15,limit=3,tag=!augmenter,sort=nearest,type=#bb:hostile] at @s run particle minecraft:dust_color_transition 1 0 0 1 0 0 0 ~ ~1 ~ 0.35 0.5 0.35 0 40 normal
 
-execute if score @s ability_charge matches 1..5 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..5 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 1..5 run scoreboard players set @s mob_move_red 23
 execute if score @s ability_charge matches 1..5 run scoreboard players set @s mob_atk_red 23

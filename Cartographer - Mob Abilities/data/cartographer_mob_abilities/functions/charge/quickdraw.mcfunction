@@ -15,6 +15,6 @@ execute if score @s ability_charge matches 1 run data merge entity @s {NoAI:1}
 
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:charge/quickdraw/branch
 
-execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/quickdraw

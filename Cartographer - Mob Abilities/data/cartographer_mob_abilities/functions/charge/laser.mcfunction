@@ -2,7 +2,7 @@ execute unless entity @s[scores={ability_charge=120}] run scoreboard players add
 
 execute if entity @s[scores={ability_charge=1}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
-execute if entity @s[scores={ability_charge=1..119}] run effect give @s glowing 1 0 true
+execute if entity @s[scores={ability_charge=1..119}] unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if entity @s[scores={ability_charge=1..119}] run scoreboard players set @s mob_move_red 23
 

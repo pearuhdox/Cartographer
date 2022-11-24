@@ -4,6 +4,6 @@ execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stack
 
 execute if score @s ability_charge matches 1 at @p[distance=..25] run playsound minecraft:entity.witch.ambient hostile @a[distance=..16] ~ ~ ~ 3 0.5
 
-execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/ambush

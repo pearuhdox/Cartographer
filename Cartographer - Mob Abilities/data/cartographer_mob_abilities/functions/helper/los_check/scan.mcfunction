@@ -12,4 +12,4 @@ tag @s add los_checked
 #say doing line of sight check
 
 #debug glowing
-#execute if entity @s[tag=can_see_player] run effect give @s glowing 1 0 true
+#execute if entity @s[tag=can_see_player] unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true

@@ -17,6 +17,6 @@ execute if score @s ability_charge matches 1..2 if entity @s[tag=ca.pulse] run f
 execute if score @s ability_charge matches 1..2 unless entity @s[tag=ca.pulse] run function cartographer_mob_abilities:charge/nova/normal/vfx
 
 
-execute if score @s ability_charge matches 1..2 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 3 run function cartographer_mob_abilities:abilities/nova

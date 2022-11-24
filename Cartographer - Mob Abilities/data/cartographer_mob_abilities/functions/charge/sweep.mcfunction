@@ -6,7 +6,7 @@ execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stack
 
 execute if score @s ability_charge matches 1 run playsound minecraft:entity.iron_golem.hurt hostile @a[distance=..16] ~ ~ ~ 5 1.5
 
-execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 1 run data modify entity @s NoAI set value 1b
 

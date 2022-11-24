@@ -36,7 +36,7 @@ execute if score @s ability_charge matches 20 run playsound minecraft:item.cross
 
 execute if score @s ability_charge matches 20.. run function cartographer_mob_abilities:charge/barrage/branch
 
-execute if score @s ability_charge matches 1..40 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..40 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score $needle_mod ability_charge matches 1 if score @s[tag=ca.has_kited,tag=!ca.acrobatic_kite_elytra] ability_charge matches 1..40 run effect give @s jump_boost 2 6 true
 execute if score $needle_mod ability_charge matches 1 if score @s[tag=ca.has_kited,tag=!ca.acrobatic_kite_elytra] ability_charge matches 1..40 run effect give @s levitation 1 0 true

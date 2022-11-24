@@ -8,7 +8,7 @@ execute if score @s[tag=ca.triple] ability_charge matches 1 run scoreboard playe
 execute if score @s[tag=ca.quadruple] ability_charge matches 1 run scoreboard players set @s copies 2
 execute if score @s[tag=ca.quintuple] ability_charge matches 1 run scoreboard players set @s copies 3
 
-execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 1 run scoreboard players set @s mob_move_red 18
 execute if score @s ability_charge matches 1 run scoreboard players set @s mob_atk_red 18

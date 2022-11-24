@@ -6,7 +6,7 @@ execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stack
 
 execute if score @s ability_charge matches 1 run scoreboard players set @s mob_move_red 16
 
-execute if score @s ability_charge matches 1 run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 1..20 run particle minecraft:smoke ~ ~0.2 ~ 0.3 0.3 0.3 0.1 4 normal
 execute if score @s ability_charge matches 1..20 run particle minecraft:large_smoke ~ ~0.2 ~ 0 0 0 0.1 1 normal
