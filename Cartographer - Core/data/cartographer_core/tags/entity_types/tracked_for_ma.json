@@ -8,6 +8,8 @@
 		"minecraft:sheep",
 		"minecraft:item",
 		"minecraft:area_effect_cloud",
-		"minecraft:evoker_fangs"
+		"minecraft:evoker_fangs",
+		"minecraft:zombie_horse",
+		"minecraft:skeleton_horse"
 	]
 }
