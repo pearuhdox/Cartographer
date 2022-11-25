@@ -36,3 +36,5 @@ execute if data storage ca.death Data.SacrificialBlood at @s run function cartog
 
 #Run the Death Events tag to check for non Cartographer added events.
 function #minecraft:cartographer/events/death_ability_proc
+
+kill @s

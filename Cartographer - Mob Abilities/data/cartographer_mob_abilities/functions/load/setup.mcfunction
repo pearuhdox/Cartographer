@@ -98,6 +98,8 @@ scoreboard objectives add ca.mob_move_mode dummy
 
 scoreboard objectives add ca.sidearm_windup dummy
 
+scoreboard objectives add ca.soul_chain_id dummy
+
 #Setup EPF Checkers
 scoreboard objectives add ca.ma_epf_proj dummy
 scoreboard objectives add ca.ma_epf_blast dummy
