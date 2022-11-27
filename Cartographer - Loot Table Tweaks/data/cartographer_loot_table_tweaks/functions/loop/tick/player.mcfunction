@@ -1,0 +1,2 @@
+scoreboard players operation @s ca.loot_table_rules = $use_mob_essence ca.loot_table_rules
+execute if score $powerups ca.loot_table_rules matches 1.. unless score @s ca.ltt_powerups matches 1.. run scoreboard players add @s ca.ltt_powerups 1

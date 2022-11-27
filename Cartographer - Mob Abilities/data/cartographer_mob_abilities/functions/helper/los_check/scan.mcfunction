@@ -1,6 +1,6 @@
 #This function attempts to find a player in Line of Sight. If a player is found in line of sight, it sets this properly. Line of sight is determined by an enemy's follow range stat.
 
-execute run tp 002f80c0-0001-f879-0000-009c001e7bfc ~ ~ ~ facing entity @p[gamemode=!spectator,gamemode=!creative,nbt=!{ActiveEffects:[{Id:14b}]}] feet
+execute run tp 002f80c0-0001-f879-0000-009c001e7bfc ~ ~ ~ facing entity @p[gamemode=!spectator,gamemode=!creative,nbt=!{ActiveEffects:[{Id:14}]}] feet
 
 execute store result score @s sight_dist run attribute @s minecraft:generic.follow_range get
 

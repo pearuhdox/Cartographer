@@ -18,6 +18,18 @@
           "type": "minecraft:loot_table",
           "name": "cartographer_custom_statuses:death_test/test"
         }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:entity_scores",
+          "entity": "killer",
+          "scores": {
+            "ca.loot_table_rules": {
+              "min": 0,
+              "max": 0
+            }
+          }
+        }
       ]
     },
     {
@@ -43,6 +55,18 @@
             }
           ],
           "name": "minecraft:magma_cream"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:entity_scores",
+          "entity": "killer",
+          "scores": {
+            "ca.loot_table_rules": {
+              "min": 0,
+              "max": 0
+            }
+          }
         }
       ]
     }

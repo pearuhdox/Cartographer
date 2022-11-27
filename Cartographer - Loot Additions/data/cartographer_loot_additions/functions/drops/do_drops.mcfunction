@@ -1,5 +1,8 @@
 setblock 4206900 2 4206900 air replace
 
+#Loot Table Tweaks - Essence
+execute if score $use_mob_essence ca.loot_table_rules matches 1.. if entity @s[type=item,nbt={Item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;1927509704,-492089604,-1707993161,-498451464],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjUyMjljMzQ4NTRhNzI2MTg1ZTg0YzcwMzQ0MGU2ZGMzNDA3NDc1NDA3YWRhNWYxYjI3YmIyYzExNTZlYWMyZSJ9fX0="}]}}}}}] run function cartographer_loot_additions:drops/do_drops/caches/essences/single
+execute if score $use_mob_essence ca.loot_table_rules matches 1.. if entity @s[type=item,nbt={Item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1454960145,263799667,-1517564240,-399223796],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE3YWE5MmQyNDIzMzQ0NDNlZDQ5Zjg3MGFiNTZmYmU1NDIzMjJlYTA0NzNhOTFhMzNhNmY4MzAyZDU1YmY1ZSJ9fX0="}]}}}}}] run function cartographer_loot_additions:drops/do_drops/caches/essences/compressed
 
 #Chest Cache
 execute if entity @s[type=item,nbt={Item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1936692059,-2066265281,-1789187408,-1837397849],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWM5NmJlNzg4NmViN2RmNzU1MjVhMzYzZTVmNTQ5NjI2YzIxMzg4ZjBmZGE5ODhhNmU4YmY0ODdhNTMifX19"}]}}}}}] run function cartographer_loot_additions:drops/do_drops/caches/chest_cache

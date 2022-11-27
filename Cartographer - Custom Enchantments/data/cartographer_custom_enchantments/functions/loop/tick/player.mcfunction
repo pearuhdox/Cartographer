@@ -1,5 +1,5 @@
 #Place The Trident Hit Checker Above Enchant Calculator to solve loyalty check bug
-execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.throw_trident matches 1.. unless score @s ca.deal_mel_dmg matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
+execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.throw_trident matches 1.. unless score @s ca.deal_mel_dmg matches 1.. unless score @s ca.deal_mel_dmg2 matches 1.. unless score @s ca.deal_mel_dmg3 matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
 
 #Run queues of enchant calculator
 execute if entity @s[tag=ca.queue_ench_check,tag=!ca.ench_do_not_check] run function cartographer_custom_enchantments:calc_enchant/run

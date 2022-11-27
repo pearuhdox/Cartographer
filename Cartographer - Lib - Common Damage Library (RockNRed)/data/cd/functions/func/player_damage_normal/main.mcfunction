@@ -25,19 +25,19 @@ execute if score $used_golem_count cdl.damage_queue matches 9 as f8d7f03b-fc82-4
 execute if score $used_golem_count cdl.damage_queue matches 10 as f8d7f044-fc82-4df6-acb2-d1f9cc707516 store result entity @s ArmorItems[3].tag.Enchantments[0].lvl short 1 run scoreboard players add @p cdl.damage_queue 10
 
 scoreboard players set @s cdl.damage_queue 0
-attribute @s minecraft:generic.knockback_resistance modifier add 31514192-0114-2651-8151-950000000005 cdl.Custom_Damage_KBR 10 add
+attribute @s minecraft:generic.knockback_resistance modifier add 31514192-0114-2651-8151-950000000005 "cdl.Custom_Damage_KBR" 10 add
 scoreboard players set @s cdl.damage_timer 10
 
-execute if score $used_golem_count cdl.damage_queue matches 1 as f8d7f043-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877851,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 2 as f8d7f042-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877852,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 3 as f8d7f041-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877853,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 4 as f8d7f040-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877854,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 5 as f8d7f03f-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877855,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 6 as f8d7f03e-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877856,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 7 as f8d7f03d-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877857,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 8 as f8d7f03c-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877858,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 9 as f8d7f03b-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877859,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
-execute if score $used_golem_count cdl.damage_queue matches 10 as f8d7f044-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877850,-578665873,-1870566665,283708112],damage:10d,Motion:[0b,-10b,0b]}
+execute if score $used_golem_count cdl.damage_queue matches 1 as f8d7f043-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877851,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 2 as f8d7f042-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877852,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 3 as f8d7f041-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877853,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 4 as f8d7f040-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877854,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 5 as f8d7f03f-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877855,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 6 as f8d7f03e-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877856,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 7 as f8d7f03d-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877857,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 8 as f8d7f03c-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877858,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 9 as f8d7f03b-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877859,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
+execute if score $used_golem_count cdl.damage_queue matches 10 as f8d7f044-fc82-4df6-acb2-d1f9cc707516 at @s run summon arrow ~ ~3.0001 ~ {UUID:[I;1971877850,-578665873,-1870566665,283708112],damage:10d,Motion:[0d,-10d,0d]}
 
 execute if score $used_golem_count cdl.damage_queue matches 1 run data modify entity 758877db-dd82-426f-9081-6af710e90ad0 Owner set from entity @s UUID
 execute if score $used_golem_count cdl.damage_queue matches 2 run data modify entity 758877dc-dd82-426f-9081-6af710e90ad0 Owner set from entity @s UUID

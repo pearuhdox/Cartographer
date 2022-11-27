@@ -33,6 +33,7 @@ scoreboard objectives add ca.deathbomb_fuse_max dummy
 scoreboard objectives add ca.size_max dummy
 scoreboard objectives add ca.size_min dummy
 scoreboard objectives add ca.size_cur dummy
+scoreboard objectives add ca.size_changed_stacks dummy
 
 scoreboard objectives add ca.sweep_animation dummy
 scoreboard objectives add ca.sweep_side dummy

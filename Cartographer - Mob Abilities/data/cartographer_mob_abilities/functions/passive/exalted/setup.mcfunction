@@ -4,7 +4,7 @@ execute if entity @s[type=creeper] run data modify entity @s HandItems[0] set va
 
 data modify entity @s HandDropChances[0] set value 1.000F
 
-execute if data entity @s HandItems[0].tag.Enchantments run data remove entity @s HandItems[0].tag.Enchantments[{id:'minecraft:vanishing_curse'}]
+execute if data entity @s HandItems[0].tag.Enchantments run data remove entity @s HandItems[0].tag.Enchantments[{id:"minecraft:vanishing_curse"}]
 execute if data entity @s HandItems[0].tag.Enchantments run data remove entity @s HandItems[0].tag.Enchantments[{id:"minecraft:vanishing_curse"}]
 
 data modify entity @s HandItems[0].tag.EntityData set value {}

@@ -26,7 +26,7 @@ execute if entity @s[tag=is_vol_flash] run scoreboard players set $flash ca.expl
 # UUID Hex Firework: 31182015-5241-6121-5199-225691852315
 # UUID for summon: [I;823664661,1380016417,1368990294,-1853545707]
 
-summon firework_rocket ~ ~1 ~ {UUID:[I;823664661,1380016417,1368990294,-1853545707],LifeTime:2,ShotAtAngle:1b,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Colors:[I;16777215]}]}}}}
+summon firework_rocket ~ ~1 ~ {UUID:[I;823664661,1380016417,1368990294,-1853545707],LifeTime:2,ShotAtAngle:1b,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:4,Colors:[I;16777215]}]}}}}
 
 scoreboard players set 31182015-5241-6121-5199-225691852315 ca.lifetime 1
 execute if data storage cartographer_custom_enchantments:explosive Fireworks.Explosions[0] run data modify entity 31182015-5241-6121-5199-225691852315 FireworksItem.tag.Fireworks set from storage cartographer_custom_enchantments:explosive Fireworks

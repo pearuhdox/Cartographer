@@ -2,6 +2,8 @@ scoreboard players set @s ca.kill_entity 0
 scoreboard players set @s ca.take_dmg 0
 scoreboard players set @s ca.resist_dmg 0
 scoreboard players set @s ca.deal_mel_dmg 0
+scoreboard players set @s ca.deal_mel_dmg2 0
+scoreboard players set @s ca.deal_mel_dmg3 0
 scoreboard players set @s ca.mine_spawner 0
 scoreboard players set @s ca.fire_bow 0
 scoreboard players set @s ca.fire_cbow 0

@@ -4,7 +4,7 @@ summon falling_block ~ ~ ~ {Tags:["ca.webbing_falling"],BlockState:{Name:"minecr
 summon falling_block ~ ~ ~ {Tags:["ca.webbing_falling"],BlockState:{Name:"minecraft:cobweb"},Time:1,DropItem:0b,HurtEntities:0b,Motion:[0.0,0.25,0.1]}
 summon falling_block ~ ~ ~ {Tags:["ca.webbing_falling"],BlockState:{Name:"minecraft:cobweb"},Time:1,DropItem:0b,HurtEntities:0b,Motion:[0.0,0.25,-0.1]}
 
-summon area_effect_cloud ~ ~ ~ {Tags:["ca.webbing_cloud"],Particle:"dust 0.878 0.878 0.878 1",ReapplicationDelay:1,Radius:1.75f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:400,DurationOnUse:0f,Age:0,WaitTime:0,Motion:[0.0,0.3,0.0],Potion:"minecraft:awkward"}
+summon area_effect_cloud ~ ~ ~ {Tags:["ca.webbing_cloud"],Particle:"dust 0.878 0.878 0.878 1",ReapplicationDelay:1,Radius:1.75f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:400,DurationOnUse:0,Age:0,WaitTime:0,Motion:[0.0,0.3,0.0],Potion:"minecraft:awkward"}
 
 tp @p[distance=..1.5] ~ ~ ~
 effect give @p[distance=..1.5] slowness 1 5 true

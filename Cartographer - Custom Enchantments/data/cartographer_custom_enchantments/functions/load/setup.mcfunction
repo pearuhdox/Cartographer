@@ -187,6 +187,9 @@ scoreboard objectives add ca.take_dmg minecraft.custom:minecraft.damage_taken
 scoreboard objectives add ca.resist_dmg minecraft.custom:minecraft.damage_resisted
 scoreboard objectives add ca.regen_bank dummy
 scoreboard objectives add ca.deal_mel_dmg minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add ca.deal_mel_dmg2 minecraft.custom:minecraft.damage_dealt_absorbed
+scoreboard objectives add ca.deal_mel_dmg3 minecraft.custom:minecraft.damage_dealt_resisted
+
 scoreboard objectives add ca.melee_chance dummy
 scoreboard objectives add ca.mine_spawner minecraft.mined:minecraft.spawner
 scoreboard objectives add ca.lifetime dummy

@@ -155,11 +155,11 @@ execute if entity @s[nbt={Item:{id:"minecraft:diamond_boots"}}] run tag @s add v
 execute if entity @s[nbt={Item:{id:"minecraft:netherite_boots"}}] run tag @s add valid
 
 execute if entity @s[nbt={Item:{tag:{Damage:0}}}] run tag @s remove valid
-execute if entity @s[nbt={Item:{tag:{Unbreakable:1}}}] run tag @s remove valid
+execute if entity @s[nbt={Item:{tag:{Unbreakable:1b}}}] run tag @s remove valid
 execute if entity @s[nbt={Item:{tag:{Unbreakable:1b}}}] run tag @s remove valid
 
 execute if entity @s[nbt={Item:{tag:{Damage:0}}}] run tag @s add full
-execute if entity @s[nbt={Item:{tag:{Unbreakable:1}}}] run tag @s add full
+execute if entity @s[nbt={Item:{tag:{Unbreakable:1b}}}] run tag @s add full
 execute if entity @s[nbt={Item:{tag:{Unbreakable:1b}}}] run tag @s add full
 
 execute if entity @s[tag=valid] if entity @s[nbt={Item:{id:"minecraft:wooden_sword"}}] run tag @s add held
