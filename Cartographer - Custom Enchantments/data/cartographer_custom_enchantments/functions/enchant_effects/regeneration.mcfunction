@@ -1,10 +1,19 @@
-execute if entity @s[scores={ca.regen=1}] run scoreboard players add @s ca.regen_bank 25
-execute if entity @s[scores={ca.regen=2}] run scoreboard players add @s ca.regen_bank 34
-execute if entity @s[scores={ca.regen=3}] run scoreboard players add @s ca.regen_bank 42
-execute if entity @s[scores={ca.regen=4}] run scoreboard players add @s ca.regen_bank 50
-execute if entity @s[scores={ca.regen=5}] run scoreboard players add @s ca.regen_bank 59
-execute if entity @s[scores={ca.regen=6}] run scoreboard players add @s ca.regen_bank 67
-execute if entity @s[scores={ca.regen=7}] run scoreboard players add @s ca.regen_bank 75
-execute if entity @s[scores={ca.regen=8}] run scoreboard players add @s ca.regen_bank 84
-execute if entity @s[scores={ca.regen=9}] run scoreboard players add @s ca.regen_bank 92
-execute if entity @s[scores={ca.regen=10}] run scoreboard players add @s ca.regen_bank 100
+#Runs Every Second:
+#Add 1.25% Max HP to Heal Bank per second
+
+scoreboard players operation $regen_count ca.enchant_var = @s ca.regen
+scoreboard players remove $regen_count ca.enchant_var 1
+
+execute store result score $hp ca.enchant_var run attribute @s minecraft:generic.max_health get
+scoreboard players operation $hp ca.enchant_var *= $1000 ca.CONSTANT
+
+scoreboard players operation $hp ca.enchant_var *= $125 ca.CONSTANT
+
+scoreboard players operation $hp ca.enchant_var /= $10000 ca.CONSTANT
+
+scoreboard players add @s ca.heal_bank_hp 1
+scoreboard players operation @s ca.heal_bank_hp += $hp ca.enchant_var
+
+#Additional Levels only provide 1/3 the benefit
+scoreboard players operation $hp ca.enchant_var /= $3 ca.CONSTANT
+execute if score $regen_count ca.enchant_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/regeneration/recurse

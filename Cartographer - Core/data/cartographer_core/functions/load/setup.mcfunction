@@ -127,11 +127,47 @@ scoreboard objectives add phe_listen dummy
 scoreboard objectives add ca.timer dummy
 scoreboard players set $ca_timer ca.timer 0
 
+#Solve this stupid bug made by how mojang coded right click armor equipping
+scoreboard objectives add ca.equip_leather_boots minecraft.used:minecraft.leather_boots
+scoreboard objectives add ca.equip_leather_leggings minecraft.used:minecraft.leather_leggings
+scoreboard objectives add ca.equip_leather_chestplate minecraft.used:minecraft.leather_chestplate
+scoreboard objectives add ca.equip_leather_helmet minecraft.used:minecraft.leather_helmet
+
+scoreboard objectives add ca.equip_golden_boots minecraft.used:minecraft.golden_boots
+scoreboard objectives add ca.equip_golden_leggings minecraft.used:minecraft.golden_leggings
+scoreboard objectives add ca.equip_golden_chestplate minecraft.used:minecraft.golden_chestplate
+scoreboard objectives add ca.equip_golden_helmet minecraft.used:minecraft.golden_helmet
+
+scoreboard objectives add ca.equip_chainmail_boots minecraft.used:minecraft.chainmail_boots
+scoreboard objectives add ca.equip_chainmail_leggings minecraft.used:minecraft.chainmail_leggings
+scoreboard objectives add ca.equip_chainmail_chestplate minecraft.used:minecraft.chainmail_chestplate
+scoreboard objectives add ca.equip_chainmail_helmet minecraft.used:minecraft.chainmail_helmet
+
+scoreboard objectives add ca.equip_iron_boots minecraft.used:minecraft.iron_boots
+scoreboard objectives add ca.equip_iron_leggings minecraft.used:minecraft.iron_leggings
+scoreboard objectives add ca.equip_iron_chestplate minecraft.used:minecraft.iron_chestplate
+scoreboard objectives add ca.equip_iron_helmet minecraft.used:minecraft.iron_helmet
+
+scoreboard objectives add ca.equip_diamond_boots minecraft.used:minecraft.diamond_boots
+scoreboard objectives add ca.equip_diamond_leggings minecraft.used:minecraft.diamond_leggings
+scoreboard objectives add ca.equip_diamond_chestplate minecraft.used:minecraft.diamond_chestplate
+scoreboard objectives add ca.equip_diamond_helmet minecraft.used:minecraft.diamond_helmet
+
+scoreboard objectives add ca.equip_netherite_boots minecraft.used:minecraft.netherite_boots
+scoreboard objectives add ca.equip_netherite_leggings minecraft.used:minecraft.netherite_leggings
+scoreboard objectives add ca.equip_netherite_chestplate minecraft.used:minecraft.netherite_chestplate
+scoreboard objectives add ca.equip_netherite_helmet minecraft.used:minecraft.netherite_helmet
+
+scoreboard objectives add ca.equip_turtle_helmet minecraft.used:minecraft.turtle_helmet
+
+scoreboard objectives add ca.core_delay_check dummy
+
 #Setup a score for any and all constant values.
 scoreboard objectives add ca.CONSTANT dummy
 
 scoreboard players set $-1 ca.CONSTANT -1
 
+scoreboard players set $10000 ca.CONSTANT 10000
 scoreboard players set $1000 ca.CONSTANT 1000
 scoreboard players set $100 ca.CONSTANT 100
 scoreboard players set $10 ca.CONSTANT 10
@@ -154,9 +190,11 @@ scoreboard players set $67 ca.CONSTANT 67
 scoreboard players set $60 ca.CONSTANT 60
 scoreboard players set $70 ca.CONSTANT 70
 scoreboard players set $75 ca.CONSTANT 75
+scoreboard players set $77 ca.CONSTANT 77
 scoreboard players set $80 ca.CONSTANT 80
 scoreboard players set $81 ca.CONSTANT 81
 scoreboard players set $100 ca.CONSTANT 100
+scoreboard players set $125 ca.CONSTANT 125
 scoreboard players set $133 ca.CONSTANT 133
 scoreboard players set $150 ca.CONSTANT 150
 scoreboard players set $200 ca.CONSTANT 200

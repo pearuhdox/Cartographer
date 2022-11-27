@@ -35,4 +35,4 @@ execute if entity @s[scores={ca.hooked=1..}] run function cartographer_mob_abili
 execute if score @s ca.linger_cooldown matches 1.. run scoreboard players remove @s ca.linger_cooldown 1
 
 #If the inventory changed, collect and store the player's current EPF values here. Override this if disabled
-execute unless score $disable_epf_damage ca.gamerule matches 1.. if entity @s[tag=ca.core_check_inv] run function cartographer_mob_abilities:helper/epf/calculate/master
+execute unless score $disable_epf_damage ca.gamerule matches 1.. unless score @s ca.core_delay_check matches 1.. if entity @s[tag=ca.core_check_inv] run function cartographer_mob_abilities:helper/epf/calculate/master

@@ -1,8 +1,21 @@
 #Place The Trident Hit Checker Above Enchant Calculator to solve loyalty check bug
 execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.throw_trident matches 1.. unless score @s ca.deal_mel_dmg matches 1.. unless score @s ca.deal_mel_dmg2 matches 1.. unless score @s ca.deal_mel_dmg3 matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
 
+
+#Run the Heal Queue system on players
+execute if score @s ca.sapper_banking matches 1.. run function cartographer_custom_enchantments:enchant_effects/sapper/heal_time
+execute if score @s ca.lifesteal_banking matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal/heal_time
+
+function cartographer_custom_enchantments:helper/healing_bank/check_healing
+
+#,tag=ca.queue_ench_check,tag=!ca.ench_do_not_check
+
+
+#Identify if Slot was Changed
+function cartographer_custom_enchantments:calc_enchant/slot_change
+
 #Run queues of enchant calculator
-execute if entity @s[tag=ca.queue_ench_check,tag=!ca.ench_do_not_check] run function cartographer_custom_enchantments:calc_enchant/run
+execute unless score @s ca.core_delay_check matches 1.. if entity @s[tag=ca.core_check_inv] run function cartographer_custom_enchantments:calc_enchant/run
 tag @s remove ca.queue_ench_check
 
 #Reset attack speed and kbr on Echo users
@@ -169,9 +182,6 @@ execute if score @s ca.ui_loc matches 2 run function cartographer_custom_enchant
 
 execute if score @s ca.repeating matches 0 run tag @s remove showing_repeating
 execute if score @s ca.echo matches 0 run tag @s remove showing_echo
-
-#Just in case
-function cartographer_custom_enchantments:calc_enchant/slot_change
 
 execute store result score $current_return ca.loyalty run clear @s structure_void{TridentRemnantDelete:1b}
 execute if score $current_return ca.loyalty matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund

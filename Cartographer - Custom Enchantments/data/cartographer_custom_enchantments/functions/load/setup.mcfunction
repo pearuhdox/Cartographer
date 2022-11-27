@@ -262,6 +262,12 @@ scoreboard objectives add ca.rotation dummy
 
 scoreboard objectives add ca.ind_val dummy
 
+scoreboard objectives add ca.heal_bank_hp dummy
+
+scoreboard objectives add ca.sapper_banking dummy
+scoreboard objectives add ca.lifesteal_banking dummy
+
+scoreboard objectives add ca.enchant_var dummy
 
 #Setup LoE data space
 function cartographer_custom_enchantments:load/integration/active/clear

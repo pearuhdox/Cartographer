@@ -1,6 +1,7 @@
 execute if entity @s[tag=!ca.init] run function cartographer_core:load/init_player
 
-execute if entity @s[tag=ca.core_check_inv] run function cartographer_core:helper/inventory/do_inventory_check
+execute if score @s ca.core_delay_check matches 1.. run scoreboard players remove @s ca.core_delay_check 1
+execute if entity @s[tag=ca.core_check_inv] unless score @s ca.core_delay_check matches 1.. run function cartographer_core:helper/inventory/do_inventory_check
 
 function cartographer_custom_enchantments:loop/tick/player
 function cartographer_custom_statuses:loop/tick/player
@@ -8,7 +9,7 @@ function cartographer_mob_abilities:loop/tick/player
 function cartographer_loot_table_tweaks:loop/tick/player
 
 #Remove the inventory check from core here so it can be used in other functionality
-tag @s remove ca.core_check_inv
+execute unless score @s ca.core_delay_check matches 1.. run tag @s remove ca.core_check_inv
 
 #Enable triggers
 scoreboard players enable @s lexica

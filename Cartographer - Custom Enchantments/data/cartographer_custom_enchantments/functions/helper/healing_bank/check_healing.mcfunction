@@ -1,0 +1,1 @@
+execute if score @s ca.heal_bank_hp matches 1000.. run function cartographer_custom_enchantments:helper/healing_bank/do_healing

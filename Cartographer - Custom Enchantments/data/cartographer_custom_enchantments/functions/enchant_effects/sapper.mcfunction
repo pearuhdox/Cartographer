@@ -1,16 +1,7 @@
-execute if entity @s[scores={ca.sapper=1}] run scoreboard players set @s cdl.heal_queue 1
-execute if entity @s[scores={ca.sapper=2}] run scoreboard players set @s cdl.heal_queue 2
-execute if entity @s[scores={ca.sapper=3}] run scoreboard players set @s cdl.heal_queue 3
-execute if entity @s[scores={ca.sapper=4}] run scoreboard players set @s cdl.heal_queue 4
-execute if entity @s[scores={ca.sapper=5..}] run scoreboard players set @s cdl.heal_queue 5
+scoreboard players operation $sapper_time ca.enchant_var = @s ca.sapper
+scoreboard players operation $sapper_time ca.enchant_var *= $20 ca.CONSTANT
 
-execute if entity @s[scores={ca.sapper=6}] run effect give @s regeneration 2 1
-execute if entity @s[scores={ca.sapper=7}] run effect give @s regeneration 3 1
-execute if entity @s[scores={ca.sapper=8}] run effect give @s regeneration 4 1
-execute if entity @s[scores={ca.sapper=9}] run effect give @s regeneration 5 1
-execute if entity @s[scores={ca.sapper=10}] run effect give @s regeneration 7 1
-
-execute if entity @s[scores={ca.sapper=1..}] run function cd:lib/player/heal
+scoreboard players operation @s ca.sapper_banking = $sapper_time ca.enchant_var
 
 execute if entity @s[scores={ca.s_adren=1..,ca.adren_time=0}] at @s run playsound minecraft:entity.illusioner.prepare_blindness player @s ~ ~ ~ 2 1.2
 execute if entity @s[scores={ca.s_energ=1..,ca.energ_time=0}] at @s run playsound minecraft:entity.illusioner.prepare_blindness player @s ~ ~ ~ 2 1.2
