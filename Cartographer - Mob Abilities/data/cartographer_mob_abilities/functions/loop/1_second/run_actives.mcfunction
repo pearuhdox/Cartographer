@@ -26,3 +26,6 @@ execute if entity @s[tag=ca.duplicator,tag=tokened,scores={cooldown=0}] if entit
 
 #Haunt
 execute if entity @s[tag=ca.haunt,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:charge/haunt
+
+#Summon
+execute if entity @s[tag=ca.summoner,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:charge/summoner

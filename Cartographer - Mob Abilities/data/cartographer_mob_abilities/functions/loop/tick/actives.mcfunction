@@ -11,19 +11,19 @@ execute if entity @s[tag=ca.acrobatic,tag=!ca.command,tag=tokened,tag=!ca.has_ki
 
 
 #Laser
-execute unless score @s ca.acrobatic_cooldown matches 1.. if entity @s[tag=ca.laser,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..32] run function cartographer_mob_abilities:charge/laser
+execute unless score @s ca.acro_cooldown matches 1.. if entity @s[tag=ca.laser,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..32] run function cartographer_mob_abilities:charge/laser
 
 #Laser Animation Cancel
 execute if entity @s[tag=ca.laser,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..32] run function cartographer_mob_abilities:helper/token/cancel_ability
 
 #Run Barrage Channeling Here
-execute unless score @s ca.acrobatic_cooldown matches 1.. if entity @s[tag=ca.barrage,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:charge/barrage
+execute unless score @s ca.acro_cooldown matches 1.. if entity @s[tag=ca.barrage,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:charge/barrage
 
 #Barrage Animation Cancel
 execute if entity @s[tag=ca.barrage,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:helper/token/cancel_ability
 
 #Sniper Shot
-execute unless score @s ca.acrobatic_cooldown matches 1.. if entity @s[tag=ca.sniper_shot,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:charge/sniper_shot
+execute unless score @s ca.acro_cooldown matches 1.. if entity @s[tag=ca.sniper_shot,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:charge/sniper_shot
 
 #Run Sniper Shot Channeling Here
 execute if entity @s[tag=ca.sniper_shot,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:helper/token/cancel_ability
@@ -35,7 +35,7 @@ execute if entity @s[tag=ca.sidearm,tag=tokened,scores={cooldown=0}] if entity @
 execute if entity @s[tag=ca.sidearm,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..12] run function cartographer_mob_abilities:helper/token/cancel_ability
 
 #Run Volley Channeling Here
-execute unless score @s ca.acrobatic_cooldown matches 1.. if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:charge/volley
+execute unless score @s ca.acro_cooldown matches 1.. if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:charge/volley
 
 #Run Volley Canceling Here
 execute if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:helper/token/cancel_ability

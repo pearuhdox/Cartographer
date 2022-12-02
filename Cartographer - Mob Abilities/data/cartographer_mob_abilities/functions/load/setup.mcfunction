@@ -66,7 +66,7 @@ scoreboard objectives add ca.elytra_deploy_time dummy
 
 scoreboard objectives add ca.mob_var dummy
 
-scoreboard objectives add ca.acrobatic_cooldown dummy
+scoreboard objectives add ca.acro_cooldown dummy
 
 scoreboard objectives add ca.trigger_trait_cooldown dummy
 

@@ -9,11 +9,11 @@ function cartographer_mob_abilities:abilities/orbit/calc_damage
 
 scoreboard players set $projectile ca.dmg_type 1
 
-execute as @a[distance=..2.15] at @s unless score @s ca.orbit_timer matches 1.. run function cartographer_mob_abilities:abilities/orbit/player_effect
+execute as @a[distance=..1.35] at @s unless score @s ca.orbit_timer matches 1.. run function cartographer_mob_abilities:abilities/orbit/player_effect
 
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 
-execute unless entity @s[tag=ca.ignore_traits_active] if entity @s[tag=ca.volatile] at @p[distance=..2.15] run function cartographer_mob_abilities:ability_traits/volatile/effect
-execute unless entity @s[tag=ca.ignore_traits_active] if entity @s[tag=ca.volatile] at @p[distance=..2.15] run scoreboard players set @s ca.orbit_timer 0
+execute unless entity @s[tag=ca.ignore_traits_active] if entity @s[tag=ca.volatile] at @p[distance=..1.35] run function cartographer_mob_abilities:ability_traits/volatile/effect
+execute unless entity @s[tag=ca.ignore_traits_active] if entity @s[tag=ca.volatile] at @p[distance=..1.35] run scoreboard players set @s ca.orbit_timer 0
 
 tag @a[distance=..10] remove ability_tagged

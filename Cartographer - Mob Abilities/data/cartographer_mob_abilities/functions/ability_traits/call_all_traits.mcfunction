@@ -39,14 +39,14 @@ execute if entity @s[tag=ca.warping] at @s run function cartographer_mob_abiliti
 execute if entity @s[tag=ca.evocative] at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
 execute if entity @s[tag=ca.volatile] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
-execute if entity @s[tag=ca.acrobatic_dynamic] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
-execute if entity @s[tag=ca.acrobatic_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
-execute if entity @s[tag=ca.acrobatic_strafe_back_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe_back
-execute if entity @s[tag=ca.acrobatic_gap_close_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/gap_close
-execute if entity @s[tag=ca.acrobatic_retreat_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/retreat
-execute if entity @s[tag=ca.acrobatic_kite_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite
-execute if entity @s[tag=ca.acrobatic_kite_forward_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_forward
-execute if entity @s[tag=ca.acrobatic_kite_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_strafe
+execute if entity @s[tag=ca.acro_dynamic] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
+execute if entity @s[tag=ca.acro_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe
+execute if entity @s[tag=ca.acro_strafe_back_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/strafe_back
+execute if entity @s[tag=ca.acro_gap_close_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/gap_close
+execute if entity @s[tag=ca.acro_retreat_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/retreat
+execute if entity @s[tag=ca.acro_kite_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite
+execute if entity @s[tag=ca.acro_kite_forward_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_forward
+execute if entity @s[tag=ca.acro_kite_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_strafe
 
 #Feeble Tag
 execute if entity @s[tag=ca.feeble] run scoreboard players set @s cdl.damage_queue 100

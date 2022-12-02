@@ -14,3 +14,5 @@ execute if score @s ability_charge matches 1 run data merge entity @s {NoAI:1}
 execute if score @s ability_charge matches 1..2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 3 run function cartographer_mob_abilities:abilities/charge
+
+execute if score @s ability_charge matches 4 run function cartographer_mob_abilities:abilities/charge/reset

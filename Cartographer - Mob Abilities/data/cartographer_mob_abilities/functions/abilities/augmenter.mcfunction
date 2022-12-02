@@ -62,14 +62,14 @@ execute if entity @s[tag=ca.zephyrous,tag=!ca.ignore_traits_active] run scoreboa
 
 execute if entity @s[tag=ca.alchemist,tag=!ca.ignore_traits_active] run function cartographer_mob_abilities:abilities/augmenter/alchemist_save
 
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_dynamic_after] run scoreboard players set $aug_acr_dy ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_strafe_after] run scoreboard players set $aug_acr_st ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_strafe_back_after] run scoreboard players set $aug_acr_bk_st ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_gap_close_after] run scoreboard players set $aug_acr_gc ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_retreat_after] run scoreboard players set $aug_acr_re ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_after] run scoreboard players set $aug_acr_kn ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_forward_after] run scoreboard players set $aug_acr_kf ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_strafe_after] run scoreboard players set $aug_acr_ks ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_dynamic_after] run scoreboard players set $aug_acr_dy ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_strafe_after] run scoreboard players set $aug_acr_st ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_strafe_back_after] run scoreboard players set $aug_acr_bk_st ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_gap_close_after] run scoreboard players set $aug_acr_gc ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_retreat_after] run scoreboard players set $aug_acr_re ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_kite_after] run scoreboard players set $aug_acr_kn ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_kite_forward_after] run scoreboard players set $aug_acr_kf ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_kite_strafe_after] run scoreboard players set $aug_acr_ks ca.var 1
 
 scoreboard players set $augment_count ca.mob_var 0
 

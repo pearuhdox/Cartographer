@@ -10,4 +10,4 @@ execute if entity @s[tag=ca.cloaking] run function cartographer_mob_abilities:ab
 execute if entity @s[tag=ca.legionary] at @s run function cartographer_mob_abilities:ability_traits/legionary/master
 execute if entity @s[tag=ca.evocative] at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
 
-execute if entity @s[tag=ca.acrobatic_dynamic] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
+execute if entity @s[tag=ca.acro_dynamic] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect

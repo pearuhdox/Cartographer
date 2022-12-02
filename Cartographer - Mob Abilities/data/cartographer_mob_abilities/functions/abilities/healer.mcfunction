@@ -40,14 +40,14 @@ execute if entity @s[tag=ca.relentless_amplify,tag=!ca.ignore_traits_active] run
 execute if entity @s[tag=ca.devious_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_d ca.var 1
 execute if entity @s[tag=ca.sacrificial_amplify,tag=!ca.ignore_traits_active] run scoreboard players set $heal_amp_s ca.var 1
 
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_dynamic_after] run scoreboard players set $heal_acr_dy ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_strafe_after] run scoreboard players set $heal_acr_st_bk ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_strafe_back_after] run scoreboard players set $heal_acr_st ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_gap_close_after] run scoreboard players set $heal_acr_gc ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_retreat_after] run scoreboard players set $heal_acr_re ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_after] run scoreboard players set $heal_acr_kn ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_forward_after] run scoreboard players set $heal_acr_kf ca.var 1
-execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acrobatic_kite_strafe_after] run scoreboard players set $heal_acr_ks ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_dynamic_after] run scoreboard players set $heal_acr_dy ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_strafe_after] run scoreboard players set $heal_acr_st_bk ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_strafe_back_after] run scoreboard players set $heal_acr_st ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_gap_close_after] run scoreboard players set $heal_acr_gc ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_retreat_after] run scoreboard players set $heal_acr_re ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_kite_after] run scoreboard players set $heal_acr_kn ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_kite_forward_after] run scoreboard players set $heal_acr_kf ca.var 1
+execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_kite_strafe_after] run scoreboard players set $heal_acr_ks ca.var 1
 
 scoreboard players set $heal_count ca.mob_var 0
 

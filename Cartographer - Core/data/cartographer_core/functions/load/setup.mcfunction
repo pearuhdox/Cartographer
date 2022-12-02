@@ -183,6 +183,7 @@ scoreboard players set $33 ca.CONSTANT 33
 scoreboard players set $35 ca.CONSTANT 35
 
 scoreboard players set $40 ca.CONSTANT 40
+scoreboard players set $41 ca.CONSTANT 41
 scoreboard players set $50 ca.CONSTANT 50
 scoreboard players set $55 ca.CONSTANT 55
 scoreboard players set $65 ca.CONSTANT 65

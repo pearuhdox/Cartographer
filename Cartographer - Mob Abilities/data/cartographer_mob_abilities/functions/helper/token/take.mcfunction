@@ -14,6 +14,7 @@ execute if entity @s[tag=ca.quickdraw,tag=!ca.heavy_priority] run function carto
 execute if entity @s[tag=ca.storm,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 execute if entity @s[tag=ca.sidearm,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.sniper_shot,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
+execute if entity @s[tag=ca.summoner,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_light
 
 #Heavy Attacks with no Light Attack Priority
 execute if entity @s[tag=ca.augmenter,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy

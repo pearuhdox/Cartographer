@@ -1,0 +1,11 @@
+summon enderman ~ ~ ~ {Silent:1b,DeathLootTable:"cartographer_mimics:colossus",PersistenceRequired:1b,Health:200f,AngerTime:2147483647,Motion:[0.0,0.5,0.0],Tags:["colossus_sloth","active_colossus","ca.has_active","ca.augmenter","ca.inner_ring","ca.outer_ring","ca.ability_haste++","ca.alchemist"],CustomName:'{"text":"Colossus of Sloth","color":"red","bold":true,"italic":false}',HandItems:[{},{id:"minecraft:potion",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],CustomPotionEffects:[{Id:2,Amplifier:5b,Duration:30}],Potion:"minecraft:awkward",CustomPotionColor:2032166}}],HandDropChances:[2.000F,0.085F],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{Enchantments:[{id:"minecraft:projectile_protection",lvl:5s},{id:"minecraft:vanishing_curse",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:7,Operation:0,UUID:[I;96765144,-261274988,-1127320982,788081981]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:-0.45,Operation:1,UUID:[I;272235579,1284916847,-2132653758,-519727260]}],SkullOwner:{Id:[I;1789623646,1923696787,-1797644131,-1488734365],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzlkODdlMmVmMmYzMTdmYThmMjdmYTk4ZjdlNzQ0ZWNlYmYwNzIwODc2MzIzZWFiOTIxMDUwMzFiMTAzMGNiYiJ9fX0="}]}}}}],ArmorDropChances:[-327.670F,-327.670F,-327.670F,0.085F],ActiveEffects:[{Id:14,Amplifier:4b,Duration:20000000},{Id:24,Amplifier:4b,Duration:20000000}],Attributes:[{Name:generic.max_health,Base:200},{Name:generic.knockback_resistance,Base:1},{Name:generic.attack_damage,Base:1},{Name:generic.armor,Base:0},{Name:generic.attack_knockback,Base:2.5}]}
+
+playsound minecraft:entity.zombie.break_wooden_door hostile @a[distance=..16] ~ ~ ~ 1 0.5
+playsound minecraft:entity.evoker_fangs.attack hostile @a[distance=..16] ~ ~ ~ 2 0.7
+
+particle minecraft:campfire_signal_smoke ~ ~1.5 ~ 0.3 0.1 0.3 0.075 10 normal
+particle minecraft:large_smoke ~ ~0.5 ~ 0.4 0.1 0.4 0.1 20 normal
+
+execute as @e[tag=active_colossus,limit=1,sort=nearest] at @s run function cartographer_mimics:colossus/scale
+
+kill @s

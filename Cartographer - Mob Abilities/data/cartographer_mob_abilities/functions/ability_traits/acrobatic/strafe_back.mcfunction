@@ -14,4 +14,4 @@ function motion:motion/push
 
 tag @s add ca.has_strafed
 
-scoreboard players set @s ca.acrobatic_cooldown 3
+scoreboard players set @s ca.acro_cooldown 3

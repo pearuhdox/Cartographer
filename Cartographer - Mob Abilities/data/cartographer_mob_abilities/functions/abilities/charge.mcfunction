@@ -1,9 +1,3 @@
-scoreboard players set @s cooldown 8
-
-function cartographer_mob_abilities:ability_traits/cooldown_traits
-
-scoreboard players set @s ability_charge 0
-
 scoreboard players set @s ca.raycast 21
 
 function cartographer_mob_abilities:abilities/charge/calc_damage
@@ -22,9 +16,4 @@ data merge entity @s {NoAI:0}
 
 execute as @a[distance=..16] at @s run playsound minecraft:entity.ender_dragon.growl hostile @a[distance=..16] ~ ~ ~ 2 2
 
-#Token Management. Remove the Token, set all nearby players token refresh on cooldown.
-function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
-
-#say test
-
-kill @e[type=armor_stand,tag=charge_marker,limit=1,sort=nearest]
+#Reset is done in reset function to give half second delay between accelerate calls

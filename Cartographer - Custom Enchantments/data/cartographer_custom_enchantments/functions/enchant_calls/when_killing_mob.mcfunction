@@ -7,7 +7,7 @@ execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_cu
 #Frenzy
 execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy
 #Lifesteal
-execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal
 
 #Aquadynamic Refresh
 #Lifesteal

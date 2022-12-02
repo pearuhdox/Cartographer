@@ -1,7 +1,7 @@
 {
     "display": {
         "title": {
-            "text": "Summoner                 ",
+            "text": "Summon Swap              ",
             "color": "white"
         },
         "description": {
@@ -21,7 +21,7 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.summoner\"]}"
+                    "nbt": "{Tags:[\"ca.summon_swap\"]}"
                 }
             }
         }

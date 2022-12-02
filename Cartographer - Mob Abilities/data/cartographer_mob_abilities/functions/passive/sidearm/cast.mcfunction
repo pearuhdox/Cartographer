@@ -7,6 +7,6 @@ scoreboard players set @s mob_move_red 6
 
 playsound minecraft:item.crossbow.shoot hostile @a[distance=..15] ~ ~ ~ 1 1.5
 
-execute anchored eyes positioned ^ ^ ^1 run function cartographer_mob_abilities:abilities/sidearm/branch
+execute anchored eyes positioned ^ ^ ^1 run function cartographer_mob_abilities:abilities/sidearm/shoot_branch
 
 scoreboard players set @s ca.sidearm_windup 0

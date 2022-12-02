@@ -11,7 +11,7 @@ execute if entity @s[type=creeper] run function cartographer_mob_abilities:loop/
 execute if entity @s[type=#cartographer_mob_abilities:has_size] run function cartographer_mob_abilities:loop/tick/has_size
 
 #Run Evoker Replaces
-execute if entity @s[type=evoker,tag=ca.summoner] if entity @s[nbt={SpellTicks:80}] run function cartographer_mob_abilities:passive/summoner/master
+execute if entity @s[type=evoker,tag=ca.summon_swap] if entity @s[nbt={SpellTicks:80}] run function cartographer_mob_abilities:passive/summoner/master
 
 #Run Sweep Animations
 execute if score @s ca.sweep_animation matches 1.. run function cartographer_mob_abilities:abilities/sweep/animation
@@ -42,7 +42,7 @@ execute if entity @s[scores={augment_time=1..}] run particle minecraft:dust_colo
 execute if entity @s[scores={augment_time=1}] run function cartographer_mob_abilities:abilities/augmenter/remove_augment
 
 #Elytra Deploy
-execute if score @s[tag=ca.acrobatic_kite_elytra] ca.elytra_deploy_time matches 11.. run function cartographer_mob_abilities:loop/1_second/branches/give_fall_flying_branch
+execute if score @s[tag=ca.acro_kite_elytra] ca.elytra_deploy_time matches 11.. run function cartographer_mob_abilities:loop/1_second/branches/give_fall_flying_branch
 execute if score @s ca.elytra_deploy_time matches 1.. run scoreboard players add @s ca.elytra_deploy_time 1
 
 #Run Trap Traits

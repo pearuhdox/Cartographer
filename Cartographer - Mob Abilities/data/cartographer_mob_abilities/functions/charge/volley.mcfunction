@@ -40,9 +40,9 @@ execute if score @s ability_charge matches 1..5 run tp @s ~ ~ ~ facing entity @p
 execute if score @s ability_charge matches 1 run scoreboard players set @s ca.mob_move_mode 2
 execute if score @s ability_charge matches 1 run scoreboard players set @s ca.mob_move_time 21
 
-execute if score @s[tag=ca.has_kited,tag=!ca.acrobatic_kite_elytra] ability_charge matches 1 run effect give @s jump_boost 2 6 true
-execute if score @s[tag=ca.has_kited,tag=!ca.acrobatic_kite_elytra] ability_charge matches 1 run effect give @s levitation 1 0 true
-execute if score @s[tag=ca.has_kited,tag=!ca.acrobatic_kite_elytra] ability_charge matches 1 run particle minecraft:cloud ~ ~-0.5 ~ 0.3 0 0.3 0.05 15 normal
-execute if score @s[tag=ca.has_kited,tag=!ca.acrobatic_kite_elytra] ability_charge matches 1 run particle minecraft:cloud ~ ~-0.5 ~ 0.3 0 0.3 0.05 15 normal
+execute if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge matches 1 run effect give @s jump_boost 2 6 true
+execute if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge matches 1 run effect give @s levitation 1 0 true
+execute if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge matches 1 run particle minecraft:cloud ~ ~-0.5 ~ 0.3 0 0.3 0.05 15 normal
+execute if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge matches 1 run particle minecraft:cloud ~ ~-0.5 ~ 0.3 0 0.3 0.05 15 normal
 
 execute if score @s ability_charge matches 20.. run function cartographer_mob_abilities:abilities/volley

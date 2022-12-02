@@ -9,6 +9,7 @@ execute if entity @s[tag=ca.venemous] run data modify storage cartographer_mob_a
 execute if entity @s[tag=ca.webbing] run data modify storage cartographer_mob_abilities:projectiles TagTemplate append value "ca.webbing"
 execute if entity @s[tag=ca.horrifying] run data modify storage cartographer_mob_abilities:projectiles TagTemplate append value "ca.horrifying"
 execute if entity @s[tag=ca.celestial] run data modify storage cartographer_mob_abilities:projectiles TagTemplate append value "ca.celestial"
+execute if entity @s[tag=ca.zephyrous] run data modify storage cartographer_mob_abilities:projectiles TagTemplate append value "ca.zephyrous"
 
 execute if entity @s[tag=ca.alchemist] run data modify storage cartographer_mob_abilities:projectiles TagTemplate append value "ca.alchemist"
 execute if entity @s[tag=ca.alchemist] run data modify storage cartographer_mob_abilities:projectiles AlchemistTemplate set from storage cartographer_mob_abilities:alchemist PotionCopy

@@ -34,7 +34,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"ca.acrobatic_strafe\"]}"
+              "nbt": "{Tags:[\"ca.acro_strafe\"]}"
             }
           }
         ]
@@ -48,7 +48,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"ca.acrobatic_gap_close\"]}"
+              "nbt": "{Tags:[\"ca.acro_gap_close\"]}"
             }
           }
         ]
@@ -62,7 +62,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"ca.acrobatic_retreat\"]}"
+              "nbt": "{Tags:[\"ca.acro_retreat\"]}"
             }
           }
         ]
@@ -76,7 +76,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"ca.acrobatic_kite\"]}"
+              "nbt": "{Tags:[\"ca.acro_kite\"]}"
             }
           }
         ]
@@ -90,7 +90,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"ca.acrobatic_kite_forward\"]}"
+              "nbt": "{Tags:[\"ca.acro_kite_forward\"]}"
             }
           }
         ]
@@ -104,7 +104,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"ca.acrobatic_kite_strafe\"]}"
+              "nbt": "{Tags:[\"ca.acro_kite_strafe\"]}"
             }
           }
         ]

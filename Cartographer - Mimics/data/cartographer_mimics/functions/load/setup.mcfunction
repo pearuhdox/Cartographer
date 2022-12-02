@@ -6,11 +6,19 @@ scoreboard objectives add helper_power armor
 
 scoreboard objectives add setup dummy
 
+scoreboard objectives add ca.colo_animation dummy
+
 bossbar remove cartographer:mimic
 bossbar add cartographer:mimic {"text":"Mimic","color":"red","bold":true}
 bossbar set cartographer:mimic color red
 bossbar set cartographer:mimic style notched_6
 bossbar set cartographer:mimic max 120
+
+bossbar remove cartographer:colossus
+bossbar add cartographer:colossus {"text":"Cage Colossus","color":"red","bold":true}
+bossbar set cartographer:colossus color red
+bossbar set cartographer:colossus style notched_10
+bossbar set cartographer:colossus max 200
 
 #Setup LoE data space
 function cartographer_mimics:load/integration/active/clear
