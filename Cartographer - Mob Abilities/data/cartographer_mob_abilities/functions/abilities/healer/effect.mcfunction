@@ -3,6 +3,8 @@ execute store result score $healer_amt ca.var run data get entity @s Attributes[
 
 scoreboard players operation $healer_amt ca.var /= $3 ca.CONSTANT
 
+execute if score $healer_amt ca.var matches 21.. run scoreboard players set $healer_amt ca.var 20
+
 scoreboard players operation @s cdl.heal_queue = $healer_amt ca.var
 function cd:lib/mob/heal
 
