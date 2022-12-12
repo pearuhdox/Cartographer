@@ -4,7 +4,7 @@ execute if entity @s[tag=ca.sniper_shot,tag=tokened,scores={cooldown=0}] if enti
 execute if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:charge/volley
 
 
-execute if entity @s[tag=ca.nova,tag=!ca.pulse,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:charge/nova
+execute if entity @s[tag=ca.nova,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:charge/nova
 
 execute if entity @s[tag=ca.ambush,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..25] run function cartographer_mob_abilities:charge/ambush
 
