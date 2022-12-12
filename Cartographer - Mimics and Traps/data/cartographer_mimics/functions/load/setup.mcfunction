@@ -8,6 +8,8 @@ scoreboard objectives add setup dummy
 
 scoreboard objectives add ca.colo_animation dummy
 
+scoreboard objectives add ca.mimic_var dummy
+
 bossbar remove cartographer:mimic
 bossbar add cartographer:mimic {"text":"Mimic","color":"red","bold":true}
 bossbar set cartographer:mimic color red

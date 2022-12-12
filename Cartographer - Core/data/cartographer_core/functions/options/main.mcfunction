@@ -30,6 +30,8 @@ function cartographer_custom_enchantments:options/header
 function cartographer_custom_statuses:options/header
 function cartographer_loot_table_tweaks:options/header
 function cartographer_mob_abilities:options/header
+function cartographer_mimics:options/header
+
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @p {"text":"------------------------------------------","color":"#FFE0A3","bold":true}

@@ -1,0 +1,1 @@
+tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Mimics and Traps","color":"#FFF56E","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View settings for Custom Enchantments.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_mimics:options/main"}}]

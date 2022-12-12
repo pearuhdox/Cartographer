@@ -6,6 +6,7 @@ execute if entity @s[tag=ca.core_check_inv] unless score @s ca.core_delay_check 
 function cartographer_custom_enchantments:loop/tick/player
 function cartographer_custom_statuses:loop/tick/player
 function cartographer_mob_abilities:loop/tick/player
+function cartographer_mimics:loop/tick/player
 function cartographer_loot_table_tweaks:loop/tick/player
 
 #Remove the inventory check from core here so it can be used in other functionality
