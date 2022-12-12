@@ -7,7 +7,7 @@ execute if score $laser_blocked ca.var matches 1.. run scoreboard players operat
 scoreboard players set @s ca.laser_damage 0
 tag @s add ca.hit_by_laser
 
-function cd:lib/player/normal
+function cd:lib/player/damage/normal
 
 tag @s add ability_tagged
 

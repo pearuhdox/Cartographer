@@ -25,7 +25,7 @@ execute if entity @s[tag=ca.celestial] as @e[type=#bb:hostile,distance=..4] at @
 tag @a[distance=..4] remove ability_tagged
 execute as @a[distance=..4] at @s run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
 execute as @a[distance=..4] at @s run scoreboard players set @s cdl.death_id 310215
-execute as @a[distance=..4] at @s run function cd:lib/player/damage/normal
+execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[distance=..4] positioned as @s run function cartographer_core:helper/damage_knockback/targeting_direction
 
 execute if entity @s[tag=ca.lingering] run function cartographer_mob_abilities:passive/parting_gift/cloud/spawn
 

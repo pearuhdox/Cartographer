@@ -23,6 +23,7 @@ execute if score $custom_durability ca.installed matches 1 run function cartogra
 execute if score $custom_enchantments ca.installed matches 1 run function cartographer_custom_enchantments:load/load_message
 execute if score $custom_statuses ca.installed matches 1 run function cartographer_custom_statuses:load/load_message
 execute if score $loot_additions ca.installed matches 1 run function cartographer_loot_additions:load/load_message
+execute if score $loot_table_tweaks ca.installed matches 1 run function cartographer_loot_table_tweaks:load/load_message
 execute if score $mimics ca.installed matches 1 run function cartographer_mimics:load/load_message
 execute if score $mob_abilities ca.installed matches 1 run function cartographer_mob_abilities:load/load_message
 execute if score $repair_stations ca.installed matches 1 run function cartographer_repair_stations:load/load_message

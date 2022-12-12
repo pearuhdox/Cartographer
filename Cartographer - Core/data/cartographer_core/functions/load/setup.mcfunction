@@ -16,6 +16,7 @@ scoreboard players set $custom_durability ca.installed 0
 scoreboard players set $custom_enchantments ca.installed 0
 scoreboard players set $custom_statuses ca.installed 0
 scoreboard players set $loot_additions ca.installed 0
+scoreboard players set $loot_table_tweaks ca.installed 0
 scoreboard players set $mimics ca.installed 0
 scoreboard players set $mob_abilities ca.installed 0
 scoreboard players set $pot_injector ca.installed 0
@@ -85,6 +86,10 @@ scoreboard objectives add ca.throw_trident minecraft.used:minecraft.trident
 
 #Create raycast score
 scoreboard objectives add ca.raycast dummy
+
+#Create lifetime score
+scoreboard objectives add ca.lifetime dummy
+
 
 #Create scores for custom damage
 scoreboard objectives add cdl.damage_queue dummy

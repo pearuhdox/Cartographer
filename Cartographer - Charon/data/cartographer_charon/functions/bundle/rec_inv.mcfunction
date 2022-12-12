@@ -3,7 +3,7 @@ data modify storage cartographer_charon:player temp set from storage inv:main in
 data remove storage inv:main inv.all[0]
 
 #find
-execute if data storage cartographer_charon:player temp.tag{DeathBundle:1b} run function cartographer_charon:bundle/rec_unbundle
+execute if data storage cartographer_charon:player temp.tag{DeathBundle:1b} if data storage cartographer_charon:player temp.tag.Items[0].id run function cartographer_charon:bundle/rec_unbundle
 
 #If the bundle has xp stored, return that xp
 execute if data storage cartographer_charon:player temp.tag{DeathBundle:1b} run function cartographer_charon:xp/return/start

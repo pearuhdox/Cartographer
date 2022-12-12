@@ -1,0 +1,1 @@
+execute store result entity @s Attributes[{Name:"minecraft:generic.attack_damage"}].Base double 1 run scoreboard players add $dmg_kb cdl.damage_queue 0

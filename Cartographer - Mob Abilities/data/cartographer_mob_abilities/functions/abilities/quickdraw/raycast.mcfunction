@@ -14,7 +14,7 @@ execute as @a[distance=..2,tag=!quickdrawn] run scoreboard players operation @s 
 execute as @a[distance=..2,tag=!quickdrawn] unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310211
 execute as @a[distance=..2,tag=!quickdrawn] run tag @s remove no_cdl_msg
 execute as @a[distance=..2,tag=!quickdrawn] run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
-execute as @a[distance=..2,tag=!quickdrawn] run function cd:lib/player/damage/normal
+execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[distance=..2,tag=!quickdrawn] positioned as @s run function cartographer_core:helper/damage_knockback/targeting_direction
 execute as @a[distance=..2,tag=!quickdrawn] at @s run tag @s add ability_tagged
 execute as @a[distance=..2,tag=!quickdrawn] run particle minecraft:flash ~ ~ ~ 0 0 0 0 1 force
 execute as @a[distance=..2,tag=!quickdrawn] run tag @s add quickdrawn

@@ -1,18 +1,12 @@
 execute unless score @s[tag=ca.has_active] ability_charge matches -1.. run scoreboard players set @s ability_charge 0
 execute unless score @s[tag=ca.shrieker] ability_charge matches -1.. run scoreboard players set @s ability_charge 0
 
-#Run all actives
-execute if entity @s[tag=avail_target] as @s[type=#bb:hostile,tag=ca.has_active,tag=attacking,scores={cooldown=0}] at @s run function cartographer_mob_abilities:loop/1_second/run_actives
-execute unless entity @s[tag=avail_target] as @s[type=#bb:hostile,tag=ca.has_active,tag=attacking,scores={cooldown=0}] at @s run function cartographer_mob_abilities:loop/1_second/cancel_actives
-
 #Run Acrobat Passive
 execute if entity @s[tag=ca.acro_pass] unless score @s ca.acrobat_passive_cooldown matches 1.. run function cartographer_mob_abilities:ability_traits/acrobatic/passive/chance
-execute if entity @s[tag=ca.acrobatic] if score @s ca.acro_cooldown matches 1.. run scoreboard players remove @s ca.acro_cooldown 1
 
 #Run Trigger Trait Passive
 execute if entity @s[tag=ca.trigger_traits] unless score @s ability_charge matches 1.. unless score @s ca.trigger_trait_cooldown matches 1.. if entity @a[distance=..32,gamemode=!creative,gamemode=!spectator] run function cartographer_mob_abilities:passive/trigger_trait/chance
 execute if entity @s[tag=ca.trigger_traits] if score @s ca.trigger_trait_cooldown matches 1.. run scoreboard players remove @s ca.trigger_trait_cooldown 1
-
 
 #Reduce Cooldowns on all enemies with cooldowns.
 scoreboard players remove @s[tag=ca.has_active,scores={cooldown=1..}] cooldown 1

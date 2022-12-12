@@ -5,4 +5,4 @@ effect give @s mining_fatigue 2 2 true
 
 scoreboard players add @s cdl.damage_queue 8
 
-function cd:lib/player/normal
+function cd:lib/player/damage/normal

@@ -1,5 +1,7 @@
 scoreboard players set @s ca.raycast 21
 
+tag @s add has_charged
+
 function cartographer_mob_abilities:abilities/charge/calc_damage
 
 execute as @s positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/charge/raycast

@@ -9,4 +9,6 @@ execute if score @s ability_charge matches 1 anchored eyes run scoreboard player
 execute if score @s ability_charge matches 1 anchored eyes run particle minecraft:effect ^0.5 ^0.3 ^ 0.15 0 0.15 0 10 normal
 execute if score @s ability_charge matches 1 anchored eyes run particle minecraft:effect ^-0.5 ^0.3 ^ 0.15 0 0.15 0 10 normal
 
-execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/summoner
+execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/summoner
+
+function cartographer_mob_abilities:loop/tick/animation

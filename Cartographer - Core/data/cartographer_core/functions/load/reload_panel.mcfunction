@@ -18,6 +18,7 @@ function cartographer_custom_durability:load/load_check
 function cartographer_custom_enchantments:load/load_check
 function cartographer_custom_statuses:load/load_check
 function cartographer_loot_additions:load/load_check
+function cartographer_loot_table_tweaks:load/load_check
 function cartographer_mimics:load/load_check
 function cartographer_mob_abilities:load/load_check
 function cartographer_repair_stations:load/load_check

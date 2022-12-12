@@ -14,13 +14,16 @@ execute if score @s[tag=ca.single_wave] ability_charge matches 1 run scoreboard 
 #execute if score @s ability_charge matches 1 run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["rift_marker","rift_marker_3","ability_marker"]}
 
 execute if score @s ability_charge matches 1 run playsound minecraft:entity.iron_golem.death hostile @a[distance=..24] ~ ~ ~ 2 0.5
-execute if score @s ability_charge matches 2 run playsound minecraft:entity.iron_golem.death hostile @a[distance=..24] ~ ~ ~ 2 0.75
-execute if score @s ability_charge matches 3 run playsound minecraft:entity.iron_golem.death hostile @a[distance=..24] ~ ~ ~ 2 1
+execute if score @s ability_charge matches 11 run playsound minecraft:entity.iron_golem.death hostile @a[distance=..24] ~ ~ ~ 2 0.75
+execute if score @s ability_charge matches 21 run playsound minecraft:entity.iron_golem.death hostile @a[distance=..24] ~ ~ ~ 2 1
 
-execute if score @s[tag=ca.single_wave] ability_charge matches 2 facing entity @p eyes run function cartographer_mob_abilities:charge/rift/particles/branch
+execute if score @s[tag=ca.single_wave] ability_charge matches 11 facing entity @p eyes run function cartographer_mob_abilities:charge/rift/particles/branch
 execute if score @s ability_charge matches 1 facing entity @p eyes run function cartographer_mob_abilities:charge/rift/particles/branch
-execute if score @s ability_charge matches 2..3 run function cartographer_mob_abilities:charge/rift/particles/branch
+execute if score @s ability_charge matches 11 run function cartographer_mob_abilities:charge/rift/particles/branch
+execute if score @s ability_charge matches 21 run function cartographer_mob_abilities:charge/rift/particles/branch
 
-execute if score @s ability_charge matches 1..3 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..21 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
-execute if score @s ability_charge matches 4 run function cartographer_mob_abilities:abilities/rift
+execute if score @s ability_charge matches 31.. run function cartographer_mob_abilities:abilities/rift
+
+function cartographer_mob_abilities:loop/tick/animation

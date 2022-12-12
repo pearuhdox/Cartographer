@@ -16,7 +16,7 @@ function cartographer_mob_abilities:abilities/smash/calc_damage
 execute as @a[distance=..3.5] at @s unless block ~ ~-0.3 ~ air run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
 execute as @a[distance=..3.5] at @s unless block ~ ~-0.3 ~ air unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310206
 execute as @a[distance=..3.5] at @s unless block ~ ~-0.3 ~ air run tag @s remove no_cdl_msg
-execute as @a[distance=..3.5] at @s unless block ~ ~-0.3 ~ air run function cd:lib/player/damage/normal
+execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[distance=..3.5] positioned as @s unless block ~ ~-0.3 ~ air run function cartographer_core:helper/damage_knockback/targeting_direction
 
 data merge entity @s {Motion:[0.0,0.5,0.0]}
 

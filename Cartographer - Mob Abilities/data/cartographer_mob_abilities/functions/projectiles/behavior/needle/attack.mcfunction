@@ -16,8 +16,9 @@ scoreboard players set $projectile ca.dmg_type 1
 scoreboard players operation @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] cdl.damage_queue = @s ca.ability_dmg
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310213
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run tag @s remove no_cdl_msg
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run tag @s add ca.pull
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run function cd:lib/player/damage/normal
+execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] positioned as @s run function cartographer_core:helper/damage_knockback/targeting_direction
 
 #Trait Effects
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run tag @s add ability_tagged

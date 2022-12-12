@@ -1,0 +1,1 @@
+tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Loot Table Tweaks","color":"#ECCD50","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View settings for Loot Table Tweaks.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_loot_table_tweaks:options/main"}}]

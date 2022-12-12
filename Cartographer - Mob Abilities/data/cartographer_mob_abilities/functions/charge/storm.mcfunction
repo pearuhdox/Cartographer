@@ -15,5 +15,6 @@ execute if score @s[tag=ca.has_kited] ability_charge matches 1 run effect give @
 execute if score @s[tag=ca.has_kited] ability_charge matches 1 run effect give @s levitation 1 0 true
 execute if score @s[tag=ca.has_kited] ability_charge matches 1 run particle minecraft:cloud ~ ~-0.5 ~ 0.3 0 0.3 0.05 15 normal
 
-execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/storm
+execute if score @s ability_charge matches 16.. run function cartographer_mob_abilities:abilities/storm
 
+function cartographer_mob_abilities:loop/tick/animation

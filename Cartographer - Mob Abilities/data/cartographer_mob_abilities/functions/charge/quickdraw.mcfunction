@@ -9,12 +9,21 @@ execute if score @s ability_charge matches 1 run playsound minecraft:block.chest
 execute if score @s ability_charge matches 1 run playsound minecraft:entity.pillager.hurt hostile @a[distance=..16] ~ ~ ~ 2 1.5
 execute if score @s ability_charge matches 1 run playsound minecraft:entity.blaze.hurt hostile @a[distance=..16] ~ ~ ~ 2 1.5
 
+execute if score @s ability_charge matches 8 run playsound minecraft:item.crossbow.loading_end hostile @a[distance=..16] ~ ~ ~ 2 0.75
+execute if score @s ability_charge matches 8 run playsound minecraft:block.chest.locked hostile @a[distance=..16] ~ ~ ~ 2 2
+execute if score @s ability_charge matches 8 run playsound minecraft:entity.pillager.hurt hostile @a[distance=..16] ~ ~ ~ 2 1.5
+execute if score @s ability_charge matches 8 run playsound minecraft:entity.blaze.hurt hostile @a[distance=..16] ~ ~ ~ 2 1.5
+
 execute if score @s ability_charge matches 1 run scoreboard players set @s mob_dis_red 23
 
 execute if score @s ability_charge matches 1 run data merge entity @s {NoAI:1}
 
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:charge/quickdraw/branch
 
+execute if score @s ability_charge matches 8 run function cartographer_mob_abilities:charge/quickdraw/branch
+
 execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
-execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/quickdraw
+execute if score @s ability_charge matches 16.. run function cartographer_mob_abilities:abilities/quickdraw
+
+function cartographer_mob_abilities:loop/tick/animation

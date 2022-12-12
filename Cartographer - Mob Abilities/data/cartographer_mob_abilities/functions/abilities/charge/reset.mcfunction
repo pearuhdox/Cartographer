@@ -1,3 +1,5 @@
+tag @s remove has_charged
+
 scoreboard players set @s cooldown 8
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits

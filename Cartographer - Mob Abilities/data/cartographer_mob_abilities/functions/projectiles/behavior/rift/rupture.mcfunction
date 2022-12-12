@@ -14,6 +14,8 @@ particle explosion ~ ~-0.5 ~ 0 0 0 0 1 force
 scoreboard players operation $rift_damage ca.ability_dmg = @s ca.ability_dmg
 
 execute as @a[distance=..2.5] positioned ~-0.75 ~-0.25 ~-0.75 if entity @a[dx=1.5,dz=1.5,dy=0] positioned ~0.75 ~0.25 ~0.75 run function cartographer_mob_abilities:projectiles/behavior/rift/hit
+execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[distance=..2.5] positioned ~-0.75 ~-0.25 ~-0.75 if entity @a[dx=1.5,dz=1.5,dy=0] positioned ~0.75 ~0.25 ~0.75 positioned as @s run function cartographer_core:helper/damage_knockback/targeting_direction
+
 execute if entity @a[distance=..2.5] positioned ~-0.75 ~-0.25 ~-0.75 if entity @a[dx=1.5,dz=1.5,dy=0] positioned ~0.75 ~0.25 ~0.75 run function cartographer_mob_abilities:abilities/rift/call_rift_traits
 
 tag @a[distance=..2.5] remove ability_tagged

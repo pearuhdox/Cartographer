@@ -26,8 +26,13 @@ scoreboard objectives add taxes.time minecraft.custom:minecraft.time_since_death
 
 scoreboard objectives add charon.player_stats dummy
 
+scoreboard objectives add ca.revive_time dummy
+
 team add CharonCageVisual
 team modify CharonCageVisual color dark_aqua
+
+team add CharonShadeVisualLow
+team modify CharonShadeVisualLow color red
 
 # When a player has a score in Boons, instead of being subject to the traditional death mechanics, they will instead lose 1 Boon. At 0, Death penalties occur as normal.
 # It is up to the mapmaker to decide how Boons are obtained, outside of the Ambrosia item which is innately supported.

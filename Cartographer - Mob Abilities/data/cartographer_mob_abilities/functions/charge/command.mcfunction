@@ -11,4 +11,4 @@ execute if score @s ability_charge matches 1 run scoreboard players set @s mob_a
 
 execute if score @s ability_charge matches 1 run particle minecraft:cloud ~ ~1 ~ 0.3 0.3 0.3 0.05 10 normal
 
-execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/command
+execute if score @s ability_charge matches 21 run function cartographer_mob_abilities:abilities/command

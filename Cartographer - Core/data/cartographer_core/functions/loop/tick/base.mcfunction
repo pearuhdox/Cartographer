@@ -1,6 +1,13 @@
 #Set the world difficulty to this constant.
 execute store result score $core.difficulty ca.CONSTANT run difficulty
 
+#Get Player Count
+execute store result score $player_count ca.gamerule if entity @a
+
+#Run the list track for Helper Damage No Knockback
+function cartographer_core:helper/damage_knockback/list_track
+
+
 #Run all Cartographer Effects from Core Timers.
 function cartographer_charon:loop/tick/base
 function cartographer_custom_durability:loop/tick/base

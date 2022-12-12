@@ -18,6 +18,8 @@ execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing]
 
 execute if score @s ability_charge matches 1 at @s run function cartographer_mob_abilities:charge/hookshot/branch
 
-execute if score @s ability_charge matches 2 run tag @s remove is_casting
+execute if score @s ability_charge matches 21 run tag @s remove is_casting
 
-execute if score @s ability_charge matches 2 run function cartographer_mob_abilities:abilities/hookshot
+execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/hookshot
+
+function cartographer_mob_abilities:loop/tick/animation

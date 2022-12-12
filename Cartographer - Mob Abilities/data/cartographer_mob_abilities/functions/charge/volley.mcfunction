@@ -46,3 +46,5 @@ execute if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge ma
 execute if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge matches 1 run particle minecraft:cloud ~ ~-0.5 ~ 0.3 0 0.3 0.05 15 normal
 
 execute if score @s ability_charge matches 20.. run function cartographer_mob_abilities:abilities/volley
+
+function cartographer_mob_abilities:loop/tick/animation

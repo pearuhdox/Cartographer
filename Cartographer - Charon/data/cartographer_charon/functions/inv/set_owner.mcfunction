@@ -1,0 +1,1 @@
+data modify storage cartographer_charon:bundle bundle.tag.Owner set from entity @p UUID

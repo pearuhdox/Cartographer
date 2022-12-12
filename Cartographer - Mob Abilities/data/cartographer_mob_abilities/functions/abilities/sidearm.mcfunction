@@ -1,3 +1,5 @@
+tag @s remove has_sidearmed
+
 scoreboard players set @s cooldown 6
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
