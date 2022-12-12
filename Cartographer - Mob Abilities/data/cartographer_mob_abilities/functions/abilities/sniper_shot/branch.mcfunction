@@ -31,8 +31,8 @@ execute if entity @s[tag=ca.shoot_grenade] run scoreboard players set $reduced_p
 
 
 #Grab Starting Attack Damage Value
-execute store result score $damage ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
-scoreboard players operation $damage ca.ability_dmg *= $2 ca.CONSTANT
+function cartographer_mob_abilities:abilities/sniper_shot/calc_damage
+
 
 #Save All Relevant Data
 function cartographer_mob_abilities:projectiles/data/get/master_call

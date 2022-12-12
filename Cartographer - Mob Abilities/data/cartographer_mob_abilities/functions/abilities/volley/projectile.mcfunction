@@ -25,7 +25,7 @@ execute unless entity @a[distance=..5] if entity @s[tag=ca.shoot_dragon_fireball
 execute unless entity @s[tag=ca.shoot_grenade] run scoreboard players set $reduced_power ca.xyz_convert 3
 
 #Grab Starting Attack Damage Value
-execute store result score $damage ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+function cartographer_mob_abilities:abilities/volley/calc_damage
 
 #Save All Relevant Data
 function cartographer_mob_abilities:projectiles/data/get/master_call

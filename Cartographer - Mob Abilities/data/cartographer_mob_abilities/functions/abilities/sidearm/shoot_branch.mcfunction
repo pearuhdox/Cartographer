@@ -46,7 +46,7 @@ execute if entity @s[tag=ca.shoot_grenade] run scoreboard players set $inaccurac
 execute unless entity @s[tag=ca.shoot_trap] unless entity @s[tag=ca.shoot_grenade] run scoreboard players set $reduced_power ca.xyz_convert 4
 
 #Grab Starting Attack Damage Value
-execute store result score $damage ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+function cartographer_mob_abilities:abilities/sidearm/calc_damage
 
 #Save All Relevant Data
 execute as @s at @s run function cartographer_mob_abilities:projectiles/data/get/master_call

@@ -51,7 +51,7 @@ execute if entity @s[tag=ca.shoot_magic_missile] run scoreboard players set $ina
 execute if entity @s[tag=ca.shoot_magic_missile] run function cartographer_mob_abilities:projectiles/helper/get_motion_value/add_inaccuracy_no_motion
 
 #Grab Starting Attack Damage Value
-execute store result score $damage ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+function cartographer_mob_abilities:charge/barrage/calc_damage
 
 #Save All Relevant Data
 function cartographer_mob_abilities:projectiles/data/get/master_call
