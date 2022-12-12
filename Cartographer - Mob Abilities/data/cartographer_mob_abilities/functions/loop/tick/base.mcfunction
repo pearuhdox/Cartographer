@@ -13,7 +13,7 @@ execute unless score $global_past helper_diff = $global helper_diff run tag @a r
 execute unless score $global_past helper_diff = $global helper_diff run scoreboard players operation $global_past helper_diff = $global helper_diff
 
 #Do a line of sight check on one mob that *doesn't* have Line of Sight.
-execute if score $do_los flag matches 1 as @r[gamemode=!creative,gamemode=!spectator] at @s as @e[type=#bb:hostile,tag=ca.has_active,tag=!los_checked,tag=!tokened,scores={cooldown=0..2},limit=1,sort=random,distance=..40] at @s run function cartographer_mob_abilities:helper/los_check/scan
+execute if score $do_los flag matches 1 as @r[gamemode=!creative,gamemode=!spectator] at @s as @e[type=#bb:hostile,tag=ca.has_active,tag=!los_checked,tag=!tokened,scores={cooldown=0..2},limit=1,sort=nearest,distance=..32] at @s run function cartographer_mob_abilities:helper/los_check/scan
 
 #Unflag the check for needing los
 scoreboard players set $do_los flag 0

@@ -4,28 +4,33 @@
 execute store result score $players ca.tokens run execute if entity @a
 
 #Easy Difficulty aka 1:
-#1 Light Token - Cooldown of 4 seconds
-#1 Heavy Token - Cooldown of 4 seconds
+#2 Light Token
+#1 Heavy Token
+#Cooldown - 4 seconds
 execute if score $global helper_diff matches 1 run function cartographer_mob_abilities:load/token_reset/easy_param
 
 #Normal Difficulty aka 2:
-#2 Light Tokens - 3s
-#1 Heavy Token - 3s
+#3 Light Tokens
+#2 Heavy Token
+#Cooldown - 3 Seconds
 execute if score $global helper_diff matches 2 run function cartographer_mob_abilities:load/token_reset/normal_param
 
 #Hard aka 3:
-#3 Light Tokens - 3s
-#2 Heavy Tokens - 3s
+#4 Light Tokens
+#3 Heavy Tokens
+#Cooldown - 2 Seconds
 execute if score $global helper_diff matches 3 run function cartographer_mob_abilities:load/token_reset/hard_param
 
 #4:
-#4 Light Tokens - 2s
-#2 Heavy Tokens - 2s
+#5 Light Tokens
+#3 Heavy Tokens
+#Cooldown - 2 Seconds
 execute if score $global helper_diff matches 4 run function cartographer_mob_abilities:load/token_reset/hell_param
 
 #5:
-#5 Light - 1s
-#3 Heavy - 1s
+#6 Light
+#4 Heavy
+#Cooldown - 2 Seconds
 execute if score $global helper_diff matches 5 run function cartographer_mob_abilities:load/token_reset/arcanic_param
 
 scoreboard players set $tokened_total ca.tokens 0
