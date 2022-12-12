@@ -19,7 +19,7 @@ execute if entity @s[tag=ca.acrobatic] if score @s ca.acro_cooldown matches 1.. 
 function cartographer_mob_abilities:loop/tick/cancel_actives
 
 #Run Sidearm outside of casting
-execute if entity @s[tag=ca.sidearm,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..12] run function cartographer_mob_abilities:charge/sidearm
+execute if entity @s[tag=ca.sidearm,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..12] run function cartographer_mob_abilities:animations/sidearm
 
 #Attack Override Run
 execute if entity @s[tag=ca.attack_override] run function cartographer_mob_abilities:helper/attack_override
