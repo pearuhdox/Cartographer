@@ -1,1 +1,0 @@
-data modify storage loe:datapacks active_datapacks.cartographer.custom_durability set value 1
