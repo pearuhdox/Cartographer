@@ -18,6 +18,6 @@ execute if score @s ability_charge matches 1 run scoreboard players set @s mob_s
 
 execute if score @s ability_charge matches 1 positioned ~ ~ ~ run particle minecraft:sculk_charge_pop ~ ~1 ~ 0.5 0.5 0.5 0 30
 
-execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/orbit
-
 function cartographer_mob_abilities:loop/tick/animation
+
+execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/orbit

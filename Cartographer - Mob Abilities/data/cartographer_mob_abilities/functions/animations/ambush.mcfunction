@@ -6,6 +6,6 @@ execute if score @s ability_charge matches 1 at @p[distance=..25] run playsound 
 
 execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
-execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/ambush
-
 function cartographer_mob_abilities:loop/tick/animation
+
+execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/ambush

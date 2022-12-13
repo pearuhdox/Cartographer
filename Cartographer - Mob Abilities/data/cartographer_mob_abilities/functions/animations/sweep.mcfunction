@@ -22,6 +22,6 @@ execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 p
 execute if score @s ability_charge matches 9 facing entity @p feet rotated ~ 0 positioned ~ ~0.75 ~ run function cartographer_mob_abilities:animations/sweep/place_lines
 execute if score @s ability_charge matches 9 facing entity @p feet rotated ~ 0 positioned ~ ~0.5 ~ run function cartographer_mob_abilities:animations/sweep/warn
 
-execute if score @s ability_charge matches 16.. run function cartographer_mob_abilities:abilities/sweep
-
 function cartographer_mob_abilities:loop/tick/animation
+
+execute if score @s ability_charge matches 16.. run function cartographer_mob_abilities:abilities/sweep

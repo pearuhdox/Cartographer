@@ -20,6 +20,6 @@ execute if score @s ability_charge matches 1 at @s run function cartographer_mob
 
 execute if score @s ability_charge matches 21 run tag @s remove is_casting
 
-execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/hookshot
-
 function cartographer_mob_abilities:loop/tick/animation
+
+execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/hookshot

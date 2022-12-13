@@ -42,7 +42,6 @@ execute if score @s ability_charge matches 1..41 unless entity @s[tag=ca.no_glow
 execute if score @s ability_charge matches 1..51 run scoreboard players set @s mob_move_red 23
 execute if score @s ability_charge matches 1..51 run scoreboard players set @s mob_atk_red 23
 
+function cartographer_mob_abilities:loop/tick/animation
 
 execute if score @s ability_charge matches 51.. run function cartographer_mob_abilities:abilities/augmenter
-
-function cartographer_mob_abilities:loop/tick/animation

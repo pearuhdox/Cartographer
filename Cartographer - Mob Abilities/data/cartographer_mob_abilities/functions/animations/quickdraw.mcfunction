@@ -24,6 +24,6 @@ execute if score @s ability_charge matches 8 run function cartographer_mob_abili
 
 execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
-execute if score @s ability_charge matches 16.. run function cartographer_mob_abilities:abilities/quickdraw
-
 function cartographer_mob_abilities:loop/tick/animation
+
+execute if score @s ability_charge matches 16.. run function cartographer_mob_abilities:abilities/quickdraw

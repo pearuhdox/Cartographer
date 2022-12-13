@@ -13,6 +13,6 @@ execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing]
 execute if score @s ability_charge matches 1 run scoreboard players set @s mob_move_red 18
 execute if score @s ability_charge matches 1 run scoreboard players set @s mob_atk_red 18
 
-execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/duplicator
-
 function cartographer_mob_abilities:loop/tick/animation
+
+execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/duplicator

@@ -27,6 +27,6 @@ execute if score @s ability_charge matches 1..21 unless entity @s[tag=ca.no_glow
 
 execute if entity @s[tag=ca.pulse] run scoreboard players add @s ability_charge 1
 
-execute if score @s ability_charge matches 41.. run function cartographer_mob_abilities:abilities/nova
-
 function cartographer_mob_abilities:loop/tick/animation
+
+execute if score @s ability_charge matches 41.. run function cartographer_mob_abilities:abilities/nova

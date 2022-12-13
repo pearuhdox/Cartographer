@@ -59,6 +59,6 @@ execute if entity @s[scores={ability_charge=102}] as @a[distance=..32] at @s run
 
 execute if entity @s[scores={ability_charge=1}] as @a[distance=..32] at @s run playsound minecraft:entity.warden.agitated hostile @s ~ ~ ~ 1 1.5
 
-execute if entity @s[scores={ability_charge=120..}] run function cartographer_mob_abilities:abilities/laser
-
 function cartographer_mob_abilities:loop/tick/animation
+
+execute if entity @s[scores={ability_charge=120..}] run function cartographer_mob_abilities:abilities/laser
