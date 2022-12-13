@@ -1,4 +1,4 @@
-November Changelog 2022:
+December (1.19.3) Changelog 2022:
 
 Core Changes:
 - Combat timer has been adjusted.
