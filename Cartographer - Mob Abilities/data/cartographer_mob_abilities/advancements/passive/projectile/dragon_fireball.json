@@ -21,7 +21,7 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.shoot_dragon_fireball\"]}"
+                    "nbt": "{Tags:[\"ca.sh_dragon_fireball\"]}"
                 }
             }
         }

@@ -21,7 +21,7 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.shoot_wither_skull\"]}"
+                    "nbt": "{Tags:[\"ca.sh_wither_skull\"]}"
                 }
             }
         }

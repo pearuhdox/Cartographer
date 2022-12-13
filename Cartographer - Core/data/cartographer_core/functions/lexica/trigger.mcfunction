@@ -186,5 +186,15 @@ execute if score @s ca.lexica_trig matches 3582 run function cartographer_mob_ab
 execute if score @s ca.lexica_trig matches 3592 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/volatile
 execute if score @s ca.lexica_trig matches 3602 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/other/warping
 
+execute if score @s ca.lexica_trig matches 3700 run function cartographer_mob_abilities:lexica_calls/pages/category/projectiles/main
+
+execute if score @s ca.lexica_trig matches 3701 run function cartographer_mob_abilities:lexica_calls/pages/category/projectiles/grenade
+execute if score @s ca.lexica_trig matches 3702 run function cartographer_mob_abilities:lexica_calls/pages/category/projectiles/lightning
+execute if score @s ca.lexica_trig matches 3703 run function cartographer_mob_abilities:lexica_calls/pages/category/projectiles/magic_missile
+execute if score @s ca.lexica_trig matches 3704 run function cartographer_mob_abilities:lexica_calls/pages/category/projectiles/needle
+execute if score @s ca.lexica_trig matches 3705 run function cartographer_mob_abilities:lexica_calls/pages/category/projectiles/rift
+execute if score @s ca.lexica_trig matches 3706 run function cartographer_mob_abilities:lexica_calls/pages/category/projectiles/trap
+
+
 #Reset Lexica Trigger Score
 scoreboard players set @s ca.lexica_trig 0

@@ -8,7 +8,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"ca.prevent_effects\",\"ca.shoot_shulker_bullet\"]}"
+                "nbt": "{Tags:[\"ca.prevent_effects\",\"ca.sh_shulker_bullet\"]}"
               }
             }
           ]

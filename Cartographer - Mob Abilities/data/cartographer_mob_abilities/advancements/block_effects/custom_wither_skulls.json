@@ -11,7 +11,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"ca.prevent_effects\",\"ca.shoot_wither_skull\"]}"
+                "nbt": "{Tags:[\"ca.prevent_effects\",\"ca.sh_wither_skull\"]}"
               }
             }
           ]

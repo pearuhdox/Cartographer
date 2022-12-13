@@ -11,7 +11,9 @@ Core Changes:
 - This can be disabled via a new gamerule to disable First Lexica (in Core).
 
 Charon:
-- Now a public module with too much detail to go into. Since this is the first time this module is officially released, the wiki page will contain the changes/how to use.
+
+- Now a public module with too much detail to go into. Since this is the first time this module is officially released, the wiki page will (soon) contain the changes/how to use.
+
 
 Custom Enchantments:
 
@@ -38,6 +40,26 @@ Custom Enchantments:
 	- Cauterize's brittle debuff scales the multiplier off the remaining fire time.
 		- The scaling is equal to the number of ticks on fire (so 5 seconds -> 100 ticks -> 100% extra damage)
 
+- Explosive Retrospective:
+	- Explosive now uses firework data on the item for its explosion. Default is white firework burst (unspecified)
+	- Explosive now does 67% of bow damage instead of firework damage scaling.
+	- Explosive properly scales with Sharpshot and Point Blank.
+	- Explosive Arrows will now trigger when they hit the ground. On hit enchantments will not trigger this way.
+	- Explosive's explosion now pulls mobs towards the center of the explosion.
+	- Explosive now drops xp and does not do friendly fire damage (if you are on a team).
+	- Reworked vfx
+
+- Ricochet Retrospective:
+	- Ricochet now actually causes the trident to bounce to multiple targets.
+	- This means each hit of the trident counts as an attack, and applies all associated effects.
+
+- Regeneration, Sapper, and Lifesteal now work on the same healing over time system.
+	- These 3 enchants now scale off the user's maximum HP value.
+		- Regeneration now heals 1.25% Max Hp per second (5% every 4) with a 1/3 reduction (0.41% extra per second) on extra levels.
+			- The scaling is unchanged for a player with 20 Health.
+		- Sapper and Lifesteal now heal 5% max hp per second, and the time healing lasts for is equivalent to level.
+
+
 - Swift Sneak, Frost Walker, and Soul Speed work on other slots than their default slots (Leggings or Boots).
 
 - Auto Charge now counts breaking a spawner as a kill, and reloads when you break a spawner.
@@ -57,6 +79,9 @@ Custom Enchantments:
 [With Combat Timers having a soft reset, Echo has been nerfed slightly to retain the current power level.]
 
 Custom Statuses:
+
+- Cloaked mobs reveal themselves when within 3 blocks of a player.
+- Cloaked sound effects are quieter.
 
 - Bleeding has been rebalanced:
 	- Bleeding max stacks have been reduced to 5 (was 6).
@@ -78,51 +103,143 @@ Custom Statuses:
 
 		- Bleeding targets gain 1 additional stack only from all of these effects.
 
+Loot Additions:
+
+- Added "Setup Mode" which is toggled in the options menu. When setup mode is off, functions that allow for the setup of Loot Additions placeables are disabled. (This is for improving performance in maps.)
+
+- Placing a nbt+ container into a Cartographer Loot Placeable now creates a player head cache that when broken, drops those items on the ground.
+
+- Ground placed Player Heads are broken much faster when you have Loot Additions installed.
+
+- Loot Altar has been improved.
+	- Now only provides Resistance 3 instead of all previous buffs.
+	- Once you approach a loot altar when there are no mobs around, the buff effect is permanently disabled if more mobs approach the altar.
+	- Cache Chest Heads now work on Loot Altars.
+
+- Multichoice Pedestal can now be right clicked in the center to see a copy of each item and a description of how the Pedestal works.
+
+Loot Table Tweaks:
+- Added modes that add some new effects to drops.
+	- Mob Essence, which removes all drops and gives mobs a chance to drop "Essence" that can be traded at a villager (give command provided, and you can make your own too!)
+	- Health Pickups, which gives mobs a small chance to drop items that immediately heal players when picked up.
 
 Mob Abilities:
-- Added Webbing, a mob trait which spawns a temporary web field on players hit by its effects or damage.
 
-- Removed Webshot, replaced with Quickdraw.
+- The Great Dreaded Custom Projectile Refactor of November:
+	- This is a big one. Are you ready? I sure wasn't...
+		- Trapper, Magic Missile, Needle, Grenadier, and any other projectile throwing ability I am forgetting about has been removed! (...)
+		- Because Projectiles have been reworked into a dynamic system where projectiles can be called from a variety of abilities instead!
+		- Added Volley, Barrage, Sidearm, and Sniper Shot as replacements for the above 4 abilities.
+			- Volley shoots a cone of projectiles. (Like Trapper)
+			- Barrage shoots a string of repeated projectiles. (Like Needle)
+			- Sniper Shot fires one deadly higher speed projectile (Sort of like Magic Missile)
+			- Sidearm quickly fires a projectile with little ability telegraphing.
+				- Sidearm has a variant called "Sidearm After" that fires a Sidearm attack after the mob finishes another ability.
+		- Projectile is specified via a projectile tag.
+	- Passive Projectile Replacements has moved to this system as well!
+	- The full list of currently supported projectiles is:
+		- Arrow
+		- Trident
+		- Potion
+		- Shulker Bullet
+		- Small Fireball
+		- Large Fireball
+		- Dragon Fireball
+		- Wither Skull
+		- Cartographer Needles
+		- Cartographer Grenades
+		- Cartographer Traps
+		- Cartographer Lightning Bolts
+		- Cartographer Rifts
 
+- An Empty Projectile Trait has been added to disable a ranged mob from shooting a projectile.
+
+
+- Added Command, a mob ability which applies the mob's "non hit" traits to the nearest 3 mobs. The caster does not benefit from their non hit traits.
+- Added a new variant of Nova Burst called "Pulse". (ca.pulse). Pulse Novas are half the radius, but activate twice as fast. The mob is also not slowed during the warmup.
 - Added Quickdraw, a mob active attack in which the mob "prepares" and after a couple seconds, attacks fast with a short distance ranged attack.
+- Added Storm, a mob active attack where the mob creates a couple of lightning strikes around the player. The attack pattern is identical to the new Overloading pattern (see below) but without any of Overloading's debuffs. Additional parameter tags include: lightning_rod, lightning_rod_only, restrike
+- Added Summoner as an active attack that summons mobs based on the caster's offhand.
+	- The old Summoner passive tag has been renamed to "Summon Swap" and still exists.
 
-- Added Legionary, a mob trait which summons mobs to attack the player when abilities complete. The mob summoned is dependent on the offhand of the mob with the tag. (Spawn Egg determined)
 
-- Added Shrieker, a new trait. Shrieker is set on a mob instead of the "ca.has_active" tag. When a Shrieker mob reaches 50% or less Health, it screeches, immediately attacking with its set Active Attack. It can only do this once and never uses its active after or before that.
+- Added Acrobatic Trait, a far more flexible version of the old Predator trait.
+	- There are 6 different types of movement tags for use with Acrobatic.
+	- These tags can be set so they are used before or after mob ability casts.
+	- These tags can also be set so they are used periodically on a short cooldown outside of ability casts.
+	- These movement options are: Gap Close, Strafe, Retreat, Kite, Kite Forwards, Kite Strafe.
+
 
 - Added Accelerate, a new trait. (ca.accelerate+ / ++ / +++) Accelerate allows mobs to recast their ability when it finishes, the number of recasts is equal to the + count.
-
+- Added Animation, a new trait (ca.animation+ / ++ / +++ / ++++ / +++++ / - / -- / --- / ---- / -----) that causes the mob's active attack animation to be 20% faster / slower per tier. (Max is twice or half as fast.)
 - Added Ability Damage and Ability Haste at +++/--- tiers.
-
 - Added Amplification Stack traits. These add stacks of Brutal/Relentless/Devious/Sacrificial Blood when an ability is casted. The amplification gives the mob 2 stacks, and Healer/Augmenter apply the stacks to targets they affect.
+- Added Cloaking as a trait rather than an ability. (The mob receives Cloaked status effect for 10 seconds after using its ability)
+- Added Cursing, a mob trait which withers the player (Wither 2) and reduces the durations of positive potion effects on the player by 50%.
+- Added Deathbomb, a new passive trait exclusively for Creepers. This causes creepers to make their death effects when they explode instead of when they die.
+- Added Legionary, a mob trait which summons mobs to attack the player when abilities complete. The mob summoned is dependent on the offhand of the mob with the tag. (Spawn Egg determined)
+- Added Shrieker, a new trait. Shrieker is set on a mob instead of the "ca.has_active" tag. When a Shrieker mob reaches 50% or less Health, it screeches, immediately attacking with its set Active Attack. It can only do this once and never uses its active after or before that.
+- Added Size Shrink and Size Grow for mobs with Size tags. These cause the mobs to grow or shrink in size as they take damage. (And also prevent the Slime or Magma Cube from creating smaller versions on death.)
+- Added Warping, a trait that causes the mob to warp forward and to the left or right after using its ability.
+- Added Webbing, a mob trait which spawns a temporary web field on players hit by its effects or damage.
 
-- Added a new variant of Nova Burst called "Pulse". (ca.pulse). Pulse Novas are half the radius, but activate twice as fast. The mob is also not slowed during the warmup.
 
-- Added Shulker Projectile Replacement. Shulkers can fire any supported replace projectile.
-- Added Arrows and Tridents to list of supported replace projectiles.
-- Magic Missiles, Needles, Grenades, and Traps from their various abilities are now supported projectiles. These projectiles pull from base damage exactly rather than their traditional scaling. They also require ca.touch to use traits.
-- Sonic Charge (a weaker and Line of Sight blocked version of the Warden's Sonic attack) is a supported projectile replacement.
+- Sweep Retrospective:
+	- Sweep now has an animation and the mob "walks" fowards while casting it.
+	- Being hit by a frame of the animation causes damage.
+	- Can only be damaged every 0.5 seconds.
+	- Relevant on hit Traits are only called the first time the player takes damage.
+	- Unstoppable while in the animation.
+	- Animation sweeps from left or right side of mob randomly first, and then alternates sides for future casts.
+
+- Rift Retrospective:
+	- Rift has been recoded to use projectile system for better and more fluid gameplay/performance.
+	- Features Inverse, Single Wave, and Chase tags for custom effects on projectiles.
+
+- Removed Webshot, replaced with Quickdraw.
+- Removed Wither Storm, replaced with Storm.
+- Removed Cloaker (ability) replaced with Command.
+- Removed Predator Trait, replaced with Acrobatic Trait.
+
+
+- Augmenter and Healer now charge faster (in 2.5 seconds rather than 4 seconds).
+- Augmenter and Healer now apply their buffs to the caster if there are no suitable targets in range.
+
+- Augmenter now applies its on hit traits to the buffed mobs temporarily (so Augmenter + Blazing causes Augmented mobs to temporarily have Blazing)
+- Augmenter no longer provides Strength 2.
+- Augmenter buff now deals 50% of the mob's damage stat as *true* damage when the mob attacks a player. (meaning the mob does 50% more damage but it is unblockable by effects)
+
+- Charge activates faster (2 Seconds -> 1.5 Seconds)
+
+- Carapace now stacks up to 4 hits of protection via ++++ traits.
+- Carapace now has a popup like Resistance 5 when you hit a mob.
+- Carapace gives the mob Resistance 5 instead of 30 armor and 100 knockback resistance.
+
+- Corpse Crawler now uses the Spawn Egg in the offhand to determine what spawns.
+- Corpse Crawler no longer has variants.
+
+- Evocative now uses a melee ring when the player is close.
 
 - Laser now scales off Attack Damage, dealing 500% of the mob's attack damage. It now also has innate vertical knockback in the explosion. Laser cooldown adjusted to 16 seconds. Visual and Sound effects updated.
 
 - Magic Missile now has scaling instead of the old system, 200% of base damage, and now is both Projectile and Explosion damage.
 
-- Trapper reworked, launches less projectiles, projectiles are gravity affected, and properly works with traits.
+- Nova now has a smaller variant called "Pulse" with twice the activation speed but half the range.
 
 - Orbit duration is now equal to cooldown. Orbits that are recasted apply orbs to nearby mobs instead.
 
-- Corpse Crawler now uses the Spawn Egg in the offhand to determine what spawns.
-- Corpse Crawler no longer has variants.
+- Overloading has been reworked to spawn lightning strikes of damage and brief Weakness instead.
+
+- Parting Gift uses mob traits, drops custom bombs instead of TNT.
 
 - Spectral now uses the Spawn Egg in the offhand to determine what spawns.
 
-- Parting Gift uses mob traits, drops custom bombs instead of TNT.
+- Smash now has a smaller damage radius (4.5 Blocks -> 3.5 Blocks)
+- Smash has a unique variant for Blazes.
+
 - Volatile Parting Gift drops TNT (original behavior).
 
-- Evocative now uses a melee ring when the player is close.
-
-- Overloading has been reworked to spawn lightning strikes of damage and brief Weakness instead.
-
+(And some misc changes:)
 - Some Cartographer Mob Abilities are now affected by Projectile and Blast Protection. (That were not previously)
 - Duplicate explosion damage is now 6 (was 4). [This is to account for the damage now being blocked by Blast Protection.]
 
@@ -130,8 +247,33 @@ Mob Abilities:
 
 - Easy now adds 25% additional Cooldown to active attacks on the mob.
 
-Mimics:
+- Added a helper tag that now forcefully triggers a mob ability on a mob regardless of circumstance.
+- Added a helper tag that removes Glowing from the mob casting an ability. This is for thematic purposes with invisible mobs, not designed for general use to remove telegraphing for difficulty.
+- Added a helper tag with an internal cooldown that triggers the mob's *not on hit* traits. This is separated from passive acrobatic tags but can be used with them.
+- Added 2 helper tags that cause the mob to die when it uses its ability (or with touch, when it hits the player). There is feeble and feeble_void (for void tp kills instead of the animation).
+
+- Added 2 tags for Connecting Stacked Mobs: ca.soul_chain_start and ca.soul_chain
+	- The start is the bottom mob in the stack, the rest of the mobs are the other tag.
+	- Spawned stacks are given an id that when one mob dies, all mobs with matching ids also die.
+
+- Zombie and Skeleton Horses now considered Hostile for purpose with Soul Chain.
+
+
+Mimics (and Traps)!:
 - Removed Double Mimic Feature
+
+- Colossus is a new mechanic which is a Mimic Spawner!
+	- Colossi have 7 types (themed around the Seven Deadly Sins) that each have unique gimmicks and mechanics.
+	- They are spawned when someone breaks a trapped Colossus spawner.
+	- Most Colossi have 200 hp (2 Exceptions)
+	- Colossi can be made by running a promote command while standing on top of the spawner.
+	- Colossi drop a large amount of XP on death. (But nothing else)
+
+- A note: Colossi are designed to be very hard mini boss / boss type encounters that are likely not enjoyable to be spammed or are unenjoyable in cramped spaces. Design well!
+
+- An optional toggleable mechanic has been added called "Slower Spawners"
+	- Slower Spawners makes Spawners on top of Obsidian, Reinforced Deepslate, or Bedrock take longer to break.
+	- Disabled by default.
 
 Bug Fixes:
 - Punch and Crossbows no longer have vertical knockback (again).
@@ -141,3 +283,7 @@ Bug Fixes:
 - Alchemist works on abilities it did not work on previously. (Custom Projectile related abilities)
 - Fixed Descriptions in Lexica and Advancements/Descriptions
 - Rift direction is no longer static and always aims one prong of the explosions at the player.
+- Fixed a bug that caused Flash to not trigger.
+- Fixed a bug that would apply custom arrow effects from enchantments to arrows that were stuck in the ground.
+- Fixed some bugs with enchantment detection.
+- Fixed a bug with tokens that would sometimes break the token system and prevent mobs from using their abilities.

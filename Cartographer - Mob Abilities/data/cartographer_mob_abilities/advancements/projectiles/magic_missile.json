@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Armament: Shulker Bullet          ",
+            "text": "Magic Missile            ",
             "color": "white"
         },
         "description": {
-            "text": "Shoots Shulker Bullets instead of their usual projectile.",
+            "text": "Shoots a missle that chases players.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:shulker_shell"
+            "item": "minecraft:ender_eye"
         },
         "frame": "task",
         "show_toast": true,
@@ -21,13 +21,13 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.sh_shulker_bullet\"]}"
+                    "nbt": "{Tags:[\"ca.sh_magic_missile\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/passive/projectile/shulker_bullet"
+        "function": "cartographer_mob_abilities:descriptions/projectiles/magic_missile"
     },
-    "parent": "cartographer_mob_abilities:passive/projectile/potion"
+    "parent": "cartographer_mob_abilities:projectiles/lightning"
 }

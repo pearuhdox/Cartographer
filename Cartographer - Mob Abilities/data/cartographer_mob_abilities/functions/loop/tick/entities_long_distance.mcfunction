@@ -1,5 +1,5 @@
 #Run Dragon Fireball Fixers Setup
-execute if entity @s[tag=ca.shoot_dragon_fireball] run scoreboard players set $dragon_fireball_shooter ca.var 2
+execute if entity @s[tag=ca.sh_dragon_fireball] run scoreboard players set $dragon_fireball_shooter ca.var 2
 
 #Armor Stand Effects
 execute as @s[type=armor_stand] at @s run function cartographer_mob_abilities:loop/tick/armor_stand_branch

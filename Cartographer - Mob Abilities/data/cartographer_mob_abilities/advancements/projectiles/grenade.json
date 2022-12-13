@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Armament: Shulker Bullet          ",
+            "text": "Grenade                  ",
             "color": "white"
         },
         "description": {
-            "text": "Shoots Shulker Bullets instead of their usual projectile.",
+            "text": "Shoots a grenade projectile that explodes on the ground.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:shulker_shell"
+            "item": "minecraft:tnt"
         },
         "frame": "task",
         "show_toast": true,
@@ -21,13 +21,13 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.sh_shulker_bullet\"]}"
+                    "nbt": "{Tags:[\"ca.sh_grenade\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/passive/projectile/shulker_bullet"
+        "function": "cartographer_mob_abilities:descriptions/projectiles/grenade"
     },
-    "parent": "cartographer_mob_abilities:passive/projectile/potion"
+    "parent": "cartographer_mob_abilities:projectiles/projectiles"
 }

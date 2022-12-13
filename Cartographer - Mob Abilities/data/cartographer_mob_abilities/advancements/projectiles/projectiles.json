@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Projectile Types          ",
+            "color": "yellow"
+        },
+        "description": {
+            "text": "Custom Projectiles that can be shot by mobs.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:fire_charge"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "cartographer_mob_abilities:root"
+}

@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Armament: Shulker Bullet          ",
+            "text": "Lightning                   ",
             "color": "white"
         },
         "description": {
-            "text": "Shoots Shulker Bullets instead of their usual projectile.",
+            "text": "Shoots lightning which spawns near the player.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:shulker_shell"
+            "item": "minecraft:lightning_rod"
         },
         "frame": "task",
         "show_toast": true,
@@ -21,13 +21,13 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.sh_shulker_bullet\"]}"
+                    "nbt": "{Tags:[\"ca.sh_lightning\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/passive/projectile/shulker_bullet"
+        "function": "cartographer_mob_abilities:descriptions/projectiles/lightning"
     },
-    "parent": "cartographer_mob_abilities:passive/projectile/potion"
+    "parent": "cartographer_mob_abilities:projectiles/grenade"
 }
