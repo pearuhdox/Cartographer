@@ -5,7 +5,7 @@ execute as @p at @s run playsound minecraft:entity.player.levelup master @s ~ ~ 
 
 scoreboard players add $tax_retain_items charon.gmr 1
 
-execute if score $tax_retain_items charon.gmr matches 2.. run scoreboard players set $no_death_note charon.gmr 0
+execute if score $tax_retain_items charon.gmr matches 2.. run scoreboard players set $tax_retain_items charon.gmr 0
 
 execute if score $tax_retain_items charon.gmr matches 0 run title @s actionbar [{"text":"Retain Items for Taxes ","color":"aqua","italic":false},{"text":"set to ","color":"#FFE0A3","italic":false},{"text":"DISABLED","color":"red","italic":false}]
 execute if score $tax_retain_items charon.gmr matches 1 run title @s actionbar [{"text":"Retain Items for Taxes ","color":"aqua","italic":false},{"text":"set to ","color":"#FFE0A3","italic":false},{"text":"ENABLED","color":"green","italic":false}]
