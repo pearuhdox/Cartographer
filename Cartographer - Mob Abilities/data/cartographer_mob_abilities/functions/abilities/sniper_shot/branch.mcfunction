@@ -9,7 +9,7 @@ execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..5] as 000
 execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..6.5] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
 execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..8] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
 execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..9.5] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
-execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..11] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.5 ~
+execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..11] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
 execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..14] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
 execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..17] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
 
