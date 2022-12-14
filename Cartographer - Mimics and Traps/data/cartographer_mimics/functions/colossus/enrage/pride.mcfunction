@@ -5,7 +5,7 @@ tag @s add ca.breaker
 tag @s add ca.acro_gap_close_pass
 tag @s add ca.acro_pass
 tag @s add ca.sidearm_after
-tag @s add ca.shoot_grenade
+tag @s add ca.sh_grenade
 tag @s add enraged
 
 effect give @s speed 10 1

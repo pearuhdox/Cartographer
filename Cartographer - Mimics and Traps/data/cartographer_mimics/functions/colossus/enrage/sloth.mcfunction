@@ -5,7 +5,7 @@ tag @s add ca.breaker
 tag @s remove ca.augmenter
 tag @s add ca.orbit
 tag @s add ca.sidearm_after
-tag @s add ca.shoot_arrow
+tag @s add ca.sh_arrow
 tag @s add ca.touch
 tag @s add enraged
 

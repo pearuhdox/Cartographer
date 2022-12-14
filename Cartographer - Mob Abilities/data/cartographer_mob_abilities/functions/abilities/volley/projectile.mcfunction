@@ -1,12 +1,7 @@
-execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..5] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
-execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..8] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
-execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..11] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
-execute unless entity @s[tag=ca.sh_needle] unless entity @s[tag=ca.sh_small_fireball] unless entity @s[tag=ca.sh_fireball] unless entity @s[tag=ca.sh_dragon_fireball] unless entity @s[tag=ca.sh_wither_skull] unless entity @a[distance=..14] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
+execute as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
 
-execute if entity @s[tag=ca.sh_needle] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
-
-execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
-execute unless entity @a[distance=..8] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~3 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~3 ~
+execute unless entity @a[distance=..8] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~4 ~
 execute unless entity @a[distance=..11] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~4 ~
 
 execute if entity @s[tag=ca.sh_arrow] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.1 ~
@@ -20,18 +15,14 @@ execute if entity @s[tag=ca.sh_shulker_bullet] as 0000001f-00de-140d-0000-000000
 
 execute if entity @s[tag=ca.sh_magic_missile] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
 
-execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_wither_skull] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
-execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_small_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
+execute if entity @s[tag=ca.sh_needle] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
+
+execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_wither_skull] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.5 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_small_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.5 ~
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_dragon_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
 
-execute unless entity @s[tag=ca.sh_grenade] unless entity @s[tag=ca.sh_trap] run scoreboard players set $reduced_power ca.xyz_convert 3
-
-execute if entity @s[tag=ca.sh_potion] run scoreboard players set $reduced_power ca.xyz_convert 3
-execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_potion] run scoreboard players set $reduced_power ca.xyz_convert 2
-execute unless entity @a[distance=..8] if entity @s[tag=ca.sh_potion] run scoreboard players set $reduced_power ca.xyz_convert 2
-execute unless entity @a[distance=..11] if entity @s[tag=ca.sh_potion] run scoreboard players set $reduced_power ca.xyz_convert 1
-execute unless entity @a[distance=..14] if entity @s[tag=ca.sh_potion] run scoreboard players set $reduced_power ca.xyz_convert -1
+execute unless entity @s[tag=ca.sh_grenade] run scoreboard players set $reduced_power ca.xyz_convert 3
 
 #Grab Starting Attack Damage Value
 function cartographer_mob_abilities:abilities/volley/calc_damage

@@ -172,3 +172,10 @@ playsound minecraft:entity.skeleton.shoot hostile @a ~ ~ ~ 1 1.2
 
 #Return targeting entity
 tp 0000001f-00de-140d-0000-0000000276ef 4206900 50 4206900
+
+
+#Reset flags
+scoreboard players set $witch ca.xyz_convert 0
+scoreboard players set $blaze ca.xyz_convert 0
+
+scoreboard players set $ability ca.xyz_convert 0

@@ -4,7 +4,7 @@
 tag @s add ca.breaker
 tag @s add ca.sidearm
 tag @s remove ca.hookshot
-tag @s add ca.shoot_needle
+tag @s add ca.sh_needle
 tag @s add ca.overloading
 tag @s add enraged
 
