@@ -1,6 +1,15 @@
 function cartographer_mob_abilities:projectiles/target/player
 
-#execute as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.75 ~
+execute as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~-2 ~
+
+execute if entity @s[tag=ca.sh_small_fireball] if entity @a[distance=..5] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
+execute if entity @s[tag=ca.sh_wither_skull] if entity @a[distance=..5] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
+
+execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..5] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
+execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..8] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
+execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..11] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
+execute unless entity @s[tag=ca.sh_needle] unless entity @a[distance=..14] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
+
 
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~3 ~
 execute unless entity @a[distance=..8] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~4 ~
@@ -19,8 +28,8 @@ execute if entity @s[tag=ca.sh_magic_missile] as 0000001f-00de-140d-0000-0000000
 
 execute if entity @s[tag=ca.sh_needle] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
 
-execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_wither_skull] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.75 ~
-execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_small_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.75 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_wither_skull] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2.25 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_small_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2.25 ~
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.2 ~
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_dragon_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.2 ~
 
@@ -44,6 +53,10 @@ execute if entity @s[tag=ca.sh_grenade] run scoreboard players set $inaccuracy_p
 execute if entity @s[tag=ca.sh_grenade] run scoreboard players set $inaccuracy_pitch_max ca.xyz_convert 3
 
 execute unless entity @s[tag=ca.sh_trap] unless entity @s[tag=ca.sh_grenade] run scoreboard players set $reduced_power ca.xyz_convert 4
+
+execute if entity @s[tag=ca.sh_potion] run scoreboard players set $reduced_power ca.xyz_convert 4
+execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_potion] run scoreboard players set $reduced_power ca.xyz_convert 3
+execute unless entity @a[distance=..8] if entity @s[tag=ca.sh_potion] run scoreboard players set $reduced_power ca.xyz_convert 2
 
 #Grab Starting Attack Damage Value
 function cartographer_mob_abilities:abilities/sidearm/calc_damage
