@@ -78,5 +78,7 @@ execute at @s run playsound minecraft:block.chest.locked player @a[distance=..8]
 #Run display for subtitle
 tag @a[scores={ca.ui_location=1}] remove showing_repeating
 
+function cartographer_custom_enchantments:calc_enchant/run
+
 #Debug Message
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" reloaded Repeating.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

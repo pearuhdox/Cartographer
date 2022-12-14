@@ -36,19 +36,19 @@ execute if score @s ca.repeating matches 1..7 unless score @s ca.ammo_main match
 execute if score @s ca.repeating matches 1..7 unless score @s ca.ammo_main matches ..1 if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
 #Offhand Reload
-execute if score @s ca.repeating matches 11..17 run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles set value []
-execute if score @s ca.repeating matches 11..17 unless score @s ca.ammo_off matches ..1 run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
-execute if score @s ca.repeating matches 11..17 run data modify block 4206900 0 4206901 Items[0].tag.LastFired set from block 4206900 0 4206901 Items[0].tag.Quiver[0]
+#execute if score @s ca.repeating matches 11..17 run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles set value []
+#execute if score @s ca.repeating matches 11..17 unless score @s ca.ammo_off matches ..1 run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
+#execute if score @s ca.repeating matches 11..17 run data modify block 4206900 0 4206901 Items[0].tag.LastFired set from block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
 #Offhand - Fix Multishot
-execute if score @s ca.repeating matches 11..17 unless score @s ca.ammo_off matches ..1 if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
-execute if score @s ca.repeating matches 11..17 unless score @s ca.ammo_off matches ..1 if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
+#execute if score @s ca.repeating matches 11..17 unless score @s ca.ammo_off matches ..1 if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
+#execute if score @s ca.repeating matches 11..17 unless score @s ca.ammo_off matches ..1 if block 4206900 0 4206901 minecraft:purple_shulker_box{Items:[{Slot:0b,id:"minecraft:crossbow",Count:1b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]} run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles append from block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
 #Empty Charged Projectiles if no ammo (Mainhand)
 execute if score @s ca.repeating matches 1..7 if score @s ca.ammo_main matches ..1 run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles set value []
 
 #Empty Charged Projectiles if no ammo (Offhand)
-execute if score @s ca.repeating matches 11..17 if score @s ca.ammo_off matches ..1 run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles set value []
+#execute if score @s ca.repeating matches 11..17 if score @s ca.ammo_off matches ..1 run data modify block 4206900 0 4206901 Items[0].tag.ChargedProjectiles set value []
 
 data remove block 4206900 0 4206901 Items[0].tag.Quiver[0]
 
@@ -57,11 +57,16 @@ function suso.player_data:put/do
 
 #Place item in player hand
 execute if entity @s[scores={ca.repeating=1..7}] in minecraft:overworld run loot replace entity @s weapon.mainhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
-execute if entity @s[scores={ca.repeating=11..17}] in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
+#execute if entity @s[scores={ca.repeating=11..17}] in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine 4206900 0 4206901 air{drop_contents:1b}
 
-execute at @s run playsound minecraft:item.crossbow.loading_end player @a[distance=..8] ~ ~ ~ 10 2
+#execute at @s run playsound minecraft:item.crossbow.loading_end player @a[distance=..8] ~ ~ ~ 10 2
 
 scoreboard players set @s ca.rpt_cdl 0
 
 #Run display for subtitle
-tag @a[scores={ca.ui_location=1}] remove showing_repeating
+tag @s[scores={ca.ui_location=1}] remove showing_repeating
+
+function cartographer_custom_enchantments:calc_enchant/run
+
+#Debug Message
+tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" fired Repeating.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
