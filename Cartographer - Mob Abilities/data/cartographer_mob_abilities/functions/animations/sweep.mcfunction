@@ -19,9 +19,9 @@ scoreboard players set @s ca.mob_move_time 32
 execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 positioned ~ ~0.75 ~ run function cartographer_mob_abilities:animations/sweep/place_lines
 execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 positioned ~ ~0.5 ~ run function cartographer_mob_abilities:animations/sweep/warn
 
-execute if score @s ability_charge matches 9 facing entity @p feet rotated ~ 0 positioned ~ ~0.75 ~ run function cartographer_mob_abilities:animations/sweep/place_lines
-execute if score @s ability_charge matches 9 facing entity @p feet rotated ~ 0 positioned ~ ~0.5 ~ run function cartographer_mob_abilities:animations/sweep/warn
+execute if score @s ability_charge matches 7 facing entity @p feet rotated ~ 0 positioned ~ ~0.75 ~ run function cartographer_mob_abilities:animations/sweep/place_lines
+execute if score @s ability_charge matches 7 facing entity @p feet rotated ~ 0 positioned ~ ~0.5 ~ run function cartographer_mob_abilities:animations/sweep/warn
 
 function cartographer_mob_abilities:loop/tick/animation
 
-execute if score @s ability_charge matches 16.. run function cartographer_mob_abilities:abilities/sweep
+execute if score @s ability_charge matches 13.. run function cartographer_mob_abilities:abilities/sweep

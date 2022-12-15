@@ -34,7 +34,7 @@ execute if entity @s[tag=ca.quickdraw,scores={cooldown=0}] if entity @a[gamemode
 
 execute unless block ~ ~-1 ~ #bb:raycast if entity @s[tag=ca.rift,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:animations/rift
 
-execute if entity @s[tag=ca.sweep,scores={cooldown=0}] unless score @s ca.sweep_animation matches 1.. if entity @a[gamemode=!spectator,gamemode=!creative,distance=..10] run function cartographer_mob_abilities:animations/sweep
+execute if entity @s[tag=ca.sweep,scores={cooldown=0}] unless score @s ca.sweep_animation matches 1.. if entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:animations/sweep
 
 execute if entity @s[tag=ca.storm,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:animations/storm
 
