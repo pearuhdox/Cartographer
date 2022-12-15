@@ -5,6 +5,10 @@ data modify storage cartographer_mob_abilities:projectiles DataTemplate.Owner se
 execute unless data entity @s power[0] run function cartographer_mob_abilities:projectiles/target/along_motion
 execute if data entity @s power[0] run function cartographer_mob_abilities:projectiles/target/along_power
 
+execute if entity @s[type=shulker_bullet] run function cartographer_mob_abilities:projectiles/target/player
+execute if entity @s[type=shulker_bullet] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~2 ~
+execute if entity @s[type=shulker_bullet] run scoreboard players set $reduced_power ca.xyz_convert 3
+
 function cartographer_mob_abilities:projectiles/create/trident
 
 kill @s

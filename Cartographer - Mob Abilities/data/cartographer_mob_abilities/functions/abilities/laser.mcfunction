@@ -7,7 +7,8 @@ function cartographer_mob_abilities:ability_traits/cooldown_traits
 
 scoreboard players set @s ability_charge 0
 
-execute store result score $laser ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+execute store result score $laser ca.ability_dmg run attribute @s[type=!shulker] minecraft:generic.attack_damage get
+execute store result score $laser ca.ability_dmg run attribute @s[type=shulker] minecraft:generic.attack_damage get
 
 
 scoreboard players set $laser_bla ca.var 0

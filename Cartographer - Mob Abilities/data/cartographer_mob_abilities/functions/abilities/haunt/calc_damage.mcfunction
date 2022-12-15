@@ -1,4 +1,5 @@
-execute store result score @s ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+execute store result score @s[type=!shulker] ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+execute store result score @s[type=shulker] ca.ability_dmg run attribute @s minecraft:generic.armor_toughness get
 
 scoreboard players operation $damage ca.ability_dmg = @s ca.ability_dmg
 

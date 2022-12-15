@@ -16,7 +16,8 @@ playsound minecraft:block.anvil.land hostile @a[distance=..20] ~ ~ ~ 2 2
 execute anchored eyes positioned ^ ^ ^1 facing entity @p feet run function cartographer_mob_abilities:projectiles/behavior/trap/create_projectiles
 
 #Get damage value of mob for projectiles
-execute store result score @s ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+execute store result score @s[type=!shulker] ca.ability_dmg run attribute @s minecraft:generic.attack_damage get
+execute store result score @s[type=shulker] ca.ability_dmg run attribute @s minecraft:generic.armor_toughness get
 scoreboard players operation $trap_damage ca.ability_dmg = @s ca.ability_dmg
 
 #Add tags to the traps

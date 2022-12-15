@@ -2,7 +2,7 @@ tag @s add co_rotation_lock
 
 tp @s ~ ~ ~ facing entity 0000001f-00de-140d-0000-0000000276ef feet
 
-scoreboard players add @s co_send 20
+scoreboard players add @s co_send 15
 scoreboard players set @s co_y -3
 
 execute if score $inaccurate ca.xyz_convert matches 1.. run function cartographer_mob_abilities:projectiles/helper/get_motion_value/add_inaccuracy

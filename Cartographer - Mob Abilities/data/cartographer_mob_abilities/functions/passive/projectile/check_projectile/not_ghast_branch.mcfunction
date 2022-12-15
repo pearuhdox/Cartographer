@@ -5,7 +5,8 @@ scoreboard players set $blaze ca.xyz_convert 0
 execute if entity @s[type=blaze] run scoreboard players set $blaze ca.xyz_convert 1
 
 #Collect Damage Here
-execute store result score $damage ca.ability_dmg run attribute @s generic.attack_damage get
+execute store result score $damage ca.ability_dmg run attribute @s[type=!shulker] generic.attack_damage get
+execute store result score $damage ca.ability_dmg run attribute @s[type=shulker] generic.armor_toughness get
 
 #Alchemist Data Saving
 execute if entity @s[tag=ca.alchemist,tag=ca.touch] run function cartographer_mob_abilities:passive/projectile/helper/save_alchemist
