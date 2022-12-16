@@ -12,12 +12,14 @@ execute if entity @s[type=shulker] store result score $damage ca.ability_dmg run
 execute if entity @s[tag=ca.alchemist,tag=ca.touch] run function cartographer_mob_abilities:passive/projectile/helper/save_alchemist
 
 #For Each Entity With Specific Data Get Said Data
-execute if entity @s[tag=ca.sh_arrow] run function cartographer_mob_abilities:projectiles/data/get/master_arrow
+execute if entity @s[tag=ca.sh_arrow] run function cartographer_mob_abilities:projectiles/data/get/arrow
 
 execute if entity @s[tag=ca.sh_potion] run function cartographer_mob_abilities:projectiles/data/get/potion
 
 #Save Tags Here
 execute if entity @s[tag=ca.touch] run function cartographer_mob_abilities:projectiles/data/get/all_traits
+
+execute if entity @s[tag=ca.quiver] run function cartographer_mob_abilities:projectiles/data/get/quiver
 
 #Lightning Specific Data And Tag Population
 execute if entity @s[tag=ca.sh_lightning] run data modify storage cartographer_mob_abilities:storm_tags Tags set value []

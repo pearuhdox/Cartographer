@@ -1,2 +1,3 @@
 data modify storage cartographer_mob_abilities:projectiles DataTemplate.Offhand set value {}
 data modify storage cartographer_mob_abilities:projectiles DataTemplate.Offhand set from entity @s HandItems[1].tag.BlockEntityTag.Items[4]
+execute if entity @s[tag=ca.alchemist] run data modify storage cartographer_mob_abilities:projectiles AlchemistTemplate set from entity @s HandItems[1].tag.BlockEntityTag.Items[4]
