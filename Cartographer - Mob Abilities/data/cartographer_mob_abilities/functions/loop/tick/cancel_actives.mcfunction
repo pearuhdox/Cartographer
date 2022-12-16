@@ -3,6 +3,7 @@ execute if entity @s[tag=ca.barrage,tag=tokened,scores={cooldown=0}] unless enti
 execute if entity @s[tag=ca.sniper_shot,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.volley,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.nova,tag=!ca.pulse,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:helper/token/cancel_ability
+execute if entity @s[tag=ca.nova,tag=ca.pulse,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.ambush,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..25] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.command,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.hookshot,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:helper/token/cancel_ability

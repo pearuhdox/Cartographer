@@ -1,0 +1,2 @@
+execute if entity @s[tag=ca.quiver] run function cartographer_mob_abilities:projectiles/data/get/quiver
+execute unless entity @s[tag=ca.quiver] run function cartographer_mob_abilities:projectiles/data/get/arrow

@@ -4,7 +4,8 @@ execute if entity @s[tag=ca.sniper_shot,scores={cooldown=0}] if entity @a[gamemo
 execute if entity @s[tag=ca.volley,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:animations/volley
 
 
-execute if entity @s[tag=ca.nova,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:animations/nova
+execute if entity @s[tag=ca.nova,tag=!ca.pulse,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:animations/nova
+execute if entity @s[tag=ca.nova,tag=ca.pulse,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:animations/nova
 
 execute if entity @s[tag=ca.ambush,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..25] run function cartographer_mob_abilities:animations/ambush
 

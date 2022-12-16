@@ -2,7 +2,7 @@
 execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:passive/projectile/helper/save_alchemist
 
 #For Each Entity With Specific Data Get Said Data
-execute if entity @s[tag=ca.sh_arrow] run function cartographer_mob_abilities:projectiles/data/get/arrow
+execute if entity @s[tag=ca.sh_arrow] run function cartographer_mob_abilities:projectiles/data/get/master_arrow
 
 execute if entity @s[tag=ca.sh_potion] run function cartographer_mob_abilities:projectiles/data/get/potion
 
