@@ -15,3 +15,5 @@ function cartographer_mob_abilities:projectiles/cleanup/list/wither_skull
 function cartographer_mob_abilities:projectiles/cleanup/list/small_fireball
 function cartographer_mob_abilities:projectiles/cleanup/list/fireball
 function cartographer_mob_abilities:projectiles/cleanup/list/dragon_fireball
+
+function cartographer_mob_abilities:projectiles/cleanup/list/spit

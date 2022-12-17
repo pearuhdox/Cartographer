@@ -44,4 +44,5 @@ execute if entity @s[tag=ca.sh_wither_skull] run function cartographer_mob_abili
 execute if entity @s[tag=ca.sh_small_fireball] run function cartographer_mob_abilities:projectiles/create/small_fireball
 execute if entity @s[tag=ca.sh_fireball] run function cartographer_mob_abilities:projectiles/create/fireball
 execute if entity @s[tag=ca.sh_dragon_fireball] run function cartographer_mob_abilities:projectiles/create/dragon_fireball
+execute if entity @s[tag=ca.sh_spit] run function cartographer_mob_abilities:projectiles/create/spit
 

@@ -33,6 +33,8 @@ execute as @s[tag=ca.sh_arrow] at @s as @e[type=#bb:projectile,tag=!passive_repl
 execute as @s[tag=ca.sh_trident] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/trident
 execute as @s[tag=ca.sh_potion] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/potion
 
+execute as @s[tag=ca.sh_spit] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/spit
+
 execute as @s[tag=ca.sh_shulker_bullet] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/shulker_bullet
 
 execute as @s[tag=ca.sh_wither_skull] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/wither_skull
