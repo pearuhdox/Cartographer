@@ -9,6 +9,8 @@ scoreboard objectives add ca.derived_seed dummy
 
 scoreboard objectives add ca.loot_sneak minecraft.custom:minecraft.sneak_time
 
+scoreboard objectives add ca.frame_count dummy
+
 scoreboard objectives add ca.creative_ct dummy
 
 scoreboard objectives add altar_lock dummy

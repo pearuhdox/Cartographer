@@ -8,4 +8,9 @@ scoreboard players operation $proj_damage ca.ability_dmg = $projectile_damage ca
 
 function cartographer_mob_abilities:projectiles/create/lightning
 
-kill @s
+execute unless entity @s[type=vex] run kill @s
+execute if entity @s[type=vex] run function cartographer_mob_abilities:passive/projectile/swap/remove/vex
+
+execute if entity @s[type=evoker_fangs] run function cartographer_mob_abilities:passive/projectile/swap/remove/fangs
+
+scoreboard players set $projectile_swap ca.mob_var 1

@@ -33,6 +33,8 @@ execute if entity @s[tag=ca.carapace++] run function cartographer_mob_abilities:
 execute if entity @s[tag=ca.carapace+++] run function cartographer_mob_abilities:ability_traits/carapace/apply/3
 execute if entity @s[tag=ca.carapace++++] run function cartographer_mob_abilities:ability_traits/carapace/apply/4
 
+execute if entity @s[tag=ca.ambidextrous,tag=ca.follow_up_ability,scores={ca.ambi_cool=0}] if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:passive/ambidextrous/swap
+
 #Runs at the mob position
 execute if entity @s[tag=ca.legionary] at @s run function cartographer_mob_abilities:ability_traits/legionary/master
 execute if entity @s[tag=ca.warping] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect

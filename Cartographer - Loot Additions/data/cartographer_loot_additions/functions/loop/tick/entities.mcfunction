@@ -15,3 +15,5 @@ execute as @s[type=armor_stand,tag=loot_soul_chest] at @s run function cartograp
 
 #Functions for all armor stand holders.
 execute as @s[type=armor_stand,tag=loot_holder_armor] run function cartographer_loot_additions:loop/tick/branches/loot_holder_armor
+
+execute as @s[type=item,tag=!ca.item_processed] run tag @s add ca.item_processed

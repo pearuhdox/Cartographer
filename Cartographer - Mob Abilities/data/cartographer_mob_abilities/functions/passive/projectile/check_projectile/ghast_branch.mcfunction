@@ -5,3 +5,5 @@ execute as @s[tag=ca.sh_dragon_fireball] at @s as @e[type=#bb:projectile,tag=!pa
 execute as @s[tag=ca.sh_shulker_bullet] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=1,distance=..6,sort=nearest] unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/shulker_bullet
 execute as @s[tag=ca.sh_potion] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=1,distance=..6,sort=nearest] unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/potion
 execute as @s[tag=ca.sh_arrow] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=1,distance=..6,sort=nearest] unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/arrow
+
+scoreboard players set $projectile_swap ca.mob_var 0

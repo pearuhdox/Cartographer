@@ -14,4 +14,6 @@ execute as @s[tag=ca.sh_magic_missile] at @s run function cartographer_mob_abili
 execute as @s[tag=ca.sh_sonic_charge] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 execute as @s[tag=ca.sh_rift] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 execute as @s[tag=ca.sh_lightning] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
+execute as @s[tag=ca.sh_evoker_fang] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
+
 execute as @s[tag=ca.sh_empty] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main

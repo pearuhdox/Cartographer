@@ -97,10 +97,10 @@ execute if entity @s[tag=!setup,tag=ca.exalted] run function cartographer_mob_ab
 execute if entity @s[tag=!ambi_readied,tag=ca.ambidextrous] run function cartographer_mob_abilities:passive/ambidextrous/initialize
 
 #Swap Ambidextrous - Player Range
-execute if entity @s[tag=ca.ambidextrous,tag=!ca.follow_up,scores={ca.ambi_cool=0}] if entity @a[distance=5..6] run function cartographer_mob_abilities:passive/ambidextrous/swap
+execute if entity @s[tag=ca.ambidextrous,tag=!ca.follow_up_ability,tag=!ca.follow_up,scores={ca.ambi_cool=0}] if entity @a[distance=4..5.5] run function cartographer_mob_abilities:passive/ambidextrous/swap
 
 #Handle Ambidextrous Cooldown
-scoreboard players remove @s[tag=ca.ambidextrous,scores={ca.ambi_cool=1..}] ca.ambi_cool 1
+execute unless entity @a[distance=4..5.5] run scoreboard players remove @s[tag=ca.ambidextrous,scores={ca.ambi_cool=1..}] ca.ambi_cool 1
 execute if entity @s[tag=ca.ambidextrous] unless score @s ca.ambi_cool matches 1.. run scoreboard players set @s ca.ambi_cool 0
 
 #Run Auras
@@ -111,3 +111,7 @@ execute if score @s ca.sc_time matches 1.. run function cartographer_mob_abiliti
 
 #Setup Orbit Timer
 execute unless score @s ca.orbit_timer matches 0.. run scoreboard players set @s ca.orbit_timer 0
+
+execute if entity @s[type=evoker] store result score $spell_tick ca.mob_var run data get entity @s SpellTicks
+
+tag @s[type=vex] add vex_checked

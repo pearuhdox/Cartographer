@@ -10,8 +10,9 @@ scoreboard players operation $passive_proj_attack_dmg ca.var /= $2 ca.CONSTANT
 
 scoreboard players set $was_arrow ca.var 0
 
-execute as @s[type=!ghast] run function cartographer_mob_abilities:passive/projectile/check_projectile/not_ghast_branch
+execute as @s[type=!ghast,type=!evoker] run function cartographer_mob_abilities:passive/projectile/check_projectile/not_ghast_branch
 execute as @s[type=ghast] run function cartographer_mob_abilities:passive/projectile/check_projectile/ghast_branch
+execute as @s[type=evoker] run function cartographer_mob_abilities:passive/projectile/check_projectile/evoker_branch
 
 execute as @s[type=#cartographer_mob_abilities:shoots_arrows] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/arrow_branch
 

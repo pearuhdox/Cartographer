@@ -17,4 +17,6 @@ execute if entity @s[tag=ca.alchemist] as @a[tag=ability_tagged] at @s run funct
 #Position Independent
 execute if entity @s[tag=ca.celestial] if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:ability_traits/celestial/player_effect
 
+execute if entity @s[tag=ca.ambidextrous,tag=ca.follow_up_ability,scores={ca.ambi_cool=0}] if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:passive/ambidextrous/swap
+
 function #minecraft:cartographer/events/custom_traits
