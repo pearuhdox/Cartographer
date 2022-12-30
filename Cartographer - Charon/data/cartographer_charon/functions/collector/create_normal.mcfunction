@@ -1,4 +1,4 @@
-function cartographer_charon:summon_collector
+function cartographer_charon:summon/collector
 
 execute if block ~ ~-1 ~ #cartographer_core:can_raycast run setblock ~ ~-1 ~ glass
 

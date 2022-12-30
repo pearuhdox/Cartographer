@@ -1,6 +1,6 @@
-summon glow_item_frame ~ ~ ~ {Silent:1b,Glowing:1b,Facing:1b,Invisible:1b,Tags:["charon.bundle_drop","new"],Item:{}}
+summon glow_item_frame ~ ~ ~ {Silent:1b,Glowing:1b,Facing:1b,Invisible:1b,Fixed:1b,Tags:["charon.bundle_drop","new"],Item:{}}
 
-execute if block ~ ~-1 ~ #cartographer_core:can_raycast run setblock ~ ~-1 ~ glass
+execute if block ~ ~-1 ~ #cartographer_core:can_raycast run setblock ~ ~-1 ~ cyan_stained_glass
 
 setblock ~ ~ ~ air destroy
 

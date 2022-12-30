@@ -1,3 +1,8 @@
+playsound minecraft:entity.item_frame.remove_item player @a[distance=..8] ~ ~ ~ 2 0.5
+playsound minecraft:entity.allay.item_given player @a[distance=..8] ~ ~ ~ 4 1
+playsound minecraft:entity.warden.sonic_charge player @a[distance=..8] ~ ~ ~ 0.3 2
+playsound minecraft:item.totem.use player @a[distance=..8] ~ ~ ~ 0.15 1.5
+
 function inv:internal/reset
 function inv:save
 data modify storage cartographer_charon:player inv set value []

@@ -1,4 +1,4 @@
-execute positioned ~ -63 ~ run function cartographer_charon:summon_collector
+execute positioned ~ -63 ~ run function cartographer_charon:summon/collector
 
 fill ~-1 ~-62 ~-1 ~1 ~-62 ~1 air replace
 fill ~-1 ~-64 ~-1 ~1 ~-64 ~1 glass replace
