@@ -1,5 +1,6 @@
 {
 	"values": [
-		{"id": "cartographer_mob_abilities:effect_calls/when_attacking_entity", "required": false}
+		{"id": "cartographer_mob_abilities:effect_calls/when_attacking_entity", "required": false},
+		{"id": "cartographer_custom_enchantments:enchant_calls/when_attacking_mob_pre","required": false}
 	]
 }

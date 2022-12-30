@@ -5,6 +5,9 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.throw_tride
 #Run the Heal Queue system on players
 execute if score @s ca.sapper_banking matches 1.. run function cartographer_custom_enchantments:enchant_effects/sapper/heal_time
 execute if score @s ca.lifesteal_banking matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal/heal_time
+execute if score @s ca.rally_banking matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/heal_time
+
+execute if score @s ca.rally_cooldown matches 1.. run scoreboard players remove @s ca.rally_cooldown 1
 
 function cartographer_custom_enchantments:helper/healing_bank/check_healing
 

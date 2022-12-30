@@ -130,17 +130,11 @@ scoreboard objectives add ca.curse_regret dummy
 scoreboard objectives add ca.curse_two_hnd dummy
 scoreboard objectives add ca.curse_encum dummy
 
-scoreboard objectives add ca.rally_amount minecraft.custom:minecraft.damage_taken
-scoreboard objectives add ca.rally_bank dummy
-scoreboard objectives add ca.rally_time dummy
-scoreboard objectives add ca.rally_damage minecraft.custom:minecraft.damage_dealt
-
-
-scoreboard objectives add ca.ral_overflow dummy
-scoreboard objectives add ca.ral_time dummy
-scoreboard objectives add ca.ral_percent dummy
-scoreboard objectives add ca.ral_bank dummy
-scoreboard objectives add ca.ral_charge dummy
+scoreboard objectives add ca.rally_mark_dur dummy
+scoreboard objectives add ca.rally_mark_amt dummy
+scoreboard objectives add ca.rally_cooldown dummy
+scoreboard objectives add ca.rally_banking dummy
+scoreboard objectives remove ca.rally_bank
 
 scoreboard objectives add ca.ov_tier dummy
 scoreboard objectives add ca.ov_dmg dummy

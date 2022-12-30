@@ -36,6 +36,10 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.sin
 #Stunning
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.stunning=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/stunning
 
+#Rally
+execute if score $rally_restore ca.rally matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/restore
+
+
 #Surging Strike - Runs after Stunning to use melee chance calc
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.surge_strike=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/surging_strike
 
