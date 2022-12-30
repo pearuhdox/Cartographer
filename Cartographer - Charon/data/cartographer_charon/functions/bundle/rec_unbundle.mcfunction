@@ -1,5 +1,5 @@
 #summon item with bundle slot data
-summon item ~ ~1 ~ {Tags:["bundle_item","not_init"],PickupDelay:0,Item:{id:"minecraft:barrier",Count:1b}}
+summon item ~ ~1 ~ {Tags:["bundle_item","not_init"],PickupDelay:5,Item:{id:"minecraft:barrier",Count:1b}}
 execute as @e[type=item,tag=bundle_item,tag=not_init,limit=1,sort=nearest] run function cartographer_charon:bundle/unbundle_branch
 
 #pop

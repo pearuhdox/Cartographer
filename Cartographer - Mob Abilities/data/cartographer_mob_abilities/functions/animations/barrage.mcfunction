@@ -3,7 +3,7 @@ scoreboard players add @s ability_charge 1
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 scoreboard players operation $needle_mod ability_charge = @s ability_charge
-scoreboard players operation $needle_mod ability_charge %= $10 ca.CONSTANT
+scoreboard players operation $needle_mod ability_charge %= $9 ca.CONSTANT
 
 execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
@@ -34,9 +34,14 @@ execute if score @s ability_charge matches 19 run playsound minecraft:entity.sno
 execute if score @s ability_charge matches 20 run playsound minecraft:entity.snowball.throw hostile @a[distance=..20] ~ ~ ~ 1 1.45
 execute if score @s ability_charge matches 20 run playsound minecraft:item.crossbow.loading_end hostile @a[distance=..20] ~ ~ ~ 2 0.75
 
+execute if score @s ability_charge matches 20 run data modify entity @s NoAI set value 1b
+execute if score @s ability_charge matches 20..22 run tp @s ~ ~ ~ facing entity @p feet
+execute if score @s ability_charge matches 35..37 run tp @s ~ ~ ~ facing entity @p feet
+execute if score @s ability_charge matches 50..52 run tp @s ~ ~ ~ facing entity @p feet
+
 execute if score @s ability_charge matches 20.. run function cartographer_mob_abilities:animations/barrage/branch
 
-execute if score @s ability_charge matches 1..40 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..44 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score $needle_mod ability_charge matches 1 if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge matches 1..40 run effect give @s jump_boost 2 6 true
 execute if score $needle_mod ability_charge matches 1 if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge matches 1..40 run effect give @s levitation 1 0 true
@@ -45,4 +50,4 @@ execute if score $needle_mod ability_charge matches 1 if score @s[tag=ca.has_kit
 
 execute unless score @s ability_charge matches 20.. run function cartographer_mob_abilities:loop/tick/animation
 
-execute if score @s ability_charge matches 60.. run function cartographer_mob_abilities:abilities/barrage
+execute if score @s ability_charge matches 64.. run function cartographer_mob_abilities:abilities/barrage

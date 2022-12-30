@@ -11,7 +11,7 @@ playsound minecraft:entity.blaze.death hostile @a[distance=..24] ~ ~ ~ 1 2
 playsound minecraft:entity.firework_rocket.twinkle_far hostile @a[distance=..24] ~ ~ ~ 2 0.85
 
 
-execute facing entity @p feet anchored eyes positioned ^ ^ ^1 run function cartographer_mob_abilities:abilities/sniper_shot/branch
+execute facing entity @p feet anchored eyes positioned ^ ^ ^0.5 run function cartographer_mob_abilities:abilities/sniper_shot/branch
 
 
 #Run not on hit traits

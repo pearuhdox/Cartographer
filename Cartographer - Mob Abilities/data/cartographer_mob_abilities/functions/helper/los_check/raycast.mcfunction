@@ -1,6 +1,8 @@
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
-execute if entity @a[distance=..1.2] as 002f80c0-0001-f879-0000-009c001e7bfc at @s as @e[type=#bb:hostile,tag=ca.has_active,limit=1,sort=nearest,distance=..1] at @s run tag @s add can_see_player
+scoreboard players set $pillared ca.var 0
+execute if entity @a[distance=..1.2] as @p at @s run function cartographer_mob_abilities:helper/los_check/check_pillar
+execute if entity @a[distance=..1.2] as 002f80c0-0001-f879-0000-009c001e7bfc at @s as @e[type=#bb:hostile,tag=ca.has_active,limit=1,sort=nearest,distance=..1] at @s run function cartographer_mob_abilities:helper/los_check/apply_tags
 execute if entity @a[distance=..1.2] run scoreboard players set @s ca.raycast 0
 execute if entity @a[distance=..1.2] run scoreboard players add $has_sight ca.var 1
 #execute if entity @a[distance=..1.2] run effect give @a glowing 1 0 

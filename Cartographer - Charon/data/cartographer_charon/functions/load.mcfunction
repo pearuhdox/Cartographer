@@ -60,6 +60,8 @@ execute unless score $xp_rate ca.gamerule matches 0.. run scoreboard players set
 # Data: [I;940671313,1209340753,823656448,70936]
 summon marker 4206900 60 4206900 {UUID:[I;940671313,1209340753,823656448,70936],Tags:["ca.charon_home_marker"]}
 
+setblock 4206900 60 4206900 purple_shulker_box destroy
+
 #summon villager -13 142 -96 {Attributes:[{Name:generic.movement_speed,Base:0.01}],Invulnerable:1b,UUID:[I;0,0,27,11],Willing:1b,CustomName:'{"text":"Necromancer Jaerida","color":"#644796"}',VillagerData:{level:99,profession:"minecraft:cartographer",type:"minecraft:desert"}}
 
 #Gamerules on charon.gmr:

@@ -1,6 +1,7 @@
-function cartographer_mob_abilities:projectiles/target/player
+say test
+execute positioned ^ ^ ^9 run function cartographer_mob_abilities:projectiles/target/position
 
-execute as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~-0.45 ~
+execute as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~-1 ~
 
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~3 ~
 execute unless entity @a[distance=..8] if entity @s[tag=ca.sh_potion] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~4 ~
@@ -64,7 +65,8 @@ execute if entity @s[tag=ca.sh_grenade] run function cartographer_mob_abilities:
 execute if entity @s[tag=ca.sh_shulker_bullet] run function cartographer_mob_abilities:projectiles/create/shulker_bullet
 execute if entity @s[tag=ca.sh_magic_missile] run function cartographer_mob_abilities:projectiles/create/magic_missile
 execute if score $needle_mod ability_charge matches 1 if entity @s[tag=ca.sh_needle] positioned ^1 ^ ^-1 run function cartographer_mob_abilities:projectiles/create/needle
-execute if score $needle_mod ability_charge matches 6 if entity @s[tag=ca.sh_needle] positioned ^-1 ^ ^-1 run function cartographer_mob_abilities:projectiles/create/needle
+execute if score $needle_mod ability_charge matches 4 if entity @s[tag=ca.sh_needle] positioned ^ ^ ^-1 run function cartographer_mob_abilities:projectiles/create/needle
+execute if score $needle_mod ability_charge matches 7 if entity @s[tag=ca.sh_needle] positioned ^-1 ^ ^-1 run function cartographer_mob_abilities:projectiles/create/needle
 execute if entity @s[tag=ca.sh_rift] run function cartographer_mob_abilities:projectiles/create/rift
 execute if entity @s[tag=ca.sh_lightning] run function cartographer_mob_abilities:projectiles/create/lightning
 execute if entity @s[tag=ca.sh_wither_skull] run function cartographer_mob_abilities:projectiles/create/wither_skull
