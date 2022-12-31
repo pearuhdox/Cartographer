@@ -68,5 +68,4 @@ tag @s[scores={ca.ui_location=1}] remove showing_repeating
 
 function cartographer_custom_enchantments:calc_enchant/run
 
-#Debug Message
-tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" fired Repeating.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
+function #minecraft:cartographer/events/enchantments/ranged/repeating

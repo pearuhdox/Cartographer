@@ -12,5 +12,4 @@ execute unless score @s ca.trans_cdl matches 1.. as @e[type=#bb:hostile,tag=!eli
 
 #scoreboard players set $melee ca.transfig 0
 
-#Debug Message
-tellraw @a[tag=debug,scores={ca.transfig=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Transfiguration.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
+function #minecraft:cartographer/events/enchantments/melee/transfiguration

@@ -1,6 +1,3 @@
-#Debug Message
-tellraw @a[tag=debug,scores={ca.auto_charge=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Auto Charge.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
-
 tag @s add doing_auto_charge
 
 #Sfx
@@ -102,3 +99,5 @@ scoreboard players set $auto_repeat ca.repeating 0
 scoreboard players set $auto_repeat ca.auto_charge 0
 
 execute unless score @s ca.recoil_count matches 1.. run scoreboard players add @s ca.recoil_count 1
+
+function #minecraft:cartographer/events/enchantments/ranged/auto_charge

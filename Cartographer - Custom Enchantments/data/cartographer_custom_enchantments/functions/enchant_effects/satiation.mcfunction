@@ -22,5 +22,4 @@ execute if score $value bbl.rng matches 5 if score @s ca.satiation matches 1 run
 execute if score $value bbl.rng matches 5 if score @s ca.satiation matches 2 run effect give @s absorption 20
 execute if score $value bbl.rng matches 5 if score @s ca.satiation matches 3 run effect give @s absorption 30
 
-#Debug Message
-tellraw @a[tag=debug,scores={ca.satiation=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Satiation.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
+function #minecraft:cartographer/events/enchantments/passive/satiation

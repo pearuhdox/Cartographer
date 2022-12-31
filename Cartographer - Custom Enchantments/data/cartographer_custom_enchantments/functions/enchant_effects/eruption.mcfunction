@@ -34,5 +34,4 @@ scoreboard players set $eruption ca.possession 0
 scoreboard players set $eruption ca.evocation 0
 scoreboard players set $eruption ca.executioner 0
 
-#Debug Message
-tellraw @a[tag=debug,scores={ca.eruption=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@p","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Eruption.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
+function #minecraft:cartographer/events/enchantments/tool/eruption

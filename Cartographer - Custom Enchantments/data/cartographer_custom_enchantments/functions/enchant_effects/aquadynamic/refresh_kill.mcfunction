@@ -89,3 +89,5 @@ execute if score $duration ca.aquadynamic matches 150..164 if score $mult ca.aqu
 playsound minecraft:entity.player.breath player @s ~ ~ ~ 0.5 0.75
 particle minecraft:cloud ~ ~1 ~ 0.35 0.35 0.35 0.1 4 normal
 particle minecraft:bubble ~ ~1 ~ 0.35 0.35 0.35 0.5 20 normal
+
+function #minecraft:cartographer/events/aquadynamic/kill
