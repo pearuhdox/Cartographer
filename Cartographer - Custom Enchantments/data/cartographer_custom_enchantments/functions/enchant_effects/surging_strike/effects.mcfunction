@@ -67,4 +67,6 @@ execute if score $melee ca.possession matches 1.. as @s run function cartographe
 
 #scoreboard players set $melee ca.melee_chance 0
 
+function #minecraft:cartographer/events/enchants_mob_hit/melee/surging_strike
+
 tag @s add thrusted

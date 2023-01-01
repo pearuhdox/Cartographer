@@ -5,7 +5,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"curse_encumbering\"}]}"
+                        "nbt": "{CustomEnchantments:[{id:\"ca.curse_encumbering\"}]}"
                     }
                 ]
             }

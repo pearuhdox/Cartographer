@@ -40,3 +40,6 @@ scoreboard players set @s ca.brittle_time 1
 scoreboard players set @s co_y 4
 scoreboard players operation @s co_send = $kb ca.cauter_dmg
 function motion:motion/push
+
+#Run Tag Here for Triggering a Cauterize Mark
+function #minecraft:cartographer/events/enchants_mob_hit/passive/cauterize

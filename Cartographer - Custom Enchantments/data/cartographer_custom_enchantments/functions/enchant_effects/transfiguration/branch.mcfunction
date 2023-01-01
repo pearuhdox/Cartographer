@@ -40,4 +40,10 @@ execute if score $melee ca.transfig matches 3 unless score $melee ca.melee_chanc
 execute if score $melee ca.transfig matches 4 unless score $melee ca.melee_chance matches ..20 run scoreboard players add @p[scores={ca.transfig=1..}] ca.trans_bias 5
 execute if score $melee ca.transfig matches 5.. unless score $melee ca.melee_chance matches ..25 run scoreboard players add @p[scores={ca.transfig=1..}] ca.trans_bias 5
 
+execute if score $melee ca.transfig matches 1 unless score $melee ca.melee_chance matches ..5 run function #minecraft:cartographer/events/enchants_mob_hit/melee/transfiguration/proc
+execute if score $melee ca.transfig matches 2 unless score $melee ca.melee_chance matches ..10 run function #minecraft:cartographer/events/enchants_mob_hit/melee/transfiguration/proc
+execute if score $melee ca.transfig matches 3 unless score $melee ca.melee_chance matches ..15 run function #minecraft:cartographer/events/enchants_mob_hit/melee/transfiguration/proc
+execute if score $melee ca.transfig matches 4 unless score $melee ca.melee_chance matches ..20 run function #minecraft:cartographer/events/enchants_mob_hit/melee/transfiguration/proc
+execute if score $melee ca.transfig matches 5.. unless score $melee ca.melee_chance matches ..25 run function #minecraft:cartographer/events/enchants_mob_hit/melee/transfiguration/proc
+
 scoreboard players set @p[scores={ca.transfig=1..,ca.trans_bias=75..}] ca.trans_bias 75

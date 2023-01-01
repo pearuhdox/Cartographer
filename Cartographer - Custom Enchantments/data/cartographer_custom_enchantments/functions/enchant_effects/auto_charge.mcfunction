@@ -1,5 +1,7 @@
 tag @s add doing_auto_charge
 
+function cartographer_custom_enchantments:calc_enchant/auto_charge
+
 #Sfx
 execute if entity @s[scores={ca.auto_charge=1..}] at @s run playsound minecraft:item.crossbow.loading_end player @a[distance=..8] ~ ~ ~ 10 0.8
 
@@ -100,4 +102,4 @@ scoreboard players set $auto_repeat ca.auto_charge 0
 
 execute unless score @s ca.recoil_count matches 1.. run scoreboard players add @s ca.recoil_count 1
 
-function #minecraft:cartographer/events/enchantments/ranged/auto_charge
+execute if score @s ca.auto_charge matches 1.. run function #minecraft:cartographer/events/enchantments/ranged/auto_charge

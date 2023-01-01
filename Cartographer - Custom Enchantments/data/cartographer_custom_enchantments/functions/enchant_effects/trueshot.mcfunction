@@ -14,3 +14,5 @@ execute as @s store result entity @s Motion[2] double 0.001 run scoreboard playe
 execute as @s store result entity @s damage double 0.01 run scoreboard players operation @s ca.ce.true_dmg /= $custom_enchant.TrueshotApprox ca.CONSTANT
 
 tag @s add trueshot_arrow
+
+function #minecraft:cartographer/events/enchantments/ranged/trueshot

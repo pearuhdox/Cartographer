@@ -41,7 +41,7 @@ execute if score $rally_restore ca.rally matches 1.. run function cartographer_c
 
 
 #Surging Strike - Runs after Stunning to use melee chance calc
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.surge_strike=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/surging_strike
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.surging_strike=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] unless entity @s[tag=can_crit] run function cartographer_custom_enchantments:enchant_effects/surging_strike
 
 #Bleeding
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.bleeding=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/bleeding

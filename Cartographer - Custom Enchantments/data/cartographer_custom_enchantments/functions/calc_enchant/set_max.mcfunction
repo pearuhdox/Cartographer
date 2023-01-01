@@ -45,7 +45,7 @@ execute if score @s ca.cauterize matches 2.. run scoreboard players set @s ca.ca
 execute if score @s ca.splintering matches 2.. run scoreboard players set @s ca.splintering 1
 execute if score @s ca.spurs matches 2.. run scoreboard players set @s ca.spurs 1
 execute if score @s ca.stunning matches 6.. run scoreboard players set @s ca.stunning 5
-execute if score @s ca.surge_strike matches 4.. run scoreboard players set @s ca.surge_strike 3
+execute if score @s ca.surging_strike matches 4.. run scoreboard players set @s ca.surging_strike 3
 execute if score @s ca.transfig matches 6.. run scoreboard players set @s ca.transfig 5
 execute if score @s ca.tempo_theft matches 3.. run scoreboard players set @s ca.tempest 5
 execute if score @s ca.tempo_theft matches 3.. run scoreboard players set @s ca.tempo_theft 3

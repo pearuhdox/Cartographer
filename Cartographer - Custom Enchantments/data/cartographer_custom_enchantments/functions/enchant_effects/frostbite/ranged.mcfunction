@@ -17,4 +17,4 @@ tag @s[type=#bb:hostile] remove is_frostbite_4
 tag @s[type=#bb:hostile] remove is_frostbite_5
 
 #Debug Message
-tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Frostbite (ranged).","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
+function #minecraft:cartographer/events/enchants_mob_hit/melee/frostbite

@@ -16,3 +16,5 @@ execute if score $melee ca.first_strike matches 3.. if score $critting ca.first_
 
 
 execute if score $melee ca.first_strike matches 1.. run function cd:lib/mob/damage/true
+
+function #minecraft:cartographer/events/enchants_mob_hit/melee/first_strike

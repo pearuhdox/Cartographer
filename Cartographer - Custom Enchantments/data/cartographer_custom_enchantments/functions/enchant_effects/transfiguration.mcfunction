@@ -12,4 +12,4 @@ execute unless score @s ca.trans_cdl matches 1.. as @e[type=#bb:hostile,tag=!eli
 
 #scoreboard players set $melee ca.transfig 0
 
-function #minecraft:cartographer/events/enchantments/melee/transfiguration
+function #minecraft:cartographer/events/enchantments/melee/transfiguration/attack

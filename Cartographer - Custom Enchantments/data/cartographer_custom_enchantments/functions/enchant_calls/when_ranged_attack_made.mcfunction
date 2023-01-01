@@ -51,4 +51,8 @@ scoreboard players set @s ca.recently_fired_weapon 80
 attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
 
 #Do all ranged checks.
-execute run function cartographer_custom_enchantments:enchant_effects/apply_ranged_tags
+function cartographer_custom_enchantments:enchant_effects/apply_ranged_tags
+
+#Run Tags
+execute if score @s ca.fire_bow matches 1.. run function #minecraft:cartographer/events/player_shoot_bow
+execute if score @s ca.fire_cbow matches 1.. run function #minecraft:cartographer/events/player_shoot_crossbow

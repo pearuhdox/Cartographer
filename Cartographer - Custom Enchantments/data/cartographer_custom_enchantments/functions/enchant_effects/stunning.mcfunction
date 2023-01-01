@@ -13,4 +13,4 @@ execute as @e[type=#bb:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run functi
 #scoreboard players set $melee ca.melee_chance 0
 scoreboard players set $melee ca.stunning 0
 
-function #minecraft:cartographer/events/enchantments/melee/stunning
+function #minecraft:cartographer/events/enchantments/melee/stunning/attack

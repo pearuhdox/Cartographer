@@ -6,3 +6,5 @@ execute if score $ranged ca.melee_chance <= $percent_poss ca.melee_chance unless
 execute if score $ranged ca.melee_chance <= $percent_poss ca.melee_chance unless score @s ca.possess_time matches 1.. at @s run scoreboard players set @s ca.possess_time 1
 
 execute if score @s ca.possess_time matches 61.. run scoreboard players add @s ca.eft_possess 25
+
+function #minecraft:cartographer/events/enchants_mob_hit/melee/possession/proc

@@ -6,3 +6,5 @@ execute if score $fb ca.frostbite matches 2 run scoreboard players set @s ca.fro
 execute if score $fb ca.frostbite matches 3 run scoreboard players set @s ca.frost_tier 3
 execute if score $fb ca.frostbite matches 4 run scoreboard players set @s ca.frost_tier 4
 execute if score $fb ca.frostbite matches 5 run scoreboard players set @s ca.frost_tier 5
+
+function #minecraft:cartographer/events/enchants_mob_hit/melee/frostbite

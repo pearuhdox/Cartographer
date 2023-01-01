@@ -54,7 +54,7 @@ scoreboard objectives add ca.cauterize dummy
 scoreboard objectives add ca.splintering dummy
 scoreboard objectives add ca.spurs dummy
 scoreboard objectives add ca.stunning dummy
-scoreboard objectives add ca.surge_strike dummy
+scoreboard objectives add ca.surging_strike dummy
 scoreboard objectives add ca.transfig dummy
 scoreboard objectives add ca.tempest dummy
 scoreboard objectives add ca.tempo_theft dummy

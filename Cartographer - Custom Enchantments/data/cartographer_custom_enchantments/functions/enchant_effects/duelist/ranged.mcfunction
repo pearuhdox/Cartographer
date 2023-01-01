@@ -17,4 +17,4 @@ tag @e[type=#bb:hostile,tag=is_duelist_4,distance=..12] remove is_duelist_4
 tag @e[type=#bb:hostile,tag=is_duelist_5,distance=..12] remove is_duelist_5
 
 #Debug Message
-tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Duelist (ranged).","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
+function #minecraft:cartographer/events/enchants_mob_hit/melee/ranged

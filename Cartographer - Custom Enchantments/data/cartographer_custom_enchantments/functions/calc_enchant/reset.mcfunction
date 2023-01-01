@@ -52,7 +52,7 @@ scoreboard players set @s ca.cauterize 0
 scoreboard players set @s ca.splintering 0
 scoreboard players set @s ca.spurs 0
 scoreboard players set @s ca.stunning 0
-scoreboard players set @s ca.surge_strike 0
+scoreboard players set @s ca.surging_strike 0
 scoreboard players set @s ca.transfig 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.tempest 0
 scoreboard players set @s ca.tempo_theft 0

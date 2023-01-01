@@ -11,3 +11,5 @@ execute if score $melee ca.singe matches 1.. as @s run function cd:lib/mob/damag
 execute if score $melee ca.singe matches 1 as @s run function cd:func/mob_damage_true/half
 execute if score $melee ca.singe matches 3 as @s run function cd:func/mob_damage_true/half
 execute if score $melee ca.singe matches 5 as @s run function cd:func/mob_damage_true/half
+
+function #minecraft:cartographer/events/enchants_mob_hit/melee/singe
