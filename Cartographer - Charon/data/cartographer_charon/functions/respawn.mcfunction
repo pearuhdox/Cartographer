@@ -13,3 +13,5 @@ execute as @e[type=armor_stand,distance=..10,tag=ca.charon_respawnable,limit=1,s
 
 #Take away a boon here.
 execute if score @s ca.boons matches 1.. run function cartographer_charon:boons/remove
+
+function #minecraft:cartographer/events/player_respawns

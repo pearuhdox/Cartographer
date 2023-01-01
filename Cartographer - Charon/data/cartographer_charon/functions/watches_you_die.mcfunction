@@ -23,3 +23,5 @@ data modify storage suso:pldata working_data.charon_player.inv set from storage 
 function suso.player_data:put/do
 
 function cartographer_charon:effect_manager/get_effects
+
+function #minecraft:cartographer/events/player_dies
