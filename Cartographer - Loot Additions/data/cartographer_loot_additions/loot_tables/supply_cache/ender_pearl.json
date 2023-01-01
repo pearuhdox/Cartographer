@@ -2,16 +2,15 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:ender_pearl"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
+      "rolls": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$result"
+        },
+        "score": "ca.loot_multiplier",
+        "scale": 1
+      },
       "entries": [
         {
           "type": "minecraft:empty",
@@ -25,13 +24,7 @@
         {
           "type": "minecraft:item",
           "weight": 2,
-          "name": "minecraft:ender_eye",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            }
-          ]
+          "name": "minecraft:ender_eye"
         },
         {
           "type": "minecraft:item",

@@ -3,25 +3,29 @@
   "pools": [
     {
       "rolls": {
-        "min": 2,
-        "max": 2
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$result"
+        },
+        "score": "ca.loot_multiplier",
+        "scale": 1
       },
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 3,
           "name": "minecraft:arrow",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 2,
-                "max": 3
+                "min": 4,
+                "max": 4
               }
             }
           ]
         }
-          ]
-        }
       ]
+    }
+  ]
 }

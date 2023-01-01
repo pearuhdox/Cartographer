@@ -1,7 +1,15 @@
 {
   "pools": [
     {
-      "rolls": 3,
+      "rolls": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$result"
+        },
+        "score": "ca.loot_multiplier",
+        "scale": 2
+      },
       "entries": [
         {
           "type": "minecraft:item",
@@ -10,8 +18,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 4,
-                "max": 10
+                "min": 6,
+                "max": 6
               }
             }
           ]
@@ -24,7 +32,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 4,
-                "max": 10
+                "max": 4
               }
             }
           ]
@@ -37,7 +45,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 4,
-                "max": 10
+                "max": 4
               }
             }
           ]

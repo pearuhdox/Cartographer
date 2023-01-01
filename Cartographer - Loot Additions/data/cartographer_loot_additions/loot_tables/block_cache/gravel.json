@@ -2,8 +2,13 @@
   "pools": [
     {
       "rolls": {
-        "min": 12,
-        "max": 12
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$result"
+        },
+        "score": "ca.loot_multiplier",
+        "scale": 6
       },
       "entries": [
         {

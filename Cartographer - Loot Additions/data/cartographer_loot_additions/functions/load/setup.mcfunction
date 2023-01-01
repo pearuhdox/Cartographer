@@ -23,6 +23,9 @@ scoreboard objectives add ca.get_soul totalKillCount
 
 scoreboard objectives add ca.break_head_look_time dummy
 
+scoreboard objectives add ca.loot_multiplier dummy
+execute unless score $scale ca.loot_multiplier matches 1.. run scoreboard players set $scale ca.loot_multiplier 2
+
 #Create the loot giving box.
 setblock 4206900 2 4206900 purple_shulker_box replace
 

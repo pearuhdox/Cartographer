@@ -1,7 +1,15 @@
 {
   "pools": [
     {
-      "rolls": 1,
+      "rolls": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$result"
+        },
+        "score": "ca.loot_multiplier",
+        "scale": 1
+      },
       "entries": [
         {
           "type": "minecraft:item",
@@ -10,8 +18,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 3,
-                "max": 8
+                "min": 4,
+                "max": 4
               }
             }
           ]
@@ -19,7 +27,15 @@
       ]
     },
     {
-      "rolls": 1,
+      "rolls": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$result"
+        },
+        "score": "ca.loot_multiplier",
+        "scale": 1
+      },
       "entries": [
         {
           "type": "minecraft:item",
@@ -28,8 +44,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 24,
-                "max": 48
+                "min": 8,
+                "max": 8
               }
             }
           ]
@@ -37,7 +53,15 @@
       ]
     },
     {
-      "rolls": 1,
+      "rolls": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$result"
+        },
+        "score": "ca.loot_multiplier",
+        "scale": 1
+      },
       "entries": [
         {
           "type": "minecraft:item",
@@ -47,7 +71,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 4,
-                "max": 8
+                "max": 4
               }
             }
           ]

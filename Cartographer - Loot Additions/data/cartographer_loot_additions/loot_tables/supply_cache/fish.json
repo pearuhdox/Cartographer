@@ -2,7 +2,15 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 2,
+      "rolls": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$result"
+        },
+        "score": "ca.loot_multiplier",
+        "scale": 1
+      },
       "entries": [
         {
           "type": "minecraft:item",
