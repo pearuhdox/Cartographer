@@ -54,5 +54,3 @@ tag @s[type=#bb:hostile] remove is_vol_pos
 tag @s[type=#bb:hostile] remove is_vol_frost
 tag @s[type=#bb:hostile] remove is_vol_flash
 tag @s[type=#bb:hostile] remove is_vol_cau
-
-function #minecraft:cartographer/events/enchantments/ranged/explosive

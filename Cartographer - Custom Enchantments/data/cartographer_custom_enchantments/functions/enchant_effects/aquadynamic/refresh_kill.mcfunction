@@ -90,4 +90,4 @@ playsound minecraft:entity.player.breath player @s ~ ~ ~ 0.5 0.75
 particle minecraft:cloud ~ ~1 ~ 0.35 0.35 0.35 0.1 4 normal
 particle minecraft:bubble ~ ~1 ~ 0.35 0.35 0.35 0.5 20 normal
 
-function #minecraft:cartographer/events/aquadynamic/kill
+function #minecraft:cartographer/events/enchantments/passive/aquadynamic/kill

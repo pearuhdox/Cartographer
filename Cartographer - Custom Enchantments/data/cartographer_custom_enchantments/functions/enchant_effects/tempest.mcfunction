@@ -12,4 +12,4 @@ tag @s[type=#bb:hostile,tag=is_tempest_3] remove is_tempest_3
 tag @s[type=#bb:hostile,tag=is_tempest_4] remove is_tempest_4
 tag @s[type=#bb:hostile,tag=is_tempest_5] remove is_tempest_5
 
-function #minecraft:cartographer/events/enchantments/ranged/tempest
+function #minecraft:cartographer/events/enchants_mob_hit/ranged/tempest

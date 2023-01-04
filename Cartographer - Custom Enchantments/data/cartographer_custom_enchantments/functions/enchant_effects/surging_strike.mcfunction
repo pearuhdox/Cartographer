@@ -1,3 +1,5 @@
+function #minecraft:cartographer/events/enchantments/melee/surging_strike
+
 #Sfx and Vfx
 execute if entity @s[scores={ca.surging_strike=1..}] run playsound minecraft:entity.player.attack.sweep player @s ~ ~ ~ 1 2
 execute if entity @s[scores={ca.surging_strike=1..}] run playsound minecraft:entity.zombie.infect player @s ~ ~ ~ 5 2
@@ -44,5 +46,3 @@ scoreboard players set $melee ca.electrocute 0
 scoreboard players set $melee ca.stunning 0
 scoreboard players set $melee ca.infection 0
 scoreboard players set $melee ca.possession 0
-
-function #minecraft:cartographer/events/enchantments/melee/surging_strike

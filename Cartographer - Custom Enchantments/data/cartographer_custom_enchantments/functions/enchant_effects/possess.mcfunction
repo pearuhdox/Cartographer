@@ -13,4 +13,4 @@ function cartographer_custom_enchantments:enchant_effects/possess/branch
 
 tag @s[type=#bb:hostile,tag=is_possess] remove is_possess
 
-function #minecraft:cartographer/events/enchantments/ranged/possess
+function #minecraft:cartographer/events/enchants_mob_hit/ranged/possess

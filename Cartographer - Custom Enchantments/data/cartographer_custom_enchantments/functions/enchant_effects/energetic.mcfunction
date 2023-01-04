@@ -3,4 +3,4 @@ execute if entity @s[scores={ca.energetic=1..,ca.kill_entity=1..,ca.energ_time=0
 execute if entity @s[scores={ca.energetic=1..,ca.kill_entity=1..}] run scoreboard players set @s ca.energ_time 200
 execute if entity @s[scores={ca.energetic=1..,ca.kill_entity=1..}] run scoreboard players operation @s ca.energ_time *= @s ca.energetic 
 
-function #minecraft:cartographer/events/energetic
+function #minecraft:cartographer/events/enchantments/passive/energetic

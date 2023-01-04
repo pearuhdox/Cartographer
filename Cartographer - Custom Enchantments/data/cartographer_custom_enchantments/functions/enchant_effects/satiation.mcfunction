@@ -1,3 +1,5 @@
+function #minecraft:cartographer/events/enchantments/passive/satiation
+
 scoreboard players set $rng_min bbl.rng 1
 scoreboard players set $rng_max bbl.rng 5
 function bb:lib/rng
@@ -21,5 +23,3 @@ execute if score $value bbl.rng matches 4 if score @s ca.satiation matches 3 run
 execute if score $value bbl.rng matches 5 if score @s ca.satiation matches 1 run effect give @s absorption 10
 execute if score $value bbl.rng matches 5 if score @s ca.satiation matches 2 run effect give @s absorption 20
 execute if score $value bbl.rng matches 5 if score @s ca.satiation matches 3 run effect give @s absorption 30
-
-function #minecraft:cartographer/events/enchantments/passive/satiation

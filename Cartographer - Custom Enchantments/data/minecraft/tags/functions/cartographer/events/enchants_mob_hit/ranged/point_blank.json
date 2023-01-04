@@ -1,5 +1,5 @@
 {
     "values":[
-      "cartographer_custom_enchantments:events/debug/ranged/point_blank"
+      "cartographer_custom_enchantments:events/debug/mob_hit/ranged/point_blank"
     ]
   }

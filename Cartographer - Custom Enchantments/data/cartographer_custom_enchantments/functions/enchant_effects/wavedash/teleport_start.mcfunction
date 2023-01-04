@@ -7,3 +7,5 @@ effect give @s weakness 1 4
 effect give @s slowness 1 4
 
 tag @s remove is_wavedash
+
+function #minecraft:cartographer/events/enchants_mob_hit/ranged/wavedash

@@ -69,3 +69,5 @@ execute if score $eruption ca.executioner matches 1.. run function cartographer_
 
 #Reset this stat
 scoreboard players set $exec_dmg bbl.storage 0
+
+function #minecraft:cartographer/events/enchants_mob_hit/tool/eruption

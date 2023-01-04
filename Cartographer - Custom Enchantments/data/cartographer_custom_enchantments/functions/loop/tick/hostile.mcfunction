@@ -18,7 +18,6 @@ execute as @s[tag=ca.rally_marked] run function cartographer_custom_enchantments
 
 #Recoil movement pieces
 execute as @s[type=creeper,tag=ca.recoil_movement,tag=ca.needs_move] at @s run function cartographer_custom_enchantments:enchant_effects/recoil/move_creeper
-execute as @s[type=slime,tag=ca.recoil_blocker,tag=ca.needs_move] at @s run function cartographer_custom_enchantments:enchant_effects/recoil/move_slime
 
 #Cleanse the Skip Smouldering Tag
 tag @s remove skip_cauterize

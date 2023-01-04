@@ -1,5 +1,5 @@
 {
     "values":[
-      "cartographer_custom_enchantments:events/debug/passive/concealed"
+      "cartographer_custom_enchantments:events/debug/mob_hit/passive/concealed"
     ]
   }

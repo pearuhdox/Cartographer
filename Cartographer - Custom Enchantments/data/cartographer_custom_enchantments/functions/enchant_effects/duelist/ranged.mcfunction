@@ -17,4 +17,4 @@ tag @e[type=#bb:hostile,tag=is_duelist_4,distance=..12] remove is_duelist_4
 tag @e[type=#bb:hostile,tag=is_duelist_5,distance=..12] remove is_duelist_5
 
 #Debug Message
-function #minecraft:cartographer/events/enchants_mob_hit/melee/ranged
+function #minecraft:cartographer/events/enchants_mob_hit/melee/duelist

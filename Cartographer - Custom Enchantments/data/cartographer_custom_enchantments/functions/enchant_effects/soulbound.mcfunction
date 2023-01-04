@@ -1,3 +1,1 @@
-execute as @e[type=item,nbt={Item:{tag:{CustomEnchantments:[{id:"soulbound"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_shattering
-execute as @e[type=item,nbt={Item:{tag:{CustomEnchantments:[{id:"soulbound"}]}}}] at @s run data merge entity @s {Age:-32767,Health:1000000,NoGravity:1,Motion:[0.0,0.0,0.0],Glowing:1,PickupDelay:0}
-execute as @e[type=item,nbt={Item:{tag:{CustomEnchantments:[{id:"soulbound"}]}}}] at @s run tp @s 4206900 256 4206900
+execute as @e[type=item,nbt={Item:{tag:{CustomEnchantments:[{id:"soulbound"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/soulbound/branch

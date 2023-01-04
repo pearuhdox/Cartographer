@@ -1,3 +1,5 @@
+function #minecraft:cartographer/events/enchantments/melee/possession
+
 scoreboard players operation $poss ca.possession = @s ca.possession
 
 scoreboard players set in math 1
@@ -11,6 +13,3 @@ scoreboard players operation $percent_poss ca.melee_chance = $melee ca.possessio
 scoreboard players operation $percent_poss ca.melee_chance *= $10 ca.CONSTANT
 
 execute as @e[type=#bb:hostile,distance=..5,nbt=!{HurtTime:0s}] at @s run function cartographer_custom_enchantments:enchant_effects/possession/branch
-
-#Debug Message
-tellraw @a[tag=debug,scores={ca.possession=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Possession.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

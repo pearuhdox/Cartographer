@@ -1,3 +1,5 @@
+function #minecraft:cartographer/events/enchantments/tool/sapper
+
 scoreboard players operation $sapper_time ca.enchant_var = @s ca.sapper
 scoreboard players operation $sapper_time ca.enchant_var *= $20 ca.CONSTANT
 

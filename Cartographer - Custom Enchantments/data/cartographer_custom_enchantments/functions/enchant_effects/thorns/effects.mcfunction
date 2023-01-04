@@ -79,3 +79,5 @@ scoreboard players set $exec_dmg bbl.storage 0
 
 #Orian if you complain about this one more time I swear to God I will gut France like a fish
 execute if entity @s[type=#minecraft:skeletons] unless entity @a[scores={ca.thorns=1..},distance=..1.6] run effect give @s blindness 1 0 true
+
+function #minecraft:cartographer/events/enchants_mob_hit/passive/thorns

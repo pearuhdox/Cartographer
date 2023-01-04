@@ -1,5 +1,5 @@
 {
     "values":[
-      "cartographer_custom_enchantments:events/debug/passive/second_wind"
+      "cartographer_custom_enchantments:events/debug/mob_hit/passive/second_wind"
     ]
   }

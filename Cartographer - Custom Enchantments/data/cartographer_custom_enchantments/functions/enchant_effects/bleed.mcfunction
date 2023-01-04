@@ -8,4 +8,4 @@ execute unless score @s ca.bleed_potency matches 1.. run scoreboard players add 
 
 tag @s[type=#bb:hostile,tag=is_bleed] remove is_bleed
 
-function #minecraft:cartographer/events/enchantments/ranged/bleed
+function #minecraft:cartographer/events/enchants_mob_hit/ranged/bleed

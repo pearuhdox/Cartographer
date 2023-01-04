@@ -11,3 +11,5 @@ execute if score @s ca.bleed_potency matches 1.. if score $melee ca.bleeding mat
 execute unless score @s ca.bleed_potency matches 1.. if score $melee ca.bleeding matches 1 run scoreboard players add @s ca.bleed_potency 1
 execute unless score @s ca.bleed_potency matches 1.. if score $melee ca.bleeding matches 2 run scoreboard players add @s ca.bleed_potency 2
 execute unless score @s ca.bleed_potency matches 1.. if score $melee ca.bleeding matches 3.. run scoreboard players add @s ca.bleed_potency 3
+
+function #minecraft:cartographer/events/enchants_mob_hit/melee/bleeding

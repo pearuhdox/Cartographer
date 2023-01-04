@@ -1,11 +1,11 @@
 #Adrenaline
-execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/adrenaline
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.adrenaline matches 1.. run function cartographer_custom_enchantments:enchant_effects/adrenaline
 #Auto Charge
 execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/auto_charge
 #Energetic
-execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/energetic
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.energetic matches 1.. run function cartographer_custom_enchantments:enchant_effects/energetic
 #Frenzy
-execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.frenzy matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy
 #Lifesteal
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal
 

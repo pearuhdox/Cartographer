@@ -1,5 +1,5 @@
 {
     "values":[
-      "cartographer_custom_enchantments:events/debug/melee/possession"
+      "cartographer_custom_enchantments:events/debug/mob_hit/melee/possession"
     ]
   }

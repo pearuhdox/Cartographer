@@ -25,12 +25,11 @@ scoreboard players operation $thorns ca.t_exec = @s ca.t_exec
 
 scoreboard players operation $thorns ca.cauterize = @s ca.cauterize
 
+function #minecraft:cartographer/events/enchantments/passive/thorns
+
 execute at @s as @e[type=#bb:hostile,tag=thorns_mark,distance=..30] at @s run function cartographer_custom_enchantments:enchant_effects/thorns/effects
 
 playsound minecraft:enchant.thorns.hit ambient @a[distance=..8] ~ ~ ~ 1.5 1
 playsound minecraft:entity.cat.hiss player @a[distance=..8] ~ ~ ~ 0.8 2
 
 particle minecraft:crit ~ ~0.2 ~ 0.5 0.2 0.5 0.1 20 normal
-
-#Debug Message
-tellraw @a[tag=debug,scores={ca.thorns=1..}] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" used Thorns.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

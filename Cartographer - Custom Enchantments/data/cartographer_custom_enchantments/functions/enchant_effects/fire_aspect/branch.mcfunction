@@ -7,3 +7,5 @@ execute if score $fa ca.fire_aspect matches 2 run data modify entity @s Fire set
 execute if score $fa ca.fire_aspect matches 3 run data modify entity @s Fire set value 260
 execute if score $fa ca.fire_aspect matches 4 run data modify entity @s Fire set value 340
 execute if score $fa ca.fire_aspect matches 5 run data modify entity @s Fire set value 420
+
+function #minecraft:cartographer/events/enchants_mob_hit/melee/fire_aspect

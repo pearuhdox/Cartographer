@@ -6,4 +6,4 @@ playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..24] ~ ~ ~
 
 tag @s[type=#bb:hostile,tag=is_flash] remove is_flash
 
-function #minecraft:cartographer/events/enchantments/ranged/flash
+function #minecraft:cartographer/events/enchants_mob_hit/ranged/flash

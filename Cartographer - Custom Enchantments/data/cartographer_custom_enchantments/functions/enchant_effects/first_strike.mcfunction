@@ -1,3 +1,5 @@
+function #minecraft:cartographer/events/enchantments/melee/first_strike
+
 scoreboard players operation $melee ca.first_strike = @s ca.first_strike
 
 execute if entity @s[tag=can_crit] run scoreboard players set $critting ca.first_strike 1
@@ -9,5 +11,3 @@ scoreboard players set $critting ca.first_strike 0
 
 tag @s add ca.used_first_strike
 tag @s remove can_first_strike
-
-function #minecraft:cartographer/events/enchantments/melee/first_strike

@@ -1,3 +1,5 @@
+function #minecraft:cartographer/events/enchantments/passive/second_wind
+
 tag @s remove true_death
 
 playsound minecraft:block.respawn_anchor.deplete player @a[distance=..16] ~ ~ ~ 2 1.25 

@@ -13,6 +13,8 @@ scoreboard players operation $eruption ca.possession = @s ca.possession
 scoreboard players operation $eruption ca.evocation = @s ca.evocation
 scoreboard players operation $eruption ca.executioner = @s ca.executioner
 
+function #minecraft:cartographer/events/enchantments/tool/eruption
+
 #Run branching on the xp orb here.
 execute as @e[type=minecraft:experience_orb,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch
 
@@ -33,5 +35,3 @@ scoreboard players set $eruption ca.electrocute 0
 scoreboard players set $eruption ca.possession 0
 scoreboard players set $eruption ca.evocation 0
 scoreboard players set $eruption ca.executioner 0
-
-function #minecraft:cartographer/events/enchantments/tool/eruption

@@ -56,3 +56,5 @@ execute unless score $deadeye_mark ca.var matches 1.. if score @s ca.multishot m
 #execute if entity @s[nbt=!{SelectedItem:{tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}}] if entity @s[nbt=!{Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]}] as @e[tag=deadeye_aim,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/deadeye/bullet
 #execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}}] as @e[tag=deadeye_multi,limit=7,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/deadeye/multi_bullet
 #execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{Enchantments:[{id:"minecraft:multishot",lvl:1s}]}}]}] as @e[tag=deadeye_multi,limit=7,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/deadeye/multi_bullet
+
+function #minecraft:cartographer/events/enchantments/ranged/deadeye

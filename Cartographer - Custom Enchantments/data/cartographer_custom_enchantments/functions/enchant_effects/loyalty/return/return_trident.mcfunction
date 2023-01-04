@@ -47,3 +47,5 @@ execute if score $slot ca.loyalty matches 35 in minecraft:overworld run loot rep
 execute if score $slot ca.loyalty matches -106 in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine 4206900 1 4206900 air{drop_contents:1b}
 
 playsound minecraft:item.trident.riptide_3 player @s ~ ~ ~ 1 1.5
+
+function cartographer_custom_enchantments:calc_enchant/run

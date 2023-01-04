@@ -13,3 +13,5 @@ execute if score $hydraul ca.tempest matches 4 run scoreboard players add @s cdl
 execute if score $hydraul ca.tempest matches 5 run scoreboard players add @s cdl.damage_queue 10
 
 function cd:lib/mob/damage/normal
+
+function #minecraft:cartographer/events/enchants_mob_hit/ranged/hydraulic
