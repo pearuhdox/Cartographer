@@ -170,6 +170,8 @@ scoreboard objectives add ca.core_delay_check dummy
 #Setup a score for any and all constant values.
 scoreboard objectives add ca.CONSTANT dummy
 
+scoreboard players reset * ca.CONSTANT
+
 scoreboard players set $-1 ca.CONSTANT -1
 
 scoreboard players set $10000 ca.CONSTANT 10000
@@ -180,6 +182,9 @@ scoreboard players set $10 ca.CONSTANT 10
 scoreboard players set $13 ca.CONSTANT 13
 
 scoreboard players set $15 ca.CONSTANT 15
+scoreboard players set $17 ca.CONSTANT 17
+scoreboard players set $18 ca.CONSTANT 18
+scoreboard players set $19 ca.CONSTANT 19
 scoreboard players set $20 ca.CONSTANT 20
 scoreboard players set $21 ca.CONSTANT 21
 scoreboard players set $25 ca.CONSTANT 25
