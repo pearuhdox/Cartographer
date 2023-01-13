@@ -10,6 +10,6 @@ execute positioned ^ ^0.5 ^2 as @a[tag=!sweep_tagged,distance=..1.15] at @s run 
 execute positioned ^ ^0.5 ^3 as @a[tag=!sweep_tagged,distance=..1.15] at @s run function cartographer_mob_abilities:abilities/sweep/hit
 execute positioned ^ ^0.5 ^4 as @a[tag=!sweep_tagged,distance=..1.15] at @s run function cartographer_mob_abilities:abilities/sweep/hit
 
-execute if entity @a[tag=!sweep_tagged,tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..5.15] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
-
 tag @a[tag=ability_tagged,distance=..5.15] add sweep_tagged
+
+execute if entity @a[tag=!sweep_tagged,tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..5.15] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
