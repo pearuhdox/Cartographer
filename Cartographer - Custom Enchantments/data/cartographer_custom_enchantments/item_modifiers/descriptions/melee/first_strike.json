@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This melee weapon deals more",
+              "text": "This melee weapon deals extra damage",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,7 +24,7 @@
               "obfuscated": false
             },
             {
-                "text": "damage to 'Elite' enemies.",
+                "text": "to the first enemy hit that combat.",
                 "color": "#FFF4D9",
                 "bold": false,
                 "italic": false,

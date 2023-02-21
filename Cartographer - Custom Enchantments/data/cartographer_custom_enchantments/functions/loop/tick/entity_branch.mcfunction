@@ -4,6 +4,9 @@ execute if entity @s[type=#bb:arrow] run function cartographer_custom_enchantmen
 # Hostile Entities
 execute if entity @s[type=#bb:hostile] run function cartographer_custom_enchantments:loop/tick/hostile
 
+# Chickens (Transfig)
+execute if entity @s[type=chicken] if score @s ca.transfig_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/transfiguration/time
+
 # Trident
 execute if entity @s[type=trident] run function cartographer_custom_enchantments:loop/tick/trident
 

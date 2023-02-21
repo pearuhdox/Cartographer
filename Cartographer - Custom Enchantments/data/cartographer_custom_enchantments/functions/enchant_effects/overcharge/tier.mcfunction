@@ -4,12 +4,12 @@ execute if score @s[scores={ca.overcharge=3..}] ca.draw_bow_time matches 60 run 
 
 execute if score @s ca.draw_bow_time matches 30 run playsound minecraft:block.note_block.didgeridoo player @s ~ ~ ~ 1 0.75
 execute if score @s[scores={ca.overcharge=2..}] ca.draw_bow_time matches 45 run playsound minecraft:block.note_block.didgeridoo player @s ~ ~ ~ 1 0.9
-execute if score @s[scores={ca.overcharge=3..}] ca.draw_bow_time matches 60 run playsound minecraft:block.note_block.didgeridoo player @s ~ ~ ~ 1 1.1
+execute if score @s[scores={ca.overcharge=3..}] ca.draw_bow_time matches 60 run playsound minecraft:block.note_block.didgeridoo player @s ~ ~ ~ 1 1.125
 
 execute if score @s ca.draw_bow_time matches 30 run playsound minecraft:block.note_block.cow_bell player @s ~ ~ ~ 1 0.75
 execute if score @s[scores={ca.overcharge=2..}] ca.draw_bow_time matches 45 run playsound minecraft:block.note_block.cow_bell player @s ~ ~ ~ 1 0.9
-execute if score @s[scores={ca.overcharge=3..}] ca.draw_bow_time matches 60 run playsound minecraft:block.note_block.cow_bell player @s ~ ~ ~ 1 1.1
+execute if score @s[scores={ca.overcharge=3..}] ca.draw_bow_time matches 60 run playsound minecraft:block.note_block.cow_bell player @s ~ ~ ~ 1 1.125
 
 execute if score @s ca.draw_bow_time matches 30 run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 0.75
 execute if score @s[scores={ca.overcharge=2..}] ca.draw_bow_time matches 45 run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 0.9
-execute if score @s[scores={ca.overcharge=3..}] ca.draw_bow_time matches 60 run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 1.1
+execute if score @s[scores={ca.overcharge=3..}] ca.draw_bow_time matches 60 run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 1.125

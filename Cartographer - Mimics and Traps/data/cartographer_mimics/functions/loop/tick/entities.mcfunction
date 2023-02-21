@@ -8,5 +8,7 @@ execute as @s[type=#bb:hostile,tag=active_colossus,tag=!done_dupe] at @s run fun
 
 execute as @s[type=bee,tag=active_colossus] at @s run data modify entity @s AngerTime set value 2147483647
 
+execute as @s[type=marker,tag=ca.trap_spawner] at @s run function cartographer_mimics:trap_spawner/tick
+
 execute as @s[type=item,nbt={Item:{tag:{MimicDeath:1}}}] at @s run function cartographer_mimics:mimic/death
 execute as @s[type=item,nbt={Item:{tag:{ColossusDeath:1}}}] at @s run function cartographer_mimics:colossus/death

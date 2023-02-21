@@ -154,6 +154,9 @@ scoreboard objectives add ca.ricochet_cooldown dummy
 
 scoreboard objectives add ca.armor_count dummy
 
+scoreboard objectives add ca.transfig_time dummy
+scoreboard objectives add ca.transfig_id dummy
+
 #Setup ca.evasion bias score.
 scoreboard objectives add ca.evasion_bias dummy
 

@@ -6,6 +6,13 @@ scoreboard objectives add helper_power armor
 
 scoreboard objectives add setup dummy
 
+scoreboard objectives add ca.mt_var dummy
+
+scoreboard objectives add ca.wave_count dummy
+scoreboard objectives add ca.wave_time dummy
+scoreboard objectives add ca.trap_timer dummy
+scoreboard objectives add ca.trap_clock dummy
+
 scoreboard objectives add ca.colo_animation dummy
 
 scoreboard objectives add ca.mimic_var dummy

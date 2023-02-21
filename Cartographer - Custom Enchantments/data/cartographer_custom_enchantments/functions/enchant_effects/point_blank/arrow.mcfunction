@@ -12,6 +12,13 @@ execute as @s[scores={ca.point_blank=1},tag=trueshot_arrow] store result entity 
 execute as @s[scores={ca.point_blank=2},tag=trueshot_arrow] store result entity @s damage double 0.1 run scoreboard players remove @s ca.arrow_dmg 6
 execute as @s[scores={ca.point_blank=3},tag=trueshot_arrow] store result entity @s damage double 0.1 run scoreboard players remove @s ca.arrow_dmg 9
 
+#Added for Custom Attributes Self Code Compat
+execute if score @s ca.point_blank matches 1 if score @s catt.proj_dmg matches 1.. run scoreboard players remove @s catt.proj_dmg 50
+execute if score @s ca.point_blank matches 2 if score @s catt.proj_dmg matches 1.. run scoreboard players remove @s catt.proj_dmg 100
+execute if score @s ca.point_blank matches 3.. if score @s catt.proj_dmg matches 1.. run scoreboard players remove @s catt.proj_dmg 150
+execute if score @s[tag=catt.checked_point_blank] catt.proj_dmg matches 1.. run data modify entity @s damage set value 0.0d
+execute if score @s ca.point_blank matches 3.. if score @s catt.proj_dmg matches 1.. run tag @s add catt.checked_point_blank
+
 execute as @s[scores={ca.point_blank=1..,ca.lifetime=7..}] run scoreboard players set @s ca.point_blank 0
 execute as @s[scores={ca.point_blank=1..},nbt={inGround:1b}] run scoreboard players set @s ca.point_blank 0
 
