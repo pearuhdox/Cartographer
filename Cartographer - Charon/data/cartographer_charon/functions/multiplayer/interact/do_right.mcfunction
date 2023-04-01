@@ -1,0 +1,1 @@
+execute on passengers if entity @s[type=allay] run function cartographer_charon:multiplayer/reviving

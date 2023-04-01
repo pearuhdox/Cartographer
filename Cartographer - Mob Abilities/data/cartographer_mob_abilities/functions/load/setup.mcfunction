@@ -41,6 +41,8 @@ scoreboard objectives add ca.sweep_side dummy
 
 scoreboard objectives add ca.carapace_stacks dummy
 
+scoreboard objectives add ca.mob_kb dummy
+
 scoreboard objectives add reflect_past dummy
 scoreboard objectives add reflect_check dummy
 scoreboard objectives add reflect_diff dummy
@@ -151,6 +153,11 @@ scoreboard objectives add ca.xyz_convert dummy
 #Create the UUID armor stands.
 kill 002f80c0-0001-f879-0000-009c001e7bfc
 kill 002f80c0-0001-f879-003a-2a2300005860
+
+#Create the UUID for Hook Markering
+# 31182015-8151-5111-3118-110000000000
+#[I;823664661,-2125377263,823660800,0]
+summon marker 4206900 50 4206900 {UUID:[I;823664661,-2125377263,823660800,0],Tags:["ca.hook_positioner"]}
 
 #Create UUID Marker for Needle Positioning
 # 0000001f-00de-140d-0000-0000000276ef

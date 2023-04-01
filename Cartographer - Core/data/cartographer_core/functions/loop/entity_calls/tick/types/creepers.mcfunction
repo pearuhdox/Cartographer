@@ -1,0 +1,2 @@
+execute if entity @s[tag=!ca.delta_creeper_setup,tag=!delta.launcher,tag=!delta.init,tag=!ca.not_delta_creeper,type=creeper] run function cartographer_core:helper/delta/apply_creeper
+execute if entity @s[tag=ca.delta_creeper_setup] run function cartographer_core:helper/delta/delta_creeper

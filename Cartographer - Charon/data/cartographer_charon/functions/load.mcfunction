@@ -7,6 +7,8 @@ scoreboard objectives add dt.death deathCount
 scoreboard objectives add dt.respawn minecraft.custom:minecraft.time_since_death
 scoreboard objectives add dt.var dummy
 
+scoreboard objectives add dt.home_cooldown dummy
+
 scoreboard objectives add charon.death_count deathCount
 
 scoreboard objectives add charon.xp_return dummy
@@ -27,6 +29,10 @@ scoreboard objectives add taxes.time minecraft.custom:minecraft.time_since_death
 scoreboard objectives add charon.player_stats dummy
 
 scoreboard objectives add ca.revive_time dummy
+scoreboard objectives add ca.is_reviving dummy
+
+scoreboard objectives add ca.self_revive_timer dummy
+scoreboard objectives add ca.self_revive_cooldown dummy
 
 team add CharonCageVisual
 team modify CharonCageVisual color dark_aqua

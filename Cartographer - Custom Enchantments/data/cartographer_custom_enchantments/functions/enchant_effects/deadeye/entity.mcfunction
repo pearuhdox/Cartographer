@@ -5,8 +5,8 @@ playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~
 playsound minecraft:entity.firework_rocket.blast hostile @a[distance=..16] ~ ~ ~ 1 2
 
 
-scoreboard players set @s cdl.damage_queue 10
-function cd:lib/mob/damage/normal
+scoreboard players set @s ca.damage_queue 10
+function cartographer_custom_enchantments:helper/damage/enchant_damage
 
 tp @s ~ ~ ~ facing entity @p[tag=is_firing_deadeye] feet
 

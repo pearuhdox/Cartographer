@@ -1,10 +1,3 @@
-# Datapack  : Black Box Library
-# Module    : Core
-# Author(s) : RockNRed
-# Created   : 7/21/21
-# Last Edit : 9/1/22
-# Name      : Build Forceload Chunk
-# Use       : Runs when the datapack is first loaded to build the force chunk.
 
 #Fill chunk
 fill 4206848 -1 4206879 4206863 -64 4206864 bedrock

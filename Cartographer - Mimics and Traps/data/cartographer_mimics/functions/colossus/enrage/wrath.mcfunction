@@ -6,7 +6,7 @@ tag @s add ca.sidearm
 tag @s remove ca.hookshot
 tag @s add ca.sh_needle
 tag @s add ca.overloading
-tag @s add enraged
+tag @s add ca.enraged
 
 effect give @s speed 90 0
 

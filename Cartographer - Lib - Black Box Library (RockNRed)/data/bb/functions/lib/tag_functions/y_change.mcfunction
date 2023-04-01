@@ -1,10 +1,3 @@
-# Datapack  : Black Box Library
-# Author(s) : PearUhDox, RockNRed
-# Created   : 8/16/21
-# Last Edit : 8/16/21
-# Name      : Crit Checker
-# Use       : Gives a player the "can_crit" tag when they can crit, remove otherwise. Also runs gain and lose y tag functions.
-
 
 #Precise
 scoreboard players operation @s bbl.y_past.pre = $y_current.pre bbl.storage

@@ -1,7 +1,7 @@
-scoreboard players operation @p cdl.heal_queue = @s ca.sapper
-execute if score @p cdl.heal_queue matches 6.. run scoreboard players set @p cdl.heal_queue 5
+scoreboard players operation @p bbl.heal_queue = @s ca.sapper
+execute if score @p bbl.heal_queue matches 6.. run scoreboard players set @p bbl.heal_queue 5
 
-execute as @p at @s run function cd:lib/player/heal
+execute as @p at @s run function bb:call/hpm/player/heal
 
 execute if score @s ca.sapper matches 6 run effect give @p regeneration 2 1
 execute if score @s ca.sapper matches 7 run effect give @p regeneration 3 1

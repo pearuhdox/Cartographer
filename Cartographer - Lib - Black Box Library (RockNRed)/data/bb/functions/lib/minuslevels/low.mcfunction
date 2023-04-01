@@ -1,3 +1,4 @@
+
 # Formula for levels 0-16
 # [level]^2 + 6[level]
 

@@ -1,0 +1,1 @@
+execute if data entity @s Item.tag.StoredItems run function cartographer_loot_additions:chest_cache/drop_master

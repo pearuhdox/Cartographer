@@ -1,2 +1,0 @@
-tp @s ~ ~ ~ facing entity @p[distance=..32,gamemode=!creative,gamemode=!spectator] feet
-execute unless block ~ ~ ~ reinforced_deepslate if block ~ ~1 ~ #bb:can_raycast run function cartographer_loot_additions:altar/despawn

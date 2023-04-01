@@ -1,9 +1,3 @@
-# Datapack  : Black Box Library
-# Author(s) : RockNRed
-# Created   : 7/21/21
-# Last Edit : 7/21/21
-# Name      : Load
-# Use       : Runs when the datapack is loaded.
 
 #Install
 function bb:sys/install
@@ -54,4 +48,4 @@ scoreboard players operation #int_2 bbl.rng *= #23 bbl.rng
 scoreboard players operation #int_3 bbl.rng *= #thirteen bbl.rng
 
 #\Burn an RNG state
-function rng:next
+function bb:lib/rng

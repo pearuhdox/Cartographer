@@ -24,12 +24,15 @@ scoreboard players set $repair_stations ca.installed 0
 
 
 scoreboard players set $#lib_bbl ca.installed 0
-scoreboard players set $#lib_cdl ca.installed 0
+scoreboard players set $#lib_del ca.installed 0
 scoreboard players set $#lib_ehid ca.installed 0
 scoreboard players set $#lib_inv ca.installed 0
 scoreboard players set $#lib_pds ca.installed 0
 scoreboard players set $#lib_mot ca.installed 0
+scoreboard players set $#lib_dies ca.installed 0
 
+#Create UUID Handshake score for Interactions
+scoreboard objectives add ca.uuid_interact dummy
 
 
 #Create mutex score
@@ -84,6 +87,14 @@ scoreboard objectives add ca.shoot_bow minecraft.used:minecraft.bow
 scoreboard objectives add ca.shoot_cross minecraft.used:minecraft.crossbow
 scoreboard objectives add ca.throw_trident minecraft.used:minecraft.trident
 
+#Delta compat
+scoreboard objectives add ca.delta_fuse_max dummy
+scoreboard objectives add ca.delta_fuse dummy
+
+scoreboard objectives add ca.fireball_speed dummy
+scoreboard objectives add ca.fireball_no_ex dummy
+scoreboard objectives add ca.cf_xyz dummy
+
 #Create raycast score
 scoreboard objectives add ca.raycast dummy
 
@@ -92,7 +103,7 @@ scoreboard objectives add ca.lifetime dummy
 
 
 #Create scores for custom damage
-scoreboard objectives add cdl.damage_queue dummy
+scoreboard objectives add bbl.damage_queue dummy
 scoreboard objectives add custom_death deathCount
 scoreboard objectives add ca.invul_abs dummy
 scoreboard objectives add helper_health dummy
@@ -123,6 +134,14 @@ scoreboard objectives add ca.epf_fire dummy
 scoreboard objectives add ca.epf_fall dummy
 
 scoreboard objectives add ca.epf dummy
+
+scoreboard objectives add ca.delta.cooldown dummy
+
+#Create Delta Carto Marker
+# 31182015-4512-2011-3118-115180000000
+# [I;823664661,1158815761,823660881,-2147483648]
+summon marker 4206900 128 4206900 {UUID:[I;823664661,1158815761,823660881,-2147483648]}
+
 
 #Add the phe_listen and ehp_listen scores
 scoreboard objectives add ehp_listen dummy
@@ -166,6 +185,10 @@ scoreboard objectives add ca.equip_netherite_helmet minecraft.used:minecraft.net
 scoreboard objectives add ca.equip_turtle_helmet minecraft.used:minecraft.turtle_helmet
 
 scoreboard objectives add ca.core_delay_check dummy
+
+scoreboard objectives add ca.damage_queue dummy
+
+scoreboard players set $no_anvil ca.gamerule 0
 
 #Setup a score for any and all constant values.
 scoreboard objectives add ca.CONSTANT dummy

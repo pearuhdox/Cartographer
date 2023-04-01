@@ -1,0 +1,1 @@
+execute as @a[tag=ca.primed_zephyrous] at @s run function cartographer_mob_abilities:ability_traits/zephyrous/player_effect

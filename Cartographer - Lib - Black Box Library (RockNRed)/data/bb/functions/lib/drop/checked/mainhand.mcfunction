@@ -1,10 +1,3 @@
-# Datapack  : Black Box Library
-# Author(s) : RockNRed
-# Created   : 4/17/22
-# Last Edit : 4/17/22
-# Name      : Checked Drop Slot Mainhand
-# Use       : Drop relevant inventory slot, if an item is present.
-
 
 execute store result score $temp bbl.storage run data get entity @s SelectedItemSlot
 

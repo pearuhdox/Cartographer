@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction",
+          "nbt": "{Tags:[\"ca.charon_bag_interaction\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "cartographer_charon:death_drop/interact/left"
+  }
+}

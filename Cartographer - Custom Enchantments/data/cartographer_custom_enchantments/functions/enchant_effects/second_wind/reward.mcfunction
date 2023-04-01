@@ -1,7 +1,7 @@
 
-scoreboard players operation @s cdl.heal_queue = $sw_abs_check ca.second_wind
+scoreboard players operation @s bbl.heal_queue = $sw_abs_check ca.second_wind
 
-function cd:lib/player/heal
+function bb:call/hpm/player/heal
 
 effect clear @s absorption
 

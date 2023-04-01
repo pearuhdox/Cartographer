@@ -30,6 +30,6 @@ execute if score @s augment_time matches 1.. run function cartographer_mob_abili
 scoreboard players remove @s[scores={augment_time=1..}] augment_time 1
 
 #Tick down duplicator copy cooldown. Remove duplicates
-execute if entity @s[tag=duplicate,scores={cooldown=0}] run playsound minecraft:entity.shulker_bullet.hit hostile @a[distance=..12] ~ ~ ~ 1 2
-execute if entity @s[tag=duplicate,scores={cooldown=0}] run particle minecraft:smoke ~ ~1 ~ 0.2 0.4 0.2 0.05 30 normal
-execute if entity @s[tag=duplicate,scores={cooldown=0}] run tp @s ~ -60 ~
+execute if entity @s[tag=ca.duplicate,scores={cooldown=0}] run playsound minecraft:entity.shulker_bullet.hit hostile @a[distance=..12] ~ ~ ~ 1 2
+execute if entity @s[tag=ca.duplicate,scores={cooldown=0}] run particle minecraft:smoke ~ ~1 ~ 0.2 0.4 0.2 0.05 30 normal
+execute if entity @s[tag=ca.duplicate,scores={cooldown=0}] run tp @s ~ -60 ~

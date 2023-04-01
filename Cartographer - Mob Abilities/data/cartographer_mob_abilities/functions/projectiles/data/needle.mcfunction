@@ -6,10 +6,8 @@ data modify entity @s Tags set from storage cartographer_mob_abilities:projectil
 data modify entity @s HandItems[0] set from storage cartographer_mob_abilities:projectiles AlchemistTemplate
 data modify entity @s HandItems[1] set from storage cartographer_mob_abilities:projectiles AlchemistTemplate
 
+scoreboard players operation @s ca.mob_kb = $value ca.mob_kb
+
 tag @s add needle_projectile
 tag @s add passive_needle
 tag @s add passive_replaced_projectile
-
-data modify storage cartographer_mob_abilities:projectiles DataTemplate set value {}
-data modify storage cartographer_mob_abilities:projectiles TagTemplate set value []
-data modify storage cartographer_mob_abilities:projectiles AlchemistTemplate set value {}

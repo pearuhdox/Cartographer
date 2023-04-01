@@ -1,9 +1,5 @@
-summon glow_item_frame ~ ~ ~ {Silent:1b,Glowing:1b,Facing:1b,Invisible:1b,Fixed:1b,Tags:["charon.bundle_drop","new"],Item:{}}
-
-execute if block ~ ~-1 ~ #cartographer_core:can_raycast run setblock ~ ~-1 ~ cyan_stained_glass
+execute align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:item_display ~ ~ ~ {Tags:["ca.charon_bag_visible","new"],item:{id:"minecraft:player_head",Count:1s,tag:{display:{Name:"{\"text\":\"Purple Bag With Diamonds\"}"},SkullOwner:{Id:[I;1563103047,-2060172392,-1215918420,2054590283],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTk3M2ZmYWMyOGVmYzMzNGVmYWFjZjYxZmVjNTcyMmNmZjBjOTg1OTUxZTVkMjBhNjIyOWNkMTU0YjdlMTljIn19fQ=="}]}}}},Glowing:1b,glow_color_override:36741,interpolation_duration:0,start_interpolation:0,transformation:[0.900f, 0.000f, 0.000f,0.000f,0.000f, 0.900f, 0.000f,0.450f,0.000f, 0.000f, 0.900f,0.000f,0.000f, 0.000f, 0.000f,1.000f],brightness:{sky:15,block:15},Passengers:[{id:"minecraft:interaction",width:0.6f,height:0.6f,Tags:["ca.charon_bag_interaction"]},{id:"minecraft:text_display",text:"{\"text\":\"Death Drop\",\"color\":\"aqua\"}", line_width:220,background: 0,billboard:"center",interpolation_duration:0,start_interpolation:0,transformation:[0.700f, 0.000f, 0.000f,0.000f,0.000f, 0.700f, 0.000f,0.600f,0.000f, 0.000f, 0.700f,0.000f,0.000f, 0.000f, 0.000f,1.000f],brightness:{sky:15,block:15}}]}
 
 setblock ~ ~ ~ air destroy
 
-stopsound @s * entity.glow_item_frame.add_item
-
-execute as @e[type=glow_item_frame,distance=..1.5,sort=nearest,tag=charon.bundle_drop,tag=new] at @s run function cartographer_charon:death_drop/fill
+execute as @e[type=item_display,distance=..1.5,sort=nearest,tag=ca.charon_bag_visible,tag=new] at @s run function cartographer_charon:death_drop/fill

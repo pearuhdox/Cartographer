@@ -1,10 +1,4 @@
-scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
-
-scoreboard players set @s cdl.death_id 310202
-
-function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
-
-function cd:lib/player/damage/normal
+scoreboard players operation @s ca.damage_queue = $damage ca.ability_dmg
 
 scoreboard players set @s ca.orbit_timer 20
 

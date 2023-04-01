@@ -1,6 +1,6 @@
 scoreboard players operation $aug_bonus_dmg ca.mob_var /= $2 ca.CONSTANT
 
-scoreboard players operation @s cdl.damage_queue = $aug_bonus_dmg ca.mob_var
+scoreboard players operation @s bbl.damage_queue = $aug_bonus_dmg ca.mob_var
 
 tag @s add augment_dmg_prime
 

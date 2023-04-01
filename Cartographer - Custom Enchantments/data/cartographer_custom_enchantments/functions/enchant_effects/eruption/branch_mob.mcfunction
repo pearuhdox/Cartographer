@@ -15,13 +15,13 @@ execute if score $eruption ca.knockback matches 5.. run scoreboard players set @
 function motion:motion/push
 
 #Calculate and do damage
-scoreboard players set @s cdl.damage_queue 3
-scoreboard players operation @s cdl.damage_queue *= $eruption ca.eruption
+scoreboard players set @s ca.damage_queue 3
+scoreboard players operation @s ca.damage_queue *= $eruption ca.eruption
 
 scoreboard players set $exec_dmg bbl.storage 0
-scoreboard players operation $exec_dmg bbl.storage = @s cdl.damage_queue
+scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
-execute if score $eruption ca.eruption matches 1.. as @s run function cd:lib/mob/damage/normal
+execute if score $eruption ca.eruption matches 1.. as @s run function cartographer_custom_enchantments:helper/damage/enchant_damage
 
 #Run Cauterize if it exists
 execute if score $eruption ca.cauterize matches 1 as @s run function cartographer_custom_enchantments:enchant_effects/cauterize/other

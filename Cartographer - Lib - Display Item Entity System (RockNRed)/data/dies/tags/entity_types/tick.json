@@ -1,0 +1,9 @@
+{
+  "values":[
+	"minecraft:item_frame",
+	"minecraft:glow_item_frame",
+	"minecraft:marker",
+	"minecraft:armor_stand",
+	"minecraft:villager"
+  ]
+}

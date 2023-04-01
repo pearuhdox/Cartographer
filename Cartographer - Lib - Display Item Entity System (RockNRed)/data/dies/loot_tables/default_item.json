@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:item_frame",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1s}],EntityTag:{Fixed:1b,Invulnerable:1b,Item:{Count:1b,id:\"minecraft:structure_void\",tag:{new_dies_item:1}},Silent:1b},HideFlags:127,display:{Lore:['{\"text\":\"when frame:\",\"color\":\"gray\",\"italic\":false}','[{\"keybind\":\"key.use\",\"color\":\"blue\",\"italic\":false},{\"text\":\" to insert held item\",\"color\":\"blue\",\"italic\":false}]','[{\"keybind\":\"key.attack\",\"color\":\"blue\",\"italic\":false},{\"text\":\" to remove\",\"color\":\"blue\",\"italic\":false}]','{\"text\":\" \"}','{\"text\":\"when item:\",\"color\":\"gray\",\"italic\":false}','[{\"keybind\":\"key.use\",\"color\":\"blue\",\"italic\":false},{\"text\":\" to rotate\",\"color\":\"blue\",\"italic\":false}]','[{\"keybind\":\"key.use\",\"color\":\"blue\",\"italic\":false},{\"text\":\" + \",\"color\":\"blue\",\"italic\":false},{\"keybind\":\"key.sneak\",\"color\":\"blue\",\"italic\":false},{\"text\":\" to configure\",\"color\":\"blue\",\"italic\":false}]','[{\"keybind\":\"key.attack\",\"color\":\"blue\",\"italic\":false},{\"text\":\" to remove\",\"color\":\"blue\",\"italic\":false}]'],Name:'{\"text\":\"d.i.e.s. item\",\"color\":\"light_purple\",\"italic\":false}'}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

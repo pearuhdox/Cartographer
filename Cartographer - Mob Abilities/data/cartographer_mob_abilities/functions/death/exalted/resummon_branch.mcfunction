@@ -1,0 +1,2 @@
+execute as @e[type=armor_stand,tag=exalted_weapon,distance=..0.5] at @s run function cartographer_mob_abilities:death/exalted/resummon/as_branch
+function cartographer_mob_abilities:death/exalted/resummon/kill_branch

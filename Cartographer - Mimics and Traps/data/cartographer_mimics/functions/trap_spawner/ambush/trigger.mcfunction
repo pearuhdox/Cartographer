@@ -10,3 +10,5 @@ execute unless score @s ca.wave_count matches 0 run particle minecraft:large_smo
 data modify block ~ ~0.1 ~ MinSpawnDelay set value 20
 data modify block ~ ~0.1 ~ MaxSpawnDelay set value 20
 data modify block ~ ~0.1 ~ Delay set value 20
+
+execute if entity @s[tag=ca.trap_potentials] run function cartographer_mimics:trap_spawner/potentials

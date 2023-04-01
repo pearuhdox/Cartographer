@@ -1,2 +1,0 @@
-execute as @s[tag=random] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..48] run function cartographer_loot_additions:loot/randomize
-execute as @s[tag=!loot_altar_holder] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..12] run function cartographer_loot_additions:loop/tick/branches/explosion_tamper

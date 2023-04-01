@@ -9,6 +9,8 @@ execute unless score @s ca.wave_count matches 0 run particle minecraft:large_smo
 
 data modify block ~ ~0.1 ~ MinSpawnDelay set value 32767
 data modify block ~ ~0.1 ~ MaxSpawnDelay set value 32767
-data modify block ~ ~0.1 ~ Delay set value 0
+execute if entity @s[tag=ca.spawned_once] run data modify block ~ ~0.1 ~ Delay set value 0
+execute unless entity @s[tag=ca.spawned_once] run data modify block ~ ~0.1 ~ Delay set value 32767
 
+tag @s add ca.swap_potential
 tag @s add ca.spawned_once

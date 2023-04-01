@@ -3,9 +3,7 @@ playsound minecraft:entity.generic.hurt hostile @a[distance=..16] ~ ~ ~ 1 0.5
 attribute @s minecraft:generic.attack_damage modifier add 31-2125-54-2351-11 "bleeding_weakness" -0.15 multiply
 
 function cartographer_custom_statuses:effects/bleeding/calc_damage
-
-execute if score @s cdl.damage_queue matches 1.. run function cd:lib/mob/damage/true
-function cartographer_custom_statuses:effects/do_tick
+function cartographer_custom_statuses:effects/bleeding/do_damage
 
 scoreboard players remove @s ca.effect_bleed 1
 execute if score @s ca.effect_bleed matches 0 run function cartographer_custom_statuses:effects/bleeding/clean_effects

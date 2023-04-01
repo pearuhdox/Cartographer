@@ -1,9 +1,3 @@
-# Datapack  : Black Box Library
-# Author(s) : RockNRed / PearUhDox
-# Created   : 8/11/21
-# Last Edit : 8/11/21
-# Name      : Scan Main
-# Use       : Scans the player's inventory/equipment for items with custom effects.
 
 data remove storage bbl:item_effects sudo_root
 data modify storage bbl:item_effects sudo_root.inventory set from entity @s Inventory

@@ -4,6 +4,9 @@ scoreboard players operation $haunt_damage ca.ability_dmg = @s ca.ability_dmg
 
 execute as @a[distance=..2] at @s run function cartographer_mob_abilities:abilities/haunt/shade/hit_player
 
+execute as @s positioned as @a[scores={ca.damage_queue=1..}] run function cartographer_mob_abilities:helper/damage/ability_magic
+
+
 function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 
 scoreboard players set @s ca.mob_var 20

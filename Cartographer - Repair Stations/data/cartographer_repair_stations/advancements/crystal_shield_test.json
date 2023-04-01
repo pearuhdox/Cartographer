@@ -1,0 +1,17 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_durability_changed",
+        "conditions": {
+          "player": [],
+          "item": {
+            "nbt": "{HasCrystalShielding:1b}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "cartographer_repair_stations:crystal_shield/queue"
+    }
+  }
+  

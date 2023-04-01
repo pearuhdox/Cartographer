@@ -34,15 +34,15 @@ scoreboard players set @s[scores={ca.epf=21..}] ca.epf 20
 
 scoreboard players operation @s ca.epf *= $4 ca.CONSTANT
 
-scoreboard players operation epf_red= cdl.damage_queue = @s cdl.damage_queue
-scoreboard players operation epf_red= cdl.damage_queue *= @s ca.epf
+scoreboard players operation epf_red= ca.damage_queue = @s ca.damage_queue
+scoreboard players operation epf_red= ca.damage_queue *= @s ca.epf
 
 #Divide by 100 to rescale our value to the proper amount.
-scoreboard players operation epf_red= cdl.damage_queue /= $100 ca.CONSTANT
+scoreboard players operation epf_red= ca.damage_queue /= $100 ca.CONSTANT
 
 #Do the damage reduction
-scoreboard players operation @s cdl.damage_queue -= epf_red= cdl.damage_queue
-execute if score @s cdl.damage_queue matches ..-1 run scoreboard players set @s cdl.damage_queue 0
+scoreboard players operation @s ca.damage_queue -= epf_red= ca.damage_queue
+execute if score @s ca.damage_queue matches ..-1 run scoreboard players set @s ca.damage_queue 0
 
 
 tag @s remove fire_hit

@@ -6,7 +6,7 @@ tag @s add ca.acro_strafe_pass
 tag @s add ca.acro_pass
 tag @s add ca.sidearm_after
 tag @s add ca.sh_grenade
-tag @s add enraged
+tag @s add ca.enraged
 
 effect give @s speed 120 2
 effect give @s strength 120 0

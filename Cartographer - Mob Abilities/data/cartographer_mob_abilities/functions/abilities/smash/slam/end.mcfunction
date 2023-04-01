@@ -13,10 +13,14 @@ playsound minecraft:entity.zombie.break_wooden_door hostile @a[distance=..16] ~ 
 
 function cartographer_mob_abilities:abilities/smash/calc_damage
 
-execute as @a[distance=..3.5] at @s unless block ~ ~-0.3 ~ air run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
-execute as @a[distance=..3.5] at @s unless block ~ ~-0.3 ~ air unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310206
-execute as @a[distance=..3.5] at @s unless block ~ ~-0.3 ~ air run tag @s remove no_cdl_msg
-execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[distance=..3.5] positioned as @s unless block ~ ~-0.3 ~ air run function cartographer_core:helper/damage_knockback/targeting_direction
+tp 31182015-4512-2011-3118-115180000000 ~ ~6 ~
+
+execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca.mob_var 1
+execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
+
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3.5] at @s unless block ~ ~-0.3 ~ air facing entity 31182015-4512-2011-3118-115180000000 feet run function cartographer_mob_abilities:abilities/smash/player
+
+scoreboard players set $zeph_check ca.mob_var 0
 
 data merge entity @s {Motion:[0.0,0.35,0.0]}
 
@@ -31,6 +35,7 @@ tag @a remove ability_tagged
 
 tag @s remove ca.airborne_slam_waiting
 
+tp 31182015-4512-2011-3118-115180000000 4206900 128 4206900
 
 
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.

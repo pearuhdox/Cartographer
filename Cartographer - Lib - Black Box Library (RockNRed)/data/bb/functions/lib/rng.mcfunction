@@ -1,3 +1,4 @@
+
 #Update internal state 1
 scoreboard players operation #int_1 bbl.rng *= #1a bbl.rng
 scoreboard players operation #int_1 bbl.rng += #1b bbl.rng

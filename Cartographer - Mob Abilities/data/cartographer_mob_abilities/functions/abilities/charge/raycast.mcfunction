@@ -6,13 +6,16 @@ execute if entity @s[scores={ca.raycast=1}] run particle minecraft:cloud ~ ~ ~ 0
 
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
-execute as @a[distance=..1.75,tag=!ran_over] at @s run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
-execute as @a[distance=..1.75,tag=!ran_over] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310201
-execute as @a[distance=..1.75,tag=!ran_over] at @s run tag @s remove no_cdl_msg
-execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[distance=..1.75,tag=!ran_over] positioned as @s run function cartographer_core:helper/damage_knockback/targeting_direction
-execute as @a[distance=..1.75,tag=!ran_over] at @s run tag @s add ability_tagged
-execute as @a[distance=..1.75,tag=!ran_over] at @s run tag @s add ran_over
+execute rotated ~ 0 run tp 31182015-4512-2011-3118-115180000000 ^ ^1 ^4
 
+execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca.mob_var 1
+execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
+
+execute as @a[distance=..1.75,tag=!ran_over] at @s facing entity 31182015-4512-2011-3118-115180000000 feet run function cartographer_mob_abilities:abilities/charge/player
+
+execute as @s positioned as @a[scores={ca.damage_queue=1..}] run function cartographer_mob_abilities:helper/damage/ability_melee
+
+scoreboard players set $zeph_check ca.mob_var 0
 
 tp @s ^ ^ ^0.5
 
@@ -24,3 +27,5 @@ execute if score @s ca.raycast matches 0 run tp @s ^ ^-0.1 ^
 execute as @s[scores={ca.raycast=0}] at @s positioned ~ ~-0.5 ~ run function cartographer_mob_abilities:passive/breaker
 
 execute if entity @s[scores={ca.raycast=1..}] if block ~ ~ ~ #bb:can_raycast if block ^ ^ ^0.5 #bb:can_raycast positioned ^ ^ ^0.5 run function cartographer_mob_abilities:abilities/charge/raycast
+
+tp 31182015-4512-2011-3118-115180000000 4206900 128 4206900

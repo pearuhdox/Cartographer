@@ -36,22 +36,6 @@ tag @s remove entityid.15.1
 
 #resetting score
 scoreboard players reset @s entityid
-scoreboard players reset @s entityid.0
-scoreboard players reset @s entityid.1
-scoreboard players reset @s entityid.2
-scoreboard players reset @s entityid.3
-scoreboard players reset @s entityid.4
-scoreboard players reset @s entityid.5
-scoreboard players reset @s entityid.6
-scoreboard players reset @s entityid.7
-scoreboard players reset @s entityid.8
-scoreboard players reset @s entityid.9
-scoreboard players reset @s entityid.10
-scoreboard players reset @s entityid.11
-scoreboard players reset @s entityid.12
-scoreboard players reset @s entityid.13
-scoreboard players reset @s entityid.14
-scoreboard players reset @s entityid.15
  
 #re-assigning id
 execute if score #loaded entityid matches 1 run function entityid:assign_id

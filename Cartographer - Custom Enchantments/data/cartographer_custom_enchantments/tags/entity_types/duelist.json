@@ -1,0 +1,15 @@
+{
+    "values":[
+      "minecraft:zombified_piglin",
+      "minecraft:zombie_villager",
+      "minecraft:evoker",
+	    "minecraft:pillager",
+	    "minecraft:vindicator",
+	    "minecraft:vex",
+	    "minecraft:witch",
+      "minecraft:illusioner",
+	    "minecraft:iron_golem",
+      "minecraft:piglin",
+      "minecraft:piglin_brute"
+    ]
+  }

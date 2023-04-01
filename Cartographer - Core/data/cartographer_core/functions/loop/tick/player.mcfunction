@@ -55,6 +55,10 @@ execute if score @s ca.throw_trident matches 1.. run function cartographer_core:
 #Resets
 scoreboard players set @s ca.use_lectern 0
 
+#Reduce Delta Cooldown Time
+execute if score @s ca.delta.cooldown matches 1.. run scoreboard players remove @s ca.delta.cooldown 1
+execute unless score @s ca.delta.cooldown matches 0.. run scoreboard players set @s ca.delta.cooldown 0
+
 #Reset Draw/Load/Use Timers and Booleans
 execute if score @s ca.is_draw_bow matches 0 run scoreboard players set @s ca.draw_bow_time 0
 execute if score @s ca.is_load_cro matches 0 run scoreboard players set @s ca.load_cro_time 0

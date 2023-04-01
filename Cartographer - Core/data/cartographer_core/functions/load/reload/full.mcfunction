@@ -15,7 +15,8 @@ execute if score $#lib_all_found ca.installed matches 1 run tellraw @s [{"text":
 execute unless score $#lib_all_found ca.installed matches 1 run tellraw @s [{"text":"  ❱ ","color":"#FFE0A3"},{"text":"Missing Library Packs! ","color":"red"},{"text":"[»]","color":"#FFFFFF","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Click for detailed information on all installed packs.","color":"#FFE0A3","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_core:load/reload/show_libraries"}}]
 
 execute unless score $#lib_bbl ca.installed matches 1 run function cartographer_core:load/bbl_warning
-execute unless score $#lib_cdl ca.installed matches 1 run function cartographer_core:load/cdl_warning
+execute unless score $#lib_del ca.installed matches 1 run function cartographer_core:load/delta_warning
+execute unless score $#lib_dies ca.installed matches 1 run function cartographer_core:load/dies_warning
 execute unless score $#lib_ehid ca.installed matches 1 run function cartographer_core:load/ehid_warning
 execute unless score $#lib_inv ca.installed matches 1 run function cartographer_core:load/inv_warning
 execute unless score $#lib_pds ca.installed matches 1 run function cartographer_core:load/pds_warning

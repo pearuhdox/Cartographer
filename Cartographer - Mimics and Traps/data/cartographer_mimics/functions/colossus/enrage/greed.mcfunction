@@ -4,7 +4,7 @@
 tag @s add ca.breaker
 tag @s add ca.acro_gap_close_pass
 tag @s add ca.acro_pass
-tag @s add enraged
+tag @s add ca.enraged
 
 scoreboard players set @s cooldown 0
 

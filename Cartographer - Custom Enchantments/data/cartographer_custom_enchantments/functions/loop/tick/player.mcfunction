@@ -152,10 +152,13 @@ execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft
 execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft:soul_speed_blocks unless score @s[tag=ca.added_soul_speed] ca.sprint matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
 execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft:soul_speed_blocks unless score @s[tag=ca.added_soul_speed] ca.walk matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
 
+# Add SS if conditions are right unless blocked by tag
+execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed,tag=!ca.block_soul_speed] ca.sneak matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
+execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed,tag=!ca.block_soul_speed] ca.sprint matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
+execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed,tag=!ca.block_soul_speed] ca.walk matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
 
-execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed] ca.sneak matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
-execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed] ca.sprint matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
-execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed] ca.walk matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
+#Remove SS if blocked by tag - End of Priority
+execute if entity @s[tag=ca.block_soul_speed,tag=ca.added_soul_speed] run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
 
 #Check if walking for Frost Walker
 execute if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/find_block

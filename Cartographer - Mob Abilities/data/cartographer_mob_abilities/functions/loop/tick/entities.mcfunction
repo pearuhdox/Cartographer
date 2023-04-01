@@ -1,6 +1,3 @@
-#Run Hostile Mob Effects
-execute as @s[type=#bb:hostile] at @s run function cartographer_mob_abilities:loop/tick/hostiles
-
 #Run at AECs
 execute as @s[type=area_effect_cloud] at @s run function cartographer_mob_abilities:loop/tick/aec
 

@@ -7,6 +7,8 @@ data modify entity @s Tags set from storage cartographer_mob_abilities:projectil
 data modify entity @s HandItems[0] set from storage cartographer_mob_abilities:projectiles AlchemistTemplate
 data modify entity @s HandItems[1] set from storage cartographer_mob_abilities:projectiles AlchemistTemplate
 
+scoreboard players operation @s ca.mob_kb = $value ca.mob_kb
+
 tag @s add trap_projectile
 tag @s add checked
 tag @s add passive_trap
@@ -27,8 +29,3 @@ execute if entity @s[tag=ca.horrifying] run item replace entity @s armor.head wi
 execute if entity @s[tag=ca.alchemist] run item replace entity @s armor.head with minecraft:player_head{display:{Name:'{"text":"Empty Potion"}'},SkullOwner:{Id:[I;-2145143634,1496860544,-1357398712,1066575206],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjJmZDQ4MWU2OTNmYzgyNTRmZDYyNWI1ZDE2NjMwYTA2YTZmZGY2MTIwZDA2YjIzNDVlM2U2ZGRiNTE0N2Y5YSJ9fX0="}]}}} 1
 
 execute if entity @s[tag=ca.volatile] run item replace entity @s armor.head with minecraft:player_head{display:{Name:'{"text":"TNT (brown)"}'},SkullOwner:{Id:[I;1435158969,-160284096,-1810371621,-1110550680],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTkyOTQyMjFlODNiMjZhMDg2YzNjZmQ5OTVmOTk5MjMzYzI1ZmQ3ZWFhM2ZjM2YzMmU4MDlmMTc2NzUzYmIifX19"}]}}} 1
-
-
-data modify storage cartographer_mob_abilities:projectiles DataTemplate set value {}
-data modify storage cartographer_mob_abilities:projectiles TagTemplate set value []
-data modify storage cartographer_mob_abilities:projectiles AlchemistTemplate set value {}

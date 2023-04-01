@@ -1,9 +1,3 @@
-# Datapack  : Black Box Library
-# Author(s) : RockNRed
-# Created   : 4/17/22
-# Last Edit : 4/17/22
-# Name      : Clock 1 Tick
-# Use       : Ran every 1 tick
 
 scoreboard players set $1_tick bbl.clock 0
 

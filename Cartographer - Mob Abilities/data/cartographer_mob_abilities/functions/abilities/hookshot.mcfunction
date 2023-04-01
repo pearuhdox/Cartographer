@@ -10,11 +10,14 @@ data merge entity @s {NoAI:0}
 
 playsound minecraft:block.iron_door.close hostile @a[distance=..20] ~ ~ ~ 2 0.5 1
 playsound minecraft:entity.zombie.attack_iron_door hostile @a[distance=..20] ~ ~ ~ 1 0.5 1
-playsound minecraft:entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 0.75 2 1
+playsound minecraft:delta.entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 0.75 2 1
 
 function cartographer_mob_abilities:abilities/hookshot/calc_damage
 
-execute as @s anchored eyes run function cartographer_mob_abilities:abilities/hookshot/raycast
+scoreboard players set $fast_drag ca.mob_var 0
+execute if entity @s[tag=ca.faster_hookshot] run scoreboard players set $fast_drag ca.mob_var 1
+
+execute positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/hookshot/raycast
 
 execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..18] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 

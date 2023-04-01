@@ -4,19 +4,22 @@ function cartographer_mob_abilities:ability_traits/trait_warnings/raycast
 
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
+execute rotated ~ 0 run tp 31182015-4512-2011-3118-115180000000 ^ ^2 ^4
+
 execute if entity @a[distance=..1.5] if block ~ ~ ~ #bb:can_raycast positioned ^ ^ ^1 run function cartographer_mob_abilities:abilities/quickdraw/raycast
 
 function cartographer_mob_abilities:abilities/quickdraw/calc_damage
 
 scoreboard players set $projectile ca.dmg_type 1
 
-execute as @a[distance=..2,tag=!quickdrawn] run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
-execute as @a[distance=..2,tag=!quickdrawn] unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310211
-execute as @a[distance=..2,tag=!quickdrawn] run tag @s remove no_cdl_msg
-execute as @a[distance=..2,tag=!quickdrawn] run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
-execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[distance=..2,tag=!quickdrawn] positioned as @s run function cartographer_core:helper/damage_knockback/targeting_direction
-execute as @a[distance=..2,tag=!quickdrawn] at @s run tag @s add ability_tagged
-execute as @a[distance=..2,tag=!quickdrawn] run particle minecraft:flash ~ ~ ~ 0 0 0 0 1 force
-execute as @a[distance=..2,tag=!quickdrawn] run tag @s add quickdrawn
+execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca.mob_var 1
+execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
+
+execute as @a[distance=..2,tag=!quickdrawn] at @s facing entity 31182015-4512-2011-3118-115180000000 feet run function cartographer_mob_abilities:abilities/quickdraw/player
+execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..2] run function cartographer_mob_abilities:helper/damage/ability_projectile
+
+scoreboard players set $zeph_check ca.mob_var 0
 
 execute if entity @s[scores={ca.raycast=1..}] if block ~ ~ ~ #bb:can_raycast positioned ^ ^ ^1 run function cartographer_mob_abilities:abilities/quickdraw/raycast
+
+tp 31182015-4512-2011-3118-115180000000 4206900 128 4206900

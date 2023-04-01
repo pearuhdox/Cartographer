@@ -1,9 +1,3 @@
-# Datapack  : Black Box Archive
-# Author(s) : RockNRed
-# Created   : 7/21/21
-# Last Edit : 4/17/22
-# Name      : Install
-# Use       : Installs various dependant scores aswell as the forceloaded chunk.
 
 #Forceload chunk.
 forceload add 4206857 4206872
@@ -53,6 +47,24 @@ scoreboard objectives add bbl.slot_change.present dummy
 scoreboard objectives add bbl.gamemode_change.past dummy
 scoreboard objectives add bbl.gamemode_change.present dummy
 scoreboard objectives add bbl.gamemode_change.old_gamemode dummy
+#Actionbar muter
+scoreboard objectives add bbl.actionbar_spam_mute dummy
+
+#CDL Scoreboards
+#Healing queue
+scoreboard objectives add bbl.heal_queue dummy
+#Damaging queue
+scoreboard objectives add bbl.damage_queue dummy
+#Damage timer
+scoreboard objectives add bbl.damage_timer dummy
+#HPMod queue (Shorthand for Healing/Damaging queues)
+scoreboard objectives add bbl.hpm_queue dummy
+#True damage health score
+scoreboard objectives add bbl.p_health health
+
+scoreboard objectives add bbl.hth.post_hp dummy
+scoreboard objectives add bbl.hth.pre_hp dummy 
+scoreboard objectives add bbl.hth.amount dummy
 
 #Next ID init
 execute unless score $next_id bbl.storage matches -99999..99999 run scoreboard players set $next_id bbl.storage 1
@@ -86,7 +98,6 @@ scoreboard players set $80 bbl.constant 80
 scoreboard players set $90 bbl.constant 90
 
 scoreboard players set $100 bbl.constant 100
-scoreboard players set $110 bbl.constant 110
 scoreboard players set $115 bbl.constant 115
 scoreboard players set $200 bbl.constant 200
 scoreboard players set $300 bbl.constant 300
@@ -175,4 +186,3 @@ team modify yellow collisionRule never
 execute unless block 4206849 1 4206865 diamond_block run function bb:sys/build_chunk
 #\Working shulker
 execute unless block 4206862 1 4206865 black_shulker_box run setblock 4206862 1 4206865 black_shulker_box
-

@@ -26,9 +26,9 @@ scoreboard players operation $diff void_home.y -= $lift void_home.y
 effect give @s darkness 3 0 true
 effect give @s slow_falling 3 0 true
 
-scoreboard players operation @s cdl.damage_queue = $diff void_home.y
-scoreboard players operation @s cdl.damage_queue /= $5 ca.CONSTANT
-scoreboard players operation @s cdl.damage_queue /= $2 ca.CONSTANT
-execute if score @s cdl.damage_queue matches ..4 run scoreboard players set @s cdl.damage_queue 4
+scoreboard players operation @s bbl.damage_queue = $diff void_home.y
+scoreboard players operation @s bbl.damage_queue /= $5 ca.CONSTANT
+scoreboard players operation @s bbl.damage_queue /= $2 ca.CONSTANT
+execute if score @s bbl.damage_queue matches ..4 run scoreboard players set @s bbl.damage_queue 4
 
-function cd:lib/player/damage/true
+function bb:call/hpm/player/damage/true

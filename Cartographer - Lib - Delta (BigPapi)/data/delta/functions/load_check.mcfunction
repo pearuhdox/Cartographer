@@ -1,0 +1,1 @@
+scoreboard players set $#lib_del ca.installed 1

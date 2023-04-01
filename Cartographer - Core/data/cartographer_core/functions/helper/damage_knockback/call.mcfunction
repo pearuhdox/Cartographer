@@ -1,9 +1,9 @@
 scoreboard players set $dmg_kb cdl.damge_queue 0
-scoreboard players operation $dmg_kb cdl.damage_queue = @s cdl.damage_queue
+scoreboard players operation $dmg_kb bbl.damage_queue = @s bbl.damage_queue
 
 function cartographer_core:helper/damage_knockback/summon
 
-scoreboard players set @s cdl.damage_queue 0
+scoreboard players set @s bbl.damage_queue 0
 
 scoreboard players set @s cdl.damage_timer 10
 

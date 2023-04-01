@@ -1,8 +1,8 @@
 {
-	"values": [
-		"minecraft:endermite",
-		"minecraft:enderman",
-		"minecraft:shulker",
-		"minecraft:ender_dragon"
-	]
+  "values":[
+	"minecraft:endermite",
+	"minecraft:enderman",
+	"minecraft:shulker",
+	"minecraft:ender_dragon"
+  ]
 }

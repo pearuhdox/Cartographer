@@ -22,9 +22,9 @@ execute if score $kb ca.cauter_dmg matches ..3 run scoreboard players set $kb ca
 
 scoreboard players operation $kb ca.cauter_dmg *= $-1 ca.CONSTANT
 
-execute if score $diff ca.brittle_hlth matches 1.. run scoreboard players operation @s cdl.damage_queue = $diff ca.brittle_hlth
+execute if score $diff ca.brittle_hlth matches 1.. run scoreboard players operation @s ca.damage_queue = $diff ca.brittle_hlth
 
-execute if score @s cdl.damage_queue matches 1.. run function cd:lib/mob/damage/true
+execute if score @s ca.damage_queue matches 1.. run function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass
 
 playsound minecraft:entity.player.hurt_on_fire hostile @a[distance=..10] ~ ~ ~ 0.5 0.5
 playsound minecraft:entity.player.hurt_on_fire hostile @a[distance=..10] ~ ~ ~ 0.5 1

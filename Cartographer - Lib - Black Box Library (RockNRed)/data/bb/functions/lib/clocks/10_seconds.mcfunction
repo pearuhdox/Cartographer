@@ -1,9 +1,3 @@
-# Datapack  : Black Box Library
-# Author(s) : RockNRed
-# Created   : 4/17/22
-# Last Edit : 4/17/22
-# Name      : Clock 10 Seconds
-# Use       : Ran every 10 seconds
 
 scoreboard players set $10_seconds bbl.clock 0
 

@@ -1,7 +1,7 @@
-scoreboard players operation @s cdl.damage_queue = $aftershock ca.ability_dmg
-scoreboard players set @s[distance=..3.5,tag=!no_cdl_msg] cdl.death_id 310204
-tag @s remove no_cdl_msg
+scoreboard players operation @s ca.damage_queue = $aftershock ca.ability_dmg
 
 tag @s add ability_tagged
 
-function cd:lib/player/damage/normal
+execute unless score @s ca.delta.cooldown matches 1.. run scoreboard players set $y delta.api.launch 2000
+execute unless score @s ca.delta.cooldown matches 1.. run function delta:api/launch_xyz
+execute unless score @s ca.delta.cooldown matches 1.. run scoreboard players set @s ca.delta.cooldown 8

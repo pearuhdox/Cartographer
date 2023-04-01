@@ -1,3 +1,4 @@
+
 # Formula for levels 32+
 # 4.5[level]^2 - 162.5[level] + 2220
 

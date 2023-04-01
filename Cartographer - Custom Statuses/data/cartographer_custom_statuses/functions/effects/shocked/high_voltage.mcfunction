@@ -1,6 +1,5 @@
-scoreboard players set @s cdl.damage_queue 1
-function cd:lib/mob/damage/true
-function cartographer_custom_statuses:effects/do_tick
+damage @s 3 cartographer_custom_statuses:status_damage
+
 
 scoreboard players set @s ca.effect_stun 16
 

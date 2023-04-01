@@ -13,15 +13,15 @@ execute if score $thorns ca.t_knock matches 5.. run scoreboard players set @s co
 function motion:motion/push
 
 #Do Damage next
-scoreboard players set @s cdl.damage_queue 0
+scoreboard players set @s ca.damage_queue 0
 
-scoreboard players operation @s cdl.damage_queue = $thorns ca.thorns
+scoreboard players operation @s ca.damage_queue = $thorns ca.thorns
 
 #Save For Executioner
 scoreboard players set $exec_dmg bbl.storage 0
-scoreboard players operation $exec_dmg bbl.storage = @s cdl.damage_queue
+scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
-function cd:lib/mob/damage/normal
+function cartographer_custom_enchantments:helper/damage/enchant_damage
 
 #Run Cauterize if it exists
 execute if score $thorns ca.cauterize matches 1 as @s run function cartographer_custom_enchantments:enchant_effects/cauterize/other

@@ -7,7 +7,7 @@ tag @s add ca.orbit
 tag @s add ca.sidearm_after
 tag @s add ca.sh_arrow
 tag @s add ca.touch
-tag @s add enraged
+tag @s add ca.enraged
 
 tag @s remove ca.ability_haste++
 tag @s add ca.ability_haste--

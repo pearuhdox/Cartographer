@@ -15,6 +15,7 @@ execute unless score $laser_detonate ca.var matches 1 if entity @s[scores={ca.ra
 
 execute if score $laser_detonate ca.var matches 1 as @e[type=creeper,tag=laser_explosion,distance=..4] at @s run function cartographer_mob_abilities:abilities/laser/set_and_run_traits
 execute if score $laser_detonate ca.var matches 1 as @a[distance=..4] at @s run function cartographer_mob_abilities:abilities/laser/at_player
+execute if score $laser_detonate ca.var matches 1 positioned as @a[scores={ca.damage_queue=1..},distance=..4] run function cartographer_mob_abilities:helper/damage/ability_explosion
 execute if score $laser_detonate ca.var matches 1 unless score $laser_blocked ca.var matches 1.. positioned as @s run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 execute if score $laser_detonate ca.var matches 1 positioned as @s run tag @a[distance=..32] remove ability_tagged
 

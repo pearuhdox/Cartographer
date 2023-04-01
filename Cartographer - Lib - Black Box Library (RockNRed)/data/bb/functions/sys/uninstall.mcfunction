@@ -1,10 +1,3 @@
-# Datapack  : Black Box Archive
-# Author(s) : RockNRed
-# Created   : 8/1/22
-# Last Edit : 8/1/22
-# Name      : Uninstall
-# Use       : Remove all traces of the pack
-
 
 #Remove scoreboards
 #\Score Storage Location
@@ -40,6 +33,24 @@ scoreboard objectives remove bbl.relco.Z2
 scoreboard objectives remove bbl.relco.XD
 scoreboard objectives remove bbl.relco.YD
 scoreboard objectives remove bbl.relco.ZD
+#Actionbar muter
+scoreboard objectives remove bbl.actionbar_spam_mute
+
+#CDL Scoreboards
+#Healing queue
+scoreboard objectives remove bbl.heal_queue
+#Damaging queue
+scoreboard objectives remove bbl.damage_queue
+#Damage timer
+scoreboard objectives remove bbl.damage_timer
+#HPMod queue (Shorthand for Healing/Damaging queues)
+scoreboard objectives remove bbl.hpm_queue
+#True damage health score
+scoreboard objectives remove bbl.p_health
+
+scoreboard objectives add bbl.hth.post_hp dummy
+scoreboard objectives add bbl.hth.pre_hp dummy 
+scoreboard objectives add bbl.hth.amount dummy
 
 #Remove teams
 team remove no_collide

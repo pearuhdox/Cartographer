@@ -10,5 +10,5 @@ execute if score $dmg_red ca.ma_epf_data matches ..0 run scoreboard players set 
 scoreboard players set $dmg_red_inv ca.ma_epf_data 100
 scoreboard players operation $dmg_red_inv ca.ma_epf_data -= $dmg_red ca.ma_epf_data
 
-scoreboard players operation @s cdl.damage_queue *= $dmg_red_inv ca.ma_epf_data
-scoreboard players operation @s cdl.damage_queue /= $100 ca.CONSTANT
+scoreboard players operation @s bbl.damage_queue *= $dmg_red_inv ca.ma_epf_data
+scoreboard players operation @s bbl.damage_queue /= $100 ca.CONSTANT

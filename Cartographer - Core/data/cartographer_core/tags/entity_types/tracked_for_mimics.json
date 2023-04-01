@@ -1,7 +1,6 @@
 {
 	"values": [
-		"#bb:hostile",
 		"minecraft:armor_stand",
-		"minecraft:item"
+		"minecraft:marker"
 	]
 }

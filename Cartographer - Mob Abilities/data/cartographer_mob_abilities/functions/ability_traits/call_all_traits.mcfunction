@@ -14,6 +14,10 @@ execute if entity @s[tag=ca.overloading] as @a[tag=ability_tagged] at @s run fun
 execute if entity @s[tag=ca.venemous] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/venemous/player_effect
 execute if entity @s[tag=ca.zephyrous] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/zephyrous/player_effect
 
+execute unless entity @s[tag=ca.zephyrous] if entity @s[tag=ca.knockback] run function cartographer_mob_abilities:ability_traits/knockback/mob_effect
+execute unless entity @s[tag=ca.zephyrous] if entity @s[tag=ca.knockback] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/knockback/player_effect
+execute unless entity @s[tag=ca.zephyrous] if entity @s[tag=ca.knockback] run function cartographer_mob_abilities:ability_traits/knockback/return_effect
+
 execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:ability_traits/alchemist/get_effects
 execute if entity @s[tag=ca.alchemist] as @a[tag=ability_tagged] at @s run function cartographer_mob_abilities:ability_traits/alchemist/player_effect
 
@@ -51,7 +55,7 @@ execute if entity @s[tag=ca.acro_kite_forward_after] at @s run function cartogra
 execute if entity @s[tag=ca.acro_kite_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_strafe
 
 #Feeble Tag
-execute if entity @s[tag=ca.feeble] run scoreboard players set @s cdl.damage_queue 100
+execute if entity @s[tag=ca.feeble] run scoreboard players set @s bbl.damage_queue 100
 execute if entity @s[tag=ca.feeble] at @s run function cd:lib/mob/damage/normal
 
 execute if entity @s[tag=ca.feeble_void] at @s run tp @s ~ -256 ~

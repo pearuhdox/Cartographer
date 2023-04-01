@@ -16,6 +16,7 @@ execute if entity @s[tag=ca.sh_shulker_bullet] as 0000001f-00de-140d-0000-000000
 execute if entity @s[tag=ca.sh_magic_missile] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1 ~
 
 execute if entity @s[tag=ca.sh_needle] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
+execute if entity @s[tag=ca.sh_boomerang] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.5 ~
 
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_wither_skull] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.5 ~
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_small_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.5 ~
@@ -38,6 +39,7 @@ execute if entity @s[tag=ca.sh_grenade] run function cartographer_mob_abilities:
 execute if entity @s[tag=ca.sh_shulker_bullet] run function cartographer_mob_abilities:projectiles/create/shulker_bullet
 execute if entity @s[tag=ca.sh_magic_missile] run function cartographer_mob_abilities:projectiles/create/magic_missile
 execute if entity @s[tag=ca.sh_needle] run function cartographer_mob_abilities:projectiles/create/needle
+execute if entity @s[tag=ca.sh_boomerang] run function cartographer_mob_abilities:projectiles/create/boomerang
 execute if entity @s[tag=ca.sh_rift] run function cartographer_mob_abilities:projectiles/create/rift
 execute if entity @s[tag=ca.sh_lightning] run function cartographer_mob_abilities:projectiles/create/lightning
 execute if entity @s[tag=ca.sh_wither_skull] run function cartographer_mob_abilities:projectiles/create/wither_skull

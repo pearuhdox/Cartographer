@@ -1,1 +1,0 @@
-execute if score @s ca.soul_chain_id = $kill_id ca.soul_chain_id run function cartographer_mob_abilities:passive/soul_chain/commit_kill

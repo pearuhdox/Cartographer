@@ -1,7 +1,14 @@
-execute as @a[distance=..1.6] at @s run tp @s ~ ~ ~
-effect give @a[distance=..1.6] slowness 1 1
+tp @s ~ ~0.1 ~
+
+effect give @s slow_falling 1 0 true
 
 playsound minecraft:entity.shulker_bullet.hurt hostile @a[distance=..16] ~ ~ ~ 2 0.75
 playsound minecraft:entity.wither.shoot hostile @a[distance=..16] ~ ~ ~ 1 2
 
-summon area_effect_cloud ~ ~0.5 ~ {ReapplicationDelay:20,Particle:"cloud",Radius:1.5f,RadiusPerTick:0.075f,RadiusOnUse:0f,Duration:20,DurationOnUse:0,Age:0,WaitTime:0,Color:14284287,Tags:["helper_cloud"],Potion:"minecraft:awkward",Effects:[{Id:25,Amplifier:39b,Duration:5},{Id:28,Amplifier:0b,Duration:20}]}
+particle minecraft:cloud ~ ~0.5 ~ 0.75 0 0.75 0.05 30 normal
+
+execute unless score @s ca.delta.cooldown matches 1.. run scoreboard players set $y delta.api.launch 12000
+execute unless score @s ca.delta.cooldown matches 1.. positioned ~ ~0.1 ~ run function delta:api/launch_xyz
+execute unless score @s ca.delta.cooldown matches 1.. run scoreboard players set @s ca.delta.cooldown 10
+
+tag @s remove ca.primed_zephyrous

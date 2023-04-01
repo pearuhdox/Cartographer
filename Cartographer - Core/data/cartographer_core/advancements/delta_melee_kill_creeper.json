@@ -1,0 +1,32 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:creeper"
+              }
+            }
+          ],
+          "killing_blow": {
+            "type": {
+                "tags": [
+                  {
+                    "expected": true,
+                    "id": "cartographer_core:melee"
+                  }
+                ]
+              }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "cartographer_core:helper/delta/was_killed"
+    }
+  }
+  

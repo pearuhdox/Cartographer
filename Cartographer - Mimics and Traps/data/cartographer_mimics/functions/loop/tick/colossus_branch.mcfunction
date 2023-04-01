@@ -22,12 +22,12 @@ execute if entity @s[tag=colossus_wrath,tag=!egg_setup] run function cartographe
 execute if entity @s[tag=colossus_greed] run data modify entity @s HasStung set value 0b
 execute if entity @s[tag=colossus_sloth] run effect give @s glowing 1 0 true
 
-execute if entity @s[tag=colossus_pride,tag=!enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/pride
-execute if entity @s[tag=colossus_wrath,tag=!enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/wrath
-execute if entity @s[tag=colossus_envy,tag=!enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/envy
-execute if entity @s[tag=colossus_lust,tag=!enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/lust
-execute if entity @s[tag=colossus_greed,tag=!enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/greed
-execute if entity @s[tag=colossus_gluttony,tag=!enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/gluttony
-execute if entity @s[tag=colossus_sloth,tag=!enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/sloth
+execute if entity @s[tag=colossus_pride,tag=!ca.enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/pride
+execute if entity @s[tag=colossus_wrath,tag=!ca.enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/wrath
+execute if entity @s[tag=colossus_envy,tag=!ca.enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/envy
+execute if entity @s[tag=colossus_lust,tag=!ca.enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/lust
+execute if entity @s[tag=colossus_greed,tag=!ca.enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/greed
+execute if entity @s[tag=colossus_gluttony,tag=!ca.enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/gluttony
+execute if entity @s[tag=colossus_sloth,tag=!ca.enraged,scores={mimic_health=..100}] run function cartographer_mimics:colossus/enrage/sloth
 
 scoreboard players set $colossus_alive setup 1

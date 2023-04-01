@@ -1,0 +1,2 @@
+
+tellraw @s ["",{"text":"[←] ","color":"#F5CE54","clickEvent":{"action":"run_command","value":"/function dies:func/menu/global"}},{"text":"Return to ","color":"#EFDADA","clickEvent":{"action":"run_command","value":"/function dies:func/menu/global"}},{"text":"global default item settings menu","color":"#4EF4A9","clickEvent":{"action":"run_command","value":"/function dies:func/menu/global"}},{"text":".","color":"#EFDADA","clickEvent":{"action":"run_command","value":"/function dies:func/menu/global"}}]

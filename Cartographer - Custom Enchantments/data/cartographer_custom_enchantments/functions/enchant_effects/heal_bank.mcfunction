@@ -9,7 +9,7 @@ scoreboard players operation $health_mod ca.var %= $10 ca.CONSTANT
 
 
 
-scoreboard players operation @s cdl.heal_queue += $health_max ca.var
-function cd:lib/player/heal
+scoreboard players operation @s bbl.heal_queue += $health_max ca.var
+function bb:call/hpm/player/heal
 particle minecraft:heart ~ ~0.2 ~ 0.5 0.15 0.5 0 1 force
 scoreboard players remove @s ca.regen_bank 100

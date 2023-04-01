@@ -1,0 +1,1 @@
+scoreboard players set $#lib_dies ca.installed 1

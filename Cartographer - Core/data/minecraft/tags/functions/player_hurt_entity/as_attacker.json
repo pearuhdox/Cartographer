@@ -1,5 +1,6 @@
 {
 	"values": [
+		{"id": "cartographer_core:helper/delta/custom_fireball/hit/hit_player", "required": false},
 		{"id": "cartographer_custom_enchantments:enchant_calls/when_attacking","required": false},
 		{"id": "cartographer_core:helper/attack_timer","required": true},
 		{"id": "cartographer_mob_abilities:effect_calls/when_attacking", "required": false},

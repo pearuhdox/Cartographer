@@ -7,11 +7,15 @@ execute unless score @s ca.arm_time matches 20.. run tp @s ^ ^ ^0.3 ~ ~
 
 scoreboard players add @s ca.arm_time 1
 
+#Condition 3: Projectile is within 0.75 blocks of a player and will thus detonate.
+execute if entity @a[distance=..0.5] if score @s ca.ability_dmg matches 0.. run function cartographer_mob_abilities:projectiles/behavior/magic_missile/detonate
+
 #Condition 1: Projectile is attacked by some kind of damage, and will thus detonate.
-execute unless entity @e[type=sheep,distance=..0.5,tag=magic_missile_hitbox] run function cartographer_mob_abilities:projectiles/behavior/magic_missile/detonate
+scoreboard players set $check_sheep_missile ca.mob_var 1
+execute on passengers if entity @s[type=sheep,tag=magic_missile_hitbox,nbt=!{AbsorptionAmount:0.0f}] run scoreboard players set $check_sheep_missile ca.mob_var 0
+
+execute if score $check_sheep_missile ca.mob_var matches 1.. run function cartographer_mob_abilities:projectiles/behavior/magic_missile/detonate
+
 
 #Condition 2: Projectile collides with a wall, and will thus detonate.
 execute unless block ~ ~1 ~ #bb:can_raycast if score @s ca.ability_dmg matches 0.. run function cartographer_mob_abilities:projectiles/behavior/magic_missile/detonate
-
-#Condition 3: Projectile is within 0.75 blocks of a player and will thus detonate.
-execute if entity @a[distance=..0.75] if score @s ca.ability_dmg matches 0.. run function cartographer_mob_abilities:projectiles/behavior/magic_missile/detonate

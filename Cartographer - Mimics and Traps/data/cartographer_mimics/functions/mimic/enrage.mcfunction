@@ -5,7 +5,7 @@ tag @s remove ca.hookshot
 
 tag @s add ca.charge
 tag @s add ca.breaker
-tag @s add enraged
+tag @s add ca.enraged
 tag @s add ca.has_active
 
 effect give @s speed 5 0

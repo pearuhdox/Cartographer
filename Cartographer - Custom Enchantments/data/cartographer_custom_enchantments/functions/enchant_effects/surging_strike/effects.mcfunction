@@ -1,5 +1,5 @@
-scoreboard players operation @s cdl.damage_queue = $melee ca.attack_val
-function cd:lib/mob/damage/normal
+scoreboard players operation @s ca.damage_queue = $melee ca.attack_val
+function cartographer_custom_enchantments:helper/damage/enchant_damage
 
 scoreboard players set @s co_y 2
 scoreboard players set @s co_send -5

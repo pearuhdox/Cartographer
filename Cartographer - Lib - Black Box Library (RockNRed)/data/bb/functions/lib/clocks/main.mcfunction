@@ -1,9 +1,3 @@
-# Datapack  : Black Box Library
-# Author(s) : RockNRed
-# Created   : 4/17/22
-# Last Edit : 4/17/22
-# Name      : Clock Main
-# Use       : Ran via tick function to increment other clocks
 
 scoreboard players add $1_tick bbl.clock 1
 scoreboard players add $5_ticks bbl.clock 1

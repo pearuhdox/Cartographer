@@ -1,0 +1,2 @@
+execute if entity @s[tag=!ca.delta_tnt_setup,type=tnt] run function cartographer_core:helper/delta/tnt/apply
+execute if entity @s[tag=ca.delta_tnt_setup] run function cartographer_core:helper/delta/tnt/delta_tnt

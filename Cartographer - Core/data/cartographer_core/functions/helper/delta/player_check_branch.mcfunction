@@ -1,0 +1,2 @@
+execute if entity @a[distance=..7,gamemode=!creative,gamemode=!spectator] positioned ~ ~1.5 ~ run function cartographer_core:helper/delta/los_check_start
+execute unless entity @a[distance=..7,gamemode=!creative,gamemode=!spectator] run tag @s remove ca.delta_creeper_fuse_primed

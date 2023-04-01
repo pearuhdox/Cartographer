@@ -1,0 +1,1 @@
+function cartographer_core:loop/entity_calls/branch/mob_abilities

@@ -1,9 +1,3 @@
-# Datapack  : Black Box Library
-# Author(s) : RockNRed
-# Created   : 4/17/22
-# Last Edit : 4/17/22
-# Name      : Internal 1 tick as_player clock
-# Use       : Ran every 1 tick as every player for internal systems
 
 #Remove sliding tag
 function bb:lib/sliding_down_honey/tag_remove
@@ -24,10 +18,11 @@ function bb:lib/tag_functions/slot_changed/loop
 #Gamemode changed
 function bb:lib/tag_functions/gamemode_changed/loop
 
-#Crit checker
-function bb:lib/crit_checker/loop
 #Y change checker
 function bb:lib/tag_functions/y_change
+
+#Actionbar spammer
+execute if score @s bbl.actionbar_spam_mute matches 1.. run scoreboard players remove @s bbl.actionbar_spam_mute 1
 
 #Item effects
 #\Interaction Blocker

@@ -1,4 +1,4 @@
-playsound minecraft:entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1 1.25
+playsound minecraft:delta.entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1 1.25
 
 particle minecraft:explosion ~ ~-0.5 ~ 1.5 0 1.5 0 25 normal
 
@@ -53,6 +53,7 @@ execute if entity @s[type=armor_stand] run scoreboard players set $aftershock ca
 scoreboard players operation $aftershock ca.ability_dmg /= $2 ca.CONSTANT
 
 execute as @a[distance=..3.5] at @s run function cartographer_mob_abilities:ability_traits/aftershock/player
+execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..3.5] run function cartographer_mob_abilities:helper/damage/ability_explosion
 
 execute if entity @a[distance=..3.5] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits
 

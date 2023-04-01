@@ -3,7 +3,7 @@
 
 tag @s add ca.breaker
 tag @s add ca.accelerate+
-tag @s add enraged
+tag @s add ca.enraged
 
 effect give @s speed 30 0
 

@@ -20,9 +20,9 @@ scoreboard players operation $damage_left ca.laser_damage /= $100 ca.CONSTANT
 
 scoreboard players operation $damage_left ca.laser_damage /= $10 ca.CONSTANT
 
-scoreboard players operation @s cdl.damage_queue = $damage_left ca.laser_damage
-execute if score @s cdl.damage_queue matches 0 run scoreboard players add @s cdl.damage_queue 1
+scoreboard players operation @s bbl.damage_queue = $damage_left ca.laser_damage
+execute if score @s bbl.damage_queue matches 0 run scoreboard players add @s bbl.damage_queue 1
 
-function cd:lib/player/damage/true
+function bb:call/hpm/player/damage/true
 
 tag @s remove ca.hit_by_laser

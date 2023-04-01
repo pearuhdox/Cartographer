@@ -1,2 +1,0 @@
-execute if entity @a[distance=..7,gamemode=!creative,gamemode=!spectator] positioned ~ ~1.5 ~ run function cartographer_mob_abilities:passive/deathbomb/los_check_start
-execute unless entity @a[distance=..7,gamemode=!creative,gamemode=!spectator] run tag @s remove ca.deathbomb_fuse_primed

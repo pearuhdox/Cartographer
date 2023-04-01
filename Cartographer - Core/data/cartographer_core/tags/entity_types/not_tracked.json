@@ -13,8 +13,6 @@
 		"minecraft:ender_pearl",
 		"minecraft:eye_of_ender",
 		"minecraft:firework_rocket",
-		"minecraft:tnt",
-		"minecraft:painting",
-		"minecraft:marker"
+		"minecraft:painting"
 	]
 }

@@ -7,21 +7,27 @@ execute if entity @s[tag=ca.zephyrous] run particle cloud ~ ~0.25 ~ 0.5 0 0.5 0.
 execute if entity @s[tag=ca.webbing] run particle block minecraft:cobweb ~ ~0.25 ~ 0.5 0 0.5 0.05 15 normal
 execute if entity @s[tag=ca.cursing] run particle squid_ink ~ ~0.25 ~ 0.5 0 0.5 0.05 1 normal
 
-particle explosion ~ ~0.25 ~ 0.75 0 0.75 0 1 normal
-playsound minecraft:entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 0.5 2
-playsound minecraft:enchant.thorns.hit hostile @a[distance=..20] ~ ~ ~ 2 0.5
+function delta:api/explosion_particle
+playsound minecraft:delta.entity.generic.explode hostile @a[distance=..8] ~ ~ ~ 0.5 2
+playsound minecraft:enchant.thorns.hit hostile @a[distance=..20] ~ ~ ~ 1 1
 
 scoreboard players set $projectile ca.dmg_type 1
 
-scoreboard players operation @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] cdl.damage_queue = @s ca.ability_dmg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310213
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run tag @s remove no_cdl_msg
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run tag @s add ca.pull
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
-execute rotated ~ 0 positioned ^ ^ ^1 facing entity @s feet rotated ~ 0 positioned as @s as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] positioned as @s run function cartographer_core:helper/damage_knockback/targeting_direction
+execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca.mob_var 1
+execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
+#execute unless score $zeph_check ca.mob_var matches 1.. at @s run tp 31182015-4512-2011-3118-115180000000 ^ ^1 ^1
+
+scoreboard players operation $needle ca.ability_dmg = @s ca.ability_dmg
+
+execute as @a[distance=..2,limit=1,sort=nearest] at @s facing entity 31182015-4512-2011-3118-115180000000 feet rotated ~ ~-15 run function cartographer_mob_abilities:projectiles/behavior/needle/player 
+execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..2] run function cartographer_mob_abilities:helper/damage/ability_projectile
+
+scoreboard players set $zeph_check ca.mob_var 0
 
 #Trait Effects
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,sort=nearest,limit=1] at @s run tag @s add ability_tagged
-execute if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:projectiles/behavior/needle/call_traits
+execute if entity @a[tag=ability_tagged] at @s positioned ^ ^1 ^-3 run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
+
+tp 31182015-4512-2011-3118-115180000000 4206900 128 4206900
 
 kill @s

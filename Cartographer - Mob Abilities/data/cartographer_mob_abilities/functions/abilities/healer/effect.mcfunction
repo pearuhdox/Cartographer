@@ -5,8 +5,8 @@ scoreboard players operation $healer_amt ca.var /= $3 ca.CONSTANT
 
 execute if score $healer_amt ca.var matches 21.. run scoreboard players set $healer_amt ca.var 20
 
-scoreboard players operation @s cdl.heal_queue = $healer_amt ca.var
-function cd:lib/mob/heal
+scoreboard players operation @s bbl.heal_queue = $healer_amt ca.var
+function bb:call/hpm/mob/heal
 
 particle minecraft:heart ~ ~1 ~ 0.5 0.5 0.5 0.05 15
 

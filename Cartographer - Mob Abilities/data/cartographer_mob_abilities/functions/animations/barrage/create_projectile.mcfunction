@@ -66,6 +66,7 @@ execute if entity @s[tag=ca.sh_magic_missile] run function cartographer_mob_abil
 execute if score $needle_mod ability_charge matches 1 if entity @s[tag=ca.sh_needle] positioned ^1 ^ ^-1 run function cartographer_mob_abilities:projectiles/create/needle
 execute if score $needle_mod ability_charge matches 4 if entity @s[tag=ca.sh_needle] positioned ^ ^ ^-1 run function cartographer_mob_abilities:projectiles/create/needle
 execute if score $needle_mod ability_charge matches 7 if entity @s[tag=ca.sh_needle] positioned ^-1 ^ ^-1 run function cartographer_mob_abilities:projectiles/create/needle
+execute if entity @s[tag=ca.sh_boomerang] run function cartographer_mob_abilities:projectiles/create/boomerang
 execute if entity @s[tag=ca.sh_rift] run function cartographer_mob_abilities:projectiles/create/rift
 execute if entity @s[tag=ca.sh_lightning] run function cartographer_mob_abilities:projectiles/create/lightning
 execute if entity @s[tag=ca.sh_wither_skull] run function cartographer_mob_abilities:projectiles/create/wither_skull

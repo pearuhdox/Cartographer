@@ -9,14 +9,13 @@ function cartographer_core:helper/damage_knockback/list_track
 
 
 #Run all Cartographer Effects from Core Timers.
-function cartographer_charon:loop/tick/base
+#function cartographer_charon:loop/tick/base
 function cartographer_custom_durability:loop/tick/base
 function cartographer_custom_enchantments:loop/tick/base
 function cartographer_custom_statuses:loop/tick/base
 function cartographer_loot_additions:loop/tick/base
 function cartographer_mimics:loop/tick/base
 function cartographer_mob_abilities:loop/tick/base
-function cartographer_potion_util:loop/tick/base
 function cartographer_repair_stations:loop/tick/base
 
 execute as @a at @s run function cartographer_core:loop/tick/player
@@ -25,7 +24,7 @@ execute as @a at @s run function cartographer_core:loop/tick/player
 execute unless score $setup_mode ca.gamerule matches 0.. run scoreboard players set $setup_mode ca.gamerule 1
 
 #Run all ticking entity effects.
-execute as @e[type=!#cartographer_core:not_tracked] at @s run function cartographer_core:loop/entity_calls/branch_tick
+execute as @e[type=!#cartographer_core:not_tracked,tag=!no_tick] at @s run function cartographer_core:loop/entity_calls/branch_tick
 
 
 #Reset token kill check (Mob Abilities)
@@ -35,7 +34,7 @@ scoreboard players set @a[scores={token_kill_check=1..}] token_kill_check 0
 scoreboard players set @a[scores={helper_open_trap=1..}] helper_open_trap 0
 
 #Loot Additions Resets
-scoreboard players set @a ca.get_soul 0
+execute as @a at @s if score @s ca.get_soul matches 1.. run scoreboard players remove @s ca.get_soul 1
 
 #Add anything else to run per tick here!
 #

@@ -4,7 +4,7 @@ function cartographer_custom_enchantments:calc_enchant/reset
 #Find Custom Items on the Equipped Slots
 function cartographer_custom_enchantments:calc_enchant/find_custom
 
-tag @s add check_feet
+
 #For each custom item found, run the proper calculation function.
 execute if entity @s[tag=check_head] run function cartographer_custom_enchantments:calc_enchant/head
 execute if entity @s[tag=check_body] run function cartographer_custom_enchantments:calc_enchant/chest

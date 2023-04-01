@@ -26,4 +26,4 @@ execute if entity @s[tag=ca.attack_override] run function cartographer_mob_abili
 execute if entity @s[tag=ca.attack_override_soft] run function cartographer_mob_abilities:helper/attack_override_soft
 
 #Fix Tags
-execute if entity @s[tag=!ability_checked,tag=!duplicate] run function cartographer_mob_abilities:passive/ability_fix
+execute if entity @s[tag=!ability_checked,tag=!ca.duplicate] run function cartographer_mob_abilities:passive/ability_fix

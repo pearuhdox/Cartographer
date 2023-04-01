@@ -24,5 +24,4 @@ scoreboard players operation $damage_amt ca.effect_bleed /= $100 ca.CONSTANT
 execute if score $damage_amt ca.effect_bleed < $bleed_min ca.effect_bleed run scoreboard players operation $damage_amt ca.effect_bleed = $bleed_min ca.effect_bleed
 execute if score $damage_amt ca.effect_bleed > $bleed_max ca.effect_bleed run scoreboard players operation $damage_amt ca.effect_bleed = $bleed_max ca.effect_bleed
 
-scoreboard players operation @s cdl.damage_queue = $damage_amt ca.effect_bleed
-scoreboard players remove @s cdl.damage_queue 1
+scoreboard players operation @s ca.damage_queue = $damage_amt ca.effect_bleed

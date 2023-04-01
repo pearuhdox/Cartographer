@@ -1,3 +1,6 @@
-execute store result score @s void_home.x run data get entity @s Pos[0] 1
-execute store result score @s void_home.y run data get entity @s Pos[1] 1
-execute store result score @s void_home.z run data get entity @s Pos[2] 1
+function suso.player_data:get/do
+
+data modify storage suso:pldata working_data.Charon set value []
+data modify storage suso:pldata working_data.CharonHomePos set from entity @s Pos
+
+function suso.player_data:put/do

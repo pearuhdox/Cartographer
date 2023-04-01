@@ -25,10 +25,12 @@ function cartographer_repair_stations:load/load_check
 
 function bb:load_check
 function cd:load_check
+function delta:load_check
 function entityid:load_check
 function suso.player_data:load_check
 function inv:load_check
 function motion:load_check
+function dies:load_check
 
 scoreboard players set $z_detect_packs ca.installed 0
 
@@ -42,7 +44,7 @@ scoreboard players operation $z_detect_packs ca.installed += $mob_abilities ca.i
 scoreboard players operation $z_detect_packs ca.installed += $repair_stations ca.installed
 
 scoreboard players set $#lib_all_found ca.installed 0
-execute if score $#lib_bbl ca.installed matches 1 if score $#lib_cdl ca.installed matches 1 if score $#lib_ehid ca.installed matches 1 if score $#lib_inv ca.installed matches 1 if score $#lib_pds ca.installed matches 1 if score $#lib_mot ca.installed matches 1 run scoreboard players set $#lib_all_found ca.installed 1
+execute if score $#lib_dies ca.installed matches 1 if score $#lib_del ca.installed matches 1 if score $#lib_bbl ca.installed matches 1 if score $#lib_ehid ca.installed matches 1 if score $#lib_inv ca.installed matches 1 if score $#lib_pds ca.installed matches 1 if score $#lib_mot ca.installed matches 1 run scoreboard players set $#lib_all_found ca.installed 1
 
 
 execute if score $gl_reload_msg ca.gamerule matches 0 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/full

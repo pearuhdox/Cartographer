@@ -1,0 +1,1 @@
+function cartographer_mob_abilities:loop/tick/items

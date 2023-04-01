@@ -13,7 +13,7 @@ execute unless score $global_past helper_diff = $global helper_diff run tag @a r
 execute unless score $global_past helper_diff = $global helper_diff run scoreboard players operation $global_past helper_diff = $global helper_diff
 
 #Do a line of sight check on one mob that *doesn't* have Line of Sight.
-execute if score $do_los flag matches 1 as @r[gamemode=!creative,gamemode=!spectator] at @s as @e[type=#bb:hostile,tag=ca.has_active,tag=!los_checked,tag=!tokened,scores={cooldown=0..2},limit=1,sort=nearest,distance=..32] at @s run function cartographer_mob_abilities:helper/los_check/scan
+#execute if score $do_los flag matches 1 as @r[gamemode=!creative,gamemode=!spectator] at @s as @e[type=#bb:hostile,tag=ca.has_active,tag=!los_checked,tag=!tokened,scores={cooldown=0..2},limit=1,sort=nearest,distance=..32] at @s run function cartographer_mob_abilities:helper/los_check/scan
 
 #Unflag the check for needing los
 scoreboard players set $do_los flag 0
@@ -22,6 +22,8 @@ scoreboard players set $do_los flag 0
 execute if score $invul_time_check invul matches 1.. run scoreboard players remove $invul_time_check invul 1
 
 #Reduce the time of the hook_check dummy score.
+execute if score $hook_check ca.hooked matches 1 run ride 31182015-8151-5111-3118-110000000000 dismount
+execute if score $hook_check ca.hooked matches 1 run tp 31182015-8151-5111-3118-110000000000 4206900 50 4206900
 execute if score $hook_check ca.hooked matches 1.. run scoreboard players remove $hook_check ca.hooked 1
 
 #Reduce the time of the creeper cloud killer timer by 1
@@ -41,3 +43,6 @@ execute if score $block_webbing_time ca.var matches 1.. run scoreboard players r
 
 #Run All UUID Custom Projectile Cleanup
 function cartographer_mob_abilities:projectiles/cleanup/master
+
+#Run Other UUID Ticking
+function cartographer_mob_abilities:loop/tick/uuid_tick

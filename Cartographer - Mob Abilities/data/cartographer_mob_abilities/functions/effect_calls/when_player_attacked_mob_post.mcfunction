@@ -22,11 +22,14 @@ execute if entity @s[tag=ca.touch] if entity @s[tag=ca.volatile] run scoreboard 
 execute if entity @s[tag=ca.touch] if entity @s[tag=ca.zephyrous] run scoreboard players set $zephyrous ca.touch_check 1
 
 
-execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] run tag @a[tag=touched] add ability_tagged
-execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/touch/melee
+execute if entity @s[tag=ca.touch,type=!creeper] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] run tag @a[tag=touched] add ability_tagged
+execute if entity @s[tag=ca.touch,type=!creeper] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] unless entity @s[tag=ca.ignore_traits_active] run tag @s add ca.running_touch_melee
 
-execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=true}}] run tag @a[tag=touched] add ability_tagged
-execute if entity @s[tag=ca.touch] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=true}}] run function cartographer_mob_abilities:ability_traits/touch/ranged
+execute if entity @s[tag=ca.touch,type=!creeper] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=true}}] run tag @a[tag=touched] add ability_tagged
+execute if entity @s[tag=ca.touch,type=!creeper] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=true}}] unless entity @s[tag=ca.ignore_traits_active] run tag @s add ca.running_touch_ranged
+
+execute if entity @s[tag=ca.touch,type=creeper] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] run tag @a[tag=touched] add ability_tagged
+execute if entity @s[tag=ca.touch,type=creeper] at @s if entity @a[tag=touched,advancements={entityid:entity_hurt_player={is_projectile=false}}] unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/touch/creeper
 
 #Temporary Alchemist Trait Tags for Touch
 scoreboard players set $aug_touch_ranged ca.var 0
@@ -39,8 +42,5 @@ execute if entity @s[tag=ca.aug_temp_touch] at @s if entity @a[tag=touched] run 
 
 
 execute if entity @s[tag=hook_broken] at @s run scoreboard players set @s ca.hooked 2
-
-tag @a remove touched
-tag @a remove ability_tagged
 
 #execute if entity @a[tag=check_custom_shulker_bullet] run function cartographer_mob_abilities:passive/projectile/shulker_save_data

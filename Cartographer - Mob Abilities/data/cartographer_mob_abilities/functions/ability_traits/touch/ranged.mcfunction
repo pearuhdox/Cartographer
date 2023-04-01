@@ -9,3 +9,8 @@ execute unless score @s ca.acro_cooldown matches 1.. if entity @s[tag=ca.acro_ga
 execute unless score @s ca.acro_cooldown matches 1.. if entity @s[tag=ca.acro_kite] run function cartographer_mob_abilities:ability_traits/acrobatic/kite
 execute unless score @s ca.acro_cooldown matches 1.. if entity @s[tag=ca.acro_kite_forward] run function cartographer_mob_abilities:ability_traits/acrobatic/kite_forward
 execute unless score @s ca.acro_cooldown matches 1.. if entity @s[tag=ca.acro_kite_strafe] run function cartographer_mob_abilities:ability_traits/acrobatic/kite_strafe
+
+tag @s remove ca.running_touch_ranged
+
+tag @a remove touched
+tag @a remove ability_tagged

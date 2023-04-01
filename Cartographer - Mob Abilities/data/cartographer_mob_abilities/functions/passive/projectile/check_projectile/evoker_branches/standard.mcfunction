@@ -16,6 +16,7 @@ execute as @s[tag=ca.sh_grenade] at @s as @e[type=#bb:projectile,tag=!passive_re
 
 execute as @s[tag=ca.sh_magic_missile] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/magic_missile
 execute as @s[tag=ca.sh_needle] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/needle
+execute as @s[tag=ca.sh_boomerang] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/boomerang
 execute as @s[tag=ca.sh_rift] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/rift
 
 execute as @s[tag=ca.sh_lightning] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/lightning

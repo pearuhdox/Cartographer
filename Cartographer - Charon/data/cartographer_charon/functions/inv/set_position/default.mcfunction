@@ -1,3 +1,9 @@
+function suso.player_data:put/do
+
+execute store result score @s void_home.x run data get storage suso:pldata working_data.CharonHomePos[0]
+execute store result score @s void_home.y run data get storage suso:pldata working_data.CharonHomePos[1]
+execute store result score @s void_home.z run data get storage suso:pldata working_data.CharonHomePos[2]
+
 data modify storage cartographer_charon:home Pos set value [0d,0d,0d]
 
 execute store result storage cartographer_charon:home Pos[0] double 1 run scoreboard players add @s void_home.x 0

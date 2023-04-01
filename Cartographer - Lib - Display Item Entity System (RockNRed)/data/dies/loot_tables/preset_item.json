@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:item_frame",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1s}],EntityTag:{Fixed:1b,Invulnerable:1b,Item:{Count:1b,id:\"minecraft:structure_void\",tag:{new_dies_item:2}},Silent:1b},HideFlags:127,display:{Lore:['{\"text\":\"Item lore will show saved preset\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"in the future. For now, you can\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"safely rename this item to keep track.\",\"color\":\"gray\",\"italic\":false}'],Name:'{\"text\":\"preset d.i.e.s. item\",\"color\":\"light_purple\",\"italic\":false}'}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

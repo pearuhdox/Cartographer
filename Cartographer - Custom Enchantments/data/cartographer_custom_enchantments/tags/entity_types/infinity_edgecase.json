@@ -1,1 +1,6 @@
-{"values":["minecraft:ender_pearl","minecraft:potion"]}
+{
+    "values":[
+        "minecraft:ender_pearl",
+        "minecraft:potion"
+    ]
+}

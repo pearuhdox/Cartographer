@@ -13,13 +13,11 @@ scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 scoreboard players set $projectile ca.dmg_type 1
 
 execute if entity @a[distance=..2,tag=!hooked] run scoreboard players set @s ca.raycast 0
-execute as @a[distance=..2,tag=!hooked] run scoreboard players set @s ca.hooked 101
-execute as @a[distance=..2,tag=!hooked] run scoreboard players set $hook_check ca.hooked 101
-execute as @a[distance=..2,tag=!hooked] run scoreboard players operation @s cdl.damage_queue = $damage ca.ability_dmg
-execute as @a[distance=..2,tag=!hooked] unless entity @s[tag=no_cdl_msg] run scoreboard players set @s cdl.death_id 310205
-execute as @a[distance=..2,tag=!hooked] run tag @s remove no_cdl_msg
-execute as @a[distance=..2,tag=!hooked] run function cartographer_mob_abilities:helper/epf/damage_reduce/ask_reduction
-execute as @a[distance=..2,tag=!hooked] run function cd:lib/player/damage/normal
+execute as @a[distance=..2,tag=!hooked] run function cartographer_mob_abilities:abilities/hookshot/player
+
+execute as @s positioned as @a[scores={ca.damage_queue=1..},tag=!hooked,distance=..2] run function cartographer_mob_abilities:helper/damage/ability_projectile
+
+execute if score $hook_check ca.hooked matches 101 run ride 31182015-8151-5111-3118-110000000000 mount @s
 
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..2,tag=!hooked] at @s run tag @s add ability_tagged
 execute if entity @a[tag=ability_tagged,tag=!hooked,gamemode=!spectator,gamemode=!creative,distance=..18] at @s run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit

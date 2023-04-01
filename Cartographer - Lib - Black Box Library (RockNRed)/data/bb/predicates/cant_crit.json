@@ -1,0 +1,80 @@
+{
+    "condition": "minecraft:alternative",
+    "terms": [
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{abilities:{flying:1b}}"
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "predicate": {
+          "block": {
+            "tag": "minecraft:climbable"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "predicate": {
+          "block": {
+            "blocks": [
+              "minecraft:water"
+            ]
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{FallDistance:0.0f}"
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "vehicle": {}
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "effects": {
+            "minecraft:slow_falling": {}
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "effects": {
+            "minecraft:blindness": {}
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "flags": {
+            "is_swimming": true
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "flags": {
+            "is_sprinting": true
+          }
+        }
+      }
+    ]
+}

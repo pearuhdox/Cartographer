@@ -10,4 +10,7 @@ particle minecraft:sculk_soul ~ ~0.5 ~ 0 0 0 0.1 25 normal
 
 execute as @a at @s run function cartographer_charon:multiplayer/send_purge_message
 
+execute on passengers run kill @s
+execute on vehicle run kill @s
+
 kill @s

@@ -1,0 +1,19 @@
+{
+    "values":[
+		"minecraft:blaze",
+		"minecraft:creeper",
+		"minecraft:guardian",
+		"minecraft:shulker",
+		"minecraft:slime",
+		"minecraft:magma_cube",
+		"minecraft:hoglin",
+		"minecraft:zoglin",
+		"minecraft:wolf",
+		"minecraft:rabbit",
+        "minecraft:spider",
+        "minecraft:cave_spider",
+        "minecraft:silverfish",
+        "minecraft:endermite",
+        "minecraft:bee"
+    ]
+  }

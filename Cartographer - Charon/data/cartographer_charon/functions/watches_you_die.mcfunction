@@ -5,6 +5,7 @@ tag @s add the_one_dying
 
 data modify storage cartographer_charon:player inv set value []
 
+execute if entity @s[tag=ca.can_self_revive] run spawnpoint @s ~ ~ ~
 
 execute if data storage inv:main inv.all[] run function cartographer_charon:inv/iterate_death
 

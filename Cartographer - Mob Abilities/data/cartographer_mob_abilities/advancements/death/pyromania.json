@@ -4,19 +4,19 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.pyromania\"]}"
+                    "nbt": "{Tags:[\"ca.hazard\"]}"
                 }
             }
         }
     },
     "display": {
         "title": {
-            "text": "Pyromania                ",
+            "text": "Hazardous                ",
             "color": "white"
         },
         "description": {
             "color": "white",
-            "text": "On death, the enemy drops a firebringer which creates fire and lava. The firebringer can be destroyed by placing a block on it."
+            "text": "On death, the enemy drops an environmental hazard based on its traits."
         },
         "icon": {
             "item": "minecraft:campfire"

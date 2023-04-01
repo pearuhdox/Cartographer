@@ -1,7 +1,5 @@
 {
 	"values": [
-		"#bb:hostile",
-		"#bb:projectile",
 		"minecraft:armor_stand",
 		"minecraft:marker",
 		"minecraft:area_effect_cloud",

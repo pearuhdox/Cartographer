@@ -5,116 +5,116 @@ function entityid:assign_id/find_id
 scoreboard players operation @s entityid = current= entityid
 
 #get bit 0
-scoreboard players operation @s entityid.0 = @s entityid
-scoreboard players operation @s entityid.0 %= 2 num
+scoreboard players operation $id0 entityid = @s entityid
+scoreboard players operation $id0 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.0 matches 0 run tag @s add entityid.0.0
-execute if score @s entityid.0 matches 1 run tag @s add entityid.0.1
+execute if score $id0 entityid matches 0 run tag @s add entityid.0.0
+execute if score $id0 entityid matches 1 run tag @s add entityid.0.1
 
 #get bit 1
-scoreboard players operation @s entityid.1 = @s entityid
-scoreboard players operation @s entityid.1 %= 2 num
+scoreboard players operation $id1 entityid = @s entityid
+scoreboard players operation $id1 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.1 matches 0 run tag @s add entityid.1.0
-execute if score @s entityid.1 matches 1 run tag @s add entityid.1.1
+execute if score $id1 entityid matches 0 run tag @s add entityid.1.0
+execute if score $id1 entityid matches 1 run tag @s add entityid.1.1
 
 #get bit 2
-scoreboard players operation @s entityid.2 = @s entityid
-scoreboard players operation @s entityid.2 %= 2 num
+scoreboard players operation $id2 entityid = @s entityid
+scoreboard players operation $id2 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.2 matches 0 run tag @s add entityid.2.0
-execute if score @s entityid.2 matches 1 run tag @s add entityid.2.1
+execute if score $id2 entityid matches 0 run tag @s add entityid.2.0
+execute if score $id2 entityid matches 1 run tag @s add entityid.2.1
 
 #get bit 3
-scoreboard players operation @s entityid.3 = @s entityid
-scoreboard players operation @s entityid.3 %= 2 num
+scoreboard players operation $id3 entityid = @s entityid
+scoreboard players operation $id3 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.3 matches 0 run tag @s add entityid.3.0
-execute if score @s entityid.3 matches 1 run tag @s add entityid.3.1
+execute if score $id3 entityid matches 0 run tag @s add entityid.3.0
+execute if score $id3 entityid matches 1 run tag @s add entityid.3.1
 
 #get bit 4
-scoreboard players operation @s entityid.4 = @s entityid
-scoreboard players operation @s entityid.4 %= 2 num
+scoreboard players operation $id4 entityid = @s entityid
+scoreboard players operation $id4 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.4 matches 0 run tag @s add entityid.4.0
-execute if score @s entityid.4 matches 1 run tag @s add entityid.4.1
+execute if score $id4 entityid matches 0 run tag @s add entityid.4.0
+execute if score $id4 entityid matches 1 run tag @s add entityid.4.1
 
 #get bit 5
-scoreboard players operation @s entityid.5 = @s entityid
-scoreboard players operation @s entityid.5 %= 2 num
+scoreboard players operation $id5 entityid = @s entityid
+scoreboard players operation $id5 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.5 matches 0 run tag @s add entityid.5.0
-execute if score @s entityid.5 matches 1 run tag @s add entityid.5.1
+execute if score $id5 entityid matches 0 run tag @s add entityid.5.0
+execute if score $id5 entityid matches 1 run tag @s add entityid.5.1
 
 #get bit 6
-scoreboard players operation @s entityid.6 = @s entityid
-scoreboard players operation @s entityid.6 %= 2 num
+scoreboard players operation $id6 entityid = @s entityid
+scoreboard players operation $id6 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.6 matches 0 run tag @s add entityid.6.0
-execute if score @s entityid.6 matches 1 run tag @s add entityid.6.1
+execute if score $id6 entityid matches 0 run tag @s add entityid.6.0
+execute if score $id6 entityid matches 1 run tag @s add entityid.6.1
 
 #get bit 7
-scoreboard players operation @s entityid.7 = @s entityid
-scoreboard players operation @s entityid.7 %= 2 num
+scoreboard players operation $id7 entityid = @s entityid
+scoreboard players operation $id7 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.7 matches 0 run tag @s add entityid.7.0
-execute if score @s entityid.7 matches 1 run tag @s add entityid.7.1
+execute if score $id7 entityid matches 0 run tag @s add entityid.7.0
+execute if score $id7 entityid matches 1 run tag @s add entityid.7.1
 
 #get bit 8
-scoreboard players operation @s entityid.8 = @s entityid
-scoreboard players operation @s entityid.8 %= 2 num
+scoreboard players operation $id8 entityid = @s entityid
+scoreboard players operation $id8 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.8 matches 0 run tag @s add entityid.8.0
-execute if score @s entityid.8 matches 1 run tag @s add entityid.8.1
+execute if score $id8 entityid matches 0 run tag @s add entityid.8.0
+execute if score $id8 entityid matches 1 run tag @s add entityid.8.1
 
 #get bit 9
-scoreboard players operation @s entityid.9 = @s entityid
-scoreboard players operation @s entityid.9 %= 2 num
+scoreboard players operation $id9 entityid = @s entityid
+scoreboard players operation $id9 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.9 matches 0 run tag @s add entityid.9.0
-execute if score @s entityid.9 matches 1 run tag @s add entityid.9.1
+execute if score $id9 entityid matches 0 run tag @s add entityid.9.0
+execute if score $id9 entityid matches 1 run tag @s add entityid.9.1
 
 #get bit 10
-scoreboard players operation @s entityid.10 = @s entityid
-scoreboard players operation @s entityid.10 %= 2 num
+scoreboard players operation $id10 entityid = @s entityid
+scoreboard players operation $id10 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.10 matches 0 run tag @s add entityid.10.0
-execute if score @s entityid.10 matches 1 run tag @s add entityid.10.1
+execute if score $id10 entityid matches 0 run tag @s add entityid.10.0
+execute if score $id10 entityid matches 1 run tag @s add entityid.10.1
 
 #get bit 11
-scoreboard players operation @s entityid.11 = @s entityid
-scoreboard players operation @s entityid.11 %= 2 num
+scoreboard players operation $id11 entityid = @s entityid
+scoreboard players operation $id11 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.11 matches 0 run tag @s add entityid.11.0
-execute if score @s entityid.11 matches 1 run tag @s add entityid.11.1
+execute if score $id11 entityid matches 0 run tag @s add entityid.11.0
+execute if score $id11 entityid matches 1 run tag @s add entityid.11.1
 
 #get bit 12
-scoreboard players operation @s entityid.12 = @s entityid
-scoreboard players operation @s entityid.12 %= 2 num
+scoreboard players operation $id12 entityid = @s entityid
+scoreboard players operation $id12 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.12 matches 0 run tag @s add entityid.12.0
-execute if score @s entityid.12 matches 1 run tag @s add entityid.12.1
+execute if score $id12 entityid matches 0 run tag @s add entityid.12.0
+execute if score $id12 entityid matches 1 run tag @s add entityid.12.1
 
 #get bit 13
-scoreboard players operation @s entityid.13 = @s entityid
-scoreboard players operation @s entityid.13 %= 2 num
+scoreboard players operation $id13 entityid = @s entityid
+scoreboard players operation $id13 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.13 matches 0 run tag @s add entityid.13.0
-execute if score @s entityid.13 matches 1 run tag @s add entityid.13.1
+execute if score $id13 entityid matches 0 run tag @s add entityid.13.0
+execute if score $id13 entityid matches 1 run tag @s add entityid.13.1
 
 #get bit 14
-scoreboard players operation @s entityid.14 = @s entityid
-scoreboard players operation @s entityid.14 %= 2 num
+scoreboard players operation $id14 entityid = @s entityid
+scoreboard players operation $id14 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.14 matches 0 run tag @s add entityid.14.0
-execute if score @s entityid.14 matches 1 run tag @s add entityid.14.1
+execute if score $id14 entityid matches 0 run tag @s add entityid.14.0
+execute if score $id14 entityid matches 1 run tag @s add entityid.14.1
 
 #get bit 15
-scoreboard players operation @s entityid.15 = @s entityid
-scoreboard players operation @s entityid.15 %= 2 num
+scoreboard players operation $id15 entityid = @s entityid
+scoreboard players operation $id15 entityid %= 2 num
 scoreboard players operation @s entityid /= 2 num
-execute if score @s entityid.15 matches 0 run tag @s add entityid.15.0
-execute if score @s entityid.15 matches 1 run tag @s add entityid.15.1
+execute if score $id15 entityid matches 0 run tag @s add entityid.15.0
+execute if score $id15 entityid matches 1 run tag @s add entityid.15.1
 
 #re-setting current
 scoreboard players operation @s entityid = current= entityid

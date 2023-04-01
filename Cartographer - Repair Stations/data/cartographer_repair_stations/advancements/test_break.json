@@ -23,6 +23,6 @@
     }
   },
   "rewards": {
-    "function": "cartographer_repair_stations:void_bag/save_inv"
+    "function": "cartographer_repair_stations:tesseract/save_inv"
   }
 }

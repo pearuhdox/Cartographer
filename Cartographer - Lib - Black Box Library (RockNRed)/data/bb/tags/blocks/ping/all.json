@@ -1,22 +1,22 @@
 {
-        "values": [
-                "minecraft:lava",
-                "minecraft:fire",
-                "minecraft:sweet_berry_bush",
-                "minecraft:cobweb",
-                "minecraft:dropper",
-                "minecraft:dispenser",
-                "minecraft:furnace",
-                "minecraft:brewing_stand",
-                "minecraft:smoker",
-                "minecraft:blast_furnace",
-                "minecraft:hopper",
-                "minecraft:chest",
-                "#minecraft:shulker_boxes",
-                "minecraft:trapped_chest",
-                "minecraft:spawner",
-                "minecraft:wither_rose",
-                "#minecraft:signs",
-                "minecraft:barrel"
-        ]
+    "values": [
+        "minecraft:lava",
+        "minecraft:fire",
+	    "minecraft:sweet_berry_bush",
+	    "minecraft:cobweb",
+        "minecraft:dropper",
+        "minecraft:dispenser",
+        "minecraft:furnace",
+        "minecraft:brewing_stand",
+        "minecraft:smoker",
+        "minecraft:blast_furnace",
+        "minecraft:hopper",
+		"minecraft:chest",
+        "#minecraft:shulker_boxes",
+        "minecraft:trapped_chest",
+        "minecraft:spawner",
+        "minecraft:wither_rose",
+        "#minecraft:signs",
+        "minecraft:barrel"
+    ]
 }

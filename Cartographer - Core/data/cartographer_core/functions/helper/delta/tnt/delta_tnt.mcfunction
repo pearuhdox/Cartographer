@@ -1,0 +1,1 @@
+function cartographer_core:helper/delta/tnt/count_fuse

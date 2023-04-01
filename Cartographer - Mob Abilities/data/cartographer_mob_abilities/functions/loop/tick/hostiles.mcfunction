@@ -1,3 +1,14 @@
+#Scan the mob for Target, then assume that mob has line of sight.
+scoreboard players set $has_los ca.mob_var 0
+execute on target run scoreboard players set $has_los ca.mob_var 1
+execute if score $has_los ca.mob_var matches 1.. run tag @s add can_see_player
+execute unless score $has_los ca.mob_var matches 1.. run tag @s remove can_see_player
+# Thank you Mojang for turning a expensive @e check into a free check
+
+#Run Touch Melee
+execute if entity @s[tag=ca.running_touch_melee] run function cartographer_mob_abilities:ability_traits/touch/melee
+execute if entity @s[tag=ca.running_touch_ranged] run function cartographer_mob_abilities:ability_traits/touch/ranged
+
 #Run Invulnerable Notices
 execute if score $invul_time_check invul matches 1.. if entity @s[predicate=cartographer_mob_abilities:is_invulnerable] at @s run function cartographer_mob_abilities:loop/tick/invulnerable_test
 execute if score $invul_time_check invul matches 1.. if entity @s[predicate=cartographer_mob_abilities:has_proj_prot] at @s run function cartographer_mob_abilities:loop/tick/projectile_resist_test
@@ -80,9 +91,9 @@ execute as @s[type=witch,tag=ca.potion_bag,tag=!witch_drinking,predicate=cartogr
 execute as @s[type=witch,tag=ca.potion_bag,tag=witch_drinking,predicate=cartographer_mob_abilities:witch_stop_drinking] at @s run tag @s remove witch_drinking
 
 #Run Hookshot Slime Pushers
-execute as @s[type=slime,tag=hooked_push_back] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/back
-execute as @s[type=slime,tag=hooked_push_left] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/left
-execute as @s[type=slime,tag=hooked_push_right] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/right
+#execute as @s[type=slime,tag=hooked_push_back] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/back
+#execute as @s[type=slime,tag=hooked_push_left] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/left
+#execute as @s[type=slime,tag=hooked_push_right] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/right
 
 execute as @s[tag=ca.hookshot,scores={ca.hooked=1..}] at @s run scoreboard players remove @s ca.hooked 1
 execute as @s[tag=ca.hookshot,scores={ca.hooked=1}] at @s run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
@@ -91,7 +102,7 @@ execute if entity @s[tag=hook_broken] run execute unless entity @s[tag=ca.ignore
 tag @s[tag=hook_broken] remove hook_broken
 
 #Setup Exalted
-execute if entity @s[tag=!setup,tag=ca.exalted] run function cartographer_mob_abilities:passive/exalted/setup
+execute if entity @s[tag=!setup,tag=ca.exalted] run function cartographer_mob_abilities:death/exalted/setup
 
 #Setup Ambidextrous
 execute if entity @s[tag=!ambi_readied,tag=ca.ambidextrous] run function cartographer_mob_abilities:passive/ambidextrous/initialize
@@ -115,3 +126,6 @@ execute unless score @s ca.orbit_timer matches 0.. run scoreboard players set @s
 execute if entity @s[type=evoker] store result score $spell_tick ca.mob_var run data get entity @s SpellTicks
 
 tag @s[type=vex] add vex_checked
+
+#Run on entities that have death effects
+execute if entity @s[tag=ca.has_death,tag=!ca.has_death_setup] run function cartographer_mob_abilities:death/create_death_marker

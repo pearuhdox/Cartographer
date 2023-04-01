@@ -1,14 +1,11 @@
 playsound minecraft:block.sculk_shrieker.shriek hostile @a[distance=..24] ~ ~ ~ 2 1.35
 playsound minecraft:block.sculk_shrieker.shriek hostile @a[distance=..24] ~ ~ ~ 2 0.85
 
-tag @s remove ca.shrieker
-
 tag @s add ca.has_active
 
-tag @s add tokened
-tag @s add can_see_player
-tag @s add avail_target
-tag @s add attacking
+tag @s remove ca.shrieker
+
+tag @s add ca.attack_override
 
 tag @s add ca.temp_token
 tag @s add ca.shrieked

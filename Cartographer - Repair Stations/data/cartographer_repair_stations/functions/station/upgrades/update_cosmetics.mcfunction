@@ -1,0 +1,19 @@
+execute if score $upgrade_1 ca.repair_station_state matches 1.. as 31182015-1851-6191-8192-100000000001 at @s run data modify entity @s item set value {id:"minecraft:green_dye",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_1 ca.repair_station_state matches 2.. as 31182015-1851-6191-8192-100000000002 at @s run data modify entity @s item set value {id:"minecraft:green_dye",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_1 ca.repair_station_state matches 3.. as 31182015-1851-6191-8192-100000000003 at @s run data modify entity @s item set value {id:"minecraft:green_dye",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_1 ca.repair_station_state matches 4.. as 31182015-1851-6191-8192-100000000004 at @s run data modify entity @s item set value {id:"minecraft:green_dye",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+
+execute if score $upgrade_2 ca.repair_station_state matches 1.. as 31182015-1851-6191-8192-200000000001 at @s run data modify entity @s item set value {id:"minecraft:magma_cream",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_2 ca.repair_station_state matches 2.. as 31182015-1851-6191-8192-200000000002 at @s run data modify entity @s item set value {id:"minecraft:magma_cream",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_2 ca.repair_station_state matches 3.. as 31182015-1851-6191-8192-200000000003 at @s run data modify entity @s item set value {id:"minecraft:magma_cream",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_2 ca.repair_station_state matches 4.. as 31182015-1851-6191-8192-200000000004 at @s run data modify entity @s item set value {id:"minecraft:magma_cream",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+
+execute if score $upgrade_3 ca.repair_station_state matches 1.. as 31182015-1851-6191-8192-300000000001 at @s run data modify entity @s item set value {id:"minecraft:prismarine_crystals",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_3 ca.repair_station_state matches 2.. as 31182015-1851-6191-8192-300000000002 at @s run data modify entity @s item set value {id:"minecraft:prismarine_crystals",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_3 ca.repair_station_state matches 3.. as 31182015-1851-6191-8192-300000000003 at @s run data modify entity @s item set value {id:"minecraft:prismarine_crystals",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_3 ca.repair_station_state matches 4.. as 31182015-1851-6191-8192-300000000004 at @s run data modify entity @s item set value {id:"minecraft:prismarine_crystals",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+
+execute if score $upgrade_4 ca.repair_station_state matches 1.. as 31182015-1851-6191-8192-400000000001 at @s run data modify entity @s item set value {id:"minecraft:amethyst_shard",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_4 ca.repair_station_state matches 2.. as 31182015-1851-6191-8192-400000000002 at @s run data modify entity @s item set value {id:"minecraft:amethyst_shard",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_4 ca.repair_station_state matches 3.. as 31182015-1851-6191-8192-400000000003 at @s run data modify entity @s item set value {id:"minecraft:amethyst_shard",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}
+execute if score $upgrade_4 ca.repair_station_state matches 4.. as 31182015-1851-6191-8192-400000000004 at @s run data modify entity @s item set value {id:"minecraft:amethyst_shard",Count:1b,tag:{Enchantments:[{id:"minecraft:mending",lvl:1s}]}}

@@ -1,0 +1,1 @@
+function cartographer_mimics:loop/tick/hostiles

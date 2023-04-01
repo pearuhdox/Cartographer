@@ -1,10 +1,6 @@
 execute at @s run playsound minecraft:entity.slime.attack hostile @a[distance=..16] ~ ~ ~ 1.5 0.5
 
-scoreboard players set @s cdl.damage_queue 1
-function cd:lib/mob/damage/true
-function cartographer_custom_statuses:effects/do_tick
-
-execute if score @s ca.effect_infect matches 1 run function cartographer_custom_statuses:effects/infect/clean_effects
+damage @s 2 cartographer_custom_statuses:status_damage
 
 execute unless entity @s[tag=decaying] run function cartographer_custom_statuses:effects/infect/debilitate
 
