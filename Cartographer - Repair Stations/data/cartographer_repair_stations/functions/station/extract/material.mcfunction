@@ -1,35 +1,42 @@
-execute if score $wooden ca.repair_station_state matches 1.. run clear @s #minecraft:planks 1
-execute if score $stone ca.repair_station_state matches 1.. run clear @s minecraft:cobblestone 1
-execute if score $iron ca.repair_station_state matches 1.. run clear @s minecraft:iron_ingot 1
-execute if score $golden ca.repair_station_state matches 1.. run clear @s minecraft:gold_ingot 1
-execute if score $diamond ca.repair_station_state matches 1.. run clear @s minecraft:diamond 1
-execute if score $netherite ca.repair_station_state matches 1.. run clear @s minecraft:netherite_ingot 1
-execute if score $leather ca.repair_station_state matches 1.. run clear @s minecraft:leather 1
-execute if score $chain ca.repair_station_state matches 1.. run clear @s minecraft:chain 1
-execute if score $scute ca.repair_station_state matches 1.. run clear @s minecraft:scute 1
-execute if score $string ca.repair_station_state matches 1.. run clear @s minecraft:string 1
-execute if score $quartz ca.repair_station_state matches 1.. run clear @s minecraft:quartz 1
-execute if score $membrane ca.repair_station_state matches 1.. run clear @s minecraft:phantom_membrane 1
-execute if score $prismarine ca.repair_station_state matches 1.. run clear @s minecraft:prismarine_shard 1
-execute if score $redstone ca.repair_station_state matches 1.. run clear @s minecraft:redstone 1
-execute if score $amethyst ca.repair_station_state matches 1.. run clear @s minecraft:amethyst_shard 1
-execute if score $copper ca.repair_station_state matches 1.. run clear @s minecraft:copper_ingot 1
-execute if score $emerald ca.repair_station_state matches 1.. run clear @s minecraft:emerald 1
-execute if score $carrot ca.repair_station_state matches 1.. run clear @s minecraft:carrot 1
-execute if score $warped ca.repair_station_state matches 1.. run clear @s minecraft:warped_fungus 1
+execute if score $wooden ca.repair_station_state matches 1.. run function cartographer_repair_stations:station/extract/planks
 
-execute if score $ink ca.repair_station_state matches 1.. run clear @s minecraft:ink_sac 1
-execute if score $ender ca.repair_station_state matches 1.. run clear @s minecraft:ender_pearl 1
-execute if score $gunpowder ca.repair_station_state matches 1.. run clear @s minecraft:gunpowder 1
-execute if score $glowstone ca.repair_station_state matches 1.. run clear @s minecraft:glowstone_dust 1
-execute if score $blaze_powder ca.repair_station_state matches 1.. run clear @s minecraft:blaze_powder 1
+execute unless score $wooden ca.repair_station_state matches 1.. run scoreboard players set $data_match bbl.storage 0
 
-execute if score $slime ca.repair_station_state matches 1.. run clear @s minecraft:slime_ball 1
-execute if score $magma ca.repair_station_state matches 1.. run clear @s minecraft:magma_cream 1
-execute if score $star ca.repair_station_state matches 1.. run clear @s minecraft:nether_star 1
-execute if score $echo ca.repair_station_state matches 1.. run clear @s minecraft:echo_shard 1
-execute if score $shulker ca.repair_station_state matches 1.. run clear @s minecraft:shulker_shell 1
+execute unless score $wooden ca.repair_station_state matches 1.. if score $stone ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:cobblestone"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $iron ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:iron_ingot"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $golden ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:gold_ingot"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $diamond ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:diamond"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $netherite ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:netherite_ingot"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $leather ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:leather"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $chain ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:chain"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $scute ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:scute"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $string ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:string"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $quartz ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:quartz"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $membrane ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:phantom_membrane"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $prismarine ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:prismarine_shard"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $redstone ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:redstone"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $amethyst ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:amethyst_shard"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $copper ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:copper_ingot"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $emerald ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:emerald"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $carrot ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:carrot"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $warped ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:warped_fungus"
 
-scoreboard players remove $mat_cost ca.repair_station_state 1
+execute unless score $wooden ca.repair_station_state matches 1.. if score $ink ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:ink_sac"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $ender ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:ender_pearl"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $gunpowder ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:gunpowder"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $glowstone ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:glowstone"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $blaze_powder ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:blaze_powder"
 
-execute if score $mat_cost ca.repair_station_state matches 1.. run function cartographer_repair_stations:station/extract/material
+execute unless score $wooden ca.repair_station_state matches 1.. if score $slime ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:slime_ball"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $magma ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:magma_cream"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $star ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:nether_star"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $echo ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:echo_shard"
+execute unless score $wooden ca.repair_station_state matches 1.. if score $shulker ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:shulker_shell"
+
+#Amount to clear.
+###If set to 0, it will return the count in "$return_count bbl.storage".
+###If set to a number greater then 0 it will clear that amount of the specified item, and cancel its process when it has done so (For optimization, so don't expect an accurate count in the aforementioned score if you set higher then 0!)
+execute unless score $wooden ca.repair_station_state matches 1.. run scoreboard players operation $clear_count bbl.storage = $mat_cost ca.repair_station_state
+
+#System call
+execute unless score $wooden ca.repair_station_state matches 1.. run function bb:lib/vanilla_item_clear/main
