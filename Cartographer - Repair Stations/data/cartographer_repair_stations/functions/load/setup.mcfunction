@@ -14,6 +14,8 @@ scoreboard objectives add repairConstant dummy
 scoreboard objectives add repair_tampers dummy
 scoreboard players set helper_repair repairConstant 2
 
+scoreboard objectives add ca.place_repair minecraft.used:minecraft.glow_item_frame
+
 #execute unless score $repair_start MaterialCost matches 0.. run scoreboard players set $repair_start MaterialCost 4
 scoreboard players set $repair_start MaterialCost 4
 
@@ -32,7 +34,6 @@ function cartographer_repair_stations:load/integration/active/clear
 #Run loops
 function cartographer_repair_stations:loop/tick/base
 function cartographer_repair_stations:loop/1_second/base
-
 
 # UUIDS!
 

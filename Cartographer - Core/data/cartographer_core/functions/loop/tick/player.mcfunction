@@ -15,6 +15,7 @@ execute unless score @s ca.core_delay_check matches 1.. run tag @s remove ca.cor
 #Enable triggers
 scoreboard players enable @s lexica
 scoreboard players enable @s menu
+scoreboard players enable @s give_dev_box
 
 #Get the count of lexica on the player
 scoreboard players operation $old_lex_count ca.lexica_count = @s ca.lexica_count
@@ -26,6 +27,7 @@ execute if score @s ca.use_lex matches 1.. run function cartographer_core:loop/t
 #Test if triggers are activated.
 execute if score @s lexica matches 1.. run function cartographer_core:give_lexica
 execute if score @s menu matches 1.. run function cartographer_core:load/reload/full
+execute if score @s give_dev_box matches 1.. run function cartographer_core:give_dev_box
 
 #Check if the player used the options menu
 execute if score @s ca.options_trig matches 1.. run function cartographer_core:options/player/trigger

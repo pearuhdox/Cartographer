@@ -1,6 +1,11 @@
-execute unless score $use_essence ca.repair_station_state matches 1.. run clear @s minecraft:lapis_lazuli 1
-execute if score $use_essence ca.repair_station_state matches 1.. run clear @s minecraft:player_head{display:{Name:'{"text":"Mob Essence","color":"dark_aqua","italic":false}'}} 1
+scoreboard players set $data_match bbl.storage 0
 
-scoreboard players remove $lapis_cost ca.repair_station_state 1
+data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:lapis_lazuli"
 
-execute if score $lapis_cost ca.repair_station_state matches 1.. run function cartographer_repair_stations:station/extract/lapis
+#Amount to clear.
+###If set to 0, it will return the count in "$return_count bbl.storage".
+###If set to a number greater then 0 it will clear that amount of the specified item, and cancel its process when it has done so (For optimization, so don't expect an accurate count in the aforementioned score if you set higher then 0!)
+scoreboard players operation $clear_count bbl.storage = $lapis_cost ca.repair_station_state
+
+#System call
+function bb:lib/vanilla_item_clear/main

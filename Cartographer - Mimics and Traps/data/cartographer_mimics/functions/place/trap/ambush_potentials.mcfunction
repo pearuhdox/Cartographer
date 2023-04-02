@@ -1,0 +1,3 @@
+function cartographer_mimics:create/ambush_potentials_spawner
+
+kill @s

@@ -47,5 +47,7 @@ scoreboard players operation #int_1 bbl.rng *= #seven bbl.rng
 scoreboard players operation #int_2 bbl.rng *= #23 bbl.rng
 scoreboard players operation #int_3 bbl.rng *= #thirteen bbl.rng
 
+scoreboard players set $data_match bbl.storage 0
+
 #\Burn an RNG state
 function bb:lib/rng

@@ -34,6 +34,8 @@ scoreboard objectives add ca.is_reviving dummy
 scoreboard objectives add ca.self_revive_timer dummy
 scoreboard objectives add ca.self_revive_cooldown dummy
 
+scoreboard objectives add ca.place_charon minecraft.used:minecraft.glow_item_frame
+
 team add CharonCageVisual
 team modify CharonCageVisual color dark_aqua
 

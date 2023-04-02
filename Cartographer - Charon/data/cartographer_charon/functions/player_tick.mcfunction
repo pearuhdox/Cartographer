@@ -16,6 +16,8 @@ execute if entity @s[nbt={Inventory:[{id:"minecraft:bundle",tag:{DeathBundle:1b}
 execute if score $collector_count dt.var matches 1.. if score @s charon.kill_test matches 1.. run function cartographer_charon:collector/find_dropped_bag
 scoreboard players set @s charon.kill_test 0
 
+execute if score @s ca.place_charon matches 1.. run function cartographer_charon:place/master
+
 execute if score @s dt.home_cooldown matches 1.. run scoreboard players remove @s dt.home_cooldown 1
 
 execute positioned ~ -165 ~ if entity @s[distance=..100] positioned as @s run function cartographer_charon:void/trigger_void_save

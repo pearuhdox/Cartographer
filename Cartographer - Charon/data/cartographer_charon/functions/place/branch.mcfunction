@@ -1,0 +1,1 @@
+execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrader:1b}}}] at @s run function cartographer_charon:place/trader

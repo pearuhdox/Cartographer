@@ -53,6 +53,7 @@ forceload add 4206890 4206890
 
 setblock 4206900 0 4206900 purple_shulker_box replace
 
+
 #Shulker Box for Lexica, so a mapmaker can change the format.
 setblock 4206900 5 4206900 purple_shulker_box{Items:[{Slot:0b,id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"Lexica Cartographia","color":"#FFE0A3","bold":true,"italic":false}',Lore:['{"text":"Your in game guide to all things Cartographer.","color":"dark_gray","italic":false}','{"text":"A compendium that contains all discovered","color":"dark_gray","italic":false}','{"text":"knowledge of custom mechanics and features.","color":"dark_gray","italic":false}','{"text":" "}','[{"text":"[","color":"white","italic":false},{"keybind":"key.use","color":"aqua","italic":false},{"text":"] ","color":"white","italic":false},{"text":"to open this manual.","color":"dark_gray","italic":false}]','[{"text":"[","color":"white","italic":false},{"keybind":"key.use","color":"aqua","italic":false},{"text":" + ","color":"white","italic":false},{"keybind":"key.sneak","color":"aqua","italic":false},{"text":"] ","color":"white","italic":false},{"text":"to configure settings.","color":"dark_gray","italic":false}]','{"text":" "}','[{"text":"Use the command \\"","color":"dark_gray","italic":false},{"text":"/trigger lexica","color":"aqua","italic":false},{"text":"\\"","color":"dark_gray","italic":false}]','{"text":"to give yourself another Lexica.","color":"dark_gray","italic":false}']},HideFlags:1,Lexica:1,Enchantments:[{id:"minecraft:mending",lvl:1s}],Recipes:["cartographer_core:lexica_dummy"]}}]} destroy
 
@@ -269,6 +270,8 @@ scoreboard objectives add ca.lexica_time dummy
 scoreboard objectives add ca.lexica_sneak minecraft.custom:sneak_time
 
 scoreboard objectives add ca.lexica_trig trigger
+scoreboard objectives add give_dev_box trigger
+
 
 scoreboard objectives add ca.use_lectern minecraft.custom:minecraft.interact_with_lectern
 
@@ -292,6 +295,8 @@ execute as @a at @s run playsound minecraft:ui.cartography_table.take_result mas
 tag @a add gmr_frozen
 schedule function cartographer_core:load/reload_panel 5t
 schedule function cartographer_core:load/force_load 1t
+schedule function cartographer_core:load/make_dev_box 7t
+schedule function cartographer_core:load/cleanup_forceload 20t
 
 #Analyse what gamerules feedback and death messages are set to.
 

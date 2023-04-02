@@ -17,7 +17,7 @@ scoreboard players set $rng_max bbl.rng 10
 
 function bb:lib/rng
 
-execute unless score $value bbl.rng <= $upgrade_2 ca.repair_station_state run function cartographer_repair_stations:station/extract/lapis
+execute unless score $value bbl.rng <= $upgrade_2 ca.repair_station_state run function cartographer_repair_stations:station/extract/lapis_or_essence
 execute unless score $value bbl.rng <= $upgrade_2 ca.repair_station_state run function cartographer_repair_stations:station/extract/material
 execute if score $value bbl.rng <= $upgrade_2 ca.repair_station_state run function cartographer_repair_stations:station/upgrades/proc_simulacrum
 

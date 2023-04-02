@@ -1,0 +1,3 @@
+function cartographer_mimics:create/controlled_potentials_spawner
+
+kill @s

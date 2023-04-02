@@ -17,6 +17,8 @@ scoreboard objectives add ca.colo_animation dummy
 
 scoreboard objectives add ca.mimic_var dummy
 
+scoreboard objectives add ca.place_trap minecraft.used:minecraft.glow_item_frame
+
 bossbar remove cartographer:mimic
 bossbar add cartographer:mimic {"text":"Mimic","color":"red","bold":true}
 bossbar set cartographer:mimic color red
@@ -31,6 +33,7 @@ bossbar set cartographer:colossus max 200
 
 #Setup LoE data space
 function cartographer_mimics:load/integration/active/clear
+
 
 #Run loops
 function cartographer_mimics:loop/tick/base
