@@ -20,4 +20,6 @@ execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrapFalling:1b}
 
 execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrapRedstone:1b}}}] at @s run function cartographer_mimics:place/trap/redstone
 
+execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrapDisguise:1b}}}] at @s run function cartographer_mimics:place/trap/disguise
+
 execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrapSlowbreak:1b}}}] at @s run function cartographer_mimics:place/trap/slowbreak
