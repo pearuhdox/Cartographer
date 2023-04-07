@@ -6,4 +6,6 @@ execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoSoulChest:1b}}}
 
 execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoLockedChest:1b}}}] at @s run function cartographer_loot_additions:place/locked_chest
 
+execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoBuddingPedestal:1b}}}] at @s run function cartographer_loot_additions:place/budding
+
 execute as @s[tag=ca.awaiting_lock_block] if data entity @s Item.id at @s run function cartographer_loot_additions:locked_chest/await_key

@@ -33,6 +33,8 @@ scoreboard objectives add ca.break_head_look_time dummy
 scoreboard objectives add ca.loot_timer dummy
 scoreboard objectives add ca.loot_var dummy
 
+scoreboard objectives add ca.la_respawn minecraft.custom:minecraft.time_since_death
+
 scoreboard objectives add ca.loot_multiplier dummy
 execute unless score $scale ca.loot_multiplier matches 1.. run scoreboard players set $scale ca.loot_multiplier 2
 
