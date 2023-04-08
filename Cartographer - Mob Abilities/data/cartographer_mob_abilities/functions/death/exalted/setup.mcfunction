@@ -6,6 +6,9 @@ execute if entity @s[type=blaze] run data modify entity @s HandItems[0] set valu
 data modify entity @s HandItems[0].tag.EntityData set value {}
 data modify entity @s HandItems[0].tag.EntityData set from entity @s {}
 
+execute if entity @s[type=creeper] store result entity @s HandItems[0].tag.EntityData.Fuse int 1 run scoreboard players add @s ca.delta_fuse_max 0
+execute if entity @s[type=creeper,tag=!ca.delta_creeper_silent] run data remove entity @s HandItems[0].tag.EntityData.Silent
+
 data modify entity @s HandItems[0].tag.ExaltedDrop set value 1
 
 #Set the proper entity type

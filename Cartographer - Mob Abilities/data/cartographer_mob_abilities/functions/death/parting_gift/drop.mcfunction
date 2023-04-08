@@ -17,4 +17,4 @@ execute unless score $volatile ca.death_traits matches 1 run scoreboard players 
 
 execute as @e[type=armor_stand,tag=ca.new_drop,limit=3] run function cartographer_mob_abilities:death/parting_gift/spawn
 
-kill @s
+execute unless entity @s[type=creeper,tag=ca.deathbomb] run kill @s

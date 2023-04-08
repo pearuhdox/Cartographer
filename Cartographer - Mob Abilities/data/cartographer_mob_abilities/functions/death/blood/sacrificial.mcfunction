@@ -16,4 +16,4 @@ playsound minecraft:entity.zombie_villager.cure hostile @a[distance=..16] ~ ~ ~ 
 
 particle minecraft:block minecraft:yellow_wool ~ ~1 ~ 0.5 0.5 0.5 1 25 normal
 
-kill @s
+execute unless entity @s[type=creeper,tag=ca.deathbomb] run kill @s

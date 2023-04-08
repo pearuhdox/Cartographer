@@ -8,6 +8,6 @@ playsound minecraft:block.bell.use hostile @a[distance=..16] ~ ~ ~ 10 0.5
 
 particle minecraft:firework ~ ~1 ~ 0.5 0.3 0.5 0.2 40 normal
 
-kill @s
+execute unless entity @s[type=creeper,tag=ca.deathbomb] run kill @s
 
 #say test

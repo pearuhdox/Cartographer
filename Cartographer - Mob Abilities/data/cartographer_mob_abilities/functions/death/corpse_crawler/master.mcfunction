@@ -15,4 +15,4 @@ execute as @e[type=armor_stand,tag=corpse_crawler_egg,tag=!ca.spread,limit=4,dis
 playsound minecraft:entity.hoglin.converted_to_zombified hostile @a[distance=..16] ~ ~ ~ 1 2
 particle minecraft:block minecraft:lime_terracotta ~ ~1 ~ 0.2 0.5 0.2 0.1 50 normal
 
-kill @s
+execute unless entity @s[type=creeper,tag=ca.deathbomb] run kill @s

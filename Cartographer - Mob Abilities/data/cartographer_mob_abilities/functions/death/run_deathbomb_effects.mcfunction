@@ -3,7 +3,6 @@ data modify storage cartographer_mob_abilities:death_effects data.HandItems set 
 data modify storage cartographer_mob_abilities:death_effects data.Tags set from entity @s Tags
 data modify storage cartographer_mob_abilities:death_effects data.Offhand set from storage cartographer_mob_abilities:death_effects data.HandItems[1]
 
-
 #Move Down a bit so that death location is better placed.
 execute if block ~ ~-0.5 ~ #cartographer_core:can_raycast run tp @s ~ ~-1 ~
 
@@ -43,5 +42,3 @@ execute if entity @s[tag=ca.sacrificial_blood] at @s run function cartographer_m
 
 #Run the Death Events tag to check for non Cartographer added events.
 function #minecraft:cartographer/events/death_ability_proc
-
-kill @s

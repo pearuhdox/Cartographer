@@ -22,6 +22,7 @@ execute if entity @s[tag=ca.mitosis,tag=cycle_2] run tag @s add cycle_3
 execute if entity @s[tag=ca.mitosis,tag=cycle_1] run tag @s add cycle_2
 execute if entity @s[tag=ca.mitosis,tag=!cycle_1] run tag @s add cycle_1
 
+function cartographer_core:helper/unregister_ehid
 
 tag @s remove colossus_greed
 

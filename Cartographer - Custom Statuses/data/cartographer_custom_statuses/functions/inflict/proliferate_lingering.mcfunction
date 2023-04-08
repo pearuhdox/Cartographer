@@ -23,6 +23,6 @@ scoreboard players operation $inflict ca.effect_cloak = @s ca.effect_cloak
 
 tag @s add ca.custom_linger_inflict
 
-say test
+#say test
 
 scoreboard players set @s ca.lifetime 600

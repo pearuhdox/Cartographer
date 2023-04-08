@@ -24,4 +24,4 @@ execute if entity @s[tag=ca.horrifying] align xyz positioned ~0.5 ~ ~0.5 run fun
 playsound minecraft:block.dispenser.dispense hostile @a[distance=..16] ~ ~ ~ 1 0.85
 playsound minecraft:entity.shulker.ambient hostile @a[distance=..12] ~ ~ ~ 1 1.5
 
-kill @s
+execute unless entity @s[type=creeper,tag=ca.deathbomb] run kill @s
