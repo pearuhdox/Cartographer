@@ -10,4 +10,4 @@ execute if entity @s[tag=ca.trap_spawn_type] on passengers on passengers on pass
 execute if entity @s[tag=ca.trap_spawn_type] on passengers on passengers on passengers run kill @s
 execute if entity @s[tag=ca.trap_spawn_type] on passengers on passengers run kill @s
 execute if entity @s[tag=ca.trap_spawn_type] on passengers run kill @s
-kill @s
+execute unless entity @s[tag=ca.trap_redstone] run kill @s
