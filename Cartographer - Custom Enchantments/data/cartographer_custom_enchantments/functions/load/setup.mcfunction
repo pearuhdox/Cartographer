@@ -178,7 +178,11 @@ scoreboard objectives add ca.sw_tenths dummy
 
 #Setup all necessary helper scoreboards.
 scoreboard objectives add ca.rpt_cdl dummy
-scoreboard objectives add ca.kill_entity totalKillCount
+
+#Kill Score
+scoreboard objectives remove ca.kill_entity
+scoreboard objectives add ca.kill_entity dummy
+
 scoreboard objectives add ca.evade_chance dummy
 scoreboard objectives add ca.take_dmg minecraft.custom:minecraft.damage_taken
 scoreboard objectives add ca.resist_dmg minecraft.custom:minecraft.damage_resisted

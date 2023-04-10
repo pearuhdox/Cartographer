@@ -49,7 +49,9 @@ scoreboard objectives add reflect_diff dummy
 
 scoreboard objectives add augment_time dummy
 
-scoreboard objectives add token_kill_check totalKillCount
+#Kill Score
+scoreboard objectives remove token_kill_check
+scoreboard objectives add token_kill_check dummy
 
 scoreboard objectives add invul dummy
 
