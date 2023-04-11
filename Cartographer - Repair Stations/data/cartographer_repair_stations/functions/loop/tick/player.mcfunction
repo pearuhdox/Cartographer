@@ -1,7 +1,7 @@
 execute if entity @s[tag=ca.run_crys_shield] run function cartographer_repair_stations:crystal_shield/find
 
-execute if score @s ca.repair_anvil_place matches 1.. run function cartographer_repair_stations:repair_anvil/func/place_anvil/main
-execute if score @s ca.repair_anvil_use matches 1.. run function cartographer_repair_stations:repair_anvil/func/use_anvil/main
+execute if score @s[gamemode=!creative,gamemode=!spectator] ca.repair_anvil_place matches 1.. run function cartographer_repair_stations:repair_anvil/func/place_anvil/main
+execute if score @s[gamemode=!creative,gamemode=!spectator] ca.repair_anvil_use matches 1.. run function cartographer_repair_stations:repair_anvil/func/use_anvil/main
 
 execute if score @s ca.place_repair matches 1.. run function cartographer_repair_stations:place/master
 
