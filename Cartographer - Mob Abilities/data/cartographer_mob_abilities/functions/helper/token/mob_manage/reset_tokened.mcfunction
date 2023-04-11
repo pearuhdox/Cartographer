@@ -12,6 +12,8 @@ tag @s remove warned
 
 tag @s remove ca.temp_token
 
+function #cartographer_mob_abilities:ability_ended
+
 scoreboard players set @s ca.accelerate_stacks 0
 
 execute if entity @s[tag=ca.shrieked] run tag @s remove ca.has_active
