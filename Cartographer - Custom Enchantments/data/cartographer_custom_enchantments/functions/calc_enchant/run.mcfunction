@@ -1,6 +1,8 @@
 #Run Reset First
 function cartographer_custom_enchantments:calc_enchant/reset
 
+function #cartographer_custom_enchantments:intercept_calc_enchant
+
 #Find Custom Items on the Equipped Slots
 function cartographer_custom_enchantments:calc_enchant/find_custom
 
