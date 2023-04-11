@@ -10,7 +10,7 @@ execute if score $thorns ca.t_knock matches 3 run scoreboard players set @s co_s
 execute if score $thorns ca.t_knock matches 4 run scoreboard players set @s co_send -22
 execute if score $thorns ca.t_knock matches 5.. run scoreboard players set @s co_send -30
 
-function motion:motion/push
+execute unless entity @s[tag=ca.boss] run function motion:motion/push
 
 #Do Damage next
 scoreboard players set @s ca.damage_queue 0
