@@ -1,9 +1,9 @@
-execute if score @s ca.concealed matches 1 run scoreboard players set @s ca.conceal_time 21
-execute if score @s ca.concealed matches 2 run scoreboard players set @s ca.conceal_time 41
-execute if score @s ca.concealed matches 3 run scoreboard players set @s ca.conceal_time 61
-execute if score @s ca.concealed matches 4 run scoreboard players set @s ca.conceal_time 81
-execute if score @s ca.concealed matches 5 run scoreboard players set @s ca.conceal_time 101
-execute if score @s ca.concealed matches 6.. run scoreboard players set @s ca.conceal_time 121
+execute if score @s ca.concealed matches 1 run scoreboard players set @s ca.conceal_time 31
+execute if score @s ca.concealed matches 2 run scoreboard players set @s ca.conceal_time 51
+execute if score @s ca.concealed matches 3 run scoreboard players set @s ca.conceal_time 71
+execute if score @s ca.concealed matches 4 run scoreboard players set @s ca.conceal_time 91
+execute if score @s ca.concealed matches 5 run scoreboard players set @s ca.conceal_time 111
+execute if score @s ca.concealed matches 6.. run scoreboard players set @s ca.conceal_time 131
 
 
 attribute @s minecraft:generic.attack_damage modifier add 31-1920-51-1220-8 "ca_stealth" 0.2 multiply
