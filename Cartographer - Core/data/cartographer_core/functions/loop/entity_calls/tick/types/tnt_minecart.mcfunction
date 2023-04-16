@@ -1,0 +1,2 @@
+execute if entity @a[distance=..32] if entity @s[tag=!ca.delta_tnt_cart_setup,type=tnt_minecart,nbt=!{TNTFuse:-1}] run function cartographer_core:helper/delta/tnt_minecart/apply
+execute if entity @s[tag=ca.delta_tnt_cart_setup] run function cartographer_core:helper/delta/tnt_minecart/delta_tnt
