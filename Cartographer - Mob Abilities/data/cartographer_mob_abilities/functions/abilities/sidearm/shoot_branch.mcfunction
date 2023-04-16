@@ -24,6 +24,7 @@ execute if entity @s[tag=ca.sh_enderpearl] as 0000001f-00de-140d-0000-0000000276
 
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_wither_skull] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.75 ~
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_small_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.75 ~
+execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_fire_charge] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.75 ~
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.2 ~
 execute unless entity @a[distance=..5] if entity @s[tag=ca.sh_dragon_fireball] as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~1.2 ~
 
@@ -68,6 +69,7 @@ execute if entity @s[tag=ca.sh_rift] run function cartographer_mob_abilities:pro
 execute if entity @s[tag=ca.sh_lightning] run function cartographer_mob_abilities:projectiles/create/lightning
 execute if entity @s[tag=ca.sh_wither_skull] run function cartographer_mob_abilities:projectiles/create/wither_skull
 execute if entity @s[tag=ca.sh_small_fireball] run function cartographer_mob_abilities:projectiles/create/small_fireball
+execute if entity @s[tag=ca.sh_fire_charge] run function cartographer_mob_abilities:projectiles/create/small_fireball
 execute if entity @s[tag=ca.sh_fireball] run function cartographer_mob_abilities:projectiles/create/fireball
 execute if entity @s[tag=ca.sh_dragon_fireball] run function cartographer_mob_abilities:projectiles/create/dragon_fireball
 execute if entity @s[tag=ca.sh_spit] run function cartographer_mob_abilities:projectiles/create/spit
