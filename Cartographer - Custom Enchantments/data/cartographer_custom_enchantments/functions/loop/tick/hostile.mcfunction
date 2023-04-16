@@ -31,6 +31,9 @@ execute if score @s ca.ricochet_cooldown matches 1.. run scoreboard players remo
 #Remove Deadeye Tag
 tag @s remove deadeye_marked
 
+scoreboard players set $target_conceal ca.var 0
+execute on target if entity @s[scores={ca.conceal_time=1..}] run scoreboard players set $target_conceal ca.var 1
+execute if score $target_conceal ca.var matches 1.. run data modify entity @s ActiveEffects append value {Id:15,Duration:5,Amplifier:0b}
 
 #Do bonus damage to Multishot Deadeye and reset
 execute if score @s ca.deadeye matches 2.. run function cartographer_custom_enchantments:enchant_effects/deadeye/multi_hit

@@ -29,6 +29,7 @@ scoreboard players set $zeph_check ca.mob_var 0
 #Trait Effects
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3.5,sort=nearest,limit=1] at @s run tag @s add ability_tagged
 execute if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
+tag @a remove ability_tagged
 
 tp 31182015-4512-2011-3118-115180000000 4206900 128 4206900
 

@@ -1,1 +1,3 @@
 function cartographer_mob_abilities:projectiles/cleanup/lifetime
+
+function cartographer_mob_abilities:passive/projectile/fix_projectile
