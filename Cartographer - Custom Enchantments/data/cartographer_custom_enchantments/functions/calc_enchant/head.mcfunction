@@ -59,6 +59,9 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.
 execute store result score $temp ca.susu run data get storage ca.susu:enchants head.tag.CustomEnchantments[{id:"thorns"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.thorns += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants head.tag.CustomEnchantments[{id:"curse_regret"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.curse_regret += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants head.tag.Enchantments[{id:"minecraft:respiration"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.respiration += $temp ca.susu
 
