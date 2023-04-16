@@ -8,6 +8,6 @@ execute if entity @s[tag=ca.lock_fuse_primed] run tag @s add ca.delta_creeper_fu
 
 execute if entity @s[tag=ca.delta_creeper_fuse_primed,tag=!ca.lock_fuse_primed] run function cartographer_core:helper/delta/player_check_branch
 
-execute if entity @s[tag=ca.delta_creeper_fuse_primed] run function cartographer_core:helper/delta/count_fuse
+execute if entity @s[tag=ca.delta_creeper_fuse_primed] unless score @s ca.effect_stun_duration matches 1.. run function cartographer_core:helper/delta/count_fuse
 
 execute unless entity @s[tag=ca.delta_creeper_fuse_primed] run scoreboard players set @s ca.delta_fuse 0

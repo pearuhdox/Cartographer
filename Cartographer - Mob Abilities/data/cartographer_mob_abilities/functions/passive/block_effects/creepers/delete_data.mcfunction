@@ -1,1 +1,1 @@
-data modify entity @s ActiveEffects set value []
+effect clear @s
