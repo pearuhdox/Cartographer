@@ -5,7 +5,7 @@
     "effects": {
       "minecraft:invisibility": {
         "amplifier": {
-          "min": 1,
+          "min": 4,
           "max": 4
         }
       }
