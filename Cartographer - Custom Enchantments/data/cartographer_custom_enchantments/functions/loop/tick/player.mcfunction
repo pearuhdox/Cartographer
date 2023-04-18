@@ -194,4 +194,6 @@ execute if score $current_return ca.loyalty matches 1.. run function cartographe
 
 tag @s remove ca.made_ranged_attack
 
+execute unless score @s ca.conceal_time matches 0.. run scoreboard players set @s ca.conceal_time 0
+
 execute if score @s ca.loyalty_refund_cooldown matches 1.. run scoreboard players remove @s ca.loyalty_refund_cooldown 1

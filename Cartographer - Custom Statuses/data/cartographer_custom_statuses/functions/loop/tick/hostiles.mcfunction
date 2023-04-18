@@ -14,6 +14,8 @@ execute as @s[predicate=cartographer_custom_statuses:is_exposed] at @s run funct
 #Run Blindness
 execute as @s[predicate=cartographer_custom_statuses:is_blind] at @s run function cartographer_custom_statuses:effects/blindness
 
+execute if entity @a[predicate=cartographer_custom_statuses:is_stealthed,scores={ca.conceal_time=0}] run function cartographer_custom_statuses:effects/stealthed/entity
+
 #Run Visuals for Bleed, Shocked, and Cloaked
 execute if score @s ca.effect_bleed matches 1.. run function cartographer_custom_statuses:tick_effects/bleeding
 execute if score @s ca.effect_infect matches 1.. run function cartographer_custom_statuses:tick_effects/infection

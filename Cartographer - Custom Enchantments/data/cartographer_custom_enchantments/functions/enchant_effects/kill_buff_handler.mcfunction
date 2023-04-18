@@ -302,8 +302,11 @@ scoreboard players remove @s[scores={ca.adren_time=1..}] ca.adren_time 1
 scoreboard players remove @s[scores={ca.frenz_time=1..}] ca.frenz_time 1
 scoreboard players remove @s[scores={ca.energ_time=1..}] ca.energ_time 1
 
-execute if score @s ca.conceal_time matches 15.. run effect give @s invisibility 1 1 true
+execute if score @s ca.conceal_time matches 19.. run effect give @s invisibility 1 1 true
 scoreboard players remove @s[scores={ca.conceal_time=1..}] ca.conceal_time 1
+
+execute if score @s ca.conceal_time matches 1.. run particle minecraft:smoke ~ ~0.1 ~ 0.15 0.1 0.15 0.025 1 normal
+
 
 #Break Concealed
 execute as @a[scores={ca.conceal_time=1}] at @s run function cartographer_custom_enchantments:enchant_effects/concealed/consume

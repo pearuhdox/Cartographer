@@ -38,7 +38,7 @@ scoreboard objectives add ca.voltage_shocked dummy
 
 scoreboard objectives add ca.death_registry dummy
 
-scoreboard objectives add ca.mob_var dummy
+scoreboard objectives add ca.status_var dummy
 
 scoreboard objectives add ca.cu_st_dmg minecraft.custom:minecraft.damage_dealt
 

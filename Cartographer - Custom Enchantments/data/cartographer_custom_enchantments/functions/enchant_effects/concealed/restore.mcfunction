@@ -10,6 +10,6 @@ attribute @s minecraft:generic.attack_damage modifier add 31-1920-51-1220-8 "ca_
 
 playsound minecraft:item.firecharge.use player @a[distance=..12] ~ ~ ~ 0.5 0.5
 playsound minecraft:entity.illusioner.mirror_move player @a[distance=..12] ~ ~ ~ 0.5 0.75
-particle minecraft:campfire_cosy_smoke ~ ~0.5 ~ 1 0 1 0.05 20 normal
+particle minecraft:campfire_cosy_smoke ~ ~0.5 ~ 1 0 1 0.05 15 normal
 
 function #minecraft:cartographer/events/enchantments/passive/concealed
