@@ -44,9 +44,9 @@ execute if score @s ca.energetic matches 5 run scoreboard players set @p ca.ener
 execute if score @s ca.energetic matches 6.. run scoreboard players set @p ca.energ_time 1200
 
 
-execute if score @s ca.concealed matches 1 run scoreboard players set @p ca.conceal_time 61
-execute if score @s ca.concealed matches 2 run scoreboard players set @p ca.conceal_time 81
-execute if score @s ca.concealed matches 3 run scoreboard players set @p ca.conceal_time 101
-execute if score @s ca.concealed matches 4 run scoreboard players set @p ca.conceal_time 121
-execute if score @s ca.concealed matches 5 run scoreboard players set @p ca.conceal_time 141
-execute if score @s ca.concealed matches 6.. run scoreboard players set @p ca.conceal_time 161
+execute if score @s ca.concealed matches 1 run scoreboard players set @p ca.conceal_time 41
+execute if score @s ca.concealed matches 2 run scoreboard players set @p ca.conceal_time 61
+execute if score @s ca.concealed matches 3 run scoreboard players set @p ca.conceal_time 81
+execute if score @s ca.concealed matches 4 run scoreboard players set @p ca.conceal_time 101
+execute if score @s ca.concealed matches 5 run scoreboard players set @p ca.conceal_time 121
+execute if score @s ca.concealed matches 6.. run scoreboard players set @p ca.conceal_time 141

@@ -7,7 +7,7 @@ execute if score @s ca.w_cleansing matches 2.. run scoreboard players set @s ca.
 execute if score @s ca.p_cleansing matches 2.. run scoreboard players set @s ca.p_cleansing 1
 execute if score @s ca.wi_cleansing matches 2.. run scoreboard players set @s ca.wi_cleansing 1
 execute if score @s ca.exposing matches 4.. run scoreboard players set @s ca.exposing 3
-execute if score @s ca.concealed matches 7.. run scoreboard players set @s ca.concealed 6
+execute if score @s ca.concealed matches 5.. run scoreboard players set @s ca.concealed 4
 execute if score @s ca.electrode matches 2.. run scoreboard players set @s ca.electrode 1
 execute if score @s ca.current matches 2.. run scoreboard players set @s ca.current 1
 execute if score @s ca.infection matches 5.. run scoreboard players set @s ca.infection 4
