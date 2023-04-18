@@ -70,6 +70,8 @@ summon marker 4206900 60 4206900 {UUID:[I;940671313,1209340753,823656448,70936],
 
 setblock 4206900 60 4206900 purple_shulker_box destroy
 
+execute unless score $death_drop charon.gmr matches 1.. unless score $cage charon.gmr matches 1.. unless score $trader charon.gmr matches 1.. unless score $collector charon.gmr matches 1.. run schedule function cartographer_charon:auto_set 10t
+
 #summon villager -13 142 -96 {Attributes:[{Name:generic.movement_speed,Base:0.01}],Invulnerable:1b,UUID:[I;0,0,27,11],Willing:1b,CustomName:'{"text":"Necromancer Jaerida","color":"#644796"}',VillagerData:{level:99,profession:"minecraft:cartographer",type:"minecraft:desert"}}
 
 #Gamerules on charon.gmr:
