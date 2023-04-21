@@ -10,7 +10,7 @@ execute if score $aug_car ca.var matches 4.. run function cartographer_mob_abili
 #Runs at the mob position
 execute if score $aug_acr ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/acrobatic/effect
 execute if score $aug_evo ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/evocative/effect
-execute if score $aug_vol ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
+#execute if score $aug_vol ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
 execute if score $aug_amp_b ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/amplify/brutal
 execute if score $aug_amp_r ca.var matches 1.. at @s run function cartographer_mob_abilities:ability_traits/amplify/relentless

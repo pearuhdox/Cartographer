@@ -1,3 +1,5 @@
+data modify storage cartographer_custom_enchantments:transfiguration data set from entity @s ArmorItems[3].tag.MobData
+
 data modify storage cartographer_custom_enchantments:transfiguration data.Health set from entity @s Health
 
 execute if score @s ca.transfig_id matches 1 run summon minecraft:zombie ~ ~0.25 ~ {Tags:["ca.was_transfigured"]}
@@ -36,6 +38,7 @@ execute if score @s ca.transfig_id matches 33 run summon minecraft:illusioner ~ 
 execute if score @s ca.transfig_id matches 34 run summon minecraft:wolf ~ ~0.25 ~ {Tags:["ca.was_transfigured"]}
 execute if score @s ca.transfig_id matches 35 run summon minecraft:rabbit ~ ~0.25 ~ {Tags:["ca.was_transfigured"]}
 execute if score @s ca.transfig_id matches 36 run summon minecraft:iron_golem ~ ~0.25 ~ {Tags:["ca.was_transfigured"]}
+
 
 execute as @e[type=#cartographer_core:hostile,tag=ca.was_transfigured,tag=!ca.checked_transfig,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/transfiguration/turn_back_data
 

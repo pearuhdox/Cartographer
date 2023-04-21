@@ -93,4 +93,3 @@ particle minecraft:dust_color_transition 1 0 0 0.5 1 1 1 ~ ~1.5 ~ 2 0.5 2 0.1 25
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
-#say test

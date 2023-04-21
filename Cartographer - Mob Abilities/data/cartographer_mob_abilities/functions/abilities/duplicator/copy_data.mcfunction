@@ -33,4 +33,3 @@ tag @s add ca.has_death
 tag @s remove attacking
 tag @s remove tokened
 
-#say test

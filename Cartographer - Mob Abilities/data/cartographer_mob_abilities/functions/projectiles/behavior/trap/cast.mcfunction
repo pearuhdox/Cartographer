@@ -63,4 +63,4 @@ execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
 
-#say test
+

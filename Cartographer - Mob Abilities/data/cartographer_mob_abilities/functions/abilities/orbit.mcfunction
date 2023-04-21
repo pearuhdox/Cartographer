@@ -22,4 +22,3 @@ playsound minecraft:block.beacon.activate hostile @a[distance=..16] ~ ~ ~ 1.5 1
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
-#say test

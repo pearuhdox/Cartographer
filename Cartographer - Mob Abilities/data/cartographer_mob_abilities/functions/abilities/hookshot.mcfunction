@@ -35,4 +35,3 @@ function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
 kill @e[type=armor_stand,tag=hook_marker,sort=nearest,limit=1]
 
-#say test

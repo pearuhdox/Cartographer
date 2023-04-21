@@ -37,6 +37,6 @@ tag @s remove rifting
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
-#say test
+
 
 kill @e[type=armor_stand,tag=rift_marker,limit=3,sort=nearest]

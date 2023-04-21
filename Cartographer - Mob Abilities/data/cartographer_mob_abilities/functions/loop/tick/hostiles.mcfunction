@@ -5,9 +5,12 @@ execute if score $has_los ca.mob_var matches 1.. run tag @s add can_see_player
 execute unless score $has_los ca.mob_var matches 1.. run tag @s remove can_see_player
 # Thank you Mojang for turning a expensive @e check into a free check
 
-#Run Touch Melee
+#Run Touch
 execute if entity @s[tag=ca.running_touch_melee] run function cartographer_mob_abilities:ability_traits/touch/melee
 execute if entity @s[tag=ca.running_touch_ranged] run function cartographer_mob_abilities:ability_traits/touch/ranged
+
+execute if entity @s[tag=ca.aug_running_touch_melee] run function cartographer_mob_abilities:ability_traits/touch/augment/melee
+execute if entity @s[tag=ca.aug_running_touch_ranged] run function cartographer_mob_abilities:ability_traits/touch/augment/ranged
 
 #Run Invulnerable Notices
 execute if score $invul_time_check invul matches 1.. if entity @s[predicate=cartographer_mob_abilities:is_invulnerable] at @s run function cartographer_mob_abilities:loop/tick/invulnerable_test

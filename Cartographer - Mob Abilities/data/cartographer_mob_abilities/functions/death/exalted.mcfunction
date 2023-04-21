@@ -10,4 +10,3 @@ particle minecraft:firework ~ ~1 ~ 0.5 0.3 0.5 0.2 40 normal
 
 execute unless entity @s[type=creeper,tag=ca.deathbomb] run kill @s
 
-#say test

@@ -2,12 +2,9 @@ scoreboard players add @s ability_charge 1
 
 execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
-execute unless score @s ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
-execute unless score @s ability_charge matches 11 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
-execute unless score @s ability_charge matches 21 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
-execute unless score @s ability_charge matches 31 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
-execute unless score @s ability_charge matches 41 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
-execute unless score @s ability_charge matches 51 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
+execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
+execute if score @s ability_charge matches 21 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
+execute if score @s ability_charge matches 41 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 #Sounds
 execute if score @s ability_charge matches 1 run playsound minecraft:entity.illusioner.cast_spell hostile @a[distance=..16] ~ ~ ~ 0.5 0.5

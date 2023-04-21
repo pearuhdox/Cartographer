@@ -47,4 +47,3 @@ kill @e[type=armor_stand,tag=laser_marker,distance=..1,limit=1]
 
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
 
-#say test
