@@ -218,6 +218,9 @@ scoreboard objectives add ca.use_pearl minecraft.used:minecraft.ender_pearl
 scoreboard objectives add ca.use_splashpot minecraft.used:minecraft.splash_potion
 scoreboard objectives add ca.use_lingerpot minecraft.used:minecraft.lingering_potion
 
+scoreboard objectives add ca.possess_cdl dummy
+scoreboard objectives add ca.possess_bias dummy
+
 scoreboard objectives add ca.trans_cdl dummy
 scoreboard objectives add ca.trans_bias dummy
 

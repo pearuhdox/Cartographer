@@ -22,5 +22,3 @@ scoreboard players operation $loyalty ca.var = @s ca.loyalty
 
 #Get the Wavedash ID if Wavedash exists
 execute if score @s ca.wavedash matches 1.. run function cartographer_custom_enchantments:enchant_effects/wavedash/get_id
-
-scoreboard players operation $test ca.var = @s ca.executioner

@@ -10,5 +10,6 @@ tag @a remove echo_restored
 tag @a remove showing_echo
 
 scoreboard players remove @a[scores={ca.trans_cdl=1..}] ca.trans_cdl 1
+scoreboard players remove @a[scores={ca.possess_cdl=1..}] ca.possess_cdl 1
 
 tag @a[scores={ca.combat_timer=1}] add can_first_strike

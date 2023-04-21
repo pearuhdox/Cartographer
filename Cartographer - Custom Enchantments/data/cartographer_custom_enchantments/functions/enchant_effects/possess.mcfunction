@@ -7,9 +7,9 @@ function cartographer_core:helper/math/rng/range
 
 scoreboard players operation $ranged ca.melee_chance = out math
 scoreboard players operation $ranged ca.possess = @s ca.possession
-scoreboard players set $percent_poss ca.melee_chance 25
+scoreboard players set $percent_poss ca.melee_chance 20
 
-function cartographer_custom_enchantments:enchant_effects/possess/branch
+execute unless entity @s[tag=ca.failed_possess] run function cartographer_custom_enchantments:enchant_effects/possess/branch
 
 tag @s[type=#bb:hostile,tag=is_possess] remove is_possess
 

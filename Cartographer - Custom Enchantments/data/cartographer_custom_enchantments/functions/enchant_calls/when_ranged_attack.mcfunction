@@ -33,6 +33,7 @@ scoreboard players set $collapse ca.var 0
 scoreboard players set $loyalty ca.var 0
 scoreboard players set $wavedash ca.var 0
 
+
 #Grab All Relevant Data from the Arrow in question.
 execute at @s as @e[distance=..7,type=#cartographer_core:arrow,limit=1,sort=nearest,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch
 execute at @s as @e[distance=..7,type=trident,limit=1,sort=nearest,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch_trident

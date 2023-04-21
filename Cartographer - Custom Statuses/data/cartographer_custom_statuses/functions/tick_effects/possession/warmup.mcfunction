@@ -28,6 +28,8 @@ execute if score @s ca.possess_time matches 60 anchored eyes positioned ^ ^ ^ ru
 execute if score @s ca.possess_time matches 60 if entity @s[type=!#bb:undead] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["possession_cloud"],Duration:10,DurationOnUse:0,WaitTime:0,Particle:"block air",Effects:[{Id:7,Duration:10,Amplifier:31b,ShowParticles:0b}],Radius:1.0f,RadiusOnUse:0.0f,RadiusPerTick:0.0f}
 execute if score @s ca.possess_time matches 60 if entity @s[type=#bb:undead] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["possession_cloud"],Duration:10,DurationOnUse:0,WaitTime:0,Particle:"block air",Effects:[{Id:6,Duration:10,Amplifier:31b,ShowParticles:0b}],Radius:1.0f,RadiusOnUse:0.0f,RadiusPerTick:0.0f}
 execute if score @s ca.possess_time matches 60 at @s run data modify entity @e[type=area_effect_cloud,tag=possession_cloud,limit=1,sort=nearest] Owner set from entity @e[type=#bb:hostile,distance=0.75..16,sort=nearest,limit=1] UUID
+execute if score @s ca.possess_time matches 60 run effect give @s speed 7 0
+execute if score @s ca.possess_time matches 60 run effect give @s speed 2 1
 
 
 execute unless score @s ca.possess_time matches 61.. run scoreboard players add @s ca.possess_time 1
