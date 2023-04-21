@@ -1,0 +1,15 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "equipment": {
+        "chest": {
+          "durability": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      }
+    }
+  }
+  

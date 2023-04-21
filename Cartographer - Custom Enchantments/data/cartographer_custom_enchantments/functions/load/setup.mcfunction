@@ -239,6 +239,9 @@ scoreboard objectives add ca.use_egg minecraft.used:minecraft.egg
 scoreboard objectives add ca.possess_cdl dummy
 scoreboard objectives add ca.possess_bias dummy
 
+scoreboard objectives add ca.possess_cdl dummy
+scoreboard objectives add ca.possess_bias dummy
+
 scoreboard objectives add ca.trans_cdl dummy
 scoreboard objectives add ca.trans_bias dummy
 

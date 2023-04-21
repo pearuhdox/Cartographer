@@ -1,0 +1,2 @@
+execute unless score $val rph.heart_flash_ani matches 2..3 run function rph:ui/health/make_frames/no_flash
+execute if score $val rph.heart_flash_ani matches 2..3 run function rph:ui/health/make_frames/flash

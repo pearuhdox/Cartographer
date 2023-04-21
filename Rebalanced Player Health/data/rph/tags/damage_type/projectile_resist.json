@@ -1,0 +1,13 @@
+{
+    "values": [
+    "minecraft:arrow",
+    "minecraft:trident",
+    "minecraft:mob_projectile",
+    "minecraft:unattributed_fireball",
+    "minecraft:fireball",
+    "minecraft:wither_skull",
+    "minecraft:thrown",
+    "minecraft:falling_stalactite",
+    "minecraft:falling_block"
+    ]
+  }

@@ -1,0 +1,30 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {}
+            }
+          ],
+          "damage": {
+            "type": {
+              "tags": [
+                {
+                  "expected": true,
+                  "id": "rph:fall_resist"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "rph:test/is_fall"
+    }
+  }
+  
