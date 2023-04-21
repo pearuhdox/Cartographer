@@ -1,1 +1,0 @@
-execute if data entity @s Item.id if entity @a[distance=..5,gamemode=creative] run function count_frames:frames/setup
