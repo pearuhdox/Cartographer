@@ -1,6 +1,8 @@
 {
     "values":[
         "minecraft:ender_pearl",
-        "minecraft:potion"
+        "minecraft:potion",
+        "minecraft:snowball",
+        "minecraft:egg"
     ]
 }

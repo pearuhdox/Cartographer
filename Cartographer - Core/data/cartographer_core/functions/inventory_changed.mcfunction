@@ -63,5 +63,3 @@ scoreboard players set @s ca.equip_netherite_chestplate 0
 scoreboard players set @s ca.equip_netherite_helmet 0
 
 scoreboard players set @s ca.equip_turtle_helmet 0
-
-advancement revoke @s only cartographer_core:inventory_changed

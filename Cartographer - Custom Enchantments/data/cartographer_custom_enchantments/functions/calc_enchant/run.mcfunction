@@ -1,11 +1,11 @@
 #Run Reset First
+
 function cartographer_custom_enchantments:calc_enchant/reset
 
 function #cartographer_custom_enchantments:intercept_calc_enchant
 
 #Find Custom Items on the Equipped Slots
 function cartographer_custom_enchantments:calc_enchant/find_custom
-
 
 #For each custom item found, run the proper calculation function.
 execute if entity @s[tag=check_head] run function cartographer_custom_enchantments:calc_enchant/head
@@ -30,6 +30,9 @@ function cartographer_custom_enchantments:calc_enchant/has_passive
 
 #Uncompress Items taken out of the offhand and put in the normal inventory
 function cartographer_custom_enchantments:enchant_effects/curse_two_handed/inv_fix
+
+#Reset any infinity cooldowns if the items move
+function cartographer_custom_enchantments:calc_enchant/infinity_cdl
 
 scoreboard players set $cu_en_ranged ca.enabler 1
 scoreboard players set $cu_en_kill ca.enabler 1

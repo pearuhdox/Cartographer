@@ -17,9 +17,13 @@ scoreboard players set @s[scores={ca.water_walk=201..}] ca.water_walk 200
 scoreboard players remove @s[scores={ca.water_walk=5..}] ca.water_walk 5
 
 scoreboard players set @s helper_potion 0
+
 scoreboard players set @s ca.use_splashpot 0
 scoreboard players set @s ca.use_lingerpot 0
 scoreboard players set @s ca.use_pearl 0
+scoreboard players set @s ca.use_snowball 0
+scoreboard players set @s ca.use_egg 0
+
 scoreboard players set @s helper_eye 0
 
 scoreboard players remove @s[scores={ca.rpt_cdl=2..}] ca.rpt_cdl 1

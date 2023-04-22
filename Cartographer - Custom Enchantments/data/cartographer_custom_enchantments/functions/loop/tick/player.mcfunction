@@ -11,15 +11,12 @@ execute if score @s ca.rally_cooldown matches 1.. run scoreboard players remove 
 
 function cartographer_custom_enchantments:helper/healing_bank/check_healing
 
-#,tag=ca.queue_ench_check,tag=!ca.ench_do_not_check
-
 
 #Identify if Slot was Changed
 function cartographer_custom_enchantments:calc_enchant/slot_change
 
 #Run queues of enchant calculator
 execute unless score @s ca.core_delay_check matches 1.. if entity @s[tag=ca.core_check_inv] run function cartographer_custom_enchantments:calc_enchant/run
-tag @s remove ca.queue_ench_check
 
 #Reset attack speed and kbr on Echo users
 execute if score @s ca.echo matches 1.. if score @s ca.echo_charges matches 0.. run attribute @s minecraft:generic.attack_speed modifier add 5-3-8-15-180504192124 "echo_effect_spd" 1024 add
@@ -107,6 +104,8 @@ execute if score @s ca.flash matches 1.. if score @s ca.load_cro_time matches 1.
 
 #Infinity 3.0
 function cartographer_custom_enchantments:enchant_effects/infinity/player
+
+function cartographer_custom_enchantments:enchant_effects/infinity/cdl_handler/tick_down
 
 #Charge Overcharge
 execute if score @s ca.overcharge matches 1.. if score @s ca.draw_bow_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/overcharge/tier

@@ -214,9 +214,24 @@ scoreboard objectives add ca.fire_cbow minecraft.used:minecraft.crossbow
 scoreboard objectives add ca.arrow_dmg dummy
 scoreboard objectives add ca.throw_trident minecraft.used:minecraft.trident
 
+scoreboard objectives add ca.inf_cdl_var dummy
+
+scoreboard objectives add ca.inf_cdl_0 dummy
+scoreboard objectives add ca.inf_cdl_1 dummy
+scoreboard objectives add ca.inf_cdl_2 dummy
+scoreboard objectives add ca.inf_cdl_3 dummy
+scoreboard objectives add ca.inf_cdl_4 dummy
+scoreboard objectives add ca.inf_cdl_5 dummy
+scoreboard objectives add ca.inf_cdl_6 dummy
+scoreboard objectives add ca.inf_cdl_7 dummy
+scoreboard objectives add ca.inf_cdl_8 dummy
+scoreboard objectives add ca.inf_cdl_o dummy
+
 scoreboard objectives add ca.use_pearl minecraft.used:minecraft.ender_pearl
 scoreboard objectives add ca.use_splashpot minecraft.used:minecraft.splash_potion
 scoreboard objectives add ca.use_lingerpot minecraft.used:minecraft.lingering_potion
+scoreboard objectives add ca.use_snowball minecraft.used:minecraft.snowball
+scoreboard objectives add ca.use_egg minecraft.used:minecraft.egg
 
 scoreboard objectives add ca.possess_cdl dummy
 scoreboard objectives add ca.possess_bias dummy
