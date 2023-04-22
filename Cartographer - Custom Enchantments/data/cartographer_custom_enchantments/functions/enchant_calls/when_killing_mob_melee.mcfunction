@@ -17,7 +17,7 @@ execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.hunter match
 #Electrocute
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.electrocute matches 1.. run function cartographer_custom_enchantments:enchant_effects/electrocute
 #Surging Strike
-execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.surging_strike matches 1.. unless entity @s[tag=can_crit] run function cartographer_custom_enchantments:enchant_effects/surging_strike
+execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.surging_strike matches 1.. if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/surging_strike
 #Stunning
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.stunning matches 1.. run function cartographer_custom_enchantments:enchant_effects/stunning
 #Transfiguration
