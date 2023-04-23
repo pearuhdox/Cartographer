@@ -1,4 +1,4 @@
-function #minecraft:cartographer/events/enchantments/passive/satiation
+execute if score $value bbl.rng matches 1 if score @s ca.satiation matches 1.. run function #minecraft:cartographer/events/enchantments/passive/satiation
 
 scoreboard players set $rng_min bbl.rng 1
 scoreboard players set $rng_max bbl.rng 5

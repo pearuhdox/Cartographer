@@ -34,3 +34,5 @@ tag @s remove deadeye_marked
 #Do bonus damage to Multishot Deadeye and reset
 execute if score @s ca.deadeye matches 2.. run function cartographer_custom_enchantments:enchant_effects/deadeye/multi_hit
 scoreboard players set @s ca.deadeye 0
+
+execute if score @s ca.deadeye_time matches 1.. run scoreboard players remove @s ca.deadeye_time 1

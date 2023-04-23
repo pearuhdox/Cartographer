@@ -66,6 +66,9 @@ scoreboard objectives add ca.respiration dummy
 scoreboard objectives add ca.recoil dummy
 scoreboard objectives add ca.collapse dummy
 
+scoreboard objectives add ca.proj_registry dummy
+scoreboard objectives add ca.deadeye_time dummy
+
 scoreboard objectives add ca.resetter_check_kill dummy
 
 scoreboard objectives add ca.swift_sneak dummy
