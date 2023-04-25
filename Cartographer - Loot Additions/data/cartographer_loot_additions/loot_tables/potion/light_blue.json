@@ -5,34 +5,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 6,
           "name": "minecraft:potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:swiftness\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "minecraft:splash_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:swiftness\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:lingering_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:swiftness\"}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Speed\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:1,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:8171462}"
             }
           ]
         }

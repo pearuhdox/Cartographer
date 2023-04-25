@@ -5,34 +5,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 6,
           "name": "minecraft:potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:healing\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "minecraft:splash_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:healing\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:lingering_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:healing\"}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Healing\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:6,Amplifier:0b,Duration:1},{Id:10,Amplifier:2b,Duration:40}],Potion:\"minecraft:awkward\",CustomPotionColor:16741249}"
             }
           ]
         }

@@ -5,34 +5,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 6,
           "name": "minecraft:potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:night_vision\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "minecraft:splash_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:night_vision\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:lingering_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:night_vision\"}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Night Vision\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:16,Amplifier:0b,Duration:24000}],Potion:\"minecraft:awkward\",CustomPotionColor:2039713}"
             }
           ]
         }

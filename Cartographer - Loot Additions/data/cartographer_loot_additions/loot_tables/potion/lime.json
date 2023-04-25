@@ -5,34 +5,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 6,
           "name": "minecraft:potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:strong_leaping\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "minecraft:splash_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:strong_leaping\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:lingering_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:strong_leaping\"}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Jump Boost\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:8,Amplifier:2b,Duration:6000}],Potion:\"minecraft:awkward\",CustomPotionColor:2293580}"
             }
           ]
         }

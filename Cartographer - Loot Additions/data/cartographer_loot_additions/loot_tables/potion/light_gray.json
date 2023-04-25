@@ -5,34 +5,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 6,
           "name": "minecraft:potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:invisibility\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "minecraft:splash_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:invisibility\"}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:lingering_potion",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Potion:\"minecraft:invisibility\"}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Stealth\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:14,Amplifier:1b,Duration:600}],Potion:\"minecraft:awkward\",CustomPotionColor:8356754}"
             }
           ]
         }
