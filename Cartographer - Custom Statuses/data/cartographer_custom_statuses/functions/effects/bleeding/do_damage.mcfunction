@@ -42,4 +42,6 @@ execute if score @s ca.damage_queue matches 38 run damage @s 38 cartographer_cus
 execute if score @s ca.damage_queue matches 39 run damage @s 39 cartographer_custom_statuses:status_damage
 execute if score @s ca.damage_queue matches 40.. run damage @s 40 cartographer_custom_statuses:status_damage
 
+damage @s 0.00000000001 cartographer_custom_statuses:status_damage
+
 scoreboard players reset @s ca.damage_queue

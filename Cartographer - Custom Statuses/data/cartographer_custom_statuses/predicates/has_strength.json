@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "effects": {
+      "minecraft:strength": {
+        "amplifier": {
+          "min": 0,
+          "max": 9
+        }
+      }
+    }
+  }
+}

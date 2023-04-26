@@ -1,0 +1,2 @@
+execute unless score @s ca.silent_check matches 1.. if data entity @s Silent run scoreboard players set @s ca.silent_check 2
+execute unless score @s ca.silent_check matches 1.. unless data entity @s Silent run scoreboard players set @s ca.silent_check 1

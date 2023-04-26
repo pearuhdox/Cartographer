@@ -17,12 +17,13 @@ scoreboard objectives add ca.effect_stun_duration dummy
 
 scoreboard objectives add ca.effect_shock dummy
 scoreboard objectives add ca.effect_bleed dummy
-scoreboard objectives add ca.bleed_potency dummy
 scoreboard objectives add ca.eft_possess dummy
 scoreboard objectives add ca.possess_time dummy
 scoreboard objectives add ca.effect_infect dummy
 
 scoreboard objectives add ca.effect_cloak dummy
+
+scoreboard objectives add ca.silent_check dummy
 
 scoreboard objectives add ca.time_convert dummy
 scoreboard objectives add ca.id_convert dummy
@@ -30,6 +31,8 @@ scoreboard objectives add ca.id_convert dummy
 scoreboard objectives add ca.exposed_lvl dummy
 scoreboard objectives add ca.exposed_hit dummy
 scoreboard objectives add ca.exposed_cdl dummy
+scoreboard objectives add ca.exposed_dur dummy
+scoreboard objectives add ca.exposed_hp dummy
 
 scoreboard objectives add ca.decay_min dummy
 scoreboard objectives add ca.decay_max dummy
@@ -39,6 +42,13 @@ scoreboard objectives add ca.voltage_shocked dummy
 scoreboard objectives add ca.death_registry dummy
 
 scoreboard objectives add ca.status_var dummy
+
+scoreboard objectives add ca.strength_lvl dummy
+scoreboard objectives add ca.strength_dur dummy
+
+scoreboard objectives add ca.weak_lvl dummy
+scoreboard objectives add ca.weak_dur dummy
+
 
 scoreboard objectives add ca.cu_st_dmg minecraft.custom:minecraft.damage_dealt
 

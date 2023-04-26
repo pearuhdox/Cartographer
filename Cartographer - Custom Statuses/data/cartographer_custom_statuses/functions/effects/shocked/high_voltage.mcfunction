@@ -1,4 +1,5 @@
-damage @s 3 cartographer_custom_statuses:status_damage
+damage @s 2 cartographer_custom_statuses:status_damage
+damage @s 0.00000000001 cartographer_custom_statuses:status_damage
 
 
 scoreboard players set @s ca.effect_stun 16
