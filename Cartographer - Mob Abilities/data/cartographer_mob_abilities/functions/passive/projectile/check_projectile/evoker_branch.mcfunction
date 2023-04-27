@@ -22,8 +22,8 @@ execute if entity @s[tag=ca.touch] run function cartographer_mob_abilities:proje
 execute if entity @s[tag=ca.quiver] run function cartographer_mob_abilities:projectiles/data/get/quiver
 
 #Lightning Specific Data And Tag Population
-execute if entity @s[tag=ca.sh_lightning] run data modify storage cartographer_mob_abilities:storm_tags Tags set value []
-execute if entity @s[tag=ca.sh_lightning] run function cartographer_mob_abilities:abilities/storm/populate_tags
+execute if entity @s[tag=!ca.sh_empty,tag=ca.sh_lightning] run data modify storage cartographer_mob_abilities:storm_tags Tags set value []
+execute if entity @s[tag=!ca.sh_empty,tag=ca.sh_lightning] run function cartographer_mob_abilities:abilities/storm/populate_tags
 
 #Set Projectile Owner
 data modify storage cartographer_mob_abilities:projectiles DataTemplate.Owner set from entity @s UUID
@@ -32,8 +32,6 @@ data modify storage cartographer_mob_abilities:projectiles DataTemplate.Owner se
 execute if entity @s[tag=ca.sh_swap_vex] run function cartographer_mob_abilities:passive/projectile/check_projectile/evoker_branches/vex_swap
 execute if entity @s[tag=ca.sh_swap_fangs] run function cartographer_mob_abilities:passive/projectile/check_projectile/evoker_branches/fang_swap
 
-#Shoot No Projectile
-execute as @s[tag=ca.sh_empty] at @s as @e[type=#cartographer_mob_abilities:projectile_swap,tag=!passive_replaced_projectile,tag=!vex_checked,limit=3,distance=..4,sort=nearest] unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/empty
 
 execute if score $projectile_swap ca.mob_var matches 1 run data modify entity @s SpellTicks set value 2
 
