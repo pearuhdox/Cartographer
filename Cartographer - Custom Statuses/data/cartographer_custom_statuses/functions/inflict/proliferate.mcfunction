@@ -10,6 +10,10 @@ execute store result score @s ca.effect_infect run data get storage cartographer
 
 execute store result score @s ca.effect_cloak run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"cloaking"}].Duration
 
+execute store result score @s ca.damage_queue run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"entropy"}].Amount
+execute if score @s ca.damage_queue matches 1.. run function cartographer_custom_statuses:inflict/entropy_damage
+
+
 scoreboard players operation $inflict ca.effect_bleed = @s ca.effect_bleed
 scoreboard players operation $inflict ca.bleed_potency = @s ca.bleed_potency
 
@@ -21,4 +25,7 @@ scoreboard players operation $inflict ca.effect_infect = @s ca.effect_infect
 
 scoreboard players operation $inflict ca.effect_cloak = @s ca.effect_cloak
 
-execute as @e[type=#bb:hostile,distance=..3.5] at @s run function cartographer_custom_statuses:inflict/do_effect
+scoreboard players operation $inflict ca.damage_queue = @s ca.damage_queue
+
+execute as @e[type=#bb:hostile,distance=..3.25] at @s run function cartographer_custom_statuses:inflict/do_effect
+scoreboard players reset $inflict ca.damage_queue

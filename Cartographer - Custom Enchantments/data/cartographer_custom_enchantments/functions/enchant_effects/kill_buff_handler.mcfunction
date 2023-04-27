@@ -312,13 +312,78 @@ scoreboard players remove @s[scores={ca.conceal_time=1..}] ca.conceal_time 1
 execute as @a[scores={ca.conceal_time=1}] at @s run function cartographer_custom_enchantments:enchant_effects/concealed/consume
 
 
-execute if score @s[x_rotation=-90..60] ca.adren_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0 0.8 1 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
-execute if score @s[x_rotation=-90..60] ca.frenz_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0.8 0 0 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
-execute if score @s[x_rotation=-90..60] ca.energ_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0.988 0.933 0.459 1 ~ ~0.2 ~ 0.4 0.1 0.4 0 1 normal
+scoreboard players operation $mod ca.adren_time = @s ca.adren_time
+scoreboard players operation $mod ca.frenz_time = @s ca.frenz_time
+scoreboard players operation $mod ca.energ_time = @s ca.energ_time
 
-execute if score @s[x_rotation=61..80] ca.adren_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0 0.8 1 1 ~0.5 ~0.2 ~ 0.1 0 0.1 0 1 normal
-execute if score @s[x_rotation=61..80] ca.frenz_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0.8 0 0 1 ~-0.5 ~0.2 ~-0.5 0.1 0 0.1 0 1 normal
-execute if score @s[x_rotation=61..80] ca.energ_time matches 1.. unless block ~ ~-0.5 ~ #bb:can_raycast run particle minecraft:dust 0.988 0.933 0.459 1 ~-0.5 ~0.2 ~0.5 0.1 0 0.1 0 1 normal
+scoreboard players operation $mod ca.adren_time %= $20 ca.CONSTANT
+scoreboard players operation $mod ca.frenz_time %= $20 ca.CONSTANT
+scoreboard players operation $mod ca.energ_time %= $20 ca.CONSTANT
+
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 0 positioned ~ ~ ~ rotated 0 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 1 positioned ~ ~ ~ rotated 18 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 2 positioned ~ ~ ~ rotated 36 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 3 positioned ~ ~ ~ rotated 54 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 4 positioned ~ ~ ~ rotated 72 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 5 positioned ~ ~ ~ rotated 90 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 6 positioned ~ ~ ~ rotated 108 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 7 positioned ~ ~ ~ rotated 126 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 8 positioned ~ ~ ~ rotated 144 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 9 positioned ~ ~ ~ rotated 162 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 10 positioned ~ ~ ~ rotated 180 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 11 positioned ~ ~ ~ rotated 198 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 12 positioned ~ ~ ~ rotated 216 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 13 positioned ~ ~ ~ rotated 234 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 14 positioned ~ ~ ~ rotated 252 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 15 positioned ~ ~ ~ rotated 270 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 16 positioned ~ ~ ~ rotated 288 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 17 positioned ~ ~ ~ rotated 306 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 18 positioned ~ ~ ~ rotated 324 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.adren_time matches 1.. if score $mod ca.adren_time matches 19 positioned ~ ~ ~ rotated 342 0 run particle minecraft:dust 0 0.8 1 1 ^ ^ ^0.6 0 0 0 0 1 force
+
+
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 7 positioned ~ ~ ~ rotated 0 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 8 positioned ~ ~ ~ rotated 18 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 9 positioned ~ ~ ~ rotated 36 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 10 positioned ~ ~ ~ rotated 54 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 11 positioned ~ ~ ~ rotated 72 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 12 positioned ~ ~ ~ rotated 90 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 13 positioned ~ ~ ~ rotated 108 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 14 positioned ~ ~ ~ rotated 126 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 15 positioned ~ ~ ~ rotated 144 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 16 positioned ~ ~ ~ rotated 162 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 17 positioned ~ ~ ~ rotated 180 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 18 positioned ~ ~ ~ rotated 198 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 19 positioned ~ ~ ~ rotated 216 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 0 positioned ~ ~ ~ rotated 234 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 1 positioned ~ ~ ~ rotated 252 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 2 positioned ~ ~ ~ rotated 270 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 3 positioned ~ ~ ~ rotated 288 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 4 positioned ~ ~ ~ rotated 306 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 5 positioned ~ ~ ~ rotated 324 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.frenz_time matches 1.. if score $mod ca.frenz_time matches 6 positioned ~ ~ ~ rotated 342 0 run particle minecraft:dust 0.8 0 0 1 ^ ^ ^0.6 0 0 0 0 1 force
+
+
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 14 positioned ~ ~ ~ rotated 0 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 15 positioned ~ ~ ~ rotated 18 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 16 positioned ~ ~ ~ rotated 36 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 17 positioned ~ ~ ~ rotated 54 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 18 positioned ~ ~ ~ rotated 72 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 19 positioned ~ ~ ~ rotated 90 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 0 positioned ~ ~ ~ rotated 108 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 1 positioned ~ ~ ~ rotated 126 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 2 positioned ~ ~ ~ rotated 144 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 3 positioned ~ ~ ~ rotated 162 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 4 positioned ~ ~ ~ rotated 180 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 5 positioned ~ ~ ~ rotated 198 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 6 positioned ~ ~ ~ rotated 216 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 7 positioned ~ ~ ~ rotated 234 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 8 positioned ~ ~ ~ rotated 252 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 9 positioned ~ ~ ~ rotated 270 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 10 positioned ~ ~ ~ rotated 288 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 11 positioned ~ ~ ~ rotated 306 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 12 positioned ~ ~ ~ rotated 324 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
+execute if score @s ca.energ_time matches 1.. if score $mod ca.energ_time matches 13 positioned ~ ~ ~ rotated 342 0 run particle minecraft:dust 0.988 0.933 0.459 1 ^ ^ ^0.6 0 0 0 0 1 force
 
 
 execute if score @s ca.adren_time matches 0 run attribute @s minecraft:generic.movement_speed modifier remove 31-119-1212-2216-0
