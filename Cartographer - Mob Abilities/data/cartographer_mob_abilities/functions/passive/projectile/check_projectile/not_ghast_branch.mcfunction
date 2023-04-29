@@ -1,3 +1,5 @@
+data modify storage cartographer_mob_abilities:projectiles DataTemplate set value {}
+
 scoreboard players set $witch ca.xyz_convert 0
 execute if entity @s[type=witch] run scoreboard players set $witch ca.xyz_convert 1
 
@@ -27,6 +29,7 @@ execute if entity @s[tag=ca.sh_lightning] run function cartographer_mob_abilitie
 
 #Set Projectile Owner
 data modify storage cartographer_mob_abilities:projectiles DataTemplate.Owner set from entity @s UUID
+
 #Refactored
 execute as @s[tag=ca.sh_arrow] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/arrow
 execute as @s[tag=ca.sh_trident] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/trident

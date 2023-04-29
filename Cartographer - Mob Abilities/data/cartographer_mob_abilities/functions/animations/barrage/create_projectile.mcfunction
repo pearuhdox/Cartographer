@@ -1,3 +1,5 @@
+data modify storage cartographer_mob_abilities:projectiles DataTemplate set value {}
+
 execute positioned ^ ^ ^9 run function cartographer_mob_abilities:projectiles/target/position
 
 execute as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~-1 ~

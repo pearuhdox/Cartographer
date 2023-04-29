@@ -1,3 +1,5 @@
+data modify storage cartographer_mob_abilities:projectiles DataTemplate set value {}
+
 execute positioned ^ ^-1 ^8 run function cartographer_mob_abilities:projectiles/target/position
 
 function cartographer_mob_abilities:abilities/volley/projectile

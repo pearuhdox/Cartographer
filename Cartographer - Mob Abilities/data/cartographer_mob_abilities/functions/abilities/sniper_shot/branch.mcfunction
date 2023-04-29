@@ -1,3 +1,5 @@
+data modify storage cartographer_mob_abilities:projectiles DataTemplate set value {}
+
 function cartographer_mob_abilities:projectiles/target/player
 
 #execute as 0000001f-00de-140d-0000-0000000276ef at @s run tp @s ~ ~0.75 ~
