@@ -49,6 +49,9 @@ scoreboard objectives add ca.strength_dur dummy
 scoreboard objectives add ca.weak_lvl dummy
 scoreboard objectives add ca.weak_dur dummy
 
+scoreboard objectives add ca.cs_shoot_bow minecraft.used:minecraft.bow
+scoreboard objectives add ca.cs_shoot_cross minecraft.used:minecraft.crossbow
+scoreboard objectives add ca.cs_throw_trident minecraft.used:minecraft.trident
 
 scoreboard objectives add ca.cu_st_dmg minecraft.custom:minecraft.damage_dealt
 

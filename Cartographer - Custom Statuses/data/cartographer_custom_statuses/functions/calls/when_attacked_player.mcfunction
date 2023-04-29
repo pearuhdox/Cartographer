@@ -1,2 +1,1 @@
-# Remove Stealthed
-execute if predicate cartographer_custom_statuses:is_stealthed run function cartographer_custom_statuses:effects/stealthed/consume
+#nothing here yet but might be

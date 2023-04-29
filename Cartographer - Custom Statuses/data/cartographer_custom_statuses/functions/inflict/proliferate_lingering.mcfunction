@@ -13,7 +13,6 @@ execute store result score @s ca.effect_cloak run data get storage cartographer_
 execute store result score @s ca.damage_queue run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"entropy"}].Amount
 
 scoreboard players operation $inflict ca.effect_bleed = @s ca.effect_bleed
-scoreboard players operation $inflict ca.bleed_potency = @s ca.bleed_potency
 
 scoreboard players operation $inflict ca.effect_shock = @s ca.effect_shock
 

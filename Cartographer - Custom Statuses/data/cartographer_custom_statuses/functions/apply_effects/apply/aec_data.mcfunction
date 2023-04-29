@@ -1,0 +1,1 @@
+data modify entity @s Effects set from storage cartographer_custom_statuses:apply_effects data.Effects

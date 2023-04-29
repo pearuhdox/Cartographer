@@ -9,15 +9,15 @@ execute unless score $shocked_volts ca.var matches 6.. run function cartographer
 execute if score $shocked_volts ca.var matches 6.. run function cartographer_custom_statuses:effects/shocked/high_voltage
 
 
-execute if entity @s[type=#cartographer_core:shape_human] run particle minecraft:dust 0 0 0 2 ~ ~1 ~ 0.2 0.4 0.2 0 16 normal
-execute if entity @s[type=#cartographer_core:shape_flat] run particle minecraft:dust 0 0 0 2 ~ ~0.5 ~ 0.4 0.1 0.4 0 16 normal
-execute if entity @s[type=#cartographer_core:shape_small] run particle minecraft:dust 0 0 0 2 ~ ~0.25 ~ 0.25 0.1 0.25 0 10 normal
-execute if entity @s[type=#cartographer_core:shape_big] run particle minecraft:dust 0 0 0 2 ~ ~1 ~ 1 0.4 1 0 40 normal
+execute if entity @s[type=#cartographer_core:shape_human] run particle minecraft:dust_color_transition 0.969 0.722 1 1 1 1 2 ~ ~1 ~ 0.2 0.4 0.2 0 16 normal
+execute if entity @s[type=#cartographer_core:shape_flat] run particle minecraft:dust_color_transition 0.969 0.722 1 1 1 1 2 ~ ~0.5 ~ 0.4 0.1 0.4 0 16 normal
+execute if entity @s[type=#cartographer_core:shape_small] run particle minecraft:dust_color_transition 0.969 0.722 1 1 1 1 2 ~ ~0.25 ~ 0.25 0.1 0.25 0 10 normal
+execute if entity @s[type=#cartographer_core:shape_big] run particle minecraft:dust_color_transition 0.969 0.722 1 1 1 1 2 ~ ~1 ~ 1 0.4 1 0 40 normal
 
-execute if entity @s[type=#cartographer_core:shape_human] run particle minecraft:witch ~ ~1 ~ 0.2 0.4 0.2 0.1 8 normal
-execute if entity @s[type=#cartographer_core:shape_flat] run particle minecraft:witch ~ ~0.5 ~ 0.4 0.1 0.4 0.1 8 normal
-execute if entity @s[type=#cartographer_core:shape_small] run particle minecraft:witch ~ ~0.25 ~ 0.25 0.1 0.25 0.1 5 normal
-execute if entity @s[type=#cartographer_core:shape_big] run particle minecraft:witch ~ ~1 ~ 1 0.4 1 0.1 15 normal
+execute if entity @s[type=#cartographer_core:shape_human] run particle minecraft:wax_off ~ ~1 ~ 0.2 0.4 0.2 0.1 8 normal
+execute if entity @s[type=#cartographer_core:shape_flat] run particle minecraft:wax_off ~ ~0.5 ~ 0.4 0.1 0.4 0.1 8 normal
+execute if entity @s[type=#cartographer_core:shape_small] run particle minecraft:wax_off ~ ~0.25 ~ 0.25 0.1 0.25 0.1 5 normal
+execute if entity @s[type=#cartographer_core:shape_big] run particle minecraft:wax_off ~ ~1 ~ 1 0.4 1 0.1 15 normal
 
 scoreboard players remove @s ca.effect_shock 1
 execute if score @s ca.effect_shock matches 0 run tag @s remove ca.shocked_warmup
