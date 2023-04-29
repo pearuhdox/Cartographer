@@ -13,3 +13,4 @@ tag @s add ca.rift_projectile
 tag @s add ca.fresh_rift
 tag @s add passive_replaced_projectile
 tag @s add uuid_registered
+tag @s add no_tick

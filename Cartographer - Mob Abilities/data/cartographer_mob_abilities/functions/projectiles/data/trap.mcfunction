@@ -13,7 +13,7 @@ tag @s add trap_projectile
 tag @s add checked
 tag @s add passive_trap
 tag @s add passive_replaced_projectile
-
+tag @s add no_tick
 
 execute if entity @s[tag=ca.blazing] run item replace entity @s armor.head with minecraft:player_head{display:{Name:'{"text":"Orb (red)"}'},SkullOwner:{Id:[I;791410333,-2025962018,-1929931254,1482553209],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDAyYTM2ZTIxNDJmZDZiOTI2M2IwYWFiZmExZTI0MjBjMTRlMWQ2NDQwNWUyOWEyMzc0OWQ2YTY4NzExZGVhNyJ9fX0="}]}}} 1
 execute if entity @s[tag=ca.glacial] run item replace entity @s armor.head with minecraft:player_head{display:{Name:'{"text":"Orb (light blue)"}'},SkullOwner:{Id:[I;1704953634,-1843377011,-1207707982,1077900671],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmM3ZGVhZjJkN2U3MmYyMWZjYTNhOTk2OTQ0ODFhNjc0ZjUxODVjNDRjM2I4ZjUzYjBiNDkzMTBmZTYxNzY3ZCJ9fX0="}]}}} 1

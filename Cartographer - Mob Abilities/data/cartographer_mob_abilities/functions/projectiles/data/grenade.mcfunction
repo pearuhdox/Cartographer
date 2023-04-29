@@ -13,7 +13,7 @@ tag @s add grenade_projectile
 tag @s add checked
 tag @s add passive_grenade
 tag @s add passive_replaced_projectile
-
+tag @s add no_tick
 
 execute if entity @s[tag=ca.blazing] run item replace entity @s armor.head with minecraft:player_head{SkullOwner:{Id:[I;2105963268,-93173279,-1568118406,1332780703],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWY1MzU0Y2EyZWUxYjhmZGM5NTViYjQzN2JiMjYxOTU3NWZjNzk4M2YzNjlhZmEzYTFmN2QxYjk3NTY3ZWE4In19fQ=="}]}}}
 execute if entity @s[tag=ca.glacial] run item replace entity @s armor.head with minecraft:player_head{SkullOwner:{Id:[I;-1621761885,420563628,-1988687145,1381854084],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGRiYTY0MmVmZmZhMTNlYzM3MzBlYWZjNTkxNGFiNjgxMTVjMWY5OTg4MDNmNzQ0NTJlMmUwY2QyNmFmMGI4In19fQ=="}]}}}

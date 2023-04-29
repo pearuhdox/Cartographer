@@ -11,3 +11,4 @@ scoreboard players operation @s ca.mob_kb = $value ca.mob_kb
 tag @s add needle_projectile
 tag @s add passive_needle
 tag @s add passive_replaced_projectile
+tag @s add no_tick

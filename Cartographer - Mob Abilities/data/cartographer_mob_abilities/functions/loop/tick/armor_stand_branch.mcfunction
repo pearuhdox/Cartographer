@@ -1,6 +1,9 @@
 #Trap Projectile
 #execute as @s[tag=trap_projectile] at @s run function cartographer_mob_abilities:projectiles/behavior/trap/projectile
 
+#Rift Projectiles
+execute as @s[tag=ca.rift_projectile,tag=!no_tick] run function cartographer_mob_abilities:projectiles/behavior/rift/mod_check
+
 #Hook Projectile
 execute as @s[tag=hook_projectile] at @s run function cartographer_mob_abilities:abilities/hookshot/projectile
 scoreboard players add @s[tag=hook_projectile] ca.lifetime 1
