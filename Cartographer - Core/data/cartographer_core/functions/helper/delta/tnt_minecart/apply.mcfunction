@@ -3,5 +3,3 @@ execute store result entity @s TNTFuse int 1 run scoreboard players add @s ca.de
 scoreboard players remove @s ca.delta_fuse_max 1
 
 tag @s add ca.delta_tnt_cart_setup
-
-say test
