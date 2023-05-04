@@ -34,6 +34,14 @@ tag @s remove ca.ae_feet
 tag @s remove ca.ae_offh
 tag @s remove ca.ae_main
 
+tag @s remove ca.allow_melee_inflict
+tag @s remove ca.allow_offhand_inflict
+
+tag @s remove ca.no_status_melee
+
+scoreboard players set $no_melee ca.status_var 0
+scoreboard players set $no_offhand ca.status_var 0
+
 execute if data storage cartographer_custom_statuses:player_equip head.tag.StatusInflict run tag @s add ca.si_head
 execute if data storage cartographer_custom_statuses:player_equip body.tag.StatusInflict run tag @s add ca.si_body
 execute if data storage cartographer_custom_statuses:player_equip legs.tag.StatusInflict run tag @s add ca.si_legs
@@ -47,3 +55,14 @@ execute if data storage cartographer_custom_statuses:player_equip legs.tag.Apply
 execute if data storage cartographer_custom_statuses:player_equip feet.tag.ApplyEffects run tag @s add ca.ae_feet
 execute if data storage cartographer_custom_statuses:player_equip offh.tag.ApplyEffects run tag @s add ca.ae_offh
 execute if data storage cartographer_custom_statuses:player_equip main.tag.ApplyEffects run tag @s add ca.ae_main
+
+execute if data storage cartographer_custom_statuses:player_equip main.tag.AllowMeleeInflict run tag @s add ca.allow_melee_inflict
+execute if data storage cartographer_custom_statuses:player_equip offh.tag.AllowOffhandInflict run tag @s add ca.allow_offhand_inflict
+
+execute if predicate cartographer_core:inventory/hold_armor_mainhand unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee
+execute if predicate cartographer_core:inventory/hold_ranged_weapon unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee
+
+execute if predicate cartographer_core:inventory/hold_armor_offhand unless entity @s[tag=ca.allow_offhand_inflict] run scoreboard players set $no_offhand ca.status_var 1
+
+execute if score $no_offhand ca.status_var matches 1.. run tag @s remove ca.si_offh
+execute if score $no_offhand ca.status_var matches 1.. run tag @s remove ca.ae_offh

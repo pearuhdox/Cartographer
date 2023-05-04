@@ -17,8 +17,11 @@ scoreboard objectives add ca.effect_stun_duration dummy
 
 scoreboard objectives add ca.effect_shock dummy
 scoreboard objectives add ca.effect_bleed dummy
+
 scoreboard objectives add ca.eft_possess dummy
 scoreboard objectives add ca.possess_time dummy
+scoreboard objectives add ca.possess_immune dummy
+
 scoreboard objectives add ca.effect_infect dummy
 
 scoreboard objectives add ca.effect_cloak dummy
@@ -39,15 +42,22 @@ scoreboard objectives add ca.decay_max dummy
 
 scoreboard objectives add ca.voltage_shocked dummy
 
+scoreboard objectives add ca.morph_time dummy
+scoreboard objectives add ca.morph_id dummy
+scoreboard objectives add ca.morph_immune dummy
+
 scoreboard objectives add ca.death_registry dummy
 
 scoreboard objectives add ca.status_var dummy
+scoreboard objectives add ca.stat_calc_var dummy
 
 scoreboard objectives add ca.strength_lvl dummy
 scoreboard objectives add ca.strength_dur dummy
 
 scoreboard objectives add ca.weak_lvl dummy
 scoreboard objectives add ca.weak_dur dummy
+
+scoreboard objectives add ca.player_entropy dummy
 
 scoreboard objectives add ca.cs_shoot_bow minecraft.used:minecraft.bow
 scoreboard objectives add ca.cs_shoot_cross minecraft.used:minecraft.crossbow

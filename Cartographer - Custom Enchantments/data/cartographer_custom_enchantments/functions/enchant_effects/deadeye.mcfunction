@@ -2,14 +2,16 @@ playsound minecraft:entity.firework_rocket.large_blast player @s ~ ~ ~ 5 1.5
 
 kill @e[type=#bb:arrow,limit=3,sort=nearest,distance=..6,nbt=!{inGround:1b}]
 
+scoreboard players set $do_apply_effects ca.status_var 0
+scoreboard players set $do_status_inflict ca.status_var 0
+execute if entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_effects/save/mainhand
+execute if entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:status_inflict/save/mainhand
 
-scoreboard players set $expose ca.deadeye 0
-scoreboard players set $bleed ca.deadeye 0
-scoreboard players set $electrode ca.deadeye 0
+execute if entity @s[tag=ca.deadeye_offhand] unless entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_effects/save/offhand
+execute if entity @s[tag=ca.deadeye_offnhand] unless entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:status_inflict/save/offhand
+
 scoreboard players set $frost ca.deadeye 0
 scoreboard players set $flame ca.deadeye 0
-scoreboard players set $flash ca.deadeye 0
-scoreboard players set $infect ca.deadeye 0
 
 scoreboard players set $trueshot ca.deadeye 0
 scoreboard players set $curse_encum ca.deadeye 0
@@ -24,13 +26,8 @@ scoreboard players set $sharpshot ca.multishot 0
 scoreboard players set $point_blank ca.multishot 0
 
 
-scoreboard players operation $expose ca.deadeye = @s ca.expose
-scoreboard players operation $bleed ca.deadeye = @s ca.bleed
-scoreboard players operation $electrode ca.deadeye = @s ca.electrode
 scoreboard players operation $frost ca.deadeye = @s ca.frost
 scoreboard players operation $flame ca.deadeye = @s ca.flame
-scoreboard players operation $flash ca.deadeye = @s ca.flash
-scoreboard players operation $infect ca.deadeye = @s ca.infect
 
 scoreboard players operation $trueshot ca.deadeye = @s ca.trueshot
 scoreboard players operation $curse_encum ca.deadeye = @s ca.curse_encum

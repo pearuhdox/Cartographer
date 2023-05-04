@@ -8,5 +8,3 @@ scoreboard players operation ca.red= ca.damage_queue /= $100 ca.CONSTANT
 
 scoreboard players operation @s ca.damage_queue -= ca.red= ca.damage_queue
 execute if score @s ca.damage_queue matches ..-1 run scoreboard players set @s ca.damage_queue 0
-
-#say applying resistance

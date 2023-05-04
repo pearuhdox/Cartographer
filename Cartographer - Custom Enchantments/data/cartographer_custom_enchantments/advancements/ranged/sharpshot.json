@@ -9,7 +9,7 @@
             "text": "Arrows from this weapon deal more damage the farther they travel."
         },
         "icon": {
-            "item": "minecraft:bow"
+            "item": "minecraft:emerald"
         },
         "frame": "task",
         "show_toast": true,

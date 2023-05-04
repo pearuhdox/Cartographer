@@ -2,10 +2,10 @@
     "display": {
         "title": {
             "text": "Stunned                  ",
-            "color": "#CC73FF"
+            "color": "#57dec0"
         },
         "description": {
-            "text": "Afflicted cannot move, attack, or use abilities. In progress abilities are interrupted.",
+            "text": "Affected mob cannot move, attack, or use abilities. In progress abilities are interrupted.",
             "color": "white"
         },
         "icon": {
@@ -22,7 +22,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{CustomEnchantments:[{id:\"stunning\"}]}"
+                  "nbt": "{StatusInflict:[{Id:\"stun\"}]}"
                 }
               ]
             }
@@ -32,38 +32,16 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{CustomEnchantments:[{id:\"flash\"}]}"
+                  "nbt": "{CustomStatuses:[{Id:\"stun\"}]}"
                 }
               ]
             }
-          },
-          "found6": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-              "items": [
-                {
-                  "nbt": "{CustomEnchantments:[{id:\"splintering\"}]}"
-                }
-              ]
-            }
-          },
-        "found7": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:10b}]}"
-                    }
-                ]
-            }
-        }
+          }
     },
     "requirements": [
         [
             "found1",
-            "found2",
-            "found6",
-            "found7"
+            "found2"
         ]
     ],
     "rewards": {

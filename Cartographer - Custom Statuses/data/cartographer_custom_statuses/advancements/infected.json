@@ -2,14 +2,14 @@
     "display": {
         "title": {
             "text": "Infection                ",
-            "color": "#CC73FF"
+            "color": "#57dec0"
         },
         "description": {
-            "text": "Afflicted takes damage every second. They are also slowed and weakened depending on how much health they are missing. When they die, the effect is spread to un-infected enemies.",
+            "text": "Affected mob takes damage every second. They are also slowed and weakened depending on how much health they are missing. When they die, the effect is spread to un-infected enemies.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:black_concrete_powder"
+            "item": "minecraft:dragon_breath"
         },
         "frame": "task",
         "show_toast": true,
@@ -22,7 +22,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"infection\"}]}"
+                        "nbt": "{CustomStatuses:[{Id:\"infection\"}]}"
                     }
                 ]
             }
@@ -32,27 +32,16 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{CustomEnchantments:[{id:\"infect\"}]}"
+                  "nbt": "{StatusInflict:[{Id:\"infection\"}]}"
                 }
               ]
             }
-          },
-        "find5": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:12b}]}"
-                    }
-                ]
-            }
-        }
+          }
     },
     "requirements": [
         [
             "find1",
-            "find2",
-            "find5"
+            "find2"
         ]
     ],
     "rewards": {

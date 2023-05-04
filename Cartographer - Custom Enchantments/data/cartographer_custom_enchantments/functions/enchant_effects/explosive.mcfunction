@@ -1,22 +1,11 @@
-scoreboard players set $possess ca.explosive 0
 scoreboard players set $cauterize ca.explosive 0
 scoreboard players set $flame ca.explosive 0
-scoreboard players set $bleed ca.explosive 0
-scoreboard players set $electrode ca.explosive 0
-scoreboard players set $expose ca.explosive 0
 scoreboard players set $frost ca.explosive 0
-scoreboard players set $infection ca.explosive 0
-scoreboard players set $flash ca.explosive 0
 
-execute if entity @s[tag=is_vol_pos] run scoreboard players set $possess ca.explosive 1
 execute if entity @s[tag=is_vol_cau] run scoreboard players set $cauterize ca.explosive 1
 execute if entity @s[tag=is_vol_flame] run scoreboard players set $flame ca.explosive 1
-execute if entity @s[tag=is_vol_bleed] run scoreboard players set $bleed ca.explosive 1
-execute if entity @s[tag=is_vol_con] run scoreboard players set $electrode ca.explosive 1
-execute if entity @s[tag=is_vol_pin] run scoreboard players set $expose ca.explosive 1
 execute if entity @s[tag=is_vol_frost] run scoreboard players set $frost ca.explosive 1
-execute if entity @s[tag=is_vol_infection] run scoreboard players set $infection ca.explosive 1
-execute if entity @s[tag=is_vol_flash] run scoreboard players set $flash ca.explosive 1
+
 
 # Allow data to be stored on the Crossbow for firework look
 # Else use a default look

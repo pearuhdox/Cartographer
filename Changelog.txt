@@ -347,7 +347,7 @@ Custom Enchantments:
 Custom Statuses:
  - New Effect: Infection
     - Deals 2 damage per second to the afflicted mob.
-    - Afflicted mob is affected by a percent loss of movement speed and melee damage based on how close to death they are.
+    - Affected mob is affected by a percent loss of movement speed and melee damage based on how close to death they are.
       - The closer to death, the more debilitating the effect.
     - When an Infected mob dies, it spreads the effect (with it's remaining duration) to 2 nearby targets (not Infected, within 6 blocks).
     - If it cannot spread the effect, it deals 6 damage in a small AoE instead.

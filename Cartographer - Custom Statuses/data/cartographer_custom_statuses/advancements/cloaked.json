@@ -5,10 +5,10 @@
     },
     "title": {
       "text": "Cloaked                ",
-      "color": "#CC73FF"
+      "color": "#57dec0"
     },
     "description": {
-      "text": "Afflicted is invisible, creating noises and particles around it to indicate its presence. When attacked, the remaining duration is reduced.",
+      "text": "Affected mob is invisible, creating noises and particles around it to indicate its presence. When attacked, the remaining duration is reduced.",
       "color": "white"
     },
     "frame": "task",
@@ -51,7 +51,17 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:14b}]}"
+            "nbt": "{StatusInflict:[{Id:\"cloaking\"}]}"
+          }
+        ]
+      }
+    },
+    "find3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomStatuses:[{Id:\"cloaking\"}]}"
           }
         ]
       }
@@ -61,7 +71,8 @@
     [
       "found",
       "find1",
-      "find2"
+      "find2",
+      "find3"
     ]
   ],
   "rewards": {

@@ -1,11 +1,6 @@
 #Reset All Scores I am Crying
-scoreboard players set $bleed ca.var 0
-scoreboard players set $electrode ca.var 0
-scoreboard players set $expose ca.var 0
+
 scoreboard players set $frost ca.var 0
-scoreboard players set $infect ca.var 0
-scoreboard players set $possess ca.var 0
-scoreboard players set $flash ca.var 0
 scoreboard players set $cauterize ca.var 0
 scoreboard players set $explosive ca.var 0
 scoreboard players set $vol_dmg ca.vol_dmg 0
@@ -20,12 +15,6 @@ scoreboard players set $hunter ca.var 0
 scoreboard players set $singe ca.var 0
 scoreboard players set $frostbite ca.var 0
 scoreboard players set $executioner ca.var 0
-scoreboard players set $exposing ca.var 0
-scoreboard players set $possession ca.var 0
-scoreboard players set $stunning ca.var 0
-scoreboard players set $infection ca.var 0
-scoreboard players set $electrocute ca.var 0
-scoreboard players set $bleeding ca.var 0
 scoreboard players set $fire_aspect ca.var 0
 scoreboard players set $cauterize ca.var 0
 scoreboard players set $collapse ca.var 0
@@ -185,13 +174,7 @@ execute if score $loyalty ca.var matches 1.. at @s as @a[distance=..8.5,tag=ca.m
 execute if score $loyalty ca.var matches 1.. at @s as @a[distance=..4.5,tag=ca.made_ranged_attack] at @s if score @s ca.loyalty_time matches 0.. run scoreboard players add @s ca.loyalty_time 20
 
 #Reset All Scores I am Crying
-scoreboard players set $bleed ca.var 0
-scoreboard players set $electrode ca.var 0
-scoreboard players set $expose ca.var 0
 scoreboard players set $frost ca.var 0
-scoreboard players set $infect ca.var 0
-scoreboard players set $possess ca.var 0
-scoreboard players set $flash ca.var 0
 scoreboard players set $cauterize ca.var 0
 scoreboard players set $explosive ca.var 0
 scoreboard players set $vol_dmg ca.vol_dmg 0
@@ -204,12 +187,5 @@ scoreboard players set $tempest ca.var 0
 scoreboard players set $duelist ca.var 0
 scoreboard players set $hunter ca.var 0
 scoreboard players set $singe ca.var 0
-scoreboard players set $frostbite ca.var 0
-scoreboard players set $exposing ca.var 0
-scoreboard players set $possession ca.var 0
-scoreboard players set $stunning ca.var 0
-scoreboard players set $infection ca.var 0
-scoreboard players set $electrocute ca.var 0
-scoreboard players set $bleeding ca.var 0
 scoreboard players set $fire_aspect ca.var 0
 scoreboard players set $cauterize ca.var 0

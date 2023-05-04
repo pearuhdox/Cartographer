@@ -1,14 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:nether_wart_block"
+      "item": "minecraft:nether_wart"
     },
     "title": {
       "text": "Bleeding                 ",
-      "color": "#CC73FF"
+      "color": "#57dec0"
     },
     "description": {
-      "text": "Afflicted takes damage every second based on the level of Bleeding and their max health. If Bleeding is reapplied, the potency is increased, instead of resetting the duration.",
+      "text": "Affected mob takes damage every second based on the number of stacks applied. When they take damage, the number of stacks is cut in half.",
       "color": "white"
     },
     "frame": "task",
@@ -23,7 +23,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{CustomEnchantments:[{id:\"bleeding\"}]}"
+            "nbt": "{StatusInflict:[{Id:\"bleeding\"}]}"
           }
         ]
       }
@@ -33,17 +33,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{CustomEnchantments:[{id:\"bleed\"}]}"
-          }
-        ]
-      }
-    },
-    "find5": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:13b}]}"
+            "nbt": "{CustomStatuses:[{Id:\"bleeding\"}]}"
           }
         ]
       }
@@ -52,8 +42,7 @@
   "requirements": [
     [
       "find1",
-      "find2",
-      "find5"
+      "find2"
     ]
   ],
   "rewards": {

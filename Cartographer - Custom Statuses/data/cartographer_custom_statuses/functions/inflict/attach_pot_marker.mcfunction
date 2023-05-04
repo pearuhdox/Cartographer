@@ -47,4 +47,6 @@ data modify storage cartographer_custom_statuses:pot_marker data.id set from sto
 
 tag @s add ca.has_death_setup
 
+execute on origin run data modify storage cartographer_custom_statuses:pot_marker data.Owner set from entity @s UUID
+
 execute on passengers if entity @s[type=marker,tag=ca.pot_marker] run function cartographer_custom_statuses:inflict/pot_marker_data

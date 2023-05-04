@@ -1,16 +1,8 @@
-execute if score $expose ca.deadeye matches 1.. run effect give @s bad_omen 4 1
-execute if score $bleed ca.deadeye matches 1.. run scoreboard players set @s ca.bleed_potency 2
-execute if score $bleed ca.deadeye matches 1.. run scoreboard players set @s ca.effect_bleed 4
-
-execute if score $electrode ca.deadeye matches 1.. run scoreboard players set @s ca.effect_shock 4
-
 execute if score $frost ca.deadeye matches 1.. run scoreboard players set @s ca.frost_time 80
 execute if score $frost ca.deadeye matches 1.. run scoreboard players set @s ca.frost_tier 2
 
 execute if score $flame ca.deadeye matches 1.. run data modify entity @s Fire set value 81
-execute if score $flash ca.deadeye matches 1.. run scoreboard players set @s ca.effect_stun 13
 
-execute if score $infect ca.deadeye matches 1.. run scoreboard players set @s ca.effect_infect 4
 
 
 execute if score $punch ca.deadeye matches 1.. run scoreboard players set @s co_y 2
@@ -24,6 +16,9 @@ execute if score $punch ca.deadeye matches 5 run scoreboard players set @s co_se
 
 execute if score $punch ca.deadeye matches 1.. run function motion:motion/push
 
+#Statuses!
+function cartographer_custom_statuses:apply_effects/apply/create_aec
+function cartographer_custom_statuses:status_inflict/apply/set_statuses
 
 scoreboard players set $deadeye_hit ca.deadeye 1
 

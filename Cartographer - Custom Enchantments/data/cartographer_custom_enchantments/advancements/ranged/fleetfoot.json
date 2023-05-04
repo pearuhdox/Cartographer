@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/ranged/fleetfoot"
     },
-    "parent": "cartographer_custom_enchantments:ranged/flash"
+    "parent": "cartographer_custom_enchantments:ranged/explosive"
 }

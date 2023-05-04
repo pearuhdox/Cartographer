@@ -1,0 +1,6 @@
+{
+    "values": [
+      "cartographer_custom_statuses:expose_damage",
+      "cartographer_custom_statuses:status_damage"
+    ]
+  }

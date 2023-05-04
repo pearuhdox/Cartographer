@@ -2,7 +2,7 @@
     "display": {
         "title": {
             "text": "Curse of Regret          ",
-            "color": "red"
+            "color": "#ff8c8c"
         },
         "description": {
             "text": "The user is damaged when they use this item. The higher the level, the more damage is dealt.",

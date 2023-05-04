@@ -120,6 +120,16 @@ tag @s remove check_legs
 tag @s remove check_feet
 tag @s remove check_offh
 
+tag @s remove ca.ce_thorns_main
+tag @s remove ca.ce_thorns_offh
+tag @s remove ca.ce_thorns_head
+tag @s remove ca.ce_thorns_body
+tag @s remove ca.ce_thorns_legs
+tag @s remove ca.ce_thorns_feet
+
+tag @s remove ca.deadeye_mainhand
+tag @s remove ca.deadeye_offhand
+
 #Turn features dynamically off by default. We will turn them back on as we find we need them.
 #scoreboard players set $cu_en_melee ca.enabler 0
 #scoreboard players set $cu_en_ranged ca.enabler 0

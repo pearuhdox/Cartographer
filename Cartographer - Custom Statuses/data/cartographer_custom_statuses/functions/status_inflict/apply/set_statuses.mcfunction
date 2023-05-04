@@ -2,7 +2,7 @@
 execute store result score $add ca.effect_bleed run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"bleeding"}].Amount
 scoreboard players operation @s ca.effect_bleed += $add ca.effect_bleed
 
-execute store result score $add ca.effect_shock run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"shocked"}].Duration
+execute store result score $add ca.effect_shock run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"shocking"}].Duration
 scoreboard players operation @s ca.effect_shock > $add ca.effect_shock
 
 execute store result score $add ca.effect_infect run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"infection"}].Duration
@@ -10,19 +10,22 @@ execute if score $add ca.effect_infect matches 1.. run scoreboard players add $a
 scoreboard players operation @s ca.effect_infect > $add ca.effect_infect
 
 #Stun
-execute store result score $add ca.effect_stun run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"stunned"}].Duration
+execute store result score $add ca.effect_stun run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"stun"}].Duration
 scoreboard players operation $add ca.effect_stun *= $20 ca.CONSTANT
 
-execute store result score $chance ca.effect_stun run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"stunned"}].Chance
+execute store result score $chance ca.effect_stun run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"stun"}].Chance
 
-execute if score $add ca.effect_stun matches 1.. run scoreboard players set $rng_min bbl.rng 1
-execute if score $add ca.effect_stun matches 1.. run scoreboard players set $rng_max bbl.rng 100
+execute if score $add ca.effect_stun matches 1.. run function cartographer_custom_statuses:status_inflict/apply/stunned
 
-execute if score $add ca.effect_stun matches 1.. run function bb:lib/rng
+#Morph
+execute store result score $chance ca.morph_time run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"morph"}].Chance
 
-execute if score $add ca.effect_stun matches 1.. if score $value bbl.rng > $chance ca.effect_stun run scoreboard players set @s ca.effect_stun 0
-scoreboard players operation @s ca.effect_stun > $add ca.effect_stun
-#End of Stun
+execute if score $chance ca.morph_time matches 1.. run function cartographer_custom_statuses:status_inflict/apply/morphed
+
+#Possession
+execute store result score $chance ca.possess_time run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"possession"}].Chance
+
+execute if score $chance ca.possess_time matches 1.. run function cartographer_custom_statuses:status_inflict/apply/possessed
 
 
 execute store result score @s ca.effect_cloak run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"cloaking"}].Duration

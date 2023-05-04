@@ -2,7 +2,7 @@
     "display": {
         "title": {
             "text": "Curse of Malevolence     ",
-            "color": "red"
+            "color": "#ff8c8c"
         },
         "description": {
             "text": "When more than 1 of these items is used at a time, the user is inflicted with Blindness.",

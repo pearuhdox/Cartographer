@@ -1,3 +1,5 @@
+execute if score @s ca.eft_possess matches 1.. run tag @s add ca.was_possessed
+
 execute if score @s ca.eft_possess matches 1.. anchored eyes positioned ^ ^ ^0.25 run particle minecraft:glow_squid_ink ~ ~ ~ 0 0 0 0.05 1 normal
 execute if score @s ca.eft_possess matches 21.. run effect give @s speed 1 0
 

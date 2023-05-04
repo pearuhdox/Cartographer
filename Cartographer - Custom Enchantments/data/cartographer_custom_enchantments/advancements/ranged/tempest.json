@@ -9,7 +9,7 @@
             "text": "Trident throws deal additional damage."
         },
         "icon": {
-            "item": "minecraft:trident"
+            "item": "minecraft:prismarine_shard"
         },
         "frame": "task",
         "show_toast": true,

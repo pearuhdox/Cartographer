@@ -2,14 +2,14 @@
     "display": {
         "title": {
             "text": "Possess                  ",
-            "color": "#CC73FF"
+            "color": "#57dec0"
         },
         "description": {
-            "text": "The afflicted is briefly blinded, and after, attacks the nearest hostile mob to it for a limited time.",
+            "text": "Affected mob is briefly blinded, and after, attacks the nearest hostile mob to it for a limited time.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:lime_concrete_powder"
+            "item": "minecraft:glow_ink_sac"
         },
         "frame": "task",
         "show_toast": true,
@@ -22,7 +22,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"possession\"}]}"
+                        "nbt": "{StatusInflict:[{Id:\"possession\"}]}"
                     }
                 ]
             }
@@ -32,31 +32,20 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{CustomEnchantments:[{id:\"possess\"}]}"
+                  "nbt": "{CustomStatuses:[{Id:\"possession\"}]}"
                 }
               ]
             }
-          },
-        "find5": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:19b}]}"
-                    }
-                ]
-            }
-        }
+          }
     },
     "requirements": [
         [
             "find1",
-            "find2",
-            "find5"
+            "find2"
         ]
     ],
     "rewards": {
         "function": "cartographer_custom_statuses:descriptions/possess"
     },
-    "parent": "cartographer_custom_statuses:infected"
+    "parent": "cartographer_custom_statuses:morph"
 }

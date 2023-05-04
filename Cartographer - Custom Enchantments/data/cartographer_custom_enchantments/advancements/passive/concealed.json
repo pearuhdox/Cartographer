@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "When the user slays a mob, they gain Stealth for a short time. Stealth is removed when you take or deal damage, makes you invisible, and gives you bonus melee attack damage."
+            "text": "When the user slays a mob, they gain limited Stealth. While Stealthed, the user is harder to detect and gains a temporary damage boost."
         },
         "icon": {
             "item": "minecraft:oak_leaves"

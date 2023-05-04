@@ -41,38 +41,6 @@ execute if score $executioner ca.var matches 1 run tag @s add is_executioner_1
 execute if score $executioner ca.var matches 2 run tag @s add is_executioner_2
 execute if score $executioner ca.var matches 3 run tag @s add is_executioner_3
 
-#Exposing Ranged Synergy
-execute if score $exposing ca.var matches 1 run tag @s add is_exposing_1
-execute if score $exposing ca.var matches 2 run tag @s add is_exposing_2
-execute if score $exposing ca.var matches 3 run tag @s add is_exposing_3
-
-#Possession Ranged Synergy
-execute if score $possession ca.var matches 1 run tag @s add is_possession_1
-execute if score $possession ca.var matches 2 run tag @s add is_possession_2
-execute if score $possession ca.var matches 3 run tag @s add is_possession_3
-
-#Stunning Ranged Synergy
-execute if score $stunning ca.var matches 1 run tag @s add is_stunning_1
-execute if score $stunning ca.var matches 2 run tag @s add is_stunning_2
-execute if score $stunning ca.var matches 3 run tag @s add is_stunning_3
-execute if score $stunning ca.var matches 4 run tag @s add is_stunning_4
-execute if score $stunning ca.var matches 5 run tag @s add is_stunning_5
-
-#Infection Ranged Synergy
-execute if score $infection ca.var matches 1 run tag @s add is_infection_1
-execute if score $infection ca.var matches 2 run tag @s add is_infection_2
-execute if score $infection ca.var matches 3 run tag @s add is_infection_3
-
-#Electrocute Ranged Synergy
-execute if score $electrocute ca.var matches 1 run tag @s add is_electrocute_1
-execute if score $electrocute ca.var matches 2 run tag @s add is_electrocute_2
-execute if score $electrocute ca.var matches 3 run tag @s add is_electrocute_3
-
-#Bleeding Ranged Synergy
-execute if score $bleeding ca.var matches 1 run tag @s add is_bleeding_1
-execute if score $bleeding ca.var matches 2 run tag @s add is_bleeding_2
-execute if score $bleeding ca.var matches 3 run tag @s add is_bleeding_3
-
 #Fire Aspect Ranged Synergy
 execute if score $fire_aspect ca.var matches 1 run tag @s add is_fire_aspect_1
 execute if score $fire_aspect ca.var matches 2 run tag @s add is_fire_aspect_2

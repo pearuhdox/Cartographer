@@ -18,10 +18,10 @@
         },
         "description": {
             "color": "white",
-            "text": "Saves you from a lethal hit, giving some Absorption shielding. After cheating death, kill a mob quickly to restore health, or suffer the penalty."
+            "text": "Saves you from a lethal hit. After cheating death, you must kill a mob quickly to restore health, or suffer the penalty."
         },
         "icon": {
-            "item": "minecraft:yellow_dye"
+            "item": "minecraft:totem_of_undying"
         },
         "frame": "task",
         "show_toast": true,

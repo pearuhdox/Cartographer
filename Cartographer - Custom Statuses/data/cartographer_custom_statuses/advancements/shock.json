@@ -2,14 +2,14 @@
     "display": {
         "title": {
             "text": "Shocked                   ",
-            "color": "#CC73FF"
+            "color": "#57dec0"
         },
         "description": {
-            "text": "Afflicted takes damage every second and damages nearby enemies. After enough shocks, afflicted is stunned and neighbors are knocked back.",
+            "text": "Affected mob takes damage every second and damages nearby enemies. After enough shocks, afflicted is stunned and nearby enemies are knocked back.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:warped_wart_block"
+            "item": "minecraft:end_rod"
         },
         "frame": "task",
         "show_toast": true,
@@ -22,7 +22,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{CustomEnchantments:[{id:\"electrocute\"}]}"
+                  "nbt": "{StatusInflict:[{Id:\"shocking\"}]}"
                 }
               ]
             }
@@ -32,17 +32,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"electrode\"}]}"
-                    }
-                ]
-            }
-        },
-        "find5": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "nbt": "{CustomPotionEffects:[{Id:9b,Amplifier:11b}]}"
+                        "nbt": "{CustomStatuses:[{Id:\"shocking\"}]}"
                     }
                 ]
             }
@@ -51,8 +41,7 @@
     "requirements": [
         [
             "find1",
-            "find2",
-            "find5"
+            "find2"
         ]
     ],
     "rewards": {

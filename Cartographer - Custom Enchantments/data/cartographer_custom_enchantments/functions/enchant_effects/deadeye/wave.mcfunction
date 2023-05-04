@@ -2,13 +2,8 @@ scoreboard players remove @s ca.deadeye_time 1
 
 tp @s ^ ^ ^0.75
 
-scoreboard players operation $expose ca.deadeye = @s ca.expose
-scoreboard players operation $bleed ca.deadeye = @s ca.bleed
-scoreboard players operation $electrode ca.deadeye = @s ca.electrode
 scoreboard players operation $frost ca.deadeye = @s ca.frost
 scoreboard players operation $flame ca.deadeye = @s ca.flame
-scoreboard players operation $flash ca.deadeye = @s ca.flash
-scoreboard players operation $infect ca.deadeye = @s ca.infect
 
 scoreboard players operation $trueshot ca.deadeye = @s ca.trueshot
 scoreboard players operation $curse_encum ca.deadeye = @s ca.curse_encum

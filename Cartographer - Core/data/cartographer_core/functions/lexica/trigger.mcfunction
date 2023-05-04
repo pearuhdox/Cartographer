@@ -13,6 +13,7 @@ execute if score @s ca.lexica_trig matches 105 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 106 run function cartographer_custom_statuses:lexica_calls/pages/category/infection
 execute if score @s ca.lexica_trig matches 107 run function cartographer_custom_statuses:lexica_calls/pages/category/shocking
 execute if score @s ca.lexica_trig matches 108 run function cartographer_custom_statuses:lexica_calls/pages/category/stunned
+execute if score @s ca.lexica_trig matches 109 run function cartographer_custom_statuses:lexica_calls/pages/category/morph
 
 execute if score @s ca.lexica_trig matches 201 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/main
 execute if score @s ca.lexica_trig matches 202 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/main_2
@@ -24,21 +25,15 @@ execute if score @s ca.lexica_trig matches 207 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 208 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/main
 execute if score @s ca.lexica_trig matches 209 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/main
 
-execute if score @s ca.lexica_trig matches 210 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/bleeding
 execute if score @s ca.lexica_trig matches 211 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/duelist
 execute if score @s ca.lexica_trig matches 212 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/echo
-execute if score @s ca.lexica_trig matches 213 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/electrocute
 execute if score @s ca.lexica_trig matches 214 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/evocation
 execute if score @s ca.lexica_trig matches 215 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/executioner
-execute if score @s ca.lexica_trig matches 216 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/exposing
 execute if score @s ca.lexica_trig matches 217 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/frostbite
 execute if score @s ca.lexica_trig matches 218 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/hunter
-execute if score @s ca.lexica_trig matches 219 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/infection
-execute if score @s ca.lexica_trig matches 220 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/possession
 execute if score @s ca.lexica_trig matches 221 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/singe
 execute if score @s ca.lexica_trig matches 222 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/stunning
 execute if score @s ca.lexica_trig matches 223 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/surging_strike
-execute if score @s ca.lexica_trig matches 224 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/transfiguration
 execute if score @s ca.lexica_trig matches 225 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/first_strike
 
 execute if score @s ca.lexica_trig matches 230 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/adrenaline
@@ -58,19 +53,13 @@ execute if score @s ca.lexica_trig matches 243 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 244 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/spurs
 
 execute if score @s ca.lexica_trig matches 250 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/auto_charge
-execute if score @s ca.lexica_trig matches 251 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/bleed
 execute if score @s ca.lexica_trig matches 252 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/current
 execute if score @s ca.lexica_trig matches 253 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/deadeye
-execute if score @s ca.lexica_trig matches 254 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/electrode
 execute if score @s ca.lexica_trig matches 255 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/explosive
-execute if score @s ca.lexica_trig matches 256 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/expose
-execute if score @s ca.lexica_trig matches 257 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/flash
 execute if score @s ca.lexica_trig matches 258 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/fleetfoot
 execute if score @s ca.lexica_trig matches 259 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/frost
 execute if score @s ca.lexica_trig matches 260 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/hydraulic
-execute if score @s ca.lexica_trig matches 261 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/infect
 execute if score @s ca.lexica_trig matches 262 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/overcharge
-execute if score @s ca.lexica_trig matches 249 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/possess
 execute if score @s ca.lexica_trig matches 263 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/point_blank
 execute if score @s ca.lexica_trig matches 264 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/repeating
 execute if score @s ca.lexica_trig matches 265 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/ricochet
@@ -86,7 +75,6 @@ execute if score @s ca.lexica_trig matches 279 run function cartographer_custom_
 
 execute if score @s ca.lexica_trig matches 270 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/eruption
 execute if score @s ca.lexica_trig matches 271 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/sapper
-execute if score @s ca.lexica_trig matches 272 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/splintering
 
 execute if score @s ca.lexica_trig matches 280 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/infinity
 execute if score @s ca.lexica_trig matches 281 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/soulbound

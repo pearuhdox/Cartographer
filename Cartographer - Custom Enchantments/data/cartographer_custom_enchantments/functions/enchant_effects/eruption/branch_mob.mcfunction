@@ -37,31 +37,9 @@ execute if score $eruption ca.fire_aspect matches 5.. as @s run data modify enti
 scoreboard players operation $fb ca.frostbite = $eruption ca.frostbite
 execute if score $eruption ca.frostbite matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
 
-#Infection
-scoreboard players operation $melee ca.infection = $eruption ca.infection
-execute if score $eruption ca.infection matches 1.. run function cartographer_custom_enchantments:enchant_effects/infection/branch
+execute if score $do_apply_effects ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
+execute if score $do_status_inflict ca.status_var matches 1.. at @s run function cartographer_custom_statuses:status_inflict/apply/set_statuses
 
-#Electrocute
-scoreboard players operation $melee ca.electrocute = $eruption ca.electrocute
-execute if score $eruption ca.electrocute matches 1.. run function cartographer_custom_enchantments:enchant_effects/electrocute/branch
-
-#Bleeding
-scoreboard players operation $melee ca.bleeding = $eruption ca.bleeding
-execute if score $eruption ca.bleeding matches 1.. run function cartographer_custom_enchantments:enchant_effects/bleeding/branch
-
-#Stunning
-scoreboard players operation $melee ca.stunning = $eruption ca.stunning
-execute if score $eruption ca.stunning matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/chance
-execute if score $eruption ca.stunning matches 1.. run function cartographer_custom_enchantments:enchant_effects/stunning/branch
-
-#Possession
-scoreboard players operation $melee ca.possession = $eruption ca.possession
-execute if score $eruption ca.possession matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/chance
-execute if score $eruption ca.possession matches 1.. run function cartographer_custom_enchantments:enchant_effects/possession/branch
-
-#Exposing
-scoreboard players operation $melee ca.exposing = $eruption ca.exposing
-execute if score $eruption ca.exposing matches 1.. run function cartographer_custom_enchantments:enchant_effects/exposing/branch
 
 #Executioner
 scoreboard players operation $exec ca.executioner = $eruption ca.executioner

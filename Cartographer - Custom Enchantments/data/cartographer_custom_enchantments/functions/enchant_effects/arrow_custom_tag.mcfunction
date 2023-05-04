@@ -1,19 +1,4 @@
 #Add the proper tag to the mob based on closest arrow.
-execute if score $bleed ca.var matches 1.. run tag @s add is_bleed
-
-execute if score $electrode ca.var matches 1.. run tag @s add is_electrode
-
-execute if score $expose ca.var matches 1.. run tag @s add is_pin
-
-execute if score $frost ca.var matches 1.. run tag @s add is_frost
-
-execute if score $infect ca.var matches 1.. run tag @s add is_infection
-
-execute if score $possess ca.var matches 1.. run tag @s add is_possess
-
-execute if score $flash ca.var matches 1.. run tag @s add is_flash
-execute if score $flash ca.var matches 1.. run scoreboard players operation @s ca.flash = $flash ca.var
-
 execute if score $cauterize ca.var matches 1.. run tag @s add is_cauterize
 
 execute if score $explosive ca.var matches 1.. run tag @s add is_explosive

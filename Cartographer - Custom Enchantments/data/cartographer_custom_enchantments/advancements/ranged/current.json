@@ -21,7 +21,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:trident"
+            "item": "minecraft:fishing_rod"
         },
         "frame": "task",
         "show_toast": true,

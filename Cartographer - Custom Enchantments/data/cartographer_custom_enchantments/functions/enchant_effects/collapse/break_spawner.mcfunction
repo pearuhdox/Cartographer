@@ -1,5 +1,7 @@
 setblock ~ ~ ~ air destroy
 
+data remove storage cartographer_custom_statuses:apply_effects data.Effects
+data remove storage cartographer_custom_statuses:status_inflict data.Effects
 
 execute if score @s ca.sapper matches 1.. run function cartographer_custom_enchantments:enchant_effects/collapse/effects/sapper
 execute if score @s ca.eruption matches 1.. run function cartographer_custom_enchantments:enchant_effects/collapse/effects/eruption

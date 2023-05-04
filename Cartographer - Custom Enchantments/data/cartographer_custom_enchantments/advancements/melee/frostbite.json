@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/melee/frostbite"
     },
-    "parent": "cartographer_custom_enchantments:melee/exposing"
+    "parent": "cartographer_custom_enchantments:melee/first_strike"
 }

@@ -1,5 +1,4 @@
-effect give @s slowness 3 1
-effect give @s strength 3 1
+effect give @s slowness 3 0
 effect give @s weakness 3 0
 
 scoreboard players operation @s ca.effect_infect += $infect_pass_time ca.var

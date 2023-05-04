@@ -14,7 +14,7 @@
     "display": {
         "title": {
             "text": "Curse of Encumbering     ",
-            "color": "red"
+            "color": "#ff8c8c"
         },
         "description": {
             "color": "white",

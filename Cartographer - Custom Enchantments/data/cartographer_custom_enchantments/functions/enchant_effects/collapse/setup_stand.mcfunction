@@ -10,14 +10,8 @@ scoreboard players operation @s ca.frenzy = $frenzy ca.collapse
 scoreboard players operation @s ca.concealed = $concealed ca.collapse
 
 scoreboard players operation @s ca.fire_aspect = $fire_aspect ca.collapse
-scoreboard players operation @s ca.stunning = $stunning ca.collapse
-scoreboard players operation @s ca.infection = $infection ca.collapse
-scoreboard players operation @s ca.electrocute = $electrocute ca.collapse
-scoreboard players operation @s ca.bleeding = $bleeding ca.collapse
 scoreboard players operation @s ca.evocation = $evocation ca.collapse
 scoreboard players operation @s ca.frostbite = $frostbite ca.collapse
-scoreboard players operation @s ca.exposing = $exposing ca.collapse
-scoreboard players operation @s ca.possession = $possession ca.collapse
 scoreboard players operation @s ca.knockback = $knockback ca.collapse
 scoreboard players operation @s ca.executioner = $executioner ca.collapse
 

@@ -3,15 +3,20 @@
 scoreboard players set @s co_y 3
 scoreboard players set @s co_send -4
 
-execute if score $thorns ca.t_knock matches 1.. run scoreboard players set @s co_y 4
-execute if score $thorns ca.t_knock matches 1 run scoreboard players set @s co_send -7
-execute if score $thorns ca.t_knock matches 2 run scoreboard players set @s co_send -11
-execute if score $thorns ca.t_knock matches 3 run scoreboard players set @s co_send -17
-execute if score $thorns ca.t_knock matches 4 run scoreboard players set @s co_send -22
-execute if score $thorns ca.t_knock matches 5.. run scoreboard players set @s co_send -30
+execute if entity @s[type=silverfish] run scoreboard players set @s co_y 5
+execute if entity @s[type=endermite] run scoreboard players set @s co_y 5
 
-#TODO Pull this out and implement better fix
-execute unless entity @s[tag=ca.boss] run function motion:motion/push
+#TODO: KBR SCALING
+
+execute unless entity @s[tag=ca.boss] if score $thorns ca.t_knock matches 1.. run scoreboard players set @s co_y 4
+execute unless entity @s[tag=ca.boss] if score $thorns ca.t_knock matches 1 run scoreboard players set @s co_send -7
+execute unless entity @s[tag=ca.boss] if score $thorns ca.t_knock matches 2 run scoreboard players set @s co_send -11
+execute unless entity @s[tag=ca.boss] if score $thorns ca.t_knock matches 3 run scoreboard players set @s co_send -17
+execute unless entity @s[tag=ca.boss] if score $thorns ca.t_knock matches 4 run scoreboard players set @s co_send -22
+execute unless entity @s[tag=ca.boss] if score $thorns ca.t_knock matches 5.. run scoreboard players set @s co_send -30
+
+
+function motion:motion/push
 
 #Do Damage next
 scoreboard players set @s ca.damage_queue 0
@@ -44,36 +49,14 @@ execute if score $thorns ca.t_fire matches 5.. as @s[type=#cartographer_custom_e
 scoreboard players operation $fb ca.frostbite = $thorns ca.t_frost
 execute if score $thorns ca.t_frost matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
 
-#Infection
-scoreboard players operation $melee ca.infection = $thorns ca.t_infection
-execute if score $thorns ca.t_infection matches 1.. run function cartographer_custom_enchantments:enchant_effects/infection/branch
-
-#Electrocute
-scoreboard players operation $melee ca.electrocute = $thorns ca.t_shock
-execute if score $thorns ca.t_shock matches 1.. run function cartographer_custom_enchantments:enchant_effects/electrocute/branch
-
-#Bleeding
-scoreboard players operation $melee ca.bleeding = $thorns ca.t_bleed
-execute if score $thorns ca.t_bleed matches 1.. run function cartographer_custom_enchantments:enchant_effects/bleeding/branch
-
-#Stunning
-scoreboard players operation $melee ca.stunning = $thorns ca.t_stun
-execute if score $thorns ca.t_stun matches 1.. run function cartographer_custom_enchantments:enchant_effects/thorns/chance
-execute if score $thorns ca.t_stun matches 1.. run function cartographer_custom_enchantments:enchant_effects/stunning/branch
-
-#Possession
-scoreboard players operation $melee ca.possession = $thorns ca.t_poss
-execute if score $thorns ca.t_poss matches 1.. run function cartographer_custom_enchantments:enchant_effects/thorns/chance
-execute if score $thorns ca.t_poss matches 1.. run function cartographer_custom_enchantments:enchant_effects/possession/branch
-
-#Exposing
-scoreboard players operation $melee ca.exposing = $thorns ca.t_expose
-execute if score $thorns ca.t_expose matches 1.. run function cartographer_custom_enchantments:enchant_effects/exposing/branch
-
 #Executioner
 scoreboard players operation $exec ca.executioner = $thorns ca.t_exec
 execute if score $thorns ca.t_exec matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
+
+#Statuses!
+function cartographer_custom_statuses:apply_effects/apply/create_aec
+function cartographer_custom_statuses:status_inflict/apply/set_statuses
 
 #Reset this stat
 scoreboard players set $exec_dmg bbl.storage 0

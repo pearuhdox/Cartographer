@@ -14,7 +14,7 @@
     "display": {
         "title": {
             "text": "Two Handed               ",
-            "color": "red"
+            "color": "#ff8c8c"
         },
         "description": {
             "color": "white",

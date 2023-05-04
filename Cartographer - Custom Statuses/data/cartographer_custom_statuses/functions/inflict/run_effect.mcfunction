@@ -1,3 +1,6 @@
+#Find the thrower for entropy values
+function cartographer_custom_statuses:inflict/entropy/identify_player
+
 #This runs!
 execute unless score @s ca.lifetime matches 1.. run data modify storage cartographer_custom_statuses:infliction data set value {}
 execute unless score @s ca.lifetime matches 1.. run data modify storage cartographer_custom_statuses:infliction data.Item set from entity @s data.Item
@@ -24,3 +27,7 @@ execute if score $did_linger_inflict ca.mob_var matches 1.. run scoreboard playe
 scoreboard players remove @s ca.lifetime 1
 
 execute unless score @s ca.lifetime matches 1.. run kill @s
+
+execute as @a[tag=ca.pot_thrower] at @s run function cartographer_custom_statuses:inflict/entropy/branch
+
+scoreboard players set $do_chance ca.status_var -1

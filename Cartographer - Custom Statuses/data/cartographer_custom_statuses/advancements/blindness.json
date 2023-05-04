@@ -2,14 +2,14 @@
     "display": {
         "title": {
             "text": "Blindness                ",
-            "color": "#CC73FF"
+            "color": "#57dec0"
         },
         "description": {
-            "text": "Afflicted has a greatly reduced follow and sight range.",
+            "text": "Affected mob has a greatly reduced follow and sight range.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:black_concrete"
+            "item": "minecraft:ink_sac"
         },
         "frame": "task",
         "show_toast": true,
@@ -22,7 +22,17 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomPotionEffects:[{Id:15b,Amplifier:0b}]}"
+                        "nbt": "{CustomPotionEffects:[{Id:15}]}"
+                    }
+                ]
+            }
+        },
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{ApplyEffects:[{Id:15}]}"
                     }
                 ]
             }
@@ -30,7 +40,8 @@
     },
     "requirements": [
         [
-            "find5"
+            "find5",
+            "find1"
         ]
     ],
     "rewards": {

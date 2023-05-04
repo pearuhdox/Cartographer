@@ -17,13 +17,11 @@ function motion:motion/push
 
 execute if score $deadeye ca.flame matches 1 run data merge entity @s {Fire:85}
 execute if score $deadeye ca.frost matches 1 run effect give @s slowness 5 1
-execute if score $deadeye ca.expose matches 1 run effect give @s bad_omen 5 1
-execute if score $deadeye ca.electrode matches 1 run scoreboard players set @s ca.effect_shock 5
-execute if score $deadeye ca.infect matches 1 run scoreboard players set @s ca.effect_infect 5
-execute if score $deadeye ca.bleed matches 1 unless entity @s[scores={ca.effect_bleed=1..}] run scoreboard players set @s ca.effect_bleed 5
-execute if score $deadeye ca.bleed matches 1 if entity @s[scores={ca.effect_bleed=1..}] run scoreboard players add @s ca.effect_bleed 11
 
-execute if score $deadeye ca.flash matches 1 run scoreboard players add @s ca.effect_stun 15
+
+execute if score $do_apply_effects ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
+execute if score $do_status_inflict ca.status_var matches 1.. at @s run function cartographer_custom_statuses:status_inflict/apply/set_statuses
+
 
 scoreboard players set $hit_check ca.deadeye 1
 

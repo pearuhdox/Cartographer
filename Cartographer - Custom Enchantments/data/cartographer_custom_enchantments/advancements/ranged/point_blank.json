@@ -9,7 +9,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:bow"
+            "item": "minecraft:copper_ingot"
         },
         "frame": "task",
         "show_toast": true,
