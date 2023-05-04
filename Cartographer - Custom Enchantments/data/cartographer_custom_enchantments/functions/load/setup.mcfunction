@@ -12,9 +12,7 @@ scoreboard objectives add ca.p_cleansing dummy
 scoreboard objectives add ca.wi_cleansing dummy
 scoreboard objectives add ca.exposing dummy
 scoreboard objectives add ca.concealed dummy
-scoreboard objectives add ca.electrode dummy
 scoreboard objectives add ca.current dummy
-scoreboard objectives add ca.infection dummy
 scoreboard objectives add ca.deadeye dummy
 scoreboard objectives add ca.duelist dummy
 scoreboard objectives add ca.echo dummy
@@ -23,7 +21,6 @@ scoreboard objectives add ca.energetic dummy
 scoreboard objectives add ca.eruption dummy
 scoreboard objectives add ca.evasion dummy
 scoreboard objectives add ca.executioner dummy
-scoreboard objectives add ca.flash dummy
 scoreboard objectives add ca.fleetfoot dummy
 scoreboard objectives add ca.frenzy dummy
 scoreboard objectives add ca.frost dummy
@@ -33,17 +30,11 @@ scoreboard objectives add ca.hydraulic dummy
 scoreboard objectives add ca.infinity dummy
 scoreboard objectives add ca.lifesteal dummy
 scoreboard objectives add ca.overcharge dummy
-scoreboard objectives add ca.electrocute dummy
-scoreboard objectives add ca.expose dummy
 scoreboard objectives add ca.point_blank dummy
-scoreboard objectives add ca.possession dummy
-scoreboard objectives add ca.possess dummy
-scoreboard objectives add ca.infect dummy
 scoreboard objectives add ca.first_strike dummy
 scoreboard objectives add ca.rally dummy
 scoreboard objectives add ca.repeating dummy
 scoreboard objectives add ca.regen dummy
-scoreboard objectives add ca.bleed dummy
 scoreboard objectives add ca.ricochet dummy
 scoreboard objectives add ca.sapper dummy
 scoreboard objectives add ca.satiation dummy
@@ -53,13 +44,11 @@ scoreboard objectives add ca.singe dummy
 scoreboard objectives add ca.cauterize dummy
 scoreboard objectives add ca.splintering dummy
 scoreboard objectives add ca.spurs dummy
-scoreboard objectives add ca.stunning dummy
 scoreboard objectives add ca.surging_strike dummy
 scoreboard objectives add ca.transfig dummy
 scoreboard objectives add ca.tempest dummy
 scoreboard objectives add ca.tempo_theft dummy
 scoreboard objectives add ca.trueshot dummy
-scoreboard objectives add ca.bleeding dummy
 scoreboard objectives add ca.explosive dummy
 scoreboard objectives add ca.thorns dummy
 scoreboard objectives add ca.respiration dummy
@@ -121,8 +110,6 @@ scoreboard objectives add ca.multishot dummy
 scoreboard objectives add ca.ammo_main dummy
 scoreboard objectives add ca.ammo_off dummy
 
-scoreboard objectives add ca.flash_time dummy
-scoreboard objectives add ca.saved_flash dummy
 
 scoreboard objectives add ca.loyalty_time dummy
 scoreboard objectives add ca.loyalty_speed dummy
@@ -234,11 +221,7 @@ scoreboard objectives add ca.use_lingerpot minecraft.used:minecraft.lingering_po
 scoreboard objectives add ca.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add ca.use_egg minecraft.used:minecraft.egg
 
-scoreboard objectives add ca.possess_cdl dummy
-scoreboard objectives add ca.possess_bias dummy
 
-scoreboard objectives add ca.possess_cdl dummy
-scoreboard objectives add ca.possess_bias dummy
 
 scoreboard objectives add ca.trans_cdl dummy
 scoreboard objectives add ca.trans_bias dummy

@@ -55,17 +55,12 @@ execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_se
 execute unless entity @s[tag=ca.en.f_spur] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"spurs"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_spur] run function cartographer_custom_enchantments:descriptions/write/passive/spurs
 
-execute unless entity @s[tag=ca.en.f_blee] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"bleeding"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_blee] run function cartographer_custom_enchantments:descriptions/write/melee/bleeding
-
 execute unless entity @s[tag=ca.en.f_duel] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"duelist"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_duel] run function cartographer_custom_enchantments:descriptions/write/melee/duelist
 
 execute unless entity @s[tag=ca.en.f_echo] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"echo"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_echo] run function cartographer_custom_enchantments:descriptions/write/melee/echo
 
-execute unless entity @s[tag=ca.en.f_elec] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"electrocute"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_elec] run function cartographer_custom_enchantments:descriptions/write/melee/electrocute
 
 execute unless entity @s[tag=ca.en.f_evoc] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"evocation"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_evoc] run function cartographer_custom_enchantments:descriptions/write/melee/evocation
@@ -82,29 +77,18 @@ execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_fr
 execute unless entity @s[tag=ca.en.f_hunt] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"hunter"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_hunt] run function cartographer_custom_enchantments:descriptions/write/melee/hunter
 
-execute unless entity @s[tag=ca.en.f_infe] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"infection"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_infe] run function cartographer_custom_enchantments:descriptions/write/melee/infection
 
 execute unless entity @s[tag=ca.en.f_sing] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"singe"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_sing] run function cartographer_custom_enchantments:descriptions/write/melee/singe
 
-execute unless entity @s[tag=ca.en.f_stun] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"stunning"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_stun] run function cartographer_custom_enchantments:descriptions/write/melee/stunning
 
 execute unless entity @s[tag=ca.en.f_surg] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"surging_strike"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_surg] run function cartographer_custom_enchantments:descriptions/write/melee/surging_strike
 
-execute unless entity @s[tag=ca.en.f_tran] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"transfiguration"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_tran] run function cartographer_custom_enchantments:descriptions/write/melee/transfiguration
 
 execute unless entity @s[tag=ca.en.f_fstr] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"first_strike"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_fstr] run function cartographer_custom_enchantments:descriptions/write/melee/first_strike
 
-execute unless entity @s[tag=ca.en.f_rble] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"bleed"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_rble] run function cartographer_custom_enchantments:descriptions/write/ranged/bleed
-
-execute unless entity @s[tag=ca.en.f_rele] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"electrode"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_rele] run function cartographer_custom_enchantments:descriptions/write/ranged/electrode
 
 execute unless entity @s[tag=ca.en.f_expl] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"explosive"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_expl] run function cartographer_custom_enchantments:descriptions/write/ranged/explosive
@@ -115,14 +99,10 @@ execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_re
 execute unless entity @s[tag=ca.en.f_rfro] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"frost"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_rfro] run function cartographer_custom_enchantments:descriptions/write/ranged/frost
 
-execute unless entity @s[tag=ca.en.f_flas] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"flash"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_flas] run function cartographer_custom_enchantments:descriptions/write/ranged/flash
 
 execute unless entity @s[tag=ca.en.f_flee] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"fleetfoot"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_flee] run function cartographer_custom_enchantments:descriptions/write/ranged/fleetfoot
 
-execute unless entity @s[tag=ca.en.f_rinf] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"infect"}].lvl
-execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_rinf] run function cartographer_custom_enchantments:descriptions/write/ranged/infect
 
 execute unless entity @s[tag=ca.en.f_poin] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"point_blank"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_poin] run function cartographer_custom_enchantments:descriptions/write/ranged/point_blank

@@ -12,23 +12,6 @@ execute unless data storage ca.susu:enchants thorns_items.feet.tag.CustomEnchant
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"frostbite"}].lvl
 scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"bleeding"}].lvl
-scoreboard players operation @s ca.t_bleed += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"electrocute"}].lvl
-scoreboard players operation @s ca.t_shock += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"exposing"}].lvl
-scoreboard players operation @s ca.t_expose += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"infection"}].lvl
-scoreboard players operation @s ca.t_infection += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"possession"}].lvl
-scoreboard players operation @s ca.t_poss += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.feet.tag.CustomEnchantments[{id:"executioner"}].lvl
 scoreboard players operation @s ca.t_exec += $temp ca.susu
@@ -45,23 +28,6 @@ execute unless data storage ca.susu:enchants thorns_items.legs.tag.CustomEnchant
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"frostbite"}].lvl
 scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"bleeding"}].lvl
-scoreboard players operation @s ca.t_bleed += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"electrocute"}].lvl
-scoreboard players operation @s ca.t_shock += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"exposing"}].lvl
-scoreboard players operation @s ca.t_expose += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"infection"}].lvl
-scoreboard players operation @s ca.t_infection += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"possession"}].lvl
-scoreboard players operation @s ca.t_poss += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.CustomEnchantments[{id:"executioner"}].lvl
 scoreboard players operation @s ca.t_exec += $temp ca.susu
@@ -78,24 +44,6 @@ execute unless data storage ca.susu:enchants thorns_items.body.tag.CustomEnchant
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"frostbite"}].lvl
 scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"bleeding"}].lvl
-scoreboard players operation @s ca.t_bleed += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"electrocute"}].lvl
-scoreboard players operation @s ca.t_shock += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"exposing"}].lvl
-scoreboard players operation @s ca.t_expose += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"infection"}].lvl
-scoreboard players operation @s ca.t_infection += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"possession"}].lvl
-scoreboard players operation @s ca.t_poss += $temp ca.susu
-
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.body.tag.CustomEnchantments[{id:"executioner"}].lvl
 scoreboard players operation @s ca.t_exec += $temp ca.susu
 
@@ -110,24 +58,6 @@ execute unless data storage ca.susu:enchants thorns_items.head.tag.CustomEnchant
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"frostbite"}].lvl
 scoreboard players operation @s ca.t_frost += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"bleeding"}].lvl
-scoreboard players operation @s ca.t_bleed += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"electrocute"}].lvl
-scoreboard players operation @s ca.t_shock += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"exposing"}].lvl
-scoreboard players operation @s ca.t_expose += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"infection"}].lvl
-scoreboard players operation @s ca.t_infection += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"possession"}].lvl
-scoreboard players operation @s ca.t_poss += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.head.tag.CustomEnchantments[{id:"executioner"}].lvl
 scoreboard players operation @s ca.t_exec += $temp ca.susu
@@ -144,24 +74,6 @@ execute unless data storage ca.susu:enchants thorns_items.offh.tag.CustomEnchant
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"frostbite"}].lvl
 scoreboard players operation @s ca.t_frost += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"bleeding"}].lvl
-scoreboard players operation @s ca.t_bleed += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"electrocute"}].lvl
-scoreboard players operation @s ca.t_shock += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"exposing"}].lvl
-scoreboard players operation @s ca.t_expose += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"infection"}].lvl
-scoreboard players operation @s ca.t_infection += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"possession"}].lvl
-scoreboard players operation @s ca.t_poss += $temp ca.susu
-
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.offh.tag.CustomEnchantments[{id:"executioner"}].lvl
 scoreboard players operation @s ca.t_exec += $temp ca.susu
 
@@ -176,24 +88,6 @@ execute unless data storage ca.susu:enchants thorns_items.main.tag.CustomEnchant
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"frostbite"}].lvl
 scoreboard players operation @s ca.t_frost += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"stunning"}].lvl
-scoreboard players operation @s ca.t_stun += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"bleeding"}].lvl
-scoreboard players operation @s ca.t_bleed += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"electrocute"}].lvl
-scoreboard players operation @s ca.t_shock += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"exposing"}].lvl
-scoreboard players operation @s ca.t_expose += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"infection"}].lvl
-scoreboard players operation @s ca.t_infection += $temp ca.susu
-
-execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"possession"}].lvl
-scoreboard players operation @s ca.t_poss += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.main.tag.CustomEnchantments[{id:"executioner"}].lvl
 scoreboard players operation @s ca.t_exec += $temp ca.susu

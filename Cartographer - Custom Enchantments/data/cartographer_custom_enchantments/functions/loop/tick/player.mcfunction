@@ -99,8 +99,6 @@ execute if score @s ca.death_time matches 2..20 run function cartographer_custom
 #Tempo Theft Effect - Players
 execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect_player
 
-#Flash Crossbows
-execute if score @s ca.flash matches 1.. if score @s ca.load_cro_time matches 1.. if predicate cartographer_custom_enchantments:hold_crossbow run function cartographer_custom_enchantments:enchant_effects/flash/crossbow_load
 
 #Infinity 3.0
 function cartographer_custom_enchantments:enchant_effects/infinity/player

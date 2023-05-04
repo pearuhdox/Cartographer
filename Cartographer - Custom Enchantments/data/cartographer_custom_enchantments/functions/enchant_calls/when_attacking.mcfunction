@@ -15,8 +15,6 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.fir
 #Cauterize
 execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.cauterize=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/cauterize/melee
 
-#Infection
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.infection=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/infection
 #Duelist
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.duelist=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/duelist
 #Echo
@@ -27,14 +25,9 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.evo
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.frostbite=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/frostbite
 #Hunter
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.hunter=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/hunter
-#Electrocute
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.electrocute=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/electrocute
-#Possession
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.possession=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/possession
+
 #Singe
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.singe=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/singe
-#Stunning
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.stunning=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/stunning
 
 #Rally
 execute if score $rally_restore ca.rally matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/restore
@@ -43,8 +36,6 @@ execute if score $rally_restore ca.rally matches 1.. run function cartographer_c
 #Surging Strike - Runs after Stunning to use melee chance calc
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.surging_strike=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/surging_strike
 
-#Bleeding
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.bleeding=1..},advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/bleeding
 
 #First Strike
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.first_strike=1..},tag=can_first_strike,advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/first_strike

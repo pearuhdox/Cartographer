@@ -39,9 +39,3 @@ execute if entity @s[scores={ca.surging_strike=1..}] as @e[type=#bb:hostile,tag=
 scoreboard players set $melee ca.attack_val 0
 scoreboard players set $melee ca.fire_aspect 0
 scoreboard players set $melee ca.frostbite 0
-scoreboard players set $melee ca.exposing 0
-scoreboard players set $melee ca.bleeding 0
-scoreboard players set $melee ca.electrocute 0
-scoreboard players set $melee ca.stunning 0
-scoreboard players set $melee ca.infection 0
-scoreboard players set $melee ca.possession 0

@@ -1266,7 +1266,7 @@ Bug Fixes and Optimizations:
 - Fixed a bug where Conductive and Rend didn't work more than 160 blocks from 0,0.
 - Fixed a bug where Hydraulic left behind permanent marker Armor Stands.
 - Fixed a bug where items that were used or broken with Custom Enchantments still "existed" on the player, providing their effects.
-- Fixed a bug where custom damage effects did less damage to Wither Skeletons and did not make the damage ca.flash.
+- Fixed a bug where custom damage effects did less damage to Wither Skeletons and did not make the damage flash.
 - Fixed a bug where multiplayer token systems could cause more than 1 ability to activate at a time.
 
 - About 60 or 70% of the @e calls have been removed from the pack. (Ballparking ~200 separate calls)

@@ -29,11 +29,5 @@ scoreboard players set $eruption ca.cauterize 0
 scoreboard players set $eruption ca.fire_aspect 0
 scoreboard players set $eruption ca.knockback 0
 scoreboard players set $eruption ca.frostbite 0
-scoreboard players set $eruption ca.stunning 0
-scoreboard players set $eruption ca.exposing 0
-scoreboard players set $eruption ca.infection 0
-scoreboard players set $eruption ca.bleeding 0
-scoreboard players set $eruption ca.electrocute 0
-scoreboard players set $eruption ca.possession 0
 scoreboard players set $eruption ca.evocation 0
 scoreboard players set $eruption ca.executioner 0

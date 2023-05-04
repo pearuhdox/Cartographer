@@ -1,8 +1,7 @@
 #Ashen Debuff (Smouldering)
 execute if score @s ca.brittle_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/cauterize/brittle
 
-#Flash Time Debuff
-execute if score @s ca.flash_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/flash/time
+
 
 #Tempo Theft Debuff
 execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect_mob
