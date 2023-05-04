@@ -5,7 +5,7 @@
             "color": "#CC73FF"
         },
         "description": {
-            "text": "Afflicted cannot move, attack, or use skills. In progress channeled skills are interrupted.",
+            "text": "Afflicted cannot move, attack, or use abilities. In progress abilities are interrupted.",
             "color": "white"
         },
         "icon": {
