@@ -16,16 +16,16 @@ tellraw @s {"text":"------------------------------------------","color":"#ACFFA6
 tellraw @s [{"text":"Satiation","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the holder/wearer consumes a food item (or drinkable potion) they will receive 15 seconds of Absorption and 5 seconds of Resistance I.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the holder/wearer consumes a food item (or drinkable potion) they will receive a random combat buff for a short duration. The player can receive Speed, Strength, Regeneration, Haste, or Absorption I.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Applicable Slots: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Armor, Offhand, Food.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Maximum Level: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"3 (III)","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
-tellraw @s [{"text":"Scaling: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"+1 Absorption Potency (per level)","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Scaling: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"+10 Seconds of Duration (per level)","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
-tellraw @s [{"text":"[⏎] ","color":"green","bold":true,"italic":false},{"text":"Return","color":"green","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return up one page.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 203"}}]
+tellraw @s [{"text":"[⏎] ","color":"green","bold":true,"italic":false},{"text":"Return","color":"green","bold":true,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Return up one page.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/trigger ca.lexica_trig set 210"}}]
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 

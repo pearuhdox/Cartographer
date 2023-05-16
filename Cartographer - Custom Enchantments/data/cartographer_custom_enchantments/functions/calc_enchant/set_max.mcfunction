@@ -1,5 +1,5 @@
 execute if score @s ca.adrenaline matches 7.. run scoreboard players set @s ca.adrenaline 6
-execute if score @s ca.agility matches 6.. run scoreboard players set @s ca.agility 5
+execute if score @s ca.agility matches 4.. run scoreboard players set @s ca.agility 3
 execute if score @s ca.aquadynamic matches 2.. run scoreboard players set @s ca.aquadynamic 1
 execute if score @s ca.s_cleansing matches 2.. run scoreboard players set @s ca.s_cleansing 1
 execute if score @s ca.f_cleansing matches 2.. run scoreboard players set @s ca.f_cleansing 1
@@ -49,6 +49,23 @@ execute if score @s ca.respiration matches 11.. run scoreboard players set @s ca
 execute if score @s ca.recoil matches 11.. run scoreboard players set @s ca.recoil 10
 execute if score @s ca.collapse matches 2.. run scoreboard players set @s ca.recoil 1
 execute if score @s ca.echo matches 5.. run scoreboard players set @s ca.echo 4
+execute if score @s ca.resourceful matches 11.. run scoreboard players set @s ca.resourceful 10
+
+execute if score @s ca.gravity matches 5.. run scoreboard players set @s ca.gravity 4
+execute if score @s ca.smite matches 11.. run scoreboard players set @s ca.gravity 10
+execute if score @s ca.quake matches 11.. run scoreboard players set @s ca.quake 10
+execute if score @s ca.momentum matches 5.. run scoreboard players set @s ca.quake 4
+
+execute if score @s ca.confidence matches 11.. run scoreboard players set @s ca.confidence 10
+execute if score @s ca.desperation matches 11.. run scoreboard players set @s ca.desperation 10
+execute if score @s ca.stalwart matches 11.. run scoreboard players set @s ca.stalwart 10
+
+execute if score @s ca.shielding matches 7.. run scoreboard players set @s ca.shielding 6
+
+execute if score @s ca.sprint_dash matches 4.. run scoreboard players set @s ca.sprint_dash 3
+execute if score @s ca.disengage matches 4.. run scoreboard players set @s ca.disengage 3
+
+execute if score @s ca.hex_eater matches 4.. run scoreboard players set @s ca.hex_eater 3
 
 execute if score @s ca.swift_sneak matches 11.. run scoreboard players set @s ca.swift_sneak 10
 execute if score @s ca.soul_speed matches 11.. run scoreboard players set @s ca.soul_speed 10

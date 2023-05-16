@@ -1,3 +1,6 @@
+#Infinity Refresh
+function cartographer_custom_enchantments:enchant_effects/infinity/kill_handler/tick_down
+
 #Adrenaline
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.adrenaline matches 1.. run function cartographer_custom_enchantments:enchant_effects/adrenaline
 #Auto Charge
@@ -9,11 +12,14 @@ execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.frenzy matche
 #Lifesteal
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal
 
+#Quake
+execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/find
+
 #Aquadynamic Refresh
 #Lifesteal
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.aquadynamic matches 1.. run function cartographer_custom_enchantments:enchant_effects/aquadynamic/refresh_kill
 
-#Melee effects run on melee kills only
+#Melee effects run on melee kills onlye
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.deal_mel_dmg matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.deal_mel_dmg2 matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.deal_mel_dmg3 matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee

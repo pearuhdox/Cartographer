@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Momentum                 ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "The user sprints to charge up, gaining speed and damage. When fully charged, a melee attack releases all charge and hits all nearby mobs.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:iron_horse_armor"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"momentum\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/momentum"
+    },
+    "parent": "cartographer_custom_enchantments:passive/lifesteal"
+}

@@ -1,5 +1,7 @@
 {
     "values": [
-      "cartographer_custom_enchantments:curse_damage"
+      "cartographer_custom_enchantments:curse_damage",
+      "cartographer_custom_enchantments:curse_magic_damage",
+      "cartographer_custom_enchantments:second_wind_damage"
     ]
   }

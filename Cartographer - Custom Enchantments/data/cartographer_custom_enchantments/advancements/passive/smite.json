@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Smite                    ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "While worn or held, periodically damages a random mob near you. It cannot strike the same mob twice in a row.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:golden_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"smite\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/smite"
+    },
+    "parent": "cartographer_custom_enchantments:passive/shielding"
+}

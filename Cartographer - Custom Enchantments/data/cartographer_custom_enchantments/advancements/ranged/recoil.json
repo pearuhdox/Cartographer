@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/ranged/recoil"
     },
-    "parent": "cartographer_custom_enchantments:ranged/point_blank"
+    "parent": "cartographer_custom_enchantments:ranged/deadeye"
 }

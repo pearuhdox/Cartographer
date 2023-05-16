@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Confidence               ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "While above 75% Max Health, deal additional melee damage.",
+            "color": "aqua"
+        },
+        "icon": {
+            "item": "minecraft:diamond"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"confidence\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/confidence"
+    },
+    "parent": "cartographer_custom_enchantments:passive/concealed"
+}

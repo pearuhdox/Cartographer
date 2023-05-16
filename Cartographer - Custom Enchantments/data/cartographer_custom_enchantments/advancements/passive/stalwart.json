@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Stalwart                 ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "While below 50% Max Health, gain additional armor.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:shield"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"stalwart\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/stalwart"
+    },
+    "parent": "cartographer_custom_enchantments:passive/spurs"
+}

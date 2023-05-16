@@ -1,0 +1,1 @@
+execute if score @s ca.curse_rusting matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_rusting/start

@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"curse_drowning\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Curse of Drowning        ",
+            "color": "#ff8c8c"
+        },
+        "description": {
+            "color": "white",
+            "text": "While touching water, you will slowly take drowning damage."
+        },
+        "icon": {
+            "item": "minecraft:heart_of_the_sea"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/curse/drowning"
+    },
+    "parent": "cartographer_custom_enchantments:curse/clumsiness"
+}

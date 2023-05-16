@@ -55,6 +55,68 @@ scoreboard objectives add ca.respiration dummy
 scoreboard objectives add ca.recoil dummy
 scoreboard objectives add ca.collapse dummy
 
+scoreboard objectives add ca.inf_kc_var dummy
+scoreboard objectives add ca.inf_kc_0 dummy
+scoreboard objectives add ca.inf_kc_1 dummy
+scoreboard objectives add ca.inf_kc_2 dummy
+scoreboard objectives add ca.inf_kc_3 dummy
+scoreboard objectives add ca.inf_kc_4 dummy
+scoreboard objectives add ca.inf_kc_5 dummy
+scoreboard objectives add ca.inf_kc_6 dummy
+scoreboard objectives add ca.inf_kc_7 dummy
+scoreboard objectives add ca.inf_kc_8 dummy
+
+scoreboard objectives add ca.inf_cdl_var dummy
+scoreboard objectives add ca.inf_cdl_0 dummy
+scoreboard objectives add ca.inf_cdl_1 dummy
+scoreboard objectives add ca.inf_cdl_2 dummy
+scoreboard objectives add ca.inf_cdl_3 dummy
+scoreboard objectives add ca.inf_cdl_4 dummy
+scoreboard objectives add ca.inf_cdl_5 dummy
+scoreboard objectives add ca.inf_cdl_6 dummy
+scoreboard objectives add ca.inf_cdl_7 dummy
+scoreboard objectives add ca.inf_cdl_8 dummy
+
+
+scoreboard objectives add ca.gravity dummy
+scoreboard objectives add ca.smite dummy
+scoreboard objectives add ca.quake dummy
+scoreboard objectives add ca.momentum dummy
+
+scoreboard objectives add ca.momentum_charge minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add ca.momentum_tier dummy
+
+scoreboard objectives add ca.confidence dummy
+scoreboard objectives add ca.desperation dummy
+scoreboard objectives add ca.stalwart dummy
+
+scoreboard objectives add ca.shielding dummy
+scoreboard objectives add ca.shielding_time dummy
+
+scoreboard objectives add ca.sprint_dash dummy
+scoreboard objectives add ca.disengage dummy
+
+scoreboard objectives add ca.hex_eater dummy
+
+scoreboard objectives add ca.repulsion dummy
+scoreboard objectives add ca.resourceful dummy
+
+scoreboard objectives add ca.sprint_dash_time dummy
+scoreboard objectives add ca.sprint_dash_use minecraft.custom:minecraft.jump
+scoreboard objectives add ca.sprint_dash_x dummy
+scoreboard objectives add ca.sprint_dash_y dummy
+scoreboard objectives add ca.sprint_dash_z dummy
+
+scoreboard objectives add ca.disengage_time dummy
+scoreboard objectives add ca.disengage_use minecraft.custom:minecraft.jump
+scoreboard objectives add ca.disengage_x dummy
+scoreboard objectives add ca.disengage_y dummy
+scoreboard objectives add ca.disengage_z dummy
+
+scoreboard objectives add ca.gravity_fall minecraft.custom:minecraft.fall_one_cm
+
+scoreboard objectives add ca.smite_time dummy
+
 scoreboard objectives add ca.proj_registry dummy
 scoreboard objectives add ca.deadeye_time dummy
 
@@ -83,21 +145,40 @@ scoreboard objectives add ca.wavedash_time dummy
 
 scoreboard objectives add ca.write_ench dummy
 
+scoreboard objectives add ca.g_fire dummy
+scoreboard objectives add ca.g_frost dummy
+scoreboard objectives add ca.g_knock dummy
+scoreboard objectives add ca.g_exec dummy
+
+scoreboard objectives add ca.mo_fire dummy
+scoreboard objectives add ca.mo_frost dummy
+scoreboard objectives add ca.mo_knock dummy
+scoreboard objectives add ca.mo_exec dummy
+
+scoreboard objectives add ca.qu_fire dummy
+scoreboard objectives add ca.qu_frost dummy
+scoreboard objectives add ca.qu_knock dummy
+scoreboard objectives add ca.qu_exec dummy
+
+scoreboard objectives add ca.sm_fire dummy
+scoreboard objectives add ca.sm_frost dummy
+scoreboard objectives add ca.sm_knock dummy
+scoreboard objectives add ca.sm_exec dummy
+
 scoreboard objectives add ca.t_fire dummy
 scoreboard objectives add ca.t_frost dummy
-scoreboard objectives add ca.t_stun dummy
-scoreboard objectives add ca.t_bleed dummy
-scoreboard objectives add ca.t_shock dummy
-scoreboard objectives add ca.t_expose dummy
-scoreboard objectives add ca.t_infection dummy
 scoreboard objectives add ca.t_knock dummy
-scoreboard objectives add ca.t_poss dummy
 scoreboard objectives add ca.t_exec dummy
 
 scoreboard objectives add ca.s_adren dummy
 scoreboard objectives add ca.s_frenzy dummy
 scoreboard objectives add ca.s_energ dummy
 scoreboard objectives add ca.s_con dummy
+
+scoreboard objectives add ca.re_fire dummy
+scoreboard objectives add ca.re_frost dummy
+scoreboard objectives add ca.re_knock dummy
+scoreboard objectives add ca.re_exec dummy
 
 scoreboard objectives add ca.loyalty dummy
 scoreboard objectives add ca.fire_aspect dummy
@@ -114,6 +195,20 @@ scoreboard objectives add ca.ammo_off dummy
 scoreboard objectives add ca.loyalty_time dummy
 scoreboard objectives add ca.loyalty_speed dummy
 scoreboard objectives add ca.loyalty_refund_cooldown dummy
+
+scoreboard objectives add ca.reconstruction dummy
+
+scoreboard objectives add ca.clumsy_fall minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add ca.curse_drown_time dummy
+
+scoreboard objectives add ca.curse_environ_dmg minecraft.custom:minecraft.damage_taken
+
+scoreboard objectives add ca.curse_clumsiness dummy
+scoreboard objectives add ca.curse_flammability dummy
+scoreboard objectives add ca.curse_jinxing dummy
+scoreboard objectives add ca.curse_drowning dummy
+
+scoreboard objectives add ca.curse_rusting dummy
 
 scoreboard objectives add ca.curse_mal dummy
 scoreboard objectives add ca.curse_regret dummy
@@ -255,6 +350,7 @@ scoreboard objectives add ca.two_hand_time dummy
 
 scoreboard objectives add ca.dummy dummy
 scoreboard objectives add ca.var dummy
+scoreboard objectives add ca.ench_var dummy
 
 scoreboard objectives add ca.adren_time dummy
 scoreboard objectives add ca.frenz_time dummy
@@ -300,3 +396,6 @@ setblock 4206900 0 4206899 purple_shulker_box replace
 
 #Initialize Global Value
 execute unless score $gl_ui_loc ca.gamerule matches 0.. run scoreboard players set $gl_ui_loc ca.gamerule 0
+
+#Summon Marker for sprint_dash
+summon marker 4206900 0 4206900 {UUID:[I;823664661,395388179,293672216,0],Tags:["ca.sprint_dash_marker"]}

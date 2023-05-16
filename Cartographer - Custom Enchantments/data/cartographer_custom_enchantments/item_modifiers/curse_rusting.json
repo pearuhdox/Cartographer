@@ -1,0 +1,14 @@
+{
+    "function": "minecraft:copy_nbt",
+    "source": {
+        "type": "storage",
+        "source": "cartographer_custom_enchantments:curse_rusting"
+    },
+    "ops": [
+        {
+            "source": "Damage",
+            "target": "Damage",
+            "op": "replace"
+        }
+    ]
+}

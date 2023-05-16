@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/curse/shattering"
     },
-    "parent": "cartographer_custom_enchantments:curse/regret"
+    "parent": "cartographer_custom_enchantments:curse/rusting"
 }

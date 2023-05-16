@@ -1,9 +1,7 @@
 
-scoreboard players operation @s bbl.heal_queue = $sw_abs_check ca.second_wind
-
-function bb:call/hpm/player/heal
-
+effect give @s regeneration 1 4
 effect clear @s absorption
+effect clear @s resistance
 
 playsound minecraft:block.respawn_anchor.charge player @s ~ ~ ~ 0.6 2
 playsound minecraft:block.respawn_anchor.charge player @s ~ ~ ~ 0.6 1

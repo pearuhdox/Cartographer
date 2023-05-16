@@ -2,7 +2,7 @@
 
 function cartographer_custom_enchantments:calc_enchant/reset
 
-function #cartographer_custom_enchantments:intercept_calc_enchant
+#function #cartographer_custom_enchantments:intercept_calc_enchant
 
 #Find Custom Items on the Equipped Slots
 function cartographer_custom_enchantments:calc_enchant/find_custom
@@ -16,7 +16,12 @@ execute if entity @s[tag=check_feet] run function cartographer_custom_enchantmen
 execute unless entity @s[predicate=cartographer_custom_enchantments:hold_armor_offhand] run function cartographer_custom_enchantments:calc_enchant/offhand
 execute unless entity @s[predicate=cartographer_custom_enchantments:hold_armor_mainhand] run function cartographer_custom_enchantments:calc_enchant/mainhand
 
-function cartographer_custom_enchantments:calc_enchant/thorns
+execute if score @s ca.thorns matches 1.. run function cartographer_custom_enchantments:calc_enchant/thorns
+execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:calc_enchant/gravity
+execute if score @s ca.smite matches 1.. run function cartographer_custom_enchantments:calc_enchant/smite
+execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:calc_enchant/quake
+execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:calc_enchant/momentum
+execute if score @s ca.repulsion matches 1.. run function cartographer_custom_enchantments:calc_enchant/repulsion
 
 function cartographer_custom_enchantments:calc_enchant/sapper
 
@@ -25,7 +30,11 @@ function cartographer_custom_enchantments:calc_enchant/set_max
 execute if entity @s[tag=!doing_auto_charge] run function cartographer_custom_enchantments:calc_enchant/auto_charge
 function cartographer_custom_enchantments:calc_enchant/combat_resetters
 
-function cartographer_custom_enchantments:calc_enchant/curse_malevolence
+function cartographer_custom_enchantments:calc_enchant/curse_malevolence/start
+
+function cartographer_custom_enchantments:calc_enchant/curse_rusting/start
+
+function cartographer_custom_enchantments:calc_enchant/reconstruction/start
 
 function cartographer_custom_enchantments:calc_enchant/has_passive
 
@@ -34,6 +43,7 @@ function cartographer_custom_enchantments:enchant_effects/curse_two_handed/inv_f
 
 #Reset any infinity cooldowns if the items move
 function cartographer_custom_enchantments:calc_enchant/infinity_cdl
+function cartographer_custom_enchantments:calc_enchant/infinity_kc
 
 scoreboard players set $cu_en_ranged ca.enabler 1
 scoreboard players set $cu_en_kill ca.enabler 1

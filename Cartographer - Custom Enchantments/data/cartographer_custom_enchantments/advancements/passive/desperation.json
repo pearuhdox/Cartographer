@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Desperation              ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "While below 50% Max Health, deal additional melee damage.",
+            "color": "aqua"
+        },
+        "icon": {
+            "item": "minecraft:redstone"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"desperation\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/desperation"
+    },
+    "parent": "cartographer_custom_enchantments:passive/confidence"
+}

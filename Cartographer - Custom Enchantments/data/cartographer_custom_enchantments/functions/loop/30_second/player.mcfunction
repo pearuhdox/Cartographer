@@ -1,0 +1,1 @@
+execute if score @s ca.reconstruction matches 1.. run function cartographer_custom_enchantments:enchant_effects/reconstruction/start

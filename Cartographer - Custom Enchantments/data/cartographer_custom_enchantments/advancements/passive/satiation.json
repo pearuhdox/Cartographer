@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/passive/satiation"
     },
-    "parent": "cartographer_custom_enchantments:passive/regeneration"
+    "parent": "cartographer_custom_enchantments:passive/resourceful"
 }

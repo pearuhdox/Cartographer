@@ -11,5 +11,7 @@
 
 function cartographer_mob_abilities:loop/10_second/reset
 
+execute as @a at @s run function cartographer_core:loop/player/10_second/base
+
 #Function Tag for running things on Cartographer's Clocks
 #function #minecraft:cartographer/clocks/10_seconds

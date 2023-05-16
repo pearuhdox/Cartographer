@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Quake                    ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "While worn or held, killing a mob emits a blast around you that damages nearby mobs.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:golden_axe"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"quake\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/quake"
+    },
+    "parent": "cartographer_custom_enchantments:passive/momentum"
+}

@@ -19,6 +19,7 @@ execute if score @s ca.lexica_trig matches 201 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 202 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/main_2
 execute if score @s ca.lexica_trig matches 203 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main
 execute if score @s ca.lexica_trig matches 204 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main_2
+execute if score @s ca.lexica_trig matches 210 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main_3
 execute if score @s ca.lexica_trig matches 205 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/main
 execute if score @s ca.lexica_trig matches 206 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/main_2
 execute if score @s ca.lexica_trig matches 207 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/main
@@ -34,6 +35,7 @@ execute if score @s ca.lexica_trig matches 218 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 221 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/singe
 execute if score @s ca.lexica_trig matches 222 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/stunning
 execute if score @s ca.lexica_trig matches 223 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/surging_strike
+execute if score @s ca.lexica_trig matches 224 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/hex_eater
 execute if score @s ca.lexica_trig matches 225 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/first_strike
 
 execute if score @s ca.lexica_trig matches 230 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/adrenaline
@@ -42,15 +44,29 @@ execute if score @s ca.lexica_trig matches 232 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 233 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/cauterize
 execute if score @s ca.lexica_trig matches 234 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/cleansing
 execute if score @s ca.lexica_trig matches 235 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/concealed
-execute if score @s ca.lexica_trig matches 236 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/energetic
-execute if score @s ca.lexica_trig matches 237 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/evasion
-execute if score @s ca.lexica_trig matches 238 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/frenzy
-execute if score @s ca.lexica_trig matches 239 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/lifesteal
-execute if score @s ca.lexica_trig matches 240 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/rally
-execute if score @s ca.lexica_trig matches 241 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/regeneration
-execute if score @s ca.lexica_trig matches 242 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/satiation
-execute if score @s ca.lexica_trig matches 243 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/second_wind
-execute if score @s ca.lexica_trig matches 244 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/spurs
+execute if score @s ca.lexica_trig matches 236 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/confidence
+execute if score @s ca.lexica_trig matches 237 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/desperation
+execute if score @s ca.lexica_trig matches 238 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/disengage
+execute if score @s ca.lexica_trig matches 239 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/energetic
+
+execute if score @s ca.lexica_trig matches 240 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/evasion
+execute if score @s ca.lexica_trig matches 241 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/frenzy
+execute if score @s ca.lexica_trig matches 242 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/gravity
+execute if score @s ca.lexica_trig matches 243 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/lifesteal
+execute if score @s ca.lexica_trig matches 244 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/momentum
+execute if score @s ca.lexica_trig matches 245 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/quake
+execute if score @s ca.lexica_trig matches 246 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/rally
+execute if score @s ca.lexica_trig matches 247 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/reconstruction
+execute if score @s ca.lexica_trig matches 248 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/regeneration
+execute if score @s ca.lexica_trig matches 249 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/resourceful
+
+execute if score @s ca.lexica_trig matches 2001 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/satiation
+execute if score @s ca.lexica_trig matches 2002 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/second_wind
+execute if score @s ca.lexica_trig matches 2003 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/shielding
+execute if score @s ca.lexica_trig matches 2004 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/sprint_dash
+execute if score @s ca.lexica_trig matches 2005 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/smite
+execute if score @s ca.lexica_trig matches 2006 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/spurs
+execute if score @s ca.lexica_trig matches 2007 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/stalwart
 
 execute if score @s ca.lexica_trig matches 250 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/auto_charge
 execute if score @s ca.lexica_trig matches 252 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/current
@@ -73,6 +89,8 @@ execute if score @s ca.lexica_trig matches 277 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 278 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/recoil
 execute if score @s ca.lexica_trig matches 279 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/wavedash
 
+execute if score @s ca.lexica_trig matches 276 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/repulsion
+
 execute if score @s ca.lexica_trig matches 270 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/eruption
 execute if score @s ca.lexica_trig matches 271 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/sapper
 
@@ -80,12 +98,17 @@ execute if score @s ca.lexica_trig matches 280 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 281 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/soulbound
 execute if score @s ca.lexica_trig matches 282 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/unbreakable
 
-execute if score @s ca.lexica_trig matches 290 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_encumbering
-execute if score @s ca.lexica_trig matches 291 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_irreparability
-execute if score @s ca.lexica_trig matches 292 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_malevolence
-execute if score @s ca.lexica_trig matches 293 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_regret
-execute if score @s ca.lexica_trig matches 294 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_shattering
-execute if score @s ca.lexica_trig matches 295 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_two_handed
+execute if score @s ca.lexica_trig matches 290 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_clumsiness
+execute if score @s ca.lexica_trig matches 291 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_drowning
+execute if score @s ca.lexica_trig matches 292 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_encumbering
+execute if score @s ca.lexica_trig matches 293 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_flammability
+execute if score @s ca.lexica_trig matches 294 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_irreparability
+execute if score @s ca.lexica_trig matches 295 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_jinxing
+execute if score @s ca.lexica_trig matches 296 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_malevolence
+execute if score @s ca.lexica_trig matches 297 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_regret
+execute if score @s ca.lexica_trig matches 298 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_rusting
+execute if score @s ca.lexica_trig matches 299 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_shattering
+execute if score @s ca.lexica_trig matches 300 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/curse_two_handed
 
 execute if score @s ca.lexica_trig matches 301 run function cartographer_mob_abilities:lexica_calls/pages/category/active/main
 execute if score @s ca.lexica_trig matches 302 run function cartographer_mob_abilities:lexica_calls/pages/category/active/main_2

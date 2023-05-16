@@ -13,6 +13,9 @@ execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.hunter match
 #Surging Strike
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.surging_strike matches 1.. if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/surging_strike
 
+#Momentum Attack
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.momentum=1..,ca.momentum_charge=2000..}] run function cartographer_custom_enchantments:enchant_effects/momentum/strike
+
 #First Strike Reset Chance
 execute if score @s ca.first_strike matches 1.. if score @s ca.resetter_check_kill matches 1..9 run function cartographer_custom_enchantments:enchant_effects/first_strike/kill
 

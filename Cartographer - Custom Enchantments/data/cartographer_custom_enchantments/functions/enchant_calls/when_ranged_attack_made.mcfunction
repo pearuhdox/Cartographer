@@ -38,6 +38,9 @@ execute as @s[scores={ca.curse_encum=1..}] at @s as @e[type=#bb:arrow,sort=neare
 #Overcharge Happens Here - Specifically last after all other Bow enchantments
 execute as @s[scores={ca.overcharge=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/overcharge
 
+#Resourceful
+execute if score @s ca.resourceful matches 1.. run function cartographer_custom_enchantments:enchant_effects/resourceful/chance
+
 #Grab Explosive Shot Visual
 execute as @s[scores={ca.explosive=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/explosive/visual
 

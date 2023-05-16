@@ -5,10 +5,15 @@ scoreboard players set $success ca.inf_cdl_var 0
 function suso.player_data:get/do
 
 scoreboard players set $slot ca.inf_cdl_var -10000
+scoreboard players set $slot ca.inf_kc_var -10000
+
 execute store result score $slot ca.inf_cdl_var run data get entity @s SelectedItemSlot
+execute store result score $slot ca.inf_kc_var run data get entity @s SelectedItemSlot
 
 data modify storage cartographer_custom_enchantments:infinity with_cdl set value []
+data modify storage cartographer_custom_enchantments:infinity with_kc set value []
 data modify storage cartographer_custom_enchantments:infinity cdl_item set value {}
+data modify storage cartographer_custom_enchantments:infinity kc_item set value {}
 data modify storage cartographer_custom_enchantments:infinity transformed set value {id:"minecraft:firework_star",Count:1b,tag:{StoredItem:{},display:{Name:'{"text":"Infinite Potential","color":"#EAB0FF","italic":false}',Lore:['{"text":"This Infinity item has a cooldown.","color":"gray","italic":false}','{"text":"It is currently recharging and","color":"gray","italic":false}','{"text":"can be used again when recharged.","color":"gray","italic":false}','{"text":" "}','{"text":"Cooldown only decreases while the","color":"gray","italic":false}','{"text":"item is on your hotbar or offhand.","color":"gray","italic":false}']},HideFlags:32,Explosion:{Type:0,Colors:[I;9866889]}}}
 
 # Start Mainhand

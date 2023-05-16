@@ -1,0 +1,1 @@
+function cartographer_custom_enchantments:loop/10_second/player

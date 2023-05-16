@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Gravity                  ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When the user lands from a fall near a mob, the fall damage they would take is negated and instead dealt to every mob within 3 blocks.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:netherite_boots"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"gravity\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/gravity"
+    },
+    "parent": "cartographer_custom_enchantments:passive/frenzy"
+}

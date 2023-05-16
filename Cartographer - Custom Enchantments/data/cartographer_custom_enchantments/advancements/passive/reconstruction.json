@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Reconstruction           ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "This item slowly repairs over time while in the hotbar, offhand, or armor.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:anvil"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"reconstruction\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/reconstruction"
+    },
+    "parent": "cartographer_custom_enchantments:passive/rally"
+}

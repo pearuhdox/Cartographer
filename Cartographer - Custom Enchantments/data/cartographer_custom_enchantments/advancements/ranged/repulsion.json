@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"repulsion\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Repulsion                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When this crossbow is reloaded, a blast of wind is created, knocking back nearby enemies.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:feather"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/ranged/repulsion"
+    },
+    "parent": "cartographer_custom_enchantments:ranged/repeater"
+}

@@ -79,9 +79,11 @@ execute if score @s ca.loyalty_time matches 5.. run function cartographer_custom
 execute if score @s ca.recoil_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/recoil/time
 execute unless block ~ ~-0.2 ~ #cartographer_core:can_raycast unless score @s ca.recoil_time matches 1.. unless score @s ca.recoil_count matches 1.. run function cartographer_custom_enchantments:enchant_effects/recoil/count_fix
 
-
 #Kill trigger (if score $cu_en_kill ca.enabler matches 1.. )
 execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
+
+#Run Repulsion
+execute if score @s ca.repulsion matches 1.. if score @s ca.load_cro_time matches 5 run function cartographer_custom_enchantments:enchant_effects/repulsion/activate
 
 #Make ranged attack triggers.
 execute if score @s ca.fire_bow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
@@ -98,6 +100,19 @@ execute if score @s ca.death_time matches 2..20 run function cartographer_custom
 
 #Tempo Theft Effect - Players
 execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect_player
+
+#Momentum Cancel
+execute unless score @s ca.momentum matches 1.. run scoreboard players set @s ca.momentum_charge 0
+execute unless score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/attributes
+execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/charge
+
+#Sprint Dash and Disengage
+execute if score @s ca.sprint_dash matches 1.. run function cartographer_custom_enchantments:enchant_effects/sprint_dash/test
+scoreboard players set @s ca.sprint_dash_use 0
+execute if score @s ca.sprint_dash_time matches 1.. run scoreboard players remove @s ca.sprint_dash_time 1
+
+execute if score @s ca.disengage matches 1.. if score @s ca.disengage_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/disengage/test
+scoreboard players set @s ca.disengage_use 0
 
 
 #Infinity 3.0
@@ -130,12 +145,28 @@ tag @s remove doing_auto_charge
 execute if entity @s[tag=!kill_buff_checked] run function cartographer_custom_enchantments:loop/tick/branch/kill_buff_check
 tag @s remove kill_buff_checked
 
-#Check if a player has a Loyalty Placeholder
-function cartographer_custom_enchantments:enchant_effects/loyalty/player_track
+#Curse of Clumsiness
+execute if score @s ca.curse_clumsiness matches 1.. if score @s ca.clumsy_fall matches 300.. run function cartographer_custom_enchantments:enchant_effects/curse_clumsiness/damage
+scoreboard players set @s ca.clumsy_fall 0
+
+#Curse of Drowning
+execute if score @s ca.curse_drowning matches 1.. if block ~ ~ ~ water run function cartographer_custom_enchantments:enchant_effects/curse_drowning/time
+
+#Environmental Curse Damage
+execute if score @s ca.curse_environ_dmg matches 1..10 run function cartographer_custom_enchantments:enchant_effects/curse_environment/check_enchant
+execute if score @s ca.curse_flammability matches 1.. if score @s ca.curse_environ_dmg matches 1..40 if block ~ ~ ~ #cartographer_core:fiery run function cartographer_custom_enchantments:enchant_effects/curse_environment/flammability
+
+scoreboard players set @s ca.curse_environ_dmg 0
 
 #Check Evasion
 execute if entity @s[scores={ca.dmg_resist_evaded=1..,ca.evasion=1..},tag=evading] run function cartographer_custom_enchantments:enchant_effects/evasion/trigger
 execute if entity @s[scores={ca.dmg_resist_check=1..,ca.evasion=1..}] run function cartographer_custom_enchantments:enchant_effects/evasion/prime
+
+#Run Gravity Here
+execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/tick
+
+#Run Smite Here
+execute if score @s ca.smite matches 1.. run function cartographer_custom_enchantments:enchant_effects/smite/tick
 
 #Reduce Ranged Weapon Recently Fired Counter
 execute if score @s ca.recently_fired_weapon matches 1.. run scoreboard players remove @s ca.recently_fired_weapon 1
@@ -169,6 +200,12 @@ execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_frost_w
 execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_frost_walker,tag=ca.enable_frost_walker] ca.walk matches 1.. if score @s ca.frost_walker matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost_walker/add
 
 tag @s remove ca.enable_frost_walker
+
+
+
+
+
+
 
 #Reset Function for scores
 function cartographer_custom_enchantments:loop/tick/reset

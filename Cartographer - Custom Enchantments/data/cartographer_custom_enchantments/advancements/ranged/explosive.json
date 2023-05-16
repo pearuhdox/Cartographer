@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/ranged/explosive"
     },
-    "parent": "cartographer_custom_enchantments:ranged/deadeye"
+    "parent": "cartographer_custom_enchantments:tree_ranged"
 }

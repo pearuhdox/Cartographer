@@ -1,3 +1,5 @@
+data modify storage cartographer_custom_enchantments:infinity transformed set value {id:"minecraft:firework_star",Count:1b,tag:{StoredItem:{},display:{Name:'{"text":"Infinite Potential","color":"#EAB0FF","italic":false}',Lore:['{"text":"This Infinity item has a cooldown.","color":"gray","italic":false}','{"text":"It is currently recharging and","color":"gray","italic":false}','{"text":"can be used again when recharged.","color":"gray","italic":false}','{"text":" "}','{"text":"Cooldown only decreases while the","color":"gray","italic":false}','{"text":"item is on your hotbar or offhand.","color":"gray","italic":false}']},HideFlags:32,Explosion:{Type:0,Colors:[I;9866889]}}}
+
 data modify storage cartographer_custom_enchantments:infinity transformed.tag.StoredItem set from storage cartographer_custom_enchantments:infinity cdl_item[0]
 data remove storage cartographer_custom_enchantments:infinity transformed.tag.StoredItem.Slot
 

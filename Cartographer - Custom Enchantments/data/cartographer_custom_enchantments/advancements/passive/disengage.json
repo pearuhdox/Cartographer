@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Disengage                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "When the user takes damage, sneak jumping shortly after propels them backwards.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:feather"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"disengage\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/disengage"
+    },
+    "parent": "cartographer_custom_enchantments:passive/desperation"
+}

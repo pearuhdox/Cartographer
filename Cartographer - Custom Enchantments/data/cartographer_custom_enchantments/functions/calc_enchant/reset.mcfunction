@@ -52,6 +52,27 @@ scoreboard players set @s ca.respiration 0
 scoreboard players set @s ca.recoil 0
 scoreboard players set @s ca.collapse 0
 
+scoreboard players set @s ca.gravity 0
+scoreboard players set @s ca.smite 0
+scoreboard players set @s ca.quake 0
+scoreboard players set @s ca.momentum 0
+
+scoreboard players set @s ca.confidence 0
+scoreboard players set @s ca.desperation 0
+scoreboard players set @s ca.stalwart 0
+
+scoreboard players set @s ca.shielding 0
+scoreboard players set @s ca.sprint_dash 0
+scoreboard players set @s ca.disengage 0
+
+scoreboard players set @s ca.hex_eater 0
+
+scoreboard players set @s ca.reconstruction 0
+
+scoreboard players set @s ca.resourceful 0
+
+scoreboard players set @s ca.repulsion 0
+
 scoreboard players set @s ca.loyalty 0
 scoreboard players set @s ca.fire_aspect 0
 scoreboard players set @s ca.knockback 0
@@ -63,21 +84,45 @@ scoreboard players set @s ca.swift_sneak 0
 scoreboard players set @s ca.soul_speed 0
 scoreboard players set @s ca.frost_walker 0
 
+scoreboard players set @s ca.curse_clumsiness 0
+scoreboard players set @s ca.curse_flammability 0
+scoreboard players set @s ca.curse_jinxing 0
+scoreboard players set @s ca.curse_drowning 0
+
 scoreboard players set @s ca.curse_mal 0
 scoreboard players set @s ca.curse_two_hnd 0
 scoreboard players set @s ca.curse_regret 0
 scoreboard players set @s ca.curse_encum 0
 
 scoreboard players set @s ca.t_fire 0
-scoreboard players set @s ca.t_bleed 0
 scoreboard players set @s ca.t_frost 0
-scoreboard players set @s ca.t_expose 0
-scoreboard players set @s ca.t_shock 0
-scoreboard players set @s ca.t_stun 0
-scoreboard players set @s ca.t_infection 0
 scoreboard players set @s ca.t_knock 0
-scoreboard players set @s ca.t_poss 0
 scoreboard players set @s ca.t_exec 0
+
+scoreboard players set @s ca.g_fire 0
+scoreboard players set @s ca.g_frost 0
+scoreboard players set @s ca.g_knock 0
+scoreboard players set @s ca.g_exec 0
+
+scoreboard players set @s ca.mo_fire 0
+scoreboard players set @s ca.mo_knock 0
+scoreboard players set @s ca.mo_exec 0
+scoreboard players set @s ca.mo_frost 0
+
+scoreboard players set @s ca.qu_fire 0
+scoreboard players set @s ca.qu_frost 0
+scoreboard players set @s ca.qu_knock 0
+scoreboard players set @s ca.qu_exec 0
+
+scoreboard players set @s ca.sm_fire 0
+scoreboard players set @s ca.sm_frost 0
+scoreboard players set @s ca.sm_knock 0
+scoreboard players set @s ca.sm_exec 0
+
+scoreboard players set @s ca.re_fire 0
+scoreboard players set @s ca.re_frost 0
+scoreboard players set @s ca.re_knock 0
+scoreboard players set @s ca.re_exec 0
 
 scoreboard players set @s ca.s_adren 0
 scoreboard players set @s ca.s_energ 0
@@ -96,6 +141,25 @@ scoreboard players set @s ca.off_bleeding 0
 scoreboard players set @s ca.off_fire_aspect 0
 scoreboard players set @s ca.off_possession 0
 
+scoreboard players set @s ca.curse_rusting 0
+
+tag @s remove ca.rust_head
+tag @s remove ca.rust_body
+tag @s remove ca.rust_legs
+tag @s remove ca.rust_feet
+
+tag @s remove ca.rust_offh
+
+tag @s remove ca.rust_1
+tag @s remove ca.rust_2
+tag @s remove ca.rust_3
+tag @s remove ca.rust_4
+tag @s remove ca.rust_5
+tag @s remove ca.rust_6
+tag @s remove ca.rust_7
+tag @s remove ca.rust_8
+tag @s remove ca.rust_9
+
 
 tag @s remove has_passive_ench
 
@@ -112,8 +176,41 @@ tag @s remove ca.ce_thorns_body
 tag @s remove ca.ce_thorns_legs
 tag @s remove ca.ce_thorns_feet
 
+tag @s remove ca.ce_gravity_main
+tag @s remove ca.ce_gravity_offh
+tag @s remove ca.ce_gravity_head
+tag @s remove ca.ce_gravity_body
+tag @s remove ca.ce_gravity_legs
+tag @s remove ca.ce_gravity_feet
+
+tag @s remove ca.ce_momentum_offh
+tag @s remove ca.ce_momentum_head
+tag @s remove ca.ce_momentum_body
+tag @s remove ca.ce_momentum_legs
+tag @s remove ca.ce_momentum_feet
+
+tag @s remove ca.ce_quake_main
+tag @s remove ca.ce_quake_offh
+tag @s remove ca.ce_quake_head
+tag @s remove ca.ce_quake_body
+tag @s remove ca.ce_quake_legs
+tag @s remove ca.ce_quake_feet
+
+tag @s remove ca.ce_smite_main
+tag @s remove ca.ce_smite_offh
+tag @s remove ca.ce_smite_head
+tag @s remove ca.ce_smite_body
+tag @s remove ca.ce_smite_legs
+tag @s remove ca.ce_smite_feet
+
+tag @s remove ca.check_hp_percent
+
 tag @s remove ca.deadeye_mainhand
 tag @s remove ca.deadeye_offhand
+
+tag @s remove ca.ce_repulsion_main
+tag @s remove ca.ce_repulsion_offh
+
 
 #Turn features dynamically off by default. We will turn them back on as we find we need them.
 #scoreboard players set $cu_en_melee ca.enabler 0

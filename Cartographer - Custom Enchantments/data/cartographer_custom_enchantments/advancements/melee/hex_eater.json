@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Hex Eater                   ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "This weapon deals additional damage to debuffed enemies and cleanses their debuffs."
+        },
+        "icon": {
+            "item": "minecraft:netherite_sword"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"hex_eater\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/melee/hex_eater"
+    },
+    "parent": "cartographer_custom_enchantments:melee/frostbite"
+}

@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"curse_flammability\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Curse of Flammability    ",
+            "color": "#ff8c8c"
+        },
+        "description": {
+            "color": "white",
+            "text": "When you take Fire damage, take additional fire damage."
+        },
+        "icon": {
+            "item": "minecraft:fire_charge"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/curse/flammability"
+    },
+    "parent": "cartographer_custom_enchantments:curse/encumbering"
+}

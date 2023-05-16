@@ -1,0 +1,3 @@
+execute unless predicate cartographer_custom_enchantments:cant_gravity if block ~ ~-0.5 ~ #cartographer_core:can_raycast if block ~ ~-1.5 ~ #cartographer_core:can_raycast if block ~ ~-2.5 ~ #cartographer_core:can_raycast if block ~ ~-3.5 ~ #cartographer_core:can_raycast run effect give @s jump_boost 1 128 true
+
+execute if score @s ca.gravity_fall matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/landed

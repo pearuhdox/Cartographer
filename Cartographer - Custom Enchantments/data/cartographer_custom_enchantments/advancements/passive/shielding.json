@@ -1,0 +1,35 @@
+{
+    "display": {
+        "title": {
+            "text": "Shielding                ",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "The user periodically gains an Absorption I shield that lasts until broken.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:golden_apple"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"shielding\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/shielding"
+    },
+    "parent": "cartographer_custom_enchantments:passive/second_wind"
+}

@@ -25,10 +25,24 @@ scoreboard players set @s[scores={ca.epf_fall=21..}] ca.epf_fall 20
 
 scoreboard players operation @s ca.epf = @s ca.epf_prot 
 
+#Use Relevant EPFs
 execute if entity @s[tag=fire_hit] run scoreboard players operation @s ca.epf += @s ca.epf_fire 
 execute if entity @s[tag=projectile_hit] run scoreboard players operation @s ca.epf += @s ca.epf_proj 
 execute if entity @s[tag=explosion_hit] run scoreboard players operation @s ca.epf += @s ca.epf_blas 
 execute if entity @s[tag=fall_hit] run scoreboard players operation @s ca.epf += @s ca.epf_fall 
+
+scoreboard players operation $fire_curse ca.damage_queue = @s ca.curse_flammability
+scoreboard players operation $fall_curse ca.damage_queue = @s ca.curse_clumsiness
+scoreboard players operation $magic_curse ca.damage_queue = @s ca.curse_jinxing
+
+scoreboard players operation $fire_curse ca.damage_queue *= $10 ca.CONSTANT
+scoreboard players operation $fall_curse ca.damage_queue *= $10 ca.CONSTANT
+scoreboard players operation $magic_curse ca.damage_queue *= $10 ca.CONSTANT
+
+#Use Relevant Curses
+execute if entity @s[tag=fire_hit] run scoreboard players operation @s ca.damage_queue += $fire_curse ca.damage_queue
+execute if entity @s[tag=fall_hit] run scoreboard players operation @s ca.damage_queue += $fall_curse ca.damage_queue
+execute if entity @s[tag=magic_hit] run scoreboard players operation @s ca.damage_queue += $magic_curse ca.damage_queue
 
 scoreboard players set @s[scores={ca.epf=21..}] ca.epf 20
 
@@ -49,3 +63,4 @@ tag @s remove fire_hit
 tag @s remove fall_hit
 tag @s remove explosion_hit
 tag @s remove projectile_hit
+tag @s remove magic_hit

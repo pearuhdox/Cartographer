@@ -18,7 +18,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Saves you from a lethal hit. After cheating death, you must kill a mob quickly to restore health, or suffer the penalty."
+            "text": "Saves you from a lethal hit, gaining brief Resistance V. After cheating death, you must kill all mobs attacking you, or die shortly after."
         },
         "icon": {
             "item": "minecraft:totem_of_undying"
