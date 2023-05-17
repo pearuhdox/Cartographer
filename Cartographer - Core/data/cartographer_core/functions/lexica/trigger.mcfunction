@@ -92,7 +92,8 @@ execute if score @s ca.lexica_trig matches 279 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 276 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/repulsion
 
 execute if score @s ca.lexica_trig matches 270 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/eruption
-execute if score @s ca.lexica_trig matches 271 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/sapper
+execute if score @s ca.lexica_trig matches 271 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/resupply
+execute if score @s ca.lexica_trig matches 272 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/sapper
 
 execute if score @s ca.lexica_trig matches 280 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/infinity
 execute if score @s ca.lexica_trig matches 281 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/soulbound

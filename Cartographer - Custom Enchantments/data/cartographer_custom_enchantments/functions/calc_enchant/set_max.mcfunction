@@ -67,6 +67,8 @@ execute if score @s ca.disengage matches 4.. run scoreboard players set @s ca.di
 
 execute if score @s ca.hex_eater matches 4.. run scoreboard players set @s ca.hex_eater 3
 
+execute if score @s ca.resupply matches 11.. run scoreboard players set @s ca.resupply 10
+
 execute if score @s ca.swift_sneak matches 11.. run scoreboard players set @s ca.swift_sneak 10
 execute if score @s ca.soul_speed matches 11.. run scoreboard players set @s ca.soul_speed 10
 execute if score @s ca.frost_walker matches 6.. run scoreboard players set @s ca.frost_walker 5

@@ -5,7 +5,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"sapper\"}]}"
+                        "nbt": "{CustomEnchantments:[{id:\"resupply\"}]}"
                     }
                 ]
             }
@@ -13,15 +13,15 @@
     },
     "display": {
         "title": {
-            "text": "Sapper                   ",
+            "text": "Resupply                 ",
             "color": "aqua"
         },
         "description": {
-            "text": "When you break a spawner with this tool, restore health.",
+            "text": "When you break a spawner with this tool, you have a chance to gain various drops.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:gold_nugget"
+            "item": "minecraft:chest"
         },
         "frame": "task",
         "show_toast": true,
@@ -29,7 +29,7 @@
         "hidden": true
     },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/tool/sapper"
+        "function": "cartographer_custom_enchantments:descriptions/tool/resupply"
     },
-    "parent": "cartographer_custom_enchantments:tool/resupply"
+    "parent": "cartographer_custom_enchantments:tool/eruption"
 }

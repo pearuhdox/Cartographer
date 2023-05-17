@@ -101,6 +101,8 @@ scoreboard objectives add ca.hex_eater dummy
 scoreboard objectives add ca.repulsion dummy
 scoreboard objectives add ca.resourceful dummy
 
+scoreboard objectives add ca.resupply dummy
+
 scoreboard objectives add ca.sprint_dash_time dummy
 scoreboard objectives add ca.sprint_dash_use minecraft.custom:minecraft.jump
 scoreboard objectives add ca.sprint_dash_x dummy

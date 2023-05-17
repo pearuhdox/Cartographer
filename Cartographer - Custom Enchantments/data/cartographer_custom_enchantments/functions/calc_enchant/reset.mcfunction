@@ -73,6 +73,8 @@ scoreboard players set @s ca.resourceful 0
 
 scoreboard players set @s ca.repulsion 0
 
+scoreboard players set @s ca.resupply 0
+
 scoreboard players set @s ca.loyalty 0
 scoreboard players set @s ca.fire_aspect 0
 scoreboard players set @s ca.knockback 0
