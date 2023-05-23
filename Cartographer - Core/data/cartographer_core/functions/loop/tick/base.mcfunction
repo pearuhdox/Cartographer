@@ -18,13 +18,13 @@ function cartographer_mimics:loop/tick/base
 function cartographer_mob_abilities:loop/tick/base
 function cartographer_repair_stations:loop/tick/base
 
-execute as @a at @s run function cartographer_core:loop/tick/player
+execute as @a[predicate=cartographer_core:in_valid_dimension] at @s run function cartographer_core:loop/tick/player
 
 #Set Setup Mode to on if no acceptable value found
 execute unless score $setup_mode ca.gamerule matches 0.. run scoreboard players set $setup_mode ca.gamerule 1
 
 #Run all ticking entity effects.
-execute as @e[type=!#cartographer_core:not_tracked,tag=!no_tick] at @s run function cartographer_core:loop/entity_calls/branch_tick
+execute as @e[type=!#cartographer_core:not_tracked,predicate=cartographer_core:in_valid_dimension,tag=!no_tick] at @s run function cartographer_core:loop/entity_calls/branch_tick
 
 
 #Reset token kill check (Mob Abilities)
