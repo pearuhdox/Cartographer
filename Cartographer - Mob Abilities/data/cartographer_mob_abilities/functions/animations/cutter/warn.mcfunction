@@ -1,0 +1,19 @@
+particle minecraft:angry_villager ^ ^ ^0.5 0 0 0 0 1 force
+particle minecraft:angry_villager ^ ^ ^1.0 0 0 0 0 1 force
+particle minecraft:angry_villager ^ ^ ^1.5 0 0 0 0 1 force
+particle minecraft:angry_villager ^ ^ ^2.0 0 0 0 0 1 force
+particle minecraft:angry_villager ^ ^ ^2.5 0 0 0 0 1 force
+particle minecraft:angry_villager ^ ^ ^3.0 0 0 0 0 1 force
+particle minecraft:angry_villager ^ ^ ^3.5 0 0 0 0 1 force
+particle minecraft:angry_villager ^ ^ ^4.0 0 0 0 0 1 force
+particle minecraft:angry_villager ^ ^ ^4.5 0 0 0 0 1 force
+
+particle minecraft:crit ^ ^ ^0.5 0.25 0.1 0.25 0 11 normal
+particle minecraft:crit ^ ^ ^1.0 0.25 0.1 0.25 0 11 normal
+particle minecraft:crit ^ ^ ^1.5 0.25 0.1 0.25 0 11 normal
+particle minecraft:crit ^ ^ ^2.0 0.25 0.1 0.25 0 11 normal
+particle minecraft:crit ^ ^ ^2.5 0.25 0.1 0.25 0 11 normal
+particle minecraft:crit ^ ^ ^3.0 0.25 0.1 0.25 0 11 normal
+particle minecraft:crit ^ ^ ^3.5 0.25 0.1 0.25 0 11 normal
+particle minecraft:crit ^ ^ ^4.0 0.25 0.1 0.25 0 11 normal
+particle minecraft:crit ^ ^ ^4.5 0.25 0.1 0.25 0 11 normal

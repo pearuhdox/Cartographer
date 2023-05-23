@@ -39,6 +39,12 @@ scoreboard objectives add ca.size_changed_stacks dummy
 scoreboard objectives add ca.sweep_animation dummy
 scoreboard objectives add ca.sweep_side dummy
 
+scoreboard objectives add ca.cutter_animation dummy
+scoreboard objectives add ca.cutter_side dummy
+
+scoreboard objectives add ca.multihit_animation dummy
+
+
 scoreboard objectives add ca.carapace_stacks dummy
 
 scoreboard objectives add ca.mob_kb dummy
@@ -164,6 +170,10 @@ summon marker 4206900 50 4206900 {UUID:[I;823664661,-2125377263,823660800,0],Tag
 #Create UUID Marker for Needle Positioning
 # 0000001f-00de-140d-0000-0000000276ef
 summon marker 4206900 50 4206900 {UUID:[I;31,14554125,0,161519],Tags:["ca.needle_positioner"]}
+
+#Create UUID Marker for Trackers
+# 31182015-2018-1311-5181-311811518
+summon marker 4206900 50 4206900 {UUID:[I;823664661,538448657,1367408643,293672216],Tags:["ca.tracker_marker"]}
 
 schedule function cartographer_mob_abilities:load/create_uuids 3t
 

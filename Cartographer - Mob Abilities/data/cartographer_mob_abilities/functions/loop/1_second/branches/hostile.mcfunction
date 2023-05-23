@@ -23,6 +23,7 @@ tag @s remove ca.stacks_managed
 #Reset near player check
 tag @s remove avail_target
 
+#execute if score @s cooldown matches 3.. run tag @s remove tokened
 execute as @s[tag=tokened] at @s run function cartographer_mob_abilities:loop/1_second/branches/tokened
 
 #Tick down particle display time for Augmenter

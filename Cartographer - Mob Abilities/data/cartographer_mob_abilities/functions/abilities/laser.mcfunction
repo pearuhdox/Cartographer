@@ -34,8 +34,10 @@ execute if entity @s[tag=ca.cursing] run scoreboard players set $laser_cur ca.va
 
 execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:abilities/laser/alchemist_save
 
-scoreboard players set @s ca.raycast 32
-execute as @s positioned ~ ~1 ~ facing entity @p feet run function cartographer_mob_abilities:abilities/laser/raycast
+#execute on passengers if entity @s[type=marker,tag=ca.laser_tracker] run function cartographer_mob_abilities:abilities/laser/branch
+
+#execute on passengers if entity @s[type=potion,tag=ca.laser_tracker] on passengers if entity @s[type=marker,tag=ca.laser_tracker] run kill @s
+#execute on passengers if entity @s[type=potion,tag=ca.laser_tracker] run kill @s
 
 #Run non onhit traits
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit

@@ -19,4 +19,7 @@ execute if entity @s[tag=ca.quickdraw,tag=tokened,scores={cooldown=0}] unless en
 execute if entity @s[tag=ca.rift,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.sweep,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:helper/token/cancel_ability
 execute if entity @s[tag=ca.storm,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:helper/token/cancel_ability
+execute if entity @s[tag=ca.cutter,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:helper/token/cancel_ability
+execute if entity @s[tag=ca.multihit,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:helper/token/cancel_ability
+execute if entity @s[tag=ca.fling,tag=tokened,scores={cooldown=0}] unless entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:helper/token/cancel_ability
 

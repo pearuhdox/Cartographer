@@ -1,4 +1,4 @@
-execute if score $laser_charge ability_charge matches 1..10 run particle minecraft:dust 1 1 1 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
+execute if score $laser_charge ability_charge matches 4..10 run particle minecraft:dust 1 1 1 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
 execute if score $laser_charge ability_charge matches 11..20 run particle minecraft:dust 0.95 0.95 0.95 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
 execute if score $laser_charge ability_charge matches 21..30 run particle minecraft:dust 0.9 0.9 0.9 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
 execute if score $laser_charge ability_charge matches 31..40 run particle minecraft:dust 0.85 0.85 0.85 0.6 ~ ~ ~ 0.15 0.15 0.15 1 6 normal
@@ -14,10 +14,13 @@ execute if score $laser_charge ability_charge matches 111..120 run particle mine
 scoreboard players operation $laser_mod ability_charge = $laser_charge ability_charge
 scoreboard players operation $laser_mod ability_charge %= $4 ca.CONSTANT
 
+
 execute if score $laser_mod ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/projectile
+
+execute if score $laser_charge ability_charge matches 20.. if score $laser_mod ability_charge matches 1 if entity @s[tag=ca.beam] if entity @a[distance=..1.6] run function cartographer_mob_abilities:abilities/laser/small_hits
 
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
 execute if entity @a[distance=..1.5] run scoreboard players set @s ca.raycast 0
 
-execute if entity @s[scores={ca.raycast=1..}] positioned ^ ^ ^1 if block ~ ~ ~ #bb:can_raycast run function cartographer_mob_abilities:animations/laser/raycast
+execute if entity @s[scores={ca.raycast=1..}] positioned ^ ^ ^0.5 if block ~ ~ ~ #bb:can_raycast run function cartographer_mob_abilities:animations/laser/raycast

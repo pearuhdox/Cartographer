@@ -30,6 +30,12 @@ execute if entity @s[type=evoker,tag=ca.summon_swap] if entity @s[nbt={SpellTick
 #Run Sweep Animations
 execute if score @s ca.sweep_animation matches 1.. run function cartographer_mob_abilities:abilities/sweep/animation
 
+#Run Cutter Animations
+execute if score @s ca.cutter_animation matches 1.. run function cartographer_mob_abilities:abilities/cutter/animation
+
+#Run Multihit Animations
+execute if score @s ca.multihit_animation matches 1.. run function cartographer_mob_abilities:abilities/multihit/animation
+
 #Run Move Animations
 execute if score @s ca.mob_move_time matches 1.. run function cartographer_mob_abilities:move_mode/master
 

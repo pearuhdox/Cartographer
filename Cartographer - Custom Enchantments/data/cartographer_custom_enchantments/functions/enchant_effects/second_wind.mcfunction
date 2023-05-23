@@ -20,7 +20,7 @@ execute if entity @s[advancements={cartographer_custom_enchantments:second_wind_
 execute if entity @s[advancements={cartographer_custom_enchantments:second_wind_explosion=true}] run tag @s add explosion_hit
 
 #Call a Second Wind damage trigger (if no Evading)
-execute if score @s[tag=fatal_protection,tag=!evading,tag=!mortal_coil] ca.dmg_resist_sw matches 1.. run function cartographer_custom_enchantments:enchant_effects/second_wind/damage
+execute if score @s[tag=fatal_protection,tag=!evading,tag=!mortal_coil] ca.dmg_resist_sw matches 1.. unless predicate cartographer_custom_enchantments:has_higher_resistance run function cartographer_custom_enchantments:enchant_effects/second_wind/damage
 
 #Call an Evasion trigger instead if evading
 execute if score @s[tag=fatal_protection,tag=evading] ca.dmg_resist_sw matches 1.. run function cartographer_custom_enchantments:enchant_effects/evasion/trigger

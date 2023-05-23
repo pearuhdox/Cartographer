@@ -1,6 +1,5 @@
 {
     "values": [
-      "cartographer_mob_abilities:ability_projectile",
       "cartographer_mob_abilities:laser_damage"
     ]
   }

@@ -1,5 +1,6 @@
 {
     "values": [
-      "cartographer_mob_abilities:augmenter_bonus"
+      "cartographer_mob_abilities:augmenter_bonus",
+      "cartographer_mob_abilities:multihit"
     ]
   }

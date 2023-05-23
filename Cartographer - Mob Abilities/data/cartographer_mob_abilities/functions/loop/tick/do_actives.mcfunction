@@ -37,7 +37,15 @@ execute unless block ~ ~-1 ~ #bb:raycast if entity @s[tag=ca.rift,scores={cooldo
 
 execute if entity @s[tag=ca.sweep,scores={cooldown=0}] unless score @s ca.sweep_animation matches 1.. if entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:animations/sweep
 
+execute if entity @s[tag=ca.cutter,scores={cooldown=0}] unless score @s ca.cutter_animation matches 1.. if entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:animations/cutter
+
+execute if entity @s[tag=ca.multihit,scores={cooldown=0}] unless score @s ca.multihit_animation matches 1.. if entity @a[gamemode=!spectator,gamemode=!creative,distance=..8] run function cartographer_mob_abilities:animations/multihit
+
+execute if entity @s[tag=ca.fling,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:animations/fling
+
 execute if entity @s[tag=ca.storm,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:animations/storm
+
+execute as @a[distance=..40] at @s if score @s ca.combat_timer matches ..3 run scoreboard players set @s ca.combat_timer 4
 
 #Run Sidearm after ability here
 execute if score @s[tag=ca.sidearm_after] ca.sidearm_windup matches 1.. run function cartographer_mob_abilities:passive/sidearm/channel
