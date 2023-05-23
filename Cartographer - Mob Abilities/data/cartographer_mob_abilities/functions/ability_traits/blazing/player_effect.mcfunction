@@ -1,4 +1,4 @@
-playsound minecraft:entity.wither.shoot hostile @a[distance=..16] ~ ~ ~ 0.4 0.5
+playsound minecraft:entity.player.hurt_on_fire hostile @a[distance=..16] ~ ~ ~ 1.5 0.5
 
 setblock ~ ~ ~ minecraft:fire keep
 

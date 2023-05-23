@@ -30,6 +30,9 @@ execute if entity @s[tag=!ca.sh_empty,tag=ca.sh_lightning] run function cartogra
 #Set Projectile Owner
 data modify storage cartographer_mob_abilities:projectiles DataTemplate.Owner set from entity @s UUID
 
+scoreboard players set $reduce_proj_speed ca.mob_var 0
+execute if entity @s[tag=ca.sh_slower] run scoreboard players set $reduce_proj_speed ca.mob_var 1
+
 #Refactored
 execute as @s[tag=!ca.sh_empty,tag=ca.sh_arrow] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/arrow
 execute as @s[tag=!ca.sh_empty,tag=ca.sh_trident] at @s as @e[type=#bb:projectile,tag=!passive_replaced_projectile,limit=3,distance=..4,sort=nearest] at @s unless score @s ca.lifetime matches 0.. run function cartographer_mob_abilities:passive/projectile/swap/trident

@@ -13,7 +13,6 @@ function cartographer_mob_abilities:projectiles/create/trident
 
 execute unless entity @s[type=vex] run kill @s
 
-particle minecraft:portal ~ ~ ~ 0 0 0 0.5 100 normal
 execute if entity @s[type=vex] run function cartographer_mob_abilities:passive/projectile/swap/remove/vex
 
 execute if entity @s[type=evoker_fangs] run function cartographer_mob_abilities:passive/projectile/swap/remove/fangs

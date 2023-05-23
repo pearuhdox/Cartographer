@@ -23,6 +23,10 @@ tag @s remove ca.stacks_managed
 #Reset near player check
 tag @s remove avail_target
 
+#Run Ride Traits
+execute if entity @s[tag=ca.mount] run function cartographer_mob_abilities:passive/ride/mount
+execute if entity @s[tag=ca.pickup] run function cartographer_mob_abilities:passive/ride/pickup
+
 #execute if score @s cooldown matches 3.. run tag @s remove tokened
 execute as @s[tag=tokened] at @s run function cartographer_mob_abilities:loop/1_second/branches/tokened
 
