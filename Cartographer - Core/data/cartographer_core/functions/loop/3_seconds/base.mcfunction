@@ -16,7 +16,7 @@ function cartographer_mob_abilities:loop/3_second/base
 execute as @e[type=!#cartographer_core:not_tracked,predicate=cartographer_core:in_valid_dimension,type=!#cartographer_core:item_frames,type=!item] at @s run function cartographer_core:loop/entity_calls/3_seconds
 
 scoreboard players set $la.run ca.var 0
-execute as @e[type=#cartographer_core:tracked_for_la] run function cartographer_core:loop/3_seconds/la_branch
+execute as @e[type=#cartographer_core:tracked_for_la,predicate=cartographer_core:in_valid_dimension] run function cartographer_core:loop/3_seconds/la_branch
 
 #Function Tag for running things on Cartographer's Clocks
 #function #minecraft:cartographer/clocks/3_seconds
