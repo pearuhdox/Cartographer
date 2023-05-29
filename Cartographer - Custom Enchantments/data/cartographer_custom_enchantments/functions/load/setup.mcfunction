@@ -55,6 +55,13 @@ scoreboard objectives add ca.respiration dummy
 scoreboard objectives add ca.recoil dummy
 scoreboard objectives add ca.collapse dummy
 
+scoreboard objectives add ca.unbreaking dummy
+scoreboard objectives add ca.unb_head dummy
+scoreboard objectives add ca.unb_body dummy
+scoreboard objectives add ca.unb_legs dummy
+scoreboard objectives add ca.unb_feet dummy
+
+
 scoreboard objectives add ca.inf_kc_var dummy
 scoreboard objectives add ca.inf_kc_0 dummy
 scoreboard objectives add ca.inf_kc_1 dummy
@@ -65,6 +72,7 @@ scoreboard objectives add ca.inf_kc_5 dummy
 scoreboard objectives add ca.inf_kc_6 dummy
 scoreboard objectives add ca.inf_kc_7 dummy
 scoreboard objectives add ca.inf_kc_8 dummy
+scoreboard objectives add ca.inf_kc_o dummy
 
 scoreboard objectives add ca.inf_cdl_var dummy
 scoreboard objectives add ca.inf_cdl_0 dummy
@@ -76,6 +84,19 @@ scoreboard objectives add ca.inf_cdl_5 dummy
 scoreboard objectives add ca.inf_cdl_6 dummy
 scoreboard objectives add ca.inf_cdl_7 dummy
 scoreboard objectives add ca.inf_cdl_8 dummy
+scoreboard objectives add ca.inf_cdl_o dummy
+
+scoreboard objectives add ca.inf_ch_var dummy
+scoreboard objectives add ca.inf_ch_0 dummy
+scoreboard objectives add ca.inf_ch_1 dummy
+scoreboard objectives add ca.inf_ch_2 dummy
+scoreboard objectives add ca.inf_ch_3 dummy
+scoreboard objectives add ca.inf_ch_4 dummy
+scoreboard objectives add ca.inf_ch_5 dummy
+scoreboard objectives add ca.inf_ch_6 dummy
+scoreboard objectives add ca.inf_ch_7 dummy
+scoreboard objectives add ca.inf_ch_8 dummy
+scoreboard objectives add ca.inf_ch_o dummy
 
 
 scoreboard objectives add ca.gravity dummy
@@ -147,6 +168,11 @@ scoreboard objectives add ca.wavedash_time dummy
 
 scoreboard objectives add ca.write_ench dummy
 
+scoreboard objectives add ca.hy_fire dummy
+scoreboard objectives add ca.hy_frost dummy
+scoreboard objectives add ca.hy_knock dummy
+scoreboard objectives add ca.hy_exec dummy
+
 scoreboard objectives add ca.g_fire dummy
 scoreboard objectives add ca.g_frost dummy
 scoreboard objectives add ca.g_knock dummy
@@ -182,6 +208,11 @@ scoreboard objectives add ca.re_frost dummy
 scoreboard objectives add ca.re_knock dummy
 scoreboard objectives add ca.re_exec dummy
 
+scoreboard objectives add ca.riptide_time dummy
+scoreboard objectives add ca.riptide_count dummy
+scoreboard objectives add ca.riptide_count_time dummy
+
+scoreboard objectives add ca.riptide dummy
 scoreboard objectives add ca.loyalty dummy
 scoreboard objectives add ca.fire_aspect dummy
 scoreboard objectives add ca.knockback dummy
@@ -312,12 +343,28 @@ scoreboard objectives add ca.inf_cdl_7 dummy
 scoreboard objectives add ca.inf_cdl_8 dummy
 scoreboard objectives add ca.inf_cdl_o dummy
 
+
+scoreboard objectives add ca.rip_cdl_var dummy
+
+scoreboard objectives add ca.rip_cdl_0 dummy
+scoreboard objectives add ca.rip_cdl_1 dummy
+scoreboard objectives add ca.rip_cdl_2 dummy
+scoreboard objectives add ca.rip_cdl_3 dummy
+scoreboard objectives add ca.rip_cdl_4 dummy
+scoreboard objectives add ca.rip_cdl_5 dummy
+scoreboard objectives add ca.rip_cdl_6 dummy
+scoreboard objectives add ca.rip_cdl_7 dummy
+scoreboard objectives add ca.rip_cdl_8 dummy
+scoreboard objectives add ca.rip_cdl_o dummy
+
 scoreboard objectives add ca.use_pearl minecraft.used:minecraft.ender_pearl
 scoreboard objectives add ca.use_splashpot minecraft.used:minecraft.splash_potion
 scoreboard objectives add ca.use_lingerpot minecraft.used:minecraft.lingering_potion
 scoreboard objectives add ca.use_snowball minecraft.used:minecraft.snowball
 scoreboard objectives add ca.use_egg minecraft.used:minecraft.egg
 
+scoreboard objectives add ca.use_water_bucket minecraft.used:minecraft.water_bucket
+scoreboard objectives add ca.use_lava_bucket minecraft.used:minecraft.lava_bucket
 
 
 scoreboard objectives add ca.trans_cdl dummy

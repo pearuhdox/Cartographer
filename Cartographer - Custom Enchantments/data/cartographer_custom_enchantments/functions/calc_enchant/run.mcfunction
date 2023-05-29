@@ -23,6 +23,8 @@ execute if score @s ca.quake matches 1.. run function cartographer_custom_enchan
 execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:calc_enchant/momentum
 execute if score @s ca.repulsion matches 1.. run function cartographer_custom_enchantments:calc_enchant/repulsion
 
+execute if score @s ca.hydraulic matches 1.. run function cartographer_custom_enchantments:calc_enchant/hydraulic
+
 function cartographer_custom_enchantments:calc_enchant/sapper
 
 function cartographer_custom_enchantments:calc_enchant/set_max
@@ -44,6 +46,7 @@ function cartographer_custom_enchantments:enchant_effects/curse_two_handed/inv_f
 #Reset any infinity cooldowns if the items move
 function cartographer_custom_enchantments:calc_enchant/infinity_cdl
 function cartographer_custom_enchantments:calc_enchant/infinity_kc
+function cartographer_custom_enchantments:calc_enchant/infinity_ch
 
 scoreboard players set $cu_en_ranged ca.enabler 1
 scoreboard players set $cu_en_kill ca.enabler 1

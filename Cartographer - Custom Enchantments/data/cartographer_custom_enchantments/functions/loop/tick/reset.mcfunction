@@ -24,6 +24,9 @@ scoreboard players set @s ca.use_pearl 0
 scoreboard players set @s ca.use_snowball 0
 scoreboard players set @s ca.use_egg 0
 
+scoreboard players set @s ca.use_water_bucket 0
+scoreboard players set @s ca.use_lava_bucket 0
+
 scoreboard players set @s helper_eye 0
 
 scoreboard players remove @s[scores={ca.rpt_cdl=2..}] ca.rpt_cdl 1

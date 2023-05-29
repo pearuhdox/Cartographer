@@ -2,7 +2,10 @@
 
 
 #Hydraulic
-execute as @s[scores={ca.hydraulic=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/hydraulic
+execute as @s[scores={ca.hydraulic=1..}] at @s unless score @s ca.riptide matches 1.. run function cartographer_custom_enchantments:enchant_effects/hydraulic/start
+
+#Custom Riptide
+execute as @s[scores={ca.riptide=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/riptide/start
 
 #Do all ranged checks.
 function cartographer_custom_enchantments:enchant_effects/apply_ranged_tags_trident

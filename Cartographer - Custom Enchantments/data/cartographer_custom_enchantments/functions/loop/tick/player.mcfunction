@@ -56,6 +56,10 @@ execute if score @s ca.loyalty_speed matches 2.. run attribute @s minecraft:gene
 execute if score @s ca.loyalty_speed matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-321-1818-514-20
 execute if score @s ca.loyalty_speed matches 1.. run scoreboard players remove @s ca.loyalty_speed 1
 
+#Custom Riptide Dash
+execute if score @s ca.riptide_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/riptide/tick
+execute if score @s ca.riptide_count_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/riptide/count_tick
+
 #Run The Notification that First Strike is available
 execute if entity @s[tag=ca.used_first_strike] if score @s ca.combat_timer matches 0 run function cartographer_custom_enchantments:enchant_effects/first_strike/notify_available
 
@@ -201,9 +205,8 @@ execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_frost_w
 
 tag @s remove ca.enable_frost_walker
 
-
-
-
+#Run Custom Unbreaking
+execute if entity @s[tag=ca.run_armor_unbreaking] run function cartographer_custom_enchantments:enchant_effects/unbreaking/find
 
 
 

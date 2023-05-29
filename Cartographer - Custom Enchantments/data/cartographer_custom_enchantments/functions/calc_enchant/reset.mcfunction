@@ -23,7 +23,7 @@ scoreboard players set @s ca.frenzy 0
 scoreboard players set @s ca.frostbite 0
 scoreboard players set @s ca.frost 0
 scoreboard players set @s ca.hunter 0
-scoreboard players set @s[scores={ca.throw_trident=0}] ca.hydraulic 0
+scoreboard players set @s ca.hydraulic 0
 scoreboard players set @s ca.lifesteal 0
 scoreboard players set @s ca.overcharge 0
 scoreboard players set @s ca.point_blank 0
@@ -51,6 +51,7 @@ scoreboard players set @s ca.wavedash 0
 scoreboard players set @s ca.respiration 0
 scoreboard players set @s ca.recoil 0
 scoreboard players set @s ca.collapse 0
+scoreboard players set @s ca.riptide 0
 
 scoreboard players set @s ca.gravity 0
 scoreboard players set @s ca.smite 0
@@ -105,6 +106,11 @@ scoreboard players set @s ca.g_fire 0
 scoreboard players set @s ca.g_frost 0
 scoreboard players set @s ca.g_knock 0
 scoreboard players set @s ca.g_exec 0
+
+scoreboard players set @s ca.hy_fire 0
+scoreboard players set @s ca.hy_frost 0
+scoreboard players set @s ca.hy_knock 0
+scoreboard players set @s ca.hy_exec 0
 
 scoreboard players set @s ca.mo_fire 0
 scoreboard players set @s ca.mo_knock 0
@@ -213,6 +219,10 @@ tag @s remove ca.deadeye_offhand
 tag @s remove ca.ce_repulsion_main
 tag @s remove ca.ce_repulsion_offh
 
+tag @s remove ca.unb_head
+tag @s remove ca.unb_body
+tag @s remove ca.unb_legs
+tag @s remove ca.unb_feet
 
 #Turn features dynamically off by default. We will turn them back on as we find we need them.
 #scoreboard players set $cu_en_melee ca.enabler 0

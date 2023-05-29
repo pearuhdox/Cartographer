@@ -6,4 +6,5 @@ execute if score @s ca.use_pearl matches 1.. run function cartographer_custom_en
 execute if score @s ca.use_splashpot matches 1.. run function cartographer_custom_enchantments:enchant_effects/infinity/check_edgecases
 execute if score @s ca.use_lingerpot matches 1.. run function cartographer_custom_enchantments:enchant_effects/infinity/check_edgecases
 
+
 function cartographer_custom_enchantments:enchant_effects/infinity/reset_scores

@@ -138,3 +138,6 @@ tag @s[type=vex] add vex_checked
 
 #Run on entities that have death effects
 execute if entity @s[tag=ca.has_death,tag=!ca.has_death_setup,tag=!ca.deathbomb] run function cartographer_mob_abilities:death/create_death_marker
+
+#Run Despawning Tag
+execute as @s[tag=ca.can_despawn] at @s run function cartographer_mob_abilities:loop/tick/spawner_leash/entity

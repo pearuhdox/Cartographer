@@ -44,6 +44,9 @@ scoreboard objectives add ca.cutter_side dummy
 
 scoreboard objectives add ca.multihit_animation dummy
 
+scoreboard objectives add ca.sl.lifetime dummy
+scoreboard objectives add ca.sl.var dummy
+execute unless score $time ca.sl.var matches 1.. run scoreboard players set $time ca.sl.var 800
 
 scoreboard objectives add ca.carapace_stacks dummy
 

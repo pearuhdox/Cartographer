@@ -36,7 +36,7 @@ execute if score @s ca.splintering matches 2.. run scoreboard players set @s ca.
 execute if score @s ca.spurs matches 2.. run scoreboard players set @s ca.spurs 1
 execute if score @s ca.surging_strike matches 4.. run scoreboard players set @s ca.surging_strike 3
 execute if score @s ca.transfig matches 6.. run scoreboard players set @s ca.transfig 5
-execute if score @s ca.tempo_theft matches 3.. run scoreboard players set @s ca.tempest 5
+execute if score @s ca.tempest matches 3.. run scoreboard players set @s ca.tempest 5
 execute if score @s ca.tempo_theft matches 3.. run scoreboard players set @s ca.tempo_theft 3
 execute if score @s ca.trueshot matches 1.. run scoreboard players set @s ca.trueshot 1
 execute if score @s vengeance matches 6.. run scoreboard players set @s vengeance 5
@@ -50,6 +50,11 @@ execute if score @s ca.recoil matches 11.. run scoreboard players set @s ca.reco
 execute if score @s ca.collapse matches 2.. run scoreboard players set @s ca.recoil 1
 execute if score @s ca.echo matches 5.. run scoreboard players set @s ca.echo 4
 execute if score @s ca.resourceful matches 11.. run scoreboard players set @s ca.resourceful 10
+execute if score @s ca.riptide matches 11..100 run scoreboard players set @s ca.riptide 10
+execute if score @s ca.riptide matches 111.. run scoreboard players set @s ca.riptide 110
+
+execute if score @s ca.hydraulic matches 2..100 run scoreboard players set @s ca.hydraulic 1
+execute if score @s ca.hydraulic matches 102.. run scoreboard players set @s ca.hydraulic 101
 
 execute if score @s ca.gravity matches 5.. run scoreboard players set @s ca.gravity 4
 execute if score @s ca.smite matches 11.. run scoreboard players set @s ca.gravity 10

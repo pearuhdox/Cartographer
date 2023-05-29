@@ -9,6 +9,7 @@ scoreboard players set $slot ca.inf_kc_var -10000
 
 execute store result score $slot ca.inf_cdl_var run data get entity @s SelectedItemSlot
 execute store result score $slot ca.inf_kc_var run data get entity @s SelectedItemSlot
+execute store result score $slot ca.inf_ch_var run data get entity @s SelectedItemSlot
 
 data modify storage cartographer_custom_enchantments:infinity with_cdl set value []
 data modify storage cartographer_custom_enchantments:infinity with_kc set value []

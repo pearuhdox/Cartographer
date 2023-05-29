@@ -1,0 +1,17 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_durability_changed",
+        "conditions": {
+          "player": [],
+          "item": {
+            "nbt": "{CustomEnchantments:[{id:\"unbreaking\"}]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "cartographer_custom_enchantments:enchant_effects/unbreaking/queue"
+    }
+  }
+  
