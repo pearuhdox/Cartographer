@@ -127,3 +127,6 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants feet.tag.Enchantments[{id:"minecraft:frost_walker"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.frost_walker += $temp ca.susu
+
+execute store result score $temp ca.susu run data get storage ca.susu:enchants feet.tag.CustomEnchantments[{id:"unbreaking"}].lvl
+execute if score $temp ca.susu matches 1.. run tag @s add ca.unb_feet
