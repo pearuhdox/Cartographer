@@ -61,6 +61,7 @@ scoreboard players set @s ca.momentum 0
 scoreboard players set @s ca.confidence 0
 scoreboard players set @s ca.desperation 0
 scoreboard players set @s ca.stalwart 0
+scoreboard players set @s ca.poise 0
 
 scoreboard players set @s ca.shielding 0
 scoreboard players set @s ca.sprint_dash 0

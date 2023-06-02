@@ -18,5 +18,6 @@ tag @s[scores={ca.combat_timer=1}] add can_first_strike
 function cartographer_custom_enchantments:enchant_effects/confidence/reset
 function cartographer_custom_enchantments:enchant_effects/desperation/reset
 function cartographer_custom_enchantments:enchant_effects/stalwart/reset
+function cartographer_custom_enchantments:enchant_effects/poise/reset
 
 execute if entity @s[tag=ca.check_hp_percent] run function cartographer_custom_enchantments:enchant_calls/check_hp

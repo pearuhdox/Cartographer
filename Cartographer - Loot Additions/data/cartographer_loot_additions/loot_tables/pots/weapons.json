@@ -1,0 +1,197 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "$result"
+          },
+          "score": "ca.loot_multiplier",
+          "scale": 1
+        },
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:crossbow",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.05,
+                  "max": 0.3
+                }
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:bow",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.05,
+                  "max": 0.3
+                }
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:iron_axe",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.5,
+                  "max": 1
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.9
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:iron_sword",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.5,
+                  "max": 1
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.9
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone_axe",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.75,
+                  "max": 1
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:stone_sword",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.75,
+                  "max": 1
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:golden_axe",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.75,
+                  "max": 1
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:golden_sword",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.75,
+                  "max": 1
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:wooden_axe",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.75,
+                  "max": 1
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:wooden_sword",
+            "functions": [
+              {
+                "function": "minecraft:set_damage",
+                "damage": {
+                  "min": 0.75,
+                  "max": 1
+                },
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance",
+                    "chance": 0.5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "$result"
+            },
+            "score": "ca.loot_multiplier",
+            "scale": 1
+          },
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:potion",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Resistance\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:11,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:10044730}"
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:potion",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Haste\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:3,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:14270531}"
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:potion",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Strength\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:5,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:9643043}"
+              }
+            ]
+          },
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:potion",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Speed\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:1,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:8171462}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

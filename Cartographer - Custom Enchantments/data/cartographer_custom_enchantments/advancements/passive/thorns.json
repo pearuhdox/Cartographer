@@ -9,7 +9,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:dead_bush"
+            "item": "minecraft:cactus"
         },
         "frame": "task",
         "show_toast": true,

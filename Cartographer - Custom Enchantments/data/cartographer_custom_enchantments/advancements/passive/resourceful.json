@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/passive/resourceful"
     },
-    "parent": "cartographer_custom_enchantments:tree_passive"
+    "parent": "cartographer_custom_enchantments:passive/regeneration"
 }

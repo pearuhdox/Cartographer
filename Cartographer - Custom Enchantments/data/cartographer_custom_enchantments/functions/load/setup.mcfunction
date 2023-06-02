@@ -110,6 +110,7 @@ scoreboard objectives add ca.momentum_tier dummy
 scoreboard objectives add ca.confidence dummy
 scoreboard objectives add ca.desperation dummy
 scoreboard objectives add ca.stalwart dummy
+scoreboard objectives add ca.poise dummy
 
 scoreboard objectives add ca.shielding dummy
 scoreboard objectives add ca.shielding_time dummy

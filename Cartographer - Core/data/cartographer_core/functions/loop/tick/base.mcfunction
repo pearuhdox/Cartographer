@@ -26,7 +26,6 @@ execute unless score $setup_mode ca.gamerule matches 0.. run scoreboard players 
 #Run all ticking entity effects.
 execute as @e[type=!#cartographer_core:not_tracked,predicate=cartographer_core:in_valid_dimension,tag=!no_tick] at @s run function cartographer_core:loop/entity_calls/branch_tick
 
-
 #Reset token kill check (Mob Abilities)
 scoreboard players set @a[scores={token_kill_check=1..}] token_kill_check 0
 

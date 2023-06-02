@@ -68,10 +68,6 @@ execute if score @s ca.elytra_deploy_time matches 1.. run scoreboard players add
 #Run Trap Traits
 execute if entity @s[type=area_effect_cloud,tag=trap_deployed] at @s run function cartographer_mob_abilities:projectiles/behavior/trap/run_traits
 
-#Run Reflection per Tick
-execute if entity @s[tag=ca.reflect_melee] run function cartographer_mob_abilities:loop/tick/reflect/pre_run
-execute if entity @s[tag=ca.reflect_ranged] run function cartographer_mob_abilities:loop/tick/reflect/pre_run
-
 #Run Aftershock time reduction
 execute if entity @s[scores={ca.aftershock=1..}] run function cartographer_mob_abilities:ability_traits/aftershock/windup
 
@@ -81,16 +77,6 @@ execute if score @s ca.carapace_stacks matches 1.. at @s run function cartograph
 #Run Creation
 execute as @s[tag=ca.creation,tag=!created] at @s run function cartographer_mob_abilities:ability_traits/creation/effect
 
-#Run Skin timers for skin entities
-execute as @s[tag=ca.fireskin] at @s run function cartographer_mob_abilities:passive/skin/timer
-execute as @s[tag=ca.waterskin] at @s run function cartographer_mob_abilities:passive/skin/timer
-execute as @s[tag=ca.scaleskin] at @s run function cartographer_mob_abilities:passive/skin/timer
-execute as @s[tag=ca.scaleskin_2] at @s run function cartographer_mob_abilities:passive/skin/timer
-execute as @s[tag=ca.scaleskin_3] at @s run function cartographer_mob_abilities:passive/skin/timer
-execute as @s[tag=ca.shimmerskin] at @s run function cartographer_mob_abilities:passive/skin/timer
-execute as @s[tag=ca.shroudskin] at @s run function cartographer_mob_abilities:passive/skin/timer
-
-
 execute as @s[tag=ca.quiver] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
 
 execute as @s[tag=ca.potion_bag] at @s run function cartographer_mob_abilities:passive/projectile/check_projectile/main
@@ -98,11 +84,6 @@ execute as @s[tag=ca.potion_bag] at @s run function cartographer_mob_abilities:p
 #Run drinking for Potion Bag on Witches
 execute as @s[type=witch,tag=ca.potion_bag,tag=!witch_drinking,predicate=cartographer_mob_abilities:witch_drinking] at @s run function cartographer_mob_abilities:passive/potion_bag
 execute as @s[type=witch,tag=ca.potion_bag,tag=witch_drinking,predicate=cartographer_mob_abilities:witch_stop_drinking] at @s run tag @s remove witch_drinking
-
-#Run Hookshot Slime Pushers
-#execute as @s[type=slime,tag=hooked_push_back] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/back
-#execute as @s[type=slime,tag=hooked_push_left] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/left
-#execute as @s[type=slime,tag=hooked_push_right] at @s run function cartographer_mob_abilities:abilities/hookshot/player/slime/right
 
 execute as @s[tag=ca.hookshot,scores={ca.hooked=1..}] at @s run scoreboard players remove @s ca.hooked 1
 execute as @s[tag=ca.hookshot,scores={ca.hooked=1}] at @s run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit

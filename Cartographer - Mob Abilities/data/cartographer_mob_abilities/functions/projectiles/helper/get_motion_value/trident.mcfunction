@@ -4,8 +4,11 @@ tp @s ~ ~ ~ facing entity 0000001f-00de-140d-0000-0000000276ef feet
 
 scoreboard players add @s co_send 16
 
-execute if score $reduce_proj_speed ca.mob_var matches 1.. run scoreboard players remove @s co_send 5
-execute if score $reduce_proj_speed ca.mob_var matches 1.. run scoreboard players add @s co_y 1
+execute if score $reduce_proj_speed ca.mob_var matches 1.. if entity @a[distance=..5] run scoreboard players remove @s co_send 8
+execute if score $reduce_proj_speed ca.mob_var matches 1.. if entity @a[distance=..5] run scoreboard players add @s co_y 1
+
+execute if score $reduce_proj_speed ca.mob_var matches 1.. unless entity @a[distance=..5] run scoreboard players remove @s co_send 5
+execute if score $reduce_proj_speed ca.mob_var matches 1.. unless entity @a[distance=..5] run scoreboard players add @s co_y 1
 
 execute if score $ability ca.xyz_convert matches 1.. run scoreboard players set @s co_y -3
 

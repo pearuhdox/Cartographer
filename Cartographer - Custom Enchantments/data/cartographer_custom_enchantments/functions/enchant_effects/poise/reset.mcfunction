@@ -1,0 +1,1 @@
+attribute @s minecraft:generic.armor modifier remove 31182015-5143-8221-6631-000000000000

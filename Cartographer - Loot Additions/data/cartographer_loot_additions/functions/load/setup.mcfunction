@@ -2,6 +2,9 @@
 scoreboard objectives add helper_tier dummy
 scoreboard objectives add ca.break_head minecraft.mined:minecraft.player_head
 scoreboard objectives add ca.break_whead minecraft.mined:minecraft.player_wall_head
+
+scoreboard objectives add ca.break_pot minecraft.mined:minecraft.decorated_pot
+
 scoreboard objectives add ca.x_seed dummy
 scoreboard objectives add ca.y_seed dummy
 scoreboard objectives add ca.z_seed dummy

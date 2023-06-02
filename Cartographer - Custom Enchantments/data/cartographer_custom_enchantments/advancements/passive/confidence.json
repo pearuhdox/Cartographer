@@ -6,7 +6,7 @@
         },
         "description": {
             "text": "While above 75% Max Health, deal additional melee damage.",
-            "color": "aqua"
+            "color": "white"
         },
         "icon": {
             "item": "minecraft:diamond"

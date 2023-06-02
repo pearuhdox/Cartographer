@@ -10,13 +10,18 @@
             "predicate": {}
           }
         ],
-        "location": {
-          "block": {
-            "blocks": [
-              "minecraft:lectern"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:lectern"
+                ]
+              }
+            }
           }
-        }
+        ]
       }
     }
   }

@@ -9,7 +9,7 @@
             "text": "This weapon deals additional damage to debuffed enemies and cleanses their debuffs."
         },
         "icon": {
-            "item": "minecraft:netherite_sword"
+            "item": "minecraft:potion"
         },
         "frame": "task",
         "show_toast": true,

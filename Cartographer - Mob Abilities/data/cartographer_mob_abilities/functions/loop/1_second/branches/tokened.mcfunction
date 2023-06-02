@@ -25,3 +25,4 @@ execute if entity @s[tag=ca.quickdraw,scores={cooldown=0}] if entity @a[gamemode
 execute if entity @s[tag=ca.storm,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..18] run tag @s add avail_target
 execute if entity @s[tag=ca.cutter,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..12] run tag @s add avail_target
 execute if entity @s[tag=ca.multihit,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..12] run tag @s add avail_target
+execute if entity @s[tag=ca.reflect,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..18] run tag @s add avail_target

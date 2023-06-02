@@ -54,6 +54,7 @@ execute if score @s ca.lexica_trig matches 241 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 242 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/gravity
 execute if score @s ca.lexica_trig matches 243 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/lifesteal
 execute if score @s ca.lexica_trig matches 244 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/momentum
+execute if score @s ca.lexica_trig matches 2008 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/poise
 execute if score @s ca.lexica_trig matches 245 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/quake
 execute if score @s ca.lexica_trig matches 246 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/rally
 execute if score @s ca.lexica_trig matches 247 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/reconstruction
@@ -150,7 +151,6 @@ execute if score @s ca.lexica_trig matches 337 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 338 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/spectral
 
 execute if score @s ca.lexica_trig matches 3041 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/main
-execute if score @s ca.lexica_trig matches 3042 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/main
 execute if score @s ca.lexica_trig matches 3043 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/main
 
 execute if score @s ca.lexica_trig matches 3411 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/arrow
@@ -160,12 +160,6 @@ execute if score @s ca.lexica_trig matches 3441 run function cartographer_mob_ab
 execute if score @s ca.lexica_trig matches 3451 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/potion
 execute if score @s ca.lexica_trig matches 3461 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/shulker_bullet
 execute if score @s ca.lexica_trig matches 3471 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/projectile/wither_skull
-
-execute if score @s ca.lexica_trig matches 3412 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/fireskin
-execute if score @s ca.lexica_trig matches 3422 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/scaleskin
-execute if score @s ca.lexica_trig matches 3432 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/shimmerskin
-execute if score @s ca.lexica_trig matches 3442 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/shroudskin
-execute if score @s ca.lexica_trig matches 3452 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/skin/waterskin
 
 execute if score @s ca.lexica_trig matches 3413 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/breaker
 execute if score @s ca.lexica_trig matches 3423 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/other/enderport

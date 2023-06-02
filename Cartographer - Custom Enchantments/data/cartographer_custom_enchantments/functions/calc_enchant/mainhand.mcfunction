@@ -156,6 +156,10 @@ execute store result score $temp ca.susu run data get storage ca.susu:enchants m
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.stalwart += $temp ca.susu
 execute if score $temp ca.susu matches 1.. run tag @s add ca.check_hp_percent
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"poise"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.poise += $temp ca.susu
+execute if score $temp ca.susu matches 1.. run tag @s add ca.check_hp_percent
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"shielding"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.shielding += $temp ca.susu
 

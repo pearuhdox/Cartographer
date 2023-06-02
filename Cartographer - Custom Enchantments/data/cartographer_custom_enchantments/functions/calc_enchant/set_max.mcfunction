@@ -64,6 +64,7 @@ execute if score @s ca.momentum matches 5.. run scoreboard players set @s ca.qua
 execute if score @s ca.confidence matches 11.. run scoreboard players set @s ca.confidence 10
 execute if score @s ca.desperation matches 11.. run scoreboard players set @s ca.desperation 10
 execute if score @s ca.stalwart matches 11.. run scoreboard players set @s ca.stalwart 10
+execute if score @s ca.poise matches 11.. run scoreboard players set @s ca.poise 10
 
 execute if score @s ca.shielding matches 7.. run scoreboard players set @s ca.shielding 6
 

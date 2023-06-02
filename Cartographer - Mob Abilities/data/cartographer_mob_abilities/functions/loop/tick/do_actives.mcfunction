@@ -43,6 +43,8 @@ execute if entity @s[tag=ca.multihit,scores={cooldown=0}] unless score @s ca.mul
 
 execute if entity @s[tag=ca.fling,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:animations/fling
 
+execute if entity @s[tag=ca.reflect,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:animations/reflect
+
 execute if entity @s[tag=ca.storm,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:animations/storm
 
 execute as @a[distance=..40] at @s if score @s ca.combat_timer matches ..3 run scoreboard players set @s ca.combat_timer 4

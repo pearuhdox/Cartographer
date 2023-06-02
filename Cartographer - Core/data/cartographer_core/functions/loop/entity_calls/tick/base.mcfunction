@@ -20,6 +20,7 @@ execute if entity @s[type=tnt_minecart] run function cartographer_core:loop/enti
 #Run Custom Fireballs
 execute if entity @s[type=fireball,tag=!ca.checked] run function cartographer_core:helper/delta/fireball/attach_marker
 execute if entity @s[type=end_crystal,tag=!ca.checked] run function cartographer_core:helper/delta/end_crystal/attach_marker
+execute if entity @s[type=wither_skull,tag=!ca.checked] run function cartographer_core:helper/delta/wither_skull/attach_marker
 execute if entity @s[type=tnt_minecart,tag=!ca.checked] run function cartographer_core:helper/delta/tnt_minecart/attach_marker
 
 function cartographer_core:loop/entity_calls/tick/types/entities
