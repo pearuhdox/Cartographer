@@ -26,6 +26,6 @@ execute if score $time3 ca.repair_station_state matches 1 run particle minecraft
 
 execute if score $time ca.repair_station_state matches 1 run playsound minecraft:block.conduit.ambient block @a[distance=..12] ~ ~ ~ 1 0.8
 
-execute if score $time ca.repair_station_state matches 40 run data merge entity 31182015-1851-6191-8192-000000000007 {interpolation_duration:40,start_interpolation:0,transformation:[0.6f,0f,0f,0f,0f,0.6f,0f,1.5f,0f,0f,0.6f,0f,0f,0f,0f,1f]}
+execute if score $time ca.repair_station_state matches 40 run data merge entity 31182015-1851-6191-8192-000000000007 {interpolation_duration:40,start_interpolation:0,transformation:[-0.6f,0f,0f,0f,0f,0.6f,0f,1.5f,0f,0f,-0.6f,0f,0f,0f,0f,1f]}
 
-execute if score $time ca.repair_station_state matches 80 run data merge entity 31182015-1851-6191-8192-000000000007 {interpolation_duration:60,start_interpolation:0,transformation:[0.8f,0f,0f,0f,0f,0.8f,0f,1.7000000000000002f,0f,0f,0.8f,0f,0f,0f,0f,1f]}
+execute if score $time ca.repair_station_state matches 80 run data merge entity 31182015-1851-6191-8192-000000000007 {interpolation_duration:60,start_interpolation:0,transformation:[-0.8f,0f,0f,0f,0f,0.8f,0f,1.7000000000000002f,0f,0f,-0.8f,0f,0f,0f,0f,1f]}
