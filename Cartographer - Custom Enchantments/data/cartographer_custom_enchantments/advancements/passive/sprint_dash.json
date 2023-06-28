@@ -31,5 +31,5 @@
     "rewards": {
         "function": "cartographer_custom_enchantments:descriptions/passive/sprint_dash"
     },
-    "parent": "cartographer_custom_enchantments:passive/smite"
+    "parent": "cartographer_custom_enchantments:passive/shielding"
 }

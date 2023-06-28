@@ -1,4 +1,8 @@
+function cartographer_custom_enchantments:enchant_effects/second_wind/lava_check
+
 scoreboard players operation @s ca.damage_queue = @s ca.dmg_resist_sw
+
+scoreboard players operation $swt ca.damage_queue = @s ca.dmg_resist_sw
 
 #We need to apply EPF and Resistance here.
 

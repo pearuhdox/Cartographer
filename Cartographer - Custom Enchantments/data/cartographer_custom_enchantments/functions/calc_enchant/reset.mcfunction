@@ -54,7 +54,7 @@ scoreboard players set @s ca.collapse 0
 scoreboard players set @s ca.riptide 0
 
 scoreboard players set @s ca.gravity 0
-scoreboard players set @s ca.smite 0
+scoreboard players set @s ca.starfall 0
 scoreboard players set @s ca.quake 0
 scoreboard players set @s ca.momentum 0
 
@@ -205,12 +205,12 @@ tag @s remove ca.ce_quake_body
 tag @s remove ca.ce_quake_legs
 tag @s remove ca.ce_quake_feet
 
-tag @s remove ca.ce_smite_main
-tag @s remove ca.ce_smite_offh
-tag @s remove ca.ce_smite_head
-tag @s remove ca.ce_smite_body
-tag @s remove ca.ce_smite_legs
-tag @s remove ca.ce_smite_feet
+tag @s remove ca.ce_starfall_main
+tag @s remove ca.ce_starfall_offh
+tag @s remove ca.ce_starfall_head
+tag @s remove ca.ce_starfall_body
+tag @s remove ca.ce_starfall_legs
+tag @s remove ca.ce_starfall_feet
 
 tag @s remove ca.check_hp_percent
 

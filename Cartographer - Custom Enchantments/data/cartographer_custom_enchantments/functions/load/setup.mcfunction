@@ -100,7 +100,7 @@ scoreboard objectives add ca.inf_ch_o dummy
 
 
 scoreboard objectives add ca.gravity dummy
-scoreboard objectives add ca.smite dummy
+scoreboard objectives add ca.starfall dummy
 scoreboard objectives add ca.quake dummy
 scoreboard objectives add ca.momentum dummy
 
@@ -139,7 +139,7 @@ scoreboard objectives add ca.disengage_z dummy
 
 scoreboard objectives add ca.gravity_fall minecraft.custom:minecraft.fall_one_cm
 
-scoreboard objectives add ca.smite_time dummy
+scoreboard objectives add ca.starfall_time dummy
 
 scoreboard objectives add ca.proj_registry dummy
 scoreboard objectives add ca.deadeye_time dummy
@@ -286,6 +286,7 @@ scoreboard players set SecondWindHelper ca.second_wind 10
 scoreboard objectives add ca.sw_time dummy
 scoreboard objectives add ca.sw_tier dummy
 scoreboard objectives add ca.dmg_resist_sw minecraft.custom:minecraft.damage_resisted
+scoreboard objectives add ca.sw_lava_timer dummy
 
 scoreboard objectives add ca.dmg_resist_check minecraft.custom:minecraft.damage_taken
 scoreboard objectives add ca.dmg_resist_evaded minecraft.custom:minecraft.damage_resisted

@@ -18,7 +18,7 @@ execute unless entity @s[predicate=cartographer_custom_enchantments:hold_armor_m
 
 execute if score @s ca.thorns matches 1.. run function cartographer_custom_enchantments:calc_enchant/thorns
 execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:calc_enchant/gravity
-execute if score @s ca.smite matches 1.. run function cartographer_custom_enchantments:calc_enchant/smite
+execute if score @s ca.starfall matches 1.. run function cartographer_custom_enchantments:calc_enchant/starfall
 execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:calc_enchant/quake
 execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:calc_enchant/momentum
 execute if score @s ca.repulsion matches 1.. run function cartographer_custom_enchantments:calc_enchant/repulsion

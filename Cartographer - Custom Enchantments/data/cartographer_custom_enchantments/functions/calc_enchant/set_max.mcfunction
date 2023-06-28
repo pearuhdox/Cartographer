@@ -57,7 +57,7 @@ execute if score @s ca.hydraulic matches 2..100 run scoreboard players set @s ca
 execute if score @s ca.hydraulic matches 102.. run scoreboard players set @s ca.hydraulic 101
 
 execute if score @s ca.gravity matches 5.. run scoreboard players set @s ca.gravity 4
-execute if score @s ca.smite matches 11.. run scoreboard players set @s ca.gravity 10
+execute if score @s ca.starfall matches 11.. run scoreboard players set @s ca.gravity 10
 execute if score @s ca.quake matches 11.. run scoreboard players set @s ca.quake 10
 execute if score @s ca.momentum matches 5.. run scoreboard players set @s ca.quake 4
 

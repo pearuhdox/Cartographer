@@ -169,8 +169,8 @@ execute if entity @s[scores={ca.dmg_resist_check=1..,ca.evasion=1..}] run functi
 #Run Gravity Here
 execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/tick
 
-#Run Smite Here
-execute if score @s ca.smite matches 1.. run function cartographer_custom_enchantments:enchant_effects/smite/tick
+#Run Starfall Here
+execute if score @s ca.starfall matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/tick
 
 #Reduce Ranged Weapon Recently Fired Counter
 execute if score @s ca.recently_fired_weapon matches 1.. run scoreboard players remove @s ca.recently_fired_weapon 1

@@ -3,7 +3,6 @@
 		"minecraft:marker",
 		"minecraft:text_display",
 		"minecraft:item_display",
-		"minecraft:block_display",
-		"minecraft:interaction"
+		"minecraft:block_display"
 	]
 }

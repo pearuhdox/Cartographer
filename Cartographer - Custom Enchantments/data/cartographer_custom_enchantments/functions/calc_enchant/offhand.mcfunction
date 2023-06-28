@@ -85,9 +85,9 @@ execute store result score $temp ca.susu run data get storage ca.susu:enchants o
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.quake += $temp ca.susu
 execute if score $temp ca.susu matches 1.. run tag @s add ca.ce_quake_offh
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"smite"}].lvl
-execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.smite += $temp ca.susu
-execute if score $temp ca.susu matches 1.. run tag @s add ca.ce_smite_offh
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"starfall"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.starfall += $temp ca.susu
+execute if score $temp ca.susu matches 1.. run tag @s add ca.ce_starfall_offh
 
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"confidence"}].lvl

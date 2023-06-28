@@ -6,3 +6,6 @@ execute if score $loot_additions ca.installed matches 1.. run function cartograp
 execute if entity @s[type=marker,tag=ca.core_fireball_track] run function cartographer_core:helper/delta/fireball/master
 execute if entity @s[type=marker,tag=ca.core_crystal_track] run function cartographer_core:helper/delta/end_crystal/master
 execute if entity @s[type=marker,tag=ca.core_skull_track] run function cartographer_core:helper/delta/wither_skull/master
+
+
+execute if score $api ca.installed matches 1.. run function cartographer_core:loop/entity_calls/tick/types/markers/api

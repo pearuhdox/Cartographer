@@ -31,6 +31,8 @@ scoreboard players set @s helper_eye 0
 
 scoreboard players remove @s[scores={ca.rpt_cdl=2..}] ca.rpt_cdl 1
 
+execute if score @s ca.sw_lava_timer matches 1.. run scoreboard players remove @s ca.sw_lava_timer 1
+
 scoreboard players set @s ca.sneak 0
 
 scoreboard players set @s ca.dmg_resist_sw 0

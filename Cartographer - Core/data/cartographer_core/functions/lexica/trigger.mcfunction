@@ -65,7 +65,7 @@ execute if score @s ca.lexica_trig matches 2001 run function cartographer_custom
 execute if score @s ca.lexica_trig matches 2002 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/second_wind
 execute if score @s ca.lexica_trig matches 2003 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/shielding
 execute if score @s ca.lexica_trig matches 2004 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/sprint_dash
-execute if score @s ca.lexica_trig matches 2005 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/smite
+execute if score @s ca.lexica_trig matches 2005 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/starfall
 execute if score @s ca.lexica_trig matches 2006 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/spurs
 execute if score @s ca.lexica_trig matches 2007 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/stalwart
 

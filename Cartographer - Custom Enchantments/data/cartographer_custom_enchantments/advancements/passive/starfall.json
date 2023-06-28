@@ -1,7 +1,7 @@
 {
     "display": {
         "title": {
-            "text": "Smite                    ",
+            "text": "Starfall                    ",
             "color": "aqua"
         },
         "description": {
@@ -9,7 +9,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:golden_sword"
+            "item": "minecraft:nether_star"
         },
         "frame": "task",
         "show_toast": true,
@@ -22,14 +22,14 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"smite\"}]}"
+                        "nbt": "{CustomEnchantments:[{id:\"starfall\"}]}"
                     }
                 ]
             }
         }
     },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/passive/smite"
+        "function": "cartographer_custom_enchantments:descriptions/passive/starfall"
     },
-    "parent": "cartographer_custom_enchantments:passive/shielding"
+    "parent": "cartographer_custom_enchantments:passive/stalwart"
 }

@@ -27,7 +27,7 @@ execute if score @s ca.cau_prv_time matches 0.. run scoreboard players remove @s
 execute unless score @s ca.ricochet_cooldown matches 0.. run scoreboard players set @s ca.ricochet_cooldown 0
 execute if score @s ca.ricochet_cooldown matches 1.. run scoreboard players remove @s ca.ricochet_cooldown 1
 
-execute if score @s ca.smite_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/smite/smite_time_mob
+execute if score @s ca.starfall_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/starfall_time_mob
 
 #Remove Deadeye Tag
 tag @s remove deadeye_marked
