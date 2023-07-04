@@ -1,1 +1,0 @@
-function cartographer_core:helper/delta/tnt_minecart/count_fuse

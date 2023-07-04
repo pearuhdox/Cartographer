@@ -15,4 +15,5 @@ execute positioned ~ ~2 ~ if block ~ ~ ~ observer[facing=down] positioned ~ ~-1 
 
 execute positioned ~ ~-2 ~ if block ~ ~ ~ observer[facing=up] positioned ~ ~1 ~ run setblock ~ ~ ~ air destroy
 
+execute on passengers run kill @s
 kill @s

@@ -1,1 +1,0 @@
-execute if entity @s[type=creeper,tag=ca.delta_creeper_setup,tag=!ca.delta_creeper_silent] run playsound minecraft:entity.creeper.hurt hostile @a ~ ~ ~ 1 1

@@ -10,6 +10,11 @@
 # Outputs
 #   player is launched in the specified direction
 
+#Flag indicating that players need to be launched, tag the player to be launched
+scoreboard players set $function_called delta.internal.dummy 1
+tag @s add delta.launch
 
-execute as d59ee2c6-58c8-4885-b9db-ecff066e4439 run function delta:internal/math/xyz_to_polar_wrapper
-execute rotated as d59ee2c6-58c8-4885-b9db-ecff066e4439 run function delta:api/launch_looking
+scoreboard players operation @s delta.internal.x += $x delta.api.launch
+scoreboard players operation @s delta.internal.y += $y delta.api.launch
+scoreboard players operation @s delta.internal.z += $z delta.api.launch
+

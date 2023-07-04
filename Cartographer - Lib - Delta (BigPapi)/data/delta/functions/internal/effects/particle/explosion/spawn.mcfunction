@@ -1,5 +1,6 @@
 #> delta:internal/effects/particle/explosion/spawn
 #   Summons a fake explosion particle, since real ones are untextured
 
-summon snowball ~ ~ ~ {Tags:["delta.explosion_particle","delta.explosion_particle.init"],NoGravity:1b,Item:{id:"minecraft:lingering_potion",Count:1b,tag:{CustomModelData:130255,CustomPotionColor:16777215}}}
-execute as @e[type=snowball,tag=delta.explosion_particle.init,distance=..0.01] run function delta:internal/effects/particle/explosion/initialize
+schedule function delta:internal/effects/particle/tick 1t replace
+scoreboard players set $temp delta.internal.size 1
+execute summon item_display run function delta:internal/effects/particle/explosion/initialize

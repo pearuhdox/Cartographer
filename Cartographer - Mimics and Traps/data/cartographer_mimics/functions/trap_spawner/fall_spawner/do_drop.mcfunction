@@ -2,4 +2,5 @@ execute align xyz positioned ~0.5 ~0.5 ~0.5 run function cartographer_core:helpe
 
 #function cartographer_mimics:trap_spawner/fall_spawner/spread
 
+execute on passengers run kill @s
 kill @s

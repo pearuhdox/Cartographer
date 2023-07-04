@@ -2,7 +2,6 @@
 	"values": [
 		"#bb:hostile",
 		"#bb:projectile",
-		"#cartographer_core:item_frames",
         "minecraft:item",
         "minecraft:tnt",
         "minecraft:marker"

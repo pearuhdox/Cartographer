@@ -1,4 +1,4 @@
-effect give @s resistance 1 2
+effect give @s resistance 1 1
 
 scoreboard players set $altar_protect altar_lock 1
 

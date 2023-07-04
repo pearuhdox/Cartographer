@@ -8,13 +8,13 @@
 function delta:internal/math/get_power_coefficient
 
 #If strength is large, figure out number of creepers needed
-scoreboard players operation $creeper_count delta.internal.math = $strength delta.api.launch
+scoreboard players operation $creeper_count delta.internal.math = $temp_strength delta.api.launch
 scoreboard players operation $momentum_per_iteration delta.internal.math = $divisor delta.internal.math
 scoreboard players operation $momentum_per_iteration delta.internal.math *= #constant.100 delta.internal.math
 scoreboard players operation $creeper_count delta.internal.math /= $momentum_per_iteration delta.internal.math
 scoreboard players add $creeper_count delta.internal.math 1
 
-scoreboard players operation $adjusted_strength delta.internal.math = $strength delta.api.launch
+scoreboard players operation $adjusted_strength delta.internal.math = $temp_strength delta.api.launch
 scoreboard players operation $adjusted_strength delta.internal.math /= $creeper_count delta.internal.math
 
 

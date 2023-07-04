@@ -13,7 +13,6 @@ execute if block ~ ~-1 ~ chest[facing=west] run scoreboard players set $facing_s
 execute if block ~ ~-1 ~ chest[facing=north] run scoreboard players set $facing_sc ca.loot_var 3
 execute if block ~ ~-1 ~ chest[facing=east] run scoreboard players set $facing_sc ca.loot_var 4
 
-#This could be branched but its a setup function that doesn't run in gameplay and doesn't run often so frankly idc.
 execute as @e[type=item_display,tag=ca.soul_chest,sort=nearest,limit=1] at @s run function cartographer_loot_additions:place/soul_chest_branch
 
 setblock ~ ~-1 ~ barrier replace

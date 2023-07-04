@@ -9,3 +9,6 @@ summon minecraft:block_display ~ ~ ~ {block_state:{Name:"minecraft:end_stone_bri
 execute as @e[type=block_display,tag=ca.loot_altar_blocker,sort=nearest,limit=1] at @s run data merge entity @s {interpolation_duration:15,start_interpolation:0,transformation:[0.020f, 0.000f, 0.000f,-0.010f,0.000f, 0.020f, 0.000f,-0.010f,0.000f, 0.000f, 0.020f,-0.010f,0.000f, 0.000f, 0.000f,1.000f]}
 
 ride @e[type=block_display,tag=ca.loot_altar_bottom,sort=nearest,limit=1,distance=..2] mount @s
+
+summon minecraft:marker ~ ~ ~ {Tags:["ca.loot_altar_marker","ca.loot_additions_marker"]}
+ride @e[type=marker,tag=ca.loot_altar_marker,sort=nearest,limit=1,distance=..2] mount @s

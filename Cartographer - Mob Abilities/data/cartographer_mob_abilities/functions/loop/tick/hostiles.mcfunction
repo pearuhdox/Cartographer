@@ -118,7 +118,9 @@ execute if entity @s[type=evoker] store result score $spell_tick ca.mob_var run 
 tag @s[type=vex] add vex_checked
 
 #Run on entities that have death effects
-execute if entity @s[tag=ca.has_death,tag=!ca.has_death_setup,tag=!ca.deathbomb] run function cartographer_mob_abilities:death/create_death_marker
+# - Mark a creeper with ca.prevent_effects as a mob with a death effect
+execute if entity @s[type=creeper,tag=ca.prevent_effects,tag=!ca.has_death_setup] run tag @s add ca.has_death
+execute if entity @s[tag=ca.has_death,tag=!ca.has_death_setup] run function cartographer_mob_abilities:death/create_death_marker
 
 #Run Despawning Tag
 execute as @s[tag=ca.can_despawn] at @s run function cartographer_mob_abilities:loop/tick/spawner_leash/entity
