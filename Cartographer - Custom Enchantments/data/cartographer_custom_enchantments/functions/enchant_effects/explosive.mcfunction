@@ -30,7 +30,7 @@ execute positioned ~ ~0.25 ~ run function cartographer_custom_enchantments:encha
 
 tag @s add ca.vol_center
 
-execute as @e[type=#bb:hostile,distance=..5.5] at @s run function cartographer_custom_enchantments:enchant_effects/explosive/branch
+execute as @e[type=#bb:hostile,distance=..4.5] at @s run function cartographer_custom_enchantments:enchant_effects/explosive/branch
 
 tag @s remove ca.vol_center
 
