@@ -13,10 +13,6 @@ execute if score @s ca.explosive matches 1.. store result score @s ca.vol_dmg ru
 execute if score @s ca.explosive matches 1.. run data merge entity @s {damage:-1.0d}
 execute if score @s ca.explosive matches 1.. if score @s ca.flame matches 1.. run tag @s add vol_flame
 
-#execute if score @s ca.explosive matches 1.. if score @s ca.point_blank matches 1 run scoreboard players add @s ca.vol_dmg 14
-#execute if score @s ca.explosive matches 1.. if score @s ca.point_blank matches 2 run scoreboard players add @s ca.vol_dmg 28
-#execute if score @s ca.explosive matches 1.. if score @s ca.point_blank matches 3 run scoreboard players add @s ca.vol_dmg 42
-
 execute if data entity @p {SelectedItem:{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:punch"}]}}} run tag @s add p_cross
 execute if data entity @p {Inventory:[{id:"minecraft:crossbow",Slot:-106b,tag:{Enchantments:[{id:"minecraft:punch"}]}}]} run tag @s add p_cross
 

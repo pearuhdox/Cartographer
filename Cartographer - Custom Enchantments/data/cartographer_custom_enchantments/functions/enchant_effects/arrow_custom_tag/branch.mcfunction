@@ -1,3 +1,5 @@
+scoreboard players operation $flame ca.var = @s ca.flame
+
 scoreboard players operation $frost ca.var = @s ca.frost
 
 scoreboard players operation $cauterize ca.var = @s ca.cauterize

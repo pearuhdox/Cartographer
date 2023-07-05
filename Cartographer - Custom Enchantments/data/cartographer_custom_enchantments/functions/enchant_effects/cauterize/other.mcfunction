@@ -1,14 +1,18 @@
 scoreboard players set $brittled ca.cauterize 0
 scoreboard players set $other ca.cauterize 1
 
-function cartographer_custom_enchantments:enchant_effects/cauterize/test_cauterize
+scoreboard players operation $cauterize ca.ench_var = @s ca.cauterize
 
-execute if score $brittled ca.cauterize matches 1 as @s at @s run playsound minecraft:entity.player.hurt_on_fire hostile @a[distance=..12] ~ ~ ~ 1 0.5
-execute if score $brittled ca.cauterize matches 1 as @s at @s run playsound minecraft:entity.zombie.infect hostile @a[distance=..12] ~ ~ ~ 1 0.5
+function cartographer_custom_enchantments:enchant_effects/cauterize/test_cauterize
 
 
 #Resets
-scoreboard players set $brittled ca.cauterize 0
 scoreboard players set $other ca.cauterize 0
 
-tag @s[type=#bb:hostile,tag=is_cauterize] remove is_cauterize
+tag @s remove is_cauterize
+
+tag @s remove is_cauterize_1
+tag @s remove is_cauterize_2
+tag @s remove is_cauterize_3
+tag @s remove is_cauterize_4
+tag @s remove is_cauterize_5

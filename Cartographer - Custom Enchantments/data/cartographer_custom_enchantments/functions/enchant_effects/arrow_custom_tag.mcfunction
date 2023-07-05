@@ -1,14 +1,15 @@
 #Add the proper tag to the mob based on closest arrow.
 execute if score $cauterize ca.var matches 1.. run tag @s add is_cauterize
 
+
 execute if score $explosive ca.var matches 1.. run tag @s add is_explosive
 execute if score $explosive ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/explosive
 
 scoreboard players operation @s ca.vol_dmg = $vol_dmg ca.vol_dmg
 
 execute if score $tempo_theft ca.var matches 1 run tag @s add is_tempo_1
-execute if score $tempo_theft ca.var matches 2 run tag @s add is_tempo_1
-execute if score $tempo_theft ca.var matches 3 run tag @s add is_tempo_1
+execute if score $tempo_theft ca.var matches 2 run tag @s add is_tempo_2
+execute if score $tempo_theft ca.var matches 3 run tag @s add is_tempo_3
 
 execute if score $punch ca.var matches 1 run tag @s add is_punch_1
 execute if score $punch ca.var matches 2 run tag @s add is_punch_2

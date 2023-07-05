@@ -1,5 +1,7 @@
 #Reset All Scores I am Crying
 
+scoreboard players set $flame ca.var 0
+
 scoreboard players set $frost ca.var 0
 scoreboard players set $cauterize ca.var 0
 scoreboard players set $explosive ca.var 0
@@ -31,7 +33,11 @@ execute at @s as @e[distance=..7,type=trident,limit=1,sort=nearest,nbt=!{inGroun
 execute if score $cu_en_ranged ca.enabler matches 1.. at @s[type=!player] run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
 execute if score $cu_en_ranged ca.enabler matches 1.. at @s[type=!player] run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag
 
+#Flame
+#execute if score $flame ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/flame
+
 #Cauterize - Goes first
+scoreboard players operation $cauterize ca.ench_var = $cauterize ca.var
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_cauterize] at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/ranged
 
 #Electrode
@@ -160,8 +166,6 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_execut
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_executioner_3] at @s run function cartographer_custom_enchantments:enchant_effects/executioner/ranged
 
 
-#Brittle Check. Check if the entity hurt was Brittle and it wasn't from the same hit that applied it (from Cauterize).
-execute if score @s[tag=!cleanse_fire] ca.brittle_time matches 1.. as @s at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/brittle_hurt
 
 #Run the Arrow Hit Datapack Hook
 function #minecraft:cartographer_events/player_hit_mob_arrow

@@ -1,19 +1,15 @@
-scoreboard players set $time ca.brittle_time 0
+scoreboard players operation $cau_time ca.ench_var /= $20 ca.CONSTANT
+scoreboard players add $cau_time ca.ench_var 1
 
-execute store result score $time ca.brittle_time run data get entity @s Fire
-execute store result score $amt ca.cauter_dmg run data get entity @s Fire
+scoreboard players set $cau_mult ca.ench_var 15
+scoreboard players operation $cau_mult ca.ench_var *= $cauterize ca.ench_var
 
-scoreboard players add $time ca.brittle_time 40
-scoreboard players remove $amt ca.cauter_dmg 20
+scoreboard players operation $cau_time ca.ench_var *= $cau_mult ca.ench_var
+scoreboard players operation $cau_time ca.ench_var /= $100 ca.CONSTANT
+execute if score $cau_time ca.ench_var matches 0 run scoreboard players set $cau_time ca.ench_var 1
 
-#Do the damage here.
-scoreboard players operation @s ca.brittle_time = $time ca.brittle_time
-scoreboard players operation @s ca.cauter_dmg = $amt ca.cauter_dmg
-
-scoreboard players set $brittled ca.cauterize 1
-
-execute if score $ranged ca.cauterize matches 1.. run scoreboard players set @s ca.cau_prv_time -1
-execute if score $ranged ca.cauterize matches 1.. run tag @s add stop_track_fire
+scoreboard players operation @s ca.damage_queue = $cau_time ca.ench_var
+function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass
 
 #Add the tag for brittle to cleanse fire (1 tick delay).
-tag @s add cleanse_fire
+tag @s add ca.cleanse_fire

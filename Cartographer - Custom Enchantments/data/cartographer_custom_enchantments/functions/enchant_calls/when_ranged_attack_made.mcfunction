@@ -29,9 +29,6 @@ execute as @s[scores={ca.recoil=1..,ca.fire_cbow=1..}] at @s run function cartog
 #Sharpshot
 execute as @s[scores={ca.sharpshot=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/sharpshot
 
-#Trueshot
-execute as @s[scores={ca.trueshot=1..}] at @s as @e[type=#bb:arrow,sort=nearest,limit=3,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/trueshot
-
 #Encumbering
 execute as @s[scores={ca.curse_encum=1..}] at @s as @e[type=#bb:arrow,sort=nearest,limit=1,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_encumbering
 
@@ -52,6 +49,11 @@ attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-615
 
 #Do all ranged checks.
 function cartographer_custom_enchantments:enchant_effects/apply_ranged_tags
+
+
+#Trueshot - Must go after everything else
+execute as @s[scores={ca.trueshot=1..}] at @s as @e[type=#bb:arrow,sort=nearest,limit=3,distance=..6,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/trueshot
+
 
 #Run Tags
 execute if score @s ca.fire_bow matches 1.. run function #minecraft:cartographer/events/player_shoot_bow
