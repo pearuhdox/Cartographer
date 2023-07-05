@@ -23,7 +23,7 @@ execute if data storage cartographer_custom_enchantments:explosive Owner run dat
 
 scoreboard players operation $damage ca.explosive = @s ca.vol_dmg
 scoreboard players operation $damage ca.explosive /= $2 ca.CONSTANT
-scoreboard players operation $damage ca.explosive *= $67 ca.CONSTANT
+scoreboard players operation $damage ca.explosive *= $50 ca.CONSTANT
 scoreboard players operation $damage ca.explosive /= $100 ca.CONSTANT
 
 execute positioned ~ ~0.25 ~ run function cartographer_custom_enchantments:enchant_effects/explosive/particle_ring
