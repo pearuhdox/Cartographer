@@ -9,5 +9,5 @@
 
 advancement revoke @s only cartographer_core:holding_trident
 
-scoreboard players set @s ca.is_hold_tri 1
+scoreboard players set @s ca.is_hold_tri 2
 scoreboard players add @s ca.hold_tri_time 2

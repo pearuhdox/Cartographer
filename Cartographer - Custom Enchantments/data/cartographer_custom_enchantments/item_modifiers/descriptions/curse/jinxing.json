@@ -6,8 +6,8 @@
         "text": " "
       },
       {
-        "text": "✎ Flash",
-        "color": "#ACFFA6",
+        "text": "✎ Curse of Jinxing",
+        "color": "#ff8c8c",
         "bold": false,
         "italic": false,
         "underlined": false,
@@ -15,7 +15,7 @@
         "obfuscated": false
       },
       {
-        "text": "This ranged weapon can Stun enemies.",
+        "text": "While worn, you take extra",
         "color": "#FFF4D9",
         "bold": false,
         "italic": false,
@@ -24,14 +24,14 @@
         "obfuscated": false
       },
       {
-        "text": "Stunned enemies are briefly immobile.",
-        "color": "#FFF4D9",
-        "bold": false,
-        "italic": false,
-        "underlined": false,
-        "strikethrough": false,
-        "obfuscated": false
-      }
+          "text": "damage from magical sources.",
+          "color": "#FFF4D9",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
     ]
   }
 ]

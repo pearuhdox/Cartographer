@@ -6,8 +6,8 @@
         "text": " "
       },
       {
-        "text": "✎ Infect",
-        "color": "#ACFFA6",
+        "text": "✎ Curse of Clumsiness",
+        "color": "#ff8c8c",
         "bold": false,
         "italic": false,
         "underlined": false,
@@ -15,7 +15,7 @@
         "obfuscated": false
       },
       {
-        "text": "This ranged weapon inflicts Infection,",
+        "text": "While worn, you take extra",
         "color": "#FFF4D9",
         "bold": false,
         "italic": false,
@@ -24,7 +24,7 @@
         "obfuscated": false
       },
       {
-          "text": "which damages enemies over time.",
+          "text": "damage from falling.",
           "color": "#FFF4D9",
           "bold": false,
           "italic": false,

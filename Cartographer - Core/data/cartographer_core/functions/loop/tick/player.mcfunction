@@ -68,11 +68,11 @@ execute if score @s ca.is_use_ee matches 0 run scoreboard players set @s ca.use_
 execute if score @s ca.is_hold_shi matches 0 run scoreboard players set @s ca.hold_shi_time 0
 execute if score @s ca.is_hold_tri matches 0 run scoreboard players set @s ca.hold_tri_time 0
 
-scoreboard players set @s ca.is_draw_bow 0
-scoreboard players set @s ca.is_load_cro 0
-scoreboard players set @s ca.is_hold_shi 0
-scoreboard players set @s ca.is_hold_tri 0
-scoreboard players set @s ca.is_use_ee 0
+execute if score @s ca.is_draw_bow matches 1.. run scoreboard players remove @s ca.is_draw_bow 1
+execute if score @s ca.is_load_cro matches 1.. run scoreboard players remove @s ca.is_load_cro 1
+execute if score @s ca.is_hold_shi matches 1.. run scoreboard players remove @s ca.is_hold_shi 1
+execute if score @s ca.is_hold_tri matches 1.. run scoreboard players remove @s ca.is_hold_tri 1
+execute if score @s ca.is_use_ee matches 1.. run scoreboard players remove @s ca.is_use_ee 1
 
 execute if score @s ca.draw_bow_time matches 1.. run scoreboard players remove @s ca.draw_bow_time 1
 execute if score @s ca.load_cro_time matches 1.. run scoreboard players remove @s ca.load_cro_time 1

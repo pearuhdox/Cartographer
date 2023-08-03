@@ -6,5 +6,9 @@ execute if predicate cartographer_custom_statuses:is_stealthed run function cart
 execute if entity @s[advancements={entityid:player_hurt_entity={tagless=true}}] unless entity @s[tag=ca.no_status_melee] run function cartographer_custom_statuses:calls/player_hit/melee
 execute if entity @s[tag=ca.no_status_melee] run scoreboard players set $do_status_inflict ca.status_var 0
 
+scoreboard players set $was_no_impact ca.status_var 0
+execute if entity @s[advancements={entityid:player_hurt_entity={no_impact=true}}] run scoreboard players set $was_no_impact ca.status_var 1
+
+
 scoreboard players set $was_projectile ca.status_var 0
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}}] run scoreboard players set $was_projectile ca.status_var 1

@@ -10,7 +10,10 @@ scoreboard players remove @s ca.raycast 1
 #execute if score @s ca.break_head_look_time matches 1.. if block ~ ~ ~ minecraft:player_head align xyz positioned ~0.5 ~0.255 ~0.5 run particle minecraft:happy_villager ~ ~ ~ 0.255 0.255 0.255 1 1 normal
 #execute if block ~ ~ ~ minecraft:player_head if score @s ca.break_head_look_time matches 9.. run function cartographer_loot_additions:cache/sneak_break_test/do_break
 
+
 execute if block ~ ~ ~ minecraft:player_head run function cartographer_loot_additions:cache/sneak_break_test/confirm_head
+
+execute unless block ~ ~ ~ #cartographer_core:can_raycast unless block ~ ~ ~ minecraft:player_head run scoreboard players set @s ca.raycast 0
 
 execute if score @s ca.raycast matches 1.. positioned ^ ^ ^0.25 run function cartographer_loot_additions:cache/sneak_break_test/raycast
 

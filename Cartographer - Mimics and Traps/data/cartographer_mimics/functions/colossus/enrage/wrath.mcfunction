@@ -1,6 +1,3 @@
-#attribute @s minecraft:generic.attack_damage modifier add 18-1-7-5-1 "mimic_rage" 0.2 multiply_base
-#attribute @s minecraft:generic.knockback_resistance modifier add 18-1-7-5-1 "mimic_rage" 0.2 add
-
 tag @s add ca.breaker
 tag @s add ca.sidearm
 tag @s remove ca.hookshot

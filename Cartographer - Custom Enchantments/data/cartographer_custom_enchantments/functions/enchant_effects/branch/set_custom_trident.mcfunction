@@ -25,3 +25,5 @@ scoreboard players operation @s ca.executioner += @p ca.off_executioner
 execute if score @s ca.ricochet matches 1.. run tag @s add is_ricocheting
 
 tag @s add custom_trident
+
+scoreboard players set $throw_trident ca.ench_var 1

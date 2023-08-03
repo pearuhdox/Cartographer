@@ -17,5 +17,3 @@ execute if score @s ca.ov_tier matches 1.. store result entity @s damage double 
 scoreboard players operation $ranged ca.ov_dmg = @s ca.ov_dmg
 
 execute if score $ranged ca.ov_tier matches 1.. run tag @s add custom_arrow
-
-execute if score $damage catt.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/overcharge/catt_compat

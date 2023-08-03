@@ -6,7 +6,7 @@
               "text": " "
             },
             {
-              "text": "✎ Expose",
+              "text": "✎ Disengage",
               "color": "#ACFFA6",
               "bold": false,
               "italic": false,
@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This ranged weapon inflicts Exposed,",
+              "text": "When the user takes damage, sneak-jumping",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,7 +24,7 @@
               "obfuscated": false
             },
             {
-                "text": "causing enemies to take more damage.",
+                "text": "after gives you a larger backwards jump.",
                 "color": "#FFF4D9",
                 "bold": false,
                 "italic": false,

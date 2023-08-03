@@ -9,5 +9,5 @@
 
 advancement revoke @s only cartographer_core:drawing_bow
 
-scoreboard players set @s ca.is_draw_bow 1
+scoreboard players set @s ca.is_draw_bow 2
 scoreboard players add @s ca.draw_bow_time 2

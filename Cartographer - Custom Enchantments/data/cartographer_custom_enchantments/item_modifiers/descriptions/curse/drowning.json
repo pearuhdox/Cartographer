@@ -6,8 +6,8 @@
         "text": " "
       },
       {
-        "text": "✎ Stunning",
-        "color": "#ACFFA6",
+        "text": "✎ Curse of Drowning",
+        "color": "#ff8c8c",
         "bold": false,
         "italic": false,
         "underlined": false,
@@ -15,7 +15,7 @@
         "obfuscated": false
       },
       {
-        "text": "This melee weapon can Stun enemies.",
+        "text": "While worn, you take drowning",
         "color": "#FFF4D9",
         "bold": false,
         "italic": false,
@@ -24,14 +24,14 @@
         "obfuscated": false
       },
       {
-        "text": "Stunned enemies are briefly immobile.",
-        "color": "#FFF4D9",
-        "bold": false,
-        "italic": false,
-        "underlined": false,
-        "strikethrough": false,
-        "obfuscated": false
-      }
+          "text": "damage while touching water.",
+          "color": "#FFF4D9",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
     ]
   }
 ]

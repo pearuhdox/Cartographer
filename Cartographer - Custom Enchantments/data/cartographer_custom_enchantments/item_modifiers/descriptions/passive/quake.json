@@ -6,7 +6,7 @@
               "text": " "
             },
             {
-              "text": "✎ Possession",
+              "text": "✎ Quake",
               "color": "#ACFFA6",
               "bold": false,
               "italic": false,
@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This melee weapon can Possess enemies.",
+              "text": "Killing an enemy deals damage",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,14 +24,15 @@
               "obfuscated": false
             },
             {
-              "text": "Possessed enemies attack other enemies.",
-              "color": "#FFF4D9",
-              "bold": false,
-              "italic": false,
-              "underlined": false,
-              "strikethrough": false,
-              "obfuscated": false
-            }
+                "text": "in a small circle around the player.",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              }
           ]
         }
       ]
+      

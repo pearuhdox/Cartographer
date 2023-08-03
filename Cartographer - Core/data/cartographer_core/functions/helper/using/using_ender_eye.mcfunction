@@ -9,5 +9,5 @@
 
 advancement revoke @s only cartographer_core:using_ender_eye
 
-scoreboard players set @s ca.is_use_ee 1
+scoreboard players set @s ca.is_use_ee 2
 scoreboard players add @s ca.use_ee_time 2

@@ -9,5 +9,5 @@
 
 advancement revoke @s only cartographer_core:loading_crossbow
 
-scoreboard players set @s ca.is_load_cro 1
+scoreboard players set @s ca.is_load_cro 2
 scoreboard players add @s ca.load_cro_time 2

@@ -9,5 +9,5 @@
 
 advancement revoke @s only cartographer_core:holding_shield
 
-scoreboard players set @s ca.is_hold_shi 1
+scoreboard players set @s ca.is_hold_shi 2
 scoreboard players add @s ca.hold_shi_time 2

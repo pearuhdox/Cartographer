@@ -58,3 +58,28 @@ tag @s remove ca.en.f_male
 tag @s remove ca.en.f_regr
 tag @s remove ca.en.f_shat
 tag @s remove ca.en.f_twoh
+tag @s remove ca.en.f_twoh
+
+#new enchants
+tag @s remove ca.en.f_cclu
+tag @s remove ca.en.f_cfla
+tag @s remove ca.en.f_cjin
+tag @s remove ca.en.f_cdro
+tag @s remove ca.en.f_crus
+
+tag @s remove ca.en.f_hexe
+tag @s remove ca.en.f_repu
+tag @s remove ca.en.f_reco
+tag @s remove ca.en.f_reso
+tag @s remove ca.en.f_spri
+tag @s remove ca.en.f_dise
+tag @s remove ca.en.f_grav
+tag @s remove ca.en.f_quak
+tag @s remove ca.en.f_mome
+tag @s remove ca.en.f_shie
+tag @s remove ca.en.f_conf
+tag @s remove ca.en.f_desp
+tag @s remove ca.en.f_stal
+tag @s remove ca.en.f_pois
+
+tag @s remove ca.en.f_star

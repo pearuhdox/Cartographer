@@ -6,7 +6,7 @@
               "text": " "
             },
             {
-              "text": "✎ Transfiguration",
+              "text": "✎ Resourceful",
               "color": "#ACFFA6",
               "bold": false,
               "italic": false,
@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This melee weapon has a small chance",
+              "text": "The user gains a chance to not consume",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,7 +24,7 @@
               "obfuscated": false
             },
             {
-                "text": "to transform enemies into harmless chickens.",
+                "text": "an arrow when firing a ranged weapon.",
                 "color": "#FFF4D9",
                 "bold": false,
                 "italic": false,

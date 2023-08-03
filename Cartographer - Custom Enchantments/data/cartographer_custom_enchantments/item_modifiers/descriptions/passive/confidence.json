@@ -6,7 +6,7 @@
               "text": " "
             },
             {
-              "text": "✎ Electrode",
+              "text": "✎ Confidence",
               "color": "#ACFFA6",
               "bold": false,
               "italic": false,
@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This ranged weapon inflicts Shocked,",
+              "text": "The user deals additional melee damage",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,7 +24,7 @@
               "obfuscated": false
             },
             {
-                "text": "which damages enemies over time.",
+                "text": "when above 75% of their Max Health.",
                 "color": "#FFF4D9",
                 "bold": false,
                 "italic": false,

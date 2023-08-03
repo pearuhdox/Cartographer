@@ -6,7 +6,7 @@
               "text": " "
             },
             {
-              "text": "✎ Exposing",
+              "text": "✎ Starfall",
               "color": "#ACFFA6",
               "bold": false,
               "italic": false,
@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This melee weapon inflicts Exposed,",
+              "text": "Periodically a mob near",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,7 +24,7 @@
               "obfuscated": false
             },
             {
-                "text": "causing enemies to take more damage.",
+                "text": "the user is damaged.",
                 "color": "#FFF4D9",
                 "bold": false,
                 "italic": false,

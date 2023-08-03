@@ -6,7 +6,7 @@
               "text": " "
             },
             {
-              "text": "✎ Possess",
+              "text": "✎ Shielding",
               "color": "#ACFFA6",
               "bold": false,
               "italic": false,
@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This ranged weapon can Possess enemies.",
+              "text": "Gain 4 Absorption Health when you have none.",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,14 +24,15 @@
               "obfuscated": false
             },
             {
-              "text": "Possessed enemies attack other enemies.",
-              "color": "#FFF4D9",
-              "bold": false,
-              "italic": false,
-              "underlined": false,
-              "strikethrough": false,
-              "obfuscated": false
-            }
+                "text": "When lost, there is a brief cooldown time.",
+                "color": "#FFF4D9",
+                "bold": false,
+                "italic": false,
+                "underlined": false,
+                "strikethrough": false,
+                "obfuscated": false
+              }
           ]
         }
       ]
+      
