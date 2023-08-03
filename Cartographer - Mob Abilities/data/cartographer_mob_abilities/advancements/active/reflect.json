@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "Deflects melee or ranged attacks, dealing damage back to the attacker.",
+            "text": "The enemy briefly prepares, then attacks several times. While attacking, the enemy is invulnerable.",
             "color": "white"
         },
         "icon": {
@@ -21,27 +21,18 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.reflect_melee\"]}"
-                }
-            }
-        },
-        "found2": {
-            "trigger": "minecraft:player_killed_entity",
-            "conditions": {
-                "entity": {
-                    "nbt": "{Tags:[\"ca.reflect_ranged\"]}"
+                    "nbt": "{Tags:[\"ca.reflect\"]}"
                 }
             }
         }
     },
     "requirements": [
         [
-            "found1",
-            "found2"
+            "found1"
         ]
     ],
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/passive/other/reflect"
+        "function": "cartographer_mob_abilities:descriptions/active/reflect"
     },
-    "parent": "cartographer_mob_abilities:passive/other/quiver"
+    "parent": "cartographer_mob_abilities:active/quickdraw"
 }

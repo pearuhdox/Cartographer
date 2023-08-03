@@ -34,5 +34,5 @@
     "rewards": {
         "function": "cartographer_mob_abilities:descriptions/active/rift"
     },
-    "parent": "cartographer_mob_abilities:active/quickdraw"
+    "parent": "cartographer_mob_abilities:active/reflect"
 }
