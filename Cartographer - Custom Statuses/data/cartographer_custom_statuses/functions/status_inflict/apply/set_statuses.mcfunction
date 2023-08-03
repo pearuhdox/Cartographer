@@ -10,12 +10,12 @@ execute if score $add ca.effect_infect matches 1.. run scoreboard players add $a
 scoreboard players operation @s ca.effect_infect > $add ca.effect_infect
 
 #Stun
-execute store result score $add ca.effect_stun run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"stun"}].Duration
-scoreboard players operation $add ca.effect_stun *= $20 ca.CONSTANT
+execute store result score $inflict ca.effect_stun run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"stun"}].Duration
+scoreboard players operation $inflict ca.effect_stun *= $20 ca.CONSTANT
 
 execute store result score $chance ca.effect_stun run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"stun"}].Chance
 
-execute if score $add ca.effect_stun matches 1.. run function cartographer_custom_statuses:status_inflict/apply/stunned
+execute if score $inflict ca.effect_stun matches 1.. run function cartographer_custom_statuses:status_inflict/apply/stunned
 
 #Morph
 execute store result score $chance ca.morph_time run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"morph"}].Chance

@@ -22,6 +22,5 @@ execute if score $possess_chance ca.stat_calc_var matches 1.. store result stora
 
 execute if score $cloak ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"cloaking"}].Duration int 1 run scoreboard players get $cloak ca.stat_calc_var
 
-
 #Finally, convert over entropy
 scoreboard players operation $entropy ca.player_entropy = @s ca.player_entropy
