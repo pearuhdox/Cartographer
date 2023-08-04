@@ -16,6 +16,8 @@ execute if entity @s[tag=check_feet] run function cartographer_custom_enchantmen
 execute unless entity @s[predicate=cartographer_custom_enchantments:hold_armor_offhand] run function cartographer_custom_enchantments:calc_enchant/offhand
 execute unless entity @s[predicate=cartographer_custom_enchantments:hold_armor_mainhand] run function cartographer_custom_enchantments:calc_enchant/mainhand
 
+execute if entity @s[predicate=cartographer_custom_enchantments:hold_armor_mainhand] if score $gl_enc_wr ca.gamerule matches 1.. run function cartographer_custom_enchantments:descriptions/write/main
+
 execute if score @s ca.thorns matches 1.. run function cartographer_custom_enchantments:calc_enchant/thorns
 execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:calc_enchant/gravity
 execute if score @s ca.starfall matches 1.. run function cartographer_custom_enchantments:calc_enchant/starfall
