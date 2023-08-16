@@ -118,6 +118,8 @@ execute if score @s ca.sprint_dash_time matches 1.. run scoreboard players remov
 execute if score @s ca.disengage matches 1.. if score @s ca.disengage_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/disengage/test
 scoreboard players set @s ca.disengage_use 0
 
+execute unless score @s ca.disengage_time matches 0.. run scoreboard players set @s ca.disengage_time 0
+
 
 #Infinity 3.0
 function cartographer_custom_enchantments:enchant_effects/infinity/player
