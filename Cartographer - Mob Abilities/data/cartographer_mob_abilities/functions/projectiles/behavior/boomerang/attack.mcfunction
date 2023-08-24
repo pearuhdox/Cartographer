@@ -14,6 +14,7 @@ scoreboard players set $projectile ca.dmg_type 1
 execute at @s run tp 31182015-4512-2011-3118-115180000000 ^ ^1 ^1
 execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca.mob_var 1
 execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
+execute if entity @s[tag=ca.webbing] run scoreboard players set $zeph_check ca.mob_var 1
 
 scoreboard players operation $boomerang ca.ability_dmg = @s ca.ability_dmg
 

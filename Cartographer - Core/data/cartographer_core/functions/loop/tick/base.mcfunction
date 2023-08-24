@@ -4,6 +4,9 @@ execute store result score $core.difficulty ca.CONSTANT run difficulty
 #Get Player Count
 execute store result score $player_count ca.gamerule if entity @a
 
+#Debug Code Line to Force Multiplayer Testing
+scoreboard players set $player_count ca.gamerule 2
+
 #Run the list track for Helper Damage No Knockback
 function cartographer_core:helper/damage_knockback/list_track
 

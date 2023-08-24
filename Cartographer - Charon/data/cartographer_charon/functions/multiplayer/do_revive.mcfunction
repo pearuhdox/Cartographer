@@ -24,4 +24,12 @@ particle minecraft:glow ~ ~1 ~ 0.3 0.25 0.3 3 50 normal
 execute on passengers run kill @s
 execute on vehicle run kill @s
 
+data modify storage cartographer_charon:multiplayer_bag Item set value {}
+data modify storage cartographer_charon:multiplayer_bag Item set from entity @s HandItems[0]
+
+summon item ~ ~ ~ {Tags:["ca.mult_bag_drop","ca.new"],Item:{id:"minecraft:stone",Count:1b}}
+execute as @e[type=item,tag=ca.mult_bag_drop,tag=ca.new,limit=1,sort=nearest] run function cartographer_charon:multiplayer/bag_data
+
+data modify entity @s HandItems[0] set value {}
+
 kill @s

@@ -8,4 +8,4 @@ execute if score @s ca.loyalty matches 1..10 run function cartographer_custom_en
 
 execute if score @s ca.loyalty matches 101..110 run function cartographer_custom_enchantments:enchant_effects/loyalty/package/offhand
 
-execute if score $flag_give ca.loyalty matches 1.. if entity @s[gamemode=!spectator,gamemode=!creative] run function cartographer_custom_enchantments:enchant_effects/loyalty/package/give
+#execute if score $flag_give ca.loyalty matches 1.. if entity @s[gamemode=!spectator,gamemode=!creative] run function cartographer_custom_enchantments:enchant_effects/loyalty/package/give

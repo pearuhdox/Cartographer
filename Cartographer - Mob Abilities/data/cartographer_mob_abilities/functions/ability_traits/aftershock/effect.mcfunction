@@ -57,7 +57,7 @@ execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..3.5] run 
 
 execute if entity @a[distance=..3.5] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits
 
-tag @a[distance=..3.5] remove ability_tagged
+tag @a remove ability_tagged
 
 scoreboard players set @s co_send 3
 scoreboard players set @s co_y 4

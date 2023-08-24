@@ -24,7 +24,7 @@ execute unless entity @s[tag=ca.checked] unless entity @s[tag=ca.ignore_traits_a
 
 tag @s add ca.checked
 
-tag @a[distance=..2] remove ability_tagged
+tag @a remove ability_tagged
 
 execute on passengers run kill @s[type=sheep,distance=..0.5,tag=magic_missile_hitbox]
 kill @s

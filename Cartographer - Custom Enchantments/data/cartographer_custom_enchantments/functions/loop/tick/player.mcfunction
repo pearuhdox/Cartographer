@@ -42,14 +42,7 @@ execute if score @s ca.fleetfoot matches 0 run attribute @s minecraft:generic.mo
 execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_load_cro matches 0 unless score @s ca.is_draw_bow matches 1.. unless score @s ca.is_hold_tri matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
 
 #Apply the attack speed debuff for Evocation.
-execute if score @s[tag=ca.evocation_penalty] ca.atk_time matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -1 multiply
-execute if score @s[tag=ca.evocation_penalty] ca.atk_time matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
-execute if score @s[tag=ca.evocation_penalty] ca.atk_time matches 1 run scoreboard players set @s ca.evo_burn 26
-
-execute if score @s[tag=ca.evocation_penalty] ca.evo_burn matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-522-15-3120-91514 "evo_effect_spd" -1 multiply
-execute if score @s[tag=ca.evocation_penalty] ca.evo_burn matches 1 run attribute @s minecraft:generic.attack_speed modifier remove 31-522-15-3120-91514
-execute if score @s[tag=ca.evocation_penalty] ca.evo_burn matches 1 run tag @s remove ca.evocation_penalty
-execute if score @s ca.evo_burn matches 1.. run scoreboard players remove @s ca.evo_burn 1
+execute if entity @s[tag=ca.evocation_penalty] run function cartographer_custom_enchantments:loop/tick/evocation/has_penalty
 
 #Custom Loyalty recharge attack meter
 execute if score @s ca.loyalty_speed matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "loyalty_effect_spd" 1024 add
@@ -70,10 +63,10 @@ execute unless score @s ca.evasion matches 1.. run tag @s remove evading
 execute if entity @s[tag=has_passive_ench] run function cartographer_custom_enchantments:enchant_calls/passively
 
 #Ramp up Loyalty Time
-execute if score @s ca.loyalty_time matches 1.. run scoreboard players add @s ca.loyalty_time 1
+execute unless score @s ca.death_time matches 1..10 if score @s ca.loyalty_time matches 1.. run scoreboard players add @s ca.loyalty_time 1
 
 #If a second has been reached, run the Loyalty Inventory Check System
-execute if score @s ca.loyalty_time matches 5.. run function cartographer_custom_enchantments:enchant_effects/loyalty/return/get_inventory
+execute unless score @s ca.death_time matches 1..10 if score @s ca.loyalty_time matches 5.. run function cartographer_custom_enchantments:enchant_effects/loyalty/return/get_inventory
 
 #Recoil Time
 execute if score @s ca.recoil_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/recoil/time

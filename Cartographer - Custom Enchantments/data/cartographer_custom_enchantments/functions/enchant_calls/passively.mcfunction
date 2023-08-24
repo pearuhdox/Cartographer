@@ -1,7 +1,7 @@
 #Agility
-function cartographer_custom_enchantments:enchant_effects/agility
+execute if score @s ca.agility matches 1.. run function cartographer_custom_enchantments:enchant_effects/agility
 #Aquadynamic
-function cartographer_custom_enchantments:enchant_effects/aquadynamic
+execute if score @s ca.aquadynamic matches 1.. run function cartographer_custom_enchantments:enchant_effects/aquadynamic
 #Cleansing (only when no hunger)
 execute if entity @s[nbt=!{ActiveEffects:[{Id:17}]}] run function cartographer_custom_enchantments:enchant_effects/cleansing
 

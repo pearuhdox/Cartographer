@@ -1,4 +1,8 @@
+data modify storage cartographer_charon:bundle bundle set value {}
 data modify storage cartographer_charon:bundle bundle set from entity @s HandItems[0]
+
+data modify storage cartographer_charon:multiplayer_uuid UUID set value []
+data modify storage cartographer_charon:multiplayer_uuid UUID set from entity @s HandItems[0].tag.Owner
 
 execute if score $trader charon.gmr matches 1.. run function cartographer_charon:vill/add_to_villager
 execute if score $death_drop charon.gmr matches 1.. run function cartographer_charon:death_drop/create
