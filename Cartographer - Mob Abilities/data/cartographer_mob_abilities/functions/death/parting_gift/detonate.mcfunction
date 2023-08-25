@@ -26,6 +26,7 @@ execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_
 execute if entity @s[tag=ca.celestial] as @e[type=#bb:hostile,distance=..4] at @s run function cartographer_mob_abilities:death/parting_gift/celestial_heal
 execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca.mob_var 1
 execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
+execute if entity @s[tag=ca.webbing] run scoreboard players set $zeph_check ca.mob_var 1
 
 execute as @a[distance=..4] at @s facing entity 31182015-4512-2011-3118-115180000000 feet rotated ~180 ~-25 run function cartographer_mob_abilities:death/parting_gift/player
 execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..4] run function cartographer_mob_abilities:helper/damage/ability_explosion

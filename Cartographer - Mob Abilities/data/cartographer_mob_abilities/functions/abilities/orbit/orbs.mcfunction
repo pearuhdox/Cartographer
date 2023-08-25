@@ -17,4 +17,4 @@ execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_
 execute unless entity @s[tag=ca.ignore_traits_active] if entity @s[tag=ca.volatile] at @p[distance=..1.35] run function cartographer_mob_abilities:ability_traits/volatile/effect
 execute unless entity @s[tag=ca.ignore_traits_active] if entity @s[tag=ca.volatile] at @p[distance=..1.35] run scoreboard players set @s ca.orbit_timer 0
 
-tag @a[distance=..10] remove ability_tagged
+tag @a remove ability_tagged

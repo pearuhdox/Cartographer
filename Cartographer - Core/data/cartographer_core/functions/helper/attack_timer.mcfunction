@@ -16,3 +16,5 @@ scoreboard players operation @s ca.atk_time /= @s ca.atk_spd_val
 scoreboard players operation @s ca.atk_time *= $20 ca.CONSTANT
 scoreboard players operation @s ca.atk_time /= $100 ca.CONSTANT
 scoreboard players operation @s ca.atk_time /= $2 ca.CONSTANT
+
+execute if score @s ca.atk_time matches ..-1 run scoreboard players set @s ca.atk_time 0

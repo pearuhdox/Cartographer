@@ -21,8 +21,8 @@ execute positioned ~ ~1 ~ run function cartographer_mob_abilities:abilities/hook
 
 execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..18] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
-tag @a[distance=..18] remove ability_tagged
-tag @a[distance=..18] remove hooked
+tag @a remove ability_tagged
+tag @a remove hooked
 
 execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s mob_move_red 101
 execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s ca.hooked 101

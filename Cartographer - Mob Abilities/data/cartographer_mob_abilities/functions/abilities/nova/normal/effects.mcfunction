@@ -2,6 +2,7 @@ tp 31182015-4512-2011-3118-115180000000 ~ ~4 ~
 
 execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca.mob_var 1
 execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
+execute if entity @s[tag=ca.webbing] run scoreboard players set $zeph_check ca.mob_var 1
 
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s facing entity 31182015-4512-2011-3118-115180000000 feet run function cartographer_mob_abilities:abilities/nova/normal/player
 

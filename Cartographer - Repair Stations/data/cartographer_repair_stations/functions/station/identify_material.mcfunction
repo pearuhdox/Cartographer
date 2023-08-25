@@ -18,6 +18,17 @@ scoreboard players set $carrot ca.repair_station_state 0
 scoreboard players set $warped ca.repair_station_state 0
 scoreboard players set $prismarine ca.repair_station_state 0
 
+scoreboard players set $ink ca.repair_station_state 0
+scoreboard players set $ender ca.repair_station_state 0
+scoreboard players set $gunpowder ca.repair_station_state 0
+scoreboard players set $glowstone ca.repair_station_state 0
+scoreboard players set $blaze_powder ca.repair_station_state 0
+
+scoreboard players set $slime ca.repair_station_state 0
+scoreboard players set $magma ca.repair_station_state 0
+scoreboard players set $star ca.repair_station_state 0
+scoreboard players set $echo ca.repair_station_state 0
+scoreboard players set $shulker ca.repair_station_state 0
 
 
 execute if entity @s[nbt={item:{id:"minecraft:wooden_sword"}}] run scoreboard players set $wooden ca.repair_station_state 2

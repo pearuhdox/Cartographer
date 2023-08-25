@@ -23,7 +23,7 @@ function cartographer_charon:inv/set_owner
 execute unless score @s ca.boons matches 1.. if data storage cartographer_charon:bundle bundle.tag.Items[] positioned as 38118151-4815-1351-3118-11518 run function cartographer_charon:inv/commit_drop
 
 #Create the shade. Do this regardless of boons and if there were no items.
-execute if score $multiplayer charon.gmr matches 1.. if score $player_count ca.gamerule matches 2.. run function cartographer_charon:multiplayer/create
+execute if score $multiplayer charon.gmr matches 1.. if score $player_count ca.gamerule matches 2.. positioned as 38118151-4815-1351-3118-11518 run function cartographer_charon:multiplayer/create
 
 
 execute if score $spawner_defenses charon.gmr matches 1.. run function cartographer_charon:cage/master_prime
