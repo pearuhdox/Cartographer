@@ -12,7 +12,7 @@
       "color": "white"
     },
     "frame": "task",
-    "show_toast": true,
+    "show_toast": false,
     "announce_to_chat": false,
     "hidden": true
   },
@@ -121,8 +121,5 @@
       "kite_forward",
       "kite_strafe"
     ]
-  ],
-  "rewards": {
-    "function": "cartographer_mob_abilities:descriptions/trait/other/acrobatic"
-  }
+  ]
 }

@@ -12,7 +12,7 @@
             "item": "minecraft:skeleton_skull"
         },
         "frame": "task",
-        "show_toast": true,
+        "show_toast": false,
         "announce_to_chat": false,
         "hidden": true
     },
@@ -58,8 +58,5 @@
             "found_s"
         ]
     ],
-    "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/trait/other/amplify"
-    },
     "parent": "cartographer_mob_abilities:trait/other/aftershock"
 }
