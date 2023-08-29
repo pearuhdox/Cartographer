@@ -1,22 +1,5 @@
 {
-    "display": {
-        "title": {
-            "text": "Armament: Potion            ",
-            "color": "white"
-        },
-        "description": {
-            "text": "Throws Potions from their offhand instead of their usual projectile.",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:splash_potion"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
-    "criteria": {
+      "criteria": {
         "found": {
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
@@ -25,9 +8,5 @@
                 }
             }
         }
-    },
-    "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/passive/projectile/potion"
-    },
-    "parent": "cartographer_mob_abilities:passive/projectile/fireball"
+    }
 }

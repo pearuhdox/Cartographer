@@ -12,7 +12,7 @@
             "item": "minecraft:wooden_hoe"
         },
         "frame": "task",
-        "show_toast": true,
+        "show_toast": false,
         "announce_to_chat": false,
         "hidden": true
     },
@@ -25,9 +25,6 @@
                 }
             }
         }
-    },
-    "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/projectiles/boomerang"
     },
     "parent": "cartographer_mob_abilities:projectiles/projectiles"
 }

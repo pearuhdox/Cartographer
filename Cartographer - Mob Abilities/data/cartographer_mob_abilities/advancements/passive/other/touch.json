@@ -1,21 +1,4 @@
 {
-    "display": {
-        "title": {
-            "text": "Touch                    ",
-            "color": "white"
-        },
-        "description": {
-            "text": "Activates traits when it attacks the player.",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:rabbit_foot"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
-    },
     "criteria": {
         "found": {
             "trigger": "minecraft:player_killed_entity",
@@ -25,9 +8,5 @@
                 }
             }
         }
-    },
-    "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/passive/other/touch"
-    },
-    "parent": "cartographer_mob_abilities:passive/other/summoner"
+    }
 }

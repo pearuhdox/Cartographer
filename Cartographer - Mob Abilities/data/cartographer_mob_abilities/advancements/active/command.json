@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "The enemy bolsters nearby allies with any traits it has."
+            "text": "The enemy bolsters nearby allies with various traits."
         },
         "icon": {
             "item": "minecraft:goat_horn"

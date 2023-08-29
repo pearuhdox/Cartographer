@@ -1,7 +1,7 @@
 {
     "display": {
         "title": {
-            "text": "Grenade                  ",
+            "text": "Alchemist                ",
             "color": "white"
         },
         "description": {
@@ -12,7 +12,7 @@
             "item": "minecraft:splash_potion"
         },
         "frame": "task",
-        "show_toast": true,
+        "show_toast": false,
         "announce_to_chat": false,
         "hidden": true
     },
@@ -25,9 +25,6 @@
                 }
             }
         }
-    },
-    "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/trait/hit/alchemist"
     },
     "parent": "cartographer_mob_abilities:trait/trait_abilities"
 }
