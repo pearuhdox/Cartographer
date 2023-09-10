@@ -1,42 +1,11 @@
 data modify storage ca.susu:enchants temp_item set value {}
+data modify storage ca.susu:enchants temp_item_auto_rec set value []
 data modify storage ca.susu:enchants temp_item_auto set value []
 
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:1,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:1b}]}}]
+data modify storage ca.susu:enchants temp_item_auto_rec set from storage ca.susu:enchants inv
 
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:1,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:2b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:2,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:2b}]}}]
-
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:1,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:3b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:2,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:3b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:3,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:3b}]}}]
-
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:1,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:4b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:2,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:4b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:3,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:4b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:4,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:4b}]}}]
-
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:1,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:5b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:2,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:5b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:3,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:5b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:4,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:5b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:5,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:5b}]}}]
-
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:1,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:6b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:2,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:6b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:3,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:6b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:4,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:6b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:5,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:6b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:6,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:6b}]}}]
-
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:1,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:7b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:2,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:7b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:3,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:7b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:4,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:7b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:5,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:7b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:6,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:7b}]}}]
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:1b,Ammo:7,CustomEnchantments:[{id:"auto_charge"},{id:"repeating",lvl:7b}]}}]
-
-data modify storage ca.susu:enchants temp_item_auto append from entity @s Inventory[{tag:{Charged:0b,CustomEnchantments:[{id:"auto_charge"}]}}]
+scoreboard players set $found_auto_charge ca.ench_var 0
+function cartographer_custom_enchantments:calc_enchant/auto_charge/get
 
 data modify storage ca.susu:enchants temp_item set from storage ca.susu:enchants temp_item_auto[0]
 

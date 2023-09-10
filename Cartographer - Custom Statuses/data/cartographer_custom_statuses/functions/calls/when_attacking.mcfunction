@@ -3,6 +3,10 @@ execute if entity @s[tag=pot_add_crit] as @e[type=#bb:hostile,distance=..5,nbt=!
 
 execute if predicate cartographer_custom_statuses:is_stealthed run function cartographer_custom_statuses:effects/stealthed/consume
 
+#Always Reset the Apply Effects and Status Inflict
+data modify storage cartographer_custom_statuses:apply_effects data set value {}
+data modify storage cartographer_custom_statuses:status_inflict data set value {}
+
 execute if entity @s[advancements={entityid:player_hurt_entity={tagless=true}}] unless entity @s[tag=ca.no_status_melee] run function cartographer_custom_statuses:calls/player_hit/melee
 execute if entity @s[tag=ca.no_status_melee] run scoreboard players set $do_status_inflict ca.status_var 0
 
