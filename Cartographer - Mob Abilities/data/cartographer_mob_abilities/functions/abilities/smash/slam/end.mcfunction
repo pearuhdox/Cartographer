@@ -41,7 +41,5 @@ tag @s remove ca.airborne_slam_waiting
 
 tp 31182015-4512-2011-3118-115180000000 4206900 128 4206900
 
-say test
-
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/mob_manage/check_accelerate
