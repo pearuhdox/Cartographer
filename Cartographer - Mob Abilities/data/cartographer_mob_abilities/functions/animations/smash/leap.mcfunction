@@ -26,6 +26,6 @@ function motion:motion/push
 execute unless entity @s[scores={ability_charge=2..}] run scoreboard players add @s ability_charge 1
 
 tag @s add leaping
-tag @s add airborne
+scoreboard players add @s ca.smash_air 1
 
 scoreboard players set @a mob_sturdy 31

@@ -36,16 +36,7 @@ tag @a remove ability_tagged
 
 data modify entity @s ActiveEffects append value {Id:28b,Duration:10,Amplifier:0b}
 
-tag @s remove airborne
-tag @s remove airborne_2
-tag @s remove airborne_3
-tag @s remove airborne_4
-tag @s remove airborne_5
-tag @s remove airborne_6
-tag @s remove airborne_7
-tag @s remove airborne_8
-tag @s remove airborne_9
-tag @s remove airborne_10
+scoreboard players set @s ca.smash_air -1
 
 scoreboard players remove @s[scores={recast_count=1..}] recast_count 1
 

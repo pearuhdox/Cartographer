@@ -3,7 +3,7 @@ execute if entity @s[type=#bb:hostile,tag=ca.has_active,tag=!los_checked,scores=
 
 
 #Run Smash Land Effect
-execute if entity @s[tag=ca.smash] run function cartographer_mob_abilities:loop/tick/smash_branch
+execute if entity @s[tag=ca.smash,tag=!ca.airborne_slam_waiting] if score @s ca.smash_air matches 1.. run function cartographer_mob_abilities:loop/tick/smash_branch
 execute if entity @s[type=blaze,tag=ca.airborne_slam_waiting,tag=ca.smash] run function cartographer_mob_abilities:abilities/smash/slam/move_down
 
 #Run Pre Ability Traits

@@ -3,7 +3,8 @@ execute store result score @s[type=shulker] ca.ability_dmg run attribute @s mine
 
 scoreboard players operation $damage ca.ability_dmg = @s ca.ability_dmg
 
-scoreboard players operation $damage ca.ability_dmg *= $75 ca.CONSTANT
+execute if entity @s[tag=ca.no_scaling] run scoreboard players operation $damage ca.ability_dmg *= $10 ca.CONSTANT
+execute unless entity @s[tag=ca.no_scaling] run scoreboard players operation $damage ca.ability_dmg *= $75 ca.CONSTANT
 
 execute if score $damage ca.ability_dmg matches 0 run scoreboard players set $damage ca.ability_dmg 1
 
