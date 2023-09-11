@@ -1,10 +1,10 @@
-scoreboard players set @s cooldown 9
+scoreboard players set @s cooldown 12
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
 scoreboard players set @s ability_charge 0
 
-playsound minecraft:item.trident.thunder player @a[distance=..20] ~ ~ ~ 1.5 1.5
+playsound minecraft:item.trident.thunder player @a[distance=..20] ~ ~ ~ 1.5 1.25
 
 function cartographer_mob_abilities:abilities/storm/calc_damage
 
