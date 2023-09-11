@@ -1,5 +1,7 @@
 execute store result score $aug_bonus_dmg ca.mob_var run attribute @s minecraft:generic.attack_damage get
 
+scoreboard players operation $aug_bonus_dmg ca.mob_var /= $2 ca.CONSTANT
+
 scoreboard players operation @p ca.damage_queue = $aug_bonus_dmg ca.mob_var
 
 function cartographer_mob_abilities:abilities/augmenter/do_damage
