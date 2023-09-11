@@ -18,4 +18,4 @@ execute if score $overloading_y ca.mob_var matches 3 positioned ~ ~ ~3 run funct
 execute if score $overloading_y ca.mob_var matches 2 positioned ~ ~ ~2 run function cartographer_mob_abilities:ability_traits/overloading/flatten_ground
 execute if score $overloading_y ca.mob_var matches 1 positioned ~ ~ ~1 run function cartographer_mob_abilities:ability_traits/overloading/flatten_ground
 
-execute if score $overloading_y ca.mob_var matches -2..2 positioned ~ ~ ~0 run function cartographer_mob_abilities:ability_traits/overloading/flatten_ground
+execute if score $overloading_y ca.mob_var matches 0 positioned ~ ~ ~0 run function cartographer_mob_abilities:ability_traits/overloading/flatten_ground
