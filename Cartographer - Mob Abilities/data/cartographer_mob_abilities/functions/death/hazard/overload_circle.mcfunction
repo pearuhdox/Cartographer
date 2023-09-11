@@ -59,7 +59,7 @@ execute rotated 262.5 0 run particle minecraft:dust_color_transition 0.914 0.773
 execute rotated 352.5 0 run particle minecraft:dust_color_transition 0.914 0.773 0.992 1 1 1 1 ^ ^0.1 ^8 0.25 0.1 0.25 0 1 normal
 
 scoreboard players operation $haz_storm_mod ca.lifetime = @s ca.lifetime
-scoreboard players operation $haz_storm_mod ca.lifetime %= $20 ca.CONSTANT
+scoreboard players operation $haz_storm_mod ca.lifetime %= $10 ca.CONSTANT
 
 execute if score $haz_storm_mod ca.lifetime matches 1 run function cartographer_mob_abilities:ability_traits/overloading/place_x
 
