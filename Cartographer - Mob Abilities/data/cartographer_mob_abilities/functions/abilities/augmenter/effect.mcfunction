@@ -1,6 +1,3 @@
-effect give @s minecraft:speed 12 0
-effect give @s minecraft:resistance 12 0
-
 execute unless entity @s[tag=ca.augmenter] run function cartographer_mob_abilities:abilities/augmenter/call_parent_traits
 
 function cartographer_mob_abilities:abilities/augmenter/add_temp_touch_traits

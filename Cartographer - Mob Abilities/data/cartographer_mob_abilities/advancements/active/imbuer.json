@@ -4,22 +4,22 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.augmenter\"]}"
+                    "nbt": "{Tags:[\"ca.imbuer\"]}"
                 }
             }
         }
     },
     "display": {
         "title": {
-            "text": "Augmenter                ",
+            "text": "Imbuer                   ",
             "color": "white"
         },
         "description": {
-            "text": "The enemy can charge up to buff damage of nearby mobs and apply their effects to them.",
+            "text": "The enemy can charge up to buff nearby mobs, applying potion effects to them.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:lingering_potion"
+            "item": "minecraft:potion"
         },
         "frame": "task",
         "show_toast": true,
@@ -27,7 +27,7 @@
         "hidden": true
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/active/augmenter"
+        "function": "cartographer_mob_abilities:descriptions/active/imbuer"
     },
-    "parent": "cartographer_mob_abilities:active/ambush"
+    "parent": "cartographer_mob_abilities:active/hookshot"
 }

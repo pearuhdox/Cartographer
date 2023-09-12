@@ -3,6 +3,7 @@ execute if entity @s[tag=ca.charge,scores={cooldown=0}] if entity @a[gamemode=!c
 execute if entity @s[tag=ca.nova,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..16] run tag @s add avail_target
 execute if entity @s[tag=ca.ambush,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..25] run tag @s add avail_target
 execute if entity @s[tag=ca.healer,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
+execute if entity @s[tag=ca.imbuer,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=ca.augmenter,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=ca.command,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=ca.hookshot,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target

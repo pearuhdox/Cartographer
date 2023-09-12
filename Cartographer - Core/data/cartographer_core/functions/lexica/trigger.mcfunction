@@ -114,6 +114,8 @@ execute if score @s ca.lexica_trig matches 300 run function cartographer_custom_
 
 execute if score @s ca.lexica_trig matches 301 run function cartographer_mob_abilities:lexica_calls/pages/category/active/main
 execute if score @s ca.lexica_trig matches 302 run function cartographer_mob_abilities:lexica_calls/pages/category/active/main_2
+execute if score @s ca.lexica_trig matches 306 run function cartographer_mob_abilities:lexica_calls/pages/category/active/main_3
+
 execute if score @s ca.lexica_trig matches 303 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/main
 execute if score @s ca.lexica_trig matches 304 run function cartographer_mob_abilities:lexica_calls/pages/category/passive/main
 execute if score @s ca.lexica_trig matches 305 run function cartographer_mob_abilities:lexica_calls/pages/category/traits/main
@@ -140,6 +142,7 @@ execute if score @s ca.lexica_trig matches 326 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 327 run function cartographer_mob_abilities:lexica_calls/pages/category/active/sweep
 execute if score @s ca.lexica_trig matches 328 run function cartographer_mob_abilities:lexica_calls/pages/category/active/volley
 execute if score @s ca.lexica_trig matches 329 run function cartographer_mob_abilities:lexica_calls/pages/category/active/summoner
+execute if score @s ca.lexica_trig matches 3454 run function cartographer_mob_abilities:lexica_calls/pages/category/active/imbuer
 
 execute if score @s ca.lexica_trig matches 330 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_brutal
 execute if score @s ca.lexica_trig matches 331 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_devious
