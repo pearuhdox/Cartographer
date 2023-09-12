@@ -29,7 +29,7 @@ execute if entity @s[tag=ca.augmenter,scores={cooldown=0}] if entity @a[gamemode
 
 execute if entity @s[tag=ca.healer,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:animations/healer
 
-execute if entity @s[tag=ca.imbuer,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:animations/imbuer
+execute if entity @s[tag=ca.infuser,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..20] run function cartographer_mob_abilities:animations/infuser
 
 execute if entity @s[tag=ca.charge,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..16] run function cartographer_mob_abilities:animations/charge
 

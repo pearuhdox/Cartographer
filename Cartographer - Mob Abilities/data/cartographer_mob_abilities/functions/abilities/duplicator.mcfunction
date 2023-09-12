@@ -11,8 +11,8 @@ particle minecraft:smoke ~ ~1 ~ 0.3 0.5 0.3 0.05 40
 
 particle minecraft:smoke ~ ~ ~ 0.5 0.3 0.5 0.05 40
 
-data modify storage cartographer:ca.duplicate Data set value {}
-data modify storage cartographer:ca.duplicate Data set from entity @s {}
+data modify storage cartographer:duplicate Data set value {}
+data modify storage cartographer:duplicate Data set from entity @s {}
 
 execute if entity @s[type=zombie] run summon zombie ~ ~ ~ {Tags:["ca.duplicate"]}
 execute if entity @s[type=zombie,scores={copies=1..}] run summon zombie ~ ~ ~ {Tags:["ca.duplicate"]}

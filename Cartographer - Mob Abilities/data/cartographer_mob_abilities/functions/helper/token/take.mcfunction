@@ -24,7 +24,7 @@ execute if entity @s[tag=ca.augmenter,tag=!ca.light_priority] run function carto
 execute if entity @s[tag=ca.command,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.duplicator,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.healer,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
-execute if entity @s[tag=ca.imbuer,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
+execute if entity @s[tag=ca.infuser,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.hookshot,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.laser,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.rift,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy

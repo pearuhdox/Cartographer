@@ -51,10 +51,10 @@ execute if entity @s[tag=!ca.ignore_traits_active,tag=ca.acro_kite_strafe_after]
 
 scoreboard players set $imbue_count ca.mob_var 0
 
-function cartographer_mob_abilities:abilities/imbuer/get_potion_effects
-execute as @e[distance=0.5..10,tag=!ca.imbuer,type=#bb:hostile,sort=nearest,limit=3] at @s run function cartographer_mob_abilities:abilities/imbuer/effect
+function cartographer_mob_abilities:abilities/infuser/get_potion_effects
+execute as @e[distance=0.5..10,tag=!ca.infuser,type=#bb:hostile,sort=nearest,limit=3] at @s run function cartographer_mob_abilities:abilities/infuser/effect
 
-execute if score $imbue_count ca.mob_var matches 0 run function cartographer_mob_abilities:abilities/imbuer/effect
+execute if score $imbue_count ca.mob_var matches 0 run function cartographer_mob_abilities:abilities/infuser/effect
 
 particle minecraft:witch ~ ~1 ~ 2 0.5 2 0.1 50 normal @a
 

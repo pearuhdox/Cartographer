@@ -38,4 +38,4 @@ execute if score @s ability_charge matches 1..41 run scoreboard players set @s m
 
 function cartographer_mob_abilities:loop/tick/animation
 
-execute if score @s ability_charge matches 51.. run function cartographer_mob_abilities:abilities/imbuer
+execute if score @s ability_charge matches 51.. run function cartographer_mob_abilities:abilities/infuser

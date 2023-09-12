@@ -4,14 +4,14 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.imbuer\"]}"
+                    "nbt": "{Tags:[\"ca.infuser\"]}"
                 }
             }
         }
     },
     "display": {
         "title": {
-            "text": "Imbuer                   ",
+            "text": "Infuser                  ",
             "color": "white"
         },
         "description": {
@@ -27,7 +27,7 @@
         "hidden": true
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/active/imbuer"
+        "function": "cartographer_mob_abilities:descriptions/active/infuser"
     },
     "parent": "cartographer_mob_abilities:active/hookshot"
 }
