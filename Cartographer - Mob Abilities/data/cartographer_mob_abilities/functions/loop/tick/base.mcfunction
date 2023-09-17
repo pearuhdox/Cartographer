@@ -22,6 +22,11 @@ scoreboard players set $do_los flag 0
 execute if score $invul_time_check invul matches 1.. run scoreboard players remove $invul_time_check invul 1
 
 #Reduce the time of the hook_check dummy score.
+scoreboard players set $hook_kill ca.hooked 0
+execute if score $hook_check ca.hooked matches 1.. run scoreboard players set $hook_kill ca.hooked 1
+execute if score $hook_check ca.hooked matches 1.. as 31182015-8151-5111-3118-110000000000 at @s on vehicle run scoreboard players set $hook_kill ca.hooked 2
+execute if score $hook_kill ca.hooked matches 1 as @a at @s if score @s ca.hooked matches 2.. run scoreboard players set @s ca.hooked 1
+
 execute if score $hook_check ca.hooked matches 1 run ride 31182015-8151-5111-3118-110000000000 dismount
 execute if score $hook_check ca.hooked matches 1 run tp 31182015-8151-5111-3118-110000000000 4206900 50 4206900
 execute if score $hook_check ca.hooked matches 1.. run scoreboard players remove $hook_check ca.hooked 1
