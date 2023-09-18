@@ -16,7 +16,7 @@ tellraw @s {"text":"------------------------------------------","color":"#ACFFA6
 tellraw @s [{"text":"Infection","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Affected mobs take 2 damage per second. When afflicted mobs die, they spread the debuff with its remaining duration to 2 enemies within 6 blocks, also inflicing -15% Speed and -15% Weakness. If there is no target to spread to, it deals 6 damage to all mobs within 3 blocks.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Affected mobs take 1.5 damage per second. When afflicted mobs die, they spread the debuff with its remaining duration to 2 enemies within 6 blocks, inflicting brief Slowness and Weakness and dealing 1.5 damage. If there is no target to spread to, it deals 5 damage to all mobs within 3 blocks.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
