@@ -18,7 +18,19 @@ data modify storage cartographer_custom_statuses:player_equip main set from enti
 #Run extra checks added via tag hook here
 #function #minecraft:inventory_calculate/extras
 
+tag @s remove ca.override_melee_h
+tag @s remove ca.override_melee_b
+tag @s remove ca.override_melee_l
+tag @s remove ca.override_melee_f
+tag @s remove ca.override_melee_m
+tag @s remove ca.override_melee_o
 
+tag @s remove ca.override_ranged_h
+tag @s remove ca.override_ranged_b
+tag @s remove ca.override_ranged_l
+tag @s remove ca.override_ranged_f
+tag @s remove ca.override_ranged_m
+tag @s remove ca.override_ranged_o
 
 tag @s remove ca.si_head
 tag @s remove ca.si_body
@@ -58,6 +70,19 @@ execute if data storage cartographer_custom_statuses:player_equip main.tag.Apply
 
 execute if data storage cartographer_custom_statuses:player_equip main.tag.AllowMeleeInflict run tag @s add ca.allow_melee_inflict
 execute if data storage cartographer_custom_statuses:player_equip offh.tag.AllowOffhandInflict run tag @s add ca.allow_offhand_inflict
+
+execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideMelee run tag @s add ca.override_melee_h
+execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideMelee run tag @s add ca.override_melee_b
+execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideMelee run tag @s add ca.override_melee_l
+execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideMelee run tag @s add ca.override_melee_f
+execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideMelee run tag @s add ca.override_melee_o
+
+execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideRanged run tag @s add ca.override_ranged_h
+execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideRanged run tag @s add ca.override_ranged_b
+execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideRanged run tag @s add ca.override_ranged_l
+execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideRanged run tag @s add ca.override_ranged_f
+execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideRanged run tag @s add ca.override_ranged_o
+
 
 execute if predicate cartographer_core:inventory/hold_armor_mainhand unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee
 execute if predicate cartographer_core:inventory/hold_ranged_weapon unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee

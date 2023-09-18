@@ -31,10 +31,9 @@ scoreboard objectives add ca.silent_check dummy
 scoreboard objectives add ca.time_convert dummy
 scoreboard objectives add ca.id_convert dummy
 
-scoreboard objectives add ca.exposed_lvl dummy
-scoreboard objectives add ca.exposed_hit dummy
+scoreboard objectives add ca.effect_exposed_level dummy
+scoreboard objectives add ca.effect_exposed_duration dummy
 scoreboard objectives add ca.exposed_cdl dummy
-scoreboard objectives add ca.exposed_dur dummy
 scoreboard objectives add ca.exposed_hp dummy
 
 scoreboard objectives add ca.decay_min dummy

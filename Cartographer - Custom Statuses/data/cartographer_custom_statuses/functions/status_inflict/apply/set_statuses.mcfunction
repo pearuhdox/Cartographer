@@ -30,3 +30,11 @@ execute if score $chance ca.possess_time matches 1.. run function cartographer_c
 
 execute store result score @s ca.effect_cloak run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"cloaking"}].Duration
 scoreboard players operation @s ca.effect_cloak > $add ca.effect_cloak
+
+#Expose
+execute store result score @s ca.effect_exposed_duration run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"expose"}].Duration
+scoreboard players operation @s ca.effect_exposed_duration *= $20 ca.CONSTANT
+scoreboard players operation @s ca.effect_exposed_duration > $add ca.effect_exposed_duration
+
+execute store result score @s ca.effect_exposed_level run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"expose"}].Amplifier
+scoreboard players operation @s ca.effect_exposed_level > $add ca.effect_exposed_level

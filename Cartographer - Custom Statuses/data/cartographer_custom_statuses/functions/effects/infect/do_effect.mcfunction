@@ -1,9 +1,7 @@
 execute at @s run playsound minecraft:entity.slime.attack hostile @a[distance=..16] ~ ~ ~ 1.5 0.5
 
-damage @s 2 cartographer_custom_statuses:status_damage
+damage @s 1.5 cartographer_custom_statuses:status_damage
 damage @s 0.00000000001 cartographer_custom_statuses:status_damage
-
-execute unless entity @s[tag=ca.decaying] run function cartographer_custom_statuses:effects/infect/debilitate
 
 execute if entity @s[type=#cartographer_core:shape_human] run particle minecraft:dust 0 0 0 2 ~ ~1 ~ 0.2 0.4 0.2 0 16 normal
 execute if entity @s[type=#cartographer_core:shape_flat] run particle minecraft:dust 0 0 0 2 ~ ~0.5 ~ 0.4 0.1 0.4 0 16 normal

@@ -1,4 +1,4 @@
-data modify storage cartographer_custom_statuses:status_inflict data.temp set from entity @s SelectedItem.tag.StatusInflict
+data modify storage cartographer_custom_statuses:status_inflict data.temp set from entity @s Inventory[{Slot:103b}].tag.StatusInflict
 
 execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:status_inflict data.temp[{Id:"bleeding"}].Amount
 scoreboard players operation $bleed ca.stat_calc_var > $temp ca.stat_calc_var
@@ -29,3 +29,5 @@ scoreboard players operation $expose_level ca.stat_calc_var > $temp ca.stat_calc
 
 execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:status_inflict data.temp[{Id:"expose"}].Duration
 scoreboard players operation $expose_duration ca.stat_calc_var > $temp ca.stat_calc_var
+
+scoreboard players set $status_override ca.status_var 1

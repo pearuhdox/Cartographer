@@ -27,3 +27,6 @@ execute if score $expose_level ca.stat_calc_var matches 1.. store result storage
 
 #Finally, convert over entropy
 scoreboard players operation $entropy ca.player_entropy = @s ca.player_entropy
+
+
+scoreboard players set $do_status_inflict ca.status_var 1

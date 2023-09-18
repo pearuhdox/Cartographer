@@ -1,11 +1,11 @@
-scoreboard players operation $health_diff ca.exposed_hp = $past_health ca.exposed_hp
-scoreboard players operation $health_diff ca.exposed_hp -= @s ca.exposed_hp
+scoreboard players operation $health_diff ca.status_var = $past_health ca.status_var
+scoreboard players operation $health_diff ca.status_var -= $current_health ca.status_var
 
-scoreboard players operation $scalar ca.exposed_lvl = @s ca.exposed_lvl
-scoreboard players operation $scalar ca.exposed_lvl *= $10 ca.CONSTANT
+scoreboard players operation $exposed_scalar ca.status_var = @s ca.effect_exposed_level
+scoreboard players operation $exposed_scalar ca.status_var *= $10 ca.CONSTANT
 
-scoreboard players operation $health_diff ca.exposed_hp *= $scalar ca.exposed_lvl
-scoreboard players operation $health_diff ca.exposed_hp /= $100 ca.CONSTANT
+scoreboard players operation $health_diff ca.status_var *= $exposed_scalar ca.status_var
+scoreboard players operation $health_diff ca.status_var /= $100 ca.CONSTANT
 
 scoreboard players set @s ca.exposed_cdl 2
 
