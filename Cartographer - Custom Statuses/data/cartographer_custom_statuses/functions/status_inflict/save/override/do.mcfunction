@@ -11,8 +11,6 @@ scoreboard players set $stun_chance ca.stat_calc_var 0
 scoreboard players set $morph_chance ca.stat_calc_var 0
 scoreboard players set $possess_chance ca.stat_calc_var 0
 
-execute if entity @s[tag=ca.si_main] run say test
-
 execute if entity @s[tag=ca.si_main] run function cartographer_custom_statuses:status_inflict/save/override/mainhand
 
 execute if entity @s[tag=ca.override_melee_o] run function cartographer_custom_statuses:status_inflict/save/override/offhand
