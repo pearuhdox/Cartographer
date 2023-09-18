@@ -10,7 +10,6 @@ execute if score @s ca.effect_exposed_duration matches 1.. run function cartogra
 execute if score @s ca.effect_exposed_duration matches 1 run function cartographer_custom_statuses:effects/exposed/clear
 
 execute if score @s ca.exposed_cdl matches 1.. run scoreboard players remove @s ca.exposed_cdl 1
-execute as @s[predicate=cartographer_custom_statuses:is_exposed] at @s run function cartographer_custom_statuses:tick_effects/vulnerability/effect
 
 #Run Blindness
 execute as @s[predicate=cartographer_custom_statuses:is_blind] at @s run function cartographer_custom_statuses:effects/blindness
