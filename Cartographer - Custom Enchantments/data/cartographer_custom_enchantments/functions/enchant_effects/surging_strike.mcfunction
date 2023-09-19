@@ -26,10 +26,7 @@ scoreboard players operation $melee ca.attack_val = @s ca.attack_val
 scoreboard players operation $melee ca.fire_aspect = @s ca.fire_aspect
 scoreboard players operation $melee ca.frostbite = @s ca.frostbite
 
-scoreboard players set $do_apply_effects ca.status_var 0
-scoreboard players set $do_status_inflict ca.status_var 0
-function cartographer_custom_statuses:apply_effects/save/mainhand
-function cartographer_custom_statuses:status_inflict/save/mainhand
+function cartographer_custom_statuses:calls/player_hit/melee
 
 execute if score @s ca.surging_strike matches 1.. anchored eyes positioned ^ ^-0.4 ^1 rotated ~ 0 run function cartographer_custom_enchantments:enchant_effects/surging_strike/raycast
 
