@@ -12,6 +12,8 @@ effect clear @s glowing
 #Place the ability on brief cooldown
 scoreboard players set @s cooldown 4
 
+function cartographer_mob_abilities:animation_charge_bars/delete_plate
+
 #Token Management. Remove the Token, set all nearby players token refresh on cooldown.
 function cartographer_mob_abilities:helper/token/return
 tag @s remove tokened

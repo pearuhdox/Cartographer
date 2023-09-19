@@ -2,7 +2,7 @@ execute unless score @s ca.collapse matches 0.. run function cartographer_custom
 
 scoreboard players remove @s ca.collapse 1
 
-execute if entity @a[distance=..10] run function cartographer_custom_enchantments:enchant_effects/collapse/nearby_player
+execute if entity @a[distance=..15] run function cartographer_custom_enchantments:enchant_effects/collapse/nearby_player
 
 execute if score @s ca.collapse matches 0 run particle poof ~ ~0.6 ~ 0 0 0 0.1 8 normal 
 execute if score @s ca.collapse matches 0 run kill @s

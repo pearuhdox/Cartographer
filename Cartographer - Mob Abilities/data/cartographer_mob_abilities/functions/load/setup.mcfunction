@@ -187,6 +187,7 @@ function cartographer_mob_abilities:load/integration/active/clear
 
 #Set default of independent difficulty.
 execute unless score $gl_ind_diff ca.gamerule matches 0.. run scoreboard players set $gl_ind_diff ca.gamerule 0
+execute unless score $gl_ab_ani ca.gamerule matches 0.. run scoreboard players set $gl_ab_ani ca.gamerule 0
 
 #Reset all token data on all players.
 tag @a remove token_reset

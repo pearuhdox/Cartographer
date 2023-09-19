@@ -1,5 +1,7 @@
 scoreboard players add @s ability_charge 1
 
+execute unless score $gl_ab_ani ca.gamerule matches 1 run function cartographer_mob_abilities:animations/reflect/charge_bar
+
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
@@ -37,7 +39,7 @@ execute if score @s ability_charge matches 60 positioned ~ ~0.5 ~ run function c
 
 execute if score @s ability_charge matches 65 run data modify entity @s Invulnerable set value 0b
 
-execute if score @s ability_charge matches 1..41 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..41 unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute unless score @s ability_charge matches 20 run function cartographer_mob_abilities:loop/tick/animation
 

@@ -1,12 +1,14 @@
 scoreboard players add @s ability_charge 1
 
+execute unless score $gl_ab_ani ca.gamerule matches 1 run function cartographer_mob_abilities:animations/orbit/charge_bar
+
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
 execute if score @s ability_charge matches 1 run playsound minecraft:entity.warden.emerge hostile @a[distance=..16] ~ ~ ~ 1 2
 
-execute if score @s ability_charge matches 1 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1 unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s[tag=ca.has_kited] ability_charge matches 1 run effect give @s jump_boost 2 6 true
 execute if score @s[tag=ca.has_kited] ability_charge matches 1 run effect give @s levitation 1 0 true

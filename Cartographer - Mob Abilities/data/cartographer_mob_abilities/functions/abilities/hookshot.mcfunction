@@ -1,4 +1,4 @@
-scoreboard players set @s cooldown 8
+scoreboard players set @s cooldown 10
 
 function cartographer_mob_abilities:ability_traits/cooldown_traits
 
@@ -26,7 +26,7 @@ tag @a remove hooked
 
 execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s mob_move_red 101
 execute if score $hook_check ca.hooked matches 101 run scoreboard players set @s ca.hooked 101
-execute if score $hook_check ca.hooked matches 101 run scoreboard players add @s cooldown 4
+execute if score $hook_check ca.hooked matches 101 run scoreboard players add @s cooldown 6
 
 
 

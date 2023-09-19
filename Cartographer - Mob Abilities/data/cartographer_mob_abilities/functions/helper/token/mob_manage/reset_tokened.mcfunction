@@ -12,6 +12,8 @@ tag @s remove warned
 
 tag @s remove ca.temp_token
 
+function cartographer_mob_abilities:animation_charge_bars/delete_plate
+
 function #minecraft:cartographer/events/mob_abilities/ability_ended
 
 scoreboard players set @s ca.accelerate_stacks 0

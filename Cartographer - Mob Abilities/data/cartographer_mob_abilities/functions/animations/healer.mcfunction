@@ -1,5 +1,7 @@
 scoreboard players add @s ability_charge 1
 
+execute unless score $gl_ab_ani ca.gamerule matches 1 run function cartographer_mob_abilities:animations/healer/charge_bar
+
 execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
 
@@ -93,7 +95,7 @@ execute if score @s ability_charge matches 41 run particle minecraft:firework ~ 
 execute if score @s ability_charge matches 41 run particle minecraft:end_rod ~ ~1.5 ~ 0 0.5 0 0.05 40 normal @a
 
 
-execute if score @s ability_charge matches 1..41 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..41 unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 1..41 run scoreboard players set @s mob_move_dis 23
 

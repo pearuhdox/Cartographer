@@ -1,11 +1,13 @@
 execute unless entity @s[scores={ability_charge=121}] run scoreboard players add @s ability_charge 1
 
+execute unless score $gl_ab_ani ca.gamerule matches 1 run function cartographer_mob_abilities:animations/laser/charge_bar
+
 execute if entity @s[scores={ability_charge=1}] unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
 execute if score @s ability_charge matches 1 run summon potion ~ ~1 ~ {NoGravity:1b,Owner:[I;0,0,0,0],Tags:["ca.laser_tracker","ca.ability_tracker"],Passengers:[{id:"minecraft:marker",Tags:["ca.laser_tracker"]}],Item:{id:"minecraft:stone_button",Count:1b}}
 execute if score @s ability_charge matches 1 run data modify entity @e[type=potion,limit=1,sort=nearest,tag=ca.laser_tracker] Owner set from entity @s UUID
 
-execute if entity @s[scores={ability_charge=1..119}] unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
+execute if entity @s[scores={ability_charge=1..119}] unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if entity @s[scores={ability_charge=1..119}] run scoreboard players set @s mob_move_red 23
 

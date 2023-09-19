@@ -1,5 +1,7 @@
 scoreboard players add @s ability_charge 1
 
+execute unless score $gl_ab_ani ca.gamerule matches 1 run function cartographer_mob_abilities:animations/smash/charge_bar
+
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:loop/tick/fast_attack_warning
 
 

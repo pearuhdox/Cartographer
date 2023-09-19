@@ -1,10 +1,10 @@
-tp 31182015-4512-2011-3118-115180000000 ~ ~4 ~
+execute at @s run tp 31182015-4512-2011-3118-115180000000 ~ ~2 ~
 
 execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca.mob_var 1
 execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
 execute if entity @s[tag=ca.webbing] run scoreboard players set $zeph_check ca.mob_var 1
 
-execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s facing entity 31182015-4512-2011-3118-115180000000 feet run function cartographer_mob_abilities:abilities/nova/normal/player
+execute as @a[gamemode=!spectator,gamemode=!creative,distance=..8] at @s facing entity 31182015-4512-2011-3118-115180000000 feet rotated ~ -10 run function cartographer_mob_abilities:abilities/nova/normal/player
 
 execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..8] run function cartographer_mob_abilities:helper/damage/ability_magic
 

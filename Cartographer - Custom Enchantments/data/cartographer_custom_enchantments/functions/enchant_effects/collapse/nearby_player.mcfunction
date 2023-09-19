@@ -1,4 +1,5 @@
 scoreboard players add @s ca.collapse 2
+execute if entity @a[distance=..8] run scoreboard players add @s ca.collapse 1
 
 execute if score $mod_20 ca.collapse matches 0 run playsound minecraft:entity.guardian.ambient block @a[distance=..10] ~ ~ ~ 2 2
 execute if score $mod_20 ca.collapse matches 0 run playsound minecraft:entity.shulker.ambient block @a[distance=..10] ~ ~ ~ 0.25 0.5

@@ -1,5 +1,7 @@
 scoreboard players add @s ability_charge 1
 
+execute unless score $gl_ab_ani ca.gamerule matches 1 run function cartographer_mob_abilities:animations/volley/charge_bar
+
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 
 scoreboard players operation $needle_mod ability_charge = @s ability_charge
@@ -33,7 +35,7 @@ execute if score @s ability_charge matches 18 run playsound minecraft:item.cross
 execute if score @s ability_charge matches 19 run playsound minecraft:item.crossbow.loading_end hostile @a[distance=..20] ~ ~ ~ 1.5 1.4
 execute if score @s ability_charge matches 20 run playsound minecraft:item.crossbow.loading_end hostile @a[distance=..20] ~ ~ ~ 1.5 1.45
 
-execute if score @s ability_charge matches 1..5 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..5 unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if score @s ability_charge matches 1..5 run tp @s ~ ~ ~ facing entity @p feet
 
@@ -47,4 +49,4 @@ execute if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge ma
 
 function cartographer_mob_abilities:loop/tick/animation
 
-execute if score @s ability_charge matches 20.. run function cartographer_mob_abilities:abilities/volley
+execute if score @s ability_charge matches 21.. run function cartographer_mob_abilities:abilities/volley

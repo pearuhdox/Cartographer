@@ -1,5 +1,7 @@
 scoreboard players add @s ability_charge 1
 
+execute unless score $gl_ab_ani ca.gamerule matches 1 run function cartographer_mob_abilities:animations/nova/charge_bar
+
 execute unless entity @s[tag=ca.pulse] run scoreboard players set @s mob_move_red 23
 
 execute if score @s ability_charge matches 21..31 if entity @s[tag=ca.pulse] run scoreboard players set @s mob_move_red 10
@@ -25,7 +27,7 @@ execute if score @s ability_charge matches 1 unless entity @s[tag=ca.pulse] run 
 execute if score @s ability_charge matches 21 unless entity @s[tag=ca.pulse] run function cartographer_mob_abilities:animations/nova/normal/vfx
 
 
-execute if score @s ability_charge matches 1..21 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
+execute if score @s ability_charge matches 1..21 unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
 execute if entity @s[tag=ca.pulse] run scoreboard players add @s ability_charge 1
 
