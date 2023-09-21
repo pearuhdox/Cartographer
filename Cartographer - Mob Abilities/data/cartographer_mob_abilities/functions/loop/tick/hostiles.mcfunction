@@ -5,6 +5,9 @@ execute if score $has_los ca.mob_var matches 1.. run tag @s add can_see_player
 execute unless score $has_los ca.mob_var matches 1.. run tag @s remove can_see_player
 # Thank you Mojang for turning a expensive @e check into a free check
 
+#Boss Anti-Cheese
+execute if entity @s[tag=ca.boss] run function cartographer_mob_abilities:passive/boss
+
 #Run Touch
 execute if entity @s[tag=ca.running_touch_melee] run function cartographer_mob_abilities:ability_traits/touch/melee
 execute if entity @s[tag=ca.running_touch_ranged] run function cartographer_mob_abilities:ability_traits/touch/ranged

@@ -1,0 +1,1 @@
+execute on vehicle if entity @s[type=#cartographer_core:vehicles] run kill @s
