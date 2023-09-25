@@ -32,6 +32,8 @@ scoreboard objectives add ca.lifesteal dummy
 scoreboard objectives add ca.overcharge dummy
 scoreboard objectives add ca.point_blank dummy
 scoreboard objectives add ca.first_strike dummy
+scoreboard objectives add ca.lethality dummy
+scoreboard objectives add ca.lightborn dummy
 scoreboard objectives add ca.rally dummy
 scoreboard objectives add ca.repeating dummy
 scoreboard objectives add ca.regen dummy

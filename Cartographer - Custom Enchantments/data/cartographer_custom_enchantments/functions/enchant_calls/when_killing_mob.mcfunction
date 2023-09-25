@@ -11,6 +11,8 @@ execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.energetic mat
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.frenzy matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy
 #Lifesteal
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal
+#Lightborn
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lightborn matches 1.. run function cartographer_custom_enchantments:enchant_effects/lightborn/chance
 
 #Quake
 execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/find

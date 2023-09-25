@@ -40,6 +40,9 @@ execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_fr
 execute unless entity @s[tag=ca.en.f_life] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"lifesteal"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_life] run function cartographer_custom_enchantments:descriptions/write/passive/lifesteal
 
+execute unless entity @s[tag=ca.en.f_ligh] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"lightborn"}].lvl
+execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_ligh] run function cartographer_custom_enchantments:descriptions/write/passive/lightborn
+
 execute unless entity @s[tag=ca.en.f_rall] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"rally"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_rall] run function cartographer_custom_enchantments:descriptions/write/passive/rally
 
@@ -77,6 +80,8 @@ execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_fr
 execute unless entity @s[tag=ca.en.f_hunt] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"hunter"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_hunt] run function cartographer_custom_enchantments:descriptions/write/melee/hunter
 
+execute unless entity @s[tag=ca.en.f_leth] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"lethality"}].lvl
+execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_leth] run function cartographer_custom_enchantments:descriptions/write/melee/lethality
 
 execute unless entity @s[tag=ca.en.f_sing] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"singe"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_sing] run function cartographer_custom_enchantments:descriptions/write/melee/singe

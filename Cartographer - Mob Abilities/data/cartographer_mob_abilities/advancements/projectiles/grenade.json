@@ -9,7 +9,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:tnt"
+            "item": "minecraft:firework_star"
         },
         "frame": "task",
         "show_toast": false,

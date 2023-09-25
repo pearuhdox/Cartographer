@@ -5,7 +5,7 @@
             "color": "white"
         },
         "description": {
-            "text": "On death, drops a block of ignited TNT.",
+            "text": "On death, drops a bomb that damages nearby players.",
             "color": "white"
         },
         "icon": {

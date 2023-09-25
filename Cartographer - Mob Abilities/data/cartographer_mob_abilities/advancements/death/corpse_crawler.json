@@ -16,7 +16,7 @@
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "cartographer_mob_abilities:death/blood_sacrificial",
+  "parent": "cartographer_mob_abilities:death/bloodthirst",
   "criteria": {
     "found": {
       "trigger": "minecraft:player_killed_entity",

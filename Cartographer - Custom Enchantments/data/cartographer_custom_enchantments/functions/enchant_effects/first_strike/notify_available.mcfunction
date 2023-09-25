@@ -14,3 +14,5 @@ execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 
 
 execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 1 run title @s title {"text":" "}
 execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 1 run title @s subtitle [{"text":"<","color":"yellow"},{"text":"⚔","color":"green","italic":false},{"text":">","color":"yellow"}]
+
+function cartographer_custom_enchantments:enchant_effects/first_strike/apply

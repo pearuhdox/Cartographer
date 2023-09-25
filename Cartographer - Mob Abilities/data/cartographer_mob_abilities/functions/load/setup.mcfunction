@@ -6,10 +6,10 @@ scoreboard objectives add ca.ability_dmg dummy
 scoreboard objectives add cooldown dummy
 scoreboard objectives add ability_charge dummy
 scoreboard objectives add ability_pause dummy
-scoreboard objectives add brutal_stacks dummy
-scoreboard objectives add relent_stacks dummy
+scoreboard objectives add ca.brutal_stacks dummy
+scoreboard objectives add ca.relent_stacks dummy
 scoreboard objectives add devious_stacks dummy
-scoreboard objectives add sacrifice_stacks dummy
+scoreboard objectives add ca.sacrifice_stacks dummy
 scoreboard objectives add storms dummy
 scoreboard objectives add storm_height dummy
 scoreboard objectives add recast_count dummy

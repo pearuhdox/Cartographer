@@ -106,3 +106,8 @@ execute if score @s ca.t_exec matches 4.. run scoreboard players set @s ca.t_exe
 execute if score @s ca.s_adren matches 7.. run scoreboard players set @s ca.s_adren 6
 execute if score @s ca.s_energ matches 7.. run scoreboard players set @s ca.s_energ 6
 execute if score @s ca.s_frenzy matches 7.. run scoreboard players set @s ca.s_frenzy 6
+
+#First Strike Damage Calc
+execute unless score @s ca.first_strike matches 1.. run function cartographer_custom_enchantments:enchant_effects/first_strike/reset
+
+execute if score @s ca.first_strike matches 1.. unless entity @s[tag=ca.used_first_strike] run function cartographer_custom_enchantments:enchant_effects/first_strike/apply

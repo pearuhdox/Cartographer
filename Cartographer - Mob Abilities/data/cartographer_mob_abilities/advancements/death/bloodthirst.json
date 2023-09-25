@@ -1,0 +1,83 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:redstone"
+      },
+      "title": {
+        "text": "Bloodthirst               ",
+        "color": "white"
+      },
+      "description": {
+        "text": "On death, restore nearby enemy health. Can also buff nearby enemies.",
+        "color": "white"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": true
+    },
+    "parent": "cartographer_mob_abilities:death/death_abilities",
+    "criteria": {
+      "brutal": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"ca.blood_b\"]}"
+          }
+        }
+      },
+      "relentless": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"ca.blood_r\"]}"
+          }
+        }
+      },
+      "devious": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"ca.blood_d\"]}"
+          }
+        }
+      },
+      "sacrificial": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"ca.blood_s\"]}"
+          }
+        }
+      },
+      "alchemical": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"ca.blood_a\"]}"
+          }
+        }
+      },
+      "blood": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "nbt": "{Tags:[\"ca.blood\"]}"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "brutal",
+        "relentless",
+        "devious",
+        "sacrificial",
+        "alchemical",
+        "blood"
+      ]
+    ],
+    "rewards": {
+      "function": "cartographer_mob_abilities:descriptions/death/bloodthirst"
+    }
+  }

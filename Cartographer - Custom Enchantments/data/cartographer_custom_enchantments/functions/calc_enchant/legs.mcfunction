@@ -41,6 +41,9 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.ena
 execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomEnchantments[{id:"lifesteal"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.lifesteal += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomEnchantments[{id:"lightborn"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.lightborn += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomEnchantments[{id:"rally"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.rally += $temp ca.susu
 

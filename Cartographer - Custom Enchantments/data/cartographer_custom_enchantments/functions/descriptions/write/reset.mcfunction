@@ -22,6 +22,7 @@ tag @s remove ca.en.f_exec
 tag @s remove ca.en.f_expo
 tag @s remove ca.en.f_fros
 tag @s remove ca.en.f_hunt
+tag @s remove ca.en.f_leth
 tag @s remove ca.en.f_infe
 tag @s remove ca.en.f_sing
 tag @s remove ca.en.f_stun
@@ -59,6 +60,7 @@ tag @s remove ca.en.f_regr
 tag @s remove ca.en.f_shat
 tag @s remove ca.en.f_twoh
 tag @s remove ca.en.f_twoh
+tag @s remove ca.en.f_ligh
 
 #new enchants
 tag @s remove ca.en.f_cclu

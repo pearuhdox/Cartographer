@@ -1,4 +1,4 @@
-scoreboard players add @s brutal_stacks 1
+scoreboard players add @s ca.brutal_stacks 1
 
 particle minecraft:dust 1 0 0 1 ~ ~1 ~ 0.5 0.5 0.5 0 15 normal
 

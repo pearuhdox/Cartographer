@@ -16,11 +16,21 @@ tellraw @s {"text":"------------------------------------------","color":"#ACFFA6
 tellraw @s [{"text":"Amplify","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the mob finishes casting an ability, it provides itself with stacking buffs. These buffs can be 20% Attack Damage, 10% Speed, 60% Cooldown Reduction, or 2 Absorption Health (plus additional Absorption Health gained this way). These buffs can stack and be regained up to a total of 5 times.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the mob finishes casting an ability, it provides itself with a buff. ","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
+
+tellraw @s [{"text":"Most Amplify buffs can stack up to 10 times. Amplify grants 2 stacks when applicable. The buffs are:","color":"green","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Brutality gives a mob red dust particles.","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
+
+tellraw @s [{"text":"Brutality: +10% Attack Damage (Per stack, max of 100%)","color":"red","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Brutality gives a mob red dust particles.","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Unrelenting: +5% Speed (Per stack, max of 50%)","color":"white","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Unrelenting gives a mob light gray dust particles.","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Sacrifical: +1 Absorption Health (Per stack, max of 10)","color":"yellow","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Sacrificial gives a mob yellow dust particles.","color":"#FFF4D9","italic":true}]}}]
+
+tellraw @s [{"text":"Deviousness: Cleanses Debuffs (Does not stack).","color":"light_purple","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Deviousness does not create additional particles.","color":"#FFF4D9","italic":true}]}}]
+#tellraw @s [{"text":"Alchemic: Grants Potion Effects (Based on the dying mob, does not stack).","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Alchemic does not create additional particles.","color":"#FFF4D9","italic":true}]}}]
+
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Applicable Mobs: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"All Hostile Mobs","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
-tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
-tellraw @s [{"text":"Damage: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"50% (Base Attack Damage)","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}

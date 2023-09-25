@@ -1,7 +1,4 @@
-scoreboard players add @s[tag=ca.has_active] devious_stacks 1
-scoreboard players add @s[tag=ca.has_active] ca.accelerate_stacks 1
-
-scoreboard players add @s[tag=!ca.has_active] relent_stacks 1
+function cartographer_mob_abilities:death/blood/devious_cleanse
 
 particle minecraft:dust 1 0 1 1 ~ ~1 ~ 0.5 0.5 0.5 0 15 normal
 

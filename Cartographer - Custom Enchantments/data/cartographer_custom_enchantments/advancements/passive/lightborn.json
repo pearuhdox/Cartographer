@@ -1,0 +1,35 @@
+{
+    "criteria": {
+        "find": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{CustomEnchantments:[{id:\"lightborn\"}]}"
+                    }
+                ]
+            }
+        }
+    },
+    "display": {
+        "title": {
+            "text": "Lightborn                ",
+            "color": "aqua"
+        },
+        "description": {
+            "color": "white",
+            "text": "When the user slays a mob, grants a chance that a torch is placed in front of them."
+        },
+        "icon": {
+            "item": "minecraft:torch"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "rewards": {
+        "function": "cartographer_custom_enchantments:descriptions/passive/lightborn"
+    },
+    "parent": "cartographer_custom_enchantments:passive/lifesteal"
+}

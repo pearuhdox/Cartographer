@@ -29,6 +29,8 @@ scoreboard players set @s ca.overcharge 0
 scoreboard players set @s ca.point_blank 0
 scoreboard players set @s ca.regen 0
 scoreboard players set @s ca.first_strike 0
+scoreboard players set @s ca.lethality 0
+scoreboard players set @s ca.lightborn 0
 scoreboard players set @s ca.rally 0
 scoreboard players set @s ca.repeating 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.ricochet 0

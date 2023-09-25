@@ -61,6 +61,7 @@ execute if score @s ca.riptide_time matches 1.. run function cartographer_custom
 execute if score @s ca.riptide_count_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/riptide/count_tick
 
 #Run The Notification that First Strike is available
+execute if entity @s[tag=ca.used_first_strike] unless score @s ca.combat_timer matches 0 run function cartographer_custom_enchantments:enchant_effects/first_strike/reset
 execute if entity @s[tag=ca.used_first_strike] if score @s ca.combat_timer matches 0 run function cartographer_custom_enchantments:enchant_effects/first_strike/notify_available
 
 #Run an inventory calc the tick after using Auto Charge
@@ -119,6 +120,10 @@ execute if score @s ca.disengage matches 1.. if score @s ca.disengage_time match
 scoreboard players set @s ca.disengage_use 0
 
 execute unless score @s ca.disengage_time matches 0.. run scoreboard players set @s ca.disengage_time 0
+
+#Lethality
+execute if predicate bb:cant_crit if score @s ca.lethality matches 1.. run function cartographer_custom_enchantments:enchant_effects/lethality/reset
+execute unless predicate bb:cant_crit if score @s ca.lethality matches 1.. run function cartographer_custom_enchantments:enchant_effects/lethality/apply
 
 
 #Infinity 3.0

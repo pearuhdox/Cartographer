@@ -32,6 +32,7 @@ execute if score @s ca.lexica_trig matches 214 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 215 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/executioner
 execute if score @s ca.lexica_trig matches 217 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/frostbite
 execute if score @s ca.lexica_trig matches 218 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/hunter
+execute if score @s ca.lexica_trig matches 219 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/lethality
 execute if score @s ca.lexica_trig matches 221 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/singe
 execute if score @s ca.lexica_trig matches 222 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/stunning
 execute if score @s ca.lexica_trig matches 223 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/surging_strike
@@ -68,6 +69,7 @@ execute if score @s ca.lexica_trig matches 2004 run function cartographer_custom
 execute if score @s ca.lexica_trig matches 2005 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/starfall
 execute if score @s ca.lexica_trig matches 2006 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/spurs
 execute if score @s ca.lexica_trig matches 2007 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/stalwart
+execute if score @s ca.lexica_trig matches 2008 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/lightborn
 
 execute if score @s ca.lexica_trig matches 250 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/auto_charge
 execute if score @s ca.lexica_trig matches 252 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/current
@@ -144,10 +146,7 @@ execute if score @s ca.lexica_trig matches 328 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 329 run function cartographer_mob_abilities:lexica_calls/pages/category/active/summoner
 execute if score @s ca.lexica_trig matches 3454 run function cartographer_mob_abilities:lexica_calls/pages/category/active/infuser
 
-execute if score @s ca.lexica_trig matches 330 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_brutal
-execute if score @s ca.lexica_trig matches 331 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_devious
-execute if score @s ca.lexica_trig matches 332 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_relentless
-execute if score @s ca.lexica_trig matches 333 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/blood_sacrificial
+execute if score @s ca.lexica_trig matches 330 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/bloodthirst
 execute if score @s ca.lexica_trig matches 334 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/corpse_crawler
 execute if score @s ca.lexica_trig matches 335 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/exalted
 execute if score @s ca.lexica_trig matches 336 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/parting_gift

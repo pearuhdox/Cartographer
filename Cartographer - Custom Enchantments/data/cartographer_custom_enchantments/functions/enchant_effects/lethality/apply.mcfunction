@@ -1,0 +1,10 @@
+execute if score @s ca.lethality matches 1 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.1 multiply
+execute if score @s ca.lethality matches 2 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.2 multiply
+execute if score @s ca.lethality matches 3 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.3 multiply
+execute if score @s ca.lethality matches 4 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.4 multiply
+execute if score @s ca.lethality matches 5 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.5 multiply
+execute if score @s ca.lethality matches 6 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.6 multiply
+execute if score @s ca.lethality matches 7 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.7 multiply
+execute if score @s ca.lethality matches 8 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.8 multiply
+execute if score @s ca.lethality matches 9 run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 0.9 multiply
+execute if score @s ca.lethality matches 10.. run attribute @s minecraft:generic.attack_damage modifier add 31318920-2151-5192-0000-000000000000 "lethality" 1.0 multiply
