@@ -12,4 +12,4 @@ playsound minecraft:entity.zombie_villager.cure hostile @a[distance=..16] ~ ~ ~ 
 
 particle minecraft:block minecraft:yellow_wool ~ ~1 ~ 0.5 0.5 0.5 1 25 normal
 
-function cartographer_mob_abilities:death/blood/heal
+#function cartographer_mob_abilities:death/blood/heal

@@ -7,4 +7,4 @@ particle minecraft:effect ~ ~1 ~ 0.5 0.5 0.5 1 10 normal
 scoreboard players set @s mob_move_dis 7
 execute summon minecraft:area_effect_cloud run function cartographer_mob_abilities:death/blood/alchemic_set_effects
 
-function cartographer_mob_abilities:death/blood/heal
+#function cartographer_mob_abilities:death/blood/heal
