@@ -39,7 +39,7 @@ execute if score $cu_en_passive ca.enabler matches 1.. if score @s ca.rally_time
 execute if score @s ca.echo matches 1.. run function cartographer_custom_enchantments:enchant_effects/echo/restore
 
 #Evocation Charge Restore
-execute if score @s ca.evocation matches 1.. run function cartographer_custom_enchantments:enchant_effects/evocation/restore
+execute if score @s ca.evocation matches 1.. run function cartographer_custom_enchantments:enchant_effects/evocation/restore_check
 
 
 #Concealed Restore (if score $cu_en_passive ca.enabler matches 1..)

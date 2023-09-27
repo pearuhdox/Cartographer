@@ -21,3 +21,5 @@ execute if entity @s[scores={ca.evocation=1..}] run particle minecraft:effect ~ 
 tag @s[scores={ca.evocation=1..}] remove showing_evocation
 
 function #minecraft:cartographer/events/enchantments/melee/evocation/evocation_charge
+
+scoreboard players set @s ca.evocation_kills 0

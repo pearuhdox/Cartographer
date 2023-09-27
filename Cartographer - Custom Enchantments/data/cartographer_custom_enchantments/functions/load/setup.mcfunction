@@ -322,6 +322,7 @@ scoreboard objectives add ca.echo_charges dummy
 scoreboard objectives add ca.ammo dummy
 scoreboard objectives add ca.conceal_time dummy
 scoreboard objectives add ca.evocation_charges dummy
+scoreboard objectives add ca.evocation_kills dummy
 
 scoreboard objectives add ca.frost_time dummy
 scoreboard objectives add ca.frost_tier dummy
