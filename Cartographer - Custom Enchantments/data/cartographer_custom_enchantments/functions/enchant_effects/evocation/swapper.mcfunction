@@ -2,8 +2,9 @@ summon minecraft:evoker_fangs ~ ~ ~ {Warmup:1000000,Tags:["from_evocation"],Pass
 
 execute store result score $time ca.evocation run data get entity @s WaitTime 1
 
-execute if score $evocation ca.evocation matches 1 run scoreboard players add $time ca.evocation 20
-execute if score $evocation ca.evocation matches 2 run scoreboard players add $time ca.evocation 10
+#execute if score $evocation ca.evocation matches 1 run scoreboard players add $time ca.evocation 20
+#execute if score $evocation ca.evocation matches 2 run scoreboard players add $time ca.evocation 10
+scoreboard players add $time ca.evocation 5
 
 scoreboard players operation $fire_aspect ca.evocation = @s ca.fire_aspect
 scoreboard players operation $frostbite ca.evocation = @s ca.frostbite

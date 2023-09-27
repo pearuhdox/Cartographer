@@ -36,7 +36,11 @@ execute if score @s ca.wavedash_time matches 1.. unless score @s ca.deal_mel_dmg
 execute if score $cu_en_passive ca.enabler matches 1.. if score @s ca.rally_time matches 1.. run scoreboard players set @s ca.rally_damage 80
 
 #Echo Charge Restore
-function cartographer_custom_enchantments:enchant_effects/echo/restore
+execute if score @s ca.echo matches 1.. run function cartographer_custom_enchantments:enchant_effects/echo/restore
+
+#Evocation Charge Restore
+execute if score @s ca.evocation matches 1.. run function cartographer_custom_enchantments:enchant_effects/evocation/restore
+
 
 #Concealed Restore (if score $cu_en_passive ca.enabler matches 1..)
 execute if score @s ca.concealed matches 1.. run function cartographer_custom_enchantments:enchant_effects/concealed/restore

@@ -39,13 +39,25 @@ title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=2}] subtitle [{"t
 title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=1}] subtitle [{"text":",","color":"yellow"},{"text":"_","color":"green","italic":false},{"text":",","color":"yellow"}]
 title @s[tag=!showing_echo,scores={ca.echo=1..,ca.echo_charges=0}] subtitle [{"text":",","color":"red"},{"text":".","color":"dark_gray","italic":false},{"text":",","color":"red"}]
 
+
+title @s[tag=!showing_evocation,scores={ca.evocation=1..}] times 0 45 5
+title @s[tag=!showing_evocation,scores={ca.evocation=1..}] title {"text":" "}
+
+title @s[tag=!showing_evocation,scores={ca.evocation=1..,ca.evocation_charges=4..}] subtitle [{"text":",","color":"yellow"},{"text":"____","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @s[tag=!showing_evocation,scores={ca.evocation=1..,ca.evocation_charges=3}] subtitle [{"text":",","color":"yellow"},{"text":"___","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @s[tag=!showing_evocation,scores={ca.evocation=1..,ca.evocation_charges=2}] subtitle [{"text":",","color":"yellow"},{"text":"__","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @s[tag=!showing_evocation,scores={ca.evocation=1..,ca.evocation_charges=1}] subtitle [{"text":",","color":"yellow"},{"text":"_","color":"green","italic":false},{"text":",","color":"yellow"}]
+title @s[tag=!showing_evocation,scores={ca.evocation=1..,ca.evocation_charges=0}] subtitle [{"text":",","color":"red"},{"text":".","color":"dark_gray","italic":false},{"text":",","color":"red"}]
+
+
 scoreboard players set @s ca.ind_val 0
 
 tag @s[scores={ca.echo=1..}] add showing_echo
 tag @s[scores={ca.repeating=1..}] add showing_repeating
+tag @s[scores={ca.evocation=1..}] add showing_evocation
 
-title @s[tag=!showing_echo,scores={ca.sw_time=1..}] times 0 45 5
-title @s[tag=!showing_echo,scores={ca.sw_time=1..}] title {"text":" "}
+title @s[tag=!showing_echo,tag=!showing_evocation,scores={ca.sw_time=1..}] times 0 45 5
+title @s[tag=!showing_echo,tag=!showing_evocation,scores={ca.sw_time=1..}] title {"text":" "}
 
 title @s[scores={ca.sw_time=281..}] subtitle [{"text":",","color":"yellow"},{"text":"................","color":"red","italic":false},{"text":",","color":"yellow"}]
 title @s[scores={ca.sw_time=261..280}] subtitle [{"text":",","color":"yellow"},{"text":".............","color":"green","italic":false},{"text":",","color":"yellow"}]

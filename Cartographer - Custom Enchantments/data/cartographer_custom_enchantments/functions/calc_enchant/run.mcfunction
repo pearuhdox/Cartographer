@@ -60,3 +60,4 @@ scoreboard players set $cu_en_spawner ca.enabler 1
 #Remove the ca.repeating and ca.echo tags so it shows an updated ammo count.
 tag @s remove showing_repeating
 tag @s remove showing_echo
+tag @s remove showing_evocation

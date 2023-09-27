@@ -2,6 +2,7 @@ data modify storage ca.susu:enchants temp_item set value {}
 data modify storage ca.susu:enchants temp_item_resetter set value []
 
 data modify storage ca.susu:enchants temp_item_resetter append from entity @s Inventory[{tag:{CustomEnchantments:[{id:"echo"}]}}]
+data modify storage ca.susu:enchants temp_item_resetter append from entity @s Inventory[{tag:{CustomEnchantments:[{id:"evocation"}]}}]
 data modify storage ca.susu:enchants temp_item_resetter append from entity @s Inventory[{tag:{CustomEnchantments:[{id:"first_strike"}]}}]
 
 data modify storage ca.susu:enchants temp_item set from storage ca.susu:enchants temp_item_resetter[0]

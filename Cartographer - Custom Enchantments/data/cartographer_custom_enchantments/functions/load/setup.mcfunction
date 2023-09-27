@@ -321,7 +321,7 @@ scoreboard objectives add ca.sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add ca.echo_charges dummy
 scoreboard objectives add ca.ammo dummy
 scoreboard objectives add ca.conceal_time dummy
-scoreboard objectives add ca.evo_burn dummy
+scoreboard objectives add ca.evocation_charges dummy
 
 scoreboard objectives add ca.frost_time dummy
 scoreboard objectives add ca.frost_tier dummy
@@ -429,6 +429,7 @@ function cartographer_custom_enchantments:load/integration/active/clear
 
 #Set all needed player constants.
 execute as @a unless entity @s[scores={ca.echo_charges=-1..}] run scoreboard players set @a ca.echo_charges 0
+execute as @a unless entity @s[scores={ca.evocation_charges=-1..}] run scoreboard players set @a ca.evocation_charges 0
 execute as @a unless entity @s[scores={ca.conceal_time=0..}] run scoreboard players set @a ca.conceal_time 0
 
 #Place extra shulker boxes for Custom Enchantments

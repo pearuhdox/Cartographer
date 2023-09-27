@@ -49,6 +49,8 @@ execute if score @s ca.respiration matches 11.. run scoreboard players set @s ca
 execute if score @s ca.recoil matches 11.. run scoreboard players set @s ca.recoil 10
 execute if score @s ca.collapse matches 2.. run scoreboard players set @s ca.recoil 1
 execute if score @s ca.echo matches 5.. run scoreboard players set @s ca.echo 4
+execute if score @s ca.evocation matches 5.. run scoreboard players set @s ca.evocation 4
+
 execute if score @s ca.resourceful matches 11.. run scoreboard players set @s ca.resourceful 10
 execute if score @s ca.riptide matches 11..100 run scoreboard players set @s ca.riptide 10
 execute if score @s ca.riptide matches 111.. run scoreboard players set @s ca.riptide 110

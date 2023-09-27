@@ -21,3 +21,6 @@ execute if score @s ca.first_strike matches 1.. if score @s ca.resetter_check_ki
 
 #Echo Reset Chance
 execute if score @s ca.echo matches 1.. if score @s ca.resetter_check_kill matches 1..9 run function cartographer_custom_enchantments:enchant_effects/echo/kill
+
+#Evocation Reset Chance
+execute if score @s ca.evocation matches 1.. if score @s ca.resetter_check_kill matches 1..9 run function cartographer_custom_enchantments:enchant_effects/evocation/kill

@@ -19,8 +19,4 @@ execute if entity @s[scores={ca.echo=1..}] run particle minecraft:enchant ~ ~0.2
 
 tag @s[scores={ca.ui_location=1,ca.echo=1..}] remove showing_echo
 
-tag @s add echo_restored
-
-tag @s add fix_charges
-
-function #minecraft:cartographer/events/enchantments/melee/echo_charge
+function #minecraft:cartographer/events/enchantments/melee/echo/echo_charge

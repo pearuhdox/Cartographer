@@ -1,13 +1,9 @@
 execute if entity @s[scores={ca.regen=1..}] run function cartographer_custom_enchantments:enchant_effects/regeneration
 execute if entity @s[scores={ca.regen_bank=100..}] run function cartographer_custom_enchantments:enchant_effects/heal_bank
 
-execute if entity @s[tag=!echo_restored,scores={ca.combat_timer=..0,ca.echo=1,ca.echo_charges=..0}] run function cartographer_custom_enchantments:enchant_effects/echo/restore
-execute if entity @s[tag=!echo_restored,scores={ca.combat_timer=..0,ca.echo=2,ca.echo_charges=..1}] run function cartographer_custom_enchantments:enchant_effects/echo/restore
-execute if entity @s[tag=!echo_restored,scores={ca.combat_timer=..0,ca.echo=3,ca.echo_charges=..2}] run function cartographer_custom_enchantments:enchant_effects/echo/restore
-execute if entity @s[tag=!echo_restored,scores={ca.combat_timer=..0,ca.echo=4..,ca.echo_charges=..3}] run function cartographer_custom_enchantments:enchant_effects/echo/restore
 
-tag @s remove echo_restored
-tag @s remove showing_echo
+execute if score @s ca.combat_timer matches ..0 if score @s ca.echo_charges < @s ca.echo run function cartographer_custom_enchantments:enchant_effects/echo/restore
+execute if score @s ca.combat_timer matches ..0 if score @s ca.evocation_charges < @s ca.evocation run function cartographer_custom_enchantments:enchant_effects/evocation/restore
 
 #Shielding
 execute if score @s ca.shielding matches 1.. run function cartographer_custom_enchantments:enchant_effects/shielding/clock

@@ -27,9 +27,7 @@ title @s[scores={ca.ind_val=0,ca.repeating=11..17}] actionbar [{"text":"🏹 <",
 
 title @s[tag=showing_repeating,scores={ca.repeating=0}] actionbar {"text":" ","color":"yellow","italic":false}
 
-title @s[scores={ca.echo=1..,ca.echo_charges=6}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"6","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
-title @s[scores={ca.echo=1..,ca.echo_charges=5}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"5","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
-title @s[scores={ca.echo=1..,ca.echo_charges=4}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"4","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @s[scores={ca.echo=1..,ca.echo_charges=4..}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"4","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
 title @s[scores={ca.echo=1..,ca.echo_charges=3}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"3","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
 title @s[scores={ca.echo=1..,ca.echo_charges=2}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"2","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
 title @s[scores={ca.echo=1..,ca.echo_charges=1}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"1","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
@@ -37,10 +35,21 @@ title @s[scores={ca.echo=1..,ca.echo_charges=0}] actionbar [{"text":"⚔ <","col
 
 title @s[tag=showing_echo,scores={ca.echo=0}] actionbar {"text":" ","color":"yellow","italic":false}
 
+
+title @s[scores={ca.evocation=1..,ca.evocation_charges=4..}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"4","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @s[scores={ca.evocation=1..,ca.evocation_charges=3}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"3","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @s[scores={ca.evocation=1..,ca.evocation_charges=2}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"2","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @s[scores={ca.evocation=1..,ca.evocation_charges=1}] actionbar [{"text":"⚔ <","color":"yellow","italic":false},{"text":"1","color":"green","bold":true,"italic":false},{"text":"> ⚔","color":"yellow","italic":false}]
+title @s[scores={ca.evocation=1..,ca.evocation_charges=0}] actionbar [{"text":"⚔ <","color":"red","italic":false},{"text":"0","color":"dark_gray","bold":true,"italic":false},{"text":"> ⚔","color":"red","italic":false}]
+
+title @s[tag=showing_evocation,scores={ca.evocation=0}] actionbar {"text":" ","color":"yellow","italic":false}
+
+
 scoreboard players set @s ca.ind_val 0
 
 tag @s[scores={ca.echo=1..}] add showing_echo
 tag @s[scores={ca.repeating=1..}] add showing_repeating
+tag @s[scores={ca.evocation=1..}] add showing_evocation
 
 title @s[scores={ca.sw_time=281..300}] actionbar [{"text":"☠ ","color":"dark_green","italic":false},{"text":"< ","color":"green","bold":true},{"text":"00","color":"red","bold":false,"italic":false},{"text":":","color":"green","bold":true,"italic":false},{"text":"14 ","color":"red","bold":false,"italic":false},{"text":">","color":"green","bold":true,"italic":false},{"text":" ☠"}]
 title @s[scores={ca.sw_time=261..280}] actionbar [{"text":"☠ ","color":"dark_green","italic":false},{"text":"< ","color":"green","bold":true},{"text":"00","color":"yellow","bold":false,"italic":false},{"text":":","color":"green","bold":true,"italic":false},{"text":"13 ","color":"yellow","bold":false,"italic":false},{"text":">","color":"green","bold":true,"italic":false},{"text":" ☠"}]

@@ -6,7 +6,7 @@
         },
         "description": {
             "color": "white",
-            "text": "Crit, sneaking, and sprint attacks create Evoker fangs when you attack the mobs, at the cost of a longer attack cooldown."
+            "text": "The weapon stores charges over time and from kills. Charges are used on crit, sneak, and sprint attacks to create Evoker fangs."
         },
         "icon": {
             "item": "minecraft:shears"

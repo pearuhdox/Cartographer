@@ -13,3 +13,6 @@ execute if score @s ca.sneak matches 1.. run function cartographer_custom_enchan
 execute unless predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/evocation/branch/can_crit
 execute if score @s ca.sprint matches 1.. run function cartographer_custom_enchantments:enchant_effects/evocation/branch/sprint
 execute if score @s ca.sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/evocation/branch/sneak
+
+execute if entity @s[tag=ca.evocation_penalty] run function cartographer_custom_enchantments:enchant_effects/evocation/branch/consume
+tag @s remove ca.evocation_penalty
