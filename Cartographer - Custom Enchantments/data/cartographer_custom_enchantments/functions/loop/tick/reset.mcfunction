@@ -8,13 +8,7 @@ scoreboard players set @s ca.mine_spawner 0
 scoreboard players set @s ca.fire_bow 0
 scoreboard players set @s ca.fire_cbow 0
 scoreboard players set @s ca.throw_trident 0
-scoreboard players set @s[scores={ca.sprint=5..}] ca.sprint 5
-scoreboard players remove @s[scores={ca.sprint=1..}] ca.sprint 1
-scoreboard players set @s[scores={ca.walk=5..}] ca.walk 5
-scoreboard players remove @s[scores={ca.walk=1..}] ca.walk 1
-scoreboard players set @s[scores={ca.swim=1..}] ca.swim 0
-scoreboard players set @s[scores={ca.water_walk=201..}] ca.water_walk 200
-scoreboard players remove @s[scores={ca.water_walk=5..}] ca.water_walk 5
+
 
 scoreboard players set @s helper_potion 0
 
@@ -32,8 +26,6 @@ scoreboard players set @s helper_eye 0
 scoreboard players remove @s[scores={ca.rpt_cdl=2..}] ca.rpt_cdl 1
 
 execute if score @s ca.sw_lava_timer matches 1.. run scoreboard players remove @s ca.sw_lava_timer 1
-
-scoreboard players set @s ca.sneak 0
 
 scoreboard players set @s ca.dmg_resist_sw 0
 scoreboard players set @s ca.sw_fall 0

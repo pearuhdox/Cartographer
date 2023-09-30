@@ -315,9 +315,7 @@ scoreboard objectives add ca.melee_chance dummy
 scoreboard objectives add ca.mine_spawner minecraft.mined:minecraft.spawner
 scoreboard objectives add ca.lifetime dummy
 scoreboard objectives add ca.death_time minecraft.custom:minecraft.time_since_death
-scoreboard objectives add ca.sprint minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add ca.walk minecraft.custom:minecraft.walk_one_cm
-scoreboard objectives add ca.sneak minecraft.custom:minecraft.sneak_time
+
 scoreboard objectives add ca.echo_charges dummy
 scoreboard objectives add ca.ammo dummy
 scoreboard objectives add ca.conceal_time dummy
@@ -379,9 +377,6 @@ scoreboard objectives add ca.ce.true_x dummy
 scoreboard objectives add ca.ce.true_y dummy
 scoreboard objectives add ca.ce.true_z dummy
 scoreboard objectives add ca.ce.true_dmg dummy
-
-scoreboard objectives add ca.swim minecraft.custom:minecraft.swim_one_cm
-scoreboard objectives add ca.water_walk minecraft.custom:minecraft.walk_under_water_one_cm
 
 scoreboard objectives add ca.reflect_v dummy
 

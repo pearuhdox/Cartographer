@@ -40,3 +40,11 @@ execute if entity @s[tag=ca.duplicate,scores={cooldown=0}] run tp @s ~ -60 ~
 
 #Run Passive (Trail)
 execute as @s[tag=ca.trail] at @s run function cartographer_mob_abilities:passive/trail/test
+
+#Run Passive (Aura)
+execute as @s[tag=ca.aura] at @s run function cartographer_mob_abilities:passive/aura/test
+
+
+#Run Cleanse
+execute as @s[tag=ca.cleanse_debuffs] run function cartographer_mob_abilities:passive/cleanse/debuffs
+execute as @s[tag=ca.cleanse_statuses] run function cartographer_mob_abilities:passive/cleanse/statuses

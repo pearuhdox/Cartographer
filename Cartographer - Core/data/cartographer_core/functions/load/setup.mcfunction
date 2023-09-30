@@ -88,6 +88,13 @@ scoreboard objectives add ca.shoot_bow minecraft.used:minecraft.bow
 scoreboard objectives add ca.shoot_cross minecraft.used:minecraft.crossbow
 scoreboard objectives add ca.throw_trident minecraft.used:minecraft.trident
 
+scoreboard objectives add ca.sprint minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add ca.walk minecraft.custom:minecraft.walk_one_cm
+scoreboard objectives add ca.sneak minecraft.custom:minecraft.sneak_time
+
+scoreboard objectives add ca.swim minecraft.custom:minecraft.swim_one_cm
+scoreboard objectives add ca.water_walk minecraft.custom:minecraft.walk_under_water_one_cm
+
 #Delta compat
 scoreboard objectives add ca.delta_fuse_max dummy
 scoreboard objectives add ca.delta_fuse dummy

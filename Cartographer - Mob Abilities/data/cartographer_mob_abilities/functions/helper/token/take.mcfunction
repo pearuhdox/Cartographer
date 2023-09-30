@@ -31,6 +31,7 @@ execute if entity @s[tag=ca.rift,tag=!ca.light_priority] run function cartograph
 execute if entity @s[tag=ca.haunt,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.barrage,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 execute if entity @s[tag=ca.fling,tag=!ca.light_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
+execute if entity @s[tag=ca.spin_shot,tag=!ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy
 
 #Mobs with Heavy Attack Priority
 execute if entity @s[tag=ca.heavy_priority] run function cartographer_mob_abilities:helper/token/take/test_heavy

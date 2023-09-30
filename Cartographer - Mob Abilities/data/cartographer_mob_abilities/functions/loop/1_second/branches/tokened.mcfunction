@@ -17,6 +17,7 @@ execute if entity @s[tag=ca.sidearm,scores={cooldown=0}] if entity @a[gamemode=!
 execute if entity @s[tag=ca.haunt,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=ca.summoner,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
 execute if entity @s[tag=ca.fling,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
+execute if entity @s[tag=ca.spin_shot,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..20] run tag @s add avail_target
 
 #Half Second Checks
 execute if entity @s[tag=ca.barrage,tag=tokened,scores={cooldown=0}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..18] run tag @s add avail_target

@@ -9,6 +9,8 @@ execute if score $cloak ca.stat_calc_var matches 1.. run data modify storage car
 execute if score $morph_chance ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:status_inflict data.Effects append value {Id:"morph",Chance:0}
 execute if score $possess_chance ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:status_inflict data.Effects append value {Id:"possess",Chance:0}
 
+execute if score $expose_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:status_inflict data.Effects append value {Id:"expose",Duration:0,Amplifier:0}
+
 
 execute if score $bleed ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"bleeding"}].Amount int 1 run scoreboard players get $bleed ca.stat_calc_var
 execute if score $shock ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"shocking"}].Duration int 1 run scoreboard players get $shock ca.stat_calc_var

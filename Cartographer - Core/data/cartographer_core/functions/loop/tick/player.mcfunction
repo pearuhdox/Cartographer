@@ -57,6 +57,16 @@ execute if score @s ca.throw_trident matches 1.. run function cartographer_core:
 #Resets
 scoreboard players set @s ca.use_lectern 0
 
+scoreboard players set @s[scores={ca.sprint=6..}] ca.sprint 5
+scoreboard players remove @s[scores={ca.sprint=1..}] ca.sprint 1
+scoreboard players set @s[scores={ca.walk=6..}] ca.walk 5
+scoreboard players remove @s[scores={ca.walk=1..}] ca.walk 1
+scoreboard players set @s[scores={ca.swim=6..}] ca.swim 5
+scoreboard players remove @s[scores={ca.swim=1..}] ca.swim 1
+scoreboard players set @s[scores={ca.water_walk=201..}] ca.water_walk 200
+scoreboard players remove @s[scores={ca.water_walk=5..}] ca.water_walk 5
+scoreboard players set @s ca.sneak 0
+
 #Reduce Delta Cooldown Time
 execute if score @s ca.delta.cooldown matches 1.. run scoreboard players remove @s ca.delta.cooldown 1
 execute unless score @s ca.delta.cooldown matches 0.. run scoreboard players set @s ca.delta.cooldown 0

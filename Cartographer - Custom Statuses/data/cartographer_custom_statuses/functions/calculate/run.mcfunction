@@ -32,6 +32,27 @@ tag @s remove ca.override_ranged_f
 tag @s remove ca.override_ranged_m
 tag @s remove ca.override_ranged_o
 
+tag @s remove ca.override_crit_h
+tag @s remove ca.override_crit_b
+tag @s remove ca.override_crit_l
+tag @s remove ca.override_crit_f
+tag @s remove ca.override_crit_m
+tag @s remove ca.override_crit_o
+
+tag @s remove ca.override_sprint_h
+tag @s remove ca.override_sprint_b
+tag @s remove ca.override_sprint_l
+tag @s remove ca.override_sprint_f
+tag @s remove ca.override_sprint_m
+tag @s remove ca.override_sprint_o
+
+tag @s remove ca.override_sneak_h
+tag @s remove ca.override_sneak_b
+tag @s remove ca.override_sneak_l
+tag @s remove ca.override_sneak_f
+tag @s remove ca.override_sneak_m
+tag @s remove ca.override_sneak_o
+
 tag @s remove ca.si_head
 tag @s remove ca.si_body
 tag @s remove ca.si_legs
@@ -82,6 +103,27 @@ execute if data storage cartographer_custom_statuses:player_equip body.tag.Overr
 execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideRanged run tag @s add ca.override_ranged_l
 execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideRanged run tag @s add ca.override_ranged_f
 execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideRanged run tag @s add ca.override_ranged_o
+
+execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideCrit run tag @s add ca.override_crit_h
+execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideCrit run tag @s add ca.override_crit_b
+execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideCrit run tag @s add ca.override_crit_l
+execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideCrit run tag @s add ca.override_crit_f
+execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideCrit run tag @s add ca.override_crit_o
+execute if data storage cartographer_custom_statuses:player_equip main.tag.OverrideCrit run tag @s add ca.override_crit_m
+
+execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideSneak run tag @s add ca.override_sneak_h
+execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideSneak run tag @s add ca.override_sneak_b
+execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideSneak run tag @s add ca.override_sneak_l
+execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideSneak run tag @s add ca.override_sneak_f
+execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideSneak run tag @s add ca.override_sneak_o
+execute if data storage cartographer_custom_statuses:player_equip main.tag.OverrideSneak run tag @s add ca.override_sneak_m
+
+execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideSprint run tag @s add ca.override_sprint_h
+execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideSprint run tag @s add ca.override_sprint_b
+execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideSprint run tag @s add ca.override_sprint_l
+execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideSprint run tag @s add ca.override_sprint_f
+execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideSprint run tag @s add ca.override_sprint_o
+execute if data storage cartographer_custom_statuses:player_equip main.tag.OverrideSprint run tag @s add ca.override_sprint_m
 
 
 execute if predicate cartographer_core:inventory/hold_armor_mainhand unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee
