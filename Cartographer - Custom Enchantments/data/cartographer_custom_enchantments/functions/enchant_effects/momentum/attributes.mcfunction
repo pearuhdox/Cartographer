@@ -15,16 +15,16 @@ execute if score @s ca.momentum_charge matches 1200..1599 run scoreboard players
 execute if score @s ca.momentum_charge matches 1600..1999 run scoreboard players set @s ca.momentum_tier 4
 execute if score @s ca.momentum_charge matches 2000.. run scoreboard players set @s ca.momentum_tier 5
 
-execute if score @s ca.momentum_tier matches 1 if score $momentum_past_tier ca.ench_var matches 0 run playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.25 1.6
-execute if score @s ca.momentum_tier matches 2 if score $momentum_past_tier ca.ench_var matches 1 run playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.25 1.7
-execute if score @s ca.momentum_tier matches 3 if score $momentum_past_tier ca.ench_var matches 2 run playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.25 1.8
-execute if score @s ca.momentum_tier matches 4 if score $momentum_past_tier ca.ench_var matches 3 run playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.25 1.9
-execute if score @s ca.momentum_tier matches 5.. if score $momentum_past_tier ca.ench_var matches 4 run playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.8 2
+execute if score @s ca.momentum_tier matches 1 if score $momentum_past_tier ca.ench_var matches 0 run playsound minecraft:entity.wither.shoot player @s ~ ~ ~ 0.25 1.6
+execute if score @s ca.momentum_tier matches 2 if score $momentum_past_tier ca.ench_var matches 1 run playsound minecraft:entity.wither.shoot player @s ~ ~ ~ 0.25 1.7
+execute if score @s ca.momentum_tier matches 3 if score $momentum_past_tier ca.ench_var matches 2 run playsound minecraft:entity.wither.shoot player @s ~ ~ ~ 0.25 1.8
+execute if score @s ca.momentum_tier matches 4 if score $momentum_past_tier ca.ench_var matches 3 run playsound minecraft:entity.wither.shoot player @s ~ ~ ~ 0.25 1.9
+execute if score @s ca.momentum_tier matches 5.. if score $momentum_past_tier ca.ench_var matches 4 run playsound minecraft:entity.wither.shoot player @s ~ ~ ~ 0.8 2
 
-execute if score @s ca.momentum_tier matches 1 if predicate cartographer_custom_enchantments:is_sprinting run playsound minecraft:entity.horse.breathe player @a ~ ~ ~ 0.15 1
-execute if score @s ca.momentum_tier matches 2 if predicate cartographer_custom_enchantments:is_sprinting run playsound minecraft:entity.horse.breathe player @a ~ ~ ~ 0.25 1
-execute if score @s ca.momentum_tier matches 3 if predicate cartographer_custom_enchantments:is_sprinting run playsound minecraft:entity.horse.breathe player @a ~ ~ ~ 0.35 1
-execute if score @s ca.momentum_tier matches 4 if predicate cartographer_custom_enchantments:is_sprinting run playsound minecraft:entity.horse.breathe player @a ~ ~ ~ 0.45 1
+execute if score @s ca.momentum_tier matches 1 if predicate cartographer_custom_enchantments:is_sprinting run playsound minecraft:entity.horse.breathe player @s ~ ~ ~ 0.15 1
+execute if score @s ca.momentum_tier matches 2 if predicate cartographer_custom_enchantments:is_sprinting run playsound minecraft:entity.horse.breathe player @s ~ ~ ~ 0.25 1
+execute if score @s ca.momentum_tier matches 3 if predicate cartographer_custom_enchantments:is_sprinting run playsound minecraft:entity.horse.breathe player @s ~ ~ ~ 0.35 1
+execute if score @s ca.momentum_tier matches 4 if predicate cartographer_custom_enchantments:is_sprinting run playsound minecraft:entity.horse.breathe player @s ~ ~ ~ 0.45 1
 
 
 execute if score @s ca.momentum_tier matches 1 run attribute @s minecraft:generic.movement_speed modifier add 31182015-1315-1351-4202-113000000000 "momentum_speed" 0.05 multiply
