@@ -1,9 +1,9 @@
-playsound minecraft:entity.player.attack.crit player @a ~ ~ ~ 1.25 0.5
-playsound minecraft:entity.player.attack.knockback player @a ~ ~ ~ 1.25 0.5
+playsound minecraft:entity.player.attack.crit player @a[distance=..12] ~ ~ ~ 1.25 0.5
+playsound minecraft:entity.player.attack.knockback player @a[distance=..12] ~ ~ ~ 1.25 0.5
 
-playsound minecraft:block.netherite_block.break player @a ~ ~ ~ 2 0.5
-playsound minecraft:block.netherite_block.break player @a ~ ~ ~ 2 0.5
-playsound minecraft:block.netherite_block.break player @a ~ ~ ~ 2 0.5
+playsound minecraft:block.netherite_block.break player @a[distance=..12] ~ ~ ~ 2 0.5
+playsound minecraft:block.netherite_block.break player @a[distance=..12] ~ ~ ~ 2 0.5
+playsound minecraft:block.netherite_block.break player @a[distance=..12] ~ ~ ~ 2 0.5
 
 execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^2 0 0 0 0 1 force
 execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^2 0 0 0 0 1 force
