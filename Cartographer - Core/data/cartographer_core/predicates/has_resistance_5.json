@@ -1,0 +1,15 @@
+{
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+	  "effects": {
+		"minecraft:resistance": {
+		  "amplifier": {
+			"min": 4,
+			"max": 127
+		  }
+		}
+	  }
+	}
+  }
+  
