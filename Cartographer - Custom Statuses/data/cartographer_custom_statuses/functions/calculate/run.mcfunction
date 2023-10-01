@@ -75,6 +75,10 @@ tag @s remove ca.no_status_melee
 scoreboard players set $no_melee ca.status_var 0
 scoreboard players set $no_offhand ca.status_var 0
 
+scoreboard players set $do_ae ca.status_var 0
+scoreboard players set $do_si ca.status_var 0
+
+
 execute if data storage cartographer_custom_statuses:player_equip head.tag.StatusInflict run tag @s add ca.si_head
 execute if data storage cartographer_custom_statuses:player_equip body.tag.StatusInflict run tag @s add ca.si_body
 execute if data storage cartographer_custom_statuses:player_equip legs.tag.StatusInflict run tag @s add ca.si_legs

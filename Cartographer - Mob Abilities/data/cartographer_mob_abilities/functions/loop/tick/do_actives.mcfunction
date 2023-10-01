@@ -1,4 +1,5 @@
 execute if entity @s[tag=ca.laser,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..32] run function cartographer_mob_abilities:animations/laser
+
 execute if entity @s[tag=ca.barrage,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:animations/barrage
 execute if entity @s[tag=ca.sniper_shot,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:animations/sniper_shot
 execute if entity @s[tag=ca.volley,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..24] run function cartographer_mob_abilities:animations/volley
