@@ -174,11 +174,11 @@ tag @s remove ca.rust_9
 
 tag @s remove has_passive_ench
 
-tag @s remove check_head
-tag @s remove check_body
-tag @s remove check_legs
-tag @s remove check_feet
-tag @s remove check_offh
+tag @s remove ca.check_head
+tag @s remove ca.check_body
+tag @s remove ca.check_legs
+tag @s remove ca.check_feet
+tag @s remove ca.check_offh
 
 tag @s remove ca.ce_thorns_main
 tag @s remove ca.ce_thorns_offh
