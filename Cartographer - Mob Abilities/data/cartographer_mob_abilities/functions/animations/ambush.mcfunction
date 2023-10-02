@@ -2,10 +2,6 @@ scoreboard players add @s ability_charge 1
 
 execute unless score $gl_ab_ani ca.gamerule matches 1 run function cartographer_mob_abilities:animations/ambush/charge_bar
 
-execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animation_charge_bars/create_plate
-
-execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animation_charge_bars/create_plate
-
 execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
 execute if score @s ability_charge matches 1 at @p[distance=..25] run playsound minecraft:entity.witch.ambient hostile @a[distance=..16] ~ ~ ~ 3 0.5

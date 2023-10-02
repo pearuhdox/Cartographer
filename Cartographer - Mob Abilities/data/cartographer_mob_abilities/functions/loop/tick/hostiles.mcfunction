@@ -127,3 +127,6 @@ execute if entity @s[tag=ca.has_death,tag=!ca.has_death_setup] run function cart
 
 #Run Despawning Tag
 execute as @s[tag=ca.can_despawn] at @s run function cartographer_mob_abilities:loop/tick/spawner_leash/entity
+
+#Popup Timer
+execute if score @s ca.notice_time matches 1.. run scoreboard players remove @s ca.notice_time 1

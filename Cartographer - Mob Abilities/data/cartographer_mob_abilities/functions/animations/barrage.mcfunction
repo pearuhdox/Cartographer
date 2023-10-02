@@ -1,6 +1,7 @@
 scoreboard players add @s ability_charge 1
 
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animation_charge_bars/create_plate
+execute if score @s ability_charge matches 1 if entity @s[tag=ca.animation_text,type=text_display] run tag @s add ca.charge_bar
 
 execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:ability_traits/trait_warnings/mob
 

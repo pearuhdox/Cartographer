@@ -14,6 +14,8 @@ scoreboard objectives add storms dummy
 scoreboard objectives add storm_height dummy
 scoreboard objectives add recast_count dummy
 
+scoreboard objectives add ca.notice_time dummy
+
 scoreboard objectives add devious_time dummy
 scoreboard objectives add abs_health dummy
 
