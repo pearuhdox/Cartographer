@@ -20,6 +20,8 @@ execute if entity @s[type=#cartographer_core:shape_small] run particle minecraft
 execute if entity @s[type=#cartographer_core:shape_big] run particle minecraft:wax_off ~ ~1 ~ 1 0.4 1 0.1 15 normal
 
 scoreboard players remove @s ca.effect_shock 1
-execute if score @s ca.effect_shock matches 0 run tag @s remove ca.shocked_warmup
+execute if score @s ca.effect_shock matches 0 run function cartographer_custom_statuses:effects/shocked/clean_effects
+
+execute if score @s ca.effect_shock matches 1.. run function cartographer_custom_statuses:popup/shock
 
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" affected by Shocked.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
