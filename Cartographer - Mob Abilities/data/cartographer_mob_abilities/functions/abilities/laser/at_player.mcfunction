@@ -5,7 +5,7 @@ summon area_effect_cloud ~ ~1 ~ {Particle:"block air",ReapplicationDelay:0,Radiu
 
 scoreboard players operation @s ca.damage_queue = $damage ca.ability_dmg
 execute if score $laser_blocked ca.var matches 1.. run scoreboard players operation @s ca.damage_queue /= $4 ca.CONSTANT
-execute if score $laser_resist ca.mob_var matches 1.. run scoreboard players @s ca.damage_queue 0
+execute if score $laser_resist ca.mob_var matches 1.. run scoreboard players set @s ca.damage_queue 0
 
 function cartographer_mob_abilities:abilities/laser/laser_damage
 

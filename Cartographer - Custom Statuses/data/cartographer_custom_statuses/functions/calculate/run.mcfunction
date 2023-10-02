@@ -13,10 +13,18 @@ data modify storage cartographer_custom_statuses:player_equip body set from stor
 data modify storage cartographer_custom_statuses:player_equip legs set from storage cartographer_custom_statuses:player_equip inv[{Slot:101b}]
 data modify storage cartographer_custom_statuses:player_equip feet set from storage cartographer_custom_statuses:player_equip inv[{Slot:100b}]
 data modify storage cartographer_custom_statuses:player_equip offh set from storage cartographer_custom_statuses:player_equip inv[{Slot:-106b}]
-data modify storage cartographer_custom_statuses:player_equip main set from entity @s SelectedItem
+data modify storage cartographer_custom_statuses:player_equip main set from storage cartographer_core:player_inventory SelectedItem
 
 #Run extra checks added via tag hook here
 #function #minecraft:inventory_calculate/extras
+
+tag @s remove ca.override_melee
+tag @s remove ca.override_ranged
+tag @s remove ca.override_crit
+tag @s remove ca.override_sprint
+tag @s remove ca.override_sneak
+
+
 
 tag @s remove ca.override_melee_h
 tag @s remove ca.override_melee_b
@@ -77,57 +85,87 @@ scoreboard players set $no_offhand ca.status_var 0
 
 scoreboard players set $do_ae ca.status_var 0
 scoreboard players set $do_si ca.status_var 0
+scoreboard players set $temp ca.status_var 0
+
+scoreboard players set $do_effects ca.status_var 0
 
 
-execute if data storage cartographer_custom_statuses:player_equip head.tag.StatusInflict run tag @s add ca.si_head
-execute if data storage cartographer_custom_statuses:player_equip body.tag.StatusInflict run tag @s add ca.si_body
-execute if data storage cartographer_custom_statuses:player_equip legs.tag.StatusInflict run tag @s add ca.si_legs
-execute if data storage cartographer_custom_statuses:player_equip feet.tag.StatusInflict run tag @s add ca.si_feet
-execute if data storage cartographer_custom_statuses:player_equip offh.tag.StatusInflict run tag @s add ca.si_offh
-execute if data storage cartographer_custom_statuses:player_equip main.tag.StatusInflict run tag @s add ca.si_main
+scoreboard players set $do_override_h ca.status_var 0
+scoreboard players set $do_override_b ca.status_var 0
+scoreboard players set $do_override_l ca.status_var 0
+scoreboard players set $do_override_f ca.status_var 0
+scoreboard players set $do_override_o ca.status_var 0
+scoreboard players set $do_override_m ca.status_var 0
 
-execute if data storage cartographer_custom_statuses:player_equip head.tag.ApplyEffects run tag @s add ca.ae_head
-execute if data storage cartographer_custom_statuses:player_equip body.tag.ApplyEffects run tag @s add ca.ae_body
-execute if data storage cartographer_custom_statuses:player_equip legs.tag.ApplyEffects run tag @s add ca.ae_legs
-execute if data storage cartographer_custom_statuses:player_equip feet.tag.ApplyEffects run tag @s add ca.ae_feet
-execute if data storage cartographer_custom_statuses:player_equip offh.tag.ApplyEffects run tag @s add ca.ae_offh
-execute if data storage cartographer_custom_statuses:player_equip main.tag.ApplyEffects run tag @s add ca.ae_main
 
-execute if data storage cartographer_custom_statuses:player_equip main.tag.AllowMeleeInflict run tag @s add ca.allow_melee_inflict
-execute if data storage cartographer_custom_statuses:player_equip offh.tag.AllowOffhandInflict run tag @s add ca.allow_offhand_inflict
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip head.tag.StatusInflict run tag @s add ca.si_head
+scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
-execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideMelee run tag @s add ca.override_melee_h
-execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideMelee run tag @s add ca.override_melee_b
-execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideMelee run tag @s add ca.override_melee_l
-execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideMelee run tag @s add ca.override_melee_f
-execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideMelee run tag @s add ca.override_melee_o
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip body.tag.StatusInflict run tag @s add ca.si_body
+scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
-execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideRanged run tag @s add ca.override_ranged_h
-execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideRanged run tag @s add ca.override_ranged_b
-execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideRanged run tag @s add ca.override_ranged_l
-execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideRanged run tag @s add ca.override_ranged_f
-execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideRanged run tag @s add ca.override_ranged_o
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip legs.tag.StatusInflict run tag @s add ca.si_legs
+scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
-execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideCrit run tag @s add ca.override_crit_h
-execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideCrit run tag @s add ca.override_crit_b
-execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideCrit run tag @s add ca.override_crit_l
-execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideCrit run tag @s add ca.override_crit_f
-execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideCrit run tag @s add ca.override_crit_o
-execute if data storage cartographer_custom_statuses:player_equip main.tag.OverrideCrit run tag @s add ca.override_crit_m
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip feet.tag.StatusInflict run tag @s add ca.si_feet
+scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
-execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideSneak run tag @s add ca.override_sneak_h
-execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideSneak run tag @s add ca.override_sneak_b
-execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideSneak run tag @s add ca.override_sneak_l
-execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideSneak run tag @s add ca.override_sneak_f
-execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideSneak run tag @s add ca.override_sneak_o
-execute if data storage cartographer_custom_statuses:player_equip main.tag.OverrideSneak run tag @s add ca.override_sneak_m
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.StatusInflict run tag @s add ca.si_offh
+scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
-execute if data storage cartographer_custom_statuses:player_equip head.tag.OverrideSprint run tag @s add ca.override_sprint_h
-execute if data storage cartographer_custom_statuses:player_equip body.tag.OverrideSprint run tag @s add ca.override_sprint_b
-execute if data storage cartographer_custom_statuses:player_equip legs.tag.OverrideSprint run tag @s add ca.override_sprint_l
-execute if data storage cartographer_custom_statuses:player_equip feet.tag.OverrideSprint run tag @s add ca.override_sprint_f
-execute if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideSprint run tag @s add ca.override_sprint_o
-execute if data storage cartographer_custom_statuses:player_equip main.tag.OverrideSprint run tag @s add ca.override_sprint_m
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.StatusInflict run tag @s add ca.si_main
+scoreboard players operation $do_si ca.status_var += $temp ca.status_var
+
+
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip head.tag.ApplyEffects run tag @s add ca.ae_head
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip body.tag.ApplyEffects run tag @s add ca.ae_body
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip legs.tag.ApplyEffects run tag @s add ca.ae_legs
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip feet.tag.ApplyEffects run tag @s add ca.ae_feet
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.ApplyEffects run tag @s add ca.ae_offh
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.ApplyEffects run tag @s add ca.ae_main
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+
+scoreboard players operation $do_effects ca.status_var += $do_ae ca.status_var
+scoreboard players operation $do_effects ca.status_var += $do_si ca.status_var
+
+execute store result score $do_override_h ca.status_var run data get storage cartographer_custom_statuses:player_equip head.tag.HasOverride
+execute store result score $do_override_b ca.status_var run data get storage cartographer_custom_statuses:player_equip body.tag.HasOverride
+execute store result score $do_override_l ca.status_var run data get storage cartographer_custom_statuses:player_equip legs.tag.HasOverride
+execute store result score $do_override_f ca.status_var run data get storage cartographer_custom_statuses:player_equip feet.tag.HasOverride
+execute store result score $do_override_o ca.status_var run data get storage cartographer_custom_statuses:player_equip offh.tag.HasOverride
+execute store result score $do_override_m ca.status_var run data get storage cartographer_custom_statuses:player_equip main.tag.HasOverride
+
+
+execute if score $do_override_h ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/head
+execute if score $do_override_b ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/body
+execute if score $do_override_l ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/legs
+execute if score $do_override_f ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/feet
+execute if score $do_override_o ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/offhand
+execute if score $do_override_m ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/mainhand
 
 
 execute if predicate cartographer_core:inventory/hold_armor_mainhand unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee
