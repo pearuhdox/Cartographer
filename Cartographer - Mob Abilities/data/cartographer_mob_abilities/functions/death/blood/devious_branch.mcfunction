@@ -6,4 +6,5 @@ playsound minecraft:entity.zombie_villager.cure hostile @a[distance=..16] ~ ~ ~ 
 
 particle minecraft:block minecraft:magenta_wool ~ ~1 ~ 0.5 0.5 0.5 1 25 normal
 
-#function cartographer_mob_abilities:death/blood/heal
+execute unless score @s ca.notice_time matches 1.. run function cartographer_mob_abilities:animation_charge_bars/create_plate
+function cartographer_mob_abilities:animation_charge_bars/blood/devious

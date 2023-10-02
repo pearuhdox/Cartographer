@@ -1,7 +1,5 @@
-scoreboard players add @s[tag=!sacrificial_blood] ca.sacrifice_stacks 1
-scoreboard players set @s[tag=!sacrificial_blood,scores={ca.sacrifice_stacks=11..}] ca.sacrifice_stacks 10
-
-scoreboard players add @s[tag=sacrificial_blood] ca.brutal_stacks 1
+scoreboard players add @s ca.sacrifice_stacks 1
+scoreboard players set @s[scores={ca.sacrifice_stacks=11..}] ca.sacrifice_stacks 10
 
 particle minecraft:dust 0.941 0.753 0.353 1 ~ ~1 ~ 0.5 0.5 0.5 0 15 normal
 
@@ -12,4 +10,5 @@ playsound minecraft:entity.zombie_villager.cure hostile @a[distance=..16] ~ ~ ~ 
 
 particle minecraft:block minecraft:yellow_wool ~ ~1 ~ 0.5 0.5 0.5 1 25 normal
 
-#function cartographer_mob_abilities:death/blood/heal
+execute unless score @s ca.notice_time matches 1.. run function cartographer_mob_abilities:animation_charge_bars/create_plate
+function cartographer_mob_abilities:animation_charge_bars/blood/sacrificial
