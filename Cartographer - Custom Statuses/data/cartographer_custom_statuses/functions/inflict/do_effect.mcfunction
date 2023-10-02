@@ -1,7 +1,15 @@
 scoreboard players operation @s ca.effect_bleed += $inflict ca.effect_bleed
+execute if score @s ca.effect_bleed matches 1.. run function cartographer_custom_statuses:popup/bleed
+execute if score @s ca.effect_bleed matches 1.. if entity @s[tag=!ca.bleeding_warmup] run function cartographer_custom_statuses:effects/apply/vfx/bleed
 
 scoreboard players operation @s ca.effect_shock > $inflict ca.effect_shock
+execute if score @s ca.effect_shock matches 1.. run function cartographer_custom_statuses:popup/shock
+execute if score @s ca.effect_shock matches 1.. if entity @s[tag=!ca.shocked_warmup] run function cartographer_custom_statuses:effects/apply/vfx/shocked
+
 scoreboard players operation @s ca.effect_infect > $inflict ca.effect_infect
+execute if score @s ca.effect_infect matches 1.. run function cartographer_custom_statuses:popup/infect
+execute if score @s ca.effect_infect matches 1.. if entity @s[tag=!ca.infect_warmup] run function cartographer_custom_statuses:effects/apply/vfx/infect
+
 scoreboard players operation @s ca.effect_cloak > $inflict ca.effect_cloak
 
 scoreboard players operation @s ca.effect_exposed_level > $inflict ca.effect_exposed_level

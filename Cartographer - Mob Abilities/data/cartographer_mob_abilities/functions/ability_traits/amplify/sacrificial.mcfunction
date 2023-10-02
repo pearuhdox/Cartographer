@@ -5,5 +5,5 @@ execute if score @s ca.sacrifice_stacks matches 11.. run scoreboard players set 
 
 particle minecraft:dust 0.941 0.753 0.353 1 ~ ~1 ~ 0.5 0.5 0.5 0 15 normal
 
-execute unless score @s ca.notice_time matches 1.. run function cartographer_mob_abilities:animation_charge_bars/create_plate
+execute unless score @s ca.notice_time matches 1.. run function cartographer_core:helper/entity_popups/create_plate
 function cartographer_mob_abilities:animation_charge_bars/blood/sacrificial

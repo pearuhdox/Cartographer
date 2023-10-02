@@ -17,6 +17,7 @@
     "minecraft:wither_skeleton",
     "minecraft:phantom",
 	"minecraft:wither",
-	"minecraft:iron_golem"
+	"minecraft:iron_golem",
+	"minecraft:creeper"
   ]
 }

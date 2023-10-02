@@ -11,6 +11,9 @@
 scoreboard objectives add ca.enabler dummy
 scoreboard objectives add ca.installed dummy
 
+scoreboard objectives add ca.registry dummy
+scoreboard objectives add ca.notice_time dummy
+
 scoreboard players set $charon ca.installed 0
 scoreboard players set $custom_durability ca.installed 0
 scoreboard players set $custom_enchantments ca.installed 0

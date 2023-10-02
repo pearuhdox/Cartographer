@@ -1,1 +1,0 @@
-execute on passengers if entity @s[type=text_display,tag=ca.animation_text] run kill @s

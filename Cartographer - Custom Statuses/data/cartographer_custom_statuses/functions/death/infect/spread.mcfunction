@@ -8,7 +8,7 @@ scoreboard players add $infect_pass_time ca.var 2
 scoreboard players set $did_spread_infect ca.var 0
 
 #Attempt to Spread Decay
-execute as @e[type=#bb:hostile,distance=..6,limit=2,sort=random,tag=!ca.infected] at @s run function cartographer_custom_statuses:effects/infect/do_spread
+execute as @e[type=#bb:hostile,distance=..6,limit=2,sort=random,tag=!ca.infect_warmup] at @s run function cartographer_custom_statuses:effects/infect/do_spread
 
 execute unless score $did_spread_infect ca.var matches 1.. run function cartographer_custom_statuses:effects/infect/pool
 execute if score $did_spread_infect ca.var matches 1.. run particle minecraft:witch ~ ~1 ~ 0.15 0.4 0.15 0 10 normal

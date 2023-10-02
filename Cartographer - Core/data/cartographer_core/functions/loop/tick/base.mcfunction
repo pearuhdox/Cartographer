@@ -95,3 +95,6 @@ execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core
 
 #Specifically reset logout score here as the last possible thing to ever be run
 scoreboard players set @a ca.logout 0
+
+#Run UUID Ticking
+function cartographer_core:loop/tick/uuid_tick

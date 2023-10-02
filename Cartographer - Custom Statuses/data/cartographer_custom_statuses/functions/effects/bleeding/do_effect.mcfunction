@@ -17,5 +17,6 @@ execute if entity @s[type=#cartographer_core:shape_big] run particle minecraft:d
 scoreboard players operation @s ca.effect_bleed /= $2 ca.CONSTANT
 execute if score @s ca.effect_bleed matches 0 run function cartographer_custom_statuses:effects/bleeding/clean_effects
 
+execute if score @s ca.effect_bleed matches 1.. run function cartographer_custom_statuses:popup/bleed
 
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" affected by Bleeding.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]
