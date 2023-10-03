@@ -28,6 +28,7 @@ tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 function cartographer_charon:options/header
 function cartographer_custom_enchantments:options/header
 function cartographer_custom_statuses:options/header
+function cartographer_loot_additions:options/header
 function cartographer_loot_table_tweaks:options/header
 function cartographer_mob_abilities:options/header
 function cartographer_mimics:options/header

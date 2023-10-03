@@ -1,0 +1,1 @@
+tellraw @s [{"text":"[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Loot Additions","color":"#FFD712","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"View settings for Loot Additions.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_loot_additions:options/main"}}]

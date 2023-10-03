@@ -54,6 +54,10 @@ setblock 4206900 16 4206900 air replace
 summon marker 4206900 0 4206900 {UUID:[I;823664661,303371552,-2062286848,35148049]}
 
 
+#Gamerules
+execute unless score $gl_budget_models ca.gamerule matches 0.. run scoreboard players set $gl_budget_models ca.gamerule 0
+
+
 #Setup LoE data space
 function cartographer_loot_additions:load/integration/active/clear
 
