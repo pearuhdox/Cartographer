@@ -1,6 +1,8 @@
 tag @s add ca.checked
 scoreboard players set @s ca.morph_time 85
 
+function cartographer_custom_statuses:popup/morph
+
 scoreboard players operation @s ca.morph_id = $morph_id ca.morph_id
 
 data modify entity @s Health set from storage cartographer_custom_statuses:morph data.Health
