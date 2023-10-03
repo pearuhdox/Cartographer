@@ -401,9 +401,14 @@ scoreboard objectives add ca.dummy dummy
 scoreboard objectives add ca.var dummy
 scoreboard objectives add ca.ench_var dummy
 
-scoreboard objectives add ca.adren_time dummy
-scoreboard objectives add ca.frenz_time dummy
-scoreboard objectives add ca.energ_time dummy
+scoreboard objectives add ca.adrenaline_dur dummy
+scoreboard objectives add ca.frenzy_dur dummy
+scoreboard objectives add ca.energetic_dur dummy
+
+scoreboard objectives add ca.adrenaline_lvl dummy
+scoreboard objectives add ca.frenzy_lvl dummy
+scoreboard objectives add ca.energetic_lvl dummy
+
 
 scoreboard objectives add ca.cur_dmg dummy
 scoreboard objectives add ca.max_dmg dummy
