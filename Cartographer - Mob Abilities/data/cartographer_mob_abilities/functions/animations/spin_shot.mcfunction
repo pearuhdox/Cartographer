@@ -73,4 +73,9 @@ execute if score @s[tag=ca.has_kited,tag=!ca.acro_kite_elytra] ability_charge ma
 
 function cartographer_mob_abilities:loop/tick/animation
 
-execute if score @s ability_charge matches 55.. run function cartographer_mob_abilities:abilities/spin_shot
+execute if score @s ability_charge matches 45 if entity @s[tag=ca.rotate_cw] run data modify entity @s NoAI set value 1b
+execute if score @s ability_charge matches 45 if entity @s[tag=ca.rotate_ccw] run data modify entity @s NoAI set value 1b
+
+execute unless entity @s[tag=ca.rotate_cw] unless entity @s[tag=ca.rotate_ccw] if score @s ability_charge matches 55.. run function cartographer_mob_abilities:abilities/spin_shot
+execute if entity @s[tag=ca.rotate_cw] if score @s ability_charge matches 55.. positioned ~ ~0.7 ~ run function cartographer_mob_abilities:abilities/spin_shot/rotate_cw
+execute if entity @s[tag=ca.rotate_ccw] if score @s ability_charge matches 55.. positioned ~ ~0.7 ~ run function cartographer_mob_abilities:abilities/spin_shot/rotate_ccw

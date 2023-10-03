@@ -4,11 +4,11 @@ function cartographer_mob_abilities:ability_traits/cooldown_traits
 
 scoreboard players set @s ability_charge 0
 
-execute unless entity @s[tag=ca.rotate_cw] unless entity @s[tag=ca.rotate_ccw] run particle minecraft:poof ~ ~0.2 ~ 0.3 0.3 0.3 0.075 15 normal @a
-execute unless entity @s[tag=ca.rotate_cw] unless entity @s[tag=ca.rotate_ccw] anchored eyes run particle minecraft:cloud ^ ^ ^0.5 0.3 0.3 0.3 0.075 5 normal @a
+particle minecraft:poof ~ ~0.2 ~ 0.3 0.3 0.3 0.075 15 normal @a
+execute anchored eyes run particle minecraft:cloud ^ ^ ^0.5 0.3 0.3 0.3 0.075 5 normal @a
 
-execute unless entity @s[tag=ca.rotate_cw] unless entity @s[tag=ca.rotate_ccw] run playsound minecraft:item.trident.throw hostile @a[distance=..20] ~ ~ ~ 2 0.75
-execute unless entity @s[tag=ca.rotate_cw] unless entity @s[tag=ca.rotate_ccw] run playsound minecraft:item.crossbow.shoot hostile @a[distance=..20] ~ ~ ~ 2 0.75
+playsound minecraft:item.trident.throw hostile @a[distance=..20] ~ ~ ~ 2 0.75
+playsound minecraft:item.crossbow.shoot hostile @a[distance=..20] ~ ~ ~ 2 0.75
 
 execute unless entity @s[tag=ca.rotate_cw] unless entity @s[tag=ca.rotate_ccw] positioned ~ ~0.7 ~ run function cartographer_mob_abilities:abilities/spin_shot/branch
 

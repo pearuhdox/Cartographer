@@ -145,6 +145,7 @@ execute if score @s ca.lexica_trig matches 327 run function cartographer_mob_abi
 execute if score @s ca.lexica_trig matches 328 run function cartographer_mob_abilities:lexica_calls/pages/category/active/volley
 execute if score @s ca.lexica_trig matches 329 run function cartographer_mob_abilities:lexica_calls/pages/category/active/summoner
 execute if score @s ca.lexica_trig matches 3454 run function cartographer_mob_abilities:lexica_calls/pages/category/active/infuser
+execute if score @s ca.lexica_trig matches 3455 run function cartographer_mob_abilities:lexica_calls/pages/category/active/spin_shot
 
 execute if score @s ca.lexica_trig matches 330 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/bloodthirst
 execute if score @s ca.lexica_trig matches 334 run function cartographer_mob_abilities:lexica_calls/pages/category/morbid/corpse_crawler

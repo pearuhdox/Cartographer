@@ -4,18 +4,18 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"ca.volley\"]}"
+                    "nbt": "{Tags:[\"ca.spin_shot\"]}"
                 }
             }
         }
     },
     "display": {
         "title": {
-            "text": "Volley                   ",
+            "text": "Spin Shot                ",
             "color": "white"
         },
         "description": {
-            "text": "The enemy charges up and throws a cone of projectiles at the player.",
+            "text": "The enemy charges up and fires 16 projectiles around it in a circle.",
             "color": "white"
         },
         "icon": {
@@ -27,7 +27,7 @@
         "hidden": true
     },
     "rewards": {
-        "function": "cartographer_mob_abilities:descriptions/active/volley"
+        "function": "cartographer_mob_abilities:descriptions/active/spin_shot"
     },
-    "parent": "cartographer_mob_abilities:active/sweep"
+    "parent": "cartographer_mob_abilities:active/sniper_shot"
 }
