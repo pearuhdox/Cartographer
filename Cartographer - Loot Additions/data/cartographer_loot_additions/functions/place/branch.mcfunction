@@ -4,6 +4,8 @@ execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoMultichoice:1b}
 
 execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoSoulChest:1b}}}] at @s run function cartographer_loot_additions:place/soul_chest
 
+execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoHungryChest:1b}}}] at @s run function cartographer_loot_additions:place/hungry_chest
+
 execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoLockedChest:1b}}}] at @s run function cartographer_loot_additions:place/locked_chest
 
 execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoBuddingPedestal:1b}}}] at @s run function cartographer_loot_additions:place/budding

@@ -21,13 +21,9 @@ execute as @s[type=creeper,tag=ca.recoil_movement,tag=ca.needs_move] at @s run f
 #Cleanse the Skip Smouldering Tag
 tag @s remove skip_cauterize
 
-#Remove 1 from Cauterize's previous burn time.
-execute if score @s ca.cau_prv_time matches 0.. run scoreboard players remove @s ca.cau_prv_time 1
-
-execute unless score @s ca.ricochet_cooldown matches 0.. run scoreboard players set @s ca.ricochet_cooldown 0
-execute if score @s ca.ricochet_cooldown matches 1.. run scoreboard players remove @s ca.ricochet_cooldown 1
-
-execute if score @s ca.starfall_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/starfall_time_mob
+#Do Cauterize Checks
+execute if score @s ca.cauterize_time matches 1 run scoreboard players set @s ca.cauterize_time 0
+execute if predicate cartographer_custom_enchantments:hex_eater/is_on_fire if entity @a[distance=..40,scores={ca.cauterize=1..}] run function cartographer_custom_enchantments:enchant_effects/cauterize/track_fire
 
 #Remove Deadeye Tag
 tag @s remove deadeye_marked

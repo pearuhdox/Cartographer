@@ -30,6 +30,10 @@ scoreboard objectives add ca.locked_stage dummy
 scoreboard objectives add ca.soul_total dummy
 scoreboard objectives add ca.soul_count dummy
 
+scoreboard objectives add ca.hunger_total dummy
+scoreboard objectives add ca.hunger_count dummy
+scoreboard objectives add ca.hunger_time dummy
+
 #Kill Score
 scoreboard objectives remove ca.get_soul
 scoreboard objectives add ca.get_soul dummy

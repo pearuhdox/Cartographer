@@ -261,8 +261,7 @@ scoreboard objectives add ca.ov_tier dummy
 scoreboard objectives add ca.ov_dmg dummy
 
 scoreboard objectives add ca.cauter_dmg dummy
-scoreboard objectives add ca.cau_burn_time dummy
-scoreboard objectives add ca.cau_prv_time dummy
+scoreboard objectives add ca.cauterize_time dummy
 
 scoreboard objectives add ca.brittle_time dummy
 scoreboard objectives add ca.brittle_hlth dummy
