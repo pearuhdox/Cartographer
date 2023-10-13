@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "Extingush mobs you attack and make them Brittle.",
+              "text": "Extinguishes mobs you attack. The mob then takes",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,16 +24,7 @@
               "obfuscated": false
             },
             {
-                "text": "Brittle mobs take increased damage and knockback.",
-                "color": "#FFF4D9",
-                "bold": false,
-                "italic": false,
-                "underlined": false,
-                "strikethrough": false,
-                "obfuscated": false
-              },
-              {
-                "text": "Taking damage consumes the Brittle effect.",
+                "text": "a burst of damage based on the remaining fire time.",
                 "color": "#FFF4D9",
                 "bold": false,
                 "italic": false,
