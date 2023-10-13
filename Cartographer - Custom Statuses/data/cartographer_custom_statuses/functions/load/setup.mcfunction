@@ -36,6 +36,9 @@ scoreboard objectives add ca.effect_exposed_duration dummy
 scoreboard objectives add ca.exposed_cdl dummy
 scoreboard objectives add ca.exposed_hp dummy
 
+scoreboard objectives add ca.effect_oiled_level dummy
+scoreboard objectives add ca.effect_oiled_duration dummy
+
 scoreboard objectives add ca.decay_min dummy
 scoreboard objectives add ca.decay_max dummy
 

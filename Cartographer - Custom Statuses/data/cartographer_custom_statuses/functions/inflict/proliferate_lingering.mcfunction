@@ -6,6 +6,13 @@ execute store result score $inflict ca.effect_infect run data get storage cartog
 
 execute store result score $inflict ca.effect_cloak run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"cloaking"}].Duration
 
+execute store result score $inflict ca.effect_exposed_level run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"expose"}].Amplifier
+execute store result score $inflict ca.effect_exposed_duration run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"expose"}].Duration
+
+execute store result score $inflict ca.effect_oiled_level run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"oiled"}].Amplifier
+execute store result score $inflict ca.effect_oiled_duration run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"oiled"}].Duration
+
+
 execute store result score $inflict ca.damage_queue run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"entropy"}].Amount
 
 execute store result score $fire ca.status_var run data get storage cartographer_custom_statuses:infliction data.Item.tag.CustomStatuses[{Id:"fire"}].Duration

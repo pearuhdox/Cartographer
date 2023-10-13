@@ -263,9 +263,6 @@ scoreboard objectives add ca.ov_dmg dummy
 scoreboard objectives add ca.cauter_dmg dummy
 scoreboard objectives add ca.cauterize_time dummy
 
-scoreboard objectives add ca.brittle_time dummy
-scoreboard objectives add ca.brittle_hlth dummy
-
 scoreboard objectives add ca.recoil_time dummy
 scoreboard objectives add ca.recoil_count dummy
 scoreboard objectives add ca.recoil_mode dummy

@@ -1,5 +1,5 @@
 #Ashen Debuff (Smouldering)
-execute if entity @s[tag=ca.cleanse_fire] run function cartographer_custom_enchantments:enchant_effects/cauterize/brittle
+execute if entity @s[tag=ca.cleanse_fire] run function cartographer_custom_enchantments:enchant_effects/cauterize/cleanse
 
 
 

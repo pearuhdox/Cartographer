@@ -11,6 +11,11 @@ execute if score @s ca.effect_exposed_duration matches 1 run function cartograph
 
 execute if score @s ca.exposed_cdl matches 1.. run scoreboard players remove @s ca.exposed_cdl 1
 
+#Run Oiled
+execute if score @s ca.effect_oiled_duration matches 1.. run function cartographer_custom_statuses:effects/oiled/do
+execute if score @s ca.effect_oiled_duration matches 1 run function cartographer_custom_statuses:effects/oiled/clear
+
+
 #Run Blindness
 execute as @s[predicate=cartographer_custom_statuses:is_blind] at @s run function cartographer_custom_statuses:effects/blindness
 

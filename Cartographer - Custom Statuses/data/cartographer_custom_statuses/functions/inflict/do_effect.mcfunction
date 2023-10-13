@@ -15,6 +15,10 @@ scoreboard players operation @s ca.effect_cloak > $inflict ca.effect_cloak
 scoreboard players operation @s ca.effect_exposed_level > $inflict ca.effect_exposed_level
 scoreboard players operation @s ca.effect_exposed_duration > $inflict ca.effect_exposed_duration
 
+execute if score $inflict ca.effect_oiled_level matches 1.. run function cartographer_custom_statuses:effects/apply/vfx/oiled
+scoreboard players operation @s ca.effect_oiled_level > $inflict ca.effect_oiled_level
+scoreboard players operation @s ca.effect_oiled_duration > $inflict ca.effect_oiled_duration
+
 
 execute if score $fire ca.status_var matches 1.. store result entity @s Fire int 1 run scoreboard players get $fire ca.status_var
 

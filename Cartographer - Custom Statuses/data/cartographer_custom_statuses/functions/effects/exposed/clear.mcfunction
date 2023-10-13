@@ -1,2 +1,2 @@
-scoreboard players set @s ca.exposed_lvl 0
-scoreboard players set @s ca.exposed_dur 0
+scoreboard players set @s ca.effect_exposed_level 0
+scoreboard players set @s ca.effect_exposed_duration 0

@@ -11,6 +11,8 @@ execute if score $possess_chance ca.stat_calc_var matches 1.. run data modify st
 
 execute if score $expose_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:status_inflict data.Effects append value {Id:"expose",Duration:0,Amplifier:0}
 
+execute if score $oiled_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:status_inflict data.Effects append value {Id:"oiled",Duration:0,Amplifier:0}
+
 
 execute if score $bleed ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"bleeding"}].Amount int 1 run scoreboard players get $bleed ca.stat_calc_var
 execute if score $shock ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"shocking"}].Duration int 1 run scoreboard players get $shock ca.stat_calc_var
@@ -26,6 +28,10 @@ execute if score $cloak ca.stat_calc_var matches 1.. store result storage cartog
 
 execute if score $expose_duration ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"expose"}].Duration int 1 run scoreboard players get $expose_duration ca.stat_calc_var
 execute if score $expose_level ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"expose"}].Amplifier int 1 run scoreboard players get $expose_level ca.stat_calc_var
+
+execute if score $oiled_duration ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"oiled"}].Duration int 1 run scoreboard players get $oiled_duration ca.stat_calc_var
+execute if score $oiled_level ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"oiled"}].Amplifier int 1 run scoreboard players get $oiled_level ca.stat_calc_var
+
 
 #Finally, convert over entropy
 scoreboard players operation $entropy ca.player_entropy = @s ca.player_entropy

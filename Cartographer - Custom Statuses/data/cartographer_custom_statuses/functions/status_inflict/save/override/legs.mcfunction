@@ -30,4 +30,10 @@ scoreboard players operation $expose_level ca.stat_calc_var > $temp ca.stat_calc
 execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:status_inflict data.temp[{Id:"expose"}].Duration
 scoreboard players operation $expose_duration ca.stat_calc_var > $temp ca.stat_calc_var
 
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:status_inflict data.temp[{Id:"oiled"}].Amplifier
+scoreboard players operation $oiled_level ca.stat_calc_var > $temp ca.stat_calc_var
+
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:status_inflict data.temp[{Id:"oiled"}].Duration
+scoreboard players operation $oiled_duration ca.stat_calc_var > $temp ca.stat_calc_var
+
 scoreboard players set $status_override ca.status_var 1

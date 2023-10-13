@@ -47,5 +47,5 @@
     "rewards": {
         "function": "cartographer_custom_statuses:descriptions/possess"
     },
-    "parent": "cartographer_custom_statuses:morph"
+    "parent": "cartographer_custom_statuses:oiled"
 }

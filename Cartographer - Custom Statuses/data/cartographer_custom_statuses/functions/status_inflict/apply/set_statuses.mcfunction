@@ -54,3 +54,15 @@ scoreboard players operation @s ca.effect_exposed_duration > $add ca.effect_expo
 
 execute store result score @s ca.effect_exposed_level run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"expose"}].Amplifier
 scoreboard players operation @s ca.effect_exposed_level > $add ca.effect_exposed_level
+
+#Oiled
+execute store result score $chance ca.effect_oiled_duration run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"oiled"}].Chance
+
+execute store result score @s ca.effect_oiled_duration run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"oiled"}].Duration
+scoreboard players operation @s ca.effect_oiled_duration *= $20 ca.CONSTANT
+scoreboard players operation @s ca.effect_oiled_duration > $add ca.effect_oiled_duration
+
+execute store result score @s ca.effect_oiled_level run data get storage cartographer_custom_statuses:status_inflict data.Effects[{Id:"oiled"}].Amplifier
+scoreboard players operation @s ca.effect_oiled_level > $add ca.effect_oiled_level
+
+execute if score @s ca.effect_oiled_duration matches 1.. run function cartographer_custom_statuses:effects/apply/vfx/oiled

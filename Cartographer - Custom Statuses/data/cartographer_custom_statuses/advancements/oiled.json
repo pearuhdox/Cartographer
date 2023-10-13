@@ -1,0 +1,51 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:charcoal"
+    },
+    "title": {
+      "text": "Oiled                    ",
+      "color": "#57dec0"
+    },
+    "description": {
+      "text": "When the affected mob is set on fire, the fire tick will do bonus damage until the mob is extinguished.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "cartographer_custom_statuses:morph",
+  "criteria": {
+    "find1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{StatusInflict:[{Id:\"oiled\"}]}"
+          }
+        ]
+      }
+    },
+    "find2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomStatuses:[{Id:\"oiled\"}]}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "find1",
+      "find2"
+    ]
+  ],
+  "rewards": {
+    "function": "cartographer_custom_statuses:descriptions/oiled"
+  }
+}

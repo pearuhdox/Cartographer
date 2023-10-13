@@ -1,4 +1,10 @@
 scoreboard players operation $cau_time ca.ench_var /= $20 ca.CONSTANT
+
+scoreboard players set $cau_oil ca.ench_var 0
+execute if score $custom_statuses ca.installed matches 1.. run scoreboard players operation $cau_oil ca.ench_var = @s ca.effect_oiled_level
+scoreboard players add $cau_oil ca.ench_var 1
+scoreboard players operation $cau_time ca.ench_var *= $cau_oil ca.ench_var
+
 scoreboard players add $cau_time ca.ench_var 1
 
 scoreboard players set $cau_mult ca.ench_var 15
