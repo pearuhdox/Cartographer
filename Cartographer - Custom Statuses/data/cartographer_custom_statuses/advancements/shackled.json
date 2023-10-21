@@ -1,0 +1,51 @@
+{
+    "display": {
+        "title": {
+            "text": "Shackled                 ",
+            "color": "#57dec0"
+        },
+        "description": {
+            "text": "Affected mobs receive some of the damage nearby Shackled mobs receive.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:chain"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "found1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "nbt": "{StatusInflict:[{Id:\"shackled\"}]}"
+                }
+              ]
+            }
+          },
+          "found2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "nbt": "{CustomStatuses:[{Id:\"shackled\"}]}"
+                }
+              ]
+            }
+          }
+    },
+    "requirements": [
+        [
+            "found1",
+            "found2"
+        ]
+    ],
+    "rewards": {
+        "function": "cartographer_custom_statuses:descriptions/shackled"
+    },
+    "parent": "cartographer_custom_statuses:possess"
+}

@@ -3,3 +3,5 @@ execute if entity @s[tag=ca.deathbomb_fuse_primed] run function cartographer_mob
 
 execute if entity @s[tag=ca.deathbomb_fuse_primed] run function cartographer_mob_abilities:death/deathbomb/count_fuse
 execute unless entity @s[tag=ca.deathbomb_fuse_primed] run scoreboard players set @s ca.deathbomb_fuse 0
+
+say test

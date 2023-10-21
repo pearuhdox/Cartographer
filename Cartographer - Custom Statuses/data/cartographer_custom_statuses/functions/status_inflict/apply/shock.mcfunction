@@ -11,4 +11,6 @@ scoreboard players set $do_chance ca.status_var 0
 
 execute if score $value bbl.rng < $chance ca.effect_shock run scoreboard players set $do_chance ca.status_var 1
 
-execute if score $do_chance ca.status_var matches 1.. run scoreboard players operation @s ca.effect_shock += $add ca.effect_shock
+execute if score $do_chance ca.status_var matches 1.. run scoreboard players operation @s ca.effect_shock > $add ca.effect_shock
+execute if score $do_chance ca.status_var matches 1.. run scoreboard players add @s ca.effect_shock 2
+execute if score $do_chance ca.status_var matches 1.. run scoreboard players set $success ca.status_var 1

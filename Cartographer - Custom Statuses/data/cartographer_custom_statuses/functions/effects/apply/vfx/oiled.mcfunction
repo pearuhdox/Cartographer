@@ -1,4 +1,4 @@
-playsound minecraft:entity.guardian.flop player @a[distance=..12] ~ ~ ~ 1.5 0.5
+playsound minecraft:entity.guardian.flop hostile @a[distance=..12] ~ ~ ~ 1.5 0.5
 
 execute if entity @s[type=#cartographer_core:shape_human] run particle minecraft:block minecraft:coal_block ~ ~1 ~ 0.3 0.4 0.3 0 24 normal
 execute if entity @s[type=#cartographer_core:shape_flat] run particle minecraft:block minecraft:coal_block ~ ~0.5 ~ 0.5 0.1 0.5 0 24 normal

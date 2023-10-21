@@ -80,6 +80,9 @@ tag @s remove ca.allow_offhand_inflict
 
 tag @s remove ca.no_status_melee
 
+tag @s remove ca.si_potion
+
+
 scoreboard players set $no_melee ca.status_var 0
 scoreboard players set $no_offhand ca.status_var 0
 
@@ -96,6 +99,10 @@ scoreboard players set $do_override_l ca.status_var 0
 scoreboard players set $do_override_f ca.status_var 0
 scoreboard players set $do_override_o ca.status_var 0
 scoreboard players set $do_override_m ca.status_var 0
+
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.CustomStatuses run tag @s add ca.si_potion
 
 
 scoreboard players set $temp ca.status_var 0
@@ -175,3 +182,9 @@ execute if predicate cartographer_core:inventory/hold_armor_offhand unless entit
 
 execute if score $no_offhand ca.status_var matches 1.. run tag @s remove ca.si_offh
 execute if score $no_offhand ca.status_var matches 1.. run tag @s remove ca.ae_offh
+
+execute if score $gl_enc_wr ca.gamerule matches 1.. if score $hold_armor_m ca.ench_var matches 1.. run function cartographer_custom_enchantments:descriptions/write/main
+
+execute if score $gl_enc_wr ca.gamerule matches 1.. if entity @s[tag=ca.si_main] run function cartographer_custom_statuses:descriptions/write/main
+execute if score $gl_enc_wr ca.gamerule matches 1.. if entity @s[tag=ca.ae_main] run function cartographer_custom_statuses:descriptions/write/main
+execute if score $gl_enc_wr ca.gamerule matches 1.. if entity @s[tag=ca.si_potion] run function cartographer_custom_statuses:descriptions/write/main

@@ -12,3 +12,4 @@ scoreboard players set $do_chance ca.status_var 0
 execute if score $value ca.status_var < $chance ca.effect_stun run scoreboard players set $do_chance ca.status_var 1
 
 execute if score $do_chance ca.status_var matches 1.. run scoreboard players operation @s ca.effect_stun = $inflict ca.effect_stun
+execute if score $do_chance ca.status_var matches 1.. run scoreboard players set $success ca.status_var 1

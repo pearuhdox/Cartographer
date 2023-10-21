@@ -15,6 +15,7 @@ scoreboard players operation $custom_linger ca.lifetime %= $20 ca.CONSTANT
 scoreboard players set $did_linger_inflict ca.mob_var 0
 
 execute if entity @s[tag=ca.pot_mark_linger] run function cartographer_custom_statuses:inflict/linger_vfx
+execute if entity @s[tag=ca.pot_mark_linger] if score $custom_linger ca.lifetime matches 0 at @s run function cartographer_custom_statuses:inflict/linger_data
 execute if entity @s[tag=ca.pot_mark_linger] if score $custom_linger ca.lifetime matches 0 if score @s ca.lifetime matches 401..600 as @e[type=#bb:hostile,distance=..3] at @s run function cartographer_custom_statuses:inflict/do_effect
 execute if entity @s[tag=ca.pot_mark_linger] if score $custom_linger ca.lifetime matches 0 if score @s ca.lifetime matches 201..400 as @e[type=#bb:hostile,distance=..2.25] at @s run function cartographer_custom_statuses:inflict/do_effect
 execute if entity @s[tag=ca.pot_mark_linger] if score $custom_linger ca.lifetime matches 0 if score @s ca.lifetime matches 1..200 as @e[type=#bb:hostile,distance=..1.5] at @s run function cartographer_custom_statuses:inflict/do_effect
@@ -28,6 +29,6 @@ scoreboard players remove @s ca.lifetime 1
 
 execute unless score @s ca.lifetime matches 1.. run kill @s
 
-execute as @a[tag=ca.pot_thrower] at @s run function cartographer_custom_statuses:inflict/entropy/branch
+tag @a remove ca.pot_thrower
 
 scoreboard players set $do_chance ca.status_var -1

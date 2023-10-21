@@ -1,0 +1,51 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:magma_cream"
+    },
+    "title": {
+      "text": "Brittle                  ",
+      "color": "#57dec0"
+    },
+    "description": {
+      "text": "When the affected mob takes enough damage, they explode and deal a burst of damage to themselves and nearby mobs.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "cartographer_custom_statuses:blindness",
+  "criteria": {
+    "find1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{StatusInflict:[{Id:\"brittle\"}]}"
+          }
+        ]
+      }
+    },
+    "find2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{CustomStatuses:[{Id:\"brittle\"}]}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "find1",
+      "find2"
+    ]
+  ],
+  "rewards": {
+    "function": "cartographer_custom_statuses:descriptions/brittle"
+  }
+}

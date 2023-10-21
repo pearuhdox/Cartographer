@@ -1,11 +1,11 @@
 {
     "display": {
         "title": {
-            "text": "Shocked                   ",
+            "text": "Shocking                  ",
             "color": "#57dec0"
         },
         "description": {
-            "text": "Affected mob takes damage every second and damages nearby enemies. After enough shocks, afflicted is stunned and nearby enemies are knocked back.",
+            "text": "Affected mob takes damage every second and damages nearby enemies. After enough shocks, afflicted and nearby enemies are knocked back.",
             "color": "white"
         },
         "icon": {
@@ -47,5 +47,5 @@
     "rewards": {
         "function": "cartographer_custom_statuses:descriptions/shocked"
     },
-    "parent": "cartographer_custom_statuses:possess"
+    "parent": "cartographer_custom_statuses:shackled"
 }

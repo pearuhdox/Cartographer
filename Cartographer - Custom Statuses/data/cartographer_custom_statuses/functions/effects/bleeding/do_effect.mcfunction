@@ -19,4 +19,6 @@ execute if score @s ca.effect_bleed matches 0 run function cartographer_custom_s
 
 execute if score @s ca.effect_bleed matches 1.. run function cartographer_custom_statuses:popup/bleed
 
+scoreboard players set @s ca.bleed_time 0
+
 tellraw @a[tag=debug] [{"text":"[Debug] ","color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3","italic":true}]}},{"text":"❱ ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"selector":"@s","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}},{"text":" affected by Bleeding.","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}]

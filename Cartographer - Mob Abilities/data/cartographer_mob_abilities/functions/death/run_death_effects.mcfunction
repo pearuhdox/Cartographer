@@ -16,4 +16,5 @@ execute if entity @s[tag=ca.duplicate] at @s run function cartographer_mob_abili
 #Run All Death Effects - Except on Deathbomb
 execute if entity @s[tag=!ca.block_death_effects] run function cartographer_mob_abilities:death/effect_branch
 
+
 kill @s

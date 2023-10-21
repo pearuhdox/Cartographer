@@ -1,3 +1,12 @@
+#Run Bleeding
+execute if score @s ca.effect_bleed matches 1.. run function cartographer_custom_statuses:effects/bleeding/effect
+
+#Run Shocking
+execute if score @s ca.effect_shock matches 1.. run function cartographer_custom_statuses:effects/shocked/effect
+
+#Run Infection
+execute if score @s ca.effect_infect matches 1.. run function cartographer_custom_statuses:effects/infect/effect
+
 #Run Stunned
 execute as @s[scores={ca.effect_stun=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned/tenacity_calculate
 execute as @s[scores={ca.effect_stun_duration=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned/effect
@@ -5,16 +14,27 @@ execute as @s[scores={ca.effect_stun_duration=1..}] at @s run function cartograp
 #Run Possession
 execute as @s[scores={ca.possess_time=1..}] at @s run function cartographer_custom_statuses:tick_effects/possession/warmup
 
-#Run Exposed
-execute if score @s ca.effect_exposed_duration matches 1.. run function cartographer_custom_statuses:effects/exposed/do
-execute if score @s ca.effect_exposed_duration matches 1 run function cartographer_custom_statuses:effects/exposed/clear
-
-execute if score @s ca.exposed_cdl matches 1.. run scoreboard players remove @s ca.exposed_cdl 1
-
 #Run Oiled
 execute if score @s ca.effect_oiled_duration matches 1.. run function cartographer_custom_statuses:effects/oiled/do
 execute if score @s ca.effect_oiled_duration matches 1 run function cartographer_custom_statuses:effects/oiled/clear
 
+#Run Shackled
+execute if score @s ca.effect_shackled matches 1.. run function cartographer_custom_statuses:effects/shackled/do
+execute if score @s ca.shackled_cdl matches 1.. run scoreboard players remove @s ca.shackled_cdl 1
+
+#Run Brittle
+execute if score @s ca.brittle_cdl matches 200 run function cartographer_custom_statuses:effects/brittle/detonate
+
+execute if score @s ca.effect_brittle_duration matches 1.. run function cartographer_custom_statuses:effects/brittle/do
+execute if score @s ca.effect_brittle_duration matches 1 run function cartographer_custom_statuses:effects/brittle/clean
+
+execute if score @s ca.brittle_cdl matches 1.. run scoreboard players remove @s ca.brittle_cdl 1
+
+#Run Exposed (After these effects for damage purposes)
+execute if score @s ca.effect_exposed_duration matches 1.. run function cartographer_custom_statuses:effects/exposed/do
+execute if score @s ca.effect_exposed_duration matches 1 run function cartographer_custom_statuses:effects/exposed/clear
+
+execute if score @s ca.exposed_cdl matches 1.. run scoreboard players remove @s ca.exposed_cdl 1
 
 #Run Blindness
 execute as @s[predicate=cartographer_custom_statuses:is_blind] at @s run function cartographer_custom_statuses:effects/blindness

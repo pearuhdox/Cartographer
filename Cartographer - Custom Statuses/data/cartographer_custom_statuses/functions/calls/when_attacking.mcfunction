@@ -7,6 +7,8 @@ execute if predicate cartographer_custom_statuses:is_stealthed run function cart
 data modify storage cartographer_custom_statuses:apply_effects data set value {}
 data modify storage cartographer_custom_statuses:status_inflict data set value {}
 
+tag @s add ca.inflicting_player
+
 execute if entity @s[advancements={entityid:player_hurt_entity={tagless=true}}] unless entity @s[tag=ca.no_status_melee] run function cartographer_custom_statuses:calls/player_hit/melee
 execute if entity @s[tag=ca.no_status_melee] run scoreboard players set $do_status_inflict ca.status_var 0
 

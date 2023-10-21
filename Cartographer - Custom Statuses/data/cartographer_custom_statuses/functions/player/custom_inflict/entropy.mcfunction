@@ -1,5 +1,5 @@
-execute if score $do_chance ca.status_var matches 0 run scoreboard players add @s ca.player_entropy 3
-execute if score $do_chance ca.status_var matches 1 run scoreboard players set @s ca.player_entropy 0
+execute unless score $success ca.status_var matches 1.. run scoreboard players add @s ca.player_entropy 3
+execute if score $success ca.status_var matches 1.. run scoreboard players set @s ca.player_entropy 0
 
-scoreboard players set $do_chance ca.status_var -1
-tag @a remove ca.inflict_cause
+scoreboard players set $success ca.status_var 0
+tag @s remove ca.inflicting_player

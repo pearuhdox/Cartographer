@@ -7,13 +7,16 @@ execute if score @s ca.lexica_trig matches 5 run function cartographer_mob_abili
 
 execute if score @s ca.lexica_trig matches 101 run function cartographer_custom_statuses:lexica_calls/pages/category/bleeding
 execute if score @s ca.lexica_trig matches 102 run function cartographer_custom_statuses:lexica_calls/pages/category/blindness
-execute if score @s ca.lexica_trig matches 103 run function cartographer_custom_statuses:lexica_calls/pages/category/cloaked
-execute if score @s ca.lexica_trig matches 104 run function cartographer_custom_statuses:lexica_calls/pages/category/possessed
+execute if score @s ca.lexica_trig matches 103 run function cartographer_custom_statuses:lexica_calls/pages/category/brittle
+execute if score @s ca.lexica_trig matches 104 run function cartographer_custom_statuses:lexica_calls/pages/category/cloaked
 execute if score @s ca.lexica_trig matches 105 run function cartographer_custom_statuses:lexica_calls/pages/category/vulnerability
 execute if score @s ca.lexica_trig matches 106 run function cartographer_custom_statuses:lexica_calls/pages/category/infection
-execute if score @s ca.lexica_trig matches 107 run function cartographer_custom_statuses:lexica_calls/pages/category/shocking
-execute if score @s ca.lexica_trig matches 108 run function cartographer_custom_statuses:lexica_calls/pages/category/stunned
-execute if score @s ca.lexica_trig matches 109 run function cartographer_custom_statuses:lexica_calls/pages/category/morph
+execute if score @s ca.lexica_trig matches 107 run function cartographer_custom_statuses:lexica_calls/pages/category/morph
+execute if score @s ca.lexica_trig matches 108 run function cartographer_custom_statuses:lexica_calls/pages/category/oiled
+execute if score @s ca.lexica_trig matches 109 run function cartographer_custom_statuses:lexica_calls/pages/category/possessed
+execute if score @s ca.lexica_trig matches 110 run function cartographer_custom_statuses:lexica_calls/pages/category/shackled
+execute if score @s ca.lexica_trig matches 111 run function cartographer_custom_statuses:lexica_calls/pages/category/shocking
+execute if score @s ca.lexica_trig matches 112 run function cartographer_custom_statuses:lexica_calls/pages/category/stunned
 
 execute if score @s ca.lexica_trig matches 201 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/main
 execute if score @s ca.lexica_trig matches 202 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/main_2
