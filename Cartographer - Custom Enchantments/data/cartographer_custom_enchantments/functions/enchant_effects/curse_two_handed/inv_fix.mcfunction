@@ -1,16 +1,16 @@
-function suso.player_data:get/do
+function bb:lib/pldata/read
 
 scoreboard players set $slot ca.var -1
 
-data modify storage suso:pldata working_data.Uncompress set from entity @s Inventory[{tag:{IsCompressed:1}}]
-execute store result score $slot ca.var run data get storage suso:pldata working_data.Uncompress.Slot
+data modify storage bbl:pldata sudo_root.working_data.Uncompress set from entity @s Inventory[{tag:{IsCompressed:1}}]
+execute store result score $slot ca.var run data get storage bbl:pldata sudo_root.working_data.Uncompress.Slot
 
-execute unless data storage suso:pldata working_data.Uncompress.Slot run scoreboard players set $slot ca.var -1
+execute unless data storage bbl:pldata sudo_root.working_data.Uncompress.Slot run scoreboard players set $slot ca.var -1
 
-execute if score $slot ca.var matches 0.. run data modify storage suso:pldata working_data.Uncompress_Item set from entity @s Inventory[{tag:{IsCompressed:1}}].tag.Compressed
+execute if score $slot ca.var matches 0.. run data modify storage bbl:pldata sudo_root.working_data.Uncompress_Item set from entity @s Inventory[{tag:{IsCompressed:1}}].tag.Compressed
 
 execute if score $slot ca.var matches 0.. run item replace block 4206900 1 4206900 container.0 with air 1
-execute if score $slot ca.var matches 0.. run data modify block 4206900 1 4206900 Items append from storage suso:pldata working_data.Uncompress_Item
+execute if score $slot ca.var matches 0.. run data modify block 4206900 1 4206900 Items append from storage bbl:pldata sudo_root.working_data.Uncompress_Item
 
 execute if score $slot ca.var matches 0 in minecraft:overworld run loot replace entity @s hotbar.0 1 mine 4206900 1 4206900 air{drop_contents:1b}
 execute if score $slot ca.var matches 1 in minecraft:overworld run loot replace entity @s hotbar.1 1 mine 4206900 1 4206900 air{drop_contents:1b}
@@ -49,7 +49,7 @@ execute if score $slot ca.var matches 33 in minecraft:overworld run loot replace
 execute if score $slot ca.var matches 34 in minecraft:overworld run loot replace entity @s inventory.25 1 mine 4206900 1 4206900 air{drop_contents:1b}
 execute if score $slot ca.var matches 35 in minecraft:overworld run loot replace entity @s inventory.26 1 mine 4206900 1 4206900 air{drop_contents:1b}
 
-data modify storage suso:pldata working_data.Uncompress_Item set value {}
-data modify storage suso:pldata working_data.Uncompress set value {}
+data modify storage bbl:pldata sudo_root.working_data.Uncompress_Item set value {}
+data modify storage bbl:pldata sudo_root.working_data.Uncompress set value {}
 
-function suso.player_data:put/do
+function bb:lib/pldata/write

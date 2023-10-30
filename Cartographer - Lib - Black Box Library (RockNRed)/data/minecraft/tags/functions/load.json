@@ -1,5 +1,6 @@
 {
 	"values": [
-		"bb:sys/load"
+		"bb:sys/load",
+		"inv:setup"
 	]
 }

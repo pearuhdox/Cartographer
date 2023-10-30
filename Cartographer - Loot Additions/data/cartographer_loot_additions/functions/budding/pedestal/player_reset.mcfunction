@@ -1,7 +1,7 @@
 #Grab storage
-function suso.player_data:get/do
+function bb:lib/pldata/read
 
-data modify storage suso:pldata working_data.budding_pedestals.tracked set value []
+data modify storage bbl:pldata sudo_root.working_data.budding_pedestals.tracked set value []
 
 #Push to saved space
-function suso.player_data:put/do
+function bb:lib/pldata/write

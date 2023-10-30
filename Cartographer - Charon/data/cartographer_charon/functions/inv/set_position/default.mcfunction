@@ -1,8 +1,8 @@
-function suso.player_data:put/do
+function bb:lib/pldata/write
 
-execute store result score @s void_home.x run data get storage suso:pldata working_data.CharonHomePos[0]
-execute store result score @s void_home.y run data get storage suso:pldata working_data.CharonHomePos[1]
-execute store result score @s void_home.z run data get storage suso:pldata working_data.CharonHomePos[2]
+execute store result score @s void_home.x run data get storage bbl:pldata sudo_root.working_data.CharonHomePos[0]
+execute store result score @s void_home.y run data get storage bbl:pldata sudo_root.working_data.CharonHomePos[1]
+execute store result score @s void_home.z run data get storage bbl:pldata sudo_root.working_data.CharonHomePos[2]
 
 data modify storage cartographer_charon:home Pos set value [0d,0d,0d]
 

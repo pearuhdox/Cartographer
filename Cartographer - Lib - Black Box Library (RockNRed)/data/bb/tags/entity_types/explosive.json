@@ -1,10 +1,10 @@
 {
-  "values":[
-	"minecraft:creeper",
-	"minecraft:fireball",
-	"minecraft:tnt",
-	"minecraft:tnt_minecart",
-	"minecraft:wither_skull",
-	"minecraft:end_crystal"
+  "values": [
+    "minecraft:creeper",
+    "minecraft:fireball",
+    "minecraft:tnt",
+    "minecraft:tnt_minecart",
+    "minecraft:wither_skull",
+    "minecraft:end_crystal"
   ]
 }

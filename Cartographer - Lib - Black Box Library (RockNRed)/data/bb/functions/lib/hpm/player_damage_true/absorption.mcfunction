@@ -3,7 +3,7 @@
 execute store result score $player.absorption bbl.storage run data get entity @s AbsorptionAmount
 
 #Saving absorption and clearing it
-data modify storage bbl:true_damage_absorption effect set from entity @s active_effects[{id:"minecraft:absorption"}]
+data modify storage bbl:true_damage_absorption effect set from entity @s ActiveEffects[{Id:22}]
 effect clear @s minecraft:absorption
 
 #Total calculation

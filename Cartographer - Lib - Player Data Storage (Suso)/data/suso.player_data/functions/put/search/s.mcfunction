@@ -1,2 +1,0 @@
-execute if score $prev_id suso.pldata.var matches ..16 run function suso.player_data:put/search/1_16
-execute if score $prev_id suso.pldata.var matches 17.. run function suso.player_data:put/search/17_32

@@ -1,1 +1,0 @@
-execute unless score @s suso.pldata.id = $prev_id suso.pldata.var run function suso.player_data:get/pt2

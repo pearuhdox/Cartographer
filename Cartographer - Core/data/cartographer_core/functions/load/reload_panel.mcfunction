@@ -44,7 +44,7 @@ scoreboard players operation $z_detect_packs ca.installed += $mob_abilities ca.i
 scoreboard players operation $z_detect_packs ca.installed += $repair_stations ca.installed
 
 scoreboard players set $#lib_all_found ca.installed 0
-execute if score $#lib_dies ca.installed matches 1 if score $#lib_del ca.installed matches 1 if score $#lib_bbl ca.installed matches 1 if score $#lib_ehid ca.installed matches 1 if score $#lib_inv ca.installed matches 1 if score $#lib_pds ca.installed matches 1 if score $#lib_mot ca.installed matches 1 run scoreboard players set $#lib_all_found ca.installed 1
+execute if score $#lib_dies ca.installed matches 1 if score $#lib_del ca.installed matches 1 if score $#lib_bbl ca.installed matches 1 if score $#lib_ehid ca.installed matches 1 if score $#lib_mot ca.installed matches 1 run scoreboard players set $#lib_all_found ca.installed 1
 
 
 execute if score $gl_reload_msg ca.gamerule matches 0 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/full

@@ -9,6 +9,7 @@
         "minecraft:brewing_stand",
         "minecraft:smoker",
         "minecraft:blast_furnace",
-        "minecraft:hopper"
+        "minecraft:hopper",
+        "minecraft:barrel"
     ]
 }

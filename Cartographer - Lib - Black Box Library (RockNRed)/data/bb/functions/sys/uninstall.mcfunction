@@ -48,9 +48,48 @@ scoreboard objectives remove bbl.hpm_queue
 #True damage health score
 scoreboard objectives remove bbl.p_health
 
-scoreboard objectives add bbl.hth.post_hp dummy
-scoreboard objectives add bbl.hth.pre_hp dummy 
-scoreboard objectives add bbl.hth.amount dummy
+scoreboard objectives remove bbl.hth.post_hp
+scoreboard objectives remove bbl.hth.pre_hp
+scoreboard objectives remove bbl.hth.amount
+
+#Drop kb
+scoreboard objectives remove bbl.drop_kb
+#Place spruce stairs
+scoreboard objectives remove bbl.place_spruce_stair
+#Place barrel
+scoreboard objectives remove bbl.action.place_barrel
+
+
+#\Move detector
+#Mute timer
+scoreboard objectives remove bbl.move.mute
+#\Walk
+scoreboard objectives remove bbl.move.walk
+#\Sprint
+scoreboard objectives remove bbl.move.sprint
+#\Crouch
+scoreboard objectives remove bbl.move.crouch
+#\Climb
+scoreboard objectives remove bbl.move.climb
+#\Horse
+scoreboard objectives remove bbl.move.horse
+#\Swim
+scoreboard objectives remove bbl.move.swim
+#\Walk underwater
+scoreboard objectives remove bbl.move.walk_underwater
+
+##\Mouse
+##\Pitch
+###\Current
+scoreboard objectives remove bbl.move.mouse_angle.pitch.current
+###\Previous
+scoreboard objectives remove bbl.move.mouse_angle.pitch.past
+##\Yaw
+###\Current
+scoreboard objectives remove bbl.move.mouse_angle.yaw.current
+###\Previous
+scoreboard objectives remove bbl.move.mouse_angle.yaw.past
+
 
 #Remove teams
 team remove no_collide

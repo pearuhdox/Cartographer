@@ -1,5 +1,5 @@
 
-function bb:lib/vanilla_item_clear/reduct_slot/main
+function bb:lib/vanilla_item_clear/reduct_slot
 scoreboard players remove $clear_count bbl.storage 1
 scoreboard players remove $found_count bbl.storage 1
 

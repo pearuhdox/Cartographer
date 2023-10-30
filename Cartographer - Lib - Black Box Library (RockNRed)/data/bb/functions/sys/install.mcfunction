@@ -2,6 +2,10 @@
 #Forceload chunk.
 forceload add 4206857 4206872
 
+#Gamerules
+#\Command limit
+gamerule commandModificationBlockLimit 9999999
+
 #Add scoreboards
 #\Score Storage Location
 scoreboard objectives add bbl.storage dummy
@@ -66,8 +70,54 @@ scoreboard objectives add bbl.hth.post_hp dummy
 scoreboard objectives add bbl.hth.pre_hp dummy 
 scoreboard objectives add bbl.hth.amount dummy
 
-#Next ID init
-execute unless score $next_id bbl.storage matches -99999..99999 run scoreboard players set $next_id bbl.storage 1
+#Actions
+#\Drop kb
+scoreboard objectives add bbl.action.drop_kb minecraft.dropped:minecraft.knowledge_book
+#\Place spruce stairs
+scoreboard objectives add bbl.action.place_spruce_stair minecraft.used:minecraft.spruce_stairs
+#\Place barrel
+scoreboard objectives add bbl.action.place_barrel minecraft.used:minecraft.barrel
+
+
+#\Move detector
+#Mute timer
+scoreboard objectives add bbl.move.mute dummy
+#\Walk
+scoreboard objectives add bbl.move.walk minecraft.custom:minecraft.walk_one_cm
+#\Sprint
+scoreboard objectives add bbl.move.sprint minecraft.custom:minecraft.sprint_one_cm
+#\Crouch
+scoreboard objectives add bbl.move.crouch minecraft.custom:minecraft.crouch_one_cm
+#\Climb
+scoreboard objectives add bbl.move.climb minecraft.custom:minecraft.climb_one_cm
+#\Horse
+scoreboard objectives add bbl.move.horse minecraft.custom:minecraft.horse_one_cm
+#\Swim
+scoreboard objectives add bbl.move.swim minecraft.custom:minecraft.swim_one_cm
+#\Walk underwater
+scoreboard objectives add bbl.move.walk_underwater minecraft.custom:minecraft.walk_under_water_one_cm
+
+##\Mouse
+##\Pitch
+###\Current
+scoreboard objectives add bbl.move.mouse_angle.pitch.current dummy
+###\Previous
+scoreboard objectives add bbl.move.mouse_angle.pitch.past dummy
+##\Yaw
+###\Current
+scoreboard objectives add bbl.move.mouse_angle.yaw.current dummy
+###\Previous
+scoreboard objectives add bbl.move.mouse_angle.yaw.past dummy
+#\Listen
+scoreboard objectives add bbl.move.mouse_angle.listen dummy
+
+#Init
+#\Next ID
+execute unless score $next_id bbl.storage matches -2147483647..-2147483647 run scoreboard players set $next_id bbl.storage 1
+#\Config
+##\Lexica inject
+execute unless score $bbl.config.lexica_inject bbl.storage matches -2147483647..2147483647 run scoreboard players set $bbl.config.lexica_inject bbl.storage 1
+
 
 #Set constants
 scoreboard players set $-1 bbl.constant -1
@@ -88,8 +138,10 @@ scoreboard players set $25 bbl.constant 25
 scoreboard players set $30 bbl.constant 30
 scoreboard players set $33 bbl.constant 33
 scoreboard players set $35 bbl.constant 35
+scoreboard players set $40 bbl.constant 40
 
 scoreboard players set $50 bbl.constant 50
+scoreboard players set $60 bbl.constant 60
 scoreboard players set $67 bbl.constant 67
 scoreboard players set $68 bbl.constant 68
 scoreboard players set $70 bbl.constant 70
@@ -99,6 +151,8 @@ scoreboard players set $90 bbl.constant 90
 
 scoreboard players set $100 bbl.constant 100
 scoreboard players set $115 bbl.constant 115
+scoreboard players set $140 bbl.constant 140
+scoreboard players set $150 bbl.constant 150
 scoreboard players set $200 bbl.constant 200
 scoreboard players set $300 bbl.constant 300
 scoreboard players set $600 bbl.constant 600
@@ -186,3 +240,5 @@ team modify yellow collisionRule never
 execute unless block 4206849 1 4206865 diamond_block run function bb:sys/build_chunk
 #\Working shulker
 execute unless block 4206862 1 4206865 black_shulker_box run setblock 4206862 1 4206865 black_shulker_box
+#\INV Box
+setblock 4206862 1 4206866 minecraft:purple_shulker_box destroy

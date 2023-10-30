@@ -27,3 +27,4 @@ scoreboard players operation #mod bbl.rng -= $rng_min bbl.rng
 scoreboard players operation #mod bbl.rng += #one bbl.rng
 scoreboard players operation $value bbl.rng %= #mod bbl.rng
 scoreboard players operation $value bbl.rng += $rng_min bbl.rng
+

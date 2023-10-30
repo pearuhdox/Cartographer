@@ -2,7 +2,7 @@ tag @s add i.restore_inventory
 
 scoreboard players set $success ca.inf_cdl_var 0
 
-function suso.player_data:get/do
+function bb:lib/pldata/read
 
 scoreboard players set $slot ca.inf_cdl_var -10000
 scoreboard players set $slot ca.inf_kc_var -10000
@@ -19,7 +19,7 @@ data modify storage cartographer_custom_enchantments:infinity transformed set va
 
 # Start Mainhand
 data modify storage i:internal working_it set value []
-data modify storage i:internal temp set from storage suso:pldata working_data.infinity
+data modify storage i:internal temp set from storage bbl:pldata sudo_root.working_data.infinity
 function cartographer_custom_enchantments:enchant_effects/infinity/filter
 data modify storage cartographer_custom_enchantments:infinity with_cdl set from storage i:internal working_it
 function cartographer_custom_enchantments:enchant_effects/infinity/with_cdl/get_slot
@@ -28,7 +28,7 @@ function cartographer_custom_enchantments:enchant_effects/infinity/with_cdl/get_
 
 # Do Offhand
 data modify storage i:internal working_it2 set value []
-data modify storage i:internal working_it2 append from storage suso:pldata working_data.infinity[{Slot:-106b}]
+data modify storage i:internal working_it2 append from storage bbl:pldata sudo_root.working_data.infinity[{Slot:-106b}]
 data modify storage i:internal working_it2[0].Slot set value 0b
 
 execute unless data storage cartographer_custom_enchantments:infinity cdl_item.tag.CustomEnchantments[{id:"infinity"}] run function cartographer_custom_enchantments:enchant_effects/infinity/with_cdl/offhand

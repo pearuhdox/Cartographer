@@ -4,32 +4,32 @@ execute if score $clear_s_arrow ca.ammo = $clear_s_arrow_count ca.ammo run funct
 execute if score $clear_t_arrow ca.ammo = $clear_t_arrow_count ca.ammo run function cartographer_custom_enchantments:enchant_effects/repeating/clear_tipped_arrows
 
 #What arrow do we add to the quiver?
-data modify storage suso:pldata working_data.RepeatingTest set value {}
+data modify storage bbl:pldata sudo_root.working_data.RepeatingTest set value {}
 scoreboard players set $arrow_type ca.repeating 0
 
 #Check tipped arrows
 scoreboard players set $arrow_type ca.repeating 1
-data modify storage suso:pldata working_data.RepeatingTest_temp set value []
-data modify storage suso:pldata working_data.RepeatingTest_temp append from entity @s Inventory[{id:"minecraft:tipped_arrow"}]
-data modify storage suso:pldata working_data.RepeatingTest set from storage suso:pldata working_data.RepeatingTest_temp[0]
-execute if data storage suso:pldata working_data.RepeatingTest.id store result score $clear_t_arrow_count ca.ammo run data get storage suso:pldata working_data.RepeatingTest.Count
-execute if data storage suso:pldata working_data.RepeatingTest.id run tag @s add loading_tipped
+data modify storage bbl:pldata sudo_root.working_data.RepeatingTest_temp set value []
+data modify storage bbl:pldata sudo_root.working_data.RepeatingTest_temp append from entity @s Inventory[{id:"minecraft:tipped_arrow"}]
+data modify storage bbl:pldata sudo_root.working_data.RepeatingTest set from storage bbl:pldata sudo_root.working_data.RepeatingTest_temp[0]
+execute if data storage bbl:pldata sudo_root.working_data.RepeatingTest.id store result score $clear_t_arrow_count ca.ammo run data get storage bbl:pldata sudo_root.working_data.RepeatingTest.Count
+execute if data storage bbl:pldata sudo_root.working_data.RepeatingTest.id run tag @s add loading_tipped
 
 #Check spectral arrows
 execute unless entity @s[tag=loading_tipped] run scoreboard players set $arrow_type ca.repeating 2
-execute unless entity @s[tag=loading_tipped] run data modify storage suso:pldata working_data.RepeatingTest set from entity @s Inventory[{id:"minecraft:spectral_arrow"}]
-execute unless entity @s[tag=loading_tipped] store result score $clear_s_arrow_count ca.ammo run data get storage suso:pldata working_data.RepeatingTest.Count
-execute unless entity @s[tag=loading_tipped] if data storage suso:pldata working_data.RepeatingTest.id run tag @s add loading_spectral
+execute unless entity @s[tag=loading_tipped] run data modify storage bbl:pldata sudo_root.working_data.RepeatingTest set from entity @s Inventory[{id:"minecraft:spectral_arrow"}]
+execute unless entity @s[tag=loading_tipped] store result score $clear_s_arrow_count ca.ammo run data get storage bbl:pldata sudo_root.working_data.RepeatingTest.Count
+execute unless entity @s[tag=loading_tipped] if data storage bbl:pldata sudo_root.working_data.RepeatingTest.id run tag @s add loading_spectral
 
 #Check normal arrows
 execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] run scoreboard players set $arrow_type ca.repeating 3
-execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] run data modify storage suso:pldata working_data.RepeatingTest set from entity @s Inventory[{id:"minecraft:arrow"}]
-execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] store result score $clear_arrow_count ca.ammo run data get storage suso:pldata working_data.RepeatingTest.Count
-execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] if data storage suso:pldata working_data.RepeatingTest.id run tag @s add loading_normal
+execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] run data modify storage bbl:pldata sudo_root.working_data.RepeatingTest set from entity @s Inventory[{id:"minecraft:arrow"}]
+execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] store result score $clear_arrow_count ca.ammo run data get storage bbl:pldata sudo_root.working_data.RepeatingTest.Count
+execute unless entity @s[tag=loading_tipped] unless entity @s[tag=loading_spectral] if data storage bbl:pldata sudo_root.working_data.RepeatingTest.id run tag @s add loading_normal
 
 #Add to the repeating list, if we have no arrows, set to stop repeating, increment our ammo save score.
-execute unless data storage suso:pldata working_data.RepeatingTest.id run scoreboard players set @s ca.ammo 0
-execute if data storage suso:pldata working_data.RepeatingTest.id run data modify storage suso:pldata working_data.RepeatingList append from storage suso:pldata working_data.RepeatingTest
+execute unless data storage bbl:pldata sudo_root.working_data.RepeatingTest.id run scoreboard players set @s ca.ammo 0
+execute if data storage bbl:pldata sudo_root.working_data.RepeatingTest.id run data modify storage bbl:pldata sudo_root.working_data.RepeatingList append from storage bbl:pldata sudo_root.working_data.RepeatingTest
 scoreboard players add $ammo_save ca.ammo 1
 
 #Add one to count to clear
