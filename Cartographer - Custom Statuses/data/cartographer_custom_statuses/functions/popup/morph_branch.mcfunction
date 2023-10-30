@@ -1,4 +1,6 @@
-execute on passengers if entity @s[tag=ca.entity_popup,tag=!ca.charge_bar,tag=!ca.popup_notice,type=text_display] run function cartographer_core:helper/entity_popups/transform/popup
+execute on passengers if entity @s[tag=ca.entity_popup,tag=!ca.charge_bar,tag=!ca.popup_notice,type=text_display] run function cartographer_custom_statuses:popup/morph_popup
+
+data merge entity @s {interpolation_duration:1,start_interpolation:0,transformation:[0.650f, 0.000f, 0.000f,0.000f,0.000f, 0.650f, 0.000f,0.300f,0.000f, 0.000f, 0.650f,0.000f,0.000f, 0.000f, 0.000f,1.000f]}
 
 execute if score @s ca.morph_time matches 186.. on passengers if entity @s[tag=ca.entity_popup,tag=ca.popup_notice,type=text_display] run data modify entity @s text set value '{"text":"🪶 10⌛","color":"white","bold":true,"italic":false}'
 execute if score @s ca.morph_time matches 166..185 on passengers if entity @s[tag=ca.entity_popup,tag=ca.popup_notice,type=text_display] run data modify entity @s text set value '{"text":"🪶 9⌛","color":"white","bold":true,"italic":false}'
