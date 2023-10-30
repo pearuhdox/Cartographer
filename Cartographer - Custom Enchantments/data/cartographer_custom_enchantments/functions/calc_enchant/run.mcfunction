@@ -1,3 +1,5 @@
+say running enchant calculator
+
 #Run Reset First
 function cartographer_custom_enchantments:calc_enchant/reset
 
