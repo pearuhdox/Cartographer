@@ -18,8 +18,6 @@ execute unless score $#lib_bbl ca.installed matches 1 run function cartographer_
 execute unless score $#lib_del ca.installed matches 1 run function cartographer_core:load/delta_warning
 execute unless score $#lib_dies ca.installed matches 1 run function cartographer_core:load/dies_warning
 execute unless score $#lib_ehid ca.installed matches 1 run function cartographer_core:load/ehid_warning
-execute unless score $#lib_inv ca.installed matches 1 run function cartographer_core:load/inv_warning
-execute unless score $#lib_pds ca.installed matches 1 run function cartographer_core:load/pds_warning
 execute unless score $#lib_mot ca.installed matches 1 run function cartographer_core:load/mot_warning
 
 tellraw @s {"text":" ","color":"#FFE0A3","hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFE0A3"}]}}
@@ -35,6 +33,4 @@ tellraw @s [{"text":"[⭐]","color":"#33FFF8","bold":true,"italic":false,"hoverE
 #
 tellraw @s {"text":"------------------------------------------","color":"#FFE0A3","bold":true}
 
-
-execute if score @s menu matches 1 run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 scoreboard players set @s menu 0

@@ -11,7 +11,7 @@ gamerule sendCommandFeedback false
 
 scoreboard players enable @a ca.options_trig 
 
-execute as @a at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
+execute unless score $gl_reload_msg ca.gamerule matches 100 as @a at @s run playsound minecraft:item.book.page_turn master @s ~ ~ ~ 1 0.75
 
 function cartographer_charon:load/load_check
 function cartographer_custom_durability:load/load_check
@@ -49,6 +49,7 @@ execute if score $#lib_dies ca.installed matches 1 if score $#lib_del ca.install
 
 execute if score $gl_reload_msg ca.gamerule matches 0 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/full
 execute if score $gl_reload_msg ca.gamerule matches 1 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/minimal
+#execute if score $gl_reload_msg ca.gamerule matches 100 as @a[scores={ca.reload_type=0}] at @s run function cartographer_core:load/reload/quiet
 
 execute as @a[scores={ca.reload_type=1}] at @s run function cartographer_core:load/reload/full
 execute as @a[scores={ca.reload_type=2}] at @s run function cartographer_core:load/reload/minimal

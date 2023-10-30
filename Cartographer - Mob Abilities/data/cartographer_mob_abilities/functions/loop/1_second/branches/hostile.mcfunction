@@ -2,7 +2,7 @@ execute unless score @s[tag=ca.has_active] ability_charge matches -1.. run score
 execute unless score @s[tag=ca.shrieker] ability_charge matches -1.. run scoreboard players set @s ability_charge 0
 
 #Run Acrobat Passive
-execute if entity @s[tag=ca.acro_pass] unless score @s ca.acrobat_passive_cooldown matches 1.. run function cartographer_mob_abilities:ability_traits/acrobatic/passive/chance
+execute if entity @s[tag=ca.acro_pass] unless score @s ca.acrobat_passive_cooldown matches 1.. unless score @s ca.effect_stun_duration matches 1.. run function cartographer_mob_abilities:ability_traits/acrobatic/passive/chance
 
 #Run Trigger Trait Passive
 execute if entity @s[tag=ca.trigger_traits] unless score @s ability_charge matches 1.. unless score @s ca.trigger_trait_cooldown matches 1.. if entity @a[distance=..32,gamemode=!creative,gamemode=!spectator] run function cartographer_mob_abilities:passive/trigger_trait/chance
