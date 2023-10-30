@@ -5,6 +5,8 @@ function bb:lib/rng
 
 scoreboard players operation $value bbl.rng -= $entropy ca.player_entropy
 
+execute if score $chance ca.charm_time matches ..0 run scoreboard players set $chance ca.charm_time 100
+
 scoreboard players set $do_chance ca.status_var 0
 
 execute unless score $value bbl.rng > $chance ca.charm_time unless entity @s[tag=ca.boss] unless score @s ca.charm_immune matches 1.. run scoreboard players set $do_chance ca.status_var 1

@@ -1,22 +1,21 @@
-execute if score $bleed ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"bleeding",Amount:0,Chance:100}
-execute if score $shock ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"shocking",duration:0,Chance:100}
-execute if score $infect ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"infection",duration:0,Chance:100}
+execute if score $bleed ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"bleeding",Amount:0,chance:100}
+execute if score $shock ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"shocking",duration:0,chance:100}
+execute if score $infect ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"infection",duration:0,chance:100}
 
-execute if score $stun_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"stun",duration:0,Chance:100}
+execute if score $stun_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"stun",duration:0,chance:100}
 
-execute if score $cloak ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"cloaking",duration:0,Chance:100}
+execute if score $cloak ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"cloaking",duration:0,chance:100}
 
-execute if score $morph_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"morph",Chance:100,duration:0}
+execute if score $morph_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"morph",chance:100,duration:0}
+execute if score $charm_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"charmed",chance:100,duration:0}
 
-execute if score $charm_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"charmed",Chance:100,duration:0}
+execute if score $expose_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"expose",duration:0,amplifier:0,chance:100}
 
-execute if score $expose_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"expose",duration:0,amplifier:0,Chance:100}
+execute if score $oiled_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"oiled",duration:0,amplifier:0,chance:100}
 
-execute if score $oiled_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"oiled",duration:0,amplifier:0,Chance:100}
+execute if score $shackled ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"shackled",duration:0,chance:100}
 
-execute if score $shackled ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"shackled",duration:0,Chance:100}
-
-execute if score $brittle_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"brittle",duration:0,amplifier:0,Chance:100}
+execute if score $brittle_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"brittle",duration:0,amplifier:0,chance:100}
 
 
 

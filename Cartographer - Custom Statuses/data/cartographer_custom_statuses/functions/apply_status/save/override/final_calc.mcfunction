@@ -1,21 +1,21 @@
-execute if score $bleed ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"bleeding",Amount:0,Chance:100}
-execute if score $shock ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"shocking",duration:0,Chance:100}
-execute if score $infect ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"infection",duration:0,Chance:100}
+execute if score $bleed ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"bleeding",Amount:0,chance:100}
+execute if score $shock ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"shocking",duration:0,chance:100}
+execute if score $infect ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"infection",duration:0,chance:100}
 
-execute if score $stun_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"stun",duration:0,Chance:100}
+execute if score $stun_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"stun",duration:0,chance:100}
 
-execute if score $cloak ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"cloaking",duration:0,Chance:100}
+execute if score $cloak ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"cloaking",duration:0,chance:100}
 
-execute if score $morph_chance ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"morph",Chance:100}
-execute if score $charm_chance ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"charmed",Chance:100}
+execute if score $morph_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"morph",chance:100}
+execute if score $charm_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"charmed",chance:100}
 
-execute if score $expose_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"expose",duration:0,amplifier:0,Chance:100}
+execute if score $expose_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"expose",duration:0,amplifier:0,chance:100}
 
-execute if score $oiled_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"oiled",duration:0,amplifier:0,Chance:100}
+execute if score $oiled_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"oiled",duration:0,amplifier:0,chance:100}
 
-execute if score $shackled ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"shackled",duration:0,Chance:100}
+execute if score $shackled ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"shackled",duration:0,chance:100}
 
-execute if score $brittle_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"brittle",duration:0,amplifier:0,Chance:100}
+execute if score $brittle_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"brittle",duration:0,amplifier:0,chance:100}
 
 
 
@@ -34,6 +34,9 @@ execute if score $stun_time ca.stat_calc_var matches 1.. store result storage ca
 
 execute if score $morph_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"morph"}].chance int 1 run scoreboard players get $morph_chance ca.stat_calc_var
 execute if score $charm_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"charmed"}].chance int 1 run scoreboard players get $charm_chance ca.stat_calc_var
+
+execute if score $morph_time ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"morph"}].duration int 1 run scoreboard players get $morph_time ca.stat_calc_var
+execute if score $charm_time ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"charmed"}].duration int 1 run scoreboard players get $charm_time ca.stat_calc_var
 
 execute if score $cloak ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"cloaking"}].duration int 1 run scoreboard players get $cloak ca.stat_calc_var
 
