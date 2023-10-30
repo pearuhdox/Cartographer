@@ -1,5 +1,6 @@
 tag @s add ca.checked
-scoreboard players set @s ca.morph_time 85
+scoreboard players operation @s ca.morph_time = $morph_value ca.status_var
+scoreboard players add @s ca.morph_time 5
 
 function cartographer_custom_statuses:popup/morph
 
