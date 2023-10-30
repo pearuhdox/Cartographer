@@ -1,5 +1,5 @@
-data modify storage cartographer_mob_abilities:aura Effects set value []
-data modify storage cartographer_mob_abilities:aura Effects set from entity @s HandItems[1].tag.CustomPotionEffects
+data modify storage cartographer_mob_abilities:aura effects set value []
+data modify storage cartographer_mob_abilities:aura effects set from entity @s HandItems[1].tag.custom_potion_effects
 
 execute store result score $aura_size ca.mob_var run attribute @s minecraft:generic.follow_range get
 

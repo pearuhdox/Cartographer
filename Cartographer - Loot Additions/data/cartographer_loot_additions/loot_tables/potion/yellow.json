@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Haste\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:3,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:14270531}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Haste\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:haste\",amplifier:0b,duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:14270531}"
             }
           ]
         }

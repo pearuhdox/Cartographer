@@ -87,7 +87,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Liquefied Totem\",\"color\":\"white\",\"italic\":false}'},LiquefiedTotem:1,CustomPotionEffects:[{Id:10b,Amplifier:1b,Duration:600},{Id:22b,Amplifier:1b,Duration:240}],CustomPotionColor:16774912}"
+              "tag": "{display:{Name:'{\"text\":\"Liquefied Totem\",\"color\":\"white\",\"italic\":false}'},LiquefiedTotem:1,custom_potion_effects:[{id:\"minecraft:regeneration\",amplifier:1b,duration:600},{id:\"minecraft:absorption\",amplifier:1b,duration:240}],CustomPotionColor:16774912}"
             }
           ]
         }

@@ -22,7 +22,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{StatusInflict:[{Id:\"shackled\"}]}"
+                  "nbt": "{apply_status:[{id:\"shackled\"}]}"
                 }
               ]
             }
@@ -32,7 +32,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{CustomStatuses:[{Id:\"shackled\"}]}"
+                  "nbt": "{custom_statuses:[{id:\"shackled\"}]}"
                 }
               ]
             }
@@ -47,5 +47,5 @@
     "rewards": {
         "function": "cartographer_custom_statuses:descriptions/shackled"
     },
-    "parent": "cartographer_custom_statuses:possess"
+    "parent": "cartographer_custom_statuses:oiled"
 }

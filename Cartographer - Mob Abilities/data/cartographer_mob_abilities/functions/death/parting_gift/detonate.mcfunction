@@ -1,4 +1,4 @@
-playsound minecraft:delta.entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1 1.3
+playsound minecraft:entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1 1.3
 
 particle minecraft:cloud ~ ~0.3 ~ 1 0 1 0.05 100 normal
 function cartographer_mob_abilities:death/parting_gift/ring_vfx

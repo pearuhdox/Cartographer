@@ -7,8 +7,8 @@ execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..3.5] run 
 
 execute as @e[type=#bb:hostile,distance=..3.5] at @s run function cartographer_mob_abilities:passive/duplicate_explosion_mob 
 
-playsound minecraft:delta.entity.generic.explode hostile @a[distance=..12] ~ ~ ~ 1 2
+playsound minecraft:entity.generic.explode hostile @a[distance=..12] ~ ~ ~ 1 2
 
-function delta:api/explosion_particle
+particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 force
 
 tp 31182015-4512-2011-3118-115180000000 4206900 128 4206900

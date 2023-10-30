@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Fire Resistance\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:12,Amplifier:0b,Duration:12000}],Potion:\"minecraft:awkward\",CustomPotionColor:14981690}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Fire Resistance\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:fire_resistance\",amplifier:0b,duration:12000}],Potion:\"minecraft:awkward\",CustomPotionColor:14981690}"
             }
           ]
         }

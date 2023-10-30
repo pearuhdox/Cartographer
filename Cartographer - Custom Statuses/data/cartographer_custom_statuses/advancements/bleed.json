@@ -23,7 +23,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{StatusInflict:[{Id:\"bleeding\"}]}"
+            "nbt": "{apply_status:[{id:\"bleeding\"}]}"
           }
         ]
       }
@@ -33,7 +33,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{CustomStatuses:[{Id:\"bleeding\"}]}"
+            "nbt": "{custom_statuses:[{id:\"bleeding\"}]}"
           }
         ]
       }

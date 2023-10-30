@@ -1,1 +1,1 @@
-summon area_effect_cloud ~ ~1 ~ {Particle:"block air",ReapplicationDelay:0,Radius:0.1f,RadiusOnUse:-5.0f,Duration:10,DurationOnUse:0,Age:-1,WaitTime:0,Potion:"minecraft:water",Effects:[{Id:3,Amplifier:99b,Duration:2,ShowParticles:0b}]}
+summon area_effect_cloud ~ ~1 ~ {Particle:"block air",ReapplicationDelay:0,Radius:0.1f,RadiusOnUse:-5.0f,Duration:10,DurationOnUse:0,Age:-1,WaitTime:0,Potion:"minecraft:water",effects:[{id:"minecraft:haste",amplifier:99b,duration:2,ShowParticles:0b}]}

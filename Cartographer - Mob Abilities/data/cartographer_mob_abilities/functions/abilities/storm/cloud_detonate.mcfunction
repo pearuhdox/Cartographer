@@ -1,4 +1,4 @@
-playsound minecraft:delta.entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1.5 0.8
+playsound minecraft:entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1.5 0.8
 playsound minecraft:entity.firework_rocket.twinkle_far hostile @a[distance=..16] ~ ~ ~ 1.5 0.8
 
 function cartographer_mob_abilities:abilities/storm/visuals/master/line

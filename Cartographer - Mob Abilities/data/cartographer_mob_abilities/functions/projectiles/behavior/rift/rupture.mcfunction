@@ -1,4 +1,4 @@
-playsound minecraft:delta.entity.generic.explode player @a[distance=..10] ~ ~ ~ 0.15 1.75
+playsound minecraft:entity.generic.explode player @a[distance=..10] ~ ~ ~ 0.15 1.75
 
 function cartographer_mob_abilities:ability_traits/trait_warnings/projectile
 function cartographer_mob_abilities:ability_traits/trait_warnings/projectile

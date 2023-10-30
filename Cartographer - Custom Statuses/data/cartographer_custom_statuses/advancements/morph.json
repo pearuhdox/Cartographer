@@ -22,7 +22,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomStatuses:[{Id:\"morph\"}]}"
+                        "nbt": "{custom_statuses:[{id:\"morph\"}]}"
                     }
                 ]
             }
@@ -32,7 +32,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{StatusInflict:[{Id:\"morph\"}]}"
+                  "nbt": "{apply_status:[{id:\"morph\"}]}"
                 }
               ]
             }

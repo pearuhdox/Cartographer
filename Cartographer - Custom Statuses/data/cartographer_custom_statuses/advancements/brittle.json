@@ -23,7 +23,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{StatusInflict:[{Id:\"brittle\"}]}"
+            "nbt": "{apply_status:[{id:\"brittle\"}]}"
           }
         ]
       }
@@ -33,7 +33,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{CustomStatuses:[{Id:\"brittle\"}]}"
+            "nbt": "{custom_statuses:[{id:\"brittle\"}]}"
           }
         ]
       }

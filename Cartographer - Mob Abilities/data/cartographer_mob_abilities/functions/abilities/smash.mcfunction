@@ -34,7 +34,7 @@ execute unless entity @a[tag=ability_tagged,gamemode=!spectator,gamemode=!creati
 
 tag @a remove ability_tagged
 
-data modify entity @s ActiveEffects append value {Id:28b,Duration:10,Amplifier:0b}
+data modify entity @s active_effects append value {id:"minecraft:slow_falling",duration:10,amplifier:0b}
 
 scoreboard players set @s ca.smash_air -1
 

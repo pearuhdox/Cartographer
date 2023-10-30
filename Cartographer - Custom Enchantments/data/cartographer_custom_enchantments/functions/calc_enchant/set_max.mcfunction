@@ -92,7 +92,6 @@ execute if score @s ca.off_infection matches 4.. run scoreboard players set @s c
 execute if score @s ca.off_electrocute matches 4.. run scoreboard players set @s ca.off_electrocute 3
 execute if score @s ca.off_bleeding matches 4.. run scoreboard players set @s ca.off_bleeding 3
 execute if score @s ca.off_fire_aspect matches 4.. run scoreboard players set @s ca.off_fire_aspect 3
-execute if score @s ca.off_possession matches 4.. run scoreboard players set @s ca.off_possession 3
 
 execute if score @s ca.t_fire matches 4.. run scoreboard players set @s ca.t_fire 3
 execute if score @s ca.t_frost matches 6.. run scoreboard players set @s ca.t_frost 5

@@ -92,7 +92,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Antidote\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"Regeneration II (0:02)\",\"color\":\"blue\",\"italic\":false}','{\"text\":\"Cleansing\",\"color\":\"blue\",\"italic\":false}']},HideFlags:32,CustomPotionEffects:[{Id:9b,Amplifier:100b,Duration:100},{Id:10b,Amplifier:1b,Duration:40}],Potion:\"minecraft:water\",CustomPotionColor:11403249}"
+              "tag": "{display:{Name:'{\"text\":\"Antidote\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"Regeneration II (0:02)\",\"color\":\"blue\",\"italic\":false}','{\"text\":\"Cleansing\",\"color\":\"blue\",\"italic\":false}']},HideFlags:32,custom_potion_effects:[{id:\"minecraft:nasuea\",amplifier:100b,duration:100},{id:\"minecraft:regeneration\",amplifier:1b,duration:40}],Potion:\"minecraft:water\",CustomPotionColor:11403249}"
             }
           ]
         }

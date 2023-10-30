@@ -1,13 +1,13 @@
-#writing into storage {Ambient: 0b, ShowIcon: 0b, ShowParticles: 0b, Duration: 20, Id: 11b, Amplifier: 0b}
-data modify storage ca_core:resistance_true effect set from entity @s ActiveEffects[{Id:11}] 
+#writing into storage {Ambient: 0b, ShowIcon: 0b, ShowParticles: 0b, Duration: 20, Id: 11b, amplifier: 0b}
+data modify storage ca_core:resistance_true effect set from entity @s active_effects[{id:"minecraft:resistance"}] 
 
-execute store result score @s ca.res.amp run data get storage ca_core:resistance_true effect.Amplifier
+execute store result score @s ca.res.amp run data get storage ca_core:resistance_true effect.amplifier
 execute store result score @s ca.res.dur run data get storage ca_core:resistance_true effect.Duration
 
 execute if score @s ca.res.amp matches 4.. if score @s ca.res.dur matches ..21 if data storage ca_core:resistance_true effect.HiddenEffect run data modify storage ca_core:resistance_true effect set from storage ca_core:resistance_true effect.HiddenEffect
 
 #reading values
-execute store result score @s ca.res.amp run data get storage ca_core:resistance_true effect.Amplifier
+execute store result score @s ca.res.amp run data get storage ca_core:resistance_true effect.amplifier
 execute store result score @s ca.res.par run data get storage ca_core:resistance_true effect.ShowParticles
 execute store result score @s ca.res.dur run data get storage ca_core:resistance_true effect.Duration
 execute store result score @s ca.res.amb run data get storage ca_core:resistance_true effect.Ambient

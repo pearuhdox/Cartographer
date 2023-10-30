@@ -22,7 +22,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomStatuses:[{Id:\"infection\"}]}"
+                        "nbt": "{custom_statuses:[{id:\"infection\"}]}"
                     }
                 ]
             }
@@ -32,7 +32,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{StatusInflict:[{Id:\"infection\"}]}"
+                  "nbt": "{apply_status:[{id:\"infection\"}]}"
                 }
               ]
             }

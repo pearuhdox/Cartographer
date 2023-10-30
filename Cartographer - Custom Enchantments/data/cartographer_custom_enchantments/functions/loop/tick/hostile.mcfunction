@@ -35,3 +35,7 @@ execute if score @s ca.deadeye matches 2.. run function cartographer_custom_ench
 scoreboard players set @s ca.deadeye 0
 
 execute if score @s ca.deadeye_time matches 1.. run scoreboard players remove @s ca.deadeye_time 1
+
+#Setup Ricochet Score
+execute unless score @s ca.ricochet_cooldown matches 0.. run scoreboard players set @s ca.ricochet_cooldown 0
+execute if score @s ca.ricochet_cooldown matches 1.. run scoreboard players remove @s ca.ricochet_cooldown 1

@@ -14,10 +14,10 @@ scoreboard players operation $knockback ca.gravity = @s ca.g_knock
 
 scoreboard players operation $cauterize ca.gravity = @s ca.cauterize
 
-data modify storage cartographer_custom_enchantments:gravity data.Effect set value {}
-data modify storage cartographer_custom_enchantments:gravity data.Effect set from entity @s ActiveEffects[{Id:8}].HiddenEffect
+data modify storage cartographer_custom_enchantments:gravity data.effect set value {}
+data modify storage cartographer_custom_enchantments:gravity data.effect set from entity @s active_effects[{id:"minecraft:jump_boost"}].HiddenEffect
 
-execute store result score $jb ca.gravity_fall run data get storage cartographer_custom_enchantments:gravity data.Effect.Amplifier
+execute store result score $jb ca.gravity_fall run data get storage cartographer_custom_enchantments:gravity data.effect.amplifier
 
 execute if entity @s[tag=ca.ae_main] if entity @s[tag=ca.ce_gravity_main] run tag @s add ca.check_ae_main
 execute if entity @s[tag=ca.ae_offh] if entity @s[tag=ca.ce_gravity_offh] run tag @s add ca.check_ae_offh
@@ -34,7 +34,7 @@ execute if entity @s[tag=ca.si_legs] if entity @s[tag=ca.ce_gravity_legs] run ta
 execute if entity @s[tag=ca.si_feet] if entity @s[tag=ca.ce_gravity_feet] run tag @s add ca.check_si_feet
 
 function cartographer_custom_statuses:apply_effects/save/additive/do
-function cartographer_custom_statuses:status_inflict/save/additive/do
+function cartographer_custom_statuses:apply_status/save/additive/do
 
 
 execute as @e[distance=..3.5,type=#bb:hostile] at @s run function cartographer_custom_enchantments:enchant_effects/gravity/mob

@@ -5,7 +5,7 @@ tag @s remove ca.st.e_brittle
 tag @s remove ca.st.e_infected
 tag @s remove ca.st.e_morph
 tag @s remove ca.st.e_oiled
-tag @s remove ca.st.e_possessed
+tag @s remove ca.st.e_charmed
 tag @s remove ca.st.e_shackled
 tag @s remove ca.st.e_shocked
 tag @s remove ca.st.e_stunned

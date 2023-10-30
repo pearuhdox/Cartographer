@@ -1,2 +1,2 @@
-execute if entity @s[nbt={ActiveEffects:[{Id:15}]}] run attribute @s minecraft:generic.follow_range modifier add 0-0-0-1-5 "blind" -1 multiply_base
-execute if entity @s[nbt={ActiveEffects:[{Id:15,Duration:1}]}] run attribute @s minecraft:generic.follow_range modifier remove 0-0-0-1-5
+execute if entity @s[nbt={active_effects:[{id:"minecraft:blindness"}]}] run attribute @s minecraft:generic.follow_range modifier add 0-0-0-1-5 "blind" -1 multiply_base
+execute if entity @s[nbt={active_effects:[{id:"minecraft:blindness",duration:1}]}] run attribute @s minecraft:generic.follow_range modifier remove 0-0-0-1-5

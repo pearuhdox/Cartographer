@@ -11,8 +11,8 @@ execute if score @s ca.effect_infect matches 1.. run function cartographer_custo
 execute as @s[scores={ca.effect_stun=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned/tenacity_calculate
 execute as @s[scores={ca.effect_stun_duration=1..}] at @s run function cartographer_custom_statuses:tick_effects/stunned/effect
 
-#Run Possession
-execute as @s[scores={ca.possess_time=1..}] at @s run function cartographer_custom_statuses:tick_effects/possession/warmup
+#Run Charmed
+execute if score @s ca.charm_time matches 1.. if score @s ca.effect_charmed matches 1.. run function cartographer_custom_statuses:tick_effects/charmed/warmup
 
 #Run Oiled
 execute if score @s ca.effect_oiled_duration matches 1.. run function cartographer_custom_statuses:effects/oiled/do
@@ -42,7 +42,7 @@ execute as @s[predicate=cartographer_custom_statuses:is_blind] at @s run functio
 execute if entity @a[predicate=cartographer_custom_statuses:is_stealthed] run function cartographer_custom_statuses:effects/stealthed/entity
 
 execute if score @s ca.morph_immune matches 1.. run scoreboard players remove @s ca.morph_immune 1
-execute if score @s ca.possess_immune matches 1.. run scoreboard players remove @s ca.possess_immune 1
+execute if score @s ca.charm_immune matches 1.. run scoreboard players remove @s ca.charm_immune 1
 
 #Run Strength and Weakness Percentage
 execute if score $percent_str_weak ca.gamerule matches 1.. unless score @s ca.strength_dur matches 1.. if predicate cartographer_custom_statuses:has_strength run function cartographer_custom_statuses:effects/strength/get
@@ -56,3 +56,8 @@ execute if score $percent_str_weak ca.gamerule matches 1.. if score @s ca.weak_d
 
 #Run Visuals for Bleed, Shocked, and Cloaked
 execute if score @s ca.effect_cloak matches 1.. run function cartographer_custom_statuses:loop/tick/cloak_branch
+
+
+#Teleport AECs to mobs
+execute if score $timer ca.aec_to_mob matches 1.. as @s at @s run function cartographer_custom_statuses:apply_effects/apply/aec_to_mob
+execute if score $timer ca.aec_to_mob matches 1 run scoreboard players set @s ca.aec_to_mob 0

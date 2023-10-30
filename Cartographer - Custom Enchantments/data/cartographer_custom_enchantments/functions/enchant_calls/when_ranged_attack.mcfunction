@@ -65,9 +65,6 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_infect
 #Bleed
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_bleed] run function cartographer_custom_enchantments:enchant_effects/bleed
 
-#Possess
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_possess] run function cartographer_custom_enchantments:enchant_effects/possess
-
 #Tempo Theft
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_tempo_1] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_tempo_2] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
@@ -117,11 +114,6 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_singe_
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_exposing_1] at @s run function cartographer_custom_enchantments:enchant_effects/exposing/ranged
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_exposing_2] at @s run function cartographer_custom_enchantments:enchant_effects/exposing/ranged
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_exposing_3] at @s run function cartographer_custom_enchantments:enchant_effects/exposing/ranged
-
-#Possession - Trident
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_possession_1] at @s run function cartographer_custom_enchantments:enchant_effects/possession/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_possession_2] at @s run function cartographer_custom_enchantments:enchant_effects/possession/ranged
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_possession_3] at @s run function cartographer_custom_enchantments:enchant_effects/possession/ranged
 
 #Fire Aspect - Trident
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_fire_aspect_1] at @s run function cartographer_custom_enchantments:enchant_effects/fire_aspect_ranged

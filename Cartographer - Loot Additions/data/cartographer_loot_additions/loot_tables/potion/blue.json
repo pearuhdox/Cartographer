@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Water Breathing\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:13,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:3035801}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Water Breathing\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:water_breathing\",amplifier:0b,duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:3035801}"
             }
           ]
         }

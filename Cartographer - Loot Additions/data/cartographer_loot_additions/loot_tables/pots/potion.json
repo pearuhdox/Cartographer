@@ -18,7 +18,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Resistance\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:11,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:10044730}"
+                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Resistance\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:resistance\",amplifier:0b,duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:10044730}"
               }
             ]
           },
@@ -28,7 +28,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Haste\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:3,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:14270531}"
+                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Haste\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:haste\",amplifier:0b,duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:14270531}"
               }
             ]
           },
@@ -38,7 +38,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Strength\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:5,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:9643043}"
+                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Strength\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:strength\",amplifier:0b,duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:9643043}"
               }
             ]
           },
@@ -48,7 +48,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Speed\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:1,Amplifier:0b,Duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:8171462}"
+                "tag": "{display:{Name:'{\"text\":\"Greater Potion of Speed\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:speed\",amplifier:0b,duration:18000}],Potion:\"minecraft:awkward\",CustomPotionColor:8171462}"
               }
             ]
           }

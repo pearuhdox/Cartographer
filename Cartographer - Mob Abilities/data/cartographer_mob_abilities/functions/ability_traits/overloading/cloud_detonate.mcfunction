@@ -1,4 +1,4 @@
-playsound minecraft:delta.entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1.5 0.8
+playsound minecraft:entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1.5 0.8
 playsound minecraft:entity.firework_rocket.twinkle_far hostile @a[distance=..16] ~ ~ ~ 1.5 0.8
 
 particle minecraft:electric_spark ~ ~4 ~ 0.1 2 0.1 0.3 70 normal

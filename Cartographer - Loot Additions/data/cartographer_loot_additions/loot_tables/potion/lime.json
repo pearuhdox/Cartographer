@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Jump Boost\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:8,Amplifier:2b,Duration:6000}],Potion:\"minecraft:awkward\",CustomPotionColor:2293580}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Jump Boost\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:jump_boost\",amplifier:2b,duration:6000}],Potion:\"minecraft:awkward\",CustomPotionColor:2293580}"
             }
           ]
         }

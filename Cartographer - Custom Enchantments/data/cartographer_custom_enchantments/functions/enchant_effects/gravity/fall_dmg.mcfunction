@@ -55,4 +55,4 @@ execute if score $gravity_dmg ca.gravity_fall matches 48 run damage @s 48 minecr
 execute if score $gravity_dmg ca.gravity_fall matches 49 run damage @s 49 minecraft:fall
 execute if score $gravity_dmg ca.gravity_fall matches 50.. run damage @s 50 minecraft:fall
 
-execute if data storage cartographer_custom_enchantments:gravity data.Effect.Amplifier run function cartographer_custom_enchantments:enchant_effects/gravity/reapply_jump_boost
+execute if data storage cartographer_custom_enchantments:gravity data.effect.amplifier run function cartographer_custom_enchantments:enchant_effects/gravity/reapply_jump_boost

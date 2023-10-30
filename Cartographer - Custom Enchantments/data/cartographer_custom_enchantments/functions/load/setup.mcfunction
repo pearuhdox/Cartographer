@@ -164,7 +164,7 @@ scoreboard objectives add ca.off_infection dummy
 scoreboard objectives add ca.off_electrocute dummy
 scoreboard objectives add ca.off_bleeding dummy
 scoreboard objectives add ca.off_fire_aspect dummy
-scoreboard objectives add ca.off_possession dummy
+
 
 scoreboard objectives add ca.wavedash dummy
 scoreboard objectives add ca.wavedash_time dummy

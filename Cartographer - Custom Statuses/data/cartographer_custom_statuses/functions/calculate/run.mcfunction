@@ -102,57 +102,57 @@ scoreboard players set $do_override_m ca.status_var 0
 
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.CustomStatuses run tag @s add ca.si_potion
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.custom_statuses run tag @s add ca.si_potion
 
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip head.tag.StatusInflict run tag @s add ca.si_head
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip head.tag.apply_status run tag @s add ca.si_head
 scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip body.tag.StatusInflict run tag @s add ca.si_body
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip body.tag.apply_status run tag @s add ca.si_body
 scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip legs.tag.StatusInflict run tag @s add ca.si_legs
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip legs.tag.apply_status run tag @s add ca.si_legs
 scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip feet.tag.StatusInflict run tag @s add ca.si_feet
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip feet.tag.apply_status run tag @s add ca.si_feet
 scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.StatusInflict run tag @s add ca.si_offh
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.apply_status run tag @s add ca.si_offh
 scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.StatusInflict run tag @s add ca.si_main
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.apply_status run tag @s add ca.si_main
 scoreboard players operation $do_si ca.status_var += $temp ca.status_var
 
 
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip head.tag.ApplyEffects run tag @s add ca.ae_head
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip head.tag.apply_effects run tag @s add ca.ae_head
 scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip body.tag.ApplyEffects run tag @s add ca.ae_body
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip body.tag.apply_effects run tag @s add ca.ae_body
 scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip legs.tag.ApplyEffects run tag @s add ca.ae_legs
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip legs.tag.apply_effects run tag @s add ca.ae_legs
 scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip feet.tag.ApplyEffects run tag @s add ca.ae_feet
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip feet.tag.apply_effects run tag @s add ca.ae_feet
 scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.ApplyEffects run tag @s add ca.ae_offh
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.apply_effects run tag @s add ca.ae_offh
 scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
 
 scoreboard players set $temp ca.status_var 0
-execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.ApplyEffects run tag @s add ca.ae_main
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.apply_effects run tag @s add ca.ae_main
 scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
 
 

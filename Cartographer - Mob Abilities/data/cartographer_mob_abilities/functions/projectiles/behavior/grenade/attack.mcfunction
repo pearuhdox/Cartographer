@@ -10,7 +10,7 @@ execute if entity @s[tag=ca.cursing] run particle squid_ink ~ ~0.4 ~ 2 0.3 2 0.0
 
 
 particle explosion ~ ~0.25 ~ 1.5 0 1.5 0 8 normal
-playsound minecraft:delta.entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 2 1
+playsound minecraft:entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 2 1
 
 scoreboard players set $explosion ca.dmg_type 1
 scoreboard players set $projectile ca.dmg_type 1

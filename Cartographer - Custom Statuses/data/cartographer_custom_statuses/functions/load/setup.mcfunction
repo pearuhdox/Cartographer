@@ -26,9 +26,9 @@ scoreboard objectives add ca.effect_shock_chance dummy
 scoreboard objectives add ca.effect_infect dummy
 scoreboard objectives add ca.effect_infect_chance dummy
 
-scoreboard objectives add ca.eft_possess dummy
-scoreboard objectives add ca.possess_time dummy
-scoreboard objectives add ca.possess_immune dummy
+scoreboard objectives add ca.effect_charmed dummy
+scoreboard objectives add ca.charm_time dummy
+scoreboard objectives add ca.charm_immune dummy
 
 
 scoreboard objectives add ca.effect_cloak dummy
@@ -70,11 +70,13 @@ scoreboard objectives add ca.decay_max dummy
 
 scoreboard objectives add ca.voltage_shocked dummy
 
+scoreboard objectives add ca.effect_morph dummy
 scoreboard objectives add ca.morph_time dummy
 scoreboard objectives add ca.morph_id dummy
 scoreboard objectives add ca.morph_immune dummy
 
 scoreboard objectives add ca.death_registry dummy
+scoreboard objectives add ca.aec_to_mob dummy
 
 scoreboard objectives add ca.status_var dummy
 scoreboard objectives add ca.stat_calc_var dummy

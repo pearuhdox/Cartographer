@@ -1,4 +1,4 @@
-playsound minecraft:delta.entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1 1.25
+playsound minecraft:entity.generic.explode hostile @a[distance=..16] ~ ~ ~ 1 1.25
 
 particle minecraft:explosion ~ ~-0.5 ~ 1.5 0 1.5 0 25 normal
 

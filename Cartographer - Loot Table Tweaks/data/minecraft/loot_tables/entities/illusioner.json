@@ -87,7 +87,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Liquefied Illusion\",\"color\":\"white\",\"italic\":false}'},CustomPotionEffects:[{Id:14b,Amplifier:0b,Duration:600}],CustomPotionColor:87150}"
+              "tag": "{display:{Name:'{\"text\":\"Liquefied Illusion\",\"color\":\"white\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:invisibility\",amplifier:0b,duration:600}],CustomPotionColor:87150}"
             }
           ]
         },
@@ -104,7 +104,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Illusion Arrow\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"Blindness (0:03)\",\"color\":\"red\",\"italic\":false}']},HideFlags:32,CustomPotionEffects:[{Id:15b,Amplifier:0b,Duration:60}],CustomPotionColor:2566704}"
+              "tag": "{display:{Name:'{\"text\":\"Illusion Arrow\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"Blindness (0:03)\",\"color\":\"red\",\"italic\":false}']},HideFlags:32,custom_potion_effects:[{id:\"minecraft:blindness\",amplifier:0b,duration:60}],CustomPotionColor:2566704}"
             }
           ]
         }

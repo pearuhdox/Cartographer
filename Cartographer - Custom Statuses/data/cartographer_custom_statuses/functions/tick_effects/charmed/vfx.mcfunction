@@ -1,0 +1,12 @@
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~0.5 ~ ~ 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~0.43 ~ ~0.25 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~0.25 ~ ~0.43 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~ ~ ~0.5 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~-0.25 ~ ~0.43 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~-0.43 ~ ~0.25 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~-0.5 ~ ~ 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~-0.43 ~ ~-0.25 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~-0.25 ~ ~-0.43 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~ ~ ~-0.5 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~0.25 ~ ~-0.43 0 0 0 0 1 force
+particle minecraft:dust_color_transition 1 0.635 0.847 1 1 1 1 ~0.43 ~ ~-0.25 0 0 0 0 1 force

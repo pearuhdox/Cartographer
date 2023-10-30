@@ -26,7 +26,7 @@ execute if score $executioner ca.momentum matches 1.. at @s run function cartogr
 
 #Statuses!
 execute at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
-execute at @s run function cartographer_custom_statuses:status_inflict/apply/set_statuses
+execute at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 
 execute at @s positioned ~ ~0.1 ~ run particle minecraft:poof ~ ~ ~ 0.1 0.1 0.1 0 5 normal

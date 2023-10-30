@@ -9,4 +9,4 @@ data modify entity @s WaitTime set value 0
 data modify entity @s Potion set value "minecraft:awkward"
 
 
-data modify entity @s Effects set from storage cartographer_mob_abilities:aura Effects
+data modify entity @s effects set from storage cartographer_mob_abilities:aura effects

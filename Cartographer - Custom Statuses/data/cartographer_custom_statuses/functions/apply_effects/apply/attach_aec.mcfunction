@@ -42,4 +42,9 @@ execute if score $aec ca.death_registry matches 19 run ride 3118200b-1615-2032-1
 
 execute if score $aec ca.death_registry matches 20 run ride 3118200b-1615-2032-1192-000000000019 mount @s
 
+
+scoreboard players operation @s ca.aec_to_mob = $aec ca.death_registry
+scoreboard players set $timer ca.aec_to_mob 21
+
+
 execute on passengers if entity @s[type=area_effect_cloud,tag=ca.apply_effects] run function cartographer_custom_statuses:apply_effects/apply/aec_data

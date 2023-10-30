@@ -11,6 +11,6 @@ scoreboard players set $ammo_normal ca.ench_var 0
 scoreboard players set $ammo_spectral ca.ench_var 0
 scoreboard players set $ammo_tipped ca.ench_var 0
 
-function cartographer_custom_enchantments:enchant_effects/repeating/recurse/quiver
+function cartographer_custom_enchantments:enchant_effects/repeating/recurse/quiver_start
 
 function cartographer_custom_enchantments:enchant_effects/repeating/recurse/take_arrows

@@ -51,7 +51,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{StatusInflict:[{Id:\"cloaking\"}]}"
+            "nbt": "{apply_status:[{id:\"cloaking\"}]}"
           }
         ]
       }
@@ -61,7 +61,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{CustomStatuses:[{Id:\"cloaking\"}]}"
+            "nbt": "{custom_statuses:[{id:\"cloaking\"}]}"
           }
         ]
       }

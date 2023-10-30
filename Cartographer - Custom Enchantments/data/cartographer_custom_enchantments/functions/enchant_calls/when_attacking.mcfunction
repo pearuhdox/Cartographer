@@ -19,19 +19,19 @@ execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.c
 #Fire Aspect - Needs to run after Cauterize
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.fire_aspect=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/fire_aspect
 
-#Duelist
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.duelist=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/duelist
 #Echo
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[tag=!ca.echo_charge_taken,scores={ca.echo=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/echo
 #Evocation
 execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.echo matches 1.. if entity @s[scores={ca.evocation=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/evocation
 #Frostbite
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.frostbite=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/frostbite
-#Hunter
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.hunter=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/hunter
 
+#Duelist
+execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.duelist=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/duelist
+#Hunter
+execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.hunter=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/hunter
 #Singe
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.singe=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/singe
+execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.singe=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/singe
 
 #Rally
 execute if score $rally_restore ca.rally matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/restore

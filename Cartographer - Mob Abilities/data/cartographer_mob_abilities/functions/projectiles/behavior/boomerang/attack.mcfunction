@@ -7,7 +7,7 @@ execute if entity @s[tag=ca.zephyrous] run particle cloud ~ ~0.25 ~ 0.5 0 0.5 0.
 execute if entity @s[tag=ca.webbing] run particle block minecraft:cobweb ~ ~0.25 ~ 0.5 0 0.5 0.05 15 normal
 execute if entity @s[tag=ca.cursing] run particle squid_ink ~ ~0.25 ~ 0.5 0 0.5 0.05 1 normal
 
-function delta:api/explosion_particle
+particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 force
 
 scoreboard players set $projectile ca.dmg_type 1
 

@@ -1,4 +1,4 @@
-execute positioned ~ ~1 ~ run function delta:api/explosion_particle
+execute positioned ~ ~1 ~ run particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 force
 
 execute unless score $check_sheep_missile ca.mob_var matches 1.. run particle minecraft:firework ~ ~1 ~ 0 0 0 0.2 30 normal
 execute if score $check_sheep_missile ca.mob_var matches 1.. run particle minecraft:witch ~ ~1 ~ 0.15 0.15 0.15 0.2 15 normal

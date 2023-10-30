@@ -20,7 +20,7 @@ execute if score @s ca.sprint_dash matches 1 run scoreboard players set $strengt
 execute if score @s ca.sprint_dash matches 2 run scoreboard players set $strength delta.api.launch 2400
 execute if score @s ca.sprint_dash matches 3.. run scoreboard players set $strength delta.api.launch 3000
 
-summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:0,Radius:0.1f,RadiusPerTick:0f,RadiusOnUse:-5.0f,Duration:10,DurationOnUse:0f,Age:-1,WaitTime:0,Effects:[{Id:17,Amplifier:71b,Duration:4,ShowParticles:0b}]}
+summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:0,Radius:0.1f,RadiusPerTick:0f,RadiusOnUse:-5.0f,Duration:10,DurationOnUse:0f,Age:-1,WaitTime:0,effects:[{id:"minecraft:hunger",amplifier:71b,duration:4,ShowParticles:0b}]}
 
 execute positioned as 31182015-1791-2513-1181-151800000000 facing entity @s feet rotated ~ ~35 positioned as @s run function delta:api/launch_looking
 

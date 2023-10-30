@@ -150,7 +150,6 @@ scoreboard players set @s ca.off_infection 0
 scoreboard players set @s ca.off_electrocute 0
 scoreboard players set @s ca.off_bleeding 0
 scoreboard players set @s ca.off_fire_aspect 0
-scoreboard players set @s ca.off_possession 0
 
 scoreboard players set @s ca.curse_rusting 0
 

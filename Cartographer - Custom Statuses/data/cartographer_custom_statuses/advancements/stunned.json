@@ -22,7 +22,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{StatusInflict:[{Id:\"stun\"}]}"
+                  "nbt": "{apply_status:[{id:\"stun\"}]}"
                 }
               ]
             }
@@ -32,7 +32,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{CustomStatuses:[{Id:\"stun\"}]}"
+                  "nbt": "{custom_statuses:[{id:\"stun\"}]}"
                 }
               ]
             }

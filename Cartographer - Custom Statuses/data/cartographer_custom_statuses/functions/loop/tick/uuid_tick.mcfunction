@@ -102,3 +102,5 @@ execute as 31182015-4512-0891-4658-000000000036 at @s run function cartographer_
 execute as 31182015-4512-0891-4658-000000000037 at @s run function cartographer_custom_statuses:player/custom_inflict/test_tracker
 execute as 31182015-4512-0891-4658-000000000038 at @s run function cartographer_custom_statuses:player/custom_inflict/test_tracker
 execute as 31182015-4512-0891-4658-000000000039 at @s run function cartographer_custom_statuses:player/custom_inflict/test_tracker
+
+

@@ -1,1 +1,1 @@
-stopsound @a[distance=..4] block minecraft:delta.entity.generic.explode
+stopsound @a[distance=..4] block minecraft:entity.generic.explode

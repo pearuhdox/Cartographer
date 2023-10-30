@@ -94,7 +94,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Phantom Bone Arrow\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"Levitation VI (0:02)\",\"color\":\"red\",\"italic\":false}','{\"text\":\"Slow Falling (0:03)\",\"color\":\"blue\",\"italic\":false}']},HideFlags:32,CustomPotionEffects:[{Id:25b,Amplifier:5b,Duration:40},{Id:28b,Amplifier:0b,Duration:60}],CustomPotionColor:15209}"
+              "tag": "{display:{Name:'{\"text\":\"Phantom Bone Arrow\",\"color\":\"white\",\"italic\":false}',Lore:['{\"text\":\"Levitation VI (0:02)\",\"color\":\"red\",\"italic\":false}','{\"text\":\"Slow Falling (0:03)\",\"color\":\"blue\",\"italic\":false}']},HideFlags:32,custom_potion_effects:[{id:\"minecraft:levitation\",amplifier:5b,duration:40},{id:\"minecraft:slow_falling\",amplifier:0b,duration:60}],CustomPotionColor:15209}"
             }
           ]
         }

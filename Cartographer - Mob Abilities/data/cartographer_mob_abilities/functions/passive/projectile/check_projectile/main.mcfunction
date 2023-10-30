@@ -1,7 +1,7 @@
 #Runs the fire charge projectile passive
 data remove storage cartographer_mob_abilities:projectile data.effects
 
-data modify storage cartographer_mob_abilities:projectile data.effects set from entity @s HandItems[1].tag.CustomPotionEffects
+data modify storage cartographer_mob_abilities:projectile data.effects set from entity @s HandItems[1].tag.custom_potion_effects
 data modify storage cartographer_mob_abilities:projectile data.color set from entity @s HandItems[1].tag.CustomPotionColor
 data modify storage cartographer_mob_abilities:projectile data.id set from entity @s HandItems[1].id
 

@@ -22,7 +22,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomPotionEffects:[{Id:15}]}"
+                        "nbt": "{custom_potion_effects:[{id:\"minecraft:blindness\"}]}"
                     }
                 ]
             }
@@ -32,7 +32,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{ApplyEffects:[{Id:15}]}"
+                        "nbt": "{apply_effects:[{id:\"minecraft:blindness\"}]}"
                     }
                 ]
             }

@@ -4,4 +4,4 @@ data remove storage cartographer_custom_enchantments:repeating ArrowList[0]
 
 execute if score $arrow_ct ca.ench_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/repeating/recurse/quiver_rec
 
-execute if score $ammo_ct ca.ench_var < @s ca.ammo if data storage cartographer_custom_enchantments:repeating ArrowList[0] run function cartographer_custom_enchantments:enchant_effects/repeating/recurse/quiver
+execute unless score $arrow_ct ca.ench_var matches 1.. if score $ammo_ct ca.ench_var <= @s ca.ammo if data storage cartographer_custom_enchantments:repeating ArrowList[0] run function cartographer_custom_enchantments:enchant_effects/repeating/recurse/quiver

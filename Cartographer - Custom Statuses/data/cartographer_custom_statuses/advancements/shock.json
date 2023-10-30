@@ -22,7 +22,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{StatusInflict:[{Id:\"shocking\"}]}"
+                  "nbt": "{apply_status:[{id:\"shocking\"}]}"
                 }
               ]
             }
@@ -32,7 +32,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomStatuses:[{Id:\"shocking\"}]}"
+                        "nbt": "{custom_statuses:[{id:\"shocking\"}]}"
                     }
                 ]
             }

@@ -3,12 +3,12 @@ playsound minecraft:entity.firework_rocket.large_blast player @s ~ ~ ~ 5 1.5
 kill @e[type=#bb:arrow,limit=3,sort=nearest,distance=..6,nbt=!{inGround:1b}]
 
 scoreboard players set $do_apply_effects ca.status_var 0
-scoreboard players set $do_status_inflict ca.status_var 0
+scoreboard players set $do_apply_status ca.status_var 0
 execute if entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_effects/save/mainhand
-execute if entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:status_inflict/save/mainhand
+execute if entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_status/save/mainhand
 
 execute if entity @s[tag=ca.deadeye_offhand] unless entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_effects/save/offhand
-execute if entity @s[tag=ca.deadeye_offnhand] unless entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:status_inflict/save/offhand
+execute if entity @s[tag=ca.deadeye_offnhand] unless entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_status/save/offhand
 
 scoreboard players set $frost ca.deadeye 0
 scoreboard players set $flame ca.deadeye 0

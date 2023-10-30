@@ -56,7 +56,7 @@ execute if score $thorns ca.t_exec matches 1.. run function cartographer_custom_
 
 #Statuses!
 function cartographer_custom_statuses:apply_effects/apply/create_aec
-function cartographer_custom_statuses:status_inflict/apply/set_statuses
+function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 #Reset this stat
 scoreboard players set $exec_dmg bbl.storage 0

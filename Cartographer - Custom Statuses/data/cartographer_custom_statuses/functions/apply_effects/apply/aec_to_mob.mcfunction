@@ -1,0 +1,21 @@
+execute if score @s ca.aec_to_mob matches 1 run tp 3118200b-1615-2032-1192-000000000000 @s
+execute if score @s ca.aec_to_mob matches 2 run tp 3118200b-1615-2032-1192-000000000001 @s
+execute if score @s ca.aec_to_mob matches 3 run tp 3118200b-1615-2032-1192-000000000002 @s
+execute if score @s ca.aec_to_mob matches 4 run tp 3118200b-1615-2032-1192-000000000003 @s
+execute if score @s ca.aec_to_mob matches 5 run tp 3118200b-1615-2032-1192-000000000004 @s
+execute if score @s ca.aec_to_mob matches 6 run tp 3118200b-1615-2032-1192-000000000005 @s
+execute if score @s ca.aec_to_mob matches 7 run tp 3118200b-1615-2032-1192-000000000006 @s
+execute if score @s ca.aec_to_mob matches 8 run tp 3118200b-1615-2032-1192-000000000007 @s
+execute if score @s ca.aec_to_mob matches 9 run tp 3118200b-1615-2032-1192-000000000008 @s
+execute if score @s ca.aec_to_mob matches 10 run tp 3118200b-1615-2032-1192-000000000009 @s
+
+execute if score @s ca.aec_to_mob matches 11 run tp 3118200b-1615-2032-1192-000000000010 @s
+execute if score @s ca.aec_to_mob matches 12 run tp 3118200b-1615-2032-1192-000000000011 @s
+execute if score @s ca.aec_to_mob matches 13 run tp 3118200b-1615-2032-1192-000000000012 @s
+execute if score @s ca.aec_to_mob matches 14 run tp 3118200b-1615-2032-1192-000000000013 @s
+execute if score @s ca.aec_to_mob matches 15 run tp 3118200b-1615-2032-1192-000000000014 @s
+execute if score @s ca.aec_to_mob matches 16 run tp 3118200b-1615-2032-1192-000000000015 @s
+execute if score @s ca.aec_to_mob matches 17 run tp 3118200b-1615-2032-1192-000000000016 @s
+execute if score @s ca.aec_to_mob matches 18 run tp 3118200b-1615-2032-1192-000000000017 @s
+execute if score @s ca.aec_to_mob matches 19 run tp 3118200b-1615-2032-1192-000000000018 @s
+execute if score @s ca.aec_to_mob matches 20 run tp 3118200b-1615-2032-1192-000000000019 @s

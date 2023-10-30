@@ -18,7 +18,7 @@ execute if score $punch ca.deadeye matches 1.. run function motion:motion/push
 
 #Statuses!
 function cartographer_custom_statuses:apply_effects/apply/create_aec
-function cartographer_custom_statuses:status_inflict/apply/set_statuses
+function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 scoreboard players set $deadeye_hit ca.deadeye 1
 

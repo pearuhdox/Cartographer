@@ -18,7 +18,7 @@ execute if score @s ca.disengage matches 1 run scoreboard players set $strength 
 execute if score @s ca.disengage matches 2 run scoreboard players set $strength delta.api.launch 5500
 execute if score @s ca.disengage matches 3.. run scoreboard players set $strength delta.api.launch 7000
 
-summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:0,Radius:0.1f,RadiusPerTick:0f,RadiusOnUse:-5.0f,Duration:10,DurationOnUse:0f,Age:-1,WaitTime:0,Effects:[{Id:17,Amplifier:75b,Duration:4,ShowParticles:0b}]}
+summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:0,Radius:0.1f,RadiusPerTick:0f,RadiusOnUse:-5.0f,Duration:10,DurationOnUse:0f,Age:-1,WaitTime:0,effects:[{id:"minecraft:hunger",amplifier:75b,duration:4,ShowParticles:0b}]}
 
 execute facing entity 31182015-1791-2513-1181-151800000000 feet positioned as @s run function delta:api/launch_looking
 

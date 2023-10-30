@@ -9,7 +9,7 @@ execute unless score $eruption ca.frostbite matches 1.. run function cartographe
 execute if score $eruption ca.frostbite matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/particle_snow
 execute if score $eruption ca.evocation matches 1.. rotated as @p rotated ~ 0 run function cartographer_custom_enchantments:enchant_effects/eruption/evocation_fangs
 
-data modify storage cartographer_custom_statuses:apply_effects data.Effects set value {}
-data modify storage cartographer_custom_statuses:status_inflict data.Effects set value {}
+data modify storage cartographer_custom_statuses:apply_effects data.effects set value {}
+data modify storage cartographer_custom_statuses:apply_status data.effects set value {}
 
 tag @s remove erupting_xp

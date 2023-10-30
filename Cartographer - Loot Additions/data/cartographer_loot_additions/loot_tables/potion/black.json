@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Lingering Potion of Debilitation\",\"color\":\"aqua\",\"italic\":false}',Lore:['{\"text\":\"Blindness (00:06)\",\"color\":\"red\",\"italic\":false}']},HideFlags:32,CustomPotionEffects:[{Id:15,Amplifier:0b,Duration:120}],Potion:\"minecraft:awkward\",CustomPotionColor:2697523}"
+              "tag": "{display:{Name:'{\"text\":\"Lingering Potion of Debilitation\",\"color\":\"aqua\",\"italic\":false}',Lore:['{\"text\":\"Blindness (00:06)\",\"color\":\"red\",\"italic\":false}']},HideFlags:32,custom_potion_effects:[{id:\"minecraft:blindness\",amplifier:0b,duration:120}],Potion:\"minecraft:awkward\",CustomPotionColor:2697523}"
             }
           ]
         }

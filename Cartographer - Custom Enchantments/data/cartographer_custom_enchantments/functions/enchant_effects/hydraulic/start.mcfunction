@@ -45,6 +45,6 @@ execute if score @s ca.hydraulic matches 1 run tag @s add ca.check_ae_offh
 execute if score @s ca.hydraulic matches 1 run tag @s add ca.check_si_offh
 
 function cartographer_custom_statuses:apply_effects/save/additive/do
-function cartographer_custom_statuses:status_inflict/save/additive/do
+function cartographer_custom_statuses:apply_status/save/additive/do
 
 execute positioned ^ ^ ^3 as @e[type=#bb:hostile,distance=..3] at @s run function cartographer_custom_enchantments:enchant_effects/hydraulic/enemy_branch

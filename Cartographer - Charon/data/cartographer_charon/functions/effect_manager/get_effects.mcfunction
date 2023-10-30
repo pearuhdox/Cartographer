@@ -1,22 +1,22 @@
 data modify storage cartographer_charon:effect_manager GetEffects set value []
-data modify storage cartographer_charon:effect_manager GetEffects set from entity @s ActiveEffects
+data modify storage cartographer_charon:effect_manager GetEffects set from entity @s active_effects
 
 #Remove Instant Effects
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:2}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:4}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:6}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:7}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:9}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:15}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:17}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:18}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:19}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:20}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:23}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:25}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:27}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:31}]
-data remove storage cartographer_charon:effect_manager GetEffects[{Id:33}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:slowness"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:mining_fatigue"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:instant_health"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:instant_damage"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:nausea"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:blindness"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:hunger"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:weakness"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:poison"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:wither"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:saturation"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:levitation"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:unluck"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:bad_omen"}]
+data remove storage cartographer_charon:effect_manager GetEffects[{id:"minecraft:darkness"}]
 
 data modify storage cartographer_charon:effect_manager SendEffects set value []
 

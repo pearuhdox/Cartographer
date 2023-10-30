@@ -1,22 +1,22 @@
 data modify storage cartographer_mob_abilities:curse GetEffects set value []
-data modify storage cartographer_mob_abilities:curse GetEffects set from entity @s ActiveEffects
+data modify storage cartographer_mob_abilities:curse GetEffects set from entity @s active_effects
 
 #Remove Negative Effects and Instant Effects
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:2}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:4}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:6}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:7}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:9}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:15}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:17}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:18}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:19}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:20}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:23}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:25}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:27}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:31}]
-data remove storage cartographer_mob_abilities:curse GetEffects[{Id:33}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:slowness"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:mining_fatigue"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:instant_health"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:instant_damage"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:nasuea"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:blindness"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:hunger"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:weakness"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:poison"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:wither"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:saturation"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:levitation"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:unluck"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:bad_omen"}]
+data remove storage cartographer_mob_abilities:curse GetEffects[{id:"minecraft:darkness"}]
 
 data modify storage cartographer_mob_abilities:curse SendEffects set value []
 #Recursively Change Effects

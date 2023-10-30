@@ -10,7 +10,7 @@ data merge entity @s {NoAI:0}
 
 playsound minecraft:block.iron_door.close hostile @a[distance=..20] ~ ~ ~ 2 0.5 1
 playsound minecraft:entity.zombie.attack_iron_door hostile @a[distance=..20] ~ ~ ~ 1 0.5 1
-playsound minecraft:delta.entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 0.75 2 1
+playsound minecraft:entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 0.75 2 1
 
 function cartographer_mob_abilities:abilities/hookshot/calc_damage
 

@@ -5,12 +5,12 @@ execute if predicate cartographer_custom_statuses:is_stealthed run function cart
 
 #Always Reset the Apply Effects and Status Inflict
 data modify storage cartographer_custom_statuses:apply_effects data set value {}
-data modify storage cartographer_custom_statuses:status_inflict data set value {}
+data modify storage cartographer_custom_statuses:apply_status data set value {}
 
 tag @s add ca.inflicting_player
 
 execute if entity @s[advancements={entityid:player_hurt_entity={tagless=true}}] unless entity @s[tag=ca.no_status_melee] run function cartographer_custom_statuses:calls/player_hit/melee
-execute if entity @s[tag=ca.no_status_melee] run scoreboard players set $do_status_inflict ca.status_var 0
+execute if entity @s[tag=ca.no_status_melee] run scoreboard players set $do_apply_status ca.status_var 0
 
 scoreboard players set $was_no_impact ca.status_var 0
 execute if entity @s[advancements={entityid:player_hurt_entity={no_impact=true}}] run scoreboard players set $was_no_impact ca.status_var 1

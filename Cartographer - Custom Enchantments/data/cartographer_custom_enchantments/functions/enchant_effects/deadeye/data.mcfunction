@@ -27,5 +27,5 @@ scoreboard players operation @s ca.damage_queue += $pb_dmg ca.deadeye
 
 tp @s ~ ~ ~ ~ ~
 
-data modify entity @s data.ApplyEffects set from storage cartographer_custom_statuses:apply_effects data.Effects
-data modify entity @s data.StatusInflict set from storage cartographer_custom_statuses:status_inflict data.Effects
+data modify entity @s data.apply_effects set from storage cartographer_custom_statuses:apply_effects data.effects
+data modify entity @s data.apply_status set from storage cartographer_custom_statuses:apply_status data.effects

@@ -9,9 +9,9 @@ scoreboard players operation $eruption ca.evocation = @s ca.evocation
 scoreboard players operation $eruption ca.executioner = @s ca.executioner
 
 scoreboard players set $do_apply_effects ca.status_var 0
-scoreboard players set $do_status_inflict ca.status_var 0
+scoreboard players set $do_apply_status ca.status_var 0
 function cartographer_custom_statuses:apply_effects/save/mainhand
-function cartographer_custom_statuses:status_inflict/save/mainhand
+function cartographer_custom_statuses:apply_status/save/mainhand
 
 
 

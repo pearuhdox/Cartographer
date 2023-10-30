@@ -8,7 +8,7 @@ execute unless score $inflict_chance ca.effect_brittle_duration matches 1.. run 
 
 #execute unless score $inflict_chance ca.effect_stun matches 1.. run scoreboard players set $inflict_chance ca.effect_stun 100
 #execute unless score $inflict_chance ca.morph_time matches 1.. run scoreboard players set $inflict_chance ca.morph_time 100
-#execute unless score $inflict_chance ca.possess_time matches 1.. run scoreboard players set $inflict_chance ca.possess_time 100
+#execute unless score $inflict_chance ca.charm_time matches 1.. run scoreboard players set $inflict_chance ca.charm_time 100
 
 execute if score $inflict ca.effect_bleed matches 1.. run function cartographer_custom_statuses:inflict/chance_statuses/bleeding
 execute if score $inflict ca.effect_shock matches 1.. run function cartographer_custom_statuses:inflict/chance_statuses/shocked
@@ -19,8 +19,9 @@ execute if score $inflict ca.effect_shackled matches 1.. run function cartograph
 execute if score $inflict ca.effect_brittle_duration matches 1.. run function cartographer_custom_statuses:inflict/chance_statuses/brittle
 
 execute if score $inflict_chance ca.effect_stun matches 1.. run function cartographer_custom_statuses:inflict/chance_statuses/stunned
-execute if score $inflict_chance ca.morph_time matches 1.. run function cartographer_custom_statuses:inflict/chance_statuses/morphed
-execute if score $inflict_chance ca.possess_time matches 1.. run function cartographer_custom_statuses:inflict/chance_statuses/possessed
+
+execute if score $inflict_time ca.morph_time matches 1.. run function cartographer_custom_statuses:inflict/chance_statuses/morphed
+execute if score $inflict_time ca.charm_time matches 1.. run function cartographer_custom_statuses:inflict/chance_statuses/charmed
 
 
 scoreboard players operation @s ca.effect_cloak > $inflict ca.effect_cloak

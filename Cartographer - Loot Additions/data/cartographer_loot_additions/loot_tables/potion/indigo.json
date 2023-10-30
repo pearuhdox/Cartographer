@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Night Vision\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:16,Amplifier:0b,Duration:24000}],Potion:\"minecraft:awkward\",CustomPotionColor:2039713}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Potion of Night Vision\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:night_vision\",amplifier:0b,duration:24000}],Potion:\"minecraft:awkward\",CustomPotionColor:2039713}"
             }
           ]
         }

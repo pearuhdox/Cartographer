@@ -38,7 +38,7 @@ scoreboard players operation $fb ca.frostbite = $eruption ca.frostbite
 execute if score $eruption ca.frostbite matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
 
 execute if score $do_apply_effects ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
-execute if score $do_status_inflict ca.status_var matches 1.. at @s run function cartographer_custom_statuses:status_inflict/apply/set_statuses
+execute if score $do_apply_status ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 
 #Executioner

@@ -13,7 +13,7 @@ execute if score @s ca.lexica_trig matches 105 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 106 run function cartographer_custom_statuses:lexica_calls/pages/category/infection
 execute if score @s ca.lexica_trig matches 107 run function cartographer_custom_statuses:lexica_calls/pages/category/morph
 execute if score @s ca.lexica_trig matches 108 run function cartographer_custom_statuses:lexica_calls/pages/category/oiled
-execute if score @s ca.lexica_trig matches 109 run function cartographer_custom_statuses:lexica_calls/pages/category/possessed
+execute if score @s ca.lexica_trig matches 109 run function cartographer_custom_statuses:lexica_calls/pages/category/charmed
 execute if score @s ca.lexica_trig matches 110 run function cartographer_custom_statuses:lexica_calls/pages/category/shackled
 execute if score @s ca.lexica_trig matches 111 run function cartographer_custom_statuses:lexica_calls/pages/category/shocking
 execute if score @s ca.lexica_trig matches 112 run function cartographer_custom_statuses:lexica_calls/pages/category/stunned

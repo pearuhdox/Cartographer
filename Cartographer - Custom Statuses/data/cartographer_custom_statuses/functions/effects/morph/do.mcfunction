@@ -1,6 +1,6 @@
 particle minecraft:cloud ~ ~1 ~ 0.3 0 0.3 0.1 10 normal
 playsound minecraft:entity.chicken.hurt player @a[distance=..8] ~ ~ ~ 2 0.75
-summon chicken ~ ~0.5 ~ {Glowing:1b,DeathLootTable:"cartographer_custom_enchantments:suspicious_chicken",Motion:[0.0,0.4,0.0],Tags:["ca.poultrygheist"],CustomName:'{"text":"Poultrygheist"}',ArmorItems:[{},{},{},{id:"minecraft:egg",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}]}}],ActiveEffects:[{Id:14,Amplifier:0b,Duration:20000000,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:1024}]}
+summon chicken ~ ~0.5 ~ {Glowing:1b,DeathLootTable:"cartographer_custom_enchantments:suspicious_chicken",Motion:[0.0,0.4,0.0],Tags:["ca.poultrygheist"],CustomName:'{"text":"Poultrygheist"}',ArmorItems:[{},{},{},{id:"minecraft:egg",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}]}}],active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:20000000,ShowParticles:0b}],Attributes:[{Name:generic.max_health,Base:1024}]}
 
 function cartographer_custom_statuses:effects/morph/mob_save
 

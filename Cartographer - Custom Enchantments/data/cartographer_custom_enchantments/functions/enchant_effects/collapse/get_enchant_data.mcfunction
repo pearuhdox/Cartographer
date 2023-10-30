@@ -14,7 +14,7 @@ execute store result score $energetic ca.collapse run data get entity @s Trident
 execute store result score $frenzy ca.collapse run data get entity @s Trident.tag.CustomEnchantments[{id:"frenzy"}].lvl
 execute store result score $concealed ca.collapse run data get entity @s Trident.tag.CustomEnchantments[{id:"concealed"}].lvl
 
-data modify storage cartographer_custom_statuses:apply_effects data.Effects set from entity @s Trident.tag.ApplyEffects
-data modify storage cartographer_custom_statuses:status_inflict data.Effects set from entity @s Trident.tag.StatusInflict
+data modify storage cartographer_custom_statuses:apply_effects data.effects set from entity @s Trident.tag.apply_effects
+data modify storage cartographer_custom_statuses:apply_status data.effects set from entity @s Trident.tag.apply_status
 
 execute as @e[type=armor_stand,tag=ca.collapsing_stand,distance=..1.5] at @s run function cartographer_custom_enchantments:enchant_effects/collapse/apply_status_data

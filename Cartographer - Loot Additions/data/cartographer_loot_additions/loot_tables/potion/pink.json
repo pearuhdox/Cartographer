@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'{\"text\":\"Greater Splash Potion of Healing\",\"color\":\"aqua\",\"italic\":false}'},CustomPotionEffects:[{Id:6,Amplifier:0b,Duration:1},{Id:10,Amplifier:2b,Duration:40}],Potion:\"minecraft:awkward\",CustomPotionColor:14950043}"
+              "tag": "{display:{Name:'{\"text\":\"Greater Splash Potion of Healing\",\"color\":\"aqua\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:instant_health\",amplifier:0b,duration:1},{id:\"minecraft:regeneration\",amplifier:2b,duration:40}],Potion:\"minecraft:awkward\",CustomPotionColor:14950043}"
             }
           ]
         }

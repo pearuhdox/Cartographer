@@ -1,0 +1,51 @@
+{
+    "display": {
+        "title": {
+            "text": "Charmed                  ",
+            "color": "#57dec0"
+        },
+        "description": {
+            "text": "Affected mob is briefly blinded, and after, attacks the nearest hostile mob to it for a limited time.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:pink_dye"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "find1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{apply_status:[{id:\"charmed\"}]}"
+                    }
+                ]
+            }
+        },
+        "find2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "nbt": "{custom_statuses:[{id:\"charmed\"}]}"
+                }
+              ]
+            }
+          }
+    },
+    "requirements": [
+        [
+            "find1",
+            "find2"
+        ]
+    ],
+    "rewards": {
+        "function": "cartographer_custom_statuses:descriptions/charmed"
+    },
+    "parent": "cartographer_custom_statuses:brittle"
+}

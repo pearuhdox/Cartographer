@@ -24,7 +24,7 @@ execute if entity @s[tag=ca.si_legs] if entity @s[tag=ca.ce_starfall_legs] run t
 execute if entity @s[tag=ca.si_feet] if entity @s[tag=ca.ce_starfall_feet] run tag @s add ca.check_si_feet
 
 function cartographer_custom_statuses:apply_effects/save/additive/do
-function cartographer_custom_statuses:status_inflict/save/additive/do
+function cartographer_custom_statuses:apply_status/save/additive/do
 
 
 execute as @e[type=#bb:hostile,distance=..15,limit=1,sort=random,tag=!ca.starfalled] run function cartographer_custom_enchantments:enchant_effects/starfall/hit

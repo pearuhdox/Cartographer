@@ -1,5 +1,5 @@
-execute store result score @s ca.exposed_lvl run data get entity @s ActiveEffects[{Id:31}].Amplifier
-execute store result score @s ca.exposed_dur run data get entity @s ActiveEffects[{Id:31}].Duration
+execute store result score @s ca.exposed_lvl run data get entity @s active_effects[{id:"minecraft:haste"}].amplifier
+execute store result score @s ca.exposed_dur run data get entity @s active_effects[{id:"minecraft:haste"}].duration
 
 scoreboard players add @s ca.exposed_dur 1
 scoreboard players add @s ca.exposed_lvl 1

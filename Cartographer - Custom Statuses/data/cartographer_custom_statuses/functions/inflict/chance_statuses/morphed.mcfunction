@@ -11,6 +11,6 @@ execute unless score $value bbl.rng < $inflict_chance ca.morph_time unless entit
 
 execute unless score $value bbl.rng < $inflict_chance ca.morph_time unless entity @s[tag=ca.boss] unless entity @s[tag=ca.was_morphed] unless score @s ca.morph_immune matches 1.. run scoreboard players set $do_chance ca.status_var 1
 
+execute if score $do_chance ca.status_var matches 1.. run scoreboard players operation @s ca.effect_morph = $inflict_time ca.morph_time
 execute if score $do_chance ca.status_var matches 1.. run function cartographer_custom_statuses:effects/morph/do
 execute if score $do_chance ca.status_var matches 1.. run scoreboard players set $success ca.status_var 1
-

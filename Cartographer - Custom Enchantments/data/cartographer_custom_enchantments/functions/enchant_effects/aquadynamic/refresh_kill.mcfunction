@@ -1,4 +1,4 @@
-execute store result score $duration ca.aquadynamic run data get entity @s ActiveEffects[{Id:29}].Duration
+execute store result score $duration ca.aquadynamic run data get entity @s active_effects[{id:"minecraft:water_breathing"}].duration
 
 scoreboard players operation $duration ca.aquadynamic /= $20 ca.CONSTANT
 

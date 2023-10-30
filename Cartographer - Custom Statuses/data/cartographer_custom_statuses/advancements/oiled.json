@@ -23,7 +23,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{StatusInflict:[{Id:\"oiled\"}]}"
+            "nbt": "{apply_status:[{id:\"oiled\"}]}"
           }
         ]
       }
@@ -33,7 +33,7 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{CustomStatuses:[{Id:\"oiled\"}]}"
+            "nbt": "{custom_statuses:[{id:\"oiled\"}]}"
           }
         ]
       }

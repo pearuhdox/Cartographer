@@ -13,10 +13,10 @@ tellraw @s [{"text":"❰","color":"green","bold":true},{"text":"⊰ Lexica Carto
 tellraw @s {"text":"A guide by a cartographer about Cartographer.","color":"#ACFFA6","bold":false,"italic":true}
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 
-tellraw @s [{"text":"Possession","color":"yellow","bold":true,"italic":false}]
+tellraw @s [{"text":"Charmed","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Affected mob is blinded for 3 seconds. After the blind channel is completed, the target attacks the nearest hostile mob to it for 6 seconds. It moves 20% faster while Possessed. Once a target has been attempted to be Possessed, it can never be attempted again.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Affected mob is blinded for 1 second. After the blind channel is completed, the target attacks the nearest hostile mob to it for the duration. When a mob finishes the channel, it moves 100% faster for 2 seconds, then moves 40% faster until the duration ends. Enemies that are Charmed cannot be Charmed again for a while, and enemies near a Charmed enemy are also temporarily immune to the effect. Charmed Creepers will detonate when the channel finishes.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
