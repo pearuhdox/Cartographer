@@ -18,7 +18,9 @@ scoreboard players operation $missile_dmg ca.ability_dmg = @s ca.ability_dmg
 execute if score $check_sheep_missile ca.mob_var matches 1.. run tag @s add ca.checked
 
 execute unless entity @s[tag=ca.checked] positioned ~ ~1 ~ if block ~ ~ ~ #bb:can_raycast as @a[distance=..2] at @s run function cartographer_mob_abilities:projectiles/behavior/magic_missile/detonate_player
-execute unless entity @s[tag=ca.checked] as @s positioned as @a[scores={ca.damage_queue=1..},distance=..2] run function cartographer_mob_abilities:helper/damage/ability_magic_untethered
+
+execute unless entity @s[tag=ca.checked] if entity @a[distance=..2] run function cartographer_mob_abilities:helper/damage/setup_macro
+execute unless entity @s[tag=ca.checked] as @s positioned as @a[distance=..2] run function cartographer_mob_abilities:helper/damage/ability_magic_untethered with storage cartographer:macro.mob_abilities
 
 execute unless entity @s[tag=ca.checked] unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits
 

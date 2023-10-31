@@ -1,0 +1,9 @@
+{
+    "values": [
+      "cartographer_mob_abilities:ability_generic",
+      "cartographer_mob_abilities:ability_projectile",
+      "cartographer_mob_abilities:ability_explosion",
+      "cartographer_mob_abilities:ability_magic",
+      "cartographer_mob_abilities:ability_melee"
+    ]
+  }

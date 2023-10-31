@@ -23,7 +23,9 @@ execute if entity @s[tag=ca.webbing] run scoreboard players set $zeph_check ca.m
 scoreboard players operation $grenade ca.ability_dmg = @s ca.ability_dmg
 
 execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3.5] at @s facing entity 31182015-4512-2011-3118-115180000000 feet rotated ~180 ~-30 run function cartographer_mob_abilities:projectiles/behavior/grenade/player
-execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..3.5] run function cartographer_mob_abilities:helper/damage/ability_projectile
+
+execute if entity @a[distance=..3.5] run function cartographer_mob_abilities:helper/damage/setup_macro
+execute as @s positioned as @a[distance=..3.5] run function cartographer_mob_abilities:helper/damage/ability_projectile with storage cartographer:macro.mob_abilities
 
 scoreboard players set $zeph_check ca.mob_var 0
 
