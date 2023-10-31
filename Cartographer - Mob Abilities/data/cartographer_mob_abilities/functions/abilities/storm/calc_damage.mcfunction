@@ -15,3 +15,4 @@ execute if entity @s[tag=ca.ability_dmg--] run function cartographer_mob_abiliti
 execute if entity @s[tag=ca.ability_dmg---] run function cartographer_mob_abilities:ability_traits/ability_dmg---/calculation
 
 scoreboard players operation $damage ca.ability_dmg /= $10 ca.CONSTANT
+scoreboard players operation @s ca.ability_dmg = $damage ca.ability_dmg

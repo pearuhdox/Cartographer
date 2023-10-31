@@ -15,7 +15,9 @@ scoreboard players operation $cau_time ca.ench_var /= $100 ca.CONSTANT
 execute if score $cau_time ca.ench_var matches 0 run scoreboard players set $cau_time ca.ench_var 1
 
 scoreboard players operation @s ca.damage_queue = $cau_time ca.ench_var
-function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass
+function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass with storage cartographer:macro.custom_enchantments
+
 
 #Add the tag for brittle to cleanse fire (1 tick delay).
 tag @s add ca.cleanse_fire

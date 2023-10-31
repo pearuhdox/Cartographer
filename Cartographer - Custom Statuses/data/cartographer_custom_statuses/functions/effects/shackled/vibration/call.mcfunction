@@ -1,0 +1,3 @@
+function cartographer_custom_statuses:effects/shackled/vibration/get_coordinates
+data merge storage cartographer_custom_statuses:shackled_vfx.coordinates {t:6}
+function cartographer_custom_statuses:effects/shackled/vibration/particle with storage cartographer_custom_statuses:shackled_vfx.coordinates

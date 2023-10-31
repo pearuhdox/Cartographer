@@ -1,5 +1,6 @@
 scoreboard players operation @s ca.damage_queue = $melee ca.attack_val
-function cartographer_custom_enchantments:helper/damage/enchant_damage
+function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 
 scoreboard players set @s co_y 2
 scoreboard players set @s co_send -5

@@ -1,4 +1,5 @@
-function cartographer_custom_enchantments:helper/damage/enchant_damage
+function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 
 
 #Do Knockback first
@@ -27,7 +28,8 @@ scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
 #Damage and Weakening for Melee Protection
 scoreboard players operation @s ca.damage_queue = $damage ca.hydraulic
-function cartographer_custom_enchantments:helper/damage/enchant_damage
+function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 
 particle minecraft:damage_indicator ~ ~1 ~ 0.25 0.25 0.25 0.1 4 force
 

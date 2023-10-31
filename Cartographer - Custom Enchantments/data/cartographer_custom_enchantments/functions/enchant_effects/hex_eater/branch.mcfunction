@@ -22,7 +22,9 @@ execute if score @s ca.effect_infect matches 1.. run scoreboard players add $dmg
 scoreboard players operation $dmg ca.hex_eater *= $lvl ca.hex_eater
 
 scoreboard players operation @s ca.damage_queue = $dmg ca.hex_eater
-execute if score @s ca.damage_queue matches 1.. run function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass
+execute if score @s ca.damage_queue matches 1.. run function cartographer_custom_enchantments:helper/damage/macro_setup
+execute if score @s ca.damage_queue matches 1.. run function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass with storage cartographer:macro.custom_enchantments
+
 
 effect clear @s bad_omen
 effect clear @s blindness

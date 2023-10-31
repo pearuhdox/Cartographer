@@ -11,3 +11,6 @@ execute if entity @s[tag=ca.ability_dmg+++] run function cartographer_mob_abilit
 execute if entity @s[tag=ca.ability_dmg-] run function cartographer_mob_abilities:ability_traits/ability_dmg-/calculation
 execute if entity @s[tag=ca.ability_dmg--] run function cartographer_mob_abilities:ability_traits/ability_dmg--/calculation
 execute if entity @s[tag=ca.ability_dmg---] run function cartographer_mob_abilities:ability_traits/ability_dmg---/calculation
+
+scoreboard players operation @s ca.ability_dmg = $damage ca.ability_dmg
+function cartographer_mob_abilities:helper/damage/macro_setup

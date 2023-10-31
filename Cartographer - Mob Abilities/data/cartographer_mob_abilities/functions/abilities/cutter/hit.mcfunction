@@ -1,8 +1,8 @@
-scoreboard players operation @s ca.damage_queue = $damage ca.ability_dmg
+function cartographer_mob_abilities:helper/damage/ability_melee with storage cartographer:macro.mob_abilities
 
-tag @s add ability_tagged
+tag @p add ability_tagged
 
-tag @s add cutter_tagged
+tag @p add cutter_tagged
 
 execute unless score $no_trait ca.mob_var matches 1 run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 

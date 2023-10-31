@@ -15,7 +15,7 @@ scoreboard players set $projectile ca.dmg_type 1
 execute if entity @a[distance=..2,tag=!hooked] run scoreboard players set @s ca.raycast 0
 execute as @a[distance=..2,tag=!hooked] run function cartographer_mob_abilities:abilities/hookshot/player
 
-execute as @s positioned as @a[scores={ca.damage_queue=1..},tag=!hooked,distance=..2] run function cartographer_mob_abilities:helper/damage/ability_projectile
+execute positioned as @a[distance=..2,tag=!hooked] run function cartographer_mob_abilities:helper/damage/ability_projectile with storage cartographer:macro.mob_abilities
 
 execute if score $hook_check ca.hooked matches 101 run ride 31182015-8151-5111-3118-110000000000 mount @s
 

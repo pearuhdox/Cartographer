@@ -10,7 +10,7 @@ function cartographer_mob_abilities:abilities/orbit/calc_damage
 scoreboard players set $projectile ca.dmg_type 1
 
 execute as @a[distance=..1.35] at @s unless score @s ca.orbit_timer matches 1.. run function cartographer_mob_abilities:abilities/orbit/player_effect
-execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..1.35] run function cartographer_mob_abilities:helper/damage/ability_projectile
+execute as @s positioned as @a[distance=..1.35] run function cartographer_mob_abilities:helper/damage/ability_projectile with storage cartographer:macro.mob_abilities
 
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 

@@ -23,6 +23,7 @@ function cartographer_custom_statuses:apply_status/apply/set_statuses
 scoreboard players set $deadeye_hit ca.deadeye 1
 
 scoreboard players operation @s ca.damage_queue = $deadeye ca.damage_queue
-function cartographer_custom_enchantments:enchant_effects/deadeye/enchant_damage_bypass
+function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:enchant_effects/deadeye/enchant_damage_bypass with storage cartographer:macro.custom_enchantments
 
 scoreboard players set @s ca.deadeye_time 4

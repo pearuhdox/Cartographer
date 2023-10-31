@@ -29,7 +29,8 @@ execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca
 execute if entity @s[tag=ca.webbing] run scoreboard players set $zeph_check ca.mob_var 1
 
 execute as @a[distance=..4] at @s facing entity 31182015-4512-2011-3118-115180000000 feet rotated ~180 ~-25 run function cartographer_mob_abilities:death/parting_gift/player
-execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..4] run function cartographer_mob_abilities:helper/damage/ability_explosion
+execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..4] run function cartographer_mob_abilities:helper/damage/ability_explosion with storage cartographer:macro.custom_enchantments
+
 
 scoreboard players set $zeph_check ca.mob_var 0
 

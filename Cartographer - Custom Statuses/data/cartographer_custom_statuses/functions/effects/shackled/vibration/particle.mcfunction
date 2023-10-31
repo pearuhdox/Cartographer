@@ -1,0 +1,1 @@
+$particle vibration $(x) $(y) $(z) $(t) $(x2) $(y2) $(z2)

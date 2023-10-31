@@ -1,4 +1,3 @@
-scoreboard players operation @s ca.damage_queue = $damage ca.ability_dmg
 tag @s add ability_tagged
 tag @s add ran_over
 

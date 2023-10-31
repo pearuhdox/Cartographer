@@ -11,8 +11,6 @@ execute positioned ^ ^0.5 ^2 as @a[tag=!cutter_tagged,distance=..1.15] at @s run
 execute positioned ^ ^0.5 ^3 as @a[tag=!cutter_tagged,distance=..1.15] at @s run function cartographer_mob_abilities:abilities/cutter/hit
 execute positioned ^ ^0.5 ^4 as @a[tag=!cutter_tagged,distance=..1.15] at @s run function cartographer_mob_abilities:abilities/cutter/hit
 
-execute as @s positioned as @a[scores={ca.damage_queue=1..},tag=cutter_tagged,distance=..3] run function cartographer_mob_abilities:helper/damage/ability_melee
-
 execute if score $cutter ca.mob_var matches 1 if entity @a[tag=cutter_tagged,tag=ability_tagged,gamemode=!spectator,gamemode=!creative,distance=..6] run execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 
 tag @a remove cutter_tagged

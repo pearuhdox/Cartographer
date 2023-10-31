@@ -123,6 +123,7 @@ execute if score $health_diff ca.status_var matches 300.. run damage @s 30 carto
 playsound minecraft:block.sculk_sensor.break hostile @a[distance=..20] ~ ~ ~ 1.25 0.8 
 playsound minecraft:block.sculk_sensor.clicking hostile @a[distance=..20] ~ ~ ~ 1.25 0.8
 
+execute positioned ~ ~1 ~ run function cartographer_custom_statuses:effects/shackled/vibration/call
 
 scoreboard players reset @s ca.damage_queue
 

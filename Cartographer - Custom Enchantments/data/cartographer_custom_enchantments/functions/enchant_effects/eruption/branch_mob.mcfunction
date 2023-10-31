@@ -21,7 +21,8 @@ scoreboard players operation @s ca.damage_queue *= $eruption ca.eruption
 scoreboard players set $exec_dmg bbl.storage 0
 scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
-execute if score $eruption ca.eruption matches 1.. as @s run function cartographer_custom_enchantments:helper/damage/enchant_damage
+execute if score $eruption ca.eruption matches 1.. as @s run function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 
 #Run Cauterize if it exists
 execute if score $eruption ca.cauterize matches 1 as @s run function cartographer_custom_enchantments:enchant_effects/cauterize/other

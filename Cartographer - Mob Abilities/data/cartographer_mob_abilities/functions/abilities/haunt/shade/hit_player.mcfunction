@@ -1,1 +1,1 @@
-scoreboard players operation @s ca.damage_queue = $haunt_damage ca.ability_dmg
+function cartographer_mob_abilities:helper/damage/ability_magic_untethered with storage cartographer:macro.mob_abilities

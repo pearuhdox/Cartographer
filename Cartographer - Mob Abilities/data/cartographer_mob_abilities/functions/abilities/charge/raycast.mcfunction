@@ -14,7 +14,7 @@ execute if entity @s[tag=ca.webbing] run scoreboard players set $zeph_check ca.m
 
 execute as @a[distance=..1.75,tag=!ran_over] at @s facing entity 31182015-4512-2011-3118-115180000000 feet run function cartographer_mob_abilities:abilities/charge/player
 
-execute as @s positioned as @a[scores={ca.damage_queue=1..}] run function cartographer_mob_abilities:helper/damage/ability_melee
+execute as @s positioned as @a[distance=..1.75] run function cartographer_mob_abilities:helper/damage/ability_melee with storage cartographer:macro.mob_abilities
 
 scoreboard players set $zeph_check ca.mob_var 0
 

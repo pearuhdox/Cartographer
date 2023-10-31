@@ -27,7 +27,8 @@ scoreboard players operation @s ca.damage_queue = $thorns ca.thorns
 scoreboard players set $exec_dmg bbl.storage 0
 scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
-function cartographer_custom_enchantments:helper/damage/enchant_damage
+function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 
 #Run Cauterize if it exists
 execute if score $thorns ca.cauterize matches 1 as @s run function cartographer_custom_enchantments:enchant_effects/cauterize/other

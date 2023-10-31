@@ -4,7 +4,9 @@ execute if entity @s[tag=is_tempest_3] run scoreboard players set @s ca.damage_q
 execute if entity @s[tag=is_tempest_4] run scoreboard players set @s ca.damage_queue 12
 execute if entity @s[tag=is_tempest_5] run scoreboard players set @s ca.damage_queue 15
 
-execute if entity @s run function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass
+function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass with storage cartographer:macro.custom_enchantments
+
 
 tag @s[type=#bb:hostile,tag=is_tempest_1] remove is_tempest_1
 tag @s[type=#bb:hostile,tag=is_tempest_2] remove is_tempest_2

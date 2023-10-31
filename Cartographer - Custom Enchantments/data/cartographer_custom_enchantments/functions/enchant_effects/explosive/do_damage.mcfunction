@@ -3,4 +3,5 @@ summon area_effect_cloud ~ ~1 ~ {Particle:"block air",ReapplicationDelay:0,Radiu
 scoreboard players set @s ca.damage_queue 0
 scoreboard players operation @s ca.damage_queue = $damage ca.explosive
 
-function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass
+function cartographer_custom_enchantments:helper/damage/macro_setup
+function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass with storage cartographer:macro.custom_enchantments
