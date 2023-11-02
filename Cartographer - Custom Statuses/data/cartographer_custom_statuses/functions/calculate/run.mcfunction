@@ -167,6 +167,10 @@ execute store result score $do_override_o ca.status_var run data get storage car
 execute store result score $do_override_m ca.status_var run data get storage cartographer_custom_statuses:player_equip main.tag.HasOverride
 
 
+execute if data storage cartographer_custom_statuses:player_equip main.tag.AllowMeleeInflict run tag @s add ca.allow_melee_inflict
+execute if data storage cartographer_custom_statuses:player_equip main.tag.AllowOffhandInflict run tag @s add ca.allow_offhand_inflict
+
+
 execute if score $do_override_h ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/head
 execute if score $do_override_b ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/body
 execute if score $do_override_l ca.status_var matches 1.. run function cartographer_custom_statuses:calculate/overrides/legs
@@ -176,7 +180,7 @@ execute if score $do_override_m ca.status_var matches 1.. run function cartograp
 
 
 execute if predicate cartographer_core:inventory/hold_armor_mainhand unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee
-execute if predicate cartographer_core:inventory/hold_ranged_weapon unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee
+execute if predicate cartographer_core:inventory/hold_ranged_weapon_no_trident unless entity @s[tag=ca.allow_melee_inflict] run tag @s add ca.no_status_melee
 
 execute if predicate cartographer_core:inventory/hold_armor_offhand unless entity @s[tag=ca.allow_offhand_inflict] run scoreboard players set $no_offhand ca.status_var 1
 
