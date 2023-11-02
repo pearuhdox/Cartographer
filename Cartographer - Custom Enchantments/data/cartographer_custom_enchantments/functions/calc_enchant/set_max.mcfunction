@@ -32,11 +32,10 @@ execute if score @s ca.satiation matches 4.. run scoreboard players set @s ca.sa
 execute if score @s ca.second_wind matches 5.. run scoreboard players set @s ca.second_wind 4
 execute if score @s ca.sharpshot matches 4.. run scoreboard players set @s ca.sharpshot 3
 execute if score @s ca.cauterize matches 11.. run scoreboard players set @s ca.cauterize 10
-execute if score @s ca.splintering matches 2.. run scoreboard players set @s ca.splintering 1
 execute if score @s ca.spurs matches 2.. run scoreboard players set @s ca.spurs 1
 execute if score @s ca.surging_strike matches 4.. run scoreboard players set @s ca.surging_strike 3
 execute if score @s ca.transfig matches 6.. run scoreboard players set @s ca.transfig 5
-execute if score @s ca.tempest matches 3.. run scoreboard players set @s ca.tempest 5
+execute if score @s ca.tempest matches 6.. run scoreboard players set @s ca.tempest 5
 execute if score @s ca.tempo_theft matches 3.. run scoreboard players set @s ca.tempo_theft 3
 execute if score @s ca.trueshot matches 1.. run scoreboard players set @s ca.trueshot 1
 execute if score @s vengeance matches 6.. run scoreboard players set @s vengeance 5
