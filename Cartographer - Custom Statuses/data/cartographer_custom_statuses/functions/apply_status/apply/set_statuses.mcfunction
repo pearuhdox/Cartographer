@@ -19,28 +19,28 @@ execute if score $add ca.effect_bleed matches 1.. run function cartographer_cust
 execute if score @s ca.effect_bleed matches 1.. run function cartographer_custom_statuses:popup/bleed
 execute if score @s ca.effect_bleed matches 1.. if entity @s[tag=!ca.bleeding_warmup] run function cartographer_custom_statuses:effects/apply/vfx/bleed
 
-execute store result score $add ca.effect_shock run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"shocking"}].duration
-execute store result score $chance ca.effect_shock run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"shocking"}].chance
+execute store result score $add ca.effect_shock run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"shocked"}].duration
+execute store result score $chance ca.effect_shock run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"shocked"}].chance
 execute if score $add ca.effect_shock matches 1.. run function cartographer_custom_statuses:apply_status/apply/shock
 execute if score @s ca.effect_shock matches 1.. run function cartographer_custom_statuses:popup/shock
 execute if score @s ca.effect_shock matches 1.. if entity @s[tag=!ca.shocked_warmup] run function cartographer_custom_statuses:effects/apply/vfx/shocked
 
-execute store result score $add ca.effect_infect run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"infection"}].duration
-execute store result score $chance ca.effect_infect run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"infection"}].chance
+execute store result score $add ca.effect_infect run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"infected"}].duration
+execute store result score $chance ca.effect_infect run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"infected"}].chance
 execute if score $add ca.effect_infect matches 1.. run function cartographer_custom_statuses:apply_status/apply/infect
 execute if score @s ca.effect_infect matches 1.. run function cartographer_custom_statuses:popup/infect
 execute if score @s ca.effect_infect matches 1.. if entity @s[tag=!ca.infect_warmup] run function cartographer_custom_statuses:effects/apply/vfx/infect
 
 #Stun
-execute store result score $inflict ca.effect_stun run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"stun"}].duration
+execute store result score $inflict ca.effect_stun run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"stunned"}].duration
 
-execute store result score $chance ca.effect_stun run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"stun"}].chance
+execute store result score $chance ca.effect_stun run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"stunned"}].chance
 
 execute if score $inflict ca.effect_stun matches 1.. run function cartographer_custom_statuses:apply_status/apply/stunned
 
 #Morph
-execute store result score $chance ca.morph_time run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"morph"}].chance
-execute store result score $time ca.morph_time run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"morph"}].duration
+execute store result score $chance ca.morph_time run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"morphed"}].chance
+execute store result score $time ca.morph_time run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"morphed"}].duration
 
 execute if score $time ca.morph_time matches 1.. run function cartographer_custom_statuses:apply_status/apply/morphed
 
@@ -51,13 +51,13 @@ execute store result score $time ca.charm_time run data get storage cartographer
 execute if score $time ca.charm_time matches 1.. run function cartographer_custom_statuses:apply_status/apply/charmed
 
 
-execute store result score @s ca.effect_cloak run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"cloaking"}].duration
+execute store result score @s ca.effect_cloak run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"cloaked"}].duration
 scoreboard players operation @s ca.effect_cloak > $add ca.effect_cloak
 
 #Expose
-execute store result score $chance ca.effect_exposed_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"expose"}].chance
-execute store result score $add ca.effect_exposed_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"expose"}].duration
-execute store result score $add ca.effect_exposed_level run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"expose"}].amplifier
+execute store result score $chance ca.effect_exposed_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"exposed"}].chance
+execute store result score $add ca.effect_exposed_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"exposed"}].duration
+execute store result score $add ca.effect_exposed_level run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"exposed"}].amplifier
 execute if score $add ca.effect_exposed_level matches 0.. run scoreboard players add $add ca.effect_exposed_level 1
 
 function cartographer_custom_statuses:apply_status/apply/exposed

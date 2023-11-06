@@ -7,13 +7,13 @@ execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_
 execute unless entity @s[tag=ca.st.e_brittle] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"brittle"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_brittle] run function cartographer_custom_statuses:descriptions/write/status/brittle
 
-execute unless entity @s[tag=ca.st.e_exposed] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"expose"}].duration
+execute unless entity @s[tag=ca.st.e_exposed] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"exposed"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_exposed] run function cartographer_custom_statuses:descriptions/write/status/exposed
 
-execute unless entity @s[tag=ca.st.e_infected] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"infection"}].duration
+execute unless entity @s[tag=ca.st.e_infected] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"infected"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_infected] run function cartographer_custom_statuses:descriptions/write/status/infected
 
-execute unless entity @s[tag=ca.st.e_morph] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"morph"}].duration
+execute unless entity @s[tag=ca.st.e_morph] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"morphed"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_morph] run function cartographer_custom_statuses:descriptions/write/status/morph
 
 execute unless entity @s[tag=ca.st.e_charmed] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"charmed"}].duration
@@ -25,10 +25,10 @@ execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_
 execute unless entity @s[tag=ca.st.e_shackled] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"shackled"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_shackled] run function cartographer_custom_statuses:descriptions/write/status/shackled
 
-execute unless entity @s[tag=ca.st.e_shocked] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"shocking"}].duration
+execute unless entity @s[tag=ca.st.e_shocked] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"shocked"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_shocked] run function cartographer_custom_statuses:descriptions/write/status/shocked
 
-execute unless entity @s[tag=ca.st.e_stunned] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"stun"}].duration
+execute unless entity @s[tag=ca.st.e_stunned] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"stunned"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_stunned] run function cartographer_custom_statuses:descriptions/write/status/stunned
 
 
@@ -42,13 +42,13 @@ execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_
 execute unless entity @s[tag=ca.st.e_brittle] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"brittle"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_brittle] run function cartographer_custom_statuses:descriptions/write/status/brittle
 
-execute unless entity @s[tag=ca.st.e_exposed] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"expose"}].duration
+execute unless entity @s[tag=ca.st.e_exposed] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"exposed"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_exposed] run function cartographer_custom_statuses:descriptions/write/status/exposed
 
-execute unless entity @s[tag=ca.st.e_infected] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"infection"}].duration
+execute unless entity @s[tag=ca.st.e_infected] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"infected"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_infected] run function cartographer_custom_statuses:descriptions/write/status/infected
 
-execute unless entity @s[tag=ca.st.e_morph] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"morph"}].duration
+execute unless entity @s[tag=ca.st.e_morph] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"morphed"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_morph] run function cartographer_custom_statuses:descriptions/write/status/morph
 
 execute unless entity @s[tag=ca.st.e_charmed] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"charmed"}].duration
@@ -60,8 +60,8 @@ execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_
 execute unless entity @s[tag=ca.st.e_shackled] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"shackled"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_shackled] run function cartographer_custom_statuses:descriptions/write/status/shackled
 
-execute unless entity @s[tag=ca.st.e_shocked] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"shocking"}].duration
+execute unless entity @s[tag=ca.st.e_shocked] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"shocked"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_shocked] run function cartographer_custom_statuses:descriptions/write/status/shocked
 
-execute unless entity @s[tag=ca.st.e_stunned] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"stun"}].duration
+execute unless entity @s[tag=ca.st.e_stunned] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"stunned"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_stunned] run function cartographer_custom_statuses:descriptions/write/status/stunned

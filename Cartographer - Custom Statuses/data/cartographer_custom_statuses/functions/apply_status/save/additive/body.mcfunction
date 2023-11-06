@@ -8,31 +8,31 @@ execute store result score $temp ca.stat_calc_var run data get storage cartograp
 scoreboard players operation $bleed_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"shocking"}].duration
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"shocked"}].duration
 scoreboard players operation $shock ca.stat_calc_var > $temp ca.stat_calc_var
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"shocking"}].chance
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"shocked"}].chance
 scoreboard players operation $shock_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"infection"}].duration
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"infected"}].duration
 scoreboard players operation $infect ca.stat_calc_var > $temp ca.stat_calc_var
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"infection"}].chance
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"infected"}].chance
 scoreboard players operation $infect_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"stun"}].duration
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"stunned"}].duration
 scoreboard players operation $stun_time ca.stat_calc_var > $temp ca.stat_calc_var
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"stun"}].chance
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"stunned"}].chance
 scoreboard players operation $stun_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"morph"}].chance
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"morphed"}].chance
 scoreboard players operation $morph_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"morph"}].duration
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"morphed"}].duration
 scoreboard players operation $morph_time ca.stat_calc_var > $temp ca.stat_calc_var
 
 
@@ -43,17 +43,17 @@ execute store result score $temp ca.stat_calc_var run data get storage cartograp
 scoreboard players operation $charm_time ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"cloaking"}]
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"cloaked"}]
 scoreboard players operation $cloak ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute if data storage cartographer_custom_statuses:apply_status data.temp[{id:"expose"}].amplifier store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"expose"}].amplifier
+execute if data storage cartographer_custom_statuses:apply_status data.temp[{id:"exposed"}].amplifier store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"exposed"}].amplifier
 scoreboard players operation $expose_level ca.stat_calc_var > $temp ca.stat_calc_var
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"expose"}].duration
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"exposed"}].duration
 scoreboard players operation $expose_duration ca.stat_calc_var > $temp ca.stat_calc_var
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"expose"}].chance
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"exposed"}].chance
 scoreboard players operation $expose_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
 

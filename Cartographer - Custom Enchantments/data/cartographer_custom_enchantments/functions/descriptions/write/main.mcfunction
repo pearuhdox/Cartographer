@@ -98,7 +98,7 @@ execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_fs
 execute unless entity @s[tag=ca.en.f_expl] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"explosive"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_expl] run function cartographer_custom_enchantments:descriptions/write/ranged/explosive
 
-execute unless entity @s[tag=ca.en.f_rexe] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"expose"}].lvl
+execute unless entity @s[tag=ca.en.f_rexe] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"exposed"}].lvl
 execute if score $temp ca.write_ench matches 1.. unless entity @s[tag=ca.en.f_rexe] run function cartographer_custom_enchantments:descriptions/write/ranged/expose
 
 execute unless entity @s[tag=ca.en.f_rfro] store result score $temp ca.write_ench run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"frost"}].lvl

@@ -68,7 +68,7 @@ scoreboard players set $temp ca.susu 0
 execute unless score $hold_ranged_m ca.ench_var matches 1.. if score $hold_bow ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"overcharge"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.overcharge += $temp ca.susu
 
-execute unless score $hold_ranged_m ca.ench_var matches 1.. if score $hold_ranged ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"expose"}].lvl
+execute unless score $hold_ranged_m ca.ench_var matches 1.. if score $hold_ranged ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"exposed"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.expose += $temp ca.susu
 
 scoreboard players set $temp ca.susu 0
