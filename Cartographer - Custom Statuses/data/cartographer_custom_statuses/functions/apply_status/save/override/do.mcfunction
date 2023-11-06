@@ -3,7 +3,7 @@ data modify storage cartographer_custom_statuses:apply_status data.temp set valu
 
 scoreboard players set $cloak ca.stat_calc_var 0
 
-scoreboard players set $bleed ca.stat_calc_var 0
+scoreboard players set $bleed ca.stat_calc_var -100
 scoreboard players set $shock ca.stat_calc_var 0
 scoreboard players set $infect ca.stat_calc_var 0
 scoreboard players set $stun_time ca.stat_calc_var 0
@@ -14,15 +14,15 @@ scoreboard players set $charm_chance ca.stat_calc_var 0
 scoreboard players set $charm_time ca.stat_calc_var 0
 
 scoreboard players set $expose_duration ca.stat_calc_var 0
-scoreboard players set $expose_level ca.stat_calc_var 0
+scoreboard players set $expose_level ca.stat_calc_var -100
 
 scoreboard players set $oiled_duration ca.stat_calc_var 0
-scoreboard players set $oiled_level ca.stat_calc_var 0
+scoreboard players set $oiled_level ca.stat_calc_var -100
 
 scoreboard players set $shackled ca.stat_calc_var 0
 
 scoreboard players set $brittle_duration ca.stat_calc_var 0
-scoreboard players set $brittle_level ca.stat_calc_var 0
+scoreboard players set $brittle_level ca.stat_calc_var -100
 
 execute if entity @s[tag=ca.si_main,tag=!ca.override_crit_m,tag=!ca.override_sprint_m,tag=!ca.override_sneak_m] run function cartographer_custom_statuses:apply_status/save/override/mainhand
 

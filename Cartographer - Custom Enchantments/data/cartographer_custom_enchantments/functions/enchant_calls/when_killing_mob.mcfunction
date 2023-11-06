@@ -41,6 +41,14 @@ execute if score @s ca.echo matches 1.. run function cartographer_custom_enchant
 #Evocation Charge Restore
 execute if score @s ca.evocation matches 1.. run function cartographer_custom_enchantments:enchant_effects/evocation/restore_check
 
+#Sweeping Charge Restore
+execute if score @s ca.sweeping matches 1.. run function cartographer_custom_enchantments:enchant_effects/sweeping/restore
+
+#Surging Charge Restore
+execute if score @s ca.thrusting matches 1.. run function cartographer_custom_enchantments:enchant_effects/thrusting/restore
+
+#Slamming Charge Restore
+execute if score @s ca.slamming matches 1.. run function cartographer_custom_enchantments:enchant_effects/slamming/restore
 
 #Concealed Restore (if score $cu_en_passive ca.enabler matches 1..)
 execute if score @s ca.concealed matches 1.. run function cartographer_custom_enchantments:enchant_effects/concealed/restore

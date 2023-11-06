@@ -38,7 +38,7 @@ execute if score @s ca.lexica_trig matches 218 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 219 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/lethality
 execute if score @s ca.lexica_trig matches 221 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/singe
 execute if score @s ca.lexica_trig matches 222 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/stunning
-execute if score @s ca.lexica_trig matches 223 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/surging_strike
+execute if score @s ca.lexica_trig matches 223 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/thrusting
 execute if score @s ca.lexica_trig matches 224 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/hex_eater
 execute if score @s ca.lexica_trig matches 225 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/first_strike
 

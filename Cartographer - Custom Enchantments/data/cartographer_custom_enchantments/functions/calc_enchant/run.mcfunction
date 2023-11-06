@@ -88,3 +88,6 @@ scoreboard players set $cu_en_spawner ca.enabler 1
 tag @s remove showing_repeating
 tag @s remove showing_echo
 tag @s remove showing_evocation
+tag @s remove showing_sweeping
+tag @s remove showing_thrusting
+tag @s remove showing_slamming

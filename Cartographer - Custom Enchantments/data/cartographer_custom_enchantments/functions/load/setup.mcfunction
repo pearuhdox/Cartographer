@@ -17,6 +17,8 @@ scoreboard objectives add ca.deadeye dummy
 scoreboard objectives add ca.duelist dummy
 scoreboard objectives add ca.echo dummy
 scoreboard objectives add ca.evocation dummy
+scoreboard objectives add ca.sweeping dummy
+
 scoreboard objectives add ca.energetic dummy
 scoreboard objectives add ca.eruption dummy
 scoreboard objectives add ca.evasion dummy
@@ -46,7 +48,8 @@ scoreboard objectives add ca.singe dummy
 scoreboard objectives add ca.cauterize dummy
 scoreboard objectives add ca.splintering dummy
 scoreboard objectives add ca.spurs dummy
-scoreboard objectives add ca.surging_strike dummy
+scoreboard objectives add ca.thrusting dummy
+scoreboard objectives add ca.slamming dummy
 scoreboard objectives add ca.transfig dummy
 scoreboard objectives add ca.tempest dummy
 scoreboard objectives add ca.tempo_theft dummy
@@ -318,6 +321,10 @@ scoreboard objectives add ca.conceal_time dummy
 scoreboard objectives add ca.evocation_charges dummy
 scoreboard objectives add ca.evocation_kills dummy
 
+scoreboard objectives add ca.sweeping_charges dummy
+scoreboard objectives add ca.thrusting_charges dummy
+scoreboard objectives add ca.slamming_charges dummy
+
 scoreboard objectives add ca.frost_time dummy
 scoreboard objectives add ca.frost_tier dummy
 
@@ -428,6 +435,9 @@ function cartographer_custom_enchantments:load/integration/active/clear
 execute as @a unless entity @s[scores={ca.echo_charges=-1..}] run scoreboard players set @a ca.echo_charges 0
 execute as @a unless entity @s[scores={ca.evocation_charges=-1..}] run scoreboard players set @a ca.evocation_charges 0
 execute as @a unless entity @s[scores={ca.conceal_time=0..}] run scoreboard players set @a ca.conceal_time 0
+execute as @a unless entity @s[scores={ca.sweeping_charges=-1..}] run scoreboard players set @a ca.sweeping_charges 0
+execute as @a unless entity @s[scores={ca.thrusting_charges=-1..}] run scoreboard players set @a ca.thrusting_charges 0
+execute as @a unless entity @s[scores={ca.slamming_charges=-1..}] run scoreboard players set @a ca.slamming_charges 0
 
 #Place extra shulker boxes for Custom Enchantments
 #Auto Charge

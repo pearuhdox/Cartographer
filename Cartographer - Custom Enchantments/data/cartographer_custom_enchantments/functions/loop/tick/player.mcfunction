@@ -215,15 +215,18 @@ tag @s remove ca.echo_charge_taken
 tag @s remove ca.evocation_charge_taken
 
 #Action bar indicators for Repeating, Echo, and Second Wind
-execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 0 run function cartographer_custom_enchantments:helper/indicators/action_bar
-execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 1 run function cartographer_custom_enchantments:helper/indicators/subtitle
+execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 0 run function cartographer_custom_enchantments:helper/indicators/action_bar/master
+execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 1 run function cartographer_custom_enchantments:helper/indicators/subtitle/master
 
-execute if score @s ca.ui_loc matches 1 run function cartographer_custom_enchantments:helper/indicators/action_bar
-execute if score @s ca.ui_loc matches 2 run function cartographer_custom_enchantments:helper/indicators/subtitle
+execute if score @s ca.ui_loc matches 1 run function cartographer_custom_enchantments:helper/indicators/action_bar/master
+execute if score @s ca.ui_loc matches 2 run function cartographer_custom_enchantments:helper/indicators/subtitle/master
 
 execute if score @s ca.repeating matches 0 run tag @s remove showing_repeating
 execute if score @s ca.echo matches 0 run tag @s remove showing_echo
 execute if score @s ca.evocation matches 0 run tag @s remove showing_evocation
+execute if score @s ca.sweeping matches 0 run tag @s remove showing_sweeping
+execute if score @s ca.sweeping matches 0 run tag @s remove showing_thrusting
+execute if score @s ca.sweeping matches 0 run tag @s remove showing_slamming
 
 execute store result score $current_return ca.loyalty run clear @s structure_void{TridentRemnantDelete:1b}
 execute if score $current_return ca.loyalty matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund

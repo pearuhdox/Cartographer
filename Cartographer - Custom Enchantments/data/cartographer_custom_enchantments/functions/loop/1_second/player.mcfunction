@@ -3,7 +3,10 @@ execute if entity @s[scores={ca.regen_bank=100..}] run function cartographer_cus
 
 
 execute if score @s ca.combat_timer matches ..0 if score @s ca.echo_charges < @s ca.echo run function cartographer_custom_enchantments:enchant_effects/echo/restore
-execute if score @s ca.combat_timer matches ..0 if score @s ca.evocation_charges < @s ca.evocation run function cartographer_custom_enchantments:enchant_effects/evocation/restore_check
+execute if score @s ca.combat_timer matches ..0 if score @s ca.evocation_charges < @s ca.evocation run function cartographer_custom_enchantments:enchant_effects/evocation/restore
+execute if score @s ca.combat_timer matches ..0 if score @s ca.sweeping_charges < @s ca.sweeping run function cartographer_custom_enchantments:enchant_effects/sweeping/restore
+execute if score @s ca.combat_timer matches ..0 if score @s ca.thrusting_charges < @s ca.thrusting run function cartographer_custom_enchantments:enchant_effects/thrusting/restore
+execute if score @s ca.combat_timer matches ..0 if score @s ca.slamming_charges < @s ca.slamming run function cartographer_custom_enchantments:enchant_effects/slamming/restore
 
 #Shielding
 execute if score @s ca.shielding matches 1.. run function cartographer_custom_enchantments:enchant_effects/shielding/clock

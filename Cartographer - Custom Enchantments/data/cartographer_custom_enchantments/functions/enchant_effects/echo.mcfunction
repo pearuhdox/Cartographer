@@ -19,3 +19,4 @@ execute if entity @s[scores={ca.echo=1..,ca.echo_charges=0..}] run scoreboard pl
 execute if entity @s[scores={ca.echo=1..,ca.echo_charges=0..}] run tag @s add ca.echo_charge_taken
 
 tag @a[scores={ca.echo=1..}] remove showing_echo
+scoreboard players set $use_charge_ench ca.ench_var 1

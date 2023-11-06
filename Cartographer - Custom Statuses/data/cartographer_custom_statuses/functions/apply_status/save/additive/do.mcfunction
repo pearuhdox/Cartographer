@@ -3,7 +3,7 @@ data modify storage cartographer_custom_statuses:apply_status data.temp set valu
 
 scoreboard players set $cloak ca.stat_calc_var 0
 
-scoreboard players set $bleed ca.stat_calc_var 0
+scoreboard players set $bleed ca.stat_calc_var -100
 scoreboard players set $bleed_chance ca.stat_calc_var 0
 
 scoreboard players set $shock ca.stat_calc_var 0
@@ -23,17 +23,17 @@ scoreboard players set $charm_chance ca.stat_calc_var 0
 scoreboard players set $charm_time ca.stat_calc_var 0
 
 scoreboard players set $expose_duration ca.stat_calc_var 0
-scoreboard players set $expose_level ca.stat_calc_var 0
+scoreboard players set $expose_level ca.stat_calc_var -100
 scoreboard players set $expose_chance ca.stat_calc_var 0
 
 scoreboard players set $oiled_duration ca.stat_calc_var 0
-scoreboard players set $oiled_level ca.stat_calc_var 0
+scoreboard players set $oiled_level ca.stat_calc_var -100
 scoreboard players set $oiled_chance ca.stat_calc_var 0
 
 scoreboard players set $shackled ca.stat_calc_var 0
 
 scoreboard players set $brittle_duration ca.stat_calc_var 0
-scoreboard players set $brittle_level ca.stat_calc_var 0
+scoreboard players set $brittle_level ca.stat_calc_var -100
 scoreboard players set $brittle_chance ca.stat_calc_var 0
 
 

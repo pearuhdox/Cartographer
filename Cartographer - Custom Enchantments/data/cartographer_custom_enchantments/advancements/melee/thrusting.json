@@ -22,14 +22,14 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"surging_strike\"}]}"
+                        "nbt": "{CustomEnchantments:[{id:\"thrusting\"}]}"
                     }
                 ]
             }
         }
     },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/melee/surging_strike"
+        "function": "cartographer_custom_enchantments:descriptions/melee/thrusting"
     },
     "parent": "cartographer_custom_enchantments:melee/singe"
 }

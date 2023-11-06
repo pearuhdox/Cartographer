@@ -19,5 +19,6 @@ execute if entity @s[type=#cartographer_core:shape_big] run particle minecraft:c
 function cartographer_custom_statuses:death/create_death_marker
 tag @s add ca.brittle_warmup
 scoreboard players set @s ca.brittle_stored 0
+execute store result score @s ca.brittle_hp run data get entity @s Health 10
 
 function cartographer_custom_statuses:popup/brittle

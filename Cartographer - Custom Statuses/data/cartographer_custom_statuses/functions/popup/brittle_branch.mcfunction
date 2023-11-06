@@ -1,5 +1,6 @@
 execute on passengers if entity @s[tag=ca.entity_popup,tag=!ca.charge_bar,tag=!ca.popup_notice,type=text_display] run function cartographer_core:helper/entity_popups/transform/popup
 
+scoreboard players set $brittle_popup_amt ca.status_var 0
 execute if score @s ca.effect_brittle_duration matches 1.. run scoreboard players operation $brittle_popup_amt ca.status_var = @s ca.effect_brittle_level
 scoreboard players operation $brittle_popup_amt ca.status_var *= $20 ca.CONSTANT
 execute if score @s ca.brittle_stored matches 1.. run scoreboard players operation $brittle_popup_amt ca.status_var -= @s ca.brittle_stored

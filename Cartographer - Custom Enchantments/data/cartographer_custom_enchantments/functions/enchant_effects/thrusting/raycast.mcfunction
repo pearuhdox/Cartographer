@@ -15,7 +15,7 @@ execute if score $melee ca.frostbite matches 1.. positioned ^ ^ ^-0.25 run parti
 execute if score @s ca.raycast matches 0 run particle minecraft:cloud ~ ~ ~ 0.2 0.2 0.2 0.05 12 normal
 
 #Run effects on mobs. Don't run them additionally if they've already been hit.
-execute positioned ~ ~ ~ as @e[type=#bb:hostile,tag=!thrusted,dx=0,nbt={HurtTime:0s}] positioned ~-0.59 ~-0.59 ~-0.59 if entity @s[dx=0] at @s run function cartographer_custom_enchantments:enchant_effects/surging_strike/effects
+execute positioned ~ ~ ~ as @e[type=#bb:hostile,tag=!thrusted,dx=0,nbt={HurtTime:0s}] positioned ~-0.39 ~-0.39 ~-0.39 if entity @s[dx=0] at @s run function cartographer_custom_enchantments:enchant_effects/thrusting/effects with storage cartographer:macro.custom_enchantments
 
 #Run the raycast again.
-execute if score @s ca.raycast matches 1.. positioned ^ ^ ^0.5 run function cartographer_custom_enchantments:enchant_effects/surging_strike/raycast
+execute if score @s ca.raycast matches 1.. positioned ^ ^ ^0.5 run function cartographer_custom_enchantments:enchant_effects/thrusting/raycast

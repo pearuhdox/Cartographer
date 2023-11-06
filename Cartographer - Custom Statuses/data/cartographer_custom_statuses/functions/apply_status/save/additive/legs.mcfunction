@@ -1,6 +1,6 @@
 data modify storage cartographer_custom_statuses:apply_status data.temp set from entity @s Inventory[{Slot:101b}].tag.apply_status
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"bleeding"}].amplifier
+execute if data storage cartographer_custom_statuses:apply_status data.temp[{id:"bleeding"}].amplifier store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"bleeding"}].amplifier
 scoreboard players operation $bleed ca.stat_calc_var > $temp ca.stat_calc_var
 
 execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"bleeding"}].chance
@@ -46,7 +46,7 @@ execute store result score $temp ca.stat_calc_var run data get storage cartograp
 scoreboard players operation $cloak ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"expose"}].amplifier
+execute if data storage cartographer_custom_statuses:apply_status data.temp[{id:"expose"}].amplifier store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"expose"}].amplifier
 scoreboard players operation $expose_level ca.stat_calc_var > $temp ca.stat_calc_var
 
 execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"expose"}].duration
@@ -56,7 +56,7 @@ execute store result score $temp ca.stat_calc_var run data get storage cartograp
 scoreboard players operation $expose_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"oiled"}].amplifier
+execute if data storage cartographer_custom_statuses:apply_status data.temp[{id:"oiled"}].amplifier store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"oiled"}].amplifier
 scoreboard players operation $oiled_level ca.stat_calc_var > $temp ca.stat_calc_var
 
 execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"oiled"}].duration
@@ -73,7 +73,7 @@ execute store result score $temp ca.stat_calc_var run data get storage cartograp
 scoreboard players operation $shackled_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"brittle"}].amplifier
+execute if data storage cartographer_custom_statuses:apply_status data.temp[{id:"brittle"}].amplifier store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"brittle"}].amplifier
 scoreboard players operation $brittle_level ca.stat_calc_var > $temp ca.stat_calc_var
 
 execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"brittle"}].duration

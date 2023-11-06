@@ -11,6 +11,7 @@ scoreboard players set $do_chance ca.status_var 0
 
 execute if score $value bbl.rng < $chance ca.effect_brittle_duration run scoreboard players set $do_chance ca.status_var 1
 
+
 execute if score $do_chance ca.status_var matches 1.. run scoreboard players operation @s ca.effect_brittle_level > $add ca.effect_brittle_level
 execute if score $do_chance ca.status_var matches 1.. run scoreboard players operation @s ca.effect_brittle_duration > $add ca.effect_brittle_duration
 execute if score $do_chance ca.status_var matches 1.. run scoreboard players set $success ca.status_var 1

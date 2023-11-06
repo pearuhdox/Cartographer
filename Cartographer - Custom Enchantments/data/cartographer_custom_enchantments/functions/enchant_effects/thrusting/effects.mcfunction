@@ -1,6 +1,4 @@
-scoreboard players operation @s ca.damage_queue = $melee ca.attack_val
-function cartographer_custom_enchantments:helper/damage/macro_setup
-function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
+$damage @s $(damage) cartographer_custom_enchantments:enchant_damage by @p[scores={ca.thrusting=1..}]
 
 scoreboard players set @s co_y 2
 scoreboard players set @s co_send -5
@@ -26,6 +24,6 @@ execute if score $do_apply_status ca.status_var matches 1.. at @s run function c
 
 #scoreboard players set $melee ca.melee_chance 0
 
-function #minecraft:cartographer/events/enchants_mob_hit/melee/surging_strike
+function #minecraft:cartographer/events/enchants_mob_hit/melee/thrusting
 
 tag @s add thrusted

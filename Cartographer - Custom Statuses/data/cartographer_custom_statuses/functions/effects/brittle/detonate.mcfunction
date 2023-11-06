@@ -14,6 +14,8 @@ execute as @e[type=#cartographer_core:hostile,distance=..2.5] at @s run function
 
 function cartographer_core:helper/entity_popups/delete_plate
 
+execute on passengers run kill @s[type=marker,tag=ca.death_marker]
+
 scoreboard players set @s ca.brittle_stored 0
-scoreboard players set @s ca.effect_brittle_duration 0
+scoreboard players reset @s ca.effect_brittle_duration
 scoreboard players set @s ca.effect_brittle_level 0

@@ -13,6 +13,7 @@ scoreboard players set @s[scores={ca.throw_trident=0}] ca.current 0
 scoreboard players set @s ca.deadeye 0
 scoreboard players set @s ca.duelist 0
 scoreboard players set @s ca.echo 0
+scoreboard players set @s ca.sweeping 0
 scoreboard players set @s ca.eruption 0
 scoreboard players set @s ca.evasion 0
 scoreboard players set @s ca.evocation 0
@@ -42,7 +43,8 @@ scoreboard players set @s ca.singe 0
 scoreboard players set @s ca.cauterize 0
 scoreboard players set @s ca.splintering 0
 scoreboard players set @s ca.spurs 0
-scoreboard players set @s ca.surging_strike 0
+scoreboard players set @s ca.thrusting 0
+scoreboard players set @s ca.slamming 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.tempest 0
 scoreboard players set @s ca.tempo_theft 0
 scoreboard players set @s ca.trueshot 0

@@ -19,10 +19,19 @@ execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.c
 #Fire Aspect - Needs to run after Cauterize
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.fire_aspect=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/fire_aspect
 
+scoreboard players set $use_charge_ench ca.ench_var 0
 #Echo
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[tag=!ca.echo_charge_taken,scores={ca.echo=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/echo
+execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[tag=!ca.echo_charge_taken,scores={ca.echo=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/echo
 #Evocation
-execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.echo matches 1.. if entity @s[scores={ca.evocation=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/evocation
+execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[scores={ca.evocation=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/evocation
+#Sweeping
+execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. unless entity @s[tag=ca.sweep_schedule_success] if entity @s[scores={ca.sweeping=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/sweeping/master
+#Surging
+execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[scores={ca.thrusting=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/thrusting/master
+#Slamming
+execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[scores={ca.slamming=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] unless predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/slamming/master
+
+
 #Frostbite
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.frostbite=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/frostbite
 
@@ -36,9 +45,6 @@ execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time
 #Rally
 execute if score $rally_restore ca.rally matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/restore
 
-
-#Surging Strike - Runs after Stunning to use melee chance calc
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.surging_strike=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/surging_strike
 
 #Momentum Attack
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.momentum=1..,ca.momentum_charge=2000..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/momentum/strike

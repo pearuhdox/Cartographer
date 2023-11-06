@@ -7,7 +7,13 @@ scoreboard players set $chance ca.effect_shock 0
 scoreboard players set $chance ca.effect_infect 0
 scoreboard players set $chance ca.effect_exposed_duration 0
 
-execute store result score $add ca.effect_bleed run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"bleeding"}].amplifier
+scoreboard players set $add ca.effect_bleed -100
+scoreboard players set $add ca.effect_exposed_level -100
+scoreboard players set $add ca.effect_oiled_level -100
+scoreboard players set $add ca.effect_brittle_level -100
+
+execute if data storage cartographer_custom_statuses:apply_status data.effects[{id:"bleeding"}].amplifier store result score $add ca.effect_bleed run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"bleeding"}].amplifier
+execute if score $add ca.effect_bleed matches 0.. run scoreboard players add $add ca.effect_bleed 1
 execute store result score $chance ca.effect_bleed run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"bleeding"}].chance
 execute if score $add ca.effect_bleed matches 1.. run function cartographer_custom_statuses:apply_status/apply/bleed
 execute if score @s ca.effect_bleed matches 1.. run function cartographer_custom_statuses:popup/bleed
@@ -52,6 +58,7 @@ scoreboard players operation @s ca.effect_cloak > $add ca.effect_cloak
 execute store result score $chance ca.effect_exposed_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"expose"}].chance
 execute store result score $add ca.effect_exposed_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"expose"}].duration
 execute store result score $add ca.effect_exposed_level run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"expose"}].amplifier
+execute if score $add ca.effect_exposed_level matches 0.. run scoreboard players add $add ca.effect_exposed_level 1
 
 function cartographer_custom_statuses:apply_status/apply/exposed
 
@@ -59,7 +66,7 @@ function cartographer_custom_statuses:apply_status/apply/exposed
 execute store result score $chance ca.effect_oiled_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].chance
 execute store result score $add ca.effect_oiled_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].duration
 execute store result score $add ca.effect_oiled_level run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].amplifier
-
+execute if score $add ca.effect_oiled_level matches 0.. run scoreboard players add $add ca.effect_oiled_level 1
 
 execute if score $add ca.effect_oiled_duration matches 1.. run function cartographer_custom_statuses:apply_status/apply/oiled
 
@@ -78,6 +85,7 @@ execute if score @s ca.effect_shackled matches 1.. run function cartographer_cus
 execute store result score $chance ca.effect_brittle_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"brittle"}].chance
 execute store result score $add ca.effect_brittle_duration run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"brittle"}].duration
 execute store result score $add ca.effect_brittle_level run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"brittle"}].amplifier
+execute if score $add ca.effect_brittle_level matches 0.. run scoreboard players add $add ca.effect_brittle_level 1
 
 execute if score $add ca.effect_brittle_duration matches 1.. unless score @s ca.brittle_cdl matches 1.. run function cartographer_custom_statuses:apply_status/apply/brittle
 
