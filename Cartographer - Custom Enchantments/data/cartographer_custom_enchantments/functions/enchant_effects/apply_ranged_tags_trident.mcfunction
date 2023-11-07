@@ -23,4 +23,4 @@ scoreboard players operation $temp ca.var += @s ca.collapse
 scoreboard players operation $temp ca.var += @s ca.riptide
 scoreboard players operation $temp ca.var += @s ca.hydraulic
 
-execute if score $temp ca.var matches 1.. at @s as @e[type=trident,distance=..7,nbt=!{inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/branch/check_player_branch_trident
+execute if score $temp ca.var matches 1.. at @s as @e[type=trident,tag=!custom_trident,distance=..7,nbt=!{inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/branch/check_player_branch_trident
