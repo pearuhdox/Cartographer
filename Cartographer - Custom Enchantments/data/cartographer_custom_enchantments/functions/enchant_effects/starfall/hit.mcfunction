@@ -17,6 +17,9 @@ execute at @s run function motion:motion/push
 scoreboard players set $exec_dmg bbl.storage 0
 scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
+#Statuses!
+execute at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
+execute at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 execute if score $starfall_lvl ca.starfall matches 1 run damage @s 1 cartographer_custom_enchantments:enchant_damage by @p
 execute if score $starfall_lvl ca.starfall matches 2 run damage @s 2 cartographer_custom_enchantments:enchant_damage by @p
@@ -46,10 +49,6 @@ execute if score $frostbite ca.starfall matches 1.. at @s run function cartograp
 #Executioner
 scoreboard players operation $exec ca.executioner = $executioner ca.starfall
 execute if score $executioner ca.starfall matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/branch
-
-#Statuses!
-execute at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
-execute at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 
 execute at @s run particle minecraft:firework ~ ~0.5 ~ 0.25 0 0.25 0.075 15 normal

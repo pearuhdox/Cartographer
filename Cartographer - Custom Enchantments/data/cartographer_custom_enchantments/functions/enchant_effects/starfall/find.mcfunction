@@ -29,4 +29,5 @@ function cartographer_custom_statuses:apply_status/save/additive/do
 
 execute as @e[type=#bb:hostile,distance=..15,limit=1,sort=random,tag=!ca.starfalled] run function cartographer_custom_enchantments:enchant_effects/starfall/hit
 
+scoreboard players set $starfall_mob ca.ench_var 1
 execute if score $starfall_mob ca.ench_var matches 1.. run function #minecraft:cartographer/events/enchantments/passive/starfall

@@ -27,6 +27,10 @@ scoreboard players operation @s ca.damage_queue = $thorns ca.thorns
 scoreboard players set $exec_dmg bbl.storage 0
 scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
+#Statuses!
+function cartographer_custom_statuses:apply_effects/apply/create_aec
+function cartographer_custom_statuses:apply_status/apply/set_statuses
+
 function cartographer_custom_enchantments:helper/damage/macro_setup
 function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 
@@ -53,11 +57,6 @@ execute if score $thorns ca.t_frost matches 1.. run function cartographer_custom
 #Executioner
 scoreboard players operation $exec ca.executioner = $thorns ca.t_exec
 execute if score $thorns ca.t_exec matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
-
-
-#Statuses!
-function cartographer_custom_statuses:apply_effects/apply/create_aec
-function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 #Reset this stat
 scoreboard players set $exec_dmg bbl.storage 0

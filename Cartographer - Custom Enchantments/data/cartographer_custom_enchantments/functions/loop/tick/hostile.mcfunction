@@ -39,3 +39,6 @@ execute if score @s ca.deadeye_time matches 1.. run scoreboard players remove @s
 #Setup Ricochet Score
 execute unless score @s ca.ricochet_cooldown matches 0.. run scoreboard players set @s ca.ricochet_cooldown 0
 execute if score @s ca.ricochet_cooldown matches 1.. run scoreboard players remove @s ca.ricochet_cooldown 1
+
+#Tick down Starfall cooldown
+execute if score @s ca.starfall_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/starfall_time_mob

@@ -7,6 +7,7 @@ execute if score $stun_time ca.stat_calc_var matches 1.. run data modify storage
 execute if score $cloak ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"cloaked",duration:0,chance:100}
 
 execute if score $morph_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"polymorphed",chance:100,duration:0}
+
 execute if score $charm_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"charmed",chance:100,duration:0}
 
 execute if score $expose_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"exposed",duration:0,amplifier:0,chance:100}
@@ -41,18 +42,18 @@ execute if score $charm_time ca.stat_calc_var matches 1.. store result storage c
 execute if score $cloak ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"cloaked"}].duration int 1 run scoreboard players get $cloak ca.stat_calc_var
 
 execute if score $expose_duration ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"exposed"}].duration int 1 run scoreboard players get $expose_duration ca.stat_calc_var
-execute if score $expose_level ca.stat_calc_var matches 0.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"exposed"}].amplifier int 1 run scoreboard players get $expose_level ca.stat_calc_var
+execute if score $expose_duration ca.stat_calc_var matches 1.. if score $expose_level ca.stat_calc_var matches 0.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"exposed"}].amplifier int 1 run scoreboard players get $expose_level ca.stat_calc_var
 execute if score $expose_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"exposed"}].chance int 1 run scoreboard players get $expose_chance ca.stat_calc_var
 
 execute if score $oiled_duration ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].duration int 1 run scoreboard players get $oiled_duration ca.stat_calc_var
-execute if score $oiled_level ca.stat_calc_var matches 0.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].amplifier int 1 run scoreboard players get $oiled_level ca.stat_calc_var
+execute if score $oiled_duration ca.stat_calc_var matches 1.. if score $oiled_level ca.stat_calc_var matches 0.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].amplifier int 1 run scoreboard players get $oiled_level ca.stat_calc_var
 execute if score $oiled_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].chance int 1 run scoreboard players get $oiled_chance ca.stat_calc_var
 
 execute if score $shackled ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"shackled"}].amplifier int 1 run scoreboard players get $shackled ca.stat_calc_var
 execute if score $shackled_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"shackled"}].chance int 1 run scoreboard players get $shackled_chance ca.stat_calc_var
 
 execute if score $brittle_duration ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"brittle"}].duration int 1 run scoreboard players get $brittle_duration ca.stat_calc_var
-execute if score $brittle_level ca.stat_calc_var matches 0.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"brittle"}].amplifier int 1 run scoreboard players get $brittle_level ca.stat_calc_var
+execute if score $brittle_duration ca.stat_calc_var matches 1.. if score $brittle_level ca.stat_calc_var matches 0.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"brittle"}].amplifier int 1 run scoreboard players get $brittle_level ca.stat_calc_var
 execute if score $brittle_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"brittle"}].chance int 1 run scoreboard players get $brittle_chance ca.stat_calc_var
 
 #Finally, convert over entropy
