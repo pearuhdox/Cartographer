@@ -40,11 +40,6 @@ execute if score $cu_en_ranged ca.enabler matches 1.. at @s[type=!player] run fu
 scoreboard players operation $cauterize ca.ench_var = $cauterize ca.var
 execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_cauterize] at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/ranged
 
-#Electrode
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_electrode] run function cartographer_custom_enchantments:enchant_effects/electrode
-
-#Flash
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_flash] at @s run function cartographer_custom_enchantments:enchant_effects/flash
 
 #Frost
 execute if entity @s[tag=is_frost] run function cartographer_custom_enchantments:enchant_effects/frost

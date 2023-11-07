@@ -39,8 +39,8 @@ execute store result score $chance ca.effect_stun run data get storage cartograp
 execute if score $inflict ca.effect_stun matches 1.. run function cartographer_custom_statuses:apply_status/apply/stunned
 
 #Morph
-execute store result score $chance ca.morph_time run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"morphed"}].chance
-execute store result score $time ca.morph_time run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"morphed"}].duration
+execute store result score $chance ca.morph_time run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"polymorphed"}].chance
+execute store result score $time ca.morph_time run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"polymorphed"}].duration
 
 execute if score $time ca.morph_time matches 1.. run function cartographer_custom_statuses:apply_status/apply/morphed
 

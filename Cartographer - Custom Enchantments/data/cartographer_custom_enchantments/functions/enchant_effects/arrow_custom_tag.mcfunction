@@ -1,6 +1,7 @@
 #Add the proper tag to the mob based on closest arrow.
 execute if score $cauterize ca.var matches 1.. run tag @s add is_cauterize
 
+execute if score $frost ca.var matches 1.. run tag @s add is_frost
 
 execute if score $explosive ca.var matches 1.. run tag @s add is_explosive
 execute if score $explosive ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/explosive

@@ -13,7 +13,7 @@ tellraw @s [{"text":"❰","color":"green","bold":true},{"text":"⊰ Lexica Carto
 tellraw @s {"text":"A guide by a cartographer about Cartographer.","color":"#ACFFA6","bold":false,"italic":true}
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 
-tellraw @s [{"text":"Morph","color":"yellow","bold":true,"italic":false}]
+tellraw @s [{"text":"Polymorphed","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
 tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Affected mobs are briefly turned into ghostly chickens. Their health is transferred to the chicken, and any damage they take as a chicken will be retained when the mob is no longer morphed. If the mob dies as a chicken, it drops large quantities of meat. Once a mob has been morphed once, it cannot be morphed again.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]

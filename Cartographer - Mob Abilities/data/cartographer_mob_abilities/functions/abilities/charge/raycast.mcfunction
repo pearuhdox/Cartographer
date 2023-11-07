@@ -20,12 +20,12 @@ scoreboard players set $zeph_check ca.mob_var 0
 
 tp @s ^ ^ ^0.5
 
-execute unless block ^ ^ ^0.5 #bb:can_raycast run scoreboard players set @s ca.raycast 0
+execute unless block ^ ^ ^1 #bb:can_raycast run scoreboard players set @s ca.raycast 0
 
 execute if score @s ca.raycast matches 0 run tp @s ^ ^-0.1 ^
 
 
-execute as @s[scores={ca.raycast=0}] at @s positioned ~ ~-0.5 ~ run function cartographer_mob_abilities:passive/breaker
+#execute as @s[scores={ca.raycast=0}] at @s positioned ~ ~-0.5 ~ run function cartographer_mob_abilities:passive/breaker
 
 execute if entity @s[scores={ca.raycast=1..}] if block ~ ~ ~ #bb:can_raycast if block ^ ^ ^0.5 #bb:can_raycast positioned ^ ^ ^0.5 run function cartographer_mob_abilities:abilities/charge/raycast
 

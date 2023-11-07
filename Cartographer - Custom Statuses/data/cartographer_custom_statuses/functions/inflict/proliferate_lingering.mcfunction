@@ -35,8 +35,8 @@ execute store result score $inflict_chance ca.effect_stun run data get storage c
 
 
 #Morph
-execute store result score $inflict_chance ca.morph_time run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"morphed"}].chance
-execute store result score $inflict_time ca.morph_time run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"morphed"}].duration
+execute store result score $inflict_chance ca.morph_time run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"polymorphed"}].chance
+execute store result score $inflict_time ca.morph_time run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"polymorphed"}].duration
 
 
 #Charmed

@@ -13,7 +13,7 @@ execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_
 execute unless entity @s[tag=ca.st.e_infected] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"infected"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_infected] run function cartographer_custom_statuses:descriptions/write/status/infected
 
-execute unless entity @s[tag=ca.st.e_morph] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"morphed"}].duration
+execute unless entity @s[tag=ca.st.e_morph] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"polymorphed"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_morph] run function cartographer_custom_statuses:descriptions/write/status/morph
 
 execute unless entity @s[tag=ca.st.e_charmed] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.apply_status[{id:"charmed"}].duration
@@ -48,7 +48,7 @@ execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_
 execute unless entity @s[tag=ca.st.e_infected] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"infected"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_infected] run function cartographer_custom_statuses:descriptions/write/status/infected
 
-execute unless entity @s[tag=ca.st.e_morph] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"morphed"}].duration
+execute unless entity @s[tag=ca.st.e_morph] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"polymorphed"}].duration
 execute if score $temp ca.write_status matches 1.. unless entity @s[tag=ca.st.e_morph] run function cartographer_custom_statuses:descriptions/write/status/morph
 
 execute unless entity @s[tag=ca.st.e_charmed] store result score $temp ca.write_status run data get storage cartographer_custom_statuses:player_equip main.tag.custom_statuses[{id:"charmed"}].duration

@@ -6,7 +6,7 @@ execute if score $stun_time ca.stat_calc_var matches 1.. run data modify storage
 
 execute if score $cloak ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"cloaked",duration:0,chance:100}
 
-execute if score $morph_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"morphed",chance:100}
+execute if score $morph_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"polymorphed",chance:100}
 execute if score $charm_time ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"charmed",chance:100}
 
 execute if score $expose_duration ca.stat_calc_var matches 1.. run data modify storage cartographer_custom_statuses:apply_status data.effects append value {id:"exposed",duration:0,amplifier:0,chance:100}
@@ -32,10 +32,10 @@ execute if score $infect_chance ca.stat_calc_var matches 1.. store result storag
 execute if score $stun_time ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"stunned"}].duration int 1 run scoreboard players get $stun_time ca.stat_calc_var
 execute if score $stun_time ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"stunned"}].chance int 1 run scoreboard players get $stun_chance ca.stat_calc_var
 
-execute if score $morph_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"morphed"}].chance int 1 run scoreboard players get $morph_chance ca.stat_calc_var
+execute if score $morph_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"polymorphed"}].chance int 1 run scoreboard players get $morph_chance ca.stat_calc_var
 execute if score $charm_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"charmed"}].chance int 1 run scoreboard players get $charm_chance ca.stat_calc_var
 
-execute if score $morph_time ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"morphed"}].duration int 1 run scoreboard players get $morph_time ca.stat_calc_var
+execute if score $morph_time ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"polymorphed"}].duration int 1 run scoreboard players get $morph_time ca.stat_calc_var
 execute if score $charm_time ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"charmed"}].duration int 1 run scoreboard players get $charm_time ca.stat_calc_var
 
 execute if score $cloak ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"cloaked"}].duration int 1 run scoreboard players get $cloak ca.stat_calc_var

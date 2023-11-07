@@ -28,10 +28,10 @@ execute store result score $temp ca.stat_calc_var run data get storage cartograp
 scoreboard players operation $stun_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"morphed"}].chance
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"polymorphed"}].chance
 scoreboard players operation $morph_chance ca.stat_calc_var > $temp ca.stat_calc_var
 
-execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"morphed"}].duration
+execute store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"polymorphed"}].duration
 scoreboard players operation $morph_time ca.stat_calc_var > $temp ca.stat_calc_var
 
 

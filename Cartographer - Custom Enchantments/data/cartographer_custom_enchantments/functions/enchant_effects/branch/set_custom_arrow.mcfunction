@@ -4,6 +4,9 @@ scoreboard players operation @s ca.cauterize = @p ca.cauterize
 scoreboard players operation @s ca.point_blank = @p ca.point_blank
 scoreboard players operation @s ca.sharpshot = @p ca.sharpshot
 
+scoreboard players operation @s ca.frost = @p ca.frost
+scoreboard players operation @s ca.punch = @p ca.punch
+
 # Check this one vvv
 scoreboard players operation @s ca.explosive = @p ca.explosive
 execute if entity @p[predicate=cartographer_custom_enchantments:hold_crossbow] run scoreboard players operation @s ca.punch = @p ca.punch
