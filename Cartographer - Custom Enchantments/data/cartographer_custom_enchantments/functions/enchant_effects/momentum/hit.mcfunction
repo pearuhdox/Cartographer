@@ -4,6 +4,10 @@ scoreboard players add $momentum_mob ca.ench_var 1
 scoreboard players set $exec_dmg bbl.storage 0
 scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
+#Statuses!
+execute at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
+execute at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
+
 execute if entity @s[nbt={HurtTime:0s}] run function cartographer_custom_enchantments:enchant_effects/momentum/damage
 
 #Run Cauterize if it exists
@@ -23,10 +27,6 @@ execute if score $frostbite ca.momentum matches 1.. at @s run function cartograp
 #Executioner
 scoreboard players operation $exec ca.executioner = $executioner ca.momentum
 execute if score $executioner ca.momentum matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/branch
-
-#Statuses!
-execute at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
-execute at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 
 execute at @s positioned ~ ~0.1 ~ run particle minecraft:poof ~ ~ ~ 0.1 0.1 0.1 0 5 normal

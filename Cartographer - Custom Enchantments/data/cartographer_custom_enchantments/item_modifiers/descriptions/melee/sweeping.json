@@ -6,7 +6,7 @@
               "text": " "
             },
             {
-              "text": "✎ Surging Strike",
+              "text": "✎ Sweeping",
               "color": "#ACFFA6",
               "bold": false,
               "italic": false,
@@ -15,7 +15,7 @@
               "obfuscated": false
             },
             {
-              "text": "This melee weapon can sprint attack",
+              "text": "This weapon stores charges when you kill",
               "color": "#FFF4D9",
               "bold": false,
               "italic": false,
@@ -24,7 +24,7 @@
               "obfuscated": false
             },
             {
-                "text": "in a piercing line pattern from the struck mob.",
+                "text": "mobs. Charges are used when attacking to",
                 "color": "#FFF4D9",
                 "bold": false,
                 "italic": false,
@@ -33,7 +33,7 @@
                 "obfuscated": false
               },
               {
-                  "text": "The pierce deals a percentage of the total damage.",
+                  "text": "create stronger sweep attacks.",
                   "color": "#FFF4D9",
                   "bold": false,
                   "italic": false,

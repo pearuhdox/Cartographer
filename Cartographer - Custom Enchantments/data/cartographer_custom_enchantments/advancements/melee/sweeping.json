@@ -1,15 +1,15 @@
 {
     "display": {
         "title": {
-            "text": "Thrusting                  ",
+            "text": "Sweeping                   ",
             "color": "aqua"
         },
         "description": {
-            "text": "The weapon stores charges over time and from kills. Charges are used when attacking and sprint attacking to pierce damage to mobs behind your target. Those mobs take a portion of the weapon's damage.",
+            "text": "The weapon stores charges over time and from kills. Charges are used when attacking to create empowered sweep attacks.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:stone_shovel"
+            "item": "minecraft:stone_sword"
         },
         "frame": "task",
         "show_toast": true,
@@ -22,14 +22,14 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"thrusting\"}]}"
+                        "nbt": "{CustomEnchantments:[{id:\"sweeping\"}]}"
                     }
                 ]
             }
         }
     },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/melee/thrusting"
+        "function": "cartographer_custom_enchantments:descriptions/melee/sweeping"
     },
-    "parent": "cartographer_custom_enchantments:melee/sweeping"
+    "parent": "cartographer_custom_enchantments:melee/slamming"
 }

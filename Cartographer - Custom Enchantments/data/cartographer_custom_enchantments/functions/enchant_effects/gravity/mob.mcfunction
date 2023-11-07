@@ -16,6 +16,10 @@ execute unless entity @s[tag=ca.boss] if score $knockback ca.gravity matches 5..
 
 function motion:motion/push
 
+#Statuses!
+function cartographer_custom_statuses:apply_effects/apply/create_aec
+function cartographer_custom_statuses:apply_status/apply/set_statuses
+
 #Save For Executioner
 scoreboard players set $exec_dmg bbl.storage 0
 scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
@@ -96,10 +100,6 @@ execute if score $frostbite ca.gravity matches 1.. run function cartographer_cus
 #Executioner
 scoreboard players operation $exec ca.executioner = $executioner ca.gravity
 execute if score $executioner ca.gravity matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
-
-#Statuses!
-function cartographer_custom_statuses:apply_effects/apply/create_aec
-function cartographer_custom_statuses:apply_status/apply/set_statuses
 
 
 function #minecraft:cartographer/events/enchants_mob_hit/passive/gravity

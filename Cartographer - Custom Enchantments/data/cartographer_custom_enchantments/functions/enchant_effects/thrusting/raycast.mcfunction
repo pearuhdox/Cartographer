@@ -2,14 +2,27 @@ scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
 execute unless block ^ ^ ^0.5 #bb:can_raycast run scoreboard players set @s ca.raycast 0
 
-execute unless score $melee ca.fire_aspect matches 1.. unless score $melee ca.frostbite matches 1.. unless score @s ca.raycast matches 0 run particle minecraft:dust 0.875 0.875 0.875 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
-execute unless score $melee ca.fire_aspect matches 1.. unless score $melee ca.frostbite matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.875 0.875 0.875 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+#Save For Executioner
+scoreboard players set $exec_dmg bbl.storage 0
+scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
-execute if score $melee ca.fire_aspect matches 1.. run particle minecraft:dust 0.973 0.518 0.251 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
-execute if score $melee ca.fire_aspect matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.973 0.518 0.251 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+#Run Cauterize if it exists
+execute if score $cauterize ca.thrusting matches 1 as @s at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/other
 
-execute if score $melee ca.frostbite matches 1.. run particle minecraft:dust 0.196 0.659 0.773 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
-execute if score $melee ca.frostbite matches 1.. positioned ^ ^ ^-0.25 run particle minecraft:dust 0.196 0.659 0.773 0.5 ~ ~ ~ 0.2 0.2 0.2 0.025 10 normal
+#Run Fire Aspect (after Cauterize)
+execute if score $fire_aspect ca.thrusting matches 1 as @s run data modify entity @s Fire set value 81
+execute if score $fire_aspect ca.thrusting matches 2 as @s run data modify entity @s Fire set value 161
+execute if score $fire_aspect ca.thrusting matches 3 as @s run data modify entity @s Fire set value 241
+execute if score $fire_aspect ca.thrusting matches 4 as @s run data modify entity @s Fire set value 321
+execute if score $fire_aspect ca.thrusting matches 5.. as @s run data modify entity @s Fire set value 401
+
+#Frostbite
+scoreboard players operation $fb ca.frostbite = $frostbite ca.thrusting
+execute if score $frostbite ca.thrusting matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
+
+#Executioner
+scoreboard players operation $exec ca.executioner = $executioner ca.thrusting
+execute if score $executioner ca.thrusting matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 #Ending particle
 execute if score @s ca.raycast matches 0 run particle minecraft:cloud ~ ~ ~ 0.2 0.2 0.2 0.05 12 normal

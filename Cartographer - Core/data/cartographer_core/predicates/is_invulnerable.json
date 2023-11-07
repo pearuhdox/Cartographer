@@ -7,9 +7,6 @@
         "amplifier": {
           "min": 4,
           "max": 126
-        },
-        "duration": {
-          "min": 5
         }
       }
     }

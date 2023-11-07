@@ -1,11 +1,11 @@
 {
     "display": {
         "title": {
-            "text": "Thrusting                  ",
+            "text": "Slamming                   ",
             "color": "aqua"
         },
         "description": {
-            "text": "The weapon stores charges over time and from kills. Charges are used when attacking and sprint attacking to pierce damage to mobs behind your target. Those mobs take a portion of the weapon's damage.",
+            "text": "The weapon stores charges over time and from kills. Charges are used when crit-attacking to deal damage to other nearby mobs. Those mobs take a portion of the weapon's damage.",
             "color": "white"
         },
         "icon": {
@@ -22,14 +22,14 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{CustomEnchantments:[{id:\"thrusting\"}]}"
+                        "nbt": "{CustomEnchantments:[{id:\"slamming\"}]}"
                     }
                 ]
             }
         }
     },
     "rewards": {
-        "function": "cartographer_custom_enchantments:descriptions/melee/thrusting"
+        "function": "cartographer_custom_enchantments:descriptions/melee/slamming"
     },
-    "parent": "cartographer_custom_enchantments:melee/sweeping"
+    "parent": "cartographer_custom_enchantments:melee/singe"
 }
