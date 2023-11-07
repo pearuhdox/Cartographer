@@ -9,7 +9,7 @@ execute if entity @s[tag=ca.celestial] as @e[type=#bb:hostile,distance=..8,limit
 
 execute positioned ~-1 ~ ~-1 as @a[dx=2,dy=0,dz=2,tag=ability_tagged] run function cartographer_mob_abilities:projectiles/behavior/trap/cloud/detonate_player
 
-execute if entity @a[tag=ca.trap_hit,distance=..2] run function cartographer_mob_abilities:helper/damage/setup_macro
+execute if entity @a[tag=ca.trap_hit,distance=..2] run function cartographer_mob_abilities:helper/damage/macro_setup
 execute as @s positioned as @a[tag=ca.trap_hit,distance=..2] run function cartographer_mob_abilities:helper/damage/ability_projectile with storage cartographer:macro.mob_abilities
 
 tag @a remove ca.trap_hit

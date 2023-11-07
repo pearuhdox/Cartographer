@@ -23,7 +23,7 @@ execute at @s if entity @a[distance=..2.5] positioned ~-0.75 ~-0.5 ~-0.75 as @a[
 execute at @s positioned as @a[scores={ca.damage_queue=1..},distance=..2.5] run function cartographer_mob_abilities:helper/damage/ability_generic
 execute at @s if entity @a[distance=..2.5] positioned ~-0.75 ~-0.5 ~-0.75 if entity @a[dx=1.5,dy=0,dz=1.5] positioned ~0.75 ~0.5 ~0.75 positioned ^ ^3 ^-2 run function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 
-execute if entity @a[tag=ca.rift_hit,distance=..2.5] run function cartographer_mob_abilities:helper/damage/setup_macro
+execute if entity @a[tag=ca.rift_hit,distance=..2.5] run function cartographer_mob_abilities:helper/damage/macro_setup
 execute as @s positioned as @a[tag=ca.rift_hit,distance=..2.5] run function cartographer_mob_abilities:helper/damage/ability_generic with storage cartographer:macro.mob_abilities
 
 tag @a remove ca.rift_hit

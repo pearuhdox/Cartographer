@@ -22,7 +22,7 @@ scoreboard players operation $needle ca.ability_dmg = @s ca.ability_dmg
 
 execute as @a[distance=..2,limit=1,sort=nearest] at @s facing entity 31182015-4512-2011-3118-115180000000 feet rotated ~ ~-15 run function cartographer_mob_abilities:projectiles/behavior/needle/player 
 
-execute if entity @a[distance=..2] run function cartographer_mob_abilities:helper/damage/setup_macro
+execute if entity @a[distance=..2] run function cartographer_mob_abilities:helper/damage/macro_setup
 execute positioned as @a[distance=..2] run function cartographer_mob_abilities:helper/damage/ability_projectile with storage cartographer:macro.mob_abilities
 
 
