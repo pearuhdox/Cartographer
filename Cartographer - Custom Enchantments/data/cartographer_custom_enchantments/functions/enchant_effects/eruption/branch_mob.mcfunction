@@ -21,6 +21,9 @@ scoreboard players operation @s ca.damage_queue *= $eruption ca.eruption
 scoreboard players set $exec_dmg bbl.storage 0
 scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
+execute if score $do_apply_effects ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
+execute if score $do_apply_status ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
+
 execute if score $eruption ca.eruption matches 1.. as @s run function cartographer_custom_enchantments:helper/damage/macro_setup
 function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 
@@ -37,10 +40,6 @@ execute if score $eruption ca.fire_aspect matches 5.. as @s run data modify enti
 #Frostbite
 scoreboard players operation $fb ca.frostbite = $eruption ca.frostbite
 execute if score $eruption ca.frostbite matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
-
-execute if score $do_apply_effects ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
-execute if score $do_apply_status ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
-
 
 #Executioner
 scoreboard players operation $exec ca.executioner = $eruption ca.executioner

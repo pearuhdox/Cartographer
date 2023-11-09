@@ -20,6 +20,6 @@ execute if score $hunger_calc_cur ca.loot_var matches 25..49 on passengers on pa
 execute if score $hunger_calc_cur ca.loot_var matches 50..74 on passengers on passengers run data modify entity @s text set value '[{"text":"Starving... ","color":"red","italic":false},{"text":"[","color":"gray","italic":false},{"text":"❤❤","color":"dark_red","italic":false},{"text":"❤❤","color":"dark_gray","italic":false},{"text":"]","color":"dark_gray","italic":false}]'
 execute if score $hunger_calc_cur ca.loot_var matches 75..99 on passengers on passengers run data modify entity @s text set value '[{"text":"Starving... ","color":"red","italic":false},v{"text":"[","color":"gray","italic":false},{"text":"❤❤❤","color":"dark_red","italic":false},{"text":"❤","color":"dark_gray","italic":false},{"text":"]","color":"dark_gray","italic":false}]'
 
-execute unless score @s ca.hunger_count >= @s ca.hunger_total run scoreboard players set @s ca.hunger_time 40
+execute unless score @s ca.hunger_count >= @s ca.hunger_total run scoreboard players set @s ca.hunger_time 15
 
 execute if score @s ca.hunger_count >= @s ca.hunger_total on passengers on passengers run data modify entity @s text set value '[{"text":"[","color":"gray","italic":false},{"text":"❤❤❤❤","color":"dark_gray","italic":false},{"text":"]","color":"dark_gray","italic":false}]'

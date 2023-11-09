@@ -25,6 +25,6 @@ execute if score $hunger_calc_cur ca.loot_var matches 75..99 on passengers on pa
 execute if score $hunger_calc_cur ca.loot_var matches 100.. on passengers on passengers run data modify entity @s text set value '[{"text":"[","color":"gray","italic":false},{"text":"❤❤❤❤","color":"dark_red","italic":false},{"text":"]","color":"dark_gray","italic":false}]'
 
 
-scoreboard players set @s ca.hunger_time 120
+scoreboard players set @s ca.hunger_time 30
 
 execute if score @s ca.hunger_count matches 0 run scoreboard players add @s ca.loot_timer 1
