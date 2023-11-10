@@ -4,7 +4,7 @@ function cartographer_custom_enchantments:enchant_effects/infinity/kill_handler/
 #Adrenaline
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.adrenaline matches 1.. run function cartographer_custom_enchantments:enchant_effects/adrenaline
 #Auto Charge
-execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/auto_charge
+execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/auto_charge/count_check
 #Energetic
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.energetic matches 1.. run function cartographer_custom_enchantments:enchant_effects/energetic
 #Frenzy

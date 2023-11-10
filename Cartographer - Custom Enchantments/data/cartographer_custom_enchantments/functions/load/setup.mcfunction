@@ -1,5 +1,7 @@
 
 #Setup all necessary scoreboard commands.
+scoreboard objectives add ca.auto_charge_count dummy
+scoreboard objectives add ca.auto_charge_req dummy
 
 scoreboard objectives add ca.adrenaline dummy
 scoreboard objectives add ca.agility dummy

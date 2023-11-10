@@ -2,23 +2,11 @@ tag @s add doing_auto_charge
 
 function cartographer_custom_enchantments:calc_enchant/auto_charge
 
-data modify storage cartographer_custom_enchantments:auto_charge Item set value {}
 data modify storage cartographer_custom_enchantments:auto_charge Arrow set value {id:"minecraft:arrow",Count:1b}
 
 #Sfx
 execute if score @s ca.auto_charge matches 1.. at @s run playsound minecraft:item.crossbow.loading_end player @a[distance=..8] ~ ~ ~ 10 0.8
 
-#Recharging
-execute if score @s ca.auto_charge matches 1 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:0b}]
-execute if score @s ca.auto_charge matches 2 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:1b}]
-execute if score @s ca.auto_charge matches 3 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:2b}]
-execute if score @s ca.auto_charge matches 4 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:3b}]
-execute if score @s ca.auto_charge matches 5 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:4b}]
-execute if score @s ca.auto_charge matches 6 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:5b}]
-execute if score @s ca.auto_charge matches 7 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:6b}]
-execute if score @s ca.auto_charge matches 8 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:7b}]
-execute if score @s ca.auto_charge matches 9 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:8b}]
-execute if score @s ca.auto_charge matches 10 run data modify storage cartographer_custom_enchantments:auto_charge Item set from entity @s Inventory[{Slot:-106b}]
 
 data modify storage cartographer_custom_enchantments:auto_charge Item.Slot set value 0b
 data modify block 4206901 0 4206900 Items append from storage cartographer_custom_enchantments:auto_charge Item
@@ -58,3 +46,6 @@ scoreboard players set $auto_repeat ca.auto_charge 0
 execute unless score @s ca.recoil_count matches 1.. run scoreboard players add @s ca.recoil_count 1
 
 execute if score @s ca.auto_charge matches 1.. run function #minecraft:cartographer/events/enchantments/ranged/auto_charge
+
+
+scoreboard players set @s ca.auto_charge_count 0
