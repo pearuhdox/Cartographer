@@ -74,7 +74,7 @@ execute if score @s ca.shielding matches 7.. run scoreboard players set @s ca.sh
 execute if score @s ca.sprint_dash matches 4.. run scoreboard players set @s ca.sprint_dash 3
 execute if score @s ca.disengage matches 4.. run scoreboard players set @s ca.disengage 3
 
-execute if score @s ca.hex_eater matches 4.. run scoreboard players set @s ca.hex_eater 3
+execute if score @s ca.hex_eater matches 6.. run scoreboard players set @s ca.hex_eater 5
 
 execute if score @s ca.resupply matches 11.. run scoreboard players set @s ca.resupply 10
 
