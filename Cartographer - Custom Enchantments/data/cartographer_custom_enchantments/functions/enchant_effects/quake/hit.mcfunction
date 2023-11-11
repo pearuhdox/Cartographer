@@ -21,8 +21,6 @@ scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 function cartographer_custom_statuses:apply_effects/apply/create_aec
 function cartographer_custom_statuses:apply_status/apply/set_statuses
 
-say quake
-
 execute if score $quake_lvl ca.quake matches 1 run damage @s 1 cartographer_custom_enchantments:enchant_damage_bypass by @p
 execute if score $quake_lvl ca.quake matches 2 run damage @s 2 cartographer_custom_enchantments:enchant_damage_bypass by @p
 execute if score $quake_lvl ca.quake matches 3 run damage @s 3 cartographer_custom_enchantments:enchant_damage_bypass by @p

@@ -31,8 +31,6 @@ scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 function cartographer_custom_statuses:apply_effects/apply/create_aec
 function cartographer_custom_statuses:apply_status/apply/set_statuses
 
-say thorns
-
 function cartographer_custom_enchantments:helper/damage/macro_setup
 function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 

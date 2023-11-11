@@ -37,8 +37,6 @@ execute if score $executioner ca.repulsion matches 1.. at @s run function cartog
 execute at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
 execute at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
 
-say repulsion
-
 
 execute at @s positioned ~ ~-0.3 ~ run particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 force
 

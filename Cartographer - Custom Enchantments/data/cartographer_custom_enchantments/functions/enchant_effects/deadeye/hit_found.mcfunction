@@ -20,8 +20,6 @@ execute if score $punch ca.deadeye matches 1.. run function motion:motion/push
 function cartographer_custom_statuses:apply_effects/apply/create_aec
 function cartographer_custom_statuses:apply_status/apply/set_statuses
 
-say deadeye
-
 scoreboard players set $deadeye_hit ca.deadeye 1
 
 scoreboard players operation @s ca.damage_queue = $deadeye ca.damage_queue

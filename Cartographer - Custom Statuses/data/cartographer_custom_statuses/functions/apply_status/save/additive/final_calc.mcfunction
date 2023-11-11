@@ -49,7 +49,7 @@ execute if score $oiled_duration ca.stat_calc_var matches 1.. store result stora
 execute if score $oiled_duration ca.stat_calc_var matches 1.. if score $oiled_level ca.stat_calc_var matches 0.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].amplifier int 1 run scoreboard players get $oiled_level ca.stat_calc_var
 execute if score $oiled_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"oiled"}].chance int 1 run scoreboard players get $oiled_chance ca.stat_calc_var
 
-execute if score $shackled ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"shackled"}].amplifier int 1 run scoreboard players get $shackled ca.stat_calc_var
+execute if score $shackled ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"shackled"}].duration int 1 run scoreboard players get $shackled ca.stat_calc_var
 execute if score $shackled_chance ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"shackled"}].chance int 1 run scoreboard players get $shackled_chance ca.stat_calc_var
 
 execute if score $brittle_duration ca.stat_calc_var matches 1.. store result storage cartographer_custom_statuses:apply_status data.effects[{id:"brittle"}].duration int 1 run scoreboard players get $brittle_duration ca.stat_calc_var

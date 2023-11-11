@@ -1,8 +1,6 @@
 execute if score $do_apply_effects ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
 execute if score $do_apply_status ca.status_var matches 1.. at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
 
-say slamming
-
 $damage @s $(damage) cartographer_custom_enchantments:enchant_damage by @p[scores={ca.slamming=1..}]
 
 scoreboard players set @s co_y 2

@@ -21,8 +21,6 @@ scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 execute at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
 execute at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
 
-say starfall
-
 execute if score $starfall_lvl ca.starfall matches 1 run damage @s 1 cartographer_custom_enchantments:enchant_damage by @p
 execute if score $starfall_lvl ca.starfall matches 2 run damage @s 2 cartographer_custom_enchantments:enchant_damage by @p
 execute if score $starfall_lvl ca.starfall matches 3 run damage @s 3 cartographer_custom_enchantments:enchant_damage by @p

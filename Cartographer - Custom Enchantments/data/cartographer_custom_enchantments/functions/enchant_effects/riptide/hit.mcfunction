@@ -61,7 +61,5 @@ execute if score $exec ca.riptide matches 1.. run function cartographer_custom_e
 function cartographer_custom_statuses:apply_effects/apply/create_aec
 function cartographer_custom_statuses:apply_status/apply/set_statuses
 
-say riptide
-
 #Reset this stat
 scoreboard players set $exec_dmg bbl.storage 0
