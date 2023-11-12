@@ -51,6 +51,8 @@ execute if entity @s[tag=ca.reflect,scores={cooldown=0}] if entity @a[gamemode=!
 
 execute if entity @s[tag=ca.storm,scores={cooldown=0}] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..18] run function cartographer_mob_abilities:animations/storm
 
+function #minecraft:cartographer/events/mob_abilities/ability/animation
+
 execute as @a[distance=..40] at @s if score @s ca.combat_timer matches ..3 run scoreboard players set @s ca.combat_timer 4
 
 #Run Sidearm after ability here

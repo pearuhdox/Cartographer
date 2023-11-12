@@ -9,7 +9,7 @@ execute if entity @s[type=blaze,tag=ca.airborne_slam_waiting,tag=ca.smash] run f
 #Run Pre Ability Traits
 execute if entity @s[tag=ca.acrobatic,tag=!ca.acro_retreat_after,tag=!ca.acro_kite_strafe_after,tag=!ca.acro_kite_forward_after,tag=!ca.acro_kite_after,tag=!ca.acro_strafe_after,tag=!ca.acro_gap_close_after,tag=!ca.command,tag=tokened,tag=!ca.has_kited,tag=!ca.has_gap_closed,tag=!ca.has_strafed,tag=!ca.has_retreated,scores={cooldown=0}] run function cartographer_mob_abilities:ability_traits/acrobatic/run_effects/call_all_pre_ability
 
-#Run Abilities unless on Acro Cooldown
+#RUN ABILITIES unless on Acro Cooldown
 execute unless score @s ca.acro_cooldown matches 1.. unless score @s ability_pause matches 1.. if entity @s[tag=attacking] if entity @a[gamemode=!spectator,gamemode=!creative,distance=..32] run function cartographer_mob_abilities:loop/tick/do_actives
 
 execute unless score @s ca.acro_cooldown matches 1.. if score @s ability_pause matches 1.. run scoreboard players remove @s ability_pause 1

@@ -60,6 +60,7 @@ execute if entity @s[tag=ca.feeble] at @s run function cd:lib/mob/damage/normal
 
 execute if entity @s[tag=ca.feeble_void] at @s run tp @s ~ -256 ~
 
-function #minecraft:cartographer/events/custom_traits
+function #minecraft:cartographer/events/mob_abilities/trait/on_hit
+function #minecraft:cartographer/events/mob_abilities/trait/passive
 
 #say Running Traits

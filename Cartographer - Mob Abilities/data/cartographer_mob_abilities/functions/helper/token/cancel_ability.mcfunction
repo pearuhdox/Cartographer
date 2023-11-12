@@ -25,3 +25,7 @@ tag @s remove ca.has_strafed
 tag @s remove ca.has_retreated
 
 tag @s remove warned
+
+scoreboard players set $cancel ca.mob_var 1
+
+function #minecraft:cartographer/events/mob_abilities/ability/cancel

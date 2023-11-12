@@ -1,6 +1,5 @@
 tag @s add tokened
 tag @s add can_see_player
-tag @s add avail_target
 tag @s add attacking
 
 tag @s add ca.temp_token

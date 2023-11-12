@@ -23,4 +23,4 @@ execute if entity @s[tag=ca.celestial] if entity @a[tag=ability_tagged] run func
 
 execute if entity @s[tag=ca.ambidextrous,tag=ca.follow_up_ability,scores={ca.ambi_cool=0}] if entity @a[tag=ability_tagged] run function cartographer_mob_abilities:passive/ambidextrous/swap
 
-function #minecraft:cartographer/events/custom_traits
+function #minecraft:cartographer/events/mob_abilities/trait/on_hit

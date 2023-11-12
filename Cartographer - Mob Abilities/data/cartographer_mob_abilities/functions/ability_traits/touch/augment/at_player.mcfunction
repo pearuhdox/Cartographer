@@ -21,4 +21,4 @@ execute if entity @s[tag=ca.aug_temp_alchemist] as @a[tag=ability_tagged,tag=tou
 #EXCEPTION: Volatile runs at the player's position.
 execute if entity @s[tag=ca.aug_temp_volatile] as @a[tag=ability_tagged,tag=touched] at @s run function cartographer_mob_abilities:ability_traits/volatile/effect
 
-#function #minecraft:cartographer/events/custom_traits
+#function #minecraft:cartographer/events/mob_abilities/trait/on_hit

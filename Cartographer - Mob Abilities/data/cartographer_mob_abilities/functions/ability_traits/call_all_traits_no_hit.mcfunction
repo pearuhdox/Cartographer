@@ -32,8 +32,8 @@ execute if entity @s[tag=ca.acro_kite_after] at @s run function cartographer_mob
 execute if entity @s[tag=ca.acro_kite_forward_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_forward
 execute if entity @s[tag=ca.acro_kite_strafe_after] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/kite_strafe
 
-#Feeble Tag
-execute if entity @s[tag=ca.feeble] run scoreboard players set @s bbl.damage_queue 150
-execute if entity @s[tag=ca.feeble] at @s run function cd:lib/mob/damage/normal
+function #minecraft:cartographer/events/mob_abilities/trait/passive
 
+#Feeble Tag
+execute if entity @s[tag=ca.feeble] run damage @s 300 minecraft:out_of_world
 execute if entity @s[tag=ca.feeble_void] at @s run tp @s ~ -256 ~

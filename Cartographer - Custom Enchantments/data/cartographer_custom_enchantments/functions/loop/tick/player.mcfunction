@@ -98,6 +98,7 @@ execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_en
 
 #Momentum Cancel
 execute unless score @s ca.momentum matches 1.. run scoreboard players set @s ca.momentum_charge 0
+execute unless score @s ca.momentum matches 1.. run scoreboard players set @s ca.momentum_tier 0
 execute unless score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/attributes
 execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/charge
 
