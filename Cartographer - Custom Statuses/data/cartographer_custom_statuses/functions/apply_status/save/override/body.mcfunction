@@ -1,4 +1,5 @@
 data modify storage cartographer_custom_statuses:apply_status data.temp set from entity @s Inventory[{Slot:102b}].tag.apply_status
+scoreboard players set $temp ca.stat_calc_var -100
 
 execute if data storage cartographer_custom_statuses:apply_status data.temp[{id:"bleeding"}].amplifier store result score $temp ca.stat_calc_var run data get storage cartographer_custom_statuses:apply_status data.temp[{id:"bleeding"}].amplifier
 scoreboard players operation $bleed ca.stat_calc_var > $temp ca.stat_calc_var
