@@ -38,3 +38,5 @@ function cartographer_custom_statuses:player/crit_addition
 execute if entity @s[scores={ca.cu_st_dmg=1..},tag=pot_add_crit] at @s run function cartographer_custom_statuses:player/crit_sfx
 
 scoreboard players set @s ca.cu_st_dmg 0
+
+execute if score @s ca.linger_cdl matches 1.. run scoreboard players remove @s ca.linger_cdl 1

@@ -5,3 +5,5 @@ execute on passengers run data modify storage cartographer_custom_statuses:apply
 execute on passengers run data modify storage cartographer_custom_statuses:apply_status data.effects set from entity @s data.apply_status
 
 execute as @e[type=#bb:hostile,distance=..1] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/afflict_branch
+
+execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300

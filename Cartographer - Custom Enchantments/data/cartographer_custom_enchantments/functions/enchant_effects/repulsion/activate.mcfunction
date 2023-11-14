@@ -15,10 +15,18 @@ execute if entity @s[tag=ca.ae_offh] if entity @s[tag=ca.ce_repulsion_offh] run 
 execute if entity @s[tag=ca.si_main] if entity @s[tag=ca.ce_repulsion_main] run tag @s add ca.check_si_main
 execute if entity @s[tag=ca.si_offh] if entity @s[tag=ca.ce_repulsion_offh] run tag @s add ca.check_si_offh
 
+execute if entity @s[tag=ca.as_main] if entity @s[tag=ca.ce_repulsion_main] run tag @s add ca.check_as_main
+execute if entity @s[tag=ca.as_offh] if entity @s[tag=ca.ce_repulsion_offh] run tag @s add ca.check_as_offh
+
 function cartographer_custom_statuses:apply_effects/save/additive/do
+function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
 
 execute as @e[type=#bb:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/repulsion/mob
 
+execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
+
 execute if score $repulsion_mob ca.ench_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/repulsion/vfx
+
+execute if score $repulsion_mob ca.ench_var matches 1.. run function cartographer_custom_statuses:apply_effects/apply/create_aec

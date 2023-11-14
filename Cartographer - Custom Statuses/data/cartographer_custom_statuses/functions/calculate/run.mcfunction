@@ -23,6 +23,7 @@ tag @s remove ca.override_ranged
 tag @s remove ca.override_crit
 tag @s remove ca.override_sprint
 tag @s remove ca.override_sneak
+tag @s remove ca.override_linger
 
 
 
@@ -60,6 +61,13 @@ tag @s remove ca.override_sneak_l
 tag @s remove ca.override_sneak_f
 tag @s remove ca.override_sneak_m
 tag @s remove ca.override_sneak_o
+
+tag @s remove ca.override_linger_h
+tag @s remove ca.override_linger_b
+tag @s remove ca.override_linger_l
+tag @s remove ca.override_linger_f
+tag @s remove ca.override_linger_m
+tag @s remove ca.override_linger_o
 
 tag @s remove ca.si_head
 tag @s remove ca.si_body
@@ -156,7 +164,32 @@ execute store success score $temp ca.status_var if data storage cartographer_cus
 scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
 
 
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip head.tag.apply_self run tag @s add ca.as_head
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip body.tag.apply_self run tag @s add ca.as_body
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip legs.tag.apply_self run tag @s add ca.as_legs
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip feet.tag.apply_self run tag @s add ca.as_feet
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.apply_self run tag @s add ca.as_offh
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
+scoreboard players set $temp ca.status_var 0
+execute store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip main.tag.apply_self run tag @s add ca.as_main
+scoreboard players operation $do_ae ca.status_var += $temp ca.status_var
+
 scoreboard players operation $do_effects ca.status_var += $do_ae ca.status_var
+scoreboard players operation $do_effects ca.status_var += $do_as ca.status_var
 scoreboard players operation $do_effects ca.status_var += $do_si ca.status_var
 
 execute store result score $do_override_h ca.status_var run data get storage cartographer_custom_statuses:player_equip head.tag.HasOverride

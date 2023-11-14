@@ -19,3 +19,7 @@ execute if score $temp ca.status_var matches 1 run scoreboard players set $temp 
 execute unless score $temp ca.status_var matches 1.. store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideSprint run tag @s add ca.override_sprint_o
 execute if score $temp ca.status_var matches 1 run tag @s add ca.override_sprint
 execute if score $temp ca.status_var matches 1 run scoreboard players set $temp ca.status_var 2
+
+execute unless score $temp ca.status_var matches 1.. store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip offh.tag.OverrideLinger run tag @s add ca.override_linger_o
+execute if score $temp ca.status_var matches 1 run tag @s add ca.override_linger
+execute if score $temp ca.status_var matches 1 run scoreboard players set $temp ca.status_var 2

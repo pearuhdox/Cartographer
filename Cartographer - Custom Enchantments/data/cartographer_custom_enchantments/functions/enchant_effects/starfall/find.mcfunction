@@ -24,10 +24,14 @@ execute if entity @s[tag=ca.si_legs] if entity @s[tag=ca.ce_starfall_legs] run t
 execute if entity @s[tag=ca.si_feet] if entity @s[tag=ca.ce_starfall_feet] run tag @s add ca.check_si_feet
 
 function cartographer_custom_statuses:apply_effects/save/additive/do
+function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
 
 execute as @e[type=#bb:hostile,distance=..15,limit=1,sort=random,tag=!ca.starfalled] run function cartographer_custom_enchantments:enchant_effects/starfall/hit
 
-scoreboard players set $starfall_mob ca.ench_var 1
+execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
+
+execute if score $starfall_mob ca.ench_var matches 1.. run function cartographer_custom_statuses:apply_effects/apply/create_aec
+
 execute if score $starfall_mob ca.ench_var matches 1.. run function #minecraft:cartographer/events/enchantments/passive/starfall

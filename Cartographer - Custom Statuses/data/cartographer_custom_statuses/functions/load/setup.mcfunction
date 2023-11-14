@@ -97,6 +97,8 @@ scoreboard objectives add ca.cu_st_dmg minecraft.custom:minecraft.damage_dealt
 
 scoreboard objectives add ca.write_status dummy
 
+scoreboard objectives add ca.linger_cdl dummy
+
 #Setup LoE data space
 function cartographer_custom_statuses:load/integration/active/clear
 

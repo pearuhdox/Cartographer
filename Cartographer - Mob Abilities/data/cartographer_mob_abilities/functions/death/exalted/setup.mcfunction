@@ -1,11 +1,12 @@
+execute if entity @s[type=#bb:undead] unless data entity @s HandItems[0].id run data modify entity @s HandItems[0] set value {id:"minecraft:rotten_flesh",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
+execute if entity @s[type=#minecraft:skeletons] unless data entity @s HandItems[0].id run data modify entity @s HandItems[0] set value {id:"minecraft:bone",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
+execute if entity @s[type=#bb:fiery] unless data entity @s HandItems[0].id run data modify entity @s HandItems[0] set value {id:"minecraft:blaze_rod",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
+execute if entity @s[type=#bb:humanoid] unless data entity @s HandItems[0].id run data modify entity @s HandItems[0] set value {id:"minecraft:bone",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
+execute if entity @s[type=#bb:monstrous] unless data entity @s HandItems[0].id run data modify entity @s HandItems[0] set value {id:"minecraft:fermented_spider_eye",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
+execute if entity @s[type=creeper] unless data entity @s HandItems[0].id run data modify entity @s HandItems[0] set value {id:"minecraft:gunpowder",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
+
 execute unless data entity @s HandItems[0].id run data modify entity @s HandItems[0] set value {id:"minecraft:wooden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
 
-execute if entity @s[type=#bb:undead] run data modify entity @s HandItems[0] set value {id:"minecraft:rotten_flesh",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
-execute if entity @s[type=#minecraft:skeletons] run data modify entity @s HandItems[0] set value {id:"minecraft:bone",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
-execute if entity @s[type=#bb:fiery] run data modify entity @s HandItems[0] set value {id:"minecraft:blaze_rod",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
-execute if entity @s[type=#bb:humanoid] run data modify entity @s HandItems[0] set value {id:"minecraft:bone",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
-execute if entity @s[type=#bb:monstrous] run data modify entity @s HandItems[0] set value {id:"minecraft:fermented_spider_eye",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
-execute if entity @s[type=creeper] run data modify entity @s HandItems[0] set value {id:"minecraft:gunpowder",Count:1b,tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1b}]}}
 
 data modify entity @s HandItems[0].tag.EntityData set value {}
 data modify entity @s HandItems[0].tag.EntityData set from entity @s {}

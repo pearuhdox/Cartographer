@@ -15,3 +15,6 @@ tag @s remove ca.check_ae_head
 tag @s remove ca.check_ae_body
 tag @s remove ca.check_ae_legs
 tag @s remove ca.check_ae_feet
+
+scoreboard players set $do_linger ca.status_var 0
+execute if entity @s[tag=ca.override_linger] unless score @s ca.linger_cdl matches 1.. run scoreboard players set $do_linger ca.status_var 1

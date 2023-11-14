@@ -59,5 +59,5 @@ execute if score @s ca.effect_cloak matches 1.. run function cartographer_custom
 
 
 #Teleport AECs to mobs
-execute if score $timer ca.aec_to_mob matches 1.. as @s at @s run function cartographer_custom_statuses:apply_effects/apply/aec_to_mob
+execute if score $timer ca.aec_to_mob matches 1.. as @s[tag=!ca.lingering] at @s run function cartographer_custom_statuses:apply_effects/apply/aec_to_mob
 execute if score $timer ca.aec_to_mob matches 1 run scoreboard players set @s ca.aec_to_mob 0

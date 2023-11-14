@@ -20,3 +20,7 @@ execute if entity @s[advancements={entityid:player_hurt_entity={no_impact=true}}
 
 scoreboard players set $was_projectile ca.status_var 0
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}}] run scoreboard players set $was_projectile ca.status_var 1
+
+
+
+execute unless score $was_no_impact ca.status_var matches 1.. unless score $was_projectile ca.status_var matches 1.. run function cartographer_custom_statuses:apply_effects/apply/create_aec

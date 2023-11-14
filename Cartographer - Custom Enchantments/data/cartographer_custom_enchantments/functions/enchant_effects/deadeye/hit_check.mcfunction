@@ -23,6 +23,8 @@ data modify storage cartographer_custom_statuses:apply_status data.effects set f
 scoreboard players set $deadeye_hit ca.deadeye 0
 execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#bb:hostile,dx=0,dy=0,dz=0] at @s run function cartographer_custom_enchantments:enchant_effects/deadeye/hit_found
 
+execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
+
 execute if score $deadeye_hit ca.deadeye matches 1.. run kill @s
 
 execute unless block ~ ~ ~ #cartographer_core:can_raycast run playsound minecraft:entity.arrow.hit player @a[distance=..18] ~ ~ ~ 1 0.75

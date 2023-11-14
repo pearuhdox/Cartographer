@@ -61,5 +61,8 @@ execute if score $exec ca.riptide matches 1.. run function cartographer_custom_e
 function cartographer_custom_statuses:apply_effects/apply/create_aec
 function cartographer_custom_statuses:apply_status/apply/set_statuses
 
+
+execute if score $do_linger ca.status_var matches 1.. as @a[distance=..3.5,limit=1,sort=nearest,scores={ca.riptide=1..}] at @s run scoreboard players set @s ca.linger_cdl 300
+
 #Reset this stat
 scoreboard players set $exec_dmg bbl.storage 0

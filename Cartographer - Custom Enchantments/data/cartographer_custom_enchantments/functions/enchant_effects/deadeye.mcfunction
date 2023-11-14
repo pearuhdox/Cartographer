@@ -5,9 +5,11 @@ kill @e[type=#bb:arrow,limit=3,sort=nearest,distance=..6,nbt=!{inGround:1b}]
 scoreboard players set $do_apply_effects ca.status_var 0
 scoreboard players set $do_apply_status ca.status_var 0
 execute if entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_effects/save/mainhand
+execute if entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_self/save/mainhand
 execute if entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_status/save/mainhand
 
 execute if entity @s[tag=ca.deadeye_offhand] unless entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_effects/save/offhand
+execute if entity @s[tag=ca.deadeye_offhand] unless entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_self/save/offhand
 execute if entity @s[tag=ca.deadeye_offnhand] unless entity @s[tag=ca.deadeye_mainhand] run function cartographer_custom_statuses:apply_status/save/offhand
 
 scoreboard players set $frost ca.deadeye 0
@@ -42,5 +44,7 @@ scoreboard players operation $sharpshot ca.deadeye = @s ca.sharpshot
 scoreboard players operation $point_blank ca.deadeye = @s ca.point_blank
 
 execute as @s at @s anchored eyes positioned ^ ^ ^1 run function cartographer_custom_enchantments:enchant_effects/deadeye/create
+
+execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 
 function #minecraft:cartographer/events/enchantments/ranged/deadeye

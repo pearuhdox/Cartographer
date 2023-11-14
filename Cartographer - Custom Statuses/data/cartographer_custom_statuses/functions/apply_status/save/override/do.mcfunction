@@ -34,4 +34,7 @@ execute if score @s ca.sprint matches 1.. if entity @s[tag=ca.override_sprint] r
 
 execute if score @s ca.sneak matches 1.. if entity @s[tag=ca.override_sneak] run function cartographer_custom_statuses:apply_status/save/override/branches/sneak
 
+scoreboard players set $do_linger ca.status_var 0
+execute if entity @s[tag=ca.override_linger] unless score @s ca.linger_cdl matches 1.. run scoreboard players set $do_linger ca.status_var 1
+
 function cartographer_custom_statuses:apply_status/save/override/final_calc
