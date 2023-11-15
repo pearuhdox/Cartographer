@@ -1,6 +1,7 @@
 #Reimplementation of Percent Health but for Absorption
-execute store result score $target_max_health bbl.storage run attribute @s minecraft:generic.max_health get
-#Get player's current health
+scoreboard players operation $target_max_health bbl.storage = @s ca.size_max_health
+
+#Get current health
 execute store result score $target_health bbl.storage run data get entity @s AbsorptionAmount
 execute store result score $slime_test bbl.storage run data get entity @s AbsorptionAmount
 

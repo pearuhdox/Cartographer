@@ -1,4 +1,6 @@
+attribute @s minecraft:generic.max_absorption base set 1024
 data modify entity @s AbsorptionAmount set from entity @s Health
+execute store result score @s ca.size_max_health run data get entity @s AbsorptionAmount
 
 execute store result score @s ca.size_min run data get entity @s Size
 scoreboard players operation @s ca.size_cur = @s ca.size_min
@@ -14,5 +16,7 @@ execute if entity @s[tag=ca.growth_faster] run scoreboard players operation @s c
 
 scoreboard players operation @s ca.size_max += @s ca.size_min
 
+attribute @s minecraft:generic.max_health base set 40
+effect give @s instant_health 10 1
 
 tag @s add size_setup
