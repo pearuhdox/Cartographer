@@ -18,7 +18,8 @@ execute if score @s ca.frenzy matches 7.. run scoreboard players set @s ca.frenz
 execute if score @s ca.frostbite matches 6.. run scoreboard players set @s ca.frostbite 5
 execute if score @s ca.frost matches 2.. run scoreboard players set @s ca.frost 1
 execute if score @s ca.hunter matches 6.. run scoreboard players set @s ca.hunter 5
-execute if score @s ca.overcharge matches 11.. run scoreboard players set @s ca.overcharge 3
+execute if score @s ca.overcharge matches 4.. run scoreboard players set @s ca.overcharge 3
+execute if score @s ca.focus matches 11.. run scoreboard players set @s ca.focus 10
 execute if score @s ca.lifesteal matches 11.. run scoreboard players set @s ca.lifesteal 10
 execute if score @s ca.point_blank matches 4.. run scoreboard players set @s ca.point_blank 3
 execute if score @s ca.rally matches 11.. run scoreboard players set @s ca.rally 10

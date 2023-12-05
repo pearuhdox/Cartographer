@@ -34,6 +34,7 @@ scoreboard objectives add ca.hydraulic dummy
 scoreboard objectives add ca.infinity dummy
 scoreboard objectives add ca.lifesteal dummy
 scoreboard objectives add ca.overcharge dummy
+scoreboard objectives add ca.focus dummy
 scoreboard objectives add ca.point_blank dummy
 scoreboard objectives add ca.first_strike dummy
 scoreboard objectives add ca.lethality dummy
@@ -228,6 +229,7 @@ scoreboard objectives add ca.punch dummy
 scoreboard objectives add ca.flame dummy
 scoreboard objectives add ca.power dummy
 scoreboard objectives add ca.multishot dummy
+scoreboard objectives add ca.piercing dummy
 
 scoreboard objectives add ca.ammo_main dummy
 scoreboard objectives add ca.ammo_off dummy
@@ -282,8 +284,8 @@ scoreboard objectives add ca.evasion_bias dummy
 
 scoreboard objectives add ca.recently_fired_weapon dummy
 
-#Setup dummy player score for Second Wind calculations.
-scoreboard players set SecondWindHelper ca.second_wind 10
+scoreboard objectives add ca.attr_ranged dummy
+scoreboard objectives add ca.attr_ranged_perc dummy
 
 #Setup Second Wind cooldown timer and bank.
 scoreboard objectives add ca.sw_time dummy

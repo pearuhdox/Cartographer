@@ -29,6 +29,8 @@ scoreboard players set $wavedash ca.var 0
 execute at @s as @e[distance=..7,type=#cartographer_core:arrow,limit=1,sort=nearest,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch
 execute at @s as @e[distance=..7,type=trident,limit=1,sort=nearest,nbt=!{inGround:1b}] at @s run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag/branch_trident
 
+execute if score $ranged_damage ca.var matches 1.. run function cartographer_custom_enchantments:attribute_effects/ranged_damage/setup_damage
+
 #These effects will activate from the entity itself before the player call.
 execute if score $cu_en_ranged ca.enabler matches 1.. at @s[type=!player] run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
 execute if score $cu_en_ranged ca.enabler matches 1.. at @s[type=!player] run function cartographer_custom_enchantments:enchant_effects/trident_custom_tag

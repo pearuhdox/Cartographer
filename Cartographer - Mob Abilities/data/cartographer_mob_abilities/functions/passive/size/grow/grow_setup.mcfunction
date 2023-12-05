@@ -17,6 +17,6 @@ execute if entity @s[tag=ca.growth_faster] run scoreboard players operation @s c
 scoreboard players operation @s ca.size_max += @s ca.size_min
 
 attribute @s minecraft:generic.max_health base set 40
-effect give @s instant_health 10 1
+effect give @s instant_health 10 1 true
 
 tag @s add size_setup

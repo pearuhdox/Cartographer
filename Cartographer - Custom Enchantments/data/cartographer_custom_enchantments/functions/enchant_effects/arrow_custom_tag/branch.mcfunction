@@ -16,3 +16,5 @@ scoreboard players operation $flame ca.var = @s ca.flame
 
 execute if score $explosive ca.var matches 1.. on passengers run function cartographer_custom_statuses:player/custom_inflict/projectile_data
 execute if score $explosive ca.var matches 1.. store result score $damage ca.explosive run data get entity @s damage 10
+
+scoreboard players operation $ranged_damage ca.var = @s ca.attr_ranged

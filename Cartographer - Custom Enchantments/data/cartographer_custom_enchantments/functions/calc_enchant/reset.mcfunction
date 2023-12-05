@@ -27,6 +27,7 @@ scoreboard players set @s ca.hunter 0
 scoreboard players set @s ca.hydraulic 0
 scoreboard players set @s ca.lifesteal 0
 scoreboard players set @s ca.overcharge 0
+scoreboard players set @s ca.focus 0
 scoreboard players set @s ca.point_blank 0
 scoreboard players set @s ca.regen 0
 scoreboard players set @s ca.first_strike 0
@@ -51,6 +52,7 @@ scoreboard players set @s ca.trueshot 0
 scoreboard players set @s ca.explosive 0
 scoreboard players set @s ca.thorns 0
 scoreboard players set @s ca.multishot 0
+scoreboard players set @s ca.piercing 0
 scoreboard players set @s ca.wavedash 0
 scoreboard players set @s ca.respiration 0
 scoreboard players set @s ca.recoil 0
@@ -154,6 +156,9 @@ scoreboard players set @s ca.off_bleeding 0
 scoreboard players set @s ca.off_fire_aspect 0
 
 scoreboard players set @s ca.curse_rusting 0
+
+scoreboard players set @s ca.attr_ranged 0
+scoreboard players set @s ca.attr_ranged_perc 100
 
 tag @s remove ca.rust_head
 tag @s remove ca.rust_body

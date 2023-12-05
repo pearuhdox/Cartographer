@@ -24,6 +24,12 @@ execute if data storage ca.susu:enchants legs.tag.CustomEnchantments run tag @s 
 execute if data storage ca.susu:enchants feet.tag.CustomEnchantments run tag @s add ca.check_feet
 execute if data storage ca.susu:enchants offh.tag.CustomEnchantments run tag @s add ca.check_offh
 
+execute if data storage ca.susu:enchants head.tag.CustomAttributes run tag @s add ca.check_head
+execute if data storage ca.susu:enchants body.tag.CustomAttributes run tag @s add ca.check_body
+execute if data storage ca.susu:enchants legs.tag.CustomAttributes run tag @s add ca.check_legs
+execute if data storage ca.susu:enchants feet.tag.CustomAttributes run tag @s add ca.check_feet
+execute if data storage ca.susu:enchants offh.tag.CustomAttributes run tag @s add ca.check_offh
+
 execute unless entity @s[tag=ca.check_head] run function cartographer_custom_enchantments:calc_enchant/find_custom_branch/head 
 execute unless entity @s[tag=ca.check_body] run function cartographer_custom_enchantments:calc_enchant/find_custom_branch/body 
 execute unless entity @s[tag=ca.check_legs] run function cartographer_custom_enchantments:calc_enchant/find_custom_branch/legs 

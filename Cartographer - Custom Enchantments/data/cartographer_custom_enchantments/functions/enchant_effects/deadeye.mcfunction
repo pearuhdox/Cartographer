@@ -43,6 +43,9 @@ scoreboard players operation $punch ca.deadeye = @s ca.punch
 scoreboard players operation $sharpshot ca.deadeye = @s ca.sharpshot
 scoreboard players operation $point_blank ca.deadeye = @s ca.point_blank
 
+#scoreboard players operation $ranged_damage ca.deadeye = @s ca.attr_ranged
+
+
 execute as @s at @s anchored eyes positioned ^ ^ ^1 run function cartographer_custom_enchantments:enchant_effects/deadeye/create
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300

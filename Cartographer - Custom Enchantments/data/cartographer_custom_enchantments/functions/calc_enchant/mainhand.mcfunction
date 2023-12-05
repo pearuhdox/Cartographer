@@ -94,6 +94,11 @@ scoreboard players set $temp ca.susu 0
 execute if score $hold_bow ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"overcharge"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.overcharge += $temp ca.susu
 
+scoreboard players set $temp ca.susu 0
+execute if score $hold_bow ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"focus"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.focus += $temp ca.susu
+
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"lightborn"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.lightborn += $temp ca.susu
 
@@ -289,10 +294,27 @@ execute store result score $temp ca.susu run data get storage ca.susu:enchants m
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.curse_two_hnd += $temp ca.susu
 
 scoreboard players set $temp ca.susu 0
-execute if score $hold_crossbow ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Enchantments[{id:"minecraft:multishot"}].lvl
+execute if score $hold_ranged ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Enchantments[{id:"minecraft:multishot"}].lvl
 execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.multishot += $temp ca.susu
 
+scoreboard players set $temp ca.susu 0
+execute if score $hold_ranged ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Enchantments[{id:"minecraft:piercing"}].lvl
+execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.piercing += $temp ca.susu
+
 execute if score $gl_enc_wr ca.gamerule matches 1.. run function cartographer_custom_enchantments:descriptions/write/main
+
+
+
+# Custom Ranged Attribute - Value is always multiplied by 10
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomAttributes[{id:"ranged_flat"}].amount 10
+execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.attr_ranged += $temp ca.susu
+
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomAttributes[{id:"ranged_percent"}].amount 100
+execute unless score $temp ca.susu matches 0 run scoreboard players operation @s ca.attr_ranged_perc += $temp ca.susu
+
+
 
 #Also get the ammo of a repeating crossbow in the main or offhand
 scoreboard players set @s ca.ammo_main 0
