@@ -133,6 +133,9 @@ execute unless score @s ca.disengage_time matches 0.. run scoreboard players set
 execute if predicate bb:cant_crit if score @s ca.lethality matches 1.. run function cartographer_custom_enchantments:enchant_effects/lethality/reset
 execute unless predicate bb:cant_crit if score @s ca.lethality matches 1.. run function cartographer_custom_enchantments:enchant_effects/lethality/apply
 
+#Unwieldly Curse
+execute if predicate bb:cant_crit if score @s ca.curse_unwieldly matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_unwieldly/reset
+execute unless predicate bb:cant_crit if score @s ca.curse_unwieldly matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_unwieldly/apply
 
 #Infinity 3.0
 function cartographer_custom_enchantments:enchant_effects/infinity/player

@@ -1,3 +1,4 @@
+execute if score @s ca.adrenaline_dur matches 200 run attribute @s minecraft:generic.movement_speed modifier remove 31-119-1212-2216-0
 execute if score @s ca.adrenaline_dur matches 200 run attribute @s minecraft:generic.movement_speed modifier add 31-119-1212-2216-0 "adrenaline_buff" 1.2 multiply
 execute if score @s ca.adrenaline_dur matches 180 run attribute @s minecraft:generic.movement_speed modifier remove 31-119-1212-2216-0
 execute if score @s ca.adrenaline_dur matches 180 run attribute @s minecraft:generic.movement_speed modifier add 31-119-1212-2216-0 "adrenaline_buff" 1.08 multiply

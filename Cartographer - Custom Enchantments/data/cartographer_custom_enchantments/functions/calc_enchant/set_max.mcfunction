@@ -54,6 +54,13 @@ execute if score @s ca.echo matches 5.. run scoreboard players set @s ca.echo 4
 execute if score @s ca.evocation matches 5.. run scoreboard players set @s ca.evocation 4
 execute if score @s ca.sweeping matches 5.. run scoreboard players set @s ca.sweeping 4
 
+execute if score @s ca.frenzy_main matches 7.. run scoreboard players set @s ca.frenzy_main 6
+execute if score @s ca.adrenaline_main matches 7.. run scoreboard players set @s ca.adrenaline_main 6
+execute if score @s ca.energetic_main matches 7.. run scoreboard players set @s ca.energetic_main 6
+execute if score @s ca.steadfast_main matches 7.. run scoreboard players set @s ca.steadfast_main 6
+execute if score @s ca.concealed_main matches 7.. run scoreboard players set @s ca.concealed_main 6
+
+
 execute if score @s ca.resourceful matches 11.. run scoreboard players set @s ca.resourceful 10
 execute if score @s ca.riptide matches 11..100 run scoreboard players set @s ca.riptide 10
 execute if score @s ca.riptide matches 111.. run scoreboard players set @s ca.riptide 110

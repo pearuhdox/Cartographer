@@ -32,9 +32,6 @@ execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_en
 execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[scores={ca.slamming=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] unless predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/slamming/master
 
 
-#Frostbite
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.frostbite=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/frostbite/master
-
 #Duelist
 execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.duelist=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/duelist/master
 #Hunter

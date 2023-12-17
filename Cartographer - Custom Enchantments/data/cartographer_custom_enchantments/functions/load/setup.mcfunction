@@ -27,6 +27,13 @@ scoreboard objectives add ca.concentrate_time dummy
 
 scoreboard objectives add ca.repulsion_time dummy
 
+scoreboard objectives add ca.frenzy_main dummy
+scoreboard objectives add ca.adrenaline_main dummy
+scoreboard objectives add ca.energetic_main dummy
+scoreboard objectives add ca.steadfast_main dummy
+scoreboard objectives add ca.concealed_main dummy
+
+
 scoreboard objectives add ca.steadfast dummy
 scoreboard objectives add ca.energetic dummy
 scoreboard objectives add ca.eruption dummy
@@ -274,6 +281,7 @@ scoreboard objectives add ca.curse_rusting dummy
 scoreboard objectives add ca.curse_mal dummy
 scoreboard objectives add ca.curse_regret dummy
 scoreboard objectives add ca.curse_two_hnd dummy
+scoreboard objectives add ca.curse_unwieldly dummy
 
 scoreboard objectives add ca.rally_mark_dur dummy
 scoreboard objectives add ca.rally_mark_amt dummy
@@ -433,10 +441,12 @@ scoreboard objectives add ca.ench_var dummy
 scoreboard objectives add ca.adrenaline_dur dummy
 scoreboard objectives add ca.frenzy_dur dummy
 scoreboard objectives add ca.energetic_dur dummy
+scoreboard objectives add ca.steadfast_dur dummy
 
 scoreboard objectives add ca.adrenaline_lvl dummy
 scoreboard objectives add ca.frenzy_lvl dummy
 scoreboard objectives add ca.energetic_lvl dummy
+scoreboard objectives add ca.steadfast_lvl dummy
 
 
 scoreboard objectives add ca.cur_dmg dummy

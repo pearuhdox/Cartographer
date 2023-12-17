@@ -64,6 +64,13 @@ scoreboard players set @s ca.starfall 0
 scoreboard players set @s ca.quake 0
 scoreboard players set @s ca.momentum 0
 
+scoreboard players set @s ca.frenzy_main 0
+scoreboard players set @s ca.adrenaline_main 0
+scoreboard players set @s ca.energetic_main 0
+scoreboard players set @s ca.steadfast_main 0
+scoreboard players set @s ca.concealed_main 0
+
+
 scoreboard players set @s ca.confidence 0
 scoreboard players set @s ca.desperation 0
 scoreboard players set @s ca.stalwart 0
@@ -102,6 +109,7 @@ scoreboard players set @s ca.curse_drowning 0
 scoreboard players set @s ca.curse_mal 0
 scoreboard players set @s ca.curse_two_hnd 0
 scoreboard players set @s ca.curse_regret 0
+scoreboard players set @s ca.curse_unwieldly 0
 
 scoreboard players set @s ca.t_fire 0
 scoreboard players set @s ca.t_frost 0

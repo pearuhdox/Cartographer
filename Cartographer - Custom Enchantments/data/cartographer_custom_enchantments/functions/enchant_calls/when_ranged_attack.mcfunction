@@ -100,9 +100,6 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if score $singe ca.var mat
 #Fire Aspect - Trident
 execute if score $cu_en_ranged ca.enabler matches 1.. if score $fire_aspect ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/fire_aspect/ranged
 
-#Frostbite - Trident
-execute if score $cu_en_ranged ca.enabler matches 1.. if score $frostbite ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/frostbite/ranged
-
 #Wavedash
 execute if score $cu_en_ranged ca.enabler matches 1.. if score $wavedash ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/wavedash/teleport_start
 

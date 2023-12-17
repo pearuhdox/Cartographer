@@ -1,3 +1,4 @@
+execute if score @s ca.frenzy_dur matches 200 run attribute @s minecraft:generic.attack_damage modifier remove 31-119-1212-2216-0
 execute if score @s ca.frenzy_dur matches 200 run attribute @s minecraft:generic.attack_damage modifier add 31-119-1212-2216-0 "frenzy_buff" 0.4 multiply
 execute if score @s ca.frenzy_dur matches 180 run attribute @s minecraft:generic.attack_damage modifier remove 31-119-1212-2216-0
 execute if score @s ca.frenzy_dur matches 180 run attribute @s minecraft:generic.attack_damage modifier add 31-119-1212-2216-0 "frenzy_buff" 0.36 multiply

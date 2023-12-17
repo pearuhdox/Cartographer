@@ -50,10 +50,6 @@ execute if score $thorns ca.t_fire matches 3 as @s[type=#cartographer_custom_enc
 execute if score $thorns ca.t_fire matches 4 as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 21 0 true
 execute if score $thorns ca.t_fire matches 5.. as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 26 0 true
 
-#Frostbite
-scoreboard players operation $fb ca.frostbite = $thorns ca.t_frost
-execute if score $thorns ca.t_frost matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
-
 #Executioner
 scoreboard players operation $exec ca.executioner = $thorns ca.t_exec
 execute if score $thorns ca.t_exec matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch

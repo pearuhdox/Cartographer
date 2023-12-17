@@ -2,12 +2,8 @@
 execute if entity @s[tag=ca.cleanse_fire] run function cartographer_custom_enchantments:enchant_effects/cauterize/cleanse
 
 
-
 #Tempo Theft Debuff
 execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect_mob
-
-#Frostbite Debuff
-execute if score @s ca.frost_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/frost
 
 #Current Drag Effects
 execute if score @s ca.current_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/current_drag

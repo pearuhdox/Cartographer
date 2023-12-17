@@ -17,8 +17,7 @@ execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_en
 
 #Executioner
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.executioner matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/master
-#Frostbite
-execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.frostbite matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/master
+
 #Hunter
 execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.hunter matches 1.. run function cartographer_custom_enchantments:enchant_effects/hunter/master
 

@@ -20,10 +20,6 @@ execute if score $fire_aspect ca.momentum matches 3 as @s run data modify entity
 execute if score $fire_aspect ca.momentum matches 4 as @s run data modify entity @s Fire set value 321
 execute if score $fire_aspect ca.momentum matches 5.. as @s run data modify entity @s Fire set value 401
 
-#Frostbite
-scoreboard players operation $fb ca.frostbite = $frostbite ca.momentum
-execute if score $frostbite ca.momentum matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
-
 #Executioner
 scoreboard players operation $exec ca.executioner = $executioner ca.momentum
 execute if score $executioner ca.momentum matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/branch

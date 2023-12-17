@@ -49,10 +49,6 @@ execute if score $fire ca.riptide matches 3 as @s run data modify entity @s Fire
 execute if score $fire ca.riptide matches 4 as @s run data modify entity @s Fire set value 321
 execute if score $fire ca.riptide matches 5.. as @s run data modify entity @s Fire set value 401
 
-#Frostbite
-scoreboard players operation $fb ca.frostbite = $frostbite ca.riptide
-execute if score $frostbite ca.riptide matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
-
 #Executioner
 scoreboard players operation $exec ca.executioner = $exec ca.riptide
 execute if score $exec ca.riptide matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
