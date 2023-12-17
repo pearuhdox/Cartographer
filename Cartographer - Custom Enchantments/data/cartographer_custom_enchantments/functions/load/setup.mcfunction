@@ -21,6 +21,13 @@ scoreboard objectives add ca.echo dummy
 scoreboard objectives add ca.evocation dummy
 scoreboard objectives add ca.sweeping dummy
 
+scoreboard objectives add ca.current_time dummy
+scoreboard objectives add ca.concentrate_stack dummy
+scoreboard objectives add ca.concentrate_time dummy
+
+scoreboard objectives add ca.repulsion_time dummy
+
+scoreboard objectives add ca.steadfast dummy
 scoreboard objectives add ca.energetic dummy
 scoreboard objectives add ca.eruption dummy
 scoreboard objectives add ca.evasion dummy
@@ -35,6 +42,7 @@ scoreboard objectives add ca.infinity dummy
 scoreboard objectives add ca.lifesteal dummy
 scoreboard objectives add ca.overcharge dummy
 scoreboard objectives add ca.focus dummy
+scoreboard objectives add ca.concentration dummy
 scoreboard objectives add ca.point_blank dummy
 scoreboard objectives add ca.first_strike dummy
 scoreboard objectives add ca.lethality dummy
@@ -54,14 +62,16 @@ scoreboard objectives add ca.spurs dummy
 scoreboard objectives add ca.thrusting dummy
 scoreboard objectives add ca.slamming dummy
 scoreboard objectives add ca.transfig dummy
-scoreboard objectives add ca.tempest dummy
 scoreboard objectives add ca.tempo_theft dummy
-scoreboard objectives add ca.trueshot dummy
 scoreboard objectives add ca.explosive dummy
 scoreboard objectives add ca.thorns dummy
 scoreboard objectives add ca.respiration dummy
 scoreboard objectives add ca.recoil dummy
 scoreboard objectives add ca.collapse dummy
+
+scoreboard objectives add ca.collapse_time dummy
+
+scoreboard objectives add ca.smite dummy
 
 scoreboard objectives add ca.unbreaking dummy
 scoreboard objectives add ca.unb_head dummy
@@ -69,6 +79,8 @@ scoreboard objectives add ca.unb_body dummy
 scoreboard objectives add ca.unb_legs dummy
 scoreboard objectives add ca.unb_feet dummy
 
+scoreboard objectives add ca.fleetfoot_cdl dummy
+scoreboard objectives add ca.fleetfoot_use dummy
 
 scoreboard objectives add ca.inf_kc_var dummy
 scoreboard objectives add ca.inf_kc_0 dummy
@@ -106,6 +118,9 @@ scoreboard objectives add ca.inf_ch_7 dummy
 scoreboard objectives add ca.inf_ch_8 dummy
 scoreboard objectives add ca.inf_ch_o dummy
 
+scoreboard objectives add ca.x dummy
+scoreboard objectives add ca.y dummy
+scoreboard objectives add ca.z dummy
 
 scoreboard objectives add ca.gravity dummy
 scoreboard objectives add ca.starfall dummy
@@ -162,6 +177,7 @@ scoreboard objectives add ca.efficiency dummy
 
 scoreboard objectives add ca.off_duelist dummy
 scoreboard objectives add ca.off_hunter dummy
+scoreboard objectives add ca.off_smite dummy
 scoreboard objectives add ca.off_singe dummy
 scoreboard objectives add ca.off_frostbite dummy
 scoreboard objectives add ca.off_exposing dummy
@@ -231,6 +247,8 @@ scoreboard objectives add ca.power dummy
 scoreboard objectives add ca.multishot dummy
 scoreboard objectives add ca.piercing dummy
 
+scoreboard objectives add ca.ignore_arrow_ench dummy
+
 scoreboard objectives add ca.ammo_main dummy
 scoreboard objectives add ca.ammo_off dummy
 
@@ -256,7 +274,6 @@ scoreboard objectives add ca.curse_rusting dummy
 scoreboard objectives add ca.curse_mal dummy
 scoreboard objectives add ca.curse_regret dummy
 scoreboard objectives add ca.curse_two_hnd dummy
-scoreboard objectives add ca.curse_encum dummy
 
 scoreboard objectives add ca.rally_mark_dur dummy
 scoreboard objectives add ca.rally_mark_amt dummy
@@ -286,6 +303,8 @@ scoreboard objectives add ca.recently_fired_weapon dummy
 
 scoreboard objectives add ca.attr_ranged dummy
 scoreboard objectives add ca.attr_ranged_perc dummy
+scoreboard objectives add ca.attr_ranged_speed dummy
+scoreboard objectives add ca.attr_potion_size dummy
 
 #Setup Second Wind cooldown timer and bank.
 scoreboard objectives add ca.sw_time dummy
@@ -395,7 +414,10 @@ scoreboard objectives add ca.food food
 
 scoreboard objectives add ca.attack_val dummy
 scoreboard objectives add ca.vol_dmg dummy
+
 scoreboard objectives add ca.temp_warp dummy
+scoreboard objectives add ca.temp_level dummy
+
 
 scoreboard objectives add ca.inf_var dummy
 
@@ -464,6 +486,10 @@ execute unless score $gl_ui_loc ca.gamerule matches 0.. run scoreboard players s
 
 #Summon Marker for sprint_dash
 summon marker 4206900 0 4206900 {UUID:[I;823664661,395388179,293672216,0],Tags:["ca.sprint_dash_marker"]}
+
+#Summon Marker for other direction work
+# 31182015-1791-2513-1181-151800000001
+summon marker 4206900 0 4206900 {UUID:[I;823664661,395388179,293672216,1],Tags:["ca.dir_marker"]}
 
 #Summon Armor Stand for Item Tag Evaluation
 # "31192011-4452-2112-0000-000000000000"

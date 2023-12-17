@@ -21,8 +21,8 @@ playsound minecraft:entity.shulker.open player @a[distance=..12] ~ ~ ~ 1.5 0.5
 particle minecraft:glow_squid_ink ~ ~0.8 ~ 0.2 0.3 0.2 0.05 5 normal
 
 scoreboard players operation $extra_speed ca.collapse = $efficiency ca.collapse
-scoreboard players operation $extra_speed ca.collapse *= $2 ca.CONSTANT
+scoreboard players operation $extra_speed ca.collapse *= $4 ca.CONSTANT
 
-execute if score $extra_speed ca.collapse matches 20.. run scoreboard players set $extra_speed ca.collapse 19
+execute if score $extra_speed ca.collapse matches 36.. run scoreboard players set $extra_speed ca.collapse 35
 
 scoreboard players operation @s ca.collapse += $extra_speed ca.collapse

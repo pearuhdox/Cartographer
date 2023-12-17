@@ -1,17 +1,5 @@
-scoreboard players set @s ca.lifetime 1
+execute unless score $ranged_damage ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/point_blank/normal_damage
+execute if score $ranged_damage ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/point_blank/custom_damage
 
-execute if score $ranged ca.point_blank matches 1 run scoreboard players set @s ca.point_blank 1
-execute if score $ranged ca.point_blank matches 2 run scoreboard players set @s ca.point_blank 2
-execute if score $ranged ca.point_blank matches 3 run scoreboard players set @s ca.point_blank 3
-
-execute if entity @s[scores={ca.point_blank=1..}] run tag @s add custom_arrow
-
-execute as @s store result score @s ca.arrow_dmg run data get entity @s damage 10
-
-execute unless score @s ca.attr_ranged matches 1.. if score $ranged ca.point_blank matches 1 as @s store result entity @s damage double 0.1 run scoreboard players add @s ca.arrow_dmg 14
-execute unless score @s ca.attr_ranged matches 1.. if score $ranged ca.point_blank matches 2 as @s store result entity @s damage double 0.1 run scoreboard players add @s ca.arrow_dmg 28
-execute unless score @s ca.attr_ranged matches 1.. if score $ranged ca.point_blank matches 3 as @s store result entity @s damage double 0.1 run scoreboard players add @s ca.arrow_dmg 42
-
-execute if score @s ca.attr_ranged matches 1.. if score $ranged ca.point_blank matches 1 run scoreboard players add @s ca.attr_ranged 35
-execute if score @s ca.attr_ranged matches 1.. if score $ranged ca.point_blank matches 2 run scoreboard players add @s ca.attr_ranged 70
-execute if score @s ca.attr_ranged matches 1.. if score $ranged ca.point_blank matches 3 run scoreboard players add @s ca.attr_ranged 105
+playsound minecraft:entity.armor_stand.break player @a[distance=..8.5] ~ ~ ~ 1.2 0.75
+particle minecraft:wax_on ~ ~1 ~ 0.35 0.35 0.35 2 10 normal

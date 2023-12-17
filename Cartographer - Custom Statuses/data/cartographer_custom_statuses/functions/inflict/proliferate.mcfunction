@@ -27,8 +27,6 @@ execute store result score $inflict ca.effect_brittle_level run data get storage
 execute store result score $inflict ca.effect_brittle_duration run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"brittle"}].duration
 execute store result score $inflict_chance ca.effect_brittle_duration run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"brittle"}].chance
 
-execute store result score $inflict ca.damage_queue run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"entropy"}].amplifier
-
 execute store result score $fire ca.status_var run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"fire"}].duration
 execute if score $fire ca.status_var matches 1.. run scoreboard players add $fire ca.status_var 1
 
@@ -47,8 +45,7 @@ execute store result score $inflict_chance ca.charm_time run data get storage ca
 execute store result score $inflict_time ca.charm_time run data get storage cartographer_custom_statuses:infliction data.Item.tag.custom_statuses[{id:"charmed"}].duration
 
 
-execute as @e[type=#bb:hostile,distance=..3.25] at @s run function cartographer_custom_statuses:inflict/do_effect
-scoreboard players reset $inflict ca.damage_queue
+function cartographer_custom_statuses:inflict/do_effect_variable
 
 #Do Entropy Check
 execute as @a[tag=ca.pot_thrower] at @s run function cartographer_custom_statuses:player/custom_inflict/entropy

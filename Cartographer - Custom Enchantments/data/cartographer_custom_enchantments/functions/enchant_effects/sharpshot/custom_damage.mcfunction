@@ -1,3 +1,4 @@
-execute if score @s ca.sharpshot matches 1 if score @s ca.attr_ranged matches 1.. run scoreboard players add @s ca.attr_ranged 1
-execute if score @s ca.sharpshot matches 2 if score @s ca.attr_ranged matches 1.. run scoreboard players add @s ca.attr_ranged 2
-execute if score @s ca.sharpshot matches 3.. if score @s ca.attr_ranged matches 1.. run scoreboard players add @s ca.attr_ranged 3
+scoreboard players set $sharpshot ca.attr_ranged 20
+scoreboard players operation $sharpshot ca.attr_ranged *= $sharpshot ca.var
+
+scoreboard players operation $ranged_damage ca.var += $sharpshot ca.attr_ranged

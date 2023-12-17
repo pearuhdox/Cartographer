@@ -2,7 +2,6 @@ function #minecraft:cartographer/events/enchants_mob_hit/ranged/hydraulic
 
 scoreboard players operation $lvl ca.hydraulic = @s ca.hydraulic
 
-scoreboard players operation $extra ca.hydraulic = @s ca.tempest
 scoreboard players operation $extra ca.hydraulic *= $2 ca.CONSTANT
 
 
@@ -14,7 +13,8 @@ execute if score @s ca.hydraulic matches 1 store result score $damage ca.hydraul
 execute if score @s ca.hydraulic matches 1 unless data storage cartographer_custom_enchantments:hydraulic item.tag.AttributeModifiers[{AttributeName:"generic.attack_damage",Operation:0}].Amount run scoreboard players set $damage ca.hydraulic 8
 execute if score @s ca.hydraulic matches 1 run scoreboard players add $damage ca.hydraulic 1
 
-scoreboard players operation $damage ca.hydraulic /= $2 ca.CONSTANT
+execute if score @s ca.attr_ranged matches 1.. run scoreboard players operation $damage ca.hydraulic = @s ca.attr_ranged
+execute if score @s ca.attr_ranged matches 1.. run scoreboard players operation $damage ca.hydraulic /= $10 ca.CONSTANT
 
 scoreboard players operation $damage ca.hydraulic += $extra ca.hydraulic
 

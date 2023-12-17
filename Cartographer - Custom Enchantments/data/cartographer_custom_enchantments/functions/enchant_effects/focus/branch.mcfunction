@@ -1,11 +1,7 @@
 scoreboard players set @s ca.lifetime 1
 
-execute store result score $dmg ca.focus run data get entity @s damage 100
 
-scoreboard players operation $dmg ca.focus *= $ranged ca.focus
-scoreboard players operation $dmg ca.focus /= $100 ca.CONSTANT
-
-
-execute if score $dmg ca.focus matches 1.. store result entity @s damage double 0.01 run scoreboard players get $dmg ca.focus
+execute unless score @s ca.attr_ranged matches 1.. run function cartographer_custom_enchantments:enchant_effects/focus/damage/normal
+execute if score @s ca.attr_ranged matches 1.. run function cartographer_custom_enchantments:enchant_effects/focus/damage/custom
 
 tag @s add custom_arrow

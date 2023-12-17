@@ -38,6 +38,9 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.ena
 execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomEnchantments[{id:"frenzy"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.frenzy += $temp ca.susu
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomEnchantments[{id:"steadfast"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.steadfast += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomEnchantments[{id:"lifesteal"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.lifesteal += $temp ca.susu
 
@@ -145,6 +148,13 @@ scoreboard players set $temp ca.susu 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomAttributes[{id:"ranged_percent"}].amount 100
 execute unless score $temp ca.susu matches 0 run scoreboard players operation @s ca.attr_ranged_perc += $temp ca.susu
 
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomAttributes[{id:"ranged_speed"}].amount 100
+execute unless score $temp ca.susu matches 0 run scoreboard players operation @s ca.attr_ranged_speed += $temp ca.susu
+
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomAttributes[{id:"potion_size"}].amount 10
+execute unless score $temp ca.susu matches 0 run scoreboard players operation @s ca.attr_potion_size += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants legs.tag.CustomEnchantments[{id:"unbreaking"}].lvl
 execute if score $temp ca.susu matches 1.. run tag @s add ca.unb_legs

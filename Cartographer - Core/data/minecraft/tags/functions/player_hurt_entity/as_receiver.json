@@ -1,6 +1,6 @@
 {
 	"values": [
-		{"id": "cartographer_custom_enchantments:enchant_calls/when_ranged_attack","required": false},
+		{"id": "cartographer_custom_enchantments:enchant_calls/when_ranged_attack_branch","required": false},
 		{"id": "cartographer_mob_abilities:effect_calls/when_attacking_entity_post","required": false},
 		{"id": "cartographer_custom_statuses:calls/when_attacked_enemy", "required": false}
 	]

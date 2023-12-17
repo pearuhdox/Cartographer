@@ -1,5 +1,5 @@
 #Curse of Regret
-function cartographer_custom_enchantments:enchant_effects/curse_regret
+function cartographer_custom_enchantments:enchant_effects/curse_regret/master
 
 #Reset
 advancement revoke @s only cartographer_custom_enchantments:item_used_regret

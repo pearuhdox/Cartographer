@@ -7,6 +7,7 @@ data modify storage cartographer_custom_enchantments:loyalty ItemForTime set fro
 data remove storage cartographer_custom_enchantments:loyalty ItemForTime.Slot
 
 execute store result storage cartographer_custom_enchantments:loyalty ItemForTime.tag.DurationRemaining int 1 run scoreboard players add $recall_time ca.loyalty 2
+function cartographer_custom_enchantments:enchant_effects/loyalty/package/set_name_plate
 
 execute in minecraft:overworld run item replace block 4206900 1 4206900 container.0 with air 1
 execute in minecraft:overworld run data modify block 4206900 1 4206900 Items append from storage cartographer_custom_enchantments:loyalty ItemForTime

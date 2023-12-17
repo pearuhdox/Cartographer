@@ -33,13 +33,28 @@ execute if score @s ca.echo matches 1.. if score @s ca.echo_charges matches 1.. 
 execute if score @s ca.echo matches 0 run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192125
 
 
-scoreboard players operation $temp ca.fleetfoot = @s ca.is_load_cro
-scoreboard players operation $temp ca.fleetfoot += @s ca.is_draw_bow
-scoreboard players operation $temp ca.fleetfoot += @s ca.is_hold_tri
-execute if score @s ca.fleetfoot matches 1.. if score $temp ca.fleetfoot matches 1.. run attribute @s minecraft:generic.movement_speed modifier add 31-321-514-000-6151520 "fleetfoot_effect_spd" 0.4 add
+scoreboard players set @s ca.fleetfoot_use 0
+scoreboard players operation @s ca.fleetfoot_use = @s ca.is_load_cro
+scoreboard players operation @s ca.fleetfoot_use += @s ca.is_draw_bow
+scoreboard players operation @s ca.fleetfoot_use += @s ca.is_hold_tri
+
+execute if score @s ca.fleetfoot matches 1.. if score @s ca.fleetfoot_use matches 1.. run tag @s add ca.fleetfooting
+execute if score @s ca.fleetfoot matches 1.. if score @s ca.fleetfoot_use matches 1.. unless score @s ca.fleetfoot_cdl matches 1.. run attribute @s minecraft:generic.movement_speed modifier add 31-321-514-000-6151520 "fleetfoot_effect_spd" 0.33 add
 
 execute if score @s ca.fleetfoot matches 0 run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
+
 execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_load_cro matches 0 unless score @s ca.is_draw_bow matches 1.. unless score @s ca.is_hold_tri matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
+execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_draw_bow matches 1 unless score @s ca.is_load_cro matches 1.. unless score @s ca.is_hold_tri matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
+execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_hold_tri matches 0 unless score @s ca.is_draw_bow matches 1.. unless score @s ca.is_load_cro matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
+
+execute if entity @s[tag=ca.fleetfooting] if score @s ca.fleetfoot_use matches 0 unless score @s ca.fleetfoot_cdl matches 1.. run scoreboard players add @s ca.fleetfoot_cdl 20
+execute if entity @s[tag=ca.fleetfooting] if score @s ca.fleetfoot_use matches 0 run tag @s remove ca.fleetfooting
+
+
+execute if score @s ca.fleetfoot_cdl matches 21.. run scoreboard players set @s ca.fleetfoot_cdl 20
+
+execute if score @s ca.fleetfoot_cdl matches 1.. run scoreboard players remove @s ca.fleetfoot_cdl 1
+execute if score @s ca.fleetfoot_cdl matches ..-1 run scoreboard players add @s ca.fleetfoot_cdl 1
 
 #Custom Loyalty recharge attack meter
 execute if score @s ca.loyalty_speed matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "loyalty_effect_spd" 1024 add
@@ -78,11 +93,13 @@ execute unless block ~ ~-0.2 ~ #cartographer_core:can_raycast unless score @s ca
 execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
 
 #Run Repulsion
-execute if score @s ca.repulsion matches 1.. if score @s ca.load_cro_time matches 5 run function cartographer_custom_enchantments:enchant_effects/repulsion/activate
+execute if score @s ca.repulsion matches 1.. unless score @s ca.repulsion_time matches 1.. if score @s ca.load_cro_time matches 5.. if entity @e[type=#bb:hostile,distance=..3] run function cartographer_custom_enchantments:enchant_effects/repulsion/activate
+execute if score @s ca.repulsion_time matches 1.. unless score @s ca.load_cro_time matches 5.. run scoreboard players remove @s ca.repulsion_time 1
 
 #Make ranged attack triggers.
 execute if score @s ca.fire_bow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
-execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.fire_cbow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
+execute if score @s ca.fire_cbow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
+execute if score @s ca.use_snowball matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 
 #Break Spawner Trigger (if score $cu_en_spawner ca.enabler matches 1.. )
 execute if score @s ca.mine_spawner matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
@@ -172,6 +189,13 @@ execute if score @s ca.starfall matches 1.. run function cartographer_custom_enc
 
 #Reduce Ranged Weapon Recently Fired Counter
 execute if score @s ca.recently_fired_weapon matches 1.. run scoreboard players remove @s ca.recently_fired_weapon 1
+
+#Current Time Reducer
+execute if score @s ca.current_time matches 1.. run scoreboard players remove @s ca.current_time 1
+
+#Concentrate Stack Reducer
+execute if score @s ca.concentrate_time matches 1.. run scoreboard players remove @s ca.concentrate_time 1
+execute if score @s ca.concentrate_time matches 1 run function cartographer_custom_enchantments:enchant_effects/concentration/reduce
 
 #Check if sneaking for Swift Sneak
 execute if score @s ca.death_time matches 60.. if score @s[tag=ca.added_swift_sneak] ca.sneak matches 0 if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/remove

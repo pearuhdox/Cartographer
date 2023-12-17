@@ -15,4 +15,6 @@ execute if score $arrow_mod ca.var matches 1 if score @s ca.explosive matches 1.
 execute if score $arrow_mod ca.var matches 1 if score @s ca.explosive matches 1.. if score @s ca.sharpshot matches 2.. run scoreboard players add @s ca.vol_dmg 1
 execute if score $arrow_mod ca.var matches 1 if score @s ca.explosive matches 1.. if score @s ca.sharpshot matches 3.. run scoreboard players add @s ca.vol_dmg 1
 
+tag @s remove ca.custom_just_fired
+
 execute if entity @s[nbt={inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/arrow_reset

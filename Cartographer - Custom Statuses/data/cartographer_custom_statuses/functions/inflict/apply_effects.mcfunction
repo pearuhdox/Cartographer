@@ -1,0 +1,3 @@
+data modify storage cartographer_custom_statuses:apply_effects data.effects set from storage cartographer_custom_statuses:infliction data.custom_potion_effects
+
+function cartographer_custom_statuses:apply_effects/apply/create_aec

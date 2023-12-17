@@ -17,13 +17,13 @@ execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.hex
 execute if score $cu_en_passive ca.enabler matches 1.. if entity @s[scores={ca.cauterize=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/cauterize/melee
 
 #Fire Aspect - Needs to run after Cauterize
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.fire_aspect=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/fire_aspect
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.fire_aspect=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/fire_aspect/master
 
 scoreboard players set $use_charge_ench ca.ench_var 0
 #Echo
-execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[tag=!ca.echo_charge_taken,scores={ca.echo=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/echo
+execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[tag=!ca.echo_charge_taken,scores={ca.echo=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/echo/master
 #Evocation
-execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[scores={ca.evocation=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/evocation
+execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. if entity @s[scores={ca.evocation=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/evocation/master
 #Sweeping
 execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_ench ca.ench_var matches 1.. unless entity @s[tag=ca.sweep_schedule_success] if entity @s[scores={ca.sweeping=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/sweeping/master
 #Surging
@@ -33,14 +33,14 @@ execute if score $cu_en_melee ca.enabler matches 1.. unless score $use_charge_en
 
 
 #Frostbite
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.frostbite=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/frostbite
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.frostbite=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/frostbite/master
 
 #Duelist
-execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.duelist=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/duelist
+execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.duelist=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/duelist/master
 #Hunter
-execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.hunter=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/hunter
+execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.hunter=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/hunter/master
 #Singe
-execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.singe=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/singe
+execute if score $cu_en_melee ca.enabler matches 1.. unless score @s ca.atk_time matches 1.. if entity @s[scores={ca.singe=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/singe/master
 
 #Rally
 execute if score $rally_restore ca.rally matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/restore
@@ -50,15 +50,13 @@ execute if score $rally_restore ca.rally matches 1.. run function cartographer_c
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.momentum=1..,ca.momentum_charge=2000..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/momentum/strike
 
 #First Strike
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.first_strike=1..},tag=can_first_strike,advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/first_strike
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.first_strike=1..},tag=can_first_strike,advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/first_strike/master
 
 #Tempo Theft Player Effect
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}},scores={ca.tempo_theft=1}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}},scores={ca.tempo_theft=2}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}},scores={ca.tempo_theft=3}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
+#execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.tempo_theft matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
 
 #Executioner - Happens last in chain for health reasons
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.executioner=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/executioner
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.executioner=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/executioner/master
 
 #If a projectile attack, we attempt to give loyalty charges back
 #If the player is recharging loyalty, give them 6 ticks of time back (3 seconds)

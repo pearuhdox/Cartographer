@@ -29,6 +29,8 @@ scoreboard players operation @s ca.effect_cloak > $inflict ca.effect_cloak
 
 execute if score $fire ca.status_var matches 1.. store result entity @s Fire int 1 run scoreboard players get $fire ca.status_var
 
-execute if score $inflict ca.damage_queue matches 1.. run function cartographer_custom_statuses:inflict/entropy_damage
+scoreboard players set $did_linger_inflict ca.var 1
 
-scoreboard players add $did_linger_inflict ca.mob_var 1
+
+#If the potion also had normal effects, we apply those too
+execute if data storage cartographer_custom_statuses:infliction data.custom_potion_effects[0] run function cartographer_custom_statuses:inflict/apply_effects

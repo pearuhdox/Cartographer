@@ -5,12 +5,6 @@ execute if score $ricochet ca.var matches 1 run tag @s add is_ricochet_1
 execute if score $ricochet ca.var matches 2 run tag @s add is_ricochet_2
 execute if score $ricochet ca.var matches 3 run tag @s add is_ricochet_3
 
-execute if score $tempest ca.var matches 1 run tag @s add is_tempest_1
-execute if score $tempest ca.var matches 2 run tag @s add is_tempest_2
-execute if score $tempest ca.var matches 3 run tag @s add is_tempest_3
-execute if score $tempest ca.var matches 4 run tag @s add is_tempest_4
-execute if score $tempest ca.var matches 5 run tag @s add is_tempest_5
-
 execute if score $duelist ca.var matches 1 run tag @s add is_duelist_1
 execute if score $duelist ca.var matches 2 run tag @s add is_duelist_2
 execute if score $duelist ca.var matches 3 run tag @s add is_duelist_3

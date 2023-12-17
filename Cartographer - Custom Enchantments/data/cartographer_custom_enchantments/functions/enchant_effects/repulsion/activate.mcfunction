@@ -22,8 +22,9 @@ function cartographer_custom_statuses:apply_effects/save/additive/do
 function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
+scoreboard players set @s ca.repulsion_time 20
 
-execute as @e[type=#bb:hostile,distance=..6] at @s run function cartographer_custom_enchantments:enchant_effects/repulsion/mob
+execute as @e[type=#bb:hostile,distance=..4.5] at @s run function cartographer_custom_enchantments:enchant_effects/repulsion/mob
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 

@@ -39,4 +39,4 @@ execute if score $do_apply_effects ca.status_var matches 1.. run scoreboard play
 
 #Then find the projectile(s) and if it is an arrow, put a marker on top of it.
 execute if score $do_apply_status ca.status_var matches 1.. run scoreboard players operation $entropy ca.player_entropy = @s ca.player_entropy
-execute if score $need_check ca.status_var matches 1.. as @e[type=#bb:arrow,distance=..7,limit=3,sort=nearest,nbt=!{inGround:1b}] run function cartographer_custom_statuses:player/custom_inflict/arrow_tracker/create_marker
+execute if score $need_check ca.status_var matches 1.. as @e[type=#cartographer_custom_statuses:bow_allowed_projectile,distance=..7,limit=3,sort=nearest,nbt=!{inGround:1b}] run function cartographer_custom_statuses:player/custom_inflict/arrow_tracker/create_marker

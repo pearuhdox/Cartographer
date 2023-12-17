@@ -78,7 +78,7 @@ execute if block ~ ~ ~ minecraft:gray_bed align xyz run summon falling_block ~0.
 execute if block ~ ~ ~ minecraft:gray_banner align xyz run summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:"minecraft:gray_banner"},Silent:1b,Time:1,DropItem:0b}
 execute if block ~ ~ ~ minecraft:gravel align xyz run summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:"minecraft:gravel"},Silent:1b,Time:1,DropItem:0b}
 execute if block ~ ~ ~ minecraft:grass_block align xyz run summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:"minecraft:grass_block"},Silent:1b,Time:1,DropItem:0b}
-execute if block ~ ~ ~ minecraft:grass align xyz run summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:"minecraft:grass"},Silent:1b,Time:1,DropItem:0b}
+execute if block ~ ~ ~ minecraft:short_grass align xyz run summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:"minecraft:short_grass"},Silent:1b,Time:1,DropItem:0b}
 execute if block ~ ~ ~ minecraft:granite_wall align xyz run summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:"minecraft:granite_wall"},Silent:1b,Time:1,DropItem:0b}
 execute if block ~ ~ ~ minecraft:granite_stairs align xyz run summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:"minecraft:granite_stairs"},Silent:1b,Time:1,DropItem:0b}
 execute if block ~ ~ ~ minecraft:granite_slab align xyz run summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:"minecraft:granite_slab"},Silent:1b,Time:1,DropItem:0b}

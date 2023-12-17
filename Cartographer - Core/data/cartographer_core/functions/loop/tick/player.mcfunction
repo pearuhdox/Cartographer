@@ -1,5 +1,7 @@
 execute if entity @s[tag=!ca.init] run function cartographer_core:load/init_player
 
+execute unless score @s ca.player_id matches 1.. run function cartographer_core:helper/player_id/assign
+
 execute if score @s ca.core_delay_check matches 1.. run scoreboard players remove @s ca.core_delay_check 1
 execute if entity @s[tag=ca.core_check_inv] unless score @s ca.core_delay_check matches 1.. run function cartographer_core:helper/inventory/do_inventory_check
 
@@ -89,3 +91,9 @@ execute if score @s ca.load_cro_time matches 1.. run scoreboard players remove @
 execute if score @s ca.hold_shi_time matches 1.. run scoreboard players remove @s ca.hold_shi_time 1
 execute if score @s ca.hold_tri_time matches 1.. run scoreboard players remove @s ca.hold_tri_time 1
 execute if score @s ca.use_ee_time matches 1.. run scoreboard players remove @s ca.use_ee_time 1
+
+execute if score @s ca.throw_pot matches 1.. as @e[type=potion,sort=nearest,limit=1] at @s run function cartographer_core:potion_mark/test_player_owned
+execute if score @s ca.throw_linger_pot matches 1.. as @e[type=potion,sort=nearest,limit=1] at @s run function cartographer_core:potion_mark/test_player_owned
+
+scoreboard players set @s ca.throw_pot 0
+scoreboard players set @s ca.throw_linger_pot 0

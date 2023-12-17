@@ -42,6 +42,6 @@
     }
   },
   "rewards": {
-    "function": "cartographer_custom_enchantments:enchant_effects/fleetfoot_crossbow"
+    "function": "cartographer_custom_enchantments:enchant_effects/fleetfoot/crossbow"
   }
 }

@@ -11,7 +11,7 @@ particle minecraft:dust_color_transition 0.914 0.773 0.992 1 1 1 1 ~ ~0.5 ~ 0.5 
 execute as @a[distance=..2] at @s run function cartographer_mob_abilities:ability_traits/overloading/detonate_player
 execute positioned ~-0.5 ~2 ~-0.5 as @a[dx=0,dz=0,dy=4] at @s run function cartographer_mob_abilities:ability_traits/overloading/detonate_player
 
-execute as @s positioned as @a[scores={ca.damage_queue=1..},distance=..2] run function cartographer_mob_abilities:helper/damage/ability_magic
-execute as @s positioned ~-0.5 ~2 ~-0.5 positioned as @a[scores={ca.damage_queue=1..},dx=0,dz=0,dy=4] run function cartographer_mob_abilities:helper/damage/ability_magic
+execute at @s as @a[distance=..4,scores={ca.ability_dmg=1..}] at @s run function cartographer_mob_abilities:helper/damage/macro_setup
+execute at @s as @a[distance=..4,scores={ca.ability_dmg=1..}] at @s run function cartographer_mob_abilities:helper/damage/ability_magic with storage cartographer:macro.mob_abilities
 
 kill @s

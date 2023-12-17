@@ -1,5 +1,8 @@
 #Get the duration amount and remove 1
 execute store result score $duration ca.loyalty run data get storage cartographer_custom_enchantments:loyalty_inventory Temp.tag.DurationRemaining
+
+function cartographer_custom_enchantments:enchant_effects/loyalty/return/set_name_plate
+
 scoreboard players remove $duration ca.loyalty 1
 
 scoreboard players set $slot ca.loyalty -1000

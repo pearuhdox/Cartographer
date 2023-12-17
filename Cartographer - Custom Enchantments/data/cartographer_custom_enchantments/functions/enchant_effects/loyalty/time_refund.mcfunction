@@ -1,4 +1,4 @@
-scoreboard players add @s ca.loyalty_time 30
+scoreboard players add @s ca.loyalty_time 19
 
 scoreboard players add @s ca.loyalty_refund_cooldown 40
 

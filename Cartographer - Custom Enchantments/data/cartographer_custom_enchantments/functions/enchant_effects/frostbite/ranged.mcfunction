@@ -1,20 +1,10 @@
-scoreboard players set @s[tag=is_frostbite_1] ca.frost_tier 1
-scoreboard players set @s[tag=is_frostbite_2] ca.frost_tier 2
-scoreboard players set @s[tag=is_frostbite_3] ca.frost_tier 3
-scoreboard players set @s[tag=is_frostbite_4] ca.frost_tier 4
-scoreboard players set @s[tag=is_frostbite_5] ca.frost_tier 5
+execute if score $frostbite ca.var matches 1 run scoreboard players set @s ca.frost_tier 1
+execute if score $frostbite ca.var matches 2 run scoreboard players set @s ca.frost_tier 2
+execute if score $frostbite ca.var matches 3 run scoreboard players set @s ca.frost_tier 3
+execute if score $frostbite ca.var matches 4 run scoreboard players set @s ca.frost_tier 4
+execute if score $frostbite ca.var matches 5 run scoreboard players set @s ca.frost_tier 5
 
-scoreboard players set @s[tag=is_frostbite_1] ca.frost_time 81
-scoreboard players set @s[tag=is_frostbite_2] ca.frost_time 81
-scoreboard players set @s[tag=is_frostbite_3] ca.frost_time 81
-scoreboard players set @s[tag=is_frostbite_4] ca.frost_time 81
-scoreboard players set @s[tag=is_frostbite_5] ca.frost_time 81
-
-tag @s[type=#bb:hostile] remove is_frostbite_1
-tag @s[type=#bb:hostile] remove is_frostbite_2
-tag @s[type=#bb:hostile] remove is_frostbite_3
-tag @s[type=#bb:hostile] remove is_frostbite_4
-tag @s[type=#bb:hostile] remove is_frostbite_5
+execute if score $frostbite ca.var matches 1.. run scoreboard players set @s ca.frost_time 81
 
 #Debug Message
 function #minecraft:cartographer/events/enchants_mob_hit/melee/frostbite

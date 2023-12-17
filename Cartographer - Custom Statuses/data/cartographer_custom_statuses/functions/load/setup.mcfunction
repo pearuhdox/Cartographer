@@ -92,6 +92,7 @@ scoreboard objectives add ca.player_entropy dummy
 scoreboard objectives add ca.cs_shoot_bow minecraft.used:minecraft.bow
 scoreboard objectives add ca.cs_shoot_cross minecraft.used:minecraft.crossbow
 scoreboard objectives add ca.cs_throw_trident minecraft.used:minecraft.trident
+scoreboard objectives add ca.cs_throw_snowball minecraft.used:minecraft.snowball
 
 scoreboard objectives add ca.cu_st_dmg minecraft.custom:minecraft.damage_dealt
 

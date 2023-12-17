@@ -1,8 +1,8 @@
 scoreboard players set $ranged ca.punch 0
 
-scoreboard players operation $ranged ca.punch = @s ca.punch
+scoreboard players operation $ranged ca.punch = $punch ca.var
 
-execute if score @s ca.punch matches 1.. as @e[type=arrow,limit=3,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/punch/crossbows_branch
+execute if score $punch ca.var matches 1.. as @e[type=#cartographer_custom_enchantments:bow_allowed_projectile,tag=ca.custom_just_fired,distance=..12] at @s run function cartographer_custom_enchantments:enchant_effects/punch/crossbows_branch
 
 
 #Debug Message

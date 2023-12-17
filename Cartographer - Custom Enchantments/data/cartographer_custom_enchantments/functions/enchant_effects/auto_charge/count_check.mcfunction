@@ -16,4 +16,4 @@ execute if score @s ca.auto_charge matches 10 run data modify storage cartograph
 
 execute store result score $req ca.auto_charge_count run data get storage cartographer_custom_enchantments:auto_charge Item.tag.KillCount
 
-execute if score @s ca.auto_charge_count >= $req ca.auto_charge_count run function cartographer_custom_enchantments:enchant_effects/auto_charge
+execute if score @s ca.auto_charge_count >= $req ca.auto_charge_count run function cartographer_custom_enchantments:enchant_effects/auto_charge/master

@@ -21,6 +21,8 @@ function cartographer_mimics:loop/tick/base
 function cartographer_mob_abilities:loop/tick/base
 function cartographer_repair_stations:loop/tick/base
 
+execute unless score $value ca.player_id matches 1.. run scoreboard players set $value ca.player_id 0
+
 execute as @a[predicate=cartographer_core:in_valid_dimension] at @s run function cartographer_core:loop/tick/player
 
 #Set Setup Mode to on if no acceptable value found
@@ -98,3 +100,5 @@ scoreboard players set @a ca.logout 0
 
 #Run UUID Ticking
 function cartographer_core:loop/tick/uuid_tick
+
+execute if score $active_potion ca.registry matches 1.. run scoreboard players remove $active_potion ca.registry 1

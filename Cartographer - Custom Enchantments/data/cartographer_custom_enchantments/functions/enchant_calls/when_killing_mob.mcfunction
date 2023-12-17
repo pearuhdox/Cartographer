@@ -2,15 +2,17 @@
 function cartographer_custom_enchantments:enchant_effects/infinity/kill_handler/tick_down
 
 #Adrenaline
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.adrenaline matches 1.. run function cartographer_custom_enchantments:enchant_effects/adrenaline
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.adrenaline matches 1.. run function cartographer_custom_enchantments:enchant_effects/adrenaline/master
 #Auto Charge
 execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/auto_charge/count_check
 #Energetic
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.energetic matches 1.. run function cartographer_custom_enchantments:enchant_effects/energetic
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.energetic matches 1.. run function cartographer_custom_enchantments:enchant_effects/energetic/master
 #Frenzy
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.frenzy matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.frenzy matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy/master
+#Steadfast
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.steadfast matches 1.. run function cartographer_custom_enchantments:enchant_effects/steadfast/master
 #Lifesteal
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal/master
 #Lightborn
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lightborn matches 1.. run function cartographer_custom_enchantments:enchant_effects/lightborn/chance
 

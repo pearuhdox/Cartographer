@@ -1,2 +1,0 @@
-execute if entity @s[tag=ca.multishot_left] positioned ^1.5 ^ ^5 run function cartographer_custom_enchantments:enchant_effects/multishot/modify_left
-execute if entity @s[tag=ca.multishot_right] positioned ^-1.5 ^ ^5 run function cartographer_custom_enchantments:enchant_effects/multishot/modify_right

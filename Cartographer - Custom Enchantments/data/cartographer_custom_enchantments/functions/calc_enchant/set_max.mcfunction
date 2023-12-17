@@ -15,31 +15,32 @@ execute if score @s ca.evasion matches 21.. run scoreboard players set @s ca.eva
 execute if score @s ca.energetic matches 7.. run scoreboard players set @s ca.energetic 6
 execute if score @s ca.fleetfoot matches 2.. run scoreboard players set @s ca.fleetfoot 1
 execute if score @s ca.frenzy matches 7.. run scoreboard players set @s ca.frenzy 6
+execute if score @s ca.steadfast matches 7.. run scoreboard players set @s ca.steadfast 6
 execute if score @s ca.frostbite matches 6.. run scoreboard players set @s ca.frostbite 5
 execute if score @s ca.frost matches 2.. run scoreboard players set @s ca.frost 1
 execute if score @s ca.hunter matches 6.. run scoreboard players set @s ca.hunter 5
+execute if score @s ca.smite matches 6.. run scoreboard players set @s ca.smite 5
 execute if score @s ca.overcharge matches 4.. run scoreboard players set @s ca.overcharge 3
 execute if score @s ca.focus matches 11.. run scoreboard players set @s ca.focus 10
+execute if score @s ca.concentration matches 11.. run scoreboard players set @s ca.concentration 10
 execute if score @s ca.lifesteal matches 11.. run scoreboard players set @s ca.lifesteal 10
-execute if score @s ca.point_blank matches 4.. run scoreboard players set @s ca.point_blank 3
+execute if score @s ca.point_blank matches 11.. run scoreboard players set @s ca.point_blank 10
 execute if score @s ca.rally matches 11.. run scoreboard players set @s ca.rally 10
 execute if score @s ca.regen matches 11.. run scoreboard players set @s ca.regen 10
 execute if score @s ca.repeating matches 8..10 run scoreboard players set @s ca.repeating 7
 execute if score @s ca.repeating matches 18.. run scoreboard players set @s ca.repeating 17
-execute if score @s ca.ricochet matches 4.. run scoreboard players set @s ca.ricochet 3
+execute if score @s ca.ricochet matches 11.. run scoreboard players set @s ca.ricochet 10
 execute if score @s ca.sapper matches 11.. run scoreboard players set @s ca.sapper 10
 execute if score @s ca.singe matches 11.. run scoreboard players set @s ca.singe 10
 execute if score @s ca.satiation matches 4.. run scoreboard players set @s ca.satiation 3
 execute if score @s ca.second_wind matches 5.. run scoreboard players set @s ca.second_wind 4
-execute if score @s ca.sharpshot matches 4.. run scoreboard players set @s ca.sharpshot 3
+execute if score @s ca.sharpshot matches 11.. run scoreboard players set @s ca.sharpshot 10
 execute if score @s ca.cauterize matches 11.. run scoreboard players set @s ca.cauterize 10
 execute if score @s ca.spurs matches 2.. run scoreboard players set @s ca.spurs 1
 execute if score @s ca.thrusting matches 5.. run scoreboard players set @s ca.thrusting 4
 execute if score @s ca.slamming matches 5.. run scoreboard players set @s ca.slamming 4
 execute if score @s ca.transfig matches 6.. run scoreboard players set @s ca.transfig 5
-execute if score @s ca.tempest matches 6.. run scoreboard players set @s ca.tempest 5
-execute if score @s ca.tempo_theft matches 3.. run scoreboard players set @s ca.tempo_theft 3
-execute if score @s ca.trueshot matches 1.. run scoreboard players set @s ca.trueshot 1
+execute if score @s ca.tempo_theft matches 11.. run scoreboard players set @s ca.tempo_theft 10
 execute if score @s vengeance matches 6.. run scoreboard players set @s vengeance 5
 execute if score @s ca.explosive matches 2.. run scoreboard players set @s ca.explosive 1
 execute if score @s ca.thorns matches 21.. run scoreboard players set @s ca.thorns 20
@@ -86,6 +87,7 @@ execute if score @s ca.frost_walker matches 6.. run scoreboard players set @s ca
 
 execute if score @s ca.off_duelist matches 6.. run scoreboard players set @s ca.off_duelist 5
 execute if score @s ca.off_hunter matches 6.. run scoreboard players set @s ca.off_hunter 5
+execute if score @s ca.off_smite matches 6.. run scoreboard players set @s ca.off_smite 5
 execute if score @s ca.off_singe matches 6.. run scoreboard players set @s ca.off_singe 5
 execute if score @s ca.off_frostbite matches 6.. run scoreboard players set @s ca.off_frostbite 5
 execute if score @s ca.off_exposing matches 4.. run scoreboard players set @s ca.off_exposing 3
@@ -109,6 +111,13 @@ execute if score @s ca.t_exec matches 4.. run scoreboard players set @s ca.t_exe
 execute if score @s ca.s_adren matches 7.. run scoreboard players set @s ca.s_adren 6
 execute if score @s ca.s_energ matches 7.. run scoreboard players set @s ca.s_energ 6
 execute if score @s ca.s_frenzy matches 7.. run scoreboard players set @s ca.s_frenzy 6
+
+execute if score @s ca.attr_ranged_speed matches ..0 run scoreboard players set @s ca.attr_ranged_speed 1
+execute if score @s ca.attr_ranged_speed matches 301.. run scoreboard players set @s ca.attr_ranged_speed 300
+
+execute if score @s ca.attr_potion_size matches ..9 run scoreboard players set @s ca.attr_potion_size 10
+execute if score @s ca.attr_potion_size matches 71.. run scoreboard players set @s ca.attr_potion_size 70
+
 
 #First Strike Damage Calc
 execute unless score @s ca.first_strike matches 1.. run function cartographer_custom_enchantments:enchant_effects/first_strike/reset

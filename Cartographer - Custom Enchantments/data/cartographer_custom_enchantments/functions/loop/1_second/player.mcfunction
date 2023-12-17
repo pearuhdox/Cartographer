@@ -1,4 +1,4 @@
-execute if entity @s[scores={ca.regen=1..}] run function cartographer_custom_enchantments:enchant_effects/regeneration
+execute if entity @s[scores={ca.regen=1..}] run function cartographer_custom_enchantments:enchant_effects/regeneration/master
 execute if entity @s[scores={ca.regen_bank=100..}] run function cartographer_custom_enchantments:enchant_effects/heal_bank
 
 

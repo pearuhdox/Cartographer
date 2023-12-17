@@ -1,2 +1,0 @@
-execute as @s[scores={ca.point_blank=1..,ca.lifetime=2..}] run function cartographer_custom_enchantments:enchant_effects/point_blank/arrow
-execute as @s[scores={ca.sharpshot=1..,ca.lifetime=2..}] run function cartographer_custom_enchantments:enchant_effects/sharpshot/arrow

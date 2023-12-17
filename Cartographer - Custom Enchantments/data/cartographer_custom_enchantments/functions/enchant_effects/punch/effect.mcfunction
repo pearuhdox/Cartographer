@@ -3,19 +3,13 @@ tp @s ~ ~ ~ ~ 5
 tag @s add co_rotation_lock
 scoreboard players set @s co_y 2
 
-execute if entity @s[tag=is_punch_1] run scoreboard players set @s co_send -10
-execute if entity @s[tag=is_punch_2] run scoreboard players set @s co_send -14
-execute if entity @s[tag=is_punch_3] run scoreboard players set @s co_send -20
-execute if entity @s[tag=is_punch_4] run scoreboard players set @s co_send -25
-execute if entity @s[tag=is_punch_5] run scoreboard players set @s co_send -33
+execute if score $punch ca.var matches 1 run scoreboard players set @s co_send -10
+execute if score $punch ca.var matches 2 run scoreboard players set @s co_send -14
+execute if score $punch ca.var matches 3 run scoreboard players set @s co_send -20
+execute if score $punch ca.var matches 4 run scoreboard players set @s co_send -25
+execute if score $punch ca.var matches 5.. run scoreboard players set @s co_send -33
 
 function motion:motion/push
-
-tag @s remove is_punch_1
-tag @s remove is_punch_2
-tag @s remove is_punch_3
-tag @s remove is_punch_4
-tag @s remove is_punch_5
 
 tag @s remove co_rotation_lock
 

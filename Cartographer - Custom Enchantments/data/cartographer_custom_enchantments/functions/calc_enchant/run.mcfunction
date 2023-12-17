@@ -3,6 +3,8 @@ function cartographer_custom_enchantments:calc_enchant/reset
 
 scoreboard players set $hold_bow ca.ench_var 0
 scoreboard players set $hold_crossbow ca.ench_var 0
+scoreboard players set $hold_snowball ca.ench_var 0
+scoreboard players set $hold_potion ca.ench_var 0
 scoreboard players set $hold_ranged ca.ench_var 0
 scoreboard players set $hold_ranged_t ca.ench_var 0
 scoreboard players set $hold_trident ca.ench_var 0
@@ -11,10 +13,14 @@ scoreboard players set $hold_armor_m ca.ench_var 0
 
 scoreboard players set $hold_ranged_m ca.ench_var 0
 
+scoreboard players set $hold_recoil ca.ench_var 0
 
 execute if predicate cartographer_core:has_bow run scoreboard players set $hold_bow ca.ench_var 1
 execute if predicate cartographer_core:has_crossbow run scoreboard players set $hold_crossbow ca.ench_var 1
 execute if predicate cartographer_core:has_trident run scoreboard players set $hold_trident ca.ench_var 1
+execute if predicate cartographer_core:has_snowball run scoreboard players set $hold_snowball ca.ench_var 1
+execute if predicate cartographer_core:has_potion run scoreboard players set $hold_potion ca.ench_var 1
+execute if predicate cartographer_core:has_lingering_potion run scoreboard players set $hold_potion ca.ench_var 1
 execute if predicate cartographer_custom_enchantments:hold_armor_offhand run scoreboard players set $hold_armor_o ca.ench_var 1
 execute if predicate cartographer_custom_enchantments:hold_armor_mainhand run scoreboard players set $hold_armor_m ca.ench_var 1
 
@@ -22,10 +28,18 @@ execute if predicate cartographer_custom_enchantments:hold_ranged_weapon run sco
 
 execute if score $hold_bow ca.ench_var matches 1.. run scoreboard players set $hold_ranged ca.ench_var 1
 execute if score $hold_crossbow ca.ench_var matches 1.. run scoreboard players set $hold_ranged ca.ench_var 1
+execute if score $hold_snowball ca.ench_var matches 1.. run scoreboard players set $hold_ranged ca.ench_var 1
+execute if score $hold_potion ca.ench_var matches 1.. run scoreboard players set $hold_ranged ca.ench_var 1
+
+execute if score $hold_snowball ca.ench_var matches 1.. run scoreboard players set $hold_recoil ca.ench_var 1
+execute if score $hold_crossbow ca.ench_var matches 1.. run scoreboard players set $hold_recoil ca.ench_var 1
+
 
 execute if score $hold_bow ca.ench_var matches 1.. run scoreboard players set $hold_ranged_t ca.ench_var 1
 execute if score $hold_crossbow ca.ench_var matches 1.. run scoreboard players set $hold_ranged_t ca.ench_var 1
 execute if score $hold_trident ca.ench_var matches 1.. run scoreboard players set $hold_ranged_t ca.ench_var 1
+execute if score $hold_snowball ca.ench_var matches 1.. run scoreboard players set $hold_ranged_t ca.ench_var 1
+execute if score $hold_potion ca.ench_var matches 1.. run scoreboard players set $hold_ranged_t ca.ench_var 1
 
 
 #Intercept the Calculate Enchant Call (Third Party Interaction)

@@ -1,0 +1,1 @@
+$execute positioned ~0.1 ~-0.1 ~0.1 positioned ~-$(potion_size_half) ~-$(potion_size_half) ~-$(potion_size_half) as @e[type=#bb:hostile,dx=$(potion_size),dy=$(potion_size_half),dz=$(potion_size)] positioned ~$(potion_size_half) ~$(potion_size_half) ~$(potion_size_half) at @s run function cartographer_custom_statuses:inflict/do_effect

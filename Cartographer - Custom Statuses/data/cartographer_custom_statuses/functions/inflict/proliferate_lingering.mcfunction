@@ -47,7 +47,7 @@ execute store result score $inflict_time ca.charm_time run data get storage cart
 tag @s add ca.custom_linger_inflict
 
 scoreboard players set @s ca.lifetime 600
-
+scoreboard players set $active_potion ca.registry 620
 
 scoreboard players operation @s ca.effect_bleed = $inflict ca.effect_bleed
 scoreboard players operation @s ca.effect_shock = $inflict ca.effect_shock

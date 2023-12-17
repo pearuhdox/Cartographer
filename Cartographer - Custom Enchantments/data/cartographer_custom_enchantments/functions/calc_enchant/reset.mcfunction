@@ -21,13 +21,16 @@ scoreboard players set @s ca.executioner 0
 scoreboard players set @s ca.energetic 0
 scoreboard players set @s ca.fleetfoot 0
 scoreboard players set @s ca.frenzy 0
+scoreboard players set @s ca.steadfast 0
 scoreboard players set @s ca.frostbite 0
 scoreboard players set @s ca.frost 0
+scoreboard players set @s ca.smite 0
 scoreboard players set @s ca.hunter 0
 scoreboard players set @s ca.hydraulic 0
 scoreboard players set @s ca.lifesteal 0
 scoreboard players set @s ca.overcharge 0
 scoreboard players set @s ca.focus 0
+scoreboard players set @s ca.concentration 0
 scoreboard players set @s ca.point_blank 0
 scoreboard players set @s ca.regen 0
 scoreboard players set @s ca.first_strike 0
@@ -46,9 +49,7 @@ scoreboard players set @s ca.splintering 0
 scoreboard players set @s ca.spurs 0
 scoreboard players set @s ca.thrusting 0
 scoreboard players set @s ca.slamming 0
-scoreboard players set @s[scores={ca.throw_trident=0}] ca.tempest 0
 scoreboard players set @s ca.tempo_theft 0
-scoreboard players set @s ca.trueshot 0
 scoreboard players set @s ca.explosive 0
 scoreboard players set @s ca.thorns 0
 scoreboard players set @s ca.multishot 0
@@ -58,7 +59,6 @@ scoreboard players set @s ca.respiration 0
 scoreboard players set @s ca.recoil 0
 scoreboard players set @s ca.collapse 0
 scoreboard players set @s ca.riptide 0
-
 scoreboard players set @s ca.gravity 0
 scoreboard players set @s ca.starfall 0
 scoreboard players set @s ca.quake 0
@@ -102,7 +102,6 @@ scoreboard players set @s ca.curse_drowning 0
 scoreboard players set @s ca.curse_mal 0
 scoreboard players set @s ca.curse_two_hnd 0
 scoreboard players set @s ca.curse_regret 0
-scoreboard players set @s ca.curse_encum 0
 
 scoreboard players set @s ca.t_fire 0
 scoreboard players set @s ca.t_frost 0
@@ -146,6 +145,7 @@ scoreboard players set @s ca.s_con 0
 
 scoreboard players set @s ca.off_duelist 0
 scoreboard players set @s ca.off_hunter 0
+scoreboard players set @s ca.off_smite 0
 scoreboard players set @s ca.off_singe 0
 scoreboard players set @s ca.off_frostbite 0
 scoreboard players set @s ca.off_exposing 0
@@ -159,6 +159,8 @@ scoreboard players set @s ca.curse_rusting 0
 
 scoreboard players set @s ca.attr_ranged 0
 scoreboard players set @s ca.attr_ranged_perc 100
+scoreboard players set @s ca.attr_ranged_speed 100
+scoreboard players set @s ca.attr_potion_size 25
 
 tag @s remove ca.rust_head
 tag @s remove ca.rust_body
@@ -232,6 +234,8 @@ tag @s remove ca.unb_head
 tag @s remove ca.unb_body
 tag @s remove ca.unb_legs
 tag @s remove ca.unb_feet
+
+scoreboard players set @s ca.ignore_arrow_ench 0
 
 #Turn features dynamically off by default. We will turn them back on as we find we need them.
 #scoreboard players set $cu_en_melee ca.enabler 0

@@ -22,7 +22,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{apply_status:[{id:\"stun\"}]}"
+                  "nbt": "{apply_status:[{id:\"stunned\"}]}"
                 }
               ]
             }
@@ -32,7 +32,7 @@
             "conditions": {
               "items": [
                 {
-                  "nbt": "{custom_statuses:[{id:\"stun\"}]}"
+                  "nbt": "{custom_statuses:[{id:\"stunned\"}]}"
                 }
               ]
             }

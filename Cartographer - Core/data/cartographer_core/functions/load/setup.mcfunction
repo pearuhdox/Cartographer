@@ -8,6 +8,8 @@
 
 
 #Create the scoreboard used to enable or disable features to dynamically save performance.
+scoreboard objectives add ca.player_id dummy
+
 scoreboard objectives add ca.enabler dummy
 scoreboard objectives add ca.installed dummy
 
@@ -62,6 +64,8 @@ setblock 4206900 5 4206900 purple_shulker_box{Items:[{Slot:0b,id:"minecraft:know
 #Create var scoreboard
 scoreboard objectives add ca.var dummy
 
+scoreboard objectives add ca.registry dummy
+
 #Create logout scoreboard
 scoreboard objectives add ca.logout minecraft.custom:minecraft.leave_game
 
@@ -95,6 +99,10 @@ scoreboard objectives add ca.sneak minecraft.custom:minecraft.sneak_time
 
 scoreboard objectives add ca.swim minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add ca.water_walk minecraft.custom:minecraft.walk_under_water_one_cm
+
+
+scoreboard objectives add ca.throw_pot minecraft.used:minecraft.splash_potion
+scoreboard objectives add ca.throw_linger_pot minecraft.used:minecraft.lingering_potion
 
 #Delta compat
 scoreboard objectives add ca.delta_fuse_max dummy
@@ -236,7 +244,7 @@ scoreboard players set $75 ca.CONSTANT 75
 scoreboard players set $77 ca.CONSTANT 77
 scoreboard players set $80 ca.CONSTANT 80
 scoreboard players set $81 ca.CONSTANT 81
-scoreboard players set $100 ca.CONSTANT 100
+scoreboard players set $90 ca.CONSTANT 90
 scoreboard players set $120 ca.CONSTANT 120
 scoreboard players set $125 ca.CONSTANT 125
 scoreboard players set $133 ca.CONSTANT 133
@@ -310,3 +318,5 @@ schedule function cartographer_core:load/cleanup_forceload 20t
 #Analyse what gamerules feedback and death messages are set to.
 
 #Schedule core clocks.
+
+setblock 4206905 3 4206905 oak_sign replace

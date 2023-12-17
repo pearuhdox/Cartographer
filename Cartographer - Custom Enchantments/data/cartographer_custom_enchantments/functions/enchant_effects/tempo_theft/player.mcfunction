@@ -1,6 +1,15 @@
-execute if entity @s[scores={ca.tempo_theft=1}] run scoreboard players set @s ca.temp_warp 200
-execute if entity @s[scores={ca.tempo_theft=2}] run scoreboard players set @s ca.temp_warp 400
-execute if entity @s[scores={ca.tempo_theft=3}] run scoreboard players set @s ca.temp_warp 600
+execute if score $tempo_theft ca.var matches 1.. run scoreboard players set @s ca.temp_warp 200
+
+execute if score $tempo_theft ca.var matches 1 run scoreboard players set @s ca.temp_level 1
+execute if score $tempo_theft ca.var matches 2 run scoreboard players set @s ca.temp_level 2
+execute if score $tempo_theft ca.var matches 3 run scoreboard players set @s ca.temp_level 3
+execute if score $tempo_theft ca.var matches 4 run scoreboard players set @s ca.temp_level 4
+execute if score $tempo_theft ca.var matches 5 run scoreboard players set @s ca.temp_level 5
+execute if score $tempo_theft ca.var matches 6 run scoreboard players set @s ca.temp_level 6
+execute if score $tempo_theft ca.var matches 7 run scoreboard players set @s ca.temp_level 7
+execute if score $tempo_theft ca.var matches 8 run scoreboard players set @s ca.temp_level 8
+execute if score $tempo_theft ca.var matches 9 run scoreboard players set @s ca.temp_level 9
+execute if score $tempo_theft ca.var matches 10.. run scoreboard players set @s ca.temp_level 10
 
 execute run particle minecraft:witch ~ ~1 ~ 0.35 0.35 0.35 0.1 20 normal
 execute run playsound minecraft:entity.illusioner.prepare_blindness player @a[distance=..10] ~ ~ ~ 1 2

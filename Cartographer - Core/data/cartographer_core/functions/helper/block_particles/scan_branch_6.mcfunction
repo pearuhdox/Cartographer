@@ -78,7 +78,7 @@ execute if block ~ ~ ~ minecraft:gray_bed align xyz run particle minecraft:block
 execute if block ~ ~ ~ minecraft:gray_banner align xyz run particle minecraft:block minecraft:gray_banner ~0.5 ~1.2 ~0.5 0.3 0.1 0.3 0 20 normal
 execute if block ~ ~ ~ minecraft:gravel align xyz run particle minecraft:block minecraft:gravel ~0.5 ~1.2 ~0.5 0.3 0.1 0.3 0 20 normal
 execute if block ~ ~ ~ minecraft:grass_block align xyz run particle minecraft:block minecraft:grass_block ~0.5 ~1.2 ~0.5 0.3 0.1 0.3 0 20 normal
-execute if block ~ ~ ~ minecraft:grass align xyz run particle minecraft:block minecraft:grass ~0.5 ~1.2 ~0.5 0.3 0.1 0.3 0 20 normal
+execute if block ~ ~ ~ minecraft:short_grass align xyz run particle minecraft:block minecraft:short_grass ~0.5 ~1.2 ~0.5 0.3 0.1 0.3 0 20 normal
 execute if block ~ ~ ~ minecraft:granite_wall align xyz run particle minecraft:block minecraft:granite_wall ~0.5 ~1.2 ~0.5 0.3 0.1 0.3 0 20 normal
 execute if block ~ ~ ~ minecraft:granite_stairs align xyz run particle minecraft:block minecraft:granite_stairs ~0.5 ~1.2 ~0.5 0.3 0.1 0.3 0 20 normal
 execute if block ~ ~ ~ minecraft:granite_slab align xyz run particle minecraft:block minecraft:granite_slab ~0.5 ~1.2 ~0.5 0.3 0.1 0.3 0 20 normal

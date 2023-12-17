@@ -1,5 +1,5 @@
 data modify storage cartographer_custom_enchantments:loyalty Item set value {}
-data modify storage cartographer_custom_enchantments:loyalty Item set from entity @s Trident
+data modify storage cartographer_custom_enchantments:loyalty Item set from entity @s item
 
 data modify entity @s pickup set value 2b
 

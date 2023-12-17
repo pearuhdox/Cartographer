@@ -3,6 +3,6 @@
 tag @s add no_cdl_msg
 
 #Soulbound Return
-function cartographer_custom_enchantments:enchant_effects/soulbound_return
+function cartographer_custom_enchantments:enchant_effects/soulbound/return
 
 scoreboard players set @s ca.death_time 21

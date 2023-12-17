@@ -13,4 +13,14 @@ execute store success score $ricochet_success ca.var run tp @s ~ ~ ~ facing enti
 
 execute if score $ricochet_success ca.var matches 1.. run function motion:motion/push
 
+execute if score @s ca.attr_ranged matches 1.. run scoreboard players operation $val ca.attr_ranged = @s ca.attr_ranged
+execute if score @s ca.attr_ranged matches 1.. run function cartographer_custom_enchantments:attribute_effects/ranged_damage/trident/get_enchants
+
+execute if score @s ca.attr_ranged matches 1.. run scoreboard players operation $val ca.attr_ranged *= $90 ca.CONSTANT
+execute if score @s ca.attr_ranged matches 1.. run scoreboard players operation $val ca.attr_ranged /= $100 ca.CONSTANT
+
+
+execute if score $ricochet_success ca.var matches 1.. if score @s ca.attr_ranged matches 1.. facing ^ ^ ^-3 as @s run function cartographer_custom_enchantments:attribute_effects/ranged_damage/trident/replace
+
+
 execute unless score $ricochet_success ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/ricochet/end_chain

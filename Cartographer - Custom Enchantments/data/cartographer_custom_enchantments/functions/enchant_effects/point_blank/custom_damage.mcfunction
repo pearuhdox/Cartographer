@@ -1,3 +1,4 @@
-execute if score @s ca.point_blank matches 1 if score @s ca.attr_ranged matches 1.. run scoreboard players remove @s ca.attr_ranged 10
-execute if score @s ca.point_blank matches 2 if score @s ca.attr_ranged matches 1.. run scoreboard players remove @s ca.attr_ranged 20
-execute if score @s ca.point_blank matches 3.. if score @s ca.attr_ranged matches 1.. run scoreboard players remove @s ca.attr_ranged 30
+scoreboard players set $point_blank ca.attr_ranged 20
+scoreboard players operation $point_blank ca.attr_ranged *= $point_blank ca.var
+
+scoreboard players operation $ranged_damage ca.var += $point_blank ca.attr_ranged

@@ -24,11 +24,14 @@ execute if score $percent_str_weak ca.gamerule matches 1.. if score @s ca.weak_d
 #Run Player Shoot Detection
 execute if score @s ca.cs_shoot_bow matches 1.. run function cartographer_custom_statuses:player/check_ranged_attack
 execute if score @s ca.cs_shoot_cross matches 1.. run function cartographer_custom_statuses:player/check_ranged_attack
+execute if score @s ca.cs_throw_snowball matches 1.. run function cartographer_custom_statuses:player/check_ranged_attack
+#cartographer_custom_statuses:bow_allowed_projectile
 #execute if score @s ca.cs_throw_trident matches 1.. run function cartographer_custom_statuses:player/check_ranged_attack
 
 scoreboard players set @s ca.cs_shoot_bow 0
 scoreboard players set @s ca.cs_shoot_cross 0
 scoreboard players set @s ca.cs_throw_trident 0
+scoreboard players set @s ca.cs_throw_snowball 0
 
 execute if predicate cartographer_custom_statuses:is_stealthed run function cartographer_custom_statuses:player/stealthed
 execute if entity @s[tag=ca.stealthed] unless predicate cartographer_custom_statuses:is_stealthed run function cartographer_custom_statuses:effects/stealthed/leave
