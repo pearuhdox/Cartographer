@@ -13,6 +13,7 @@ scoreboard players operation @s ca.frostbite = @p ca.frostbite
 scoreboard players operation @s ca.fire_aspect = @p ca.fire_aspect
 scoreboard players operation @s ca.cauterize = @p ca.cauterize
 scoreboard players operation @s ca.executioner = @p ca.executioner
+scoreboard players operation @s ca.first_strike = @p ca.first_strike
 
 
 scoreboard players operation @s ca.duelist += @p ca.off_duelist
@@ -22,6 +23,11 @@ scoreboard players operation @s ca.singe += @p ca.off_singe
 scoreboard players operation @s ca.frostbite += @p ca.off_frostbite
 scoreboard players operation @s ca.fire_aspect += @p ca.off_fire_aspect
 scoreboard players operation @s ca.executioner += @p ca.off_executioner
+
+scoreboard players operation @s ca.first_strike += @p ca.off_first_strike
+scoreboard players operation @s ca.hex_eater += @p ca.off_hex_eater
+scoreboard players operation @s ca.cauterize += @p ca.off_cauterize
+
 
 execute if score @s ca.ricochet matches 1.. run tag @s add is_ricocheting
 

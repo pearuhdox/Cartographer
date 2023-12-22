@@ -20,6 +20,8 @@ tag @s remove skip_cauterize
 #Do Cauterize Checks
 execute if score @s ca.cauterize_time matches 1 run scoreboard players set @s ca.cauterize_time 0
 execute if predicate cartographer_custom_enchantments:hex_eater/is_on_fire if entity @a[distance=..40,scores={ca.cauterize=1..}] run function cartographer_custom_enchantments:enchant_effects/cauterize/track_fire
+execute unless entity @s[tag=ca.cauterize_track_check] if predicate cartographer_custom_enchantments:hex_eater/is_on_fire if entity @a[distance=..40,scores={ca.off_cauterize=1..}] run function cartographer_custom_enchantments:enchant_effects/cauterize/track_fire
+tag @s remove ca.cauterize_track_check
 
 #Remove Deadeye Tag
 execute if entity @s[tag=ca.second_wind_marked] run particle minecraft:totem_of_undying ~ ~0.5 ~ 0.35 0.35 0.35 0.03 1 normal

@@ -53,7 +53,6 @@ scoreboard objectives add ca.concentration dummy
 scoreboard objectives add ca.point_blank dummy
 scoreboard objectives add ca.first_strike dummy
 scoreboard objectives add ca.lethality dummy
-scoreboard objectives add ca.lightborn dummy
 scoreboard objectives add ca.rally dummy
 scoreboard objectives add ca.repeating dummy
 scoreboard objectives add ca.regen dummy
@@ -137,8 +136,6 @@ scoreboard objectives add ca.momentum dummy
 scoreboard objectives add ca.momentum_charge minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add ca.momentum_tier dummy
 
-scoreboard objectives add ca.confidence dummy
-scoreboard objectives add ca.desperation dummy
 scoreboard objectives add ca.stalwart dummy
 scoreboard objectives add ca.poise dummy
 
@@ -186,13 +183,11 @@ scoreboard objectives add ca.off_duelist dummy
 scoreboard objectives add ca.off_hunter dummy
 scoreboard objectives add ca.off_smite dummy
 scoreboard objectives add ca.off_singe dummy
-scoreboard objectives add ca.off_frostbite dummy
-scoreboard objectives add ca.off_exposing dummy
-scoreboard objectives add ca.off_stunning dummy
-scoreboard objectives add ca.off_infection dummy
-scoreboard objectives add ca.off_electrocute dummy
-scoreboard objectives add ca.off_bleeding dummy
 scoreboard objectives add ca.off_fire_aspect dummy
+scoreboard objectives add ca.off_first_strike dummy
+scoreboard objectives add ca.off_hex_eater dummy
+scoreboard objectives add ca.off_executioner dummy
+scoreboard objectives add ca.off_cauterize dummy
 
 
 scoreboard objectives add ca.wavedash dummy
@@ -206,39 +201,60 @@ scoreboard objectives add ca.hy_knock dummy
 scoreboard objectives add ca.hy_exec dummy
 
 scoreboard objectives add ca.g_fire dummy
-scoreboard objectives add ca.g_frost dummy
 scoreboard objectives add ca.g_knock dummy
 scoreboard objectives add ca.g_exec dummy
+scoreboard objectives add ca.g_hex dummy
+scoreboard objectives add ca.g_first dummy
+scoreboard objectives add ca.g_cau dummy
+scoreboard objectives add ca.g_tempo dummy
 
 scoreboard objectives add ca.mo_fire dummy
-scoreboard objectives add ca.mo_frost dummy
 scoreboard objectives add ca.mo_knock dummy
 scoreboard objectives add ca.mo_exec dummy
+scoreboard objectives add ca.mo_hex dummy
+scoreboard objectives add ca.mo_first dummy
+scoreboard objectives add ca.mo_cau dummy
+scoreboard objectives add ca.mo_tempo dummy
 
 scoreboard objectives add ca.qu_fire dummy
-scoreboard objectives add ca.qu_frost dummy
 scoreboard objectives add ca.qu_knock dummy
 scoreboard objectives add ca.qu_exec dummy
+scoreboard objectives add ca.qu_hex dummy
+scoreboard objectives add ca.qu_first dummy
+scoreboard objectives add ca.qu_cau dummy
+scoreboard objectives add ca.qu_tempo dummy
 
 scoreboard objectives add ca.sm_fire dummy
-scoreboard objectives add ca.sm_frost dummy
 scoreboard objectives add ca.sm_knock dummy
 scoreboard objectives add ca.sm_exec dummy
+scoreboard objectives add ca.sm_hex dummy
+scoreboard objectives add ca.sm_first dummy
+scoreboard objectives add ca.sm_cau dummy
+scoreboard objectives add ca.sm_tempo dummy
 
 scoreboard objectives add ca.t_fire dummy
-scoreboard objectives add ca.t_frost dummy
 scoreboard objectives add ca.t_knock dummy
 scoreboard objectives add ca.t_exec dummy
+scoreboard objectives add ca.t_hex dummy
+scoreboard objectives add ca.t_first dummy
+scoreboard objectives add ca.t_cau dummy
+scoreboard objectives add ca.t_tempo dummy
+
+scoreboard objectives add ca.re_fire dummy
+scoreboard objectives add ca.re_frost dummy
+scoreboard objectives add ca.re_knock dummy
+scoreboard objectives add ca.re_exec dummy
+scoreboard objectives add ca.re_hex dummy
+scoreboard objectives add ca.re_first dummy
+scoreboard objectives add ca.re_cau dummy
+scoreboard objectives add ca.re_tempo dummy
+
 
 scoreboard objectives add ca.s_adren dummy
 scoreboard objectives add ca.s_frenzy dummy
 scoreboard objectives add ca.s_energ dummy
 scoreboard objectives add ca.s_con dummy
 
-scoreboard objectives add ca.re_fire dummy
-scoreboard objectives add ca.re_frost dummy
-scoreboard objectives add ca.re_knock dummy
-scoreboard objectives add ca.re_exec dummy
 
 scoreboard objectives add ca.riptide_time dummy
 scoreboard objectives add ca.riptide_count dummy
@@ -437,6 +453,7 @@ scoreboard objectives add ca.two_hand_time dummy
 scoreboard objectives add ca.dummy dummy
 scoreboard objectives add ca.var dummy
 scoreboard objectives add ca.ench_var dummy
+scoreboard objectives add ca.weapon_var dummy
 
 scoreboard objectives add ca.adrenaline_dur dummy
 scoreboard objectives add ca.frenzy_dur dummy

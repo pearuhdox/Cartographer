@@ -45,7 +45,7 @@ execute if score $fire ca.hydraulic matches 4 as @s run data modify entity @s Fi
 execute if score $fire ca.hydraulic matches 5.. as @s run data modify entity @s Fire set value 401
 
 #Executioner
-scoreboard players operation $exec ca.executioner = $exec ca.hydraulic
+scoreboard players operation $lvl ca.executioner = $exec ca.hydraulic
 execute if score $exec ca.hydraulic matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 #Statuses!

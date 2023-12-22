@@ -13,8 +13,6 @@ execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.frenzy matche
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.steadfast matches 1.. run function cartographer_custom_enchantments:enchant_effects/steadfast/master
 #Lifesteal
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal/master
-#Lightborn
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lightborn matches 1.. run function cartographer_custom_enchantments:enchant_effects/lightborn/chance
 
 #Quake
 execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/find

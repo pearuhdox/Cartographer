@@ -31,6 +31,10 @@ scoreboard players set $ranged_damage ca.var 0
 scoreboard players set $point_blank ca.attr_ranged 0
 scoreboard players set $sharpshot ca.attr_ranged 0
 
+scoreboard players set $first_strike ca.var 0
+scoreboard players set $hex_eater ca.var 0
+
+
 execute on attacker run scoreboard players operation $attacker_id ca.var = @s ca.player_id
 
 #Grab All Relevant Data from the projectile in question.
@@ -47,8 +51,17 @@ execute if score $point_blank ca.var matches 1.. at @s run function cartographer
 #Sharpshot - Runs before Custom Damage
 execute if score $sharpshot ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/sharpshot/player_test
 
+
 #Do Custom Ranged Damage
 execute if score $ranged_damage ca.var matches 1.. run function cartographer_custom_enchantments:attribute_effects/ranged_damage/setup_damage
+
+
+#First Strike - After Ranged Damage
+execute unless entity @s[tag=ca.first_striked] if score $first_strike ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/first_strike/branch
+
+#Hex Eater - After Ranged Damage
+execute if score $hex_eater ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/hex_eater/branch
+
 
 #These effects will activate from the entity itself before the player call.
 execute if score $cu_en_ranged ca.enabler matches 1.. at @s[type=!player] run function cartographer_custom_enchantments:enchant_effects/arrow_custom_tag
@@ -105,7 +118,6 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if score $wavedash ca.var 
 
 #Executioner - Trident
 execute if score $cu_en_ranged ca.enabler matches 1.. if score $executioner ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/ranged
-
 
 
 #Run the Arrow Hit Datapack Hook

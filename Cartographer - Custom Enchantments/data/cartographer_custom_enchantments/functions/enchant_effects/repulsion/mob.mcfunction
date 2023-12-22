@@ -26,7 +26,7 @@ execute if score $fire_aspect ca.repulsion matches 4 as @s run data modify entit
 execute if score $fire_aspect ca.repulsion matches 5.. as @s run data modify entity @s Fire set value 401
 
 #Executioner
-scoreboard players operation $exec ca.executioner = $executioner ca.repulsion
+scoreboard players operation $lvl ca.executioner = $executioner ca.repulsion
 execute if score $executioner ca.repulsion matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 #Statuses!

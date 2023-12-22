@@ -32,6 +32,21 @@ execute store result score $temp ca.susu run data get storage ca.susu:enchants a
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.explosive += $temp ca.susu
 scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"first_strike"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.first_strike += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"hex_eater"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.hex_eater += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"executioner"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.executioner += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
 
 
 scoreboard players set $temp ca.susu 0

@@ -11,6 +11,8 @@ scoreboard players set $sharpshot ca.var 0
 
 scoreboard players set $piercing ca.var 0
 
+scoreboard players set $first_strike ca.var 0
+
 scoreboard players set $attr_ranged ca.var 0
 scoreboard players set $attr_ranged_perc ca.var 0
 scoreboard players set $attr_ranged_speed ca.var 0

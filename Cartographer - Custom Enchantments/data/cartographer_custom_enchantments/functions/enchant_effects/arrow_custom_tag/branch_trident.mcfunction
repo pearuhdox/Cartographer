@@ -15,6 +15,11 @@ scoreboard players operation $wavedash ca.var = @s ca.wavedash
 
 scoreboard players operation $loyalty ca.var = @s ca.loyalty
 
+scoreboard players operation $first_strike ca.var = @s ca.first_strike
+
+scoreboard players operation $hex_eater ca.var = @s ca.hex_eater
+scoreboard players operation $executioner ca.var = @s ca.executioner
+
 scoreboard players operation $ranged_damage ca.var = @s ca.attr_ranged
 
 #Get the Wavedash ID if Wavedash exists

@@ -13,6 +13,9 @@ scoreboard players set $hold_armor_m ca.ench_var 0
 
 scoreboard players set $hold_ranged_m ca.ench_var 0
 
+scoreboard players set $hold_ranged_o ca.ench_var 0
+
+
 scoreboard players set $hold_recoil ca.ench_var 0
 
 execute if predicate cartographer_core:has_bow run scoreboard players set $hold_bow ca.ench_var 1
@@ -25,6 +28,7 @@ execute if predicate cartographer_custom_enchantments:hold_armor_offhand run sco
 execute if predicate cartographer_custom_enchantments:hold_armor_mainhand run scoreboard players set $hold_armor_m ca.ench_var 1
 
 execute if predicate cartographer_custom_enchantments:hold_ranged_weapon run scoreboard players set $hold_ranged_m ca.ench_var 1
+execute if predicate cartographer_custom_enchantments:hold_ranged_weapon_offhand run scoreboard players set $hold_ranged_o ca.ench_var 1
 
 execute if score $hold_bow ca.ench_var matches 1.. run scoreboard players set $hold_ranged ca.ench_var 1
 execute if score $hold_crossbow ca.ench_var matches 1.. run scoreboard players set $hold_ranged ca.ench_var 1
@@ -54,8 +58,8 @@ execute if entity @s[tag=ca.check_head] run function cartographer_custom_enchant
 execute if entity @s[tag=ca.check_body] run function cartographer_custom_enchantments:calc_enchant/chest
 execute if entity @s[tag=ca.check_legs] run function cartographer_custom_enchantments:calc_enchant/legs
 execute if entity @s[tag=ca.check_feet] run function cartographer_custom_enchantments:calc_enchant/feet
-execute unless score $hold_armor_o ca.ench_var matches 1.. run function cartographer_custom_enchantments:calc_enchant/offhand
 execute unless score $hold_armor_m ca.ench_var matches 1.. run function cartographer_custom_enchantments:calc_enchant/mainhand
+execute unless score $hold_armor_o ca.ench_var matches 1.. run function cartographer_custom_enchantments:calc_enchant/offhand
 
 execute if score $gl_enc_wr ca.gamerule matches 1.. if score $hold_armor_m ca.ench_var matches 1.. run function cartographer_custom_enchantments:descriptions/write/main
 

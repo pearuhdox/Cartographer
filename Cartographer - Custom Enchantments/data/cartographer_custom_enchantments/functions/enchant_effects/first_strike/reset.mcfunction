@@ -1,1 +1,0 @@
-attribute @s minecraft:generic.attack_damage modifier remove 31691819-2019-2018-9115-000000000000

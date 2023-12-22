@@ -7,6 +7,10 @@ scoreboard players operation $temp ca.var += @s ca.punch
 scoreboard players operation $temp ca.var += @s ca.concentration
 scoreboard players operation $temp ca.var += @s ca.point_blank
 scoreboard players operation $temp ca.var += @s ca.sharpshot
+scoreboard players operation $temp ca.var += @s ca.first_strike
+
+scoreboard players operation $temp ca.var += @s ca.hex_eater
+scoreboard players operation $temp ca.var += @s ca.executioner
 
 scoreboard players operation $temp ca.var += @s ca.attr_ranged
 scoreboard players operation $temp ca.var += @s ca.attr_ranged_perc

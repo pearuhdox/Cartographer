@@ -17,7 +17,7 @@ execute if score $fire_aspect ca.thrusting matches 4 as @s run data modify entit
 execute if score $fire_aspect ca.thrusting matches 5.. as @s run data modify entity @s Fire set value 401
 
 #Executioner
-scoreboard players operation $exec ca.executioner = $executioner ca.thrusting
+scoreboard players operation $lvl ca.executioner = $executioner ca.thrusting
 execute if score $executioner ca.thrusting matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 #Ending particle

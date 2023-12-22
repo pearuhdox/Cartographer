@@ -11,7 +11,19 @@ scoreboard players operation $sharpshot ca.var = @s ca.sharpshot
 
 scoreboard players operation $piercing ca.var = @s ca.piercing
 
+scoreboard players operation $first_strike ca.var = @s ca.first_strike
+
 scoreboard players operation $concentration_stacks ca.var = @s ca.concentrate_stack
+
+
+scoreboard players operation $hex_eater ca.var = @s ca.hex_eater
+scoreboard players operation $executioner ca.var = @s ca.executioner
+
+scoreboard players operation $cauterize ca.var += @s ca.off_cauterize
+scoreboard players operation $first_strike ca.var += @s ca.off_first_strike
+scoreboard players operation $hex_eater ca.var += @s ca.off_hex_eater
+scoreboard players operation $executioner ca.var += @s ca.off_executioner
+
 
 
 scoreboard players operation $attr_ranged ca.var += @s ca.attr_ranged

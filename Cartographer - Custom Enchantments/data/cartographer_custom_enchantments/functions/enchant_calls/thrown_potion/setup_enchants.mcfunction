@@ -18,6 +18,10 @@ scoreboard players operation @s ca.explosive = $explosive ca.var
 
 scoreboard players operation @s ca.tempo_theft = $tempo_theft ca.var
 
+scoreboard players operation @s ca.first_strike = $first_strike ca.var
+scoreboard players operation @s ca.hex_eater = $hex_eater ca.var
+scoreboard players operation @s ca.executioner = $executioner ca.var
+
 
 scoreboard players operation @s ca.attr_ranged = $attr_ranged ca.var
 scoreboard players operation @s ca.attr_ranged_perc = $attr_ranged_perc ca.var

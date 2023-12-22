@@ -14,6 +14,15 @@ execute if score $sharpshot ca.var matches 1.. at @s run function cartographer_c
 #Do Custom Ranged Damage
 execute if score $ranged_damage ca.var matches 1.. run function cartographer_custom_enchantments:attribute_effects/ranged_damage/setup_damage
 
+#First Strike - After Ranged Damage
+execute unless entity @s[tag=ca.first_striked] if score $first_strike ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/first_strike/branch
+
+#Hex Eater - After Ranged Damage
+execute if score $hex_eater ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/hex_eater/branch
+
+#Executioner
+execute if score $executioner ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/branch
+
 #Flame
 #execute if score $flame ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/flame/master
 

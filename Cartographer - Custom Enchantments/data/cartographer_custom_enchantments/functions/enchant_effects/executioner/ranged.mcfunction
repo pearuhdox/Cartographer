@@ -1,4 +1,4 @@
-scoreboard players operation $exec ca.executioner = $executioner ca.var
-execute if score $exec ca.executioner matches 4.. run scoreboard players set $exec ca.executioner 3
+scoreboard players operation $lvl ca.executioner = $executioner ca.var
+execute if score $lvl ca.executioner matches 11.. run scoreboard players set $lvl ca.executioner 10
 
 function cartographer_custom_enchantments:enchant_effects/executioner/branch

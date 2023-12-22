@@ -12,6 +12,11 @@ scoreboard players operation @s ca.punch = $punch ca.var
 
 scoreboard players operation @s ca.concentration = $concentration ca.var
 
+scoreboard players operation @s ca.first_strike = $first_strike ca.var
+
+scoreboard players operation @s ca.hex_eater = $hex_eater ca.var
+scoreboard players operation @s ca.executioner = $executioner ca.var
+
 
 scoreboard players operation @s ca.explosive = $explosive ca.var
 

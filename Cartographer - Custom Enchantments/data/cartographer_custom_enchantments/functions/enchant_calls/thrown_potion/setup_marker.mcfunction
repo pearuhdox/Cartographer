@@ -2,10 +2,8 @@
 
 scoreboard players set $flame ca.var 0
 
-scoreboard players set $frost ca.var 0
 scoreboard players set $cauterize ca.var 0
 scoreboard players set $explosive ca.var 0
-scoreboard players set $vol_dmg ca.vol_dmg 0
 scoreboard players set $tempo_theft ca.var 0
 scoreboard players set $punch ca.var 0
 scoreboard players set $concentration ca.var 0
@@ -30,6 +28,9 @@ scoreboard players set $wavedash ca.var 0
 scoreboard players set $ranged_damage ca.var 0
 scoreboard players set $point_blank ca.attr_ranged 0
 scoreboard players set $sharpshot ca.attr_ranged 0
+
+scoreboard players set $first_strike ca.var 0
+scoreboard players set $hex_eater ca.var 0
 
 #Grab All Relevant Data from the projectile in question.
 scoreboard players set $attacker_find ca.var 0

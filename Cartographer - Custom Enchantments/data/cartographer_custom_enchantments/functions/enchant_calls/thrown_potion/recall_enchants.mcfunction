@@ -9,4 +9,8 @@ scoreboard players operation $concentration ca.var = $p_concentration ca.var
 scoreboard players operation $point_blank ca.var = $p_point_blank ca.var
 scoreboard players operation $sharpshot ca.var = $p_sharpshot ca.var
 
+scoreboard players operation $first_strike ca.var = $p_first_strike ca.var
+scoreboard players operation $hex_eater ca.var = $p_hex_eater ca.var
+scoreboard players operation $executioner ca.var = $p_executioner ca.var
+
 scoreboard players operation $ranged_damage ca.var = $p_ranged_damage ca.var

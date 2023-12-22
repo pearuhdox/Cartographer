@@ -95,7 +95,7 @@ execute if score $fire_aspect ca.gravity matches 5.. as @s run data modify entit
 
 
 #Executioner
-scoreboard players operation $exec ca.executioner = $executioner ca.gravity
+scoreboard players operation $lvl ca.executioner = $executioner ca.gravity
 execute if score $executioner ca.gravity matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 

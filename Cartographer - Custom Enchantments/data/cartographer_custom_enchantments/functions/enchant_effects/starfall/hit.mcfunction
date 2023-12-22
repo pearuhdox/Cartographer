@@ -43,7 +43,7 @@ execute if score $fire_aspect ca.starfall matches 4 as @s run data modify entity
 execute if score $fire_aspect ca.starfall matches 5.. as @s run data modify entity @s Fire set value 401
 
 #Executioner
-scoreboard players operation $exec ca.executioner = $executioner ca.starfall
+scoreboard players operation $lvl ca.executioner = $executioner ca.starfall
 execute if score $executioner ca.starfall matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 

@@ -51,7 +51,7 @@ execute if score $thorns ca.t_fire matches 4 as @s[type=#cartographer_custom_enc
 execute if score $thorns ca.t_fire matches 5.. as @s[type=#cartographer_custom_enchantments:zombies] run effect give @p[distance=..1.6,scores={ca.thorns=1..}] fire_resistance 26 0 true
 
 #Executioner
-scoreboard players operation $exec ca.executioner = $thorns ca.t_exec
+scoreboard players operation $lvl ca.executioner = $thorns ca.t_exec
 execute if score $thorns ca.t_exec matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 #Reset this stat

@@ -47,10 +47,10 @@ execute if score $rally_restore ca.rally matches 1.. run function cartographer_c
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.momentum=1..,ca.momentum_charge=2000..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/momentum/strike
 
 #First Strike
-execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.first_strike=1..},tag=can_first_strike,advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/first_strike/master
+execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.first_strike=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/first_strike/melee_call
 
-#Tempo Theft Player Effect
-#execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.tempo_theft matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true}}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/player
+#Tempo Theft - Melee Call specifically
+execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.tempo_theft matches 1.. if entity @s[advancements={entityid:player_hurt_entity={is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/tempo_theft/melee
 
 #Executioner - Happens last in chain for health reasons
 execute if score $cu_en_melee ca.enabler matches 1.. if entity @s[scores={ca.executioner=1..},advancements={entityid:player_hurt_entity={no_impact=false,is_projectile=false}}] run function cartographer_custom_enchantments:enchant_effects/executioner/master

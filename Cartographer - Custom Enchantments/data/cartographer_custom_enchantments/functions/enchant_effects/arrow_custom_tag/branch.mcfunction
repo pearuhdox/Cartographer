@@ -18,6 +18,10 @@ execute if score @s ca.concentration matches 1.. run tag @s add ca.concentration
 scoreboard players operation $point_blank ca.var = @s ca.point_blank
 scoreboard players operation $sharpshot ca.var = @s ca.sharpshot
 
+scoreboard players operation $first_strike ca.var = @s ca.first_strike
+
+scoreboard players operation $hex_eater ca.var = @s ca.hex_eater
+scoreboard players operation $executioner ca.var = @s ca.executioner
 
 execute if score $explosive ca.var matches 1.. on passengers run function cartographer_custom_statuses:player/custom_inflict/projectile_data
 execute if score $explosive ca.var matches 1.. store result score $damage ca.explosive run data get entity @s damage 10

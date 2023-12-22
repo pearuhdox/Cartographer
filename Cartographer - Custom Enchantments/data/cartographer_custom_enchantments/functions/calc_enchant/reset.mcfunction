@@ -35,7 +35,6 @@ scoreboard players set @s ca.point_blank 0
 scoreboard players set @s ca.regen 0
 scoreboard players set @s ca.first_strike 0
 scoreboard players set @s ca.lethality 0
-scoreboard players set @s ca.lightborn 0
 scoreboard players set @s ca.rally 0
 scoreboard players set @s ca.repeating 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.ricochet 0
@@ -71,8 +70,6 @@ scoreboard players set @s ca.steadfast_main 0
 scoreboard players set @s ca.concealed_main 0
 
 
-scoreboard players set @s ca.confidence 0
-scoreboard players set @s ca.desperation 0
 scoreboard players set @s ca.stalwart 0
 scoreboard players set @s ca.poise 0
 
@@ -155,13 +152,12 @@ scoreboard players set @s ca.off_duelist 0
 scoreboard players set @s ca.off_hunter 0
 scoreboard players set @s ca.off_smite 0
 scoreboard players set @s ca.off_singe 0
-scoreboard players set @s ca.off_frostbite 0
-scoreboard players set @s ca.off_exposing 0
-scoreboard players set @s ca.off_stunning 0
-scoreboard players set @s ca.off_infection 0
-scoreboard players set @s ca.off_electrocute 0
-scoreboard players set @s ca.off_bleeding 0
 scoreboard players set @s ca.off_fire_aspect 0
+
+scoreboard players set @s ca.off_hex_eater 0
+scoreboard players set @s ca.off_first_strike 0
+scoreboard players set @s ca.off_executioner 0
+scoreboard players set @s ca.off_cauterize 0
 
 scoreboard players set @s ca.curse_rusting 0
 
