@@ -124,6 +124,9 @@ execute store result score $temp ca.susu run data get storage ca.susu:enchants m
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.hex_eater += $temp ca.susu
 
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"impact"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_melee ca.enabler run scoreboard players operation @s ca.impact += $temp ca.susu
+
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"lethality"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_melee ca.enabler run scoreboard players operation @s ca.lethality += $temp ca.susu
@@ -217,8 +220,8 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.e
 execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"resupply"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_spawner ca.enabler run scoreboard players operation @s ca.resupply += $temp ca.susu
 
-execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"explosive"}].lvl
-execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.explosive += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"shrapnel"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.shrapnel += $temp ca.susu
 
 scoreboard players set $temp ca.susu 0
 execute if score $hold_recoil ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"recoil"}].lvl
@@ -294,7 +297,7 @@ execute if score $temp ca.susu matches 1.. run scoreboard players operation @s c
 
 
 scoreboard players set $temp ca.susu 0
-execute if score $hold_trident ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Enchantments[{id:"minecraft:smite"}].lvl
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.Enchantments[{id:"minecraft:smite"}].lvl
 execute if score $temp ca.susu matches 1.. run scoreboard players operation @s ca.smite += $temp ca.susu
 
 scoreboard players set $temp ca.susu 0

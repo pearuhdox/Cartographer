@@ -19,14 +19,13 @@ scoreboard players operation @s ca.first_strike = $cu_trident ca.first_strike
 scoreboard players operation @s ca.duelist += $cu_trident ca.off_duelist
 scoreboard players operation @s ca.hunter += $cu_trident ca.off_hunter
 scoreboard players operation @s ca.smite += $cu_trident ca.off_smite
-scoreboard players operation @s ca.singe += $cu_trident ca.off_singe
-scoreboard players operation @s ca.frostbite += $cu_trident ca.off_frostbite
 scoreboard players operation @s ca.fire_aspect += $cu_trident ca.off_fire_aspect
 scoreboard players operation @s ca.executioner += $cu_trident ca.off_executioner
 scoreboard players operation @s ca.cauterize += $cu_trident ca.off_cauterize
 
-scoreboard players operation @s ca.executioner += $cu_trident ca.off_first_strike
-scoreboard players operation @s ca.executioner += $cu_trident ca.off_hex_eater
+scoreboard players operation @s ca.first_strike += $cu_trident ca.off_first_strike
+scoreboard players operation @s ca.hex_eater += $cu_trident ca.off_hex_eater
+scoreboard players operation @s ca.tempo_theft += $cu_trident ca.off_tempo_theft
 
 
 scoreboard players operation @s ca.eruption = $cu_trident ca.eruption

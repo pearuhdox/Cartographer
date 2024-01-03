@@ -1,8 +1,15 @@
-scoreboard players operation $fire_aspect ca.thrusting = @s ca.fire_aspect
-scoreboard players operation $frostbite ca.thrusting = @s ca.frostbite
-scoreboard players operation $executioner ca.thrusting = @s ca.executioner
-scoreboard players operation $knockback ca.thrusting = @s ca.knockback
-scoreboard players operation $cauterize ca.thrusting = @s ca.cauterize
+scoreboard players operation $fire_aspect ca.weapon_var = @s ca.fire_aspect
+scoreboard players operation $knockback ca.weapon_var = @s ca.knockback
+
+scoreboard players operation $executioner ca.weapon_var = @s ca.executioner
+scoreboard players operation $first_strike ca.weapon_var = @s ca.first_strike
+scoreboard players operation $hex_eater ca.weapon_var = @s ca.hex_eater
+scoreboard players operation $tempo_theft ca.weapon_var = @s ca.tempo_theft
+scoreboard players operation $cauterize ca.weapon_var = @s ca.cauterize
+
+scoreboard players operation $duelist ca.weapon_var = @s ca.duelist
+scoreboard players operation $hunter ca.weapon_var = @s ca.hunter
+
 
 execute store result score $damage ca.thrusting run attribute @s minecraft:generic.attack_damage get
 scoreboard players operation $damage ca.thrusting *= $80 ca.CONSTANT

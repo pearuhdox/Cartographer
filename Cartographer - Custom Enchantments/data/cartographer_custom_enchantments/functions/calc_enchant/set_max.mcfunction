@@ -42,7 +42,7 @@ execute if score @s ca.slamming matches 5.. run scoreboard players set @s ca.sla
 execute if score @s ca.transfig matches 6.. run scoreboard players set @s ca.transfig 5
 execute if score @s ca.tempo_theft matches 11.. run scoreboard players set @s ca.tempo_theft 10
 execute if score @s vengeance matches 6.. run scoreboard players set @s vengeance 5
-execute if score @s ca.explosive matches 2.. run scoreboard players set @s ca.explosive 1
+execute if score @s ca.shrapnel matches 11.. run scoreboard players set @s ca.shrapnel 10
 execute if score @s ca.thorns matches 21.. run scoreboard players set @s ca.thorns 20
 execute if score @s ca.loyalty matches 11..99 run scoreboard players set @s ca.loyalty 10
 execute if score @s ca.loyalty matches 111.. run scoreboard players set @s ca.loyalty 110
@@ -94,12 +94,12 @@ execute if score @s ca.frost_walker matches 6.. run scoreboard players set @s ca
 execute if score @s ca.off_first_strike matches 11.. run scoreboard players set @s ca.off_first_strike 10
 execute if score @s ca.off_hex_eater matches 6.. run scoreboard players set @s ca.off_hex_eater 5
 execute if score @s ca.off_executioner matches 11.. run scoreboard players set @s ca.off_executioner 10
+execute if score @s ca.off_tempo_theft matches 11.. run scoreboard players set @s ca.off_tempo_theft 10
 
 
 execute if score @s ca.off_duelist matches 6.. run scoreboard players set @s ca.off_duelist 5
 execute if score @s ca.off_hunter matches 6.. run scoreboard players set @s ca.off_hunter 5
 execute if score @s ca.off_smite matches 6.. run scoreboard players set @s ca.off_smite 5
-execute if score @s ca.off_singe matches 6.. run scoreboard players set @s ca.off_singe 5
 execute if score @s ca.off_fire_aspect matches 4.. run scoreboard players set @s ca.off_fire_aspect 3
 execute if score @s ca.off_cauterize matches 11.. run scoreboard players set @s ca.off_cauterize 10
 

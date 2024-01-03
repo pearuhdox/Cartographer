@@ -1,18 +1,22 @@
 scoreboard players set $thorns ca.thorns 0
 scoreboard players set $thorns ca.t_fire 0
-scoreboard players set $thorns ca.t_frost 0
 scoreboard players set $thorns ca.t_exec 0
 scoreboard players set $thorns ca.t_knock 0
 scoreboard players set $thorns ca.cauterize 0
 
 scoreboard players operation $thorns ca.thorns = @s ca.thorns
-scoreboard players operation $thorns ca.t_fire = @s ca.t_fire
-scoreboard players operation $thorns ca.t_frost = @s ca.t_frost
 
-scoreboard players operation $thorns ca.t_knock = @s ca.t_knock
-scoreboard players operation $thorns ca.t_exec = @s ca.t_exec
+scoreboard players operation $fire_aspect ca.weapon_var = @s ca.t_fire
+scoreboard players operation $knockback ca.weapon_var = @s ca.t_knock
 
-scoreboard players operation $thorns ca.cauterize = @s ca.cauterize
+scoreboard players operation $executioner ca.weapon_var = @s ca.t_exec
+scoreboard players operation $first_strike ca.weapon_var = @s ca.t_first
+scoreboard players operation $hex_eater ca.weapon_var = @s ca.t_hex
+scoreboard players operation $tempo_theft ca.weapon_var = @s ca.t_tempo
+scoreboard players operation $cauterize ca.weapon_var = @s ca.t_cau
+
+scoreboard players operation $duelist ca.weapon_var = @s ca.t_duelist
+scoreboard players operation $hunter ca.weapon_var = @s ca.t_hunter
 
 function #minecraft:cartographer/events/enchantments/passive/thorns
 

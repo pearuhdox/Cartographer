@@ -111,7 +111,19 @@ execute if score @s ca.death_time matches 0 run function cartographer_custom_enc
 execute if score @s ca.death_time matches 2..20 run function cartographer_custom_enchantments:enchant_calls/when_player_respawns
 
 #Tempo Theft Effect - Players
-execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect_player
+execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/on_hit/tempo_theft/effect_player
+
+#Cauterize Check
+tag @s remove ca.has_cauterize
+execute if score @s ca.cauterize matches 1.. run tag @s add ca.has_cauterize
+execute if score @s ca.off_cauterize matches 1.. run tag @s add ca.has_cauterize
+execute if score @s ca.qu_cau matches 1.. run tag @s add ca.has_cauterize
+execute if score @s ca.sm_cau matches 1.. run tag @s add ca.has_cauterize
+execute if score @s ca.re_cau matches 1.. run tag @s add ca.has_cauterize
+execute if score @s ca.mo_cau matches 1.. run tag @s add ca.has_cauterize
+execute if score @s ca.g_cau matches 1.. run tag @s add ca.has_cauterize
+execute if score @s ca.t_cau matches 1.. run tag @s add ca.has_cauterize
+
 
 #Momentum Cancel
 execute unless score @s ca.momentum matches 1.. run scoreboard players set @s ca.momentum_charge 0
@@ -130,12 +142,16 @@ scoreboard players set @s ca.disengage_use 0
 execute unless score @s ca.disengage_time matches 0.. run scoreboard players set @s ca.disengage_time 0
 
 #Lethality
-execute if predicate bb:cant_crit if score @s ca.lethality matches 1.. run function cartographer_custom_enchantments:enchant_effects/lethality/reset
+execute if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/lethality/reset
 execute unless predicate bb:cant_crit if score @s ca.lethality matches 1.. run function cartographer_custom_enchantments:enchant_effects/lethality/apply
 
 #Unwieldly Curse
-execute if predicate bb:cant_crit if score @s ca.curse_unwieldly matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_unwieldly/reset
+execute if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/curse_unwieldly/reset
 execute unless predicate bb:cant_crit if score @s ca.curse_unwieldly matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_unwieldly/apply
+
+#Impact
+execute unless predicate bb:cant_crit unless predicate cartographer_custom_enchantments:is_sprinting run function cartographer_custom_enchantments:enchant_effects/impact/reset
+execute if predicate bb:cant_crit if predicate cartographer_custom_enchantments:is_sprinting if score @s ca.impact matches 1.. run function cartographer_custom_enchantments:enchant_effects/impact/apply
 
 #Infinity 3.0
 function cartographer_custom_enchantments:enchant_effects/infinity/player

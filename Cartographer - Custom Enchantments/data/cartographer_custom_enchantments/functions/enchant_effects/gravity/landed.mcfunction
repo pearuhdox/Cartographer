@@ -7,12 +7,19 @@ scoreboard players operation $gravity_dmg ca.gravity_fall /= $100 ca.CONSTANT
 scoreboard players remove $gravity_dmg ca.gravity_fall 2
 execute if score $gravity_dmg ca.gravity_fall matches ..-1 run scoreboard players set $gravity_dmg ca.gravity_fall 0
 
-scoreboard players operation $fire_aspect ca.gravity = @s ca.g_fire
-scoreboard players operation $frostbite ca.gravity = @s ca.g_frost
-scoreboard players operation $executioner ca.gravity = @s ca.g_exec
-scoreboard players operation $knockback ca.gravity = @s ca.g_knock
 
-scoreboard players operation $cauterize ca.gravity = @s ca.cauterize
+scoreboard players operation $fire_aspect ca.weapon_var = @s ca.g_fire
+scoreboard players operation $knockback ca.weapon_var = @s ca.g_knock
+
+scoreboard players operation $executioner ca.weapon_var = @s ca.g_exec
+scoreboard players operation $first_strike ca.weapon_var = @s ca.g_first
+scoreboard players operation $hex_eater ca.weapon_var = @s ca.g_hex
+scoreboard players operation $tempo_theft ca.weapon_var = @s ca.g_tempo
+scoreboard players operation $cauterize ca.weapon_var = @s ca.g_cau
+
+scoreboard players operation $duelist ca.weapon_var = @s ca.g_duelist
+scoreboard players operation $hunter ca.weapon_var = @s ca.g_hunter
+
 
 data modify storage cartographer_custom_enchantments:gravity data.effect set value {}
 data modify storage cartographer_custom_enchantments:gravity data.effect set from entity @s active_effects[{id:"minecraft:jump_boost"}].HiddenEffect

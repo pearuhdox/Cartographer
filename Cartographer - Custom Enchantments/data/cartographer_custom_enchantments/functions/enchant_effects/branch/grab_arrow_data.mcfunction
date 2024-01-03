@@ -48,6 +48,15 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.e
 scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
 
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"duelist"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.duelist += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"hunter"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.hunter += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
 scoreboard players set $temp ca.susu 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.Enchantments[{id:"minecraft:flame"}].lvl
@@ -64,6 +73,10 @@ execute store result score $temp ca.susu run data get storage ca.susu:enchants a
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.power += $temp ca.susu
 scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.Enchantments[{id:"minecraft:smite"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.smite += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
 
 scoreboard players set $temp ca.susu 0

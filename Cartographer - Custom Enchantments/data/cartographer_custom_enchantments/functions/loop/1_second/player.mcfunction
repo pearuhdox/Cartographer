@@ -12,10 +12,8 @@ execute if score @s ca.combat_timer matches ..0 if score @s ca.slamming_charges 
 execute if score @s ca.shielding matches 1.. run function cartographer_custom_enchantments:enchant_effects/shielding/clock
 execute unless score @s ca.shielding matches 1.. run function cartographer_custom_enchantments:enchant_effects/shielding/stopped_using
 
-tag @s[scores={ca.combat_timer=1}] add can_first_strike
-
-function cartographer_custom_enchantments:enchant_effects/confidence/reset
-function cartographer_custom_enchantments:enchant_effects/desperation/reset
+#function cartographer_custom_enchantments:enchant_effects/confidence/reset
+#function cartographer_custom_enchantments:enchant_effects/desperation/reset
 function cartographer_custom_enchantments:enchant_effects/stalwart/reset
 function cartographer_custom_enchantments:enchant_effects/poise/reset
 

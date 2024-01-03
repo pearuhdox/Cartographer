@@ -14,6 +14,10 @@ scoreboard players operation @s ca.evocation = $evocation ca.collapse
 scoreboard players operation @s ca.frostbite = $frostbite ca.collapse
 scoreboard players operation @s ca.knockback = $knockback ca.collapse
 scoreboard players operation @s ca.executioner = $executioner ca.collapse
+scoreboard players operation @s ca.hex_eater = $hex_eater ca.collapse
+scoreboard players operation @s ca.first_strike = $first_strike ca.collapse
+scoreboard players operation @s ca.tempo_theft = $tempo_theft ca.collapse
+scoreboard players operation @s ca.cauterize = $cauterize ca.collapse
 
 playsound minecraft:entity.elder_guardian.death player @a[distance=..12] ~ ~ ~ 0.5 2
 playsound minecraft:entity.shulker.open player @a[distance=..12] ~ ~ ~ 1.5 0.5

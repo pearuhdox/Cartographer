@@ -1,20 +1,28 @@
-scoreboard players operation $temp ca.var = @s ca.cauterize
-scoreboard players operation $temp ca.var += @s ca.frost
 scoreboard players operation $temp ca.var += @s ca.explosive
-scoreboard players operation $temp ca.var += @s ca.tempo_theft
 scoreboard players operation $temp ca.var += @s ca.flame
 scoreboard players operation $temp ca.var += @s ca.punch
 scoreboard players operation $temp ca.var += @s ca.concentration
 scoreboard players operation $temp ca.var += @s ca.point_blank
 scoreboard players operation $temp ca.var += @s ca.sharpshot
-scoreboard players operation $temp ca.var += @s ca.first_strike
-
-scoreboard players operation $temp ca.var += @s ca.hex_eater
-scoreboard players operation $temp ca.var += @s ca.executioner
 
 scoreboard players operation $temp ca.var += @s ca.attr_ranged
 scoreboard players operation $temp ca.var += @s ca.attr_ranged_perc
 scoreboard players operation $temp ca.var += @s ca.attr_ranged_speed
+
+
+
+scoreboard players operation $temp ca.var += @s ca.fire_aspect
+scoreboard players operation $temp ca.var += @s ca.knockback
+
+scoreboard players operation $temp ca.var += @s ca.executioner
+scoreboard players operation $temp ca.var += @s ca.first_strike
+scoreboard players operation $temp ca.var += @s ca.hex_eater
+scoreboard players operation $temp ca.var += @s ca.tempo_theft
+scoreboard players operation $temp ca.var += @s ca.cauterize
+
+scoreboard players operation $temp ca.var += @s ca.duelist
+scoreboard players operation $temp ca.var += @s ca.hunter
+scoreboard players operation $temp ca.var += @s ca.smite
 
 #if score $temp ca.var matches 1.. 
 

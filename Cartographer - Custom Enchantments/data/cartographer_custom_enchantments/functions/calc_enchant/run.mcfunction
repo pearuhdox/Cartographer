@@ -63,12 +63,12 @@ execute unless score $hold_armor_o ca.ench_var matches 1.. run function cartogra
 
 execute if score $gl_enc_wr ca.gamerule matches 1.. if score $hold_armor_m ca.ench_var matches 1.. run function cartographer_custom_enchantments:descriptions/write/main
 
-execute if score @s ca.thorns matches 1.. run function cartographer_custom_enchantments:calc_enchant/thorns
-execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:calc_enchant/gravity
-execute if score @s ca.starfall matches 1.. run function cartographer_custom_enchantments:calc_enchant/starfall
-execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:calc_enchant/quake
-execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:calc_enchant/momentum
-execute if score @s ca.repulsion matches 1.. run function cartographer_custom_enchantments:calc_enchant/repulsion
+execute if score @s ca.thorns matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/thorns/master
+execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/gravity/master
+execute if score @s ca.starfall matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/starfall/master
+execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/quake/master
+execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/momentum/master
+execute if score @s ca.repulsion matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/repulsion/master
 
 execute if score @s ca.hydraulic matches 1.. run function cartographer_custom_enchantments:calc_enchant/hydraulic
 

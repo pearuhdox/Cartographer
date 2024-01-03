@@ -2,10 +2,17 @@ scoreboard players set $quake_mob ca.ench_var 0
 
 scoreboard players operation $quake_lvl ca.quake = @s ca.quake
 
-scoreboard players operation $fire_aspect ca.quake = @s ca.qu_fire
-scoreboard players operation $frostbite ca.quake = @s ca.qu_frost
-scoreboard players operation $executioner ca.quake = @s ca.qu_exec
-scoreboard players operation $knockback ca.quake = @s ca.qu_knock
+scoreboard players operation $fire_aspect ca.weapon_var = @s ca.qu_fire
+scoreboard players operation $knockback ca.weapon_var = @s ca.qu_knock
+
+scoreboard players operation $executioner ca.weapon_var = @s ca.qu_exec
+scoreboard players operation $first_strike ca.weapon_var = @s ca.qu_first
+scoreboard players operation $hex_eater ca.weapon_var = @s ca.qu_hex
+scoreboard players operation $tempo_theft ca.weapon_var = @s ca.qu_tempo
+scoreboard players operation $cauterize ca.weapon_var = @s ca.qu_cau
+
+scoreboard players operation $duelist ca.weapon_var = @s ca.qu_duelist
+scoreboard players operation $hunter ca.weapon_var = @s ca.qu_hunter
 
 scoreboard players operation $cauterize ca.quake = @s ca.cauterize
 

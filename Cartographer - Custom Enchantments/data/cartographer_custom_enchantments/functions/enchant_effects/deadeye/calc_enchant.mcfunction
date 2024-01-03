@@ -8,9 +8,6 @@ scoreboard players operation $multishot ca.deadeye = @s ca.multishot
 scoreboard players operation $piercing ca.deadeye = @s ca.piercing
 scoreboard players operation $piercing_ct ca.deadeye = @s ca.piercing
 
-scoreboard players operation $frost ca.deadeye = @s ca.frost
-scoreboard players operation $tempo_theft ca.deadeye = @s ca.tempo_theft
-
 scoreboard players operation $sharpshot ca.deadeye = @s ca.sharpshot
 scoreboard players operation $point_blank ca.deadeye = @s ca.point_blank
 
@@ -23,3 +20,29 @@ scoreboard players operation $focus ca.deadeye = @s ca.focus
 scoreboard players operation $concentration ca.deadeye = @s ca.concentration
 scoreboard players operation $concentration_stacks ca.deadeye = @s ca.concentrate_stack
 
+
+
+scoreboard players operation $fire_aspect ca.weapon_var = @s ca.fire_aspect
+scoreboard players operation $knockback ca.weapon_var = @s ca.knockback
+
+scoreboard players operation $executioner ca.weapon_var = @s ca.executioner
+scoreboard players operation $first_strike ca.weapon_var = @s ca.first_strike
+scoreboard players operation $hex_eater ca.weapon_var = @s ca.hex_eater
+scoreboard players operation $tempo_theft ca.weapon_var = @s ca.tempo_theft
+scoreboard players operation $cauterize ca.weapon_var = @s ca.cauterize
+
+scoreboard players operation $duelist ca.weapon_var = @s ca.duelist
+scoreboard players operation $hunter ca.weapon_var = @s ca.hunter
+
+
+scoreboard players operation $fire_aspect ca.weapon_var += @s ca.off_fire_aspect
+scoreboard players operation $knockback ca.weapon_var += @s ca.off_knockback
+
+scoreboard players operation $executioner ca.weapon_var += @s ca.off_executioner
+scoreboard players operation $first_strike ca.weapon_var += @s ca.off_first_strike
+scoreboard players operation $hex_eater ca.weapon_var += @s ca.off_hex_eater
+scoreboard players operation $tempo_theft ca.weapon_var += @s ca.off_tempo_theft
+scoreboard players operation $cauterize ca.weapon_var += @s ca.off_cauterize
+
+scoreboard players operation $duelist ca.weapon_var += @s ca.off_duelist
+scoreboard players operation $hunter ca.weapon_var += @s ca.off_hunter

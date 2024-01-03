@@ -35,6 +35,7 @@ scoreboard players set @s ca.point_blank 0
 scoreboard players set @s ca.regen 0
 scoreboard players set @s ca.first_strike 0
 scoreboard players set @s ca.lethality 0
+scoreboard players set @s ca.impact 0
 scoreboard players set @s ca.rally 0
 scoreboard players set @s ca.repeating 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.ricochet 0
@@ -49,7 +50,7 @@ scoreboard players set @s ca.spurs 0
 scoreboard players set @s ca.thrusting 0
 scoreboard players set @s ca.slamming 0
 scoreboard players set @s ca.tempo_theft 0
-scoreboard players set @s ca.explosive 0
+scoreboard players set @s ca.shrapnel 0
 scoreboard players set @s ca.thorns 0
 scoreboard players set @s ca.multishot 0
 scoreboard players set @s ca.piercing 0
@@ -108,40 +109,69 @@ scoreboard players set @s ca.curse_two_hnd 0
 scoreboard players set @s ca.curse_regret 0
 scoreboard players set @s ca.curse_unwieldly 0
 
-scoreboard players set @s ca.t_fire 0
-scoreboard players set @s ca.t_frost 0
-scoreboard players set @s ca.t_knock 0
-scoreboard players set @s ca.t_exec 0
-
-scoreboard players set @s ca.g_fire 0
-scoreboard players set @s ca.g_frost 0
-scoreboard players set @s ca.g_knock 0
-scoreboard players set @s ca.g_exec 0
-
 scoreboard players set @s ca.hy_fire 0
-scoreboard players set @s ca.hy_frost 0
 scoreboard players set @s ca.hy_knock 0
 scoreboard players set @s ca.hy_exec 0
+
+scoreboard players set @s ca.t_fire 0
+scoreboard players set @s ca.t_knock 0
+scoreboard players set @s ca.t_exec 0
+scoreboard players set @s ca.t_first 0
+scoreboard players set @s ca.t_tempo 0
+scoreboard players set @s ca.t_hex 0
+scoreboard players set @s ca.t_cau 0
+scoreboard players set @s ca.t_hunter 0
+scoreboard players set @s ca.t_duelist 0
+
+scoreboard players set @s ca.g_fire 0
+scoreboard players set @s ca.g_knock 0
+scoreboard players set @s ca.g_exec 0
+scoreboard players set @s ca.g_first 0
+scoreboard players set @s ca.g_tempo 0
+scoreboard players set @s ca.g_hex 0
+scoreboard players set @s ca.g_cau 0
+scoreboard players set @s ca.g_hunter 0
+scoreboard players set @s ca.g_duelist 0
 
 scoreboard players set @s ca.mo_fire 0
 scoreboard players set @s ca.mo_knock 0
 scoreboard players set @s ca.mo_exec 0
-scoreboard players set @s ca.mo_frost 0
+scoreboard players set @s ca.mo_first 0
+scoreboard players set @s ca.mo_tempo 0
+scoreboard players set @s ca.mo_hex 0
+scoreboard players set @s ca.mo_cau 0
+scoreboard players set @s ca.mo_hunter 0
+scoreboard players set @s ca.mo_duelist 0
 
 scoreboard players set @s ca.qu_fire 0
-scoreboard players set @s ca.qu_frost 0
 scoreboard players set @s ca.qu_knock 0
 scoreboard players set @s ca.qu_exec 0
+scoreboard players set @s ca.qu_first 0
+scoreboard players set @s ca.qu_tempo 0
+scoreboard players set @s ca.qu_hex 0
+scoreboard players set @s ca.qu_cau 0
+scoreboard players set @s ca.qu_hunter 0
+scoreboard players set @s ca.qu_duelist 0
 
 scoreboard players set @s ca.sm_fire 0
-scoreboard players set @s ca.sm_frost 0
 scoreboard players set @s ca.sm_knock 0
 scoreboard players set @s ca.sm_exec 0
+scoreboard players set @s ca.sm_first 0
+scoreboard players set @s ca.sm_tempo 0
+scoreboard players set @s ca.sm_hex 0
+scoreboard players set @s ca.sm_cau 0
+scoreboard players set @s ca.sm_hunter 0
+scoreboard players set @s ca.sm_duelist 0
 
 scoreboard players set @s ca.re_fire 0
-scoreboard players set @s ca.re_frost 0
 scoreboard players set @s ca.re_knock 0
 scoreboard players set @s ca.re_exec 0
+scoreboard players set @s ca.re_first 0
+scoreboard players set @s ca.re_tempo 0
+scoreboard players set @s ca.re_hex 0
+scoreboard players set @s ca.re_cau 0
+scoreboard players set @s ca.re_hunter 0
+scoreboard players set @s ca.re_duelist 0
 
 scoreboard players set @s ca.s_adren 0
 scoreboard players set @s ca.s_energ 0
@@ -151,13 +181,13 @@ scoreboard players set @s ca.s_con 0
 scoreboard players set @s ca.off_duelist 0
 scoreboard players set @s ca.off_hunter 0
 scoreboard players set @s ca.off_smite 0
-scoreboard players set @s ca.off_singe 0
 scoreboard players set @s ca.off_fire_aspect 0
 
 scoreboard players set @s ca.off_hex_eater 0
 scoreboard players set @s ca.off_first_strike 0
 scoreboard players set @s ca.off_executioner 0
 scoreboard players set @s ca.off_cauterize 0
+scoreboard players set @s ca.off_tempo_theft 0
 
 scoreboard players set @s ca.curse_rusting 0
 

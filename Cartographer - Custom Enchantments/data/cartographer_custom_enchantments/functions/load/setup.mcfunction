@@ -53,6 +53,7 @@ scoreboard objectives add ca.concentration dummy
 scoreboard objectives add ca.point_blank dummy
 scoreboard objectives add ca.first_strike dummy
 scoreboard objectives add ca.lethality dummy
+scoreboard objectives add ca.impact dummy
 scoreboard objectives add ca.rally dummy
 scoreboard objectives add ca.repeating dummy
 scoreboard objectives add ca.regen dummy
@@ -69,7 +70,7 @@ scoreboard objectives add ca.thrusting dummy
 scoreboard objectives add ca.slamming dummy
 scoreboard objectives add ca.transfig dummy
 scoreboard objectives add ca.tempo_theft dummy
-scoreboard objectives add ca.explosive dummy
+scoreboard objectives add ca.shrapnel dummy
 scoreboard objectives add ca.thorns dummy
 scoreboard objectives add ca.respiration dummy
 scoreboard objectives add ca.recoil dummy
@@ -182,12 +183,12 @@ scoreboard objectives add ca.efficiency dummy
 scoreboard objectives add ca.off_duelist dummy
 scoreboard objectives add ca.off_hunter dummy
 scoreboard objectives add ca.off_smite dummy
-scoreboard objectives add ca.off_singe dummy
 scoreboard objectives add ca.off_fire_aspect dummy
 scoreboard objectives add ca.off_first_strike dummy
 scoreboard objectives add ca.off_hex_eater dummy
 scoreboard objectives add ca.off_executioner dummy
 scoreboard objectives add ca.off_cauterize dummy
+scoreboard objectives add ca.off_tempo_theft dummy
 
 
 scoreboard objectives add ca.wavedash dummy
@@ -207,6 +208,9 @@ scoreboard objectives add ca.g_hex dummy
 scoreboard objectives add ca.g_first dummy
 scoreboard objectives add ca.g_cau dummy
 scoreboard objectives add ca.g_tempo dummy
+scoreboard objectives add ca.g_duelist dummy
+scoreboard objectives add ca.g_hunter dummy
+scoreboard objectives add ca.g_smite dummy
 
 scoreboard objectives add ca.mo_fire dummy
 scoreboard objectives add ca.mo_knock dummy
@@ -215,6 +219,9 @@ scoreboard objectives add ca.mo_hex dummy
 scoreboard objectives add ca.mo_first dummy
 scoreboard objectives add ca.mo_cau dummy
 scoreboard objectives add ca.mo_tempo dummy
+scoreboard objectives add ca.mo_duelist dummy
+scoreboard objectives add ca.mo_hunter dummy
+scoreboard objectives add ca.mo_smite dummy
 
 scoreboard objectives add ca.qu_fire dummy
 scoreboard objectives add ca.qu_knock dummy
@@ -223,6 +230,9 @@ scoreboard objectives add ca.qu_hex dummy
 scoreboard objectives add ca.qu_first dummy
 scoreboard objectives add ca.qu_cau dummy
 scoreboard objectives add ca.qu_tempo dummy
+scoreboard objectives add ca.qu_duelist dummy
+scoreboard objectives add ca.qu_hunter dummy
+scoreboard objectives add ca.qu_smite dummy
 
 scoreboard objectives add ca.sm_fire dummy
 scoreboard objectives add ca.sm_knock dummy
@@ -231,6 +241,9 @@ scoreboard objectives add ca.sm_hex dummy
 scoreboard objectives add ca.sm_first dummy
 scoreboard objectives add ca.sm_cau dummy
 scoreboard objectives add ca.sm_tempo dummy
+scoreboard objectives add ca.sm_duelist dummy
+scoreboard objectives add ca.sm_hunter dummy
+scoreboard objectives add ca.sm_smite dummy
 
 scoreboard objectives add ca.t_fire dummy
 scoreboard objectives add ca.t_knock dummy
@@ -239,6 +252,9 @@ scoreboard objectives add ca.t_hex dummy
 scoreboard objectives add ca.t_first dummy
 scoreboard objectives add ca.t_cau dummy
 scoreboard objectives add ca.t_tempo dummy
+scoreboard objectives add ca.t_duelist dummy
+scoreboard objectives add ca.t_hunter dummy
+scoreboard objectives add ca.t_smite dummy
 
 scoreboard objectives add ca.re_fire dummy
 scoreboard objectives add ca.re_frost dummy
@@ -248,6 +264,9 @@ scoreboard objectives add ca.re_hex dummy
 scoreboard objectives add ca.re_first dummy
 scoreboard objectives add ca.re_cau dummy
 scoreboard objectives add ca.re_tempo dummy
+scoreboard objectives add ca.re_duelist dummy
+scoreboard objectives add ca.re_hunter dummy
+scoreboard objectives add ca.re_smite dummy
 
 
 scoreboard objectives add ca.s_adren dummy

@@ -2,18 +2,6 @@ scoreboard players set $gravity_mob ca.ench_var 1
 
 scoreboard players set @s co_send -4
 scoreboard players set @s co_y 4
-
-execute if entity @s[type=silverfish] run scoreboard players set @s co_y 5
-execute if entity @s[type=endermite] run scoreboard players set @s co_y 5
-
-#TODO: KBR SCALING
-
-execute unless entity @s[tag=ca.boss] if score $knockback ca.gravity matches 1 run scoreboard players set @s co_send -7
-execute unless entity @s[tag=ca.boss] if score $knockback ca.gravity matches 2 run scoreboard players set @s co_send -11
-execute unless entity @s[tag=ca.boss] if score $knockback ca.gravity matches 3 run scoreboard players set @s co_send -17
-execute unless entity @s[tag=ca.boss] if score $knockback ca.gravity matches 4 run scoreboard players set @s co_send -22
-execute unless entity @s[tag=ca.boss] if score $knockback ca.gravity matches 5.. run scoreboard players set @s co_send -30
-
 function motion:motion/push
 
 #Statuses!
@@ -83,20 +71,8 @@ execute if score $mob_dmg ca.gravity_fall matches 49 run damage @s 24.5 cartogra
 execute if score $mob_dmg ca.gravity_fall matches 50.. run damage @s 25 cartographer_custom_enchantments:enchant_damage_bypass by @p
 
 
-#Run Cauterize if it exists
-execute if score $cauterize ca.gravity matches 1 as @s run function cartographer_custom_enchantments:enchant_effects/cauterize/other
-
-#Run Fire Aspect (after Cauterize)
-execute if score $fire_aspect ca.gravity matches 1 as @s run data modify entity @s Fire set value 81
-execute if score $fire_aspect ca.gravity matches 2 as @s run data modify entity @s Fire set value 161
-execute if score $fire_aspect ca.gravity matches 3 as @s run data modify entity @s Fire set value 241
-execute if score $fire_aspect ca.gravity matches 4 as @s run data modify entity @s Fire set value 321
-execute if score $fire_aspect ca.gravity matches 5.. as @s run data modify entity @s Fire set value 401
-
-
-#Executioner
-scoreboard players operation $lvl ca.executioner = $executioner ca.gravity
-execute if score $executioner ca.gravity matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
+#Run On Hit Enchantments
+function cartographer_custom_enchantments:enchant_effects/on_hit/melee_master
 
 
 function #minecraft:cartographer/events/enchants_mob_hit/passive/gravity

@@ -1,19 +1,10 @@
-execute if score $frost ca.deadeye matches 1.. run scoreboard players set @s ca.frost_time 80
-execute if score $frost ca.deadeye matches 1.. run scoreboard players set @s ca.frost_tier 2
-
 execute if score $flame ca.deadeye matches 1.. run data modify entity @s Fire set value 81
-
-execute if score $flame ca.deadeye matches 1.. run function cartographer_custom_enchantments:enchant_effects/flame/master
-execute if score $frost ca.deadeye matches 1.. run function cartographer_custom_enchantments:enchant_effects/frost/master
 
 scoreboard players operation $punch ca.var = $punch ca.deadeye
 execute if score $punch ca.deadeye matches 1.. run function cartographer_custom_enchantments:enchant_effects/punch/effect
 
-scoreboard players operation $tempo_theft ca.var = $tempo_theft ca.deadeye
-execute if score $tempo_theft ca.deadeye matches 1.. run function cartographer_custom_enchantments:enchant_effects/tempo_theft/mob
 
 scoreboard players set @s ca.damage_queue 0
-
 scoreboard players set $ranged_damage ca.var 0
 scoreboard players operation $ranged_damage ca.var = $attr_ranged ca.deadeye
 
@@ -36,6 +27,13 @@ function cartographer_custom_statuses:apply_status/apply/set_statuses
 scoreboard players set $deadeye_hit ca.deadeye 1
 
 scoreboard players operation @s ca.damage_queue += $deadeye ca.damage_queue
+
+#Save For Executioner
+scoreboard players set $exec_dmg bbl.storage 0
+scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
+
+#Run On Hit Enchantments
+function cartographer_custom_enchantments:enchant_effects/on_hit/ranged_master
 
 function cartographer_custom_enchantments:helper/damage/macro_setup
 function cartographer_custom_enchantments:enchant_effects/deadeye/enchant_damage_bypass with storage cartographer:macro.custom_enchantments

@@ -5,7 +5,13 @@ execute store result score $sapper ca.collapse run data get entity @s item.tag.C
 
 execute store result score $fire_aspect ca.collapse run data get entity @s item.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
 execute store result score $knockback ca.collapse run data get entity @s item.tag.Enchantments[{id:"minecraft:knockback"}].lvl
-execute store result score $frostbite ca.collapse run data get entity @s item.tag.CustomEnchantments[{id:"frostbite"}].lvl
+
+
+execute store result score $executioner ca.collapse run data get entity @s item.tag.CustomEnchantments[{id:"executioner"}].lvl
+execute store result score $first_strike ca.collapse run data get entity @s item.tag.CustomEnchantments[{id:"first_strike"}].lvl
+execute store result score $hex_eater ca.collapse run data get entity @s item.tag.CustomEnchantments[{id:"hex_eater"}].lvl
+execute store result score $tempo_theft ca.collapse run data get entity @s item.tag.CustomEnchantments[{id:"tempo_theft"}].lvl
+execute store result score $cauterize ca.collapse run data get entity @s item.tag.CustomEnchantments[{id:"cauterize"}].lvl
 
 
 

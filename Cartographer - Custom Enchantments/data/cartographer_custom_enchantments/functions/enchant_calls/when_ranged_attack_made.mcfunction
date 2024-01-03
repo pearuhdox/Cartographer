@@ -76,7 +76,7 @@ execute if score $concentration ca.var matches 1.. at @s run function cartograph
 execute if score @s ca.resourceful matches 1.. run function cartographer_custom_enchantments:enchant_effects/resourceful/chance
 
 #Grab Explosive Shot Visual
-execute if score $explosive ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/explosive/visual
+execute if score $shrapnel ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/explosive/visual
 
 scoreboard players set @s ca.recently_fired_weapon 80
 
