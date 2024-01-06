@@ -3,6 +3,10 @@ data modify storage ca.susu:enchants main set from entity @s SelectedItem
 
 scoreboard players set $temp ca.susu 0
 
+execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.AllowFastAttack
+execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.allow_fast_attack += $temp ca.susu
+execute if score @s ca.allow_fast_attack matches 1.. store result score @s ca.attack_speed run attribute @s minecraft:generic.attack_speed get 10
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants main.tag.CustomEnchantments[{id:"adrenaline"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.adrenaline += $temp ca.susu
 execute if score $temp ca.susu matches 1.. store result score $cu_en_kill ca.enabler run scoreboard players operation @s ca.adrenaline_main += $temp ca.susu

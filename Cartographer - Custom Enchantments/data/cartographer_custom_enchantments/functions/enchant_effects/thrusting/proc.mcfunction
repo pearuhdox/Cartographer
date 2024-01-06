@@ -1,3 +1,16 @@
+scoreboard players set $fire_aspect ca.weapon_var 0
+scoreboard players set $knockback ca.weapon_var 0
+
+scoreboard players set $executioner ca.weapon_var 0
+scoreboard players set $first_strike ca.weapon_var 0
+scoreboard players set $hex_eater ca.weapon_var 0
+scoreboard players set $tempo_theft ca.weapon_var 0
+scoreboard players set $cauterize ca.weapon_var 0
+
+scoreboard players set $duelist ca.weapon_var 0
+scoreboard players set $hunter ca.weapon_var 0
+scoreboard players set $smite ca.weapon_var 0
+
 scoreboard players operation $fire_aspect ca.weapon_var = @s ca.fire_aspect
 scoreboard players operation $knockback ca.weapon_var = @s ca.knockback
 
@@ -9,6 +22,7 @@ scoreboard players operation $cauterize ca.weapon_var = @s ca.cauterize
 
 scoreboard players operation $duelist ca.weapon_var = @s ca.duelist
 scoreboard players operation $hunter ca.weapon_var = @s ca.hunter
+scoreboard players operation $smite ca.weapon_var = @s ca.smite
 
 
 execute store result score $damage ca.thrusting run attribute @s minecraft:generic.attack_damage get
@@ -23,6 +37,7 @@ function cartographer_custom_statuses:apply_status/save/mainhand
 scoreboard players set @s ca.raycast 9
 execute if score @s ca.sprint matches 1.. run scoreboard players set @s ca.raycast 15
 
+scoreboard players set $success ca.thrusting 0
 execute anchored eyes positioned ^ ^-0.4 ^1 rotated ~ 0 run function cartographer_custom_enchantments:enchant_effects/thrusting/raycast
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
@@ -30,4 +45,4 @@ execute if score $do_linger ca.status_var matches 1.. run scoreboard players set
 #Resets
 execute as @e[type=#bb:hostile,tag=thrusted,distance=..15] at @s run tag @s remove thrusted
 
-function cartographer_custom_enchantments:enchant_effects/thrusting/consume
+execute if score $success ca.thrusting matches 1.. run function cartographer_custom_enchantments:enchant_effects/thrusting/consume

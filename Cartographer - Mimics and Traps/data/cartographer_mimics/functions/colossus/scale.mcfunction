@@ -1,15 +1,18 @@
-execute if entity @a[distance=..10,scores={helper_power=8..11}] run attribute @s minecraft:generic.attack_damage base set 2
-execute if entity @a[distance=..10,scores={helper_power=8..11}] run attribute @s minecraft:generic.armor base set 5
-execute if entity @a[distance=..10,scores={helper_power=8..11}] run attribute @s minecraft:generic.knockback_resistance base set 0.15
+scoreboard players set $health ca.trap_tier 20
 
-execute if entity @a[distance=..10,scores={helper_power=12..15}] run attribute @s minecraft:generic.attack_damage base set 4
-execute if entity @a[distance=..10,scores={helper_power=12..15}] run attribute @s minecraft:generic.armor base set 10
-execute if entity @a[distance=..10,scores={helper_power=12..15}] run attribute @s minecraft:generic.knockback_resistance base set 0.2
+scoreboard players set $damage ca.trap_tier 2
 
-execute if entity @a[distance=..10,scores={helper_power=16..19}] run attribute @s minecraft:generic.attack_damage base set 6
-execute if entity @a[distance=..10,scores={helper_power=16..19}] run attribute @s minecraft:generic.armor base set 15
-execute if entity @a[distance=..10,scores={helper_power=16..19}] run attribute @s minecraft:generic.knockback_resistance base set 0.35
+scoreboard players operation $tier ca.trap_tier = @p ca.trap_tier
 
-execute if entity @a[distance=..10,scores={helper_power=20..}] run attribute @s minecraft:generic.attack_damage base set 8
-execute if entity @a[distance=..10,scores={helper_power=20..}] run attribute @s minecraft:generic.armor base set 20
-execute if entity @a[distance=..10,scores={helper_power=20..}] run attribute @s minecraft:generic.knockback_resistance base set 0.5
+
+scoreboard players operation $health ca.trap_tier *= $tier ca.trap_tier
+scoreboard players operation $damage ca.trap_tier *= $tier ca.trap_tier
+
+scoreboard players operation $health_total ca.trap_tier += $health ca.trap_tier
+
+
+execute store result storage cartographer:macro.mimics_and_traps damage int 1 run scoreboard players get $damage ca.trap_tier
+execute store result storage cartographer:macro.mimics_and_traps health int 1 run scoreboard players get $health ca.trap_tier
+execute store result storage cartographer:macro.mimics_and_traps health_total int 1 run scoreboard players get $health_total ca.trap_tier
+
+function cartographer_mimics:colossus/scale_macro with storage cartographer:macro.mimics_and_traps

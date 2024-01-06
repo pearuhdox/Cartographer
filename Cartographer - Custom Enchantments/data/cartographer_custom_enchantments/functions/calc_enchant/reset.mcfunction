@@ -271,6 +271,9 @@ tag @s remove ca.unb_feet
 
 scoreboard players set @s ca.ignore_arrow_ench 0
 
+scoreboard players set @s ca.allow_fast_attack 0
+scoreboard players set @s ca.attack_speed 0
+
 #Turn features dynamically off by default. We will turn them back on as we find we need them.
 #scoreboard players set $cu_en_melee ca.enabler 0
 #scoreboard players set $cu_en_ranged ca.enabler 0

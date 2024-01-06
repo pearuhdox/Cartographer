@@ -1,4 +1,6 @@
 #Setup all necessary helper scoreboards
+scoreboard objectives add ca.trap_tier dummy
+
 
 scoreboard objectives add helper_open_trap minecraft.custom:minecraft.trigger_trapped_chest
 scoreboard objectives add mimic_health dummy
@@ -28,8 +30,8 @@ bossbar set cartographer:mimic max 120
 bossbar remove cartographer:colossus
 bossbar add cartographer:colossus {"text":"Cage Colossus","color":"red","bold":true}
 bossbar set cartographer:colossus color red
-bossbar set cartographer:colossus style notched_10
-bossbar set cartographer:colossus max 200
+bossbar set cartographer:colossus style notched_6
+bossbar set cartographer:colossus max 120
 
 #Setup LoE data space
 function cartographer_mimics:load/integration/active/clear

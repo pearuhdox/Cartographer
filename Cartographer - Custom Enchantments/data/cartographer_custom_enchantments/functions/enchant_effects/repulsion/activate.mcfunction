@@ -1,3 +1,16 @@
+scoreboard players set $fire_aspect ca.weapon_var 0
+scoreboard players set $knockback ca.weapon_var 0
+
+scoreboard players set $executioner ca.weapon_var 0
+scoreboard players set $first_strike ca.weapon_var 0
+scoreboard players set $hex_eater ca.weapon_var 0
+scoreboard players set $tempo_theft ca.weapon_var 0
+scoreboard players set $cauterize ca.weapon_var 0
+
+scoreboard players set $duelist ca.weapon_var 0
+scoreboard players set $hunter ca.weapon_var 0
+scoreboard players set $smite ca.weapon_var 0
+
 scoreboard players set $repulsion_mob ca.ench_var 0
 
 scoreboard players operation $repulsion_lvl ca.repulsion = @s ca.repulsion
@@ -13,6 +26,7 @@ scoreboard players operation $cauterize ca.weapon_var = @s ca.re_cau
 
 scoreboard players operation $duelist ca.weapon_var = @s ca.re_duelist
 scoreboard players operation $hunter ca.weapon_var = @s ca.re_hunter
+scoreboard players operation $smite ca.weapon_var = @s ca.re_smite
 
 execute if entity @s[tag=ca.ae_main] if entity @s[tag=ca.ce_repulsion_main] run tag @s add ca.check_ae_main
 execute if entity @s[tag=ca.ae_offh] if entity @s[tag=ca.ce_repulsion_offh] run tag @s add ca.check_ae_offh

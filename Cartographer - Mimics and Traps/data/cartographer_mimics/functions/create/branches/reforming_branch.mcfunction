@@ -1,0 +1,20 @@
+tag @s add ca.trap_reforming
+tag @s add ca.trap_spawn_type
+
+scoreboard players operation @s ca.wave_count = $count ca.wave_count
+
+data modify entity @s transformation set value [0.4861f,0.0000f,-0.4861f,0.0000f,-0.0000f,0.6875f,0.0000f,0.14125f,0.4861f,0.0000f,0.4861f,-0.5000f,0.0000f,0.0000f,0.0000f,1.0000f]
+data modify entity @s block_state.Name set value "minecraft:light_gray_stained_glass"
+
+summon text_display ~ ~ ~ {billboard:"vertical",alignment:"center",Tags:["ca.reform_counter"],brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,1.1f,0f],scale:[0.75f,0.75f,0.75f]},background:0}
+
+summon minecraft:interaction ~ ~ ~ {Tags:["ca.trap_counter"],width:1.01,height:1.00}
+
+ride @e[type=interaction,limit=1,sort=nearest,distance=..1] mount @s
+
+ride @e[type=text_display,tag=ca.reform_counter,limit=1,sort=nearest,distance=..1] mount @s
+
+
+
+
+execute as @e[type=block_display,limit=5,sort=nearest,distance=..1,tag=ca.trap_spawner_side] at @s run ride @s mount @e[type=block_display,limit=1,sort=nearest,tag=ca.trap_spawner,tag=ca.trap_reforming]

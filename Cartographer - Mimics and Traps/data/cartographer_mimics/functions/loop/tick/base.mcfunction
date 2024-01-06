@@ -9,3 +9,6 @@ scoreboard players set $colossus_alive setup 0
 
 scoreboard players add $heal_time ca.mimic_var 1
 execute if score $heal_time ca.mimic_var matches 121.. run scoreboard players set $heal_time ca.mimic_var 1
+
+
+execute unless score $armor_trap_tier ca.gamerule matches 0.. run scoreboard players set $armor_trap_tier ca.gamerule 1

@@ -3,6 +3,9 @@
 scoreboard objectives add ca.auto_charge_count dummy
 scoreboard objectives add ca.auto_charge_req dummy
 
+scoreboard objectives add ca.allow_fast_attack dummy
+scoreboard objectives add ca.attack_speed dummy
+
 scoreboard objectives add ca.adrenaline dummy
 scoreboard objectives add ca.agility dummy
 scoreboard objectives add ca.aquadynamic dummy

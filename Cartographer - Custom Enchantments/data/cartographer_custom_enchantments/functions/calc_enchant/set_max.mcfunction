@@ -42,7 +42,7 @@ execute if score @s ca.slamming matches 5.. run scoreboard players set @s ca.sla
 execute if score @s ca.transfig matches 6.. run scoreboard players set @s ca.transfig 5
 execute if score @s ca.tempo_theft matches 11.. run scoreboard players set @s ca.tempo_theft 10
 execute if score @s vengeance matches 6.. run scoreboard players set @s vengeance 5
-execute if score @s ca.shrapnel matches 11.. run scoreboard players set @s ca.shrapnel 10
+execute if score @s ca.shrapnel matches 9.. run scoreboard players set @s ca.shrapnel 8
 execute if score @s ca.thorns matches 21.. run scoreboard players set @s ca.thorns 20
 execute if score @s ca.loyalty matches 11..99 run scoreboard players set @s ca.loyalty 10
 execute if score @s ca.loyalty matches 111.. run scoreboard players set @s ca.loyalty 110

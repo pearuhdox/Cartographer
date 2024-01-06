@@ -12,10 +12,8 @@ scoreboard players operation @s ca.concentration = $concentration ca.var
 
 scoreboard players operation @s ca.shrapnel = $shrapnel ca.var
 
-execute if score @s ca.explosive matches 1.. store result score @s ca.vol_dmg run data get entity @s damage 10
-execute if score @s ca.explosive matches 1.. run data merge entity @s {damage:-1.0d}
-execute if score @s ca.explosive matches 1.. if score @s ca.flame matches 1.. run tag @s add vol_flame
-
+scoreboard players operation @s ca.piercing = $piercing ca.var
+scoreboard players operation @s ca.multishot = $multishot ca.var
 
 scoreboard players operation @s ca.fire_aspect = $fire_aspect ca.var
 scoreboard players operation @s ca.knockback = $knockback ca.var

@@ -50,7 +50,7 @@ execute unless score $attr_ranged_perc ca.var matches 100 if score $attr_ranged 
 execute as @s[scores={ca.deadeye=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/deadeye/master
 
 #Piercing
-execute if score $piercing ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/piercing/player
+execute if score @s ca.piercing matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/piercing/player
 
 #Repeating Trigger
 execute as @s[scores={ca.repeating=1..7,ca.fire_cbow=1..},nbt={SelectedItem:{tag:{Charged:0b}}}] at @s run scoreboard players set @s ca.rpt_cdl 3

@@ -1,3 +1,16 @@
+scoreboard players set $fire_aspect ca.weapon_var 0
+scoreboard players set $knockback ca.weapon_var 0
+
+scoreboard players set $executioner ca.weapon_var 0
+scoreboard players set $first_strike ca.weapon_var 0
+scoreboard players set $hex_eater ca.weapon_var 0
+scoreboard players set $tempo_theft ca.weapon_var 0
+scoreboard players set $cauterize ca.weapon_var 0
+
+scoreboard players set $duelist ca.weapon_var 0
+scoreboard players set $hunter ca.weapon_var 0
+scoreboard players set $smite ca.weapon_var 0
+
 scoreboard players set $starfall_mob ca.ench_var 0
 
 scoreboard players operation $starfall_lvl ca.starfall = @s ca.starfall
@@ -13,6 +26,7 @@ scoreboard players operation $cauterize ca.weapon_var = @s ca.sm_cau
 
 scoreboard players operation $duelist ca.weapon_var = @s ca.sm_duelist
 scoreboard players operation $hunter ca.weapon_var = @s ca.sm_hunter
+scoreboard players operation $smite ca.weapon_var = @s ca.sm_hunter
 
 execute if entity @s[tag=ca.ae_main] if entity @s[tag=ca.ce_starfall_main] run tag @s add ca.check_ae_main
 execute if entity @s[tag=ca.ae_offh] if entity @s[tag=ca.ce_starfall_offh] run tag @s add ca.check_ae_offh

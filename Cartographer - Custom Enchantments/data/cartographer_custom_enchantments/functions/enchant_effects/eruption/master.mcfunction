@@ -1,3 +1,16 @@
+scoreboard players set $fire_aspect ca.weapon_var 0
+scoreboard players set $knockback ca.weapon_var 0
+
+scoreboard players set $executioner ca.weapon_var 0
+scoreboard players set $first_strike ca.weapon_var 0
+scoreboard players set $hex_eater ca.weapon_var 0
+scoreboard players set $tempo_theft ca.weapon_var 0
+scoreboard players set $cauterize ca.weapon_var 0
+
+scoreboard players set $duelist ca.weapon_var 0
+scoreboard players set $hunter ca.weapon_var 0
+scoreboard players set $smite ca.weapon_var 0
+
 scoreboard players operation $eruption ca.eruption = @s ca.eruption
 
 scoreboard players operation $fire_aspect ca.weapon_var = @s ca.fire_aspect
@@ -11,6 +24,7 @@ scoreboard players operation $cauterize ca.weapon_var = @s ca.cauterize
 
 scoreboard players operation $duelist ca.weapon_var = @s ca.duelist
 scoreboard players operation $hunter ca.weapon_var = @s ca.hunter
+scoreboard players operation $smite ca.weapon_var = @s ca.smite
 
 #scoreboard players operation $eruption ca.evocation = @s ca.evocation
 

@@ -7,6 +7,18 @@ scoreboard players operation $gravity_dmg ca.gravity_fall /= $100 ca.CONSTANT
 scoreboard players remove $gravity_dmg ca.gravity_fall 2
 execute if score $gravity_dmg ca.gravity_fall matches ..-1 run scoreboard players set $gravity_dmg ca.gravity_fall 0
 
+scoreboard players set $fire_aspect ca.weapon_var 0
+scoreboard players set $knockback ca.weapon_var 0
+
+scoreboard players set $executioner ca.weapon_var 0
+scoreboard players set $first_strike ca.weapon_var 0
+scoreboard players set $hex_eater ca.weapon_var 0
+scoreboard players set $tempo_theft ca.weapon_var 0
+scoreboard players set $cauterize ca.weapon_var 0
+
+scoreboard players set $duelist ca.weapon_var 0
+scoreboard players set $hunter ca.weapon_var 0
+scoreboard players set $smite ca.weapon_var 0
 
 scoreboard players operation $fire_aspect ca.weapon_var = @s ca.g_fire
 scoreboard players operation $knockback ca.weapon_var = @s ca.g_knock
@@ -19,6 +31,7 @@ scoreboard players operation $cauterize ca.weapon_var = @s ca.g_cau
 
 scoreboard players operation $duelist ca.weapon_var = @s ca.g_duelist
 scoreboard players operation $hunter ca.weapon_var = @s ca.g_hunter
+scoreboard players operation $smite ca.weapon_var = @s ca.g_smite
 
 
 data modify storage cartographer_custom_enchantments:gravity data.effect set value {}

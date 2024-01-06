@@ -1,5 +1,4 @@
 #Reset All Scores I am Crying
-tag @s remove ca.attacked_mob
 
 scoreboard players set $flame ca.var 0
 
@@ -84,6 +83,19 @@ execute if score $cu_en_ranged ca.enabler matches 1.. if score $wavedash ca.var 
 
 
 #Do On Hit Enchantments Here
+scoreboard players set $fire_aspect ca.weapon_var 0
+scoreboard players set $knockback ca.weapon_var 0
+
+scoreboard players set $executioner ca.weapon_var 0
+scoreboard players set $first_strike ca.weapon_var 0
+scoreboard players set $hex_eater ca.weapon_var 0
+scoreboard players set $tempo_theft ca.weapon_var 0
+scoreboard players set $cauterize ca.weapon_var 0
+
+scoreboard players set $duelist ca.weapon_var 0
+scoreboard players set $hunter ca.weapon_var 0
+scoreboard players set $smite ca.weapon_var 0
+
 scoreboard players operation $fire_aspect ca.weapon_var = $fire_aspect ca.var
 scoreboard players operation $knockback ca.weapon_var = $knockback ca.var
 

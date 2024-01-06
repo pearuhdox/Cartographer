@@ -19,3 +19,7 @@ function cartographer_custom_enchantments:enchant_effects/on_hit/melee_master
 function #minecraft:cartographer/events/enchants_mob_hit/melee/sweeping
 
 tag @s add thrusted
+
+scoreboard players add $count ca.sweeping 1
+
+execute if score $trigger ca.allow_fast_attack matches 1.. run function cartographer_custom_enchantments:attribute_effects/attack_speed/enemy_hit

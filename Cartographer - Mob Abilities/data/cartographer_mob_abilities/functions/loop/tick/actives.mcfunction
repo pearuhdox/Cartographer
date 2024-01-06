@@ -15,6 +15,7 @@ execute unless score @s ca.acro_cooldown matches 1.. unless score @s ability_pau
 execute unless score @s ca.acro_cooldown matches 1.. if score @s ability_pause matches 1.. run scoreboard players remove @s ability_pause 1
 execute if entity @s[tag=ca.acrobatic] if score @s ca.acro_cooldown matches 1.. run scoreboard players remove @s ca.acro_cooldown 1
 
+
 #Attempt Cancels
 function cartographer_mob_abilities:loop/tick/cancel_actives
 

@@ -33,3 +33,7 @@ execute if score @s ca.echo matches 1.. if score @s ca.resetter_check_kill match
 
 #Evocation Reset Chance
 execute if score @s ca.evocation matches 1.. if score @s ca.resetter_check_kill matches 1..9 run function cartographer_custom_enchantments:enchant_effects/evocation/kill
+
+execute if score @s ca.sweeping matches 1.. run function cartographer_core:helper/combat/check_combat
+execute if score @s ca.slamming matches 1.. run function cartographer_core:helper/combat/check_combat
+execute if score @s ca.thrusting matches 1.. run function cartographer_core:helper/combat/check_combat

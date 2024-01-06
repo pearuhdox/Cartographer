@@ -19,6 +19,7 @@ tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
 tellraw @s [{"text":"[➤] ","color":"gray","bold":true,"italic":false},{"bold":false,"text":"Mimics and Traps","color":"gray","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Tweak Vanilla and Core gamerules.","color":"#FFF4D9","italic":true}]}}]
 
+tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Armor Based Trap Tier","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Enables Armor Based Trap Tier, which makes enemies like Mimics and Colossus scale off the player's armor value.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_mimics:options/globals/armor_trap_tier"}}]
 tellraw @s [{"text":"---[➤] ","color":"#FFF4D9","bold":true,"italic":false},{"bold":false,"text":"Slower Spawners","color":"aqua","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Enables Slower Spawners, which makes spawners take longer to break when placed on top of Obsidian, Reinforced Deepslate, or Bedrock.","color":"#FFF4D9","italic":true}]},"clickEvent":{"action":"run_command","value":"/function cartographer_mimics:options/globals/slower_spawners"}}]
 
 

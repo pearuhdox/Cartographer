@@ -1,4 +1,5 @@
-scoreboard players operation $temp ca.var += @s ca.explosive
+scoreboard players operation $temp ca.var += @s ca.shrapnel
+
 scoreboard players operation $temp ca.var += @s ca.flame
 scoreboard players operation $temp ca.var += @s ca.punch
 scoreboard players operation $temp ca.var += @s ca.concentration
@@ -9,6 +10,8 @@ scoreboard players operation $temp ca.var += @s ca.attr_ranged
 scoreboard players operation $temp ca.var += @s ca.attr_ranged_perc
 scoreboard players operation $temp ca.var += @s ca.attr_ranged_speed
 
+scoreboard players operation $temp ca.var += @s ca.piercing
+scoreboard players operation $temp ca.var += @s ca.multishot
 
 
 scoreboard players operation $temp ca.var += @s ca.fire_aspect

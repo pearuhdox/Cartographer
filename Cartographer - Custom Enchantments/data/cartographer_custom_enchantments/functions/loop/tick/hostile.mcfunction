@@ -26,3 +26,5 @@ execute if score @s ca.ricochet_cooldown matches 1.. run scoreboard players remo
 
 #Tick down Starfall cooldown
 execute if score @s ca.starfall_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/starfall_time_mob
+
+execute if score @s ca.allow_fast_attack matches 1.. run scoreboard players remove @s ca.allow_fast_attack 1

@@ -15,6 +15,19 @@ scoreboard players set $exec_dmg bbl.storage 0
 scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
 #Run On Hit Enchantments
+scoreboard players set $fire_aspect ca.weapon_var 0
+scoreboard players set $knockback ca.weapon_var 0
+
+scoreboard players set $executioner ca.weapon_var 0
+scoreboard players set $first_strike ca.weapon_var 0
+scoreboard players set $hex_eater ca.weapon_var 0
+scoreboard players set $tempo_theft ca.weapon_var 0
+scoreboard players set $cauterize ca.weapon_var 0
+
+scoreboard players set $duelist ca.weapon_var 0
+scoreboard players set $hunter ca.weapon_var 0
+scoreboard players set $smite ca.weapon_var 0
+
 scoreboard players operation $fire_aspect ca.weapon_var = $fire_aspect ca.var
 scoreboard players operation $knockback ca.weapon_var = $knockback ca.var
 
