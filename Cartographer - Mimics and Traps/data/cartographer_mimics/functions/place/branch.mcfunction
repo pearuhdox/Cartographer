@@ -25,3 +25,5 @@ execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrapDisguise:1b
 execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrapSlowbreak:1b}}}] at @s run function cartographer_mimics:place/trap/slowbreak
 
 execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrapReforming:1b}}}] at @s run function cartographer_mimics:place/trap/reforming
+
+execute as @s[nbt={Item:{id:"minecraft:structure_void",tag:{CartoTrapTranslocating:1b}}}] at @s run function cartographer_mimics:place/trap/translocating

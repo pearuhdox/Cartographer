@@ -539,7 +539,3 @@ summon marker 4206900 0 4206900 {UUID:[I;823664661,395388179,293672216,0],Tags:[
 #Summon Marker for other direction work
 # 31182015-1791-2513-1181-151800000001
 summon marker 4206900 0 4206900 {UUID:[I;823664661,395388179,293672216,1],Tags:["ca.dir_marker"]}
-
-#Summon Armor Stand for Item Tag Evaluation
-# "31192011-4452-2112-0000-000000000000"
-summon armor_stand 4206900 0 4206900 {Marker:1b,Invisible:1b,NoGravity:1b,UUID:[I;823730193,1146233106,0,0]}

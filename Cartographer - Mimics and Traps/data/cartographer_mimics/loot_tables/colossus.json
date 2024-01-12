@@ -4,6 +4,26 @@
       "rolls": 1,
       "entries": [
         {
+          "type": "minecraft:empty",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Colossus Blood\",\"color\":\"white\",\"italic\":false}'},custom_potion_effects:[{id:\"minecraft:instant_health\",amplifier:1b,duration:1},{id:\"minecraft:resistance\",amplifier:0b,duration:2400}],CustomPotionColor:10383183}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
           "type": "minecraft:item",
           "name": "minecraft:paper",
           "functions": [

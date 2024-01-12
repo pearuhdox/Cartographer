@@ -219,6 +219,7 @@ scoreboard players set $1000 ca.CONSTANT 1000
 scoreboard players set $100 ca.CONSTANT 100
 scoreboard players set $10 ca.CONSTANT 10
 
+scoreboard players set $12 ca.CONSTANT 12
 scoreboard players set $13 ca.CONSTANT 13
 
 scoreboard players set $15 ca.CONSTANT 15
@@ -320,3 +321,7 @@ schedule function cartographer_core:load/cleanup_forceload 20t
 #Schedule core clocks.
 
 setblock 4206905 3 4206905 oak_sign replace
+
+#Summon Armor Stand for Item Tag Evaluation
+# "31192011-4452-2112-0000-000000000000"
+summon armor_stand 4206900 0 4206900 {Marker:1b,Invisible:1b,NoGravity:1b,UUID:[I;823730193,1146233106,0,0]}
