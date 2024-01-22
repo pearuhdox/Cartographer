@@ -49,6 +49,13 @@ execute if entity @s[tag=ca.as_body] if entity @s[tag=ca.ce_thorns_body] run tag
 execute if entity @s[tag=ca.as_legs] if entity @s[tag=ca.ce_thorns_legs] run tag @s add ca.check_as_legs
 execute if entity @s[tag=ca.as_feet] if entity @s[tag=ca.ce_thorns_feet] run tag @s add ca.check_as_feet
 
+#Do Damage next
+scoreboard players operation $damage ca.thorns = $thorns ca.thorns
+scoreboard players add $damage ca.thorns 2
+scoreboard players operation $damage ca.thorns *= $10 ca.CONSTANT
+
+scoreboard players set $success ca.attr_random_crit 0
+execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/thorns/random_crit_handler
 
 function cartographer_custom_statuses:apply_effects/save/additive/do
 function cartographer_custom_statuses:apply_self/save/additive/do

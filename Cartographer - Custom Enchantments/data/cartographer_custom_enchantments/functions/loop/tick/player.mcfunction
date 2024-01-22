@@ -1,6 +1,9 @@
 #Place The Trident Hit Checker Above Enchant Calculator to solve loyalty check bug
 execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.throw_trident matches 1.. unless score @s ca.deal_mel_dmg matches 1.. unless score @s ca.deal_mel_dmg2 matches 1.. unless score @s ca.deal_mel_dmg3 matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made_trident
 
+#Simulate Fall Damage
+execute if score @s ca.fall_damage matches 1.. run function cartographer_custom_enchantments:enchant_calls/player_fell
+scoreboard players set @s ca.fall_damage 0
 
 #Run the Heal Queue system on players
 execute if score @s ca.sapper_banking matches 1.. run function cartographer_custom_enchantments:enchant_effects/sapper/heal_time
@@ -124,12 +127,25 @@ execute if score @s ca.mo_cau matches 1.. run tag @s add ca.has_cauterize
 execute if score @s ca.g_cau matches 1.. run tag @s add ca.has_cauterize
 execute if score @s ca.t_cau matches 1.. run tag @s add ca.has_cauterize
 
+#Hex Eater Check
+tag @s remove ca.has_hex_eater
+execute if score @s ca.hex_eater matches 1.. run tag @s add ca.has_hex_eater
+execute if score @s ca.off_hex_eater matches 1.. run tag @s add ca.has_hex_eater
+execute if score @s ca.qu_hex matches 1.. run tag @s add ca.has_hex_eater
+execute if score @s ca.sm_hex matches 1.. run tag @s add ca.has_hex_eater
+execute if score @s ca.re_hex matches 1.. run tag @s add ca.has_hex_eater
+execute if score @s ca.mo_hex matches 1.. run tag @s add ca.has_hex_eater
+execute if score @s ca.g_hex matches 1.. run tag @s add ca.has_hex_eater
+execute if score @s ca.t_hex matches 1.. run tag @s add ca.has_hex_eater
 
 #Momentum Cancel
 execute unless score @s ca.momentum matches 1.. run scoreboard players set @s ca.momentum_charge 0
 execute unless score @s ca.momentum matches 1.. run scoreboard players set @s ca.momentum_tier 0
 execute unless score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/del_attributes
 execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/charge
+
+#Wavedash Time
+execute if score @s ca.wavedash_time matches 1.. run scoreboard players remove @s ca.wavedash_time 1
 
 #Sprint Dash and Disengage
 execute if score @s ca.sprint_dash matches 1.. run function cartographer_custom_enchantments:enchant_effects/sprint_dash/test
@@ -201,7 +217,8 @@ execute if entity @s[scores={ca.dmg_resist_evaded=1..,ca.evasion=1..},tag=evadin
 execute if entity @s[scores={ca.dmg_resist_check=1..,ca.evasion=1..}] run function cartographer_custom_enchantments:enchant_effects/evasion/prime
 
 #Run Gravity Here
-execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/tick
+execute if score @s ca.gravity matches 1.. unless score @s ca.gravity_cd matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/tick
+execute if score @s ca.gravity_cd matches 1.. run scoreboard players remove @s ca.gravity_cd 1
 
 #Run Starfall Here
 execute if score @s ca.starfall matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/tick

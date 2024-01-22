@@ -21,8 +21,8 @@ scoreboard players operation $temp ca.var += @s ca.off_executioner
 
 scoreboard players operation $temp ca.var += @s ca.off_hex_eater
 scoreboard players operation $temp ca.var += @s ca.off_first_strike
-scoreboard players operation $temp ca.var += @p ca.off_cauterize
-scoreboard players operation $temp ca.var += @p ca.off_tempo_theft
+scoreboard players operation $temp ca.var += @s ca.off_cauterize
+scoreboard players operation $temp ca.var += @s ca.off_tempo_theft
 
 
 scoreboard players operation $temp ca.var += @s ca.collapse

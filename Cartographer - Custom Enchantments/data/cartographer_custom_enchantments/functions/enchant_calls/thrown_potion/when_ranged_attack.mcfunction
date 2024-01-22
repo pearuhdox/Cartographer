@@ -11,15 +11,16 @@ execute if score $point_blank ca.var matches 1.. at @s run function cartographer
 #Sharpshot - Runs before Custom Damage
 execute if score $sharpshot ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/sharpshot/player_test
 
+scoreboard players set $success ca.attr_random_crit 0
+execute if score $random_crit ca.var matches 1.. run function cartographer_custom_enchantments:enchant_calls/ranged_crit
+#Random Crit Vfx
+execute if score $success ca.attr_random_crit matches 1.. at @s run function cartographer_custom_enchantments:attribute_effects/random_crit/vfx
+
 #Do Custom Ranged Damage
 execute if score $ranged_damage ca.var matches 1.. run function cartographer_custom_enchantments:attribute_effects/ranged_damage/setup_damage
 
 #Flame
 #execute if score $flame ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/flame/master
-
-#Cauterize - Goes first
-scoreboard players operation $cauterize ca.ench_var = $cauterize ca.var
-execute if score $cu_en_ranged ca.enabler matches 1.. if entity @s[tag=is_cauterize] at @s run function cartographer_custom_enchantments:enchant_effects/cauterize/ranged
 
 #Concentration
 execute if score $concentration ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/concentration/stack
@@ -27,34 +28,15 @@ execute if score $concentration ca.var matches 1.. run function cartographer_cus
 #Punch - Crossbows
 execute if score $cu_en_ranged ca.enabler matches 1.. if score $punch ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
 
-#Do On Hit Enchantments Here
-scoreboard players set $fire_aspect ca.weapon_var 0
-scoreboard players set $knockback ca.weapon_var 0
+#Effects that can be affected by Curse of Fizzling, do this check here
+scoreboard players operation @s ca.curse_fizzling = $curse_fizzling ca.var
 
-scoreboard players set $executioner ca.weapon_var 0
-scoreboard players set $first_strike ca.weapon_var 0
-scoreboard players set $hex_eater ca.weapon_var 0
-scoreboard players set $tempo_theft ca.weapon_var 0
-scoreboard players set $cauterize ca.weapon_var 0
+execute unless score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_calls/thrown_potion/when_ranged_attack_branch
 
-scoreboard players set $duelist ca.weapon_var 0
-scoreboard players set $hunter ca.weapon_var 0
-scoreboard players set $smite ca.weapon_var 0
+execute if score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_fizzling/other
+execute if score @s ca.curse_fizzling matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/thrown_potion/when_ranged_attack_branch
 
-scoreboard players operation $fire_aspect ca.weapon_var = $fire_aspect ca.var
-scoreboard players operation $knockback ca.weapon_var = $knockback ca.var
-
-scoreboard players operation $executioner ca.weapon_var = $executioner ca.var
-scoreboard players operation $first_strike ca.weapon_var = $first_strike ca.var
-scoreboard players operation $hex_eater ca.weapon_var = $hex_eater ca.var
-scoreboard players operation $tempo_theft ca.weapon_var = $tempo_theft ca.var
-scoreboard players operation $cauterize ca.weapon_var = $cauterize ca.var
-
-scoreboard players operation $duelist ca.weapon_var = $duelist ca.var
-scoreboard players operation $hunter ca.weapon_var = $hunter ca.var
-scoreboard players operation $smite ca.weapon_var = $smite ca.var
-
-function cartographer_custom_enchantments:enchant_effects/on_hit/ranged_master
+scoreboard players set @s ca.curse_fizzling 0
 
 
 

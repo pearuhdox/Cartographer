@@ -22,8 +22,12 @@ scoreboard players operation @s ca.smite = $smite ca.var
 scoreboard players operation @s ca.hunter = $hunter ca.var
 scoreboard players operation @s ca.duelist = $duelist ca.var
 
+scoreboard players operation @s ca.curse_fizzling = $curse_fizzling ca.var
 
 scoreboard players operation @s ca.attr_ranged = $attr_ranged ca.var
 scoreboard players operation @s ca.attr_ranged_perc = $attr_ranged_perc ca.var
 scoreboard players operation @s ca.attr_ranged_speed = $attr_ranged_speed ca.var
 scoreboard players operation @s ca.attr_potion_size = $attr_potion_size ca.var
+
+scoreboard players operation @s ca.attr_luck = $attr_luck ca.var
+scoreboard players operation @s ca.attr_random_crit = $attr_random_crit ca.var

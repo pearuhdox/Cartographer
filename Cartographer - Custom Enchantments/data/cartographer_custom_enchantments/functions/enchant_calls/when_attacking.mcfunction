@@ -4,6 +4,9 @@ execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=fa
 #If this is a ranged attack set this score
 execute if entity @s[advancements={entityid:player_hurt_entity={is_projectile=true,no_impact=false}}] run scoreboard players set $was_ranged_attack ca.var 1
 
+#Regardless of attack type try to proc Deadeye
+execute if score @s ca.deadeye matches 1.. run function cartographer_custom_enchantments:enchant_effects/deadeye/chance
+
 #Rally Restoration
 execute if score $rally_restore ca.rally matches 1.. run function cartographer_custom_enchantments:enchant_effects/rally/restore
 

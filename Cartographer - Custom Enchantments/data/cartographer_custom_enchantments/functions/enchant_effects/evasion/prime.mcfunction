@@ -1,22 +1,20 @@
-scoreboard players set in math 1
-scoreboard players set in1 math 100
-
-function cartographer_core:helper/math/rng/range
-
-scoreboard players operation @s ca.evade_chance = out math
-scoreboard players operation @s ca.evade_chance -= @s ca.evasion_bias
-
-scoreboard players set @s[scores={ca.evade_chance=..0}] ca.evade_chance 1
-
 scoreboard players operation $percent_evade ca.evade_chance = @s ca.evasion
 scoreboard players operation $percent_evade ca.evade_chance *= $4 ca.CONSTANT
 
-execute if score @s ca.evade_chance <= $percent_evade ca.evade_chance run tag @s add evading
 
-#execute unless entity @s[tag=evading] unless score @s ca.luck_coeff matches 0 if score @s ca.luck+ matches 1.. run function cartographer_custom_enchantments:enchant_effects/evasion/pos_reroll/base
-#execute if entity @s[tag=evading] unless score @s ca.luck_coeff matches 0 if score @s ca.luck- matches 1.. run function cartographer_custom_enchantments:enchant_effects/evasion/neg_reroll/base
+scoreboard players operation $target ca.rand_var = $percent_evade ca.evade_chance
+scoreboard players operation $bias ca.rand_var = @s ca.evasion_bias
 
-execute unless entity @s[tag=evading] run scoreboard players add @s ca.evasion_bias 4
-execute unless entity @s[tag=evading] run scoreboard players set @s[scores={ca.evasion_bias=20..}] ca.evasion_bias 20
+scoreboard players operation $threshold ca.rand_var = @s ca.attr_luck
+scoreboard players operation $threshold ca.rand_var *= $70 ca.CONSTANT
+scoreboard players operation $threshold ca.rand_var /= $100 ca.CONSTANT
 
-execute if entity @s[tag=evading] run scoreboard players set @s ca.evasion_bias 0
+function cartographer_core:helper/chance_proc/calc
+
+execute if score $success ca.rand_var matches 1.. run tag @s add evading
+
+
+execute if score $success ca.rand_var matches 1.. run scoreboard players set @s ca.evasion_bias 0
+
+execute unless score $success ca.rand_var matches 1.. run scoreboard players add @s ca.evasion_bias 4
+execute unless score $success ca.rand_var matches 1.. if score @s ca.evasion_bias matches 21.. run scoreboard players set @s ca.evasion_bias 20

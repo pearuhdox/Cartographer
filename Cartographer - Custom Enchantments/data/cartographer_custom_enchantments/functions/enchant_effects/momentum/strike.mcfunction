@@ -1,18 +1,36 @@
 scoreboard players set $momentum_mob ca.ench_var 0
 
-execute store result score $momentum_damage ca.momentum run attribute @s minecraft:generic.attack_damage get
+execute store result score $damage ca.momentum run attribute @s minecraft:generic.attack_damage get
+scoreboard players operation $damage ca.momentum *= $10 ca.CONSTANT
 
-scoreboard players operation $fire_aspect ca.momentum = @s ca.mo_fire
-scoreboard players operation $frostbite ca.momentum = @s ca.mo_frost
-scoreboard players operation $executioner ca.momentum = @s ca.mo_exec
-scoreboard players operation $knockback ca.momentum = @s ca.mo_knock
+scoreboard players set $success ca.attr_random_crit 0
+execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/random_crit_handler
 
-scoreboard players operation $fire_aspect ca.momentum += @s ca.fire_aspect
-scoreboard players operation $frostbite ca.momentum += @s ca.frostbite
-scoreboard players operation $executioner ca.momentum += @s ca.executioner
-scoreboard players operation $knockback ca.momentum += @s ca.knockback
+scoreboard players set $fire_aspect ca.weapon_var 0
+scoreboard players set $knockback ca.weapon_var 0
 
-scoreboard players operation $cauterize ca.momentum = @s ca.cauterize
+scoreboard players set $executioner ca.weapon_var 0
+scoreboard players set $first_strike ca.weapon_var 0
+scoreboard players set $hex_eater ca.weapon_var 0
+scoreboard players set $tempo_theft ca.weapon_var 0
+scoreboard players set $cauterize ca.weapon_var 0
+
+scoreboard players set $duelist ca.weapon_var 0
+scoreboard players set $hunter ca.weapon_var 0
+scoreboard players set $smite ca.weapon_var 0
+
+scoreboard players operation $fire_aspect ca.weapon_var = @s ca.fire_aspect
+scoreboard players operation $knockback ca.weapon_var = @s ca.knockback
+
+scoreboard players operation $executioner ca.weapon_var = @s ca.executioner
+scoreboard players operation $first_strike ca.weapon_var = @s ca.first_strike
+scoreboard players operation $hex_eater ca.weapon_var = @s ca.hex_eater
+scoreboard players operation $tempo_theft ca.weapon_var = @s ca.tempo_theft
+scoreboard players operation $cauterize ca.weapon_var = @s ca.cauterize
+
+scoreboard players operation $duelist ca.weapon_var = @s ca.duelist
+scoreboard players operation $hunter ca.weapon_var = @s ca.hunter
+scoreboard players operation $smite ca.weapon_var = @s ca.smite
 
 execute if entity @s[tag=ca.ae_main] run tag @s add ca.check_ae_main
 execute if entity @s[tag=ca.ae_offh] if entity @s[tag=ca.ce_momentum_offh] run tag @s add ca.check_ae_offh

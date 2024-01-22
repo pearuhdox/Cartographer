@@ -4,3 +4,5 @@ execute if score $no_lexica_prompt ca.gamerule matches 0 run tellraw @s [{"text"
 
 execute if score $no_lexica_prompt ca.gamerule matches 0 run playsound minecraft:ui.cartography_table.take_result master @s ~ ~ ~ 0.7 1.2
 execute if score $no_lexica_prompt ca.gamerule matches 0 run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.7 1.5
+
+scoreboard players set $satiation ca.lexica_log 1

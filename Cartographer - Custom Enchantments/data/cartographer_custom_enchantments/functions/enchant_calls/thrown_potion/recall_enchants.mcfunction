@@ -17,3 +17,6 @@ scoreboard players operation $duelist ca.var = $p_duelist ca.var
 
 
 scoreboard players operation $ranged_damage ca.var = $p_ranged_damage ca.var
+
+scoreboard players operation $luck ca.var = $p_luck ca.var
+scoreboard players operation $random_crit ca.var = $p_random_crit ca.var

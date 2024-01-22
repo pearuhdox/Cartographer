@@ -1,12 +1,5 @@
-#Rally - Player ()
-execute as @s[scores={ca.rally=1..}] at @s unless score @s ca.rally_cooldown matches 1.. run scoreboard players operation $rally_proc ca.rally = @s ca.rally
-execute as @s[scores={ca.rally=1..}] at @s unless score @s ca.rally_cooldown matches 1.. run scoreboard players set @s ca.rally_cooldown 90
+#Effects that can be affected by Curse of Fizzling, do this check here
+execute unless score @s ca.curse_fizzling_total matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_attacked_player_branch
 
-#Thorns ()
-execute if entity @s[scores={ca.thorns=1..}] run function cartographer_custom_enchantments:enchant_effects/thorns/master
-
-#Concealed ()
-execute if entity @s[scores={ca.conceal_time=1..}] run function cartographer_custom_enchantments:enchant_effects/concealed/consume
-
-#Disengage
-execute if score @s ca.disengage matches 1.. run function cartographer_custom_enchantments:enchant_effects/disengage/was_hit
+execute if score @s ca.curse_fizzling_total matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_fizzling/other
+execute if score @s ca.curse_fizzling_total matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_attacked_player_branch

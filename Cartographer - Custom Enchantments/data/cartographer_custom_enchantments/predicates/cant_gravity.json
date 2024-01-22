@@ -53,15 +53,6 @@
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
-          "effects": {
-            "minecraft:blindness": {}
-          }
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
           "flags": {
             "is_swimming": true
           }

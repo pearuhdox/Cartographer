@@ -23,3 +23,5 @@ tag @s add thrusted
 scoreboard players add $count ca.sweeping 1
 
 execute if score $trigger ca.allow_fast_attack matches 1.. run function cartographer_custom_enchantments:attribute_effects/attack_speed/enemy_hit
+
+execute if score $success ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:attribute_effects/random_crit/vfx

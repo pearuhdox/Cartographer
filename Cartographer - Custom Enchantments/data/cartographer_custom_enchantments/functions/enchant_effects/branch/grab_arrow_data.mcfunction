@@ -80,6 +80,12 @@ scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
 
 scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"curse_fizzling"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.curse_fizzling += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
+
+scoreboard players set $temp ca.susu 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomAttributes[{id:"ranged_flat"}].amount 10
 execute unless score $temp ca.susu matches 0 store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.attr_ranged += $temp ca.susu
 scoreboard players operation $custom_arrow ca.var += $temp ca.susu
@@ -92,4 +98,14 @@ scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 scoreboard players set $temp ca.susu 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomAttributes[{id:"ranged_speed"}].amount 100
 execute unless score $temp ca.susu matches 0 store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.attr_ranged_speed += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomAttributes[{id:"luck"}].amount 100
+execute unless score $temp ca.susu matches 0 store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.attr_luck += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomAttributes[{id:"random_crit"}].amount 100
+execute unless score $temp ca.susu matches 0 store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.attr_random_crit += $temp ca.susu
 scoreboard players operation $custom_arrow ca.var += $temp ca.susu

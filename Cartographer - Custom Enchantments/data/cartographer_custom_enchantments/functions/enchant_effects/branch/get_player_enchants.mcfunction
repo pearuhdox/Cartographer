@@ -25,6 +25,10 @@ scoreboard players operation $attr_ranged_perc ca.var += @s ca.attr_ranged_perc
 scoreboard players operation $attr_ranged_speed ca.var += @s ca.attr_ranged_speed
 scoreboard players operation $attr_potion_size ca.var += @s ca.attr_potion_size
 
+scoreboard players operation $attr_luck ca.var += @s ca.attr_luck
+
+scoreboard players operation $attr_random_crit ca.var += @s ca.attr_random_crit
+
 scoreboard players operation $multishot ca.var = @s ca.multishot
 
 
@@ -56,3 +60,7 @@ scoreboard players operation $cauterize ca.var += @s ca.off_cauterize
 scoreboard players operation $duelist ca.var += @s ca.off_duelist
 scoreboard players operation $hunter ca.var += @s ca.off_hunter
 scoreboard players operation $smite ca.var += @s ca.off_smite
+
+
+scoreboard players operation $curse_fizzling ca.var += @s ca.curse_fizzling_main
+scoreboard players operation $curse_fizzling ca.var += @s ca.curse_fizzling_off

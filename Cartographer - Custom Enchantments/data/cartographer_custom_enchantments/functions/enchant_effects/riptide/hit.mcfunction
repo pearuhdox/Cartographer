@@ -28,6 +28,8 @@ scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
 #Damage and Weakening for Melee Protection
 scoreboard players operation @s ca.damage_queue = $damage ca.riptide
+scoreboard players operation @s ca.damage_queue *= $10 ca.CONSTANT
+
 function cartographer_custom_enchantments:helper/damage/macro_setup
 function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 

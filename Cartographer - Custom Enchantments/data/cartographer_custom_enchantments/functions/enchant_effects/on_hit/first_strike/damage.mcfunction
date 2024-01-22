@@ -1,5 +1,5 @@
 scoreboard players operation @s ca.damage_queue = $first_strike ca.weapon_var
-scoreboard players operation @s ca.damage_queue *= $2 ca.CONSTANT
+scoreboard players operation @s ca.damage_queue *= $20 ca.CONSTANT
 
 function cartographer_custom_enchantments:helper/damage/macro_setup
 function cartographer_custom_enchantments:helper/damage/enchant_damage_bypass with storage cartographer:macro.custom_enchantments

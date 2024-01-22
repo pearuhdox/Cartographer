@@ -47,7 +47,15 @@ function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
 
-execute as @e[type=#bb:hostile,distance=..15,limit=1,sort=random,tag=!ca.starfalled] run function cartographer_custom_enchantments:enchant_effects/starfall/hit
+scoreboard players operation $damage ca.starfall = @s ca.starfall
+scoreboard players add $damage ca.starfall 2
+scoreboard players operation $damage ca.starfall *= $10 ca.CONSTANT
+
+scoreboard players set $success ca.attr_random_crit 0
+execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/random_crit_handler
+
+
+execute as @e[type=#bb:hostile,distance=..24,limit=1,sort=random,tag=!ca.starfalled] at @s run function cartographer_custom_enchantments:enchant_effects/starfall/hit
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 

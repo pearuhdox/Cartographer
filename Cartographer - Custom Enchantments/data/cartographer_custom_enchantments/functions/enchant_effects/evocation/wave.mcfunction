@@ -1,3 +1,9 @@
+#Clear all evocation hit tags
+tag @e[distance=..20,type=#bb:hostile] remove ca.evocation_fang_hit
+
+data modify storage cartographer_custom_enchantments:evocation Owner set value []
+data modify storage cartographer_custom_enchantments:evocation Owner set from entity @s UUID
+
 summon minecraft:area_effect_cloud ^ ^ ^2 {Particle:"block air",Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:20,DurationOnUse:0,WaitTime:5,Tags:["evocation_place"]}
 
 summon minecraft:area_effect_cloud ^ ^ ^3 {Particle:"block air",Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:20,DurationOnUse:0,WaitTime:8,Tags:["evocation_place"]}
@@ -16,10 +22,4 @@ summon minecraft:area_effect_cloud ^-1 ^ ^5 {Particle:"block air",Radius:0.5f,Ra
 summon minecraft:area_effect_cloud ^1 ^ ^5 {Particle:"block air",Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:20,DurationOnUse:0,WaitTime:17,Tags:["evocation_place"]}
 summon minecraft:area_effect_cloud ^ ^ ^6 {Particle:"block air",Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:20,DurationOnUse:0,WaitTime:17,Tags:["evocation_place"]}
 
-execute if entity @s[scores={ca.evocation=1..,ca.frostbite=1..}] run scoreboard players operation @e[type=area_effect_cloud,tag=evocation_place,distance=..10] ca.frostbite = @s[scores={ca.evocation=1..}] ca.frostbite
-execute if entity @s[scores={ca.evocation=1..,ca.fire_aspect=1..}] run scoreboard players operation @e[type=area_effect_cloud,tag=evocation_place,distance=..10] ca.fire_aspect = @s[scores={ca.evocation=1..}] ca.fire_aspect
-execute if entity @s[scores={ca.evocation=1..,ca.knockback=1..}] run scoreboard players operation @e[type=area_effect_cloud,tag=evocation_place,distance=..10] ca.knockback = @s[scores={ca.evocation=1..}] ca.knockback
-
-scoreboard players set @e[type=area_effect_cloud] ca.raycast 41
-
-execute as @e[type=area_effect_cloud,tag=evocation_place] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/recurse_fix
+execute as @e[type=area_effect_cloud,tag=evocation_place] at @s run function cartographer_custom_enchantments:enchant_effects/evocation/recurse_start

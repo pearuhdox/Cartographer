@@ -9,5 +9,3 @@ execute store result score $trident_neg_vel ca.ench_var run data get storage car
 execute store result storage cartographer_custom_enchantments:custom_trident motion_save[1] double 0.01 run scoreboard players remove $trident_neg_vel ca.ench_var 6
 
 execute on passengers run data modify entity @s item.tag.WaterMotion set from storage cartographer_custom_enchantments:custom_trident motion_save
-
-say water

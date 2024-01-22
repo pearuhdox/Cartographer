@@ -1,2 +1,1 @@
-execute if score @s ca.desperation matches 1.. run function cartographer_custom_enchantments:enchant_effects/desperation/buff
 execute if score @s ca.stalwart matches 1.. run function cartographer_custom_enchantments:enchant_effects/stalwart/buff

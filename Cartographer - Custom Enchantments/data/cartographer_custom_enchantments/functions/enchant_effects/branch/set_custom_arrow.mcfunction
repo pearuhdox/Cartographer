@@ -28,6 +28,11 @@ scoreboard players operation @s ca.duelist = $duelist ca.var
 scoreboard players operation @s ca.hunter = $hunter ca.var
 scoreboard players operation @s ca.smite = $smite ca.var
 
+scoreboard players operation @s ca.curse_fizzling = $curse_fizzling ca.var
+
+scoreboard players operation @s ca.attr_luck = $attr_luck ca.var
+
+scoreboard players operation @s ca.attr_random_crit = $attr_random_crit ca.var
 
 execute unless score $ignore_arrow_ench ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/branch/grab_arrow_data
 execute unless score $ignore_arrow_ench ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/branch/get_player_enchants

@@ -33,6 +33,11 @@ scoreboard players operation $damage ca.sweeping *= $80 ca.CONSTANT
 scoreboard players operation $damage ca.sweeping /= $100 ca.CONSTANT
 execute store result storage cartographer:macro.custom_enchantments damage int 1 run scoreboard players get $damage ca.sweeping
 
+scoreboard players set $success ca.attr_random_crit 0
+execute if score @s ca.attr_random_crit matches 1.. run scoreboard players operation $damage_calc ca.attr_random_crit = $damage ca.sweeping
+execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:attribute_effects/random_crit/melee
+execute if score @s ca.attr_random_crit matches 1.. run scoreboard players operation $damage ca.sweeping = $damage_calc ca.attr_random_crit
+
 function cartographer_custom_statuses:apply_effects/save/mainhand
 function cartographer_custom_statuses:apply_self/save/mainhand
 function cartographer_custom_statuses:apply_status/save/mainhand

@@ -16,6 +16,10 @@ scoreboard objectives add ca.installed dummy
 scoreboard objectives add ca.registry dummy
 scoreboard objectives add ca.notice_time dummy
 
+scoreboard objectives add ca.lexica_log dummy
+
+scoreboard objectives add ca.rand_var dummy
+
 scoreboard players set $charon ca.installed 0
 scoreboard players set $custom_durability ca.installed 0
 scoreboard players set $custom_enchantments ca.installed 0
@@ -44,9 +48,6 @@ scoreboard objectives add ca.mutex dummy
 #Trigger scoreboards for menus and giving lexica.
 scoreboard objectives add lexica trigger
 scoreboard objectives add menu trigger
-
-#Initialize Cloud Wolf's Math Lite Datapack
-function cartographer_core:helper/math/zprivate/init
 
 #Place Shulker Boxes needed for Shulker Box trick.
 forceload add 4206900 4206900

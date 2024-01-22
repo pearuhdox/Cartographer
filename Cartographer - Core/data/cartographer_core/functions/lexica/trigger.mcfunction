@@ -19,15 +19,16 @@ execute if score @s ca.lexica_trig matches 111 run function cartographer_custom_
 execute if score @s ca.lexica_trig matches 112 run function cartographer_custom_statuses:lexica_calls/pages/category/stunned
 
 execute if score @s ca.lexica_trig matches 201 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/main
-execute if score @s ca.lexica_trig matches 202 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/main_2
-execute if score @s ca.lexica_trig matches 203 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main
-execute if score @s ca.lexica_trig matches 204 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main_2
-execute if score @s ca.lexica_trig matches 210 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main_3
-execute if score @s ca.lexica_trig matches 205 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/main
-execute if score @s ca.lexica_trig matches 206 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/main_2
-execute if score @s ca.lexica_trig matches 207 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/main
-execute if score @s ca.lexica_trig matches 208 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/main
-execute if score @s ca.lexica_trig matches 209 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/main
+#execute if score @s ca.lexica_trig matches 202 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/main_2
+execute if score @s ca.lexica_trig matches 202 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main
+#execute if score @s ca.lexica_trig matches 204 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main_2
+#execute if score @s ca.lexica_trig matches 210 run function cartographer_custom_enchantments:lexica_calls/pages/category/passive/main_3
+execute if score @s ca.lexica_trig matches 203 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/main
+#execute if score @s ca.lexica_trig matches 206 run function cartographer_custom_enchantments:lexica_calls/pages/category/ranged/main_2
+execute if score @s ca.lexica_trig matches 204 run function cartographer_custom_enchantments:lexica_calls/pages/category/tools/main
+execute if score @s ca.lexica_trig matches 205 run function cartographer_custom_enchantments:lexica_calls/pages/category/weapon/main
+execute if score @s ca.lexica_trig matches 206 run function cartographer_custom_enchantments:lexica_calls/pages/category/other/main
+execute if score @s ca.lexica_trig matches 207 run function cartographer_custom_enchantments:lexica_calls/pages/category/curses/main
 
 execute if score @s ca.lexica_trig matches 211 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/duelist
 execute if score @s ca.lexica_trig matches 212 run function cartographer_custom_enchantments:lexica_calls/pages/category/melee/echo

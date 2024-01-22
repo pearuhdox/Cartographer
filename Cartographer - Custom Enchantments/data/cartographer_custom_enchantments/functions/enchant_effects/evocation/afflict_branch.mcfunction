@@ -1,13 +1,8 @@
-execute if score $fire_aspect ca.evocation matches 1 run data modify entity @s Fire set value 81
-execute if score $fire_aspect ca.evocation matches 2 run data modify entity @s Fire set value 161
-execute if score $fire_aspect ca.evocation matches 3.. run data modify entity @s Fire set value 221
-
-execute if score $frostbite ca.evocation matches 1 run scoreboard players set @s ca.frost_tier 1
-execute if score $frostbite ca.evocation matches 2 run scoreboard players set @s ca.frost_tier 2
-execute if score $frostbite ca.evocation matches 3 run scoreboard players set @s ca.frost_tier 3
-execute if score $frostbite ca.evocation matches 4 run scoreboard players set @s ca.frost_tier 4
-execute if score $frostbite ca.evocation matches 5.. run scoreboard players set @s ca.frost_tier 5
-execute if score $frostbite ca.evocation matches 1.. run scoreboard players set @s ca.frost_time 81
-
 execute if data storage cartographer_custom_statuses:apply_effects data.effects[0] at @s run function cartographer_custom_statuses:apply_effects/apply/create_aec
 execute if data storage cartographer_custom_statuses:apply_status data.effects[0] at @s run function cartographer_custom_statuses:apply_status/apply/set_statuses
+
+function cartographer_custom_enchantments:enchant_effects/on_hit/melee_master
+
+damage @s 0.01 cartographer_custom_enchantments:enchant_damage_bypass by @p
+
+tag @s add ca.evocation_fang_hit

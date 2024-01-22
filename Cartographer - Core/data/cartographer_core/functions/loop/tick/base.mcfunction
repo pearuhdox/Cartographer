@@ -61,9 +61,9 @@ scoreboard players operation $ca_timer_mod ca.timer %= $10 ca.CONSTANT
 execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core:loop/half_second/base
 
 #1 second
-scoreboard players operation $ca_timer_mod ca.timer = $ca_timer ca.timer
-scoreboard players operation $ca_timer_mod ca.timer %= $20 ca.CONSTANT
-execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core:loop/1_second/base
+scoreboard players operation $ca_timer_mod_1 ca.timer = $ca_timer ca.timer
+scoreboard players operation $ca_timer_mod_1 ca.timer %= $20 ca.CONSTANT
+execute if score $ca_timer_mod_1 ca.timer matches 0 run function cartographer_core:loop/1_second/base
 
 #3 second
 scoreboard players operation $ca_timer_mod ca.timer = $ca_timer ca.timer

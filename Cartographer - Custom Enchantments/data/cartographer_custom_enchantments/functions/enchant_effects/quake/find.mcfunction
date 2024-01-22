@@ -56,7 +56,14 @@ function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
 
-execute as @e[type=#bb:hostile,distance=..5.5] run function cartographer_custom_enchantments:enchant_effects/quake/hit
+scoreboard players operation $damage ca.quake = @s ca.quake
+scoreboard players add $damage ca.quake 2
+scoreboard players operation $damage ca.quake *= $10 ca.CONSTANT
+
+scoreboard players set $success ca.attr_random_crit 0
+execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/random_crit_handler
+
+execute as @e[type=#bb:hostile,distance=..5.5] at @s run function cartographer_custom_enchantments:enchant_effects/quake/hit
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 

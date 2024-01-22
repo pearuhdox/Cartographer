@@ -1,30 +1,25 @@
 #Infinity Refresh
 function cartographer_custom_enchantments:enchant_effects/infinity/kill_handler/tick_down
 
-#Adrenaline
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.adrenaline matches 1.. run function cartographer_custom_enchantments:enchant_effects/adrenaline/master
 #Auto Charge
 execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/auto_charge/count_check
-#Energetic
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.energetic matches 1.. run function cartographer_custom_enchantments:enchant_effects/energetic/master
-#Frenzy
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.frenzy matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy/master
-#Steadfast
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.steadfast matches 1.. run function cartographer_custom_enchantments:enchant_effects/steadfast/master
-#Lifesteal
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal/master
 
-#Quake
-execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/find
+#Check to fire Deadeye
+execute if score @s ca.deadeye matches 1.. run function cartographer_custom_enchantments:enchant_effects/deadeye/chance
 
-#Aquadynamic Refresh
-#Lifesteal
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.aquadynamic matches 1.. run function cartographer_custom_enchantments:enchant_effects/aquadynamic/refresh_kill
+#Effects that can be affected by Curse of Fizzling, do this check here
+execute unless score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_branch
 
-#Melee effects run on melee kills onlye
-execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.deal_mel_dmg matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
-execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.deal_mel_dmg2 matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
-execute if score $cu_en_melee ca.enabler matches 1.. if score @s ca.deal_mel_dmg3 matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
+execute if score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_fizzling/other
+execute if score @s ca.curse_fizzling matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_branch
+
+
+#Check Melee effects that can be affected by Curse of Fizzling
+execute unless score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
+
+execute if score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_fizzling/mainhand
+execute if score @s ca.curse_fizzling matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
+
 
 #Loyalty kickbacks only if the player can recharge loyalty tridents
 execute unless score @s ca.deal_mel_dmg matches 1.. if score @s ca.deal_mel_dmg2 matches 1.. if score @s ca.deal_mel_dmg3 matches 1.. if score @s ca.loyalty_time matches 0.. unless score @s ca.loyalty_refund_cooldown matches 1.. run function cartographer_custom_enchantments:enchant_effects/loyalty/time_refund
@@ -34,6 +29,18 @@ execute if score @s ca.wavedash_time matches 1.. unless score @s ca.deal_mel_dmg
 
 #Rally - Can trigger on any type of attack.
 execute if score $cu_en_passive ca.enabler matches 1.. if score @s ca.rally_time matches 1.. run scoreboard players set @s ca.rally_damage 80
+
+
+#Echo Reset Chance
+execute if score @s ca.echo matches 1.. if score @s ca.resetter_check_kill matches 1..9 run function cartographer_custom_enchantments:enchant_effects/echo/kill
+
+#Evocation Reset Chance
+execute if score @s ca.evocation matches 1.. if score @s ca.resetter_check_kill matches 1..9 run function cartographer_custom_enchantments:enchant_effects/evocation/kill
+
+execute if score @s ca.sweeping matches 1.. run function cartographer_core:helper/combat/check_combat
+execute if score @s ca.slamming matches 1.. run function cartographer_core:helper/combat/check_combat
+execute if score @s ca.thrusting matches 1.. run function cartographer_core:helper/combat/check_combat
+
 
 #Echo Charge Restore
 execute if score @s ca.echo matches 1.. run function cartographer_custom_enchantments:enchant_effects/echo/restore

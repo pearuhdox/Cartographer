@@ -36,6 +36,13 @@ function cartographer_custom_statuses:apply_status/save/mainhand
 
 function #minecraft:cartographer/events/enchantments/tool/eruption
 
+#Calculate Damage to deal
+scoreboard players set $damage ca.eruption 30
+scoreboard players operation $damage ca.eruption *= @s ca.eruption
+
+scoreboard players set $success ca.attr_random_crit 0
+execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/random_crit_handler
+
 #Run branching on the xp orb here.
 execute as @e[type=minecraft:experience_orb,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch
 

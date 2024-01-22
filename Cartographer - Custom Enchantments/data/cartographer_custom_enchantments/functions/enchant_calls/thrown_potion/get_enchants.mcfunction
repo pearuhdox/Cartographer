@@ -25,8 +25,13 @@ scoreboard players operation $p_smite ca.var += @s ca.off_smite
 scoreboard players operation $p_hunter ca.var += @s ca.off_hunter
 scoreboard players operation $p_duelist ca.var += @s ca.off_duelist
 
+scoreboard players operation $p_curse_fizzling ca.var += @s ca.curse_fizzling_main
+scoreboard players operation $p_curse_fizzling ca.var += @s ca.curse_fizzling_off
 
 scoreboard players operation $p_ranged_damage ca.var = @s ca.attr_ranged
+
+scoreboard players operation $p_luck ca.var = @s ca.attr_luck
+scoreboard players operation $p_random_crit ca.var = @s ca.attr_random_crit
 
 scoreboard players operation $potion_size ca.var = @s ca.attr_potion_size
 execute if score $potion_size ca.var matches 21.. run scoreboard players add $potion_size ca.var 8

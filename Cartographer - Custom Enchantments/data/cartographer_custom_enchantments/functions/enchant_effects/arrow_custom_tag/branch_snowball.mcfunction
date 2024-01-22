@@ -21,10 +21,13 @@ scoreboard players operation $duelist ca.var = @s ca.duelist
 scoreboard players operation $hunter ca.var = @s ca.hunter
 scoreboard players operation $smite ca.var = @s ca.smite
 
+scoreboard players operation $curse_fizzling ca.var = @s ca.curse_fizzling
 
 execute on passengers run function cartographer_custom_statuses:player/custom_inflict/projectile_data
 
 
 scoreboard players operation $ranged_damage ca.var = @s ca.attr_ranged
+scoreboard players operation $luck ca.var = @s ca.attr_luck
+scoreboard players operation $random_crit ca.var = @s ca.attr_random_crit
 
 scoreboard players set $attacker_found ca.var 1

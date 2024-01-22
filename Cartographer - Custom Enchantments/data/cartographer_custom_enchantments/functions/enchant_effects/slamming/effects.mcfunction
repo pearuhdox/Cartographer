@@ -19,7 +19,7 @@ function cartographer_custom_enchantments:enchant_effects/on_hit/melee_master
 
 function #minecraft:cartographer/events/enchants_mob_hit/melee/slamming
 
-tag @s add thrusted
+tag @s add ca.slammed
 
 scoreboard players add $success ca.slamming 1
 

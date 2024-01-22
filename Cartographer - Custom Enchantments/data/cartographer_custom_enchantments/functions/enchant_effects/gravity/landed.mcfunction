@@ -3,8 +3,8 @@ scoreboard players set $gravity_mob ca.ench_var 0
 scoreboard players operation $gravity_lvl ca.gravity = @s ca.gravity
 
 scoreboard players operation $gravity_dmg ca.gravity_fall = @s ca.gravity_fall
-scoreboard players operation $gravity_dmg ca.gravity_fall /= $100 ca.CONSTANT
-scoreboard players remove $gravity_dmg ca.gravity_fall 2
+scoreboard players operation $gravity_dmg ca.gravity_fall /= $10 ca.CONSTANT
+
 execute if score $gravity_dmg ca.gravity_fall matches ..-1 run scoreboard players set $gravity_dmg ca.gravity_fall 0
 
 scoreboard players set $fire_aspect ca.weapon_var 0
@@ -35,7 +35,7 @@ scoreboard players operation $smite ca.weapon_var = @s ca.g_smite
 
 
 data modify storage cartographer_custom_enchantments:gravity data.effect set value {}
-data modify storage cartographer_custom_enchantments:gravity data.effect set from entity @s active_effects[{id:"minecraft:jump_boost"}].HiddenEffect
+data modify storage cartographer_custom_enchantments:gravity data.effect set from entity @s active_effects[{id:"minecraft:jump_boost"}].hidden_effect
 
 execute store result score $jb ca.gravity_fall run data get storage cartographer_custom_enchantments:gravity data.effect.amplifier
 
@@ -65,9 +65,27 @@ function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
 
+
+#Gravity damage is (Fall Height / 2) + 20% Attack Dmg Stat per level of Gravity
+
+#Fall Height / 2
+scoreboard players operation $mob_dmg ca.gravity_fall = $gravity_dmg ca.gravity_fall
+scoreboard players operation $mob_dmg ca.gravity_fall /= $2 ca.CONSTANT
+
+#Attack Damage Scalar
+execute store result score $player_add ca.gravity_fall run attribute @s minecraft:generic.attack_damage get 10
+scoreboard players operation $player_add ca.gravity_fall *= $gravity_lvl ca.gravity
+scoreboard players operation $player_add ca.gravity_fall *= $20 ca.CONSTANT
+scoreboard players operation $player_add ca.gravity_fall /= $100 ca.CONSTANT
+
+scoreboard players operation $mob_dmg ca.gravity_fall += $player_add ca.gravity_fall
+
+scoreboard players set $success ca.attr_random_crit 0
+execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/random_crit_handler
+
+
 execute as @e[distance=..3.5,type=#bb:hostile] at @s run function cartographer_custom_enchantments:enchant_effects/gravity/mob
 
-scoreboard players operation $gravity_dmg ca.gravity_fall -= $jb ca.gravity_fall
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 
@@ -75,4 +93,6 @@ execute if score $gravity_mob ca.ench_var matches 1.. run function cartographer_
 
 execute if score $gravity_mob ca.ench_var matches 1.. run function cartographer_custom_statuses:apply_effects/apply/create_aec
 
-execute unless score $gravity_mob ca.ench_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/fall_dmg
+execute if score $gravity_mob ca.ench_var matches 1.. run scoreboard players set $block ca.fall_damage 1
+
+scoreboard players set @s ca.gravity_cd 8

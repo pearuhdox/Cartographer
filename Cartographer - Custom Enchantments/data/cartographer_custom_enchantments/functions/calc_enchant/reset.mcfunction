@@ -109,6 +109,11 @@ scoreboard players set @s ca.curse_two_hnd 0
 scoreboard players set @s ca.curse_regret 0
 scoreboard players set @s ca.curse_unwieldly 0
 
+scoreboard players set @s ca.curse_fizzling_main 0
+scoreboard players set @s ca.curse_fizzling_off 0
+scoreboard players set @s ca.curse_fizzling 0
+scoreboard players set @s ca.curse_fizzling_total 0
+
 scoreboard players set @s ca.hy_fire 0
 scoreboard players set @s ca.hy_knock 0
 scoreboard players set @s ca.hy_exec 0
@@ -122,6 +127,7 @@ scoreboard players set @s ca.t_hex 0
 scoreboard players set @s ca.t_cau 0
 scoreboard players set @s ca.t_hunter 0
 scoreboard players set @s ca.t_duelist 0
+scoreboard players set @s ca.t_smite 0
 
 scoreboard players set @s ca.g_fire 0
 scoreboard players set @s ca.g_knock 0
@@ -132,6 +138,19 @@ scoreboard players set @s ca.g_hex 0
 scoreboard players set @s ca.g_cau 0
 scoreboard players set @s ca.g_hunter 0
 scoreboard players set @s ca.g_duelist 0
+scoreboard players set @s ca.g_smite 0
+
+scoreboard players set @s ca.dead_fire 0
+scoreboard players set @s ca.dead_knock 0
+scoreboard players set @s ca.dead_exec 0
+scoreboard players set @s ca.dead_first 0
+scoreboard players set @s ca.dead_tempo 0
+scoreboard players set @s ca.dead_hex 0
+scoreboard players set @s ca.dead_cau 0
+scoreboard players set @s ca.dead_hunter 0
+scoreboard players set @s ca.dead_duelist 0
+scoreboard players set @s ca.dead_smite 0
+scoreboard players set @s ca.dead_piercing 0
 
 scoreboard players set @s ca.mo_fire 0
 scoreboard players set @s ca.mo_knock 0
@@ -142,6 +161,7 @@ scoreboard players set @s ca.mo_hex 0
 scoreboard players set @s ca.mo_cau 0
 scoreboard players set @s ca.mo_hunter 0
 scoreboard players set @s ca.mo_duelist 0
+scoreboard players set @s ca.mo_smite 0
 
 scoreboard players set @s ca.qu_fire 0
 scoreboard players set @s ca.qu_knock 0
@@ -152,6 +172,7 @@ scoreboard players set @s ca.qu_hex 0
 scoreboard players set @s ca.qu_cau 0
 scoreboard players set @s ca.qu_hunter 0
 scoreboard players set @s ca.qu_duelist 0
+scoreboard players set @s ca.qu_smite 0
 
 scoreboard players set @s ca.sm_fire 0
 scoreboard players set @s ca.sm_knock 0
@@ -162,6 +183,7 @@ scoreboard players set @s ca.sm_hex 0
 scoreboard players set @s ca.sm_cau 0
 scoreboard players set @s ca.sm_hunter 0
 scoreboard players set @s ca.sm_duelist 0
+scoreboard players set @s ca.sm_smite 0
 
 scoreboard players set @s ca.re_fire 0
 scoreboard players set @s ca.re_knock 0
@@ -172,6 +194,7 @@ scoreboard players set @s ca.re_hex 0
 scoreboard players set @s ca.re_cau 0
 scoreboard players set @s ca.re_hunter 0
 scoreboard players set @s ca.re_duelist 0
+scoreboard players set @s ca.re_smite 0
 
 scoreboard players set @s ca.s_adren 0
 scoreboard players set @s ca.s_energ 0
@@ -195,6 +218,8 @@ scoreboard players set @s ca.attr_ranged 0
 scoreboard players set @s ca.attr_ranged_perc 100
 scoreboard players set @s ca.attr_ranged_speed 100
 scoreboard players set @s ca.attr_potion_size 25
+scoreboard players set @s ca.attr_luck 0
+scoreboard players set @s ca.attr_random_crit 0
 
 tag @s remove ca.rust_head
 tag @s remove ca.rust_body
@@ -255,6 +280,13 @@ tag @s remove ca.ce_starfall_head
 tag @s remove ca.ce_starfall_body
 tag @s remove ca.ce_starfall_legs
 tag @s remove ca.ce_starfall_feet
+
+tag @s remove ca.ce_deadeye_main
+tag @s remove ca.ce_deadeye_offh
+tag @s remove ca.ce_deadeye_head
+tag @s remove ca.ce_deadeye_body
+tag @s remove ca.ce_deadeye_legs
+tag @s remove ca.ce_deadeye_feet
 
 tag @s remove ca.check_hp_percent
 

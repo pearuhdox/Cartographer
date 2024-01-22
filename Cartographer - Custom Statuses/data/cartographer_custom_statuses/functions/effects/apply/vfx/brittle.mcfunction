@@ -21,4 +21,4 @@ tag @s add ca.brittle_warmup
 scoreboard players set @s ca.brittle_stored 0
 execute store result score @s ca.brittle_hp run data get entity @s Health 10
 
-function cartographer_custom_statuses:popup/brittle
+execute unless entity @s[type=#cartographer_core:spiders] run function cartographer_custom_statuses:popup/brittle

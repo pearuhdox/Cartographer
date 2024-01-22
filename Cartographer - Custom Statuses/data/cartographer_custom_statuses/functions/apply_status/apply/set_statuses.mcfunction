@@ -19,19 +19,19 @@ execute if data storage cartographer_custom_statuses:apply_status data.effects[{
 execute if score $add ca.effect_bleed matches 0.. run scoreboard players add $add ca.effect_bleed 1
 execute store result score $chance ca.effect_bleed run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"bleeding"}].chance
 execute if score $add ca.effect_bleed matches 1.. run function cartographer_custom_statuses:apply_status/apply/bleed
-execute if score @s ca.effect_bleed matches 1.. run function cartographer_custom_statuses:popup/bleed
+execute if score @s ca.effect_bleed matches 1.. unless entity @s[type=#cartographer_core:spiders] run function cartographer_custom_statuses:popup/bleed
 execute if score @s ca.effect_bleed matches 1.. if entity @s[tag=!ca.bleeding_warmup] run function cartographer_custom_statuses:effects/apply/vfx/bleed
 
 execute store result score $add ca.effect_shock run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"shocked"}].duration
 execute store result score $chance ca.effect_shock run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"shocked"}].chance
 execute if score $add ca.effect_shock matches 1.. run function cartographer_custom_statuses:apply_status/apply/shock
-execute if score @s ca.effect_shock matches 1.. run function cartographer_custom_statuses:popup/shock
+execute if score @s ca.effect_shock matches 1.. unless entity @s[type=#cartographer_core:spiders] run function cartographer_custom_statuses:popup/shock
 execute if score @s ca.effect_shock matches 1.. if entity @s[tag=!ca.shocked_warmup] run function cartographer_custom_statuses:effects/apply/vfx/shocked
 
 execute store result score $add ca.effect_infect run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"infected"}].duration
 execute store result score $chance ca.effect_infect run data get storage cartographer_custom_statuses:apply_status data.effects[{id:"infected"}].chance
 execute if score $add ca.effect_infect matches 1.. run function cartographer_custom_statuses:apply_status/apply/infect
-execute if score @s ca.effect_infect matches 1.. run function cartographer_custom_statuses:popup/infect
+execute if score @s ca.effect_infect matches 1.. unless entity @s[type=#cartographer_core:spiders] run function cartographer_custom_statuses:popup/infect
 execute if score @s ca.effect_infect matches 1.. if entity @s[tag=!ca.infect_warmup] run function cartographer_custom_statuses:effects/apply/vfx/infect
 
 #Stun

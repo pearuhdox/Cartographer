@@ -18,6 +18,15 @@ tag @s remove skip_cauterize
 execute if score @s ca.cauterize_time matches 1 run scoreboard players set @s ca.cauterize_time 0
 execute if predicate cartographer_custom_enchantments:hex_eater/is_on_fire if entity @a[distance=..40,tag=ca.has_cauterize] run function cartographer_custom_enchantments:enchant_effects/on_hit/cauterize/track_fire
 
+#Do Hex Eater Checks
+execute if score @s ca.hex_eater_time matches 1.. run scoreboard players remove @s ca.hex_eater_time 1
+execute if score @s ca.hex_eater_time matches 1.. run scoreboard players set @s ca.hex_eater_time_cleanse 0
+execute if entity @a[distance=..40,tag=ca.has_hex_eater] run function cartographer_custom_enchantments:enchant_effects/on_hit/hex_eater/track
+
+execute if score @s ca.hex_eater_time_cleanse matches 1.. run scoreboard players remove @s ca.hex_eater_time_cleanse 1
+execute if score @s ca.hex_eater_time_cleanse matches 1 run function cartographer_custom_enchantments:enchant_effects/on_hit/hex_eater/cleanse
+
+
 execute if score @s ca.deadeye_time matches 1.. run scoreboard players remove @s ca.deadeye_time 1
 
 #Setup Ricochet Score

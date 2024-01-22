@@ -1,5 +1,7 @@
 
 #Setup all necessary scoreboard commands.
+scoreboard objectives add ca.lexica_ench_trig trigger
+
 scoreboard objectives add ca.auto_charge_count dummy
 scoreboard objectives add ca.auto_charge_req dummy
 
@@ -150,6 +152,8 @@ scoreboard objectives add ca.sprint_dash dummy
 scoreboard objectives add ca.disengage dummy
 
 scoreboard objectives add ca.hex_eater dummy
+scoreboard objectives add ca.hex_eater_time dummy
+scoreboard objectives add ca.hex_eater_time_cleanse dummy
 
 scoreboard objectives add ca.repulsion dummy
 scoreboard objectives add ca.resourceful dummy
@@ -169,6 +173,10 @@ scoreboard objectives add ca.disengage_y dummy
 scoreboard objectives add ca.disengage_z dummy
 
 scoreboard objectives add ca.gravity_fall minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add ca.gravity_cd dummy
+
+scoreboard objectives add ca.fall_damage minecraft.custom:minecraft.fall_one_cm
+
 
 scoreboard objectives add ca.starfall_time dummy
 
@@ -214,6 +222,18 @@ scoreboard objectives add ca.g_tempo dummy
 scoreboard objectives add ca.g_duelist dummy
 scoreboard objectives add ca.g_hunter dummy
 scoreboard objectives add ca.g_smite dummy
+
+scoreboard objectives add ca.dead_fire dummy
+scoreboard objectives add ca.dead_knock dummy
+scoreboard objectives add ca.dead_exec dummy
+scoreboard objectives add ca.dead_hex dummy
+scoreboard objectives add ca.dead_first dummy
+scoreboard objectives add ca.dead_cau dummy
+scoreboard objectives add ca.dead_tempo dummy
+scoreboard objectives add ca.dead_duelist dummy
+scoreboard objectives add ca.dead_hunter dummy
+scoreboard objectives add ca.dead_smite dummy
+scoreboard objectives add ca.dead_piercing dummy
 
 scoreboard objectives add ca.mo_fire dummy
 scoreboard objectives add ca.mo_knock dummy
@@ -321,6 +341,12 @@ scoreboard objectives add ca.curse_regret dummy
 scoreboard objectives add ca.curse_two_hnd dummy
 scoreboard objectives add ca.curse_unwieldly dummy
 
+scoreboard objectives add ca.curse_fizzling_main dummy
+scoreboard objectives add ca.curse_fizzling_off dummy
+scoreboard objectives add ca.curse_fizzling dummy
+scoreboard objectives add ca.curse_fizzling_total dummy
+
+
 scoreboard objectives add ca.rally_mark_dur dummy
 scoreboard objectives add ca.rally_mark_amt dummy
 scoreboard objectives add ca.rally_cooldown dummy
@@ -344,6 +370,8 @@ scoreboard objectives add ca.transfig_id dummy
 
 #Setup ca.evasion bias score.
 scoreboard objectives add ca.evasion_bias dummy
+scoreboard objectives add ca.starfall_bias dummy
+scoreboard objectives add ca.deadeye_bias dummy
 
 scoreboard objectives add ca.recently_fired_weapon dummy
 
@@ -351,6 +379,11 @@ scoreboard objectives add ca.attr_ranged dummy
 scoreboard objectives add ca.attr_ranged_perc dummy
 scoreboard objectives add ca.attr_ranged_speed dummy
 scoreboard objectives add ca.attr_potion_size dummy
+
+scoreboard objectives add ca.attr_luck dummy
+
+scoreboard objectives add ca.attr_random_crit dummy
+scoreboard objectives add ca.attr_random_crit_bias dummy
 
 #Setup Second Wind cooldown timer and bank.
 scoreboard objectives add ca.sw_time dummy

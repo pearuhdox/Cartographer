@@ -27,6 +27,9 @@ scoreboard players operation $temp ca.var += @s ca.duelist
 scoreboard players operation $temp ca.var += @s ca.hunter
 scoreboard players operation $temp ca.var += @s ca.smite
 
+scoreboard players operation $temp ca.var += @s ca.curse_fizzling_main
+scoreboard players operation $temp ca.var += @s ca.curse_fizzling_off
+
 #if score $temp ca.var matches 1.. 
 
 execute at @s as @e[type=#cartographer_custom_enchantments:bow_allowed_projectile,tag=!custom_arrow,distance=..12,nbt=!{inGround:1b}] run function cartographer_custom_enchantments:enchant_effects/branch/check_player_branch

@@ -54,12 +54,12 @@ function cartographer_custom_enchantments:calc_enchant/find_custom
 
 
 #For each custom item found, run the proper calculation function.
-execute if entity @s[tag=ca.check_head] run function cartographer_custom_enchantments:calc_enchant/head
-execute if entity @s[tag=ca.check_body] run function cartographer_custom_enchantments:calc_enchant/chest
-execute if entity @s[tag=ca.check_legs] run function cartographer_custom_enchantments:calc_enchant/legs
-execute if entity @s[tag=ca.check_feet] run function cartographer_custom_enchantments:calc_enchant/feet
-execute unless score $hold_armor_m ca.ench_var matches 1.. run function cartographer_custom_enchantments:calc_enchant/mainhand
-execute unless score $hold_armor_o ca.ench_var matches 1.. run function cartographer_custom_enchantments:calc_enchant/offhand
+execute if entity @s[tag=ca.check_head] run function cartographer_custom_enchantments:calc_enchant/slot_calc/head
+execute if entity @s[tag=ca.check_body] run function cartographer_custom_enchantments:calc_enchant/slot_calc/chest
+execute if entity @s[tag=ca.check_legs] run function cartographer_custom_enchantments:calc_enchant/slot_calc/legs
+execute if entity @s[tag=ca.check_feet] run function cartographer_custom_enchantments:calc_enchant/slot_calc/feet
+execute unless score $hold_armor_m ca.ench_var matches 1.. run function cartographer_custom_enchantments:calc_enchant/slot_calc/mainhand
+execute unless score $hold_armor_o ca.ench_var matches 1.. run function cartographer_custom_enchantments:calc_enchant/slot_calc/offhand
 
 execute if score $gl_enc_wr ca.gamerule matches 1.. if score $hold_armor_m ca.ench_var matches 1.. run function cartographer_custom_enchantments:descriptions/write/main
 
@@ -69,6 +69,7 @@ execute if score @s ca.starfall matches 1.. run function cartographer_custom_enc
 execute if score @s ca.quake matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/quake/master
 execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/momentum/master
 execute if score @s ca.repulsion matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/repulsion/master
+execute if score @s ca.deadeye matches 1.. run function cartographer_custom_enchantments:calc_enchant/proc_enchant_calc/deadeye/master
 
 execute if score @s ca.hydraulic matches 1.. run function cartographer_custom_enchantments:calc_enchant/hydraulic
 
