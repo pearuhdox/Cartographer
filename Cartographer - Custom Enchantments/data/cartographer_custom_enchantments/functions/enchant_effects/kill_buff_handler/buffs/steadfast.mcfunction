@@ -1,0 +1,10 @@
+execute if score @s ca.steadfast_lvl matches 1 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 0.5 add
+execute if score @s ca.steadfast_lvl matches 2 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 1.0 add
+execute if score @s ca.steadfast_lvl matches 3 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 1.5 add
+execute if score @s ca.steadfast_lvl matches 4 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 2.0 add
+execute if score @s ca.steadfast_lvl matches 5 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 2.5 add
+execute if score @s ca.steadfast_lvl matches 6 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 3.0 add
+execute if score @s ca.steadfast_lvl matches 7 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 3.5 add
+execute if score @s ca.steadfast_lvl matches 8 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 4.0 add
+execute if score @s ca.steadfast_lvl matches 9 run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 4.5 add
+execute if score @s ca.steadfast_lvl matches 10.. run attribute @s minecraft:generic.armor modifier add 31-119-1212-2216-0 "steadfast_buff" 5.0 add

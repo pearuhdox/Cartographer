@@ -21,6 +21,7 @@ execute as @s[scores={ca.repeating=11..17,ca.rpt_cdl=1},nbt={Inventory:[{Slot:-1
 execute as @s[scores={ca.repeating=1..7},nbt={SelectedItem:{tag:{Ammo:0,Charged:1b}}}] at @s run function cartographer_custom_enchantments:enchant_effects/repeating/reload
 execute as @s[scores={ca.repeating=11..17},nbt={Inventory:[{Slot:-106b,tag:{Charged:1b,Ammo:0}}]}] at @s run function cartographer_custom_enchantments:enchant_effects/repeating/reload
 
+
 #Spurs
 execute as @s[scores={ca.spurs=1..}] at @s if block ~ ~ ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs/master
 execute as @s[scores={ca.spurs=1..}] at @s if block ~ ~1 ~ #cartographer_custom_enchantments:spurs run function cartographer_custom_enchantments:enchant_effects/spurs/master

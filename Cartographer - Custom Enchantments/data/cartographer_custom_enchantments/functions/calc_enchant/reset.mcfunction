@@ -128,6 +128,7 @@ scoreboard players set @s ca.t_cau 0
 scoreboard players set @s ca.t_hunter 0
 scoreboard players set @s ca.t_duelist 0
 scoreboard players set @s ca.t_smite 0
+scoreboard players set @s ca.t_aoe 0
 
 scoreboard players set @s ca.g_fire 0
 scoreboard players set @s ca.g_knock 0
@@ -220,6 +221,7 @@ scoreboard players set @s ca.attr_ranged_speed 100
 scoreboard players set @s ca.attr_potion_size 25
 scoreboard players set @s ca.attr_luck 0
 scoreboard players set @s ca.attr_random_crit 0
+scoreboard players set @s ca.attr_aoe_size 0
 
 tag @s remove ca.rust_head
 tag @s remove ca.rust_body

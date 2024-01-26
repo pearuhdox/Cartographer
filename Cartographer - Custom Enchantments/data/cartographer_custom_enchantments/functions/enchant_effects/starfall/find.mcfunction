@@ -54,6 +54,8 @@ scoreboard players operation $damage ca.starfall *= $10 ca.CONSTANT
 scoreboard players set $success ca.attr_random_crit 0
 execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/random_crit_handler
 
+scoreboard players set $size ca.attr_aoe_size 20
+function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
 
 execute as @e[type=#bb:hostile,distance=..24,limit=1,sort=random,tag=!ca.starfalled] at @s run function cartographer_custom_enchantments:enchant_effects/starfall/hit
 

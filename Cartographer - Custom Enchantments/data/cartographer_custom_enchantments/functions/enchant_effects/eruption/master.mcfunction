@@ -43,6 +43,8 @@ scoreboard players operation $damage ca.eruption *= @s ca.eruption
 scoreboard players set $success ca.attr_random_crit 0
 execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/random_crit_handler
 
+scoreboard players operation $aoe_size ca.eruption = @s ca.attr_aoe_size
+
 #Run branching on the xp orb here.
 execute as @e[type=minecraft:experience_orb,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch
 

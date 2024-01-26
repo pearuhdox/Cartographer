@@ -20,6 +20,7 @@ data modify storage cartographer_custom_statuses:player_equip main set from stor
 
 tag @s remove ca.override_melee
 tag @s remove ca.override_ranged
+tag @s remove ca.override_basic
 tag @s remove ca.override_crit
 tag @s remove ca.override_sprint
 tag @s remove ca.override_sneak
@@ -40,6 +41,13 @@ tag @s remove ca.override_ranged_l
 tag @s remove ca.override_ranged_f
 tag @s remove ca.override_ranged_m
 tag @s remove ca.override_ranged_o
+
+tag @s remove ca.override_basic_h
+tag @s remove ca.override_basic_b
+tag @s remove ca.override_basic_l
+tag @s remove ca.override_basic_f
+tag @s remove ca.override_basic_m
+tag @s remove ca.override_basic_o
 
 tag @s remove ca.override_crit_h
 tag @s remove ca.override_crit_b

@@ -83,13 +83,15 @@ scoreboard players operation $mob_dmg ca.gravity_fall += $player_add ca.gravity_
 scoreboard players set $success ca.attr_random_crit 0
 execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/random_crit_handler
 
+scoreboard players set $size ca.attr_aoe_size 35
+function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
 
-execute as @e[distance=..3.5,type=#bb:hostile] at @s run function cartographer_custom_enchantments:enchant_effects/gravity/mob
+function cartographer_custom_enchantments:enchant_effects/gravity/macro with storage cartographer:macro.custom_enchantments
 
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 
-execute if score $gravity_mob ca.ench_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/vfx
+execute if score $gravity_mob ca.ench_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/vfx with storage cartographer:macro.custom_enchantments
 
 execute if score $gravity_mob ca.ench_var matches 1.. run function cartographer_custom_statuses:apply_effects/apply/create_aec
 

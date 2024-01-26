@@ -39,10 +39,19 @@ function cartographer_custom_statuses:apply_effects/save/mainhand
 function cartographer_custom_statuses:apply_self/save/mainhand
 function cartographer_custom_statuses:apply_status/save/mainhand
 
-scoreboard players set @s ca.raycast 9
-execute if score @s ca.sprint matches 1.. run scoreboard players set @s ca.raycast 15
+
+scoreboard players set $size ca.attr_aoe_size 90
+function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
+
+execute if score @s ca.sprint matches 1.. run scoreboard players operation $size ca.attr_aoe_size *= $150 ca.CONSTANT
+execute if score @s ca.sprint matches 1.. run scoreboard players operation $size ca.attr_aoe_size /= $100 ca.CONSTANT
+
+scoreboard players operation $size ca.attr_aoe_size /= $10 ca.CONSTANT
+
+scoreboard players operation @s ca.raycast = $size ca.attr_aoe_size
 
 scoreboard players set $success ca.thrusting 0
+
 execute anchored eyes positioned ^ ^-0.4 ^1 rotated ~ 0 run function cartographer_custom_enchantments:enchant_effects/thrusting/raycast
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300

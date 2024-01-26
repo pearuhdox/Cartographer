@@ -1,4 +1,4 @@
-execute if score @s ca.adrenaline matches 7.. run scoreboard players set @s ca.adrenaline 6
+execute if score @s ca.adrenaline matches 11.. run scoreboard players set @s ca.adrenaline 10
 execute if score @s ca.agility matches 4.. run scoreboard players set @s ca.agility 3
 execute if score @s ca.aquadynamic matches 2.. run scoreboard players set @s ca.aquadynamic 1
 execute if score @s ca.s_cleansing matches 2.. run scoreboard players set @s ca.s_cleansing 1
@@ -12,10 +12,10 @@ execute if score @s ca.deadeye matches 11.. run scoreboard players set @s ca.dea
 execute if score @s ca.duelist matches 6.. run scoreboard players set @s ca.duelist 5
 execute if score @s ca.eruption matches 6.. run scoreboard players set @s ca.eruption 5
 execute if score @s ca.evasion matches 21.. run scoreboard players set @s ca.evasion 20
-execute if score @s ca.energetic matches 7.. run scoreboard players set @s ca.energetic 6
+execute if score @s ca.energetic matches 11.. run scoreboard players set @s ca.energetic 10
 execute if score @s ca.fleetfoot matches 2.. run scoreboard players set @s ca.fleetfoot 1
-execute if score @s ca.frenzy matches 7.. run scoreboard players set @s ca.frenzy 6
-execute if score @s ca.steadfast matches 7.. run scoreboard players set @s ca.steadfast 6
+execute if score @s ca.frenzy matches 11.. run scoreboard players set @s ca.frenzy 10
+execute if score @s ca.steadfast matches 11.. run scoreboard players set @s ca.steadfast 10
 execute if score @s ca.frostbite matches 6.. run scoreboard players set @s ca.frostbite 5
 execute if score @s ca.frost matches 2.. run scoreboard players set @s ca.frost 1
 execute if score @s ca.hunter matches 6.. run scoreboard players set @s ca.hunter 5
@@ -138,3 +138,6 @@ execute if score @s ca.attr_potion_size matches 71.. run scoreboard players set 
 
 execute if score @s ca.attr_luck matches 101.. run scoreboard players set @s ca.attr_luck 100
 execute if score @s ca.attr_luck matches ..-101 run scoreboard players set @s ca.attr_luck -100
+
+execute if score @s ca.attr_aoe_size matches 101.. run scoreboard players set @s ca.attr_aoe_size 100
+execute if score @s ca.attr_aoe_size matches ..-101 run scoreboard players set @s ca.attr_aoe_size -100

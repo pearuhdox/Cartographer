@@ -302,6 +302,10 @@ scoreboard players set $temp ca.susu 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomAttributes[{id:"random_crit"}].amount 100
 execute unless score $temp ca.susu matches 0 run scoreboard players operation @s ca.attr_random_crit += $temp ca.susu
 
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomAttributes[{id:"aoe_size"}].amount 100
+execute unless score $temp ca.susu matches 0 run scoreboard players operation @s ca.attr_aoe_size += $temp ca.susu
+
 #Also get the ammo of a repeating crossbow in the main or offhand
 scoreboard players set @s ca.ammo_off 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.Ammo

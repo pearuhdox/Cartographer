@@ -82,6 +82,9 @@ execute unless score @s ca.evasion matches 1.. run tag @s remove evading
 #Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
 execute if entity @s[tag=has_passive_ench] run function cartographer_custom_enchantments:enchant_calls/passively
 
+#Do Crossbow Reload Check
+execute if score @s ca.is_load_cro matches 1.. if entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] run function cartographer_custom_enchantments:enchant_calls/load_crossbow
+
 #Ramp up Loyalty Time
 execute if score @s ca.loyalty_time matches 1.. run scoreboard players add @s ca.loyalty_time 1
 
@@ -96,7 +99,7 @@ execute unless block ~ ~-0.2 ~ #cartographer_core:can_raycast unless score @s ca
 execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
 
 #Run Repulsion
-execute if score @s ca.repulsion matches 1.. unless score @s ca.repulsion_time matches 1.. if score @s ca.load_cro_time matches 5.. if entity @e[type=#bb:hostile,distance=..3] run function cartographer_custom_enchantments:enchant_effects/repulsion/activate
+execute if score @s ca.repulsion matches 1.. unless score @s ca.repulsion_time matches 1.. if score @s ca.load_cro_time matches 5.. run function cartographer_custom_enchantments:enchant_effects/repulsion/activate
 execute if score @s ca.repulsion_time matches 1.. unless score @s ca.load_cro_time matches 5.. run scoreboard players remove @s ca.repulsion_time 1
 
 #Make ranged attack triggers.

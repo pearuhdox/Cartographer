@@ -1,0 +1,1 @@
+$execute anchored eyes positioned ^ ^-0.5 ^$(size) positioned ~-$(size_half) ~ ~-$(size_half) as @e[type=#bb:hostile,dx=$(size),dy=1,dz=$(size)] at @s run function cartographer_custom_enchantments:enchant_effects/sweeping/effects with storage cartographer:macro.custom_enchantments

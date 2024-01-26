@@ -20,6 +20,7 @@ scoreboard players operation $curse_fizzling ca.var = @s ca.curse_fizzling
 scoreboard players operation $ranged_damage ca.var = @s ca.attr_ranged
 scoreboard players operation $luck ca.var = @s ca.attr_luck
 scoreboard players operation $random_crit ca.var = @s ca.attr_random_crit
+scoreboard players operation $aoe_size ca.var = @s ca.attr_aoe_size
 
 #Get the Wavedash ID if Wavedash exists
 execute if score @s ca.wavedash matches 1.. run function cartographer_custom_enchantments:enchant_effects/wavedash/get_id

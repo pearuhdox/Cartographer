@@ -22,3 +22,6 @@ scoreboard players operation @s ca.t_knock += $temp ca.susu
 
 execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.Enchantments[{id:"minecraft:smite"}].lvl
 scoreboard players operation @s ca.t_smite += $temp ca.susu
+
+execute store result score $temp ca.susu run data get storage ca.susu:enchants thorns_items.legs.tag.ThornsAoE
+scoreboard players operation @s ca.t_aoe += $temp ca.susu

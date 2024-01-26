@@ -1,4 +1,4 @@
-execute run tp @s ~ ~ ~ facing entity @e[type=experience_orb,tag=erupting_xp,distance=..8,limit=1,sort=nearest] feet
+$tp @s ~ ~ ~ facing entity @e[type=experience_orb,tag=erupting_xp,distance=..$(size),limit=1,sort=nearest] feet
 
 scoreboard players set @s co_y 3
 scoreboard players set @s co_send -5

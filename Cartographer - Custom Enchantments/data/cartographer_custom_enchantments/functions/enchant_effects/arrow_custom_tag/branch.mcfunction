@@ -30,5 +30,6 @@ execute on passengers run function cartographer_custom_statuses:player/custom_in
 scoreboard players operation $ranged_damage ca.var = @s ca.attr_ranged
 scoreboard players operation $luck ca.var = @s ca.attr_luck
 scoreboard players operation $random_crit ca.var = @s ca.attr_random_crit
+scoreboard players operation $aoe_size ca.var = @s ca.attr_aoe_size
 
 scoreboard players set $attacker_found ca.var 1

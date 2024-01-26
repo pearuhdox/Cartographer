@@ -8,6 +8,10 @@ execute unless score $temp ca.status_var matches 1.. store success score $temp c
 execute if score $temp ca.status_var matches 1 run tag @s add ca.override_ranged
 execute if score $temp ca.status_var matches 1 run scoreboard players set $temp ca.status_var 2
 
+execute unless score $temp ca.status_var matches 1.. store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip body.tag.OverrideBasic run tag @s add ca.override_basic_h
+execute if score $temp ca.status_var matches 1 run tag @s add ca.override_basic
+execute if score $temp ca.status_var matches 1 run scoreboard players set $temp ca.status_var 2
+
 execute unless score $temp ca.status_var matches 1.. store success score $temp ca.status_var if data storage cartographer_custom_statuses:player_equip head.tag.OverrideCrit run tag @s add ca.override_crit_h
 execute if score $temp ca.status_var matches 1 run tag @s add ca.override_crit
 execute if score $temp ca.status_var matches 1 run scoreboard players set $temp ca.status_var 2

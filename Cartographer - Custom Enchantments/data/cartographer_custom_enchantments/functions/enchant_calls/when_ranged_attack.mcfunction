@@ -53,6 +53,9 @@ execute unless score $attacker_found ca.var matches 1.. at @s as @e[distance=..3
 #Copy over luck stat
 scoreboard players operation @s ca.attr_luck = $luck ca.var
 
+#Copy over aoe stat
+scoreboard players operation @s ca.attr_aoe_size = $aoe_size ca.var
+
 #Point Blank - Runs before Custom Damage
 execute if score $point_blank ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/point_blank/player_test
 #Sharpshot - Runs before Custom Damage

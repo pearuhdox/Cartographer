@@ -24,5 +24,6 @@ scoreboard players set $attr_ranged_speed ca.var 0
 scoreboard players set $attr_potion_size ca.var 0
 scoreboard players set $attr_luck ca.var 0
 scoreboard players set $attr_random_crit ca.var 0
+scoreboard players set $attr_aoe_size ca.var 0
 
 scoreboard players set $multishot ca.var 0

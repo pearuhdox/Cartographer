@@ -1,6 +1,8 @@
 data modify storage cartographer_custom_statuses:apply_status debug.effects set value []
 data modify storage cartographer_custom_statuses:apply_status debug.effects set from storage cartographer_custom_statuses:apply_status data.effects
 
+execute on attacker run scoreboard players operation $luck ca.status_var = @s ca.attr_luck
+
 #Reset Success
 scoreboard players set $success ca.status_var 0
 

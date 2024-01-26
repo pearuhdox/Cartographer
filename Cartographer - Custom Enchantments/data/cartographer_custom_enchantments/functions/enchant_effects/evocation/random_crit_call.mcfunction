@@ -1,3 +1,9 @@
+#Save Status Data
+scoreboard players set $do_apply_effects ca.status_var 0
+scoreboard players set $do_apply_status ca.status_var 0
+
+execute if score $custom_statuses ca.installed matches 1.. run function cartographer_custom_statuses:calls/player_hit/melee
+
 scoreboard players set $fire_aspect ca.weapon_var 0
 scoreboard players set $knockback ca.weapon_var 0
 

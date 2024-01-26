@@ -5,41 +5,4 @@ playsound minecraft:block.netherite_block.break player @a[distance=..12] ~ ~ ~ 2
 playsound minecraft:block.netherite_block.break player @a[distance=..12] ~ ~ ~ 2 0.5
 playsound minecraft:block.netherite_block.break player @a[distance=..12] ~ ~ ~ 2 0.5
 
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^2 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^2 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^3 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^3 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^4 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^4 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^5 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^6 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^6 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^2.5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^2.5 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^3.5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^3.5 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^4.5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^4.5 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-30 0 run particle minecraft:cloud ^ ^ ^5.5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~30 0 run particle minecraft:cloud ^ ^ ^5.5 0 0 0 0 1 force
-
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-20 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-15 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-10 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~-5 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-execute anchored eyes positioned ^1 ^-0.75 ^1 rotated ~ 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~20 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~15 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~10 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~5 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
-execute anchored eyes positioned ^-1 ^-0.75 ^1 rotated ~ 0 run particle minecraft:cloud ^ ^ ^6.5 0 0 0 0 1 force
+$execute positioned ^ ^1 ^1 positioned ^ ^ ^$(size_half_d) run function cartographer_custom_enchantments:enchant_effects/momentum/circle with storage cartographer:macro.custom_enchantments

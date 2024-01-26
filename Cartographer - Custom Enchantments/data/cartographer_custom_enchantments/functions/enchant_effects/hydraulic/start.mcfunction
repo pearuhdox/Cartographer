@@ -32,8 +32,6 @@ playsound minecraft:item.trident.throw player @a[distance=..8] ~ ~ ~ 1 0.75
 #execute positioned ^ ^ ^3 run particle minecraft:cloud ~ ~0.5 ~ 0 0 0 0.2 10
 #execute positioned ^ ^ ^3 run particle minecraft:splash ~ ~0.5 ~ 1 0.7 1 1 300
 
-execute positioned ~ ~0.35 ~ run function cartographer_custom_enchantments:enchant_effects/hydraulic/circle
-
 
 scoreboard players set $fire_aspect ca.weapon_var 0
 scoreboard players set $knockback ca.weapon_var 0
@@ -74,7 +72,12 @@ function cartographer_custom_statuses:apply_effects/save/additive/do
 function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
-execute as @e[type=#bb:hostile,distance=..5] at @s run function cartographer_custom_enchantments:enchant_effects/hydraulic/enemy_branch
+scoreboard players set $size ca.attr_aoe_size 45
+function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
+
+function cartographer_custom_enchantments:enchant_effects/hydraulic/macro with storage cartographer:macro.custom_enchantments
+
+execute positioned ~ ~0.35 ~ run function cartographer_custom_enchantments:enchant_effects/hydraulic/circle with storage cartographer:macro.custom_enchantments
 
 function cartographer_custom_statuses:apply_effects/apply/create_aec
 

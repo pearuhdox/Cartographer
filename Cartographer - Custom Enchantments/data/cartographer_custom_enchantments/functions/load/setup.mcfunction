@@ -278,6 +278,7 @@ scoreboard objectives add ca.t_tempo dummy
 scoreboard objectives add ca.t_duelist dummy
 scoreboard objectives add ca.t_hunter dummy
 scoreboard objectives add ca.t_smite dummy
+scoreboard objectives add ca.t_aoe dummy
 
 scoreboard objectives add ca.re_fire dummy
 scoreboard objectives add ca.re_frost dummy
@@ -384,6 +385,8 @@ scoreboard objectives add ca.attr_luck dummy
 
 scoreboard objectives add ca.attr_random_crit dummy
 scoreboard objectives add ca.attr_random_crit_bias dummy
+
+scoreboard objectives add ca.attr_aoe_size dummy
 
 #Setup Second Wind cooldown timer and bank.
 scoreboard objectives add ca.sw_time dummy

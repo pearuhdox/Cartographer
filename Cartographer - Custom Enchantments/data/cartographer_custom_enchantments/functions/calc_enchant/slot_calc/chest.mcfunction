@@ -152,5 +152,9 @@ scoreboard players set $temp ca.susu 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants body.tag.CustomAttributes[{id:"random_crit"}].amount 100
 execute unless score $temp ca.susu matches 0 run scoreboard players operation @s ca.attr_random_crit += $temp ca.susu
 
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants body.tag.CustomAttributes[{id:"aoe_size"}].amount 100
+execute unless score $temp ca.susu matches 0 run scoreboard players operation @s ca.attr_aoe_size += $temp ca.susu
+
 execute store result score $temp ca.susu run data get storage ca.susu:enchants body.tag.CustomEnchantments[{id:"unbreaking"}].lvl
 execute if score $temp ca.susu matches 1.. run tag @s add ca.unb_body

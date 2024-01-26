@@ -32,6 +32,8 @@ scoreboard players operation @s ca.curse_fizzling = $curse_fizzling ca.var
 
 scoreboard players operation @s ca.attr_luck = $attr_luck ca.var
 
+scoreboard players operation @s ca.attr_aoe_size = $attr_aoe_size ca.var
+
 scoreboard players operation @s ca.attr_random_crit = $attr_random_crit ca.var
 
 execute unless score $ignore_arrow_ench ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/branch/grab_arrow_data

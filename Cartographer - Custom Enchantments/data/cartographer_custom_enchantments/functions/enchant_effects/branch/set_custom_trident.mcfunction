@@ -37,6 +37,7 @@ scoreboard players operation @s ca.curse_fizzling += @p ca.curse_fizzling_main
 scoreboard players operation @s ca.curse_fizzling += @p ca.curse_fizzling_off
 
 scoreboard players operation @s ca.attr_luck += @p ca.attr_luck
+scoreboard players operation @s ca.attr_aoe_size += @p ca.attr_aoe_size
 
 scoreboard players operation @s ca.attr_random_crit += @p ca.attr_random_crit
 

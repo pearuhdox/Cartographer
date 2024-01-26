@@ -11,6 +11,8 @@ scoreboard players set @s co_y 2
 scoreboard players set @s co_send -5
 function motion:motion/push
 
+particle minecraft:cloud ~ ~1 ~ 0.2 0.2 0.2 0.05 4 normal
+
 #Run On Hit Enchantments
 function cartographer_custom_enchantments:enchant_effects/on_hit/melee_master
 

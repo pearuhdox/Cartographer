@@ -1,0 +1,1 @@
+$execute positioned ~-$(size_half) ~ ~-$(size_half) as @e[type=#bb:hostile,dx=$(size),dz=$(size),dy=3] at @s run function cartographer_custom_enchantments:enchant_effects/starfall/hit_branch

@@ -26,6 +26,7 @@ scoreboard players operation $attr_ranged_speed ca.var += @s ca.attr_ranged_spee
 scoreboard players operation $attr_potion_size ca.var += @s ca.attr_potion_size
 
 scoreboard players operation $attr_luck ca.var += @s ca.attr_luck
+scoreboard players operation $attr_aoe_size ca.var += @s ca.attr_aoe_size
 
 scoreboard players operation $attr_random_crit ca.var += @s ca.attr_random_crit
 

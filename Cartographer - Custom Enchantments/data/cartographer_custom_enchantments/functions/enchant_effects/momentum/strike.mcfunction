@@ -59,13 +59,17 @@ function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
 
-execute positioned ^ ^ ^3 as @e[type=#bb:hostile,distance=..4.5] run function cartographer_custom_enchantments:enchant_effects/momentum/hit
+scoreboard players set $size ca.attr_aoe_size 45
+function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
+
+function cartographer_custom_enchantments:enchant_effects/momentum/macro with storage cartographer:macro.custom_enchantments
+
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 
 function cartographer_custom_statuses:apply_effects/apply/create_aec
 
-function cartographer_custom_enchantments:enchant_effects/momentum/vfx
+function cartographer_custom_enchantments:enchant_effects/momentum/vfx with storage cartographer:macro.custom_enchantments
 
 function #minecraft:cartographer/events/enchantments/passive/momentum
 

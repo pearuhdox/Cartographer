@@ -9,6 +9,10 @@ scoreboard players operation $percent ca.shrapnel *= $shrapnel ca.var
 scoreboard players operation $damage ca.shrapnel *= $percent ca.shrapnel
 scoreboard players operation $damage ca.shrapnel /= $100 ca.CONSTANT
 
+scoreboard players set $size ca.attr_aoe_size 60
+function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
+
+scoreboard players operation $size ca.attr_aoe_size /= $10 ca.CONSTANT
 
 execute on attacker run tag @s add ca.shrapnel_player
 

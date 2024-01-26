@@ -26,6 +26,9 @@ scoreboard players operation $duelist ca.weapon_var = @s ca.t_duelist
 scoreboard players operation $hunter ca.weapon_var = @s ca.t_hunter
 scoreboard players operation $smite ca.weapon_var = @s ca.t_smite
 
+scoreboard players operation $aoe ca.thorns = @s ca.t_aoe
+
+
 function #minecraft:cartographer/events/enchantments/passive/thorns
 
 execute if entity @s[tag=ca.ae_main] if entity @s[tag=ca.ce_thorns_main] run tag @s add ca.check_ae_main
@@ -61,7 +64,12 @@ function cartographer_custom_statuses:apply_effects/save/additive/do
 function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
-execute at @s as @e[type=#bb:hostile,tag=thorns_mark,distance=..30] at @s run function cartographer_custom_enchantments:enchant_effects/thorns/effects
+execute unless score $aoe ca.thorns matches 1.. at @s as @e[type=#bb:hostile,tag=thorns_mark,distance=..30] at @s run function cartographer_custom_enchantments:enchant_effects/thorns/effects
+
+
+execute if score $aoe ca.thorns matches 1.. run scoreboard players set $size ca.attr_aoe_size 40
+execute if score $aoe ca.thorns matches 1.. run function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
+execute if score $aoe ca.thorns matches 1.. run function cartographer_custom_enchantments:enchant_effects/thorns/macro with storage cartographer:macro.custom_enchantments
 
 function cartographer_custom_statuses:apply_self/apply/create_aec
 
