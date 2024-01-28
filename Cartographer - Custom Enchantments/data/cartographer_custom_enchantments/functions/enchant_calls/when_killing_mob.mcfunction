@@ -7,18 +7,18 @@ execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_cu
 #Check to fire Deadeye
 execute if score @s ca.deadeye matches 1.. run function cartographer_custom_enchantments:enchant_effects/deadeye/chance
 
-#Effects that can be affected by Curse of Fizzling, do this check here
-execute unless score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_branch
+#Effects that can be affected by Curse of misfortune, do this check here
+execute unless score @s ca.curse_misfortune matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_branch
 
-execute if score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_fizzling/other
-execute if score @s ca.curse_fizzling matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_branch
+execute if score @s ca.curse_misfortune matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_misfortune/other
+execute if score @s ca.curse_misfortune matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_branch
 
 
-#Check Melee effects that can be affected by Curse of Fizzling
-execute unless score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
+#Check Melee effects that can be affected by Curse of misfortune
+execute unless score @s ca.curse_misfortune matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
 
-execute if score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_fizzling/mainhand
-execute if score @s ca.curse_fizzling matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
+execute if score @s ca.curse_misfortune matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_misfortune/mainhand
+execute if score @s ca.curse_misfortune matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob_melee
 
 
 #Loyalty kickbacks only if the player can recharge loyalty tridents

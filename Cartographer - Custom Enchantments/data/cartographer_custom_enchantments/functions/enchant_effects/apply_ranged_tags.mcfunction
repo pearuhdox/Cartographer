@@ -27,8 +27,8 @@ scoreboard players operation $temp ca.var += @s ca.duelist
 scoreboard players operation $temp ca.var += @s ca.hunter
 scoreboard players operation $temp ca.var += @s ca.smite
 
-scoreboard players operation $temp ca.var += @s ca.curse_fizzling_main
-scoreboard players operation $temp ca.var += @s ca.curse_fizzling_off
+scoreboard players operation $temp ca.var += @s ca.curse_misfortune_main
+scoreboard players operation $temp ca.var += @s ca.curse_misfortune_off
 
 #if score $temp ca.var matches 1.. 
 

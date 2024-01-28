@@ -119,6 +119,9 @@ scoreboard objectives add ca.raycast dummy
 #Create lifetime score
 scoreboard objectives add ca.lifetime dummy
 
+#Create abs handler score
+scoreboard objectives add ca.abs_handler dummy
+scoreboard objectives add ca.abs_time dummy
 
 #Create scores for custom damage
 scoreboard objectives add bbl.damage_queue dummy

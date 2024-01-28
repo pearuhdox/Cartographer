@@ -12,11 +12,15 @@ scoreboard objectives add ca.adrenaline dummy
 scoreboard objectives add ca.agility dummy
 scoreboard objectives add ca.aquadynamic dummy
 scoreboard objectives add ca.auto_charge dummy
+
 scoreboard objectives add ca.s_cleansing dummy
 scoreboard objectives add ca.f_cleansing dummy
 scoreboard objectives add ca.w_cleansing dummy
 scoreboard objectives add ca.p_cleansing dummy
 scoreboard objectives add ca.wi_cleansing dummy
+scoreboard objectives add ca.fi_cleansing dummy
+scoreboard objectives add ca.cleanse_stacks dummy
+
 scoreboard objectives add ca.exposing dummy
 scoreboard objectives add ca.concealed dummy
 scoreboard objectives add ca.current dummy
@@ -35,11 +39,11 @@ scoreboard objectives add ca.repulsion_time dummy
 scoreboard objectives add ca.frenzy_main dummy
 scoreboard objectives add ca.adrenaline_main dummy
 scoreboard objectives add ca.energetic_main dummy
-scoreboard objectives add ca.steadfast_main dummy
+scoreboard objectives add ca.lifeblood_main dummy
 scoreboard objectives add ca.concealed_main dummy
 
 
-scoreboard objectives add ca.steadfast dummy
+scoreboard objectives add ca.lifeblood dummy
 scoreboard objectives add ca.energetic dummy
 scoreboard objectives add ca.eruption dummy
 scoreboard objectives add ca.evasion dummy
@@ -147,6 +151,7 @@ scoreboard objectives add ca.poise dummy
 
 scoreboard objectives add ca.shielding dummy
 scoreboard objectives add ca.shielding_time dummy
+scoreboard objectives add ca.shielding_cdl dummy
 
 scoreboard objectives add ca.sprint_dash dummy
 scoreboard objectives add ca.disengage dummy
@@ -342,10 +347,10 @@ scoreboard objectives add ca.curse_regret dummy
 scoreboard objectives add ca.curse_two_hnd dummy
 scoreboard objectives add ca.curse_unwieldly dummy
 
-scoreboard objectives add ca.curse_fizzling_main dummy
-scoreboard objectives add ca.curse_fizzling_off dummy
-scoreboard objectives add ca.curse_fizzling dummy
-scoreboard objectives add ca.curse_fizzling_total dummy
+scoreboard objectives add ca.curse_misfortune_main dummy
+scoreboard objectives add ca.curse_misfortune_off dummy
+scoreboard objectives add ca.curse_misfortune dummy
+scoreboard objectives add ca.curse_misfortune_total dummy
 
 
 scoreboard objectives add ca.rally_mark_dur dummy
@@ -387,6 +392,10 @@ scoreboard objectives add ca.attr_random_crit dummy
 scoreboard objectives add ca.attr_random_crit_bias dummy
 
 scoreboard objectives add ca.attr_aoe_size dummy
+
+scoreboard objectives add ca.take_damage minecraft.custom:minecraft.damage_taken
+scoreboard objectives add ca.take_damage_a minecraft.custom:minecraft.damage_absorbed
+
 
 #Setup Second Wind cooldown timer and bank.
 scoreboard objectives add ca.sw_time dummy
@@ -516,12 +525,10 @@ scoreboard objectives add ca.weapon_var dummy
 scoreboard objectives add ca.adrenaline_dur dummy
 scoreboard objectives add ca.frenzy_dur dummy
 scoreboard objectives add ca.energetic_dur dummy
-scoreboard objectives add ca.steadfast_dur dummy
 
 scoreboard objectives add ca.adrenaline_lvl dummy
 scoreboard objectives add ca.frenzy_lvl dummy
 scoreboard objectives add ca.energetic_lvl dummy
-scoreboard objectives add ca.steadfast_lvl dummy
 
 
 scoreboard objectives add ca.cur_dmg dummy

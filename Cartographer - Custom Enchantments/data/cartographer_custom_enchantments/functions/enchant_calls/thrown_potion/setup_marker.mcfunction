@@ -36,7 +36,7 @@ scoreboard players set $p_smite ca.var 0
 scoreboard players set $p_hunter ca.var 0
 scoreboard players set $p_duelist ca.var 0
 
-scoreboard players set $p_curse_fizzling ca.var 0
+scoreboard players set $p_curse_misfortune ca.var 0
 
 
 function cartographer_custom_enchantments:enchant_calls/thrown_potion/get_enchants

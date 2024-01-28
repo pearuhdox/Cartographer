@@ -16,7 +16,7 @@ scoreboard players set $smite ca.var 0
 scoreboard players set $hunter ca.var 0
 scoreboard players set $duelist ca.var 0
 
-scoreboard players set $curse_fizzling ca.var 0
+scoreboard players set $curse_misfortune ca.var 0
 
 scoreboard players set $attr_ranged ca.var 0
 scoreboard players set $attr_ranged_perc ca.var 0

@@ -3,7 +3,7 @@ execute if score @s ca.agility matches 1.. run function cartographer_custom_ench
 #Aquadynamic
 execute if score @s ca.aquadynamic matches 1.. run function cartographer_custom_enchantments:enchant_effects/aquadynamic/master
 #Cleansing (only when no hunger)
-execute if entity @s[nbt=!{active_effects:[{id:"minecraft:hunger"}]}] run function cartographer_custom_enchantments:enchant_effects/cleansing/master
+function cartographer_custom_enchantments:enchant_effects/cleansing/master
 
 #Second Wind - Needs to go before Evasion
 execute as @s[scores={ca.second_wind=1..}] at @s run function cartographer_custom_enchantments:enchant_effects/second_wind/master

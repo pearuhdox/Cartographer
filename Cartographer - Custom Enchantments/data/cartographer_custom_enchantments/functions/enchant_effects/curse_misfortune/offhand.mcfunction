@@ -1,8 +1,8 @@
-scoreboard players operation $negative ca.curse_fizzling_off = @s ca.curse_fizzling_off
-scoreboard players operation $negative ca.curse_fizzling_off *= $5 ca.CONSTANT
+scoreboard players operation $negative ca.curse_misfortune_off = @s ca.curse_misfortune_off
+scoreboard players operation $negative ca.curse_misfortune_off *= $5 ca.CONSTANT
 
 scoreboard players set $target ca.rand_var 100
-scoreboard players operation $target ca.rand_var -= $negative ca.curse_fizzling_off
+scoreboard players operation $target ca.rand_var -= $negative ca.curse_misfortune_off
 
 scoreboard players operation $threshold ca.rand_var = @s ca.attr_luck
 scoreboard players operation $threshold ca.rand_var *= $70 ca.CONSTANT

@@ -1,4 +1,4 @@
-scoreboard players set @s ca.collapse 20
+scoreboard players set @s ca.collapse 65
 
 scoreboard players operation @s ca.efficiency = $efficiency ca.collapse
 scoreboard players operation @s ca.sapper = $sapper ca.collapse

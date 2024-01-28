@@ -5,7 +5,7 @@ execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.energetic mat
 #Frenzy
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.frenzy matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy/master
 #Steadfast
-execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.steadfast matches 1.. run function cartographer_custom_enchantments:enchant_effects/steadfast/master
+execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifeblood matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifeblood/master
 
 #Lifesteal
 execute if score $cu_en_kill ca.enabler matches 1.. if score @s ca.lifesteal matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifesteal/master

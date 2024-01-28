@@ -37,7 +37,7 @@ function cartographer_custom_statuses:apply_status/save/mainhand
 function #minecraft:cartographer/events/enchantments/tool/eruption
 
 #Calculate Damage to deal
-scoreboard players set $damage ca.eruption 30
+scoreboard players set $damage ca.eruption 20
 scoreboard players operation $damage ca.eruption *= @s ca.eruption
 
 scoreboard players set $success ca.attr_random_crit 0

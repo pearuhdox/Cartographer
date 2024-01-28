@@ -25,8 +25,8 @@ scoreboard players operation $p_smite ca.var += @s ca.off_smite
 scoreboard players operation $p_hunter ca.var += @s ca.off_hunter
 scoreboard players operation $p_duelist ca.var += @s ca.off_duelist
 
-scoreboard players operation $p_curse_fizzling ca.var += @s ca.curse_fizzling_main
-scoreboard players operation $p_curse_fizzling ca.var += @s ca.curse_fizzling_off
+scoreboard players operation $p_curse_misfortune ca.var += @s ca.curse_misfortune_main
+scoreboard players operation $p_curse_misfortune ca.var += @s ca.curse_misfortune_off
 
 scoreboard players operation $p_ranged_damage ca.var = @s ca.attr_ranged
 

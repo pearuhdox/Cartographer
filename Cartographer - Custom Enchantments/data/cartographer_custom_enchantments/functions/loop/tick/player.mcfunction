@@ -119,6 +119,10 @@ execute if score @s ca.death_time matches 2..20 run function cartographer_custom
 #Tempo Theft Effect - Players
 execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/on_hit/tempo_theft/effect_player
 
+#Shielding
+execute if score @s ca.shielding matches 1.. run function cartographer_custom_enchantments:enchant_effects/shielding/clock
+execute unless score @s ca.shielding matches 1.. if entity @s[tag=ca.using_shielding] if predicate cartographer_core:has_absorption run function cartographer_custom_enchantments:enchant_effects/shielding/stopped_using
+
 #Cauterize Check
 tag @s remove ca.has_cauterize
 execute if score @s ca.cauterize matches 1.. run tag @s add ca.has_cauterize

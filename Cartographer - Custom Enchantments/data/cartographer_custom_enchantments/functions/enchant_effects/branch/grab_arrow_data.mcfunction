@@ -80,8 +80,8 @@ scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
 
 scoreboard players set $temp ca.susu 0
-execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"curse_fizzling"}].lvl
-execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.curse_fizzling += $temp ca.susu
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"curse_misfortune"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.curse_misfortune += $temp ca.susu
 scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
 

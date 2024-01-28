@@ -38,5 +38,8 @@ scoreboard players set @s ca.dmg_resist_evaded 0
 
 scoreboard players set @s ca.gravity_fall 0
 
+scoreboard players set @s ca.take_damage 0
+scoreboard players set @s ca.take_damage_a 0
+
 advancement revoke @s only cartographer_custom_enchantments:second_wind_projectile
 advancement revoke @s only cartographer_custom_enchantments:second_wind_explosion

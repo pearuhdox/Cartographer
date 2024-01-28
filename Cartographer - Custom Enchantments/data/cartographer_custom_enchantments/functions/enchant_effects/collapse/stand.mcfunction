@@ -4,6 +4,7 @@ scoreboard players remove @s ca.collapse 1
 
 #Breaks so long as a player remains within 18 blocks
 execute if entity @a[distance=..18] run function cartographer_custom_enchantments:enchant_effects/collapse/nearby_player
+execute as @a[distance=..18] at @s run particle falling_dripstone_water ~ ~0.35 ~ 0.3 0.1 0.3 0 3 normal
 
 
 execute if score @s ca.collapse matches 0 run particle poof ~ ~0.6 ~ 0 0 0 0.1 8 normal 
@@ -18,4 +19,4 @@ function cartographer_custom_enchantments:enchant_effects/collapse/circle_vfx
 
 execute unless block ~ ~ ~ spawner run function cartographer_custom_enchantments:enchant_effects/collapse/break_spawner
 
-execute if score @s ca.collapse matches 660.. run function cartographer_custom_enchantments:enchant_effects/collapse/break_spawner
+execute if score @s ca.collapse matches 700.. run function cartographer_custom_enchantments:enchant_effects/collapse/break_spawner

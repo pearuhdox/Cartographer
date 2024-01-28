@@ -33,8 +33,8 @@ scoreboard players operation @s ca.duelist += @p ca.off_duelist
 scoreboard players operation @s ca.hunter += @p ca.off_hunter
 scoreboard players operation @s ca.smite += @p ca.off_smite
 
-scoreboard players operation @s ca.curse_fizzling += @p ca.curse_fizzling_main
-scoreboard players operation @s ca.curse_fizzling += @p ca.curse_fizzling_off
+scoreboard players operation @s ca.curse_misfortune += @p ca.curse_misfortune_main
+scoreboard players operation @s ca.curse_misfortune += @p ca.curse_misfortune_off
 
 scoreboard players operation @s ca.attr_luck += @p ca.attr_luck
 scoreboard players operation @s ca.attr_aoe_size += @p ca.attr_aoe_size

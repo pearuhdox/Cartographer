@@ -21,7 +21,7 @@ scoreboard players operation $duelist ca.var = @s ca.duelist
 scoreboard players operation $hunter ca.var = @s ca.hunter
 scoreboard players operation $smite ca.var = @s ca.smite
 
-scoreboard players operation $curse_fizzling ca.var = @s ca.curse_fizzling
+scoreboard players operation $curse_misfortune ca.var = @s ca.curse_misfortune
 
 execute on passengers run function cartographer_custom_statuses:player/custom_inflict/projectile_data
 

@@ -5,6 +5,7 @@ execute if score @s ca.p_cleansing matches 1.. run tag @s add has_passive_ench
 execute if score @s ca.w_cleansing matches 1.. run tag @s add has_passive_ench
 execute if score @s ca.s_cleansing matches 1.. run tag @s add has_passive_ench
 execute if score @s ca.wi_cleansing matches 1.. run tag @s add has_passive_ench
+execute if score @s ca.fi_cleansing matches 1.. run tag @s add has_passive_ench
 execute if score @s ca.concealed matches 1.. run tag @s add has_passive_ench
 execute if score @s ca.evasion matches 1.. run tag @s add has_passive_ench
 execute if score @s ca.infinity matches 1.. run tag @s add has_passive_ench

@@ -6,21 +6,20 @@ execute if score @s ca.f_cleansing matches 2.. run scoreboard players set @s ca.
 execute if score @s ca.w_cleansing matches 2.. run scoreboard players set @s ca.w_cleansing 1
 execute if score @s ca.p_cleansing matches 2.. run scoreboard players set @s ca.p_cleansing 1
 execute if score @s ca.wi_cleansing matches 2.. run scoreboard players set @s ca.wi_cleansing 1
+execute if score @s ca.fi_cleansing matches 2.. run scoreboard players set @s ca.fi_cleansing 1
 execute if score @s ca.concealed matches 5.. run scoreboard players set @s ca.concealed 4
 execute if score @s ca.current matches 2.. run scoreboard players set @s ca.current 1
 execute if score @s ca.deadeye matches 11.. run scoreboard players set @s ca.deadeye 10
-execute if score @s ca.duelist matches 6.. run scoreboard players set @s ca.duelist 5
-execute if score @s ca.eruption matches 6.. run scoreboard players set @s ca.eruption 5
+execute if score @s ca.duelist matches 11.. run scoreboard players set @s ca.duelist 10
+execute if score @s ca.eruption matches 11.. run scoreboard players set @s ca.eruption 10
 execute if score @s ca.evasion matches 21.. run scoreboard players set @s ca.evasion 20
 execute if score @s ca.energetic matches 11.. run scoreboard players set @s ca.energetic 10
 execute if score @s ca.fleetfoot matches 2.. run scoreboard players set @s ca.fleetfoot 1
 execute if score @s ca.frenzy matches 11.. run scoreboard players set @s ca.frenzy 10
-execute if score @s ca.steadfast matches 11.. run scoreboard players set @s ca.steadfast 10
-execute if score @s ca.frostbite matches 6.. run scoreboard players set @s ca.frostbite 5
-execute if score @s ca.frost matches 2.. run scoreboard players set @s ca.frost 1
-execute if score @s ca.hunter matches 6.. run scoreboard players set @s ca.hunter 5
-execute if score @s ca.smite matches 6.. run scoreboard players set @s ca.smite 5
-execute if score @s ca.overcharge matches 4.. run scoreboard players set @s ca.overcharge 3
+execute if score @s ca.lifeblood matches 11.. run scoreboard players set @s ca.lifeblood 10
+execute if score @s ca.hunter matches 11.. run scoreboard players set @s ca.hunter 10
+execute if score @s ca.smite matches 11.. run scoreboard players set @s ca.smite 10
+execute if score @s ca.overcharge matches 11.. run scoreboard players set @s ca.overcharge 10
 execute if score @s ca.focus matches 11.. run scoreboard players set @s ca.focus 10
 execute if score @s ca.concentration matches 11.. run scoreboard players set @s ca.concentration 10
 execute if score @s ca.lifesteal matches 11.. run scoreboard players set @s ca.lifesteal 10
@@ -32,16 +31,12 @@ execute if score @s ca.repeating matches 18.. run scoreboard players set @s ca.r
 execute if score @s ca.ricochet matches 11.. run scoreboard players set @s ca.ricochet 10
 execute if score @s ca.sapper matches 11.. run scoreboard players set @s ca.sapper 10
 execute if score @s ca.singe matches 11.. run scoreboard players set @s ca.singe 10
-execute if score @s ca.satiation matches 4.. run scoreboard players set @s ca.satiation 3
-execute if score @s ca.second_wind matches 5.. run scoreboard players set @s ca.second_wind 4
+execute if score @s ca.satiation matches 11.. run scoreboard players set @s ca.satiation 10
+execute if score @s ca.second_wind matches 2.. run scoreboard players set @s ca.second_wind 1
 execute if score @s ca.sharpshot matches 11.. run scoreboard players set @s ca.sharpshot 10
 execute if score @s ca.cauterize matches 11.. run scoreboard players set @s ca.cauterize 10
 execute if score @s ca.spurs matches 2.. run scoreboard players set @s ca.spurs 1
-execute if score @s ca.thrusting matches 5.. run scoreboard players set @s ca.thrusting 4
-execute if score @s ca.slamming matches 5.. run scoreboard players set @s ca.slamming 4
-execute if score @s ca.transfig matches 6.. run scoreboard players set @s ca.transfig 5
 execute if score @s ca.tempo_theft matches 11.. run scoreboard players set @s ca.tempo_theft 10
-execute if score @s vengeance matches 6.. run scoreboard players set @s vengeance 5
 execute if score @s ca.shrapnel matches 9.. run scoreboard players set @s ca.shrapnel 8
 execute if score @s ca.thorns matches 21.. run scoreboard players set @s ca.thorns 20
 execute if score @s ca.loyalty matches 11..99 run scoreboard players set @s ca.loyalty 10
@@ -50,16 +45,19 @@ execute if score @s ca.wavedash matches 2.. run scoreboard players set @s ca.wav
 execute if score @s ca.respiration matches 11.. run scoreboard players set @s ca.respiration 10
 execute if score @s ca.recoil matches 11.. run scoreboard players set @s ca.recoil 10
 execute if score @s ca.collapse matches 2.. run scoreboard players set @s ca.recoil 1
-execute if score @s ca.echo matches 5.. run scoreboard players set @s ca.echo 4
-execute if score @s ca.evocation matches 5.. run scoreboard players set @s ca.evocation 4
-execute if score @s ca.sweeping matches 5.. run scoreboard players set @s ca.sweeping 4
+execute if score @s ca.echo matches 6.. run scoreboard players set @s ca.echo 5
+execute if score @s ca.evocation matches 6.. run scoreboard players set @s ca.evocation 5
+execute if score @s ca.sweeping matches 6.. run scoreboard players set @s ca.sweeping 5
+execute if score @s ca.thrusting matches 6.. run scoreboard players set @s ca.thrusting 5
+execute if score @s ca.slamming matches 6.. run scoreboard players set @s ca.slamming 5
+
 execute if score @s ca.executioner matches 11.. run scoreboard players set @s ca.executioner 10
 
-execute if score @s ca.frenzy_main matches 7.. run scoreboard players set @s ca.frenzy_main 6
-execute if score @s ca.adrenaline_main matches 7.. run scoreboard players set @s ca.adrenaline_main 6
-execute if score @s ca.energetic_main matches 7.. run scoreboard players set @s ca.energetic_main 6
-execute if score @s ca.steadfast_main matches 7.. run scoreboard players set @s ca.steadfast_main 6
-execute if score @s ca.concealed_main matches 7.. run scoreboard players set @s ca.concealed_main 6
+execute if score @s ca.frenzy_main matches 11.. run scoreboard players set @s ca.frenzy_main 10
+execute if score @s ca.adrenaline_main matches 11.. run scoreboard players set @s ca.adrenaline_main 10
+execute if score @s ca.energetic_main matches 11.. run scoreboard players set @s ca.energetic_main 10
+execute if score @s ca.lifeblood_main matches 11.. run scoreboard players set @s ca.lifeblood_main 10
+execute if score @s ca.concealed_main matches 5.. run scoreboard players set @s ca.concealed_main 4
 
 
 execute if score @s ca.resourceful matches 11.. run scoreboard players set @s ca.resourceful 10
@@ -77,7 +75,7 @@ execute if score @s ca.momentum matches 11.. run scoreboard players set @s ca.mo
 execute if score @s ca.stalwart matches 11.. run scoreboard players set @s ca.stalwart 10
 execute if score @s ca.poise matches 11.. run scoreboard players set @s ca.poise 10
 
-execute if score @s ca.shielding matches 7.. run scoreboard players set @s ca.shielding 6
+execute if score @s ca.shielding matches 11.. run scoreboard players set @s ca.shielding 10
 
 execute if score @s ca.sprint_dash matches 4.. run scoreboard players set @s ca.sprint_dash 3
 execute if score @s ca.disengage matches 4.. run scoreboard players set @s ca.disengage 3
@@ -97,9 +95,9 @@ execute if score @s ca.off_executioner matches 11.. run scoreboard players set @
 execute if score @s ca.off_tempo_theft matches 11.. run scoreboard players set @s ca.off_tempo_theft 10
 
 
-execute if score @s ca.off_duelist matches 6.. run scoreboard players set @s ca.off_duelist 5
-execute if score @s ca.off_hunter matches 6.. run scoreboard players set @s ca.off_hunter 5
-execute if score @s ca.off_smite matches 6.. run scoreboard players set @s ca.off_smite 5
+execute if score @s ca.off_duelist matches 6.. run scoreboard players set @s ca.off_duelist 10
+execute if score @s ca.off_hunter matches 6.. run scoreboard players set @s ca.off_hunter 10
+execute if score @s ca.off_smite matches 6.. run scoreboard players set @s ca.off_smite 10
 execute if score @s ca.off_fire_aspect matches 4.. run scoreboard players set @s ca.off_fire_aspect 3
 execute if score @s ca.off_cauterize matches 11.. run scoreboard players set @s ca.off_cauterize 10
 
@@ -116,18 +114,14 @@ execute if score @s ca.t_knock matches 6.. run scoreboard players set @s ca.t_kn
 execute if score @s ca.t_poss matches 4.. run scoreboard players set @s ca.t_poss 3
 execute if score @s ca.t_exec matches 4.. run scoreboard players set @s ca.t_exec 3
 
-execute if score @s ca.s_adren matches 7.. run scoreboard players set @s ca.s_adren 6
-execute if score @s ca.s_energ matches 7.. run scoreboard players set @s ca.s_energ 6
-execute if score @s ca.s_frenzy matches 7.. run scoreboard players set @s ca.s_frenzy 6
+execute if score @s ca.curse_misfortune_main matches 21.. run scoreboard players set @s ca.curse_misfortune_main 20
+execute if score @s ca.curse_misfortune_off matches 21.. run scoreboard players set @s ca.curse_misfortune_off 20
+execute if score @s ca.curse_misfortune matches 21.. run scoreboard players set @s ca.curse_misfortune 20
 
-execute if score @s ca.curse_fizzling_main matches 21.. run scoreboard players set @s ca.curse_fizzling_main 20
-execute if score @s ca.curse_fizzling_off matches 21.. run scoreboard players set @s ca.curse_fizzling_off 20
-execute if score @s ca.curse_fizzling matches 21.. run scoreboard players set @s ca.curse_fizzling 20
-
-scoreboard players operation @s ca.curse_fizzling_total += @s ca.curse_fizzling
-scoreboard players operation @s ca.curse_fizzling_total += @s ca.curse_fizzling_main
-scoreboard players operation @s ca.curse_fizzling_total += @s ca.curse_fizzling_off
-execute if score @s ca.curse_fizzling_total matches 21.. run scoreboard players set @s ca.curse_fizzling_total 20
+scoreboard players operation @s ca.curse_misfortune_total += @s ca.curse_misfortune
+scoreboard players operation @s ca.curse_misfortune_total += @s ca.curse_misfortune_main
+scoreboard players operation @s ca.curse_misfortune_total += @s ca.curse_misfortune_off
+execute if score @s ca.curse_misfortune_total matches 21.. run scoreboard players set @s ca.curse_misfortune_total 20
 
 
 execute if score @s ca.attr_ranged_speed matches ..0 run scoreboard players set @s ca.attr_ranged_speed 1

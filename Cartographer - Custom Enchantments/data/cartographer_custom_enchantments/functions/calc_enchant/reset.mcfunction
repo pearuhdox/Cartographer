@@ -7,6 +7,7 @@ scoreboard players set @s ca.f_cleansing 0
 scoreboard players set @s ca.w_cleansing 0
 scoreboard players set @s ca.p_cleansing 0
 scoreboard players set @s ca.wi_cleansing 0
+scoreboard players set @s ca.fi_cleansing 0
 scoreboard players set @s ca.exposing 0
 scoreboard players set @s ca.concealed 0
 scoreboard players set @s[scores={ca.throw_trident=0}] ca.current 0
@@ -21,7 +22,7 @@ scoreboard players set @s ca.executioner 0
 scoreboard players set @s ca.energetic 0
 scoreboard players set @s ca.fleetfoot 0
 scoreboard players set @s ca.frenzy 0
-scoreboard players set @s ca.steadfast 0
+scoreboard players set @s ca.lifeblood 0
 scoreboard players set @s ca.frostbite 0
 scoreboard players set @s ca.frost 0
 scoreboard players set @s ca.smite 0
@@ -67,7 +68,7 @@ scoreboard players set @s ca.momentum 0
 scoreboard players set @s ca.frenzy_main 0
 scoreboard players set @s ca.adrenaline_main 0
 scoreboard players set @s ca.energetic_main 0
-scoreboard players set @s ca.steadfast_main 0
+scoreboard players set @s ca.lifeblood_main 0
 scoreboard players set @s ca.concealed_main 0
 
 
@@ -109,10 +110,10 @@ scoreboard players set @s ca.curse_two_hnd 0
 scoreboard players set @s ca.curse_regret 0
 scoreboard players set @s ca.curse_unwieldly 0
 
-scoreboard players set @s ca.curse_fizzling_main 0
-scoreboard players set @s ca.curse_fizzling_off 0
-scoreboard players set @s ca.curse_fizzling 0
-scoreboard players set @s ca.curse_fizzling_total 0
+scoreboard players set @s ca.curse_misfortune_main 0
+scoreboard players set @s ca.curse_misfortune_off 0
+scoreboard players set @s ca.curse_misfortune 0
+scoreboard players set @s ca.curse_misfortune_total 0
 
 scoreboard players set @s ca.hy_fire 0
 scoreboard players set @s ca.hy_knock 0
@@ -196,11 +197,6 @@ scoreboard players set @s ca.re_cau 0
 scoreboard players set @s ca.re_hunter 0
 scoreboard players set @s ca.re_duelist 0
 scoreboard players set @s ca.re_smite 0
-
-scoreboard players set @s ca.s_adren 0
-scoreboard players set @s ca.s_energ 0
-scoreboard players set @s ca.s_frenzy 0
-scoreboard players set @s ca.s_con 0
 
 scoreboard players set @s ca.off_duelist 0
 scoreboard players set @s ca.off_hunter 0

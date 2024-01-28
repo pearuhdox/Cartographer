@@ -12,6 +12,6 @@ execute if score $cu_en_spawner ca.enabler matches 1.. if score @s ca.energetic_
 #Frenzy
 execute if score $cu_en_spawner ca.enabler matches 1.. if score @s ca.frenzy_main matches 1.. run function cartographer_custom_enchantments:enchant_effects/frenzy/master
 #Steadfast
-execute if score $cu_en_spawner ca.enabler matches 1.. if score @s ca.steadfast_main matches 1.. run function cartographer_custom_enchantments:enchant_effects/steadfast/master
+execute if score $cu_en_spawner ca.enabler matches 1.. if score @s ca.lifeblood_main matches 1.. run function cartographer_custom_enchantments:enchant_effects/lifeblood/master
 #Concealed
 execute if score $cu_en_spawner ca.enabler matches 1.. if score @s ca.concealed_main matches 1.. run function cartographer_custom_enchantments:enchant_effects/concealed/restore

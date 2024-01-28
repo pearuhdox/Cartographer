@@ -7,3 +7,5 @@ playsound minecraft:entity.witch.drink player @s ~ ~ ~ 1 1.5
 playsound minecraft:entity.witch.drink player @s ~ ~ ~ 1 2
 
 scoreboard players set $rally_restore ca.rally 0
+
+scoreboard players set @s ca.rally_cooldown 0

@@ -28,15 +28,15 @@ execute if score $concentration ca.var matches 1.. run function cartographer_cus
 #Punch - Crossbows
 execute if score $cu_en_ranged ca.enabler matches 1.. if score $punch ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/punch/effect
 
-#Effects that can be affected by Curse of Fizzling, do this check here
-scoreboard players operation @s ca.curse_fizzling = $curse_fizzling ca.var
+#Effects that can be affected by Curse of misfortune, do this check here
+scoreboard players operation @s ca.curse_misfortune = $curse_misfortune ca.var
 
-execute unless score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_calls/thrown_potion/when_ranged_attack_branch
+execute unless score @s ca.curse_misfortune matches 1.. run function cartographer_custom_enchantments:enchant_calls/thrown_potion/when_ranged_attack_branch
 
-execute if score @s ca.curse_fizzling matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_fizzling/other
-execute if score @s ca.curse_fizzling matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/thrown_potion/when_ranged_attack_branch
+execute if score @s ca.curse_misfortune matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_misfortune/other
+execute if score @s ca.curse_misfortune matches 1.. if score $success ca.rand_var matches 1.. run function cartographer_custom_enchantments:enchant_calls/thrown_potion/when_ranged_attack_branch
 
-scoreboard players set @s ca.curse_fizzling 0
+scoreboard players set @s ca.curse_misfortune 0
 
 
 

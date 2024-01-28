@@ -63,5 +63,5 @@ scoreboard players operation $hunter ca.var += @s ca.off_hunter
 scoreboard players operation $smite ca.var += @s ca.off_smite
 
 
-scoreboard players operation $curse_fizzling ca.var += @s ca.curse_fizzling_main
-scoreboard players operation $curse_fizzling ca.var += @s ca.curse_fizzling_off
+scoreboard players operation $curse_misfortune ca.var += @s ca.curse_misfortune_main
+scoreboard players operation $curse_misfortune ca.var += @s ca.curse_misfortune_off

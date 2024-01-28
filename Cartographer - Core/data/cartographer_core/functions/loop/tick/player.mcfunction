@@ -56,6 +56,9 @@ execute if score @s ca.shoot_bow matches 1.. run function cartographer_core:help
 execute if score @s ca.shoot_cross matches 1.. run function cartographer_core:helper/tag_player_projectile
 execute if score @s ca.throw_trident matches 1.. run function cartographer_core:helper/tag_player_projectile
 
+#Custom Absorption Handler Reset
+execute unless predicate cartographer_core:has_absorption if entity @s[tag=ca.carto_abs_applied] run function cartographer_core:helper/abs_handler/reset
+
 #Resets
 scoreboard players set @s ca.use_lectern 0
 
