@@ -2,3 +2,5 @@ execute unless block ~ ~-0.2 ~ #cartographer_core:can_raycast unless score @s ca
 
 
 execute if predicate cartographer_custom_enchantments:is_sprinting run function cartographer_custom_enchantments:enchant_effects/sprint_dash/sprinting
+
+#execute if score @s ca.sprint_dash_run_time matches 1.. run scoreboard players remove @s ca.sprint_dash_run_time 1

@@ -1,5 +1,10 @@
-particle minecraft:large_smoke ~ ~ ~ 0.1 0.1 0.1 0.05 2 normal
-particle minecraft:cloud ~ ~ ~ 0.1 0.1 0.1 0.05 2 normal
+particle minecraft:large_smoke ~ ~ ~ 0 0 0 0 1 force
+particle minecraft:cloud ~ ~ ~ 0 0 0 0 1 force
+
+particle minecraft:large_smoke ^ ^ ^0.5 0 0 0 0 1 force
+particle minecraft:cloud ^ ^ ^0.5 0 0 0 0 1 force
+
+
 function cartographer_mob_abilities:ability_traits/trait_warnings/raycast
 
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
@@ -16,7 +21,7 @@ execute if entity @s[tag=ca.zephyrous] run scoreboard players set $zeph_check ca
 execute if entity @s[tag=ca.knockback] run scoreboard players set $zeph_check ca.mob_var 1
 execute if entity @s[tag=ca.webbing] run scoreboard players set $zeph_check ca.mob_var 1
 
-execute as @a[distance=..2,tag=!quickdrawn] at @s facing entity 31182015-4512-2011-3118-115180000000 feet run function cartographer_mob_abilities:abilities/quickdraw/player
+execute positioned ~-0.5 ~ ~-0.5 if entity @a[dx=0,dy=0,dz=0,tag=!quickdrawn] at @s facing entity 31182015-4512-2011-3118-115180000000 feet run function cartographer_mob_abilities:abilities/quickdraw/player
 execute as @s positioned as @a[distance=..2] run function cartographer_mob_abilities:helper/damage/ability_projectile with storage cartographer:macro.mob_abilities
 
 scoreboard players set $zeph_check ca.mob_var 0

@@ -1,9 +1,5 @@
 data modify storage ca.indicator Ammo set value 0
 
-execute if score @s ca.repeating matches 1..7 run data modify storage ca.indicator Ammo set from entity @s SelectedItem.tag.Ammo
-execute if score @s ca.repeating matches 11..17 run data modify storage ca.indicator Ammo set from entity @s Inventory[{Slot:-106b}].tag.Ammo
-execute store result score @s ca.ind_val run data get storage ca.indicator Ammo
-
 title @s[scores={ca.repeating=1..7}] times 0 45 5
 title @s[scores={ca.repeating=11..17}] times 0 45 5
 title @s[scores={ca.repeating=1..7}] title {"text":" "}

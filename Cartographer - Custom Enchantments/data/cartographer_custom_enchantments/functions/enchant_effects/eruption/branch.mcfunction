@@ -1,5 +1,3 @@
-tag @s add erupting_xp
-
 scoreboard players operation @s ca.attr_aoe_size = $aoe_size ca.eruption
 
 scoreboard players set $size ca.attr_aoe_size 80
@@ -15,4 +13,10 @@ function cartographer_custom_enchantments:enchant_effects/eruption/particle_flam
 data modify storage cartographer_custom_statuses:apply_effects data.effects set value {}
 data modify storage cartographer_custom_statuses:apply_status data.effects set value {}
 
-tag @s remove erupting_xp
+
+scoreboard players set $eruption ca.cauterize 0
+scoreboard players set $eruption ca.fire_aspect 0
+scoreboard players set $eruption ca.knockback 0
+scoreboard players set $eruption ca.frostbite 0
+scoreboard players set $eruption ca.evocation 0
+scoreboard players set $eruption ca.executioner 0

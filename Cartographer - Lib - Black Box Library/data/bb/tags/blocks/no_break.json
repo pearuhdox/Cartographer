@@ -1,0 +1,23 @@
+{
+    "values": [
+        "#bb:containers",
+        "minecraft:spawner",
+        "minecraft:command_block",
+        "minecraft:chain_command_block",
+        "minecraft:repeating_command_block",
+        "minecraft:bedrock",
+        "minecraft:light",
+        "minecraft:barrier",
+        "minecraft:structure_block",
+        "minecraft:structure_void",
+        "minecraft:nether_portal",
+        "minecraft:end_gateway",
+        "minecraft:end_portal",
+        "minecraft:end_portal_frame",
+        "minecraft:air",
+        "minecraft:cave_air",
+        "minecraft:void_air",
+        "minecraft:ender_chest",
+        "#minecraft:signs"
+    ]
+}

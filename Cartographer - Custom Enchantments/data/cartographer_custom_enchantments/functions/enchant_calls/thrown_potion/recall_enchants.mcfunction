@@ -1,6 +1,9 @@
 scoreboard players operation $flame ca.var = $p_flame ca.var
 scoreboard players operation $punch ca.var = $p_punch ca.var
 
+scoreboard players operation $quake ca.var = $p_quake ca.var
+scoreboard players operation $lifesteal ca.var = $p_lifesteal ca.var
+
 scoreboard players operation $concentration ca.var = $p_concentration ca.var
 
 scoreboard players operation $point_blank ca.var = $p_point_blank ca.var

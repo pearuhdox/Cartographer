@@ -1,14 +1,16 @@
 setblock 4206900 2 4206900 air replace
 
+tag @s add ca.pot_debug_stick_ltos_drop
+
+#say pot drop
+
 playsound minecraft:block.decorated_pot.shatter player @a ~ ~ ~ 1.2 0.75
 
 data modify storage cartographer_loot_additions:pot_trap pot_drop set value {}
 data modify storage cartographer_loot_additions:pot_trap pot_drop set from entity @s Item
 
-scoreboard players set $cracked ca.loot_var 0
-execute if data storage cartographer_loot_additions:pot_trap pot_drop.tag.BlockStateTag{cracked:"true"} run scoreboard players set $cracked ca.loot_var 1
-
-execute as @e[type=item,sort=nearest,limit=1,distance=0.1..2] at @s run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop
+execute as @e[type=item,sort=nearest,tag=!ca.pot_debug_stick_ltos_drop,limit=1,distance=..1,nbt={Item:{id:"minecraft:decorated_pot"}}] run function cartographer_loot_additions:drops/do_drops/pots/action/type_check
+execute as @e[type=item,sort=nearest,limit=1,distance=..1,tag=!ca.pot_debug_stick_ltos_drop] at @s run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop
 
 #Rest of mechs
 execute store result score @s ca.x_seed run data get entity @s Pos[0] 1

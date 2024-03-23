@@ -36,10 +36,9 @@ execute if score @s ability_charge matches 19 run playsound minecraft:entity.sno
 execute if score @s ability_charge matches 20 run playsound minecraft:entity.snowball.throw hostile @a[distance=..20] ~ ~ ~ 1 1.45
 execute if score @s ability_charge matches 20 run playsound minecraft:item.crossbow.loading_end hostile @a[distance=..20] ~ ~ ~ 2 0.75
 
-execute if score @s ability_charge matches 20 run data modify entity @s NoAI set value 1b
-execute if score @s ability_charge matches 20..22 run tp @s ~ ~ ~ facing entity @p feet
-execute if score @s ability_charge matches 35..37 run tp @s ~ ~ ~ facing entity @p feet
-execute if score @s ability_charge matches 50..52 run tp @s ~ ~ ~ facing entity @p feet
+execute if score @s ability_charge matches 20 run function cartographer_mob_abilities:animations/barrage/aim_call
+execute if score @s ability_charge matches 35 run function cartographer_mob_abilities:animations/barrage/aim_call
+execute if score @s ability_charge matches 50 run function cartographer_mob_abilities:animations/barrage/aim_call
 
 execute if score @s ability_charge matches 20.. run function cartographer_mob_abilities:animations/barrage/branch
 

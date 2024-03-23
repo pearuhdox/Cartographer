@@ -1,0 +1,11 @@
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_1 run function cartographer_core:helper/block_particles/scan_branch_1
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_2 run function cartographer_core:helper/block_particles/scan_branch_2
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_3 run function cartographer_core:helper/block_particles/scan_branch_3
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_4 run function cartographer_core:helper/block_particles/scan_branch_4
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_5 run function cartographer_core:helper/block_particles/scan_branch_5
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_6 run function cartographer_core:helper/block_particles/scan_branch_6
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_7 run function cartographer_core:helper/block_particles/scan_branch_7
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_8 run function cartographer_core:helper/block_particles/scan_branch_8
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_9 run function cartographer_core:helper/block_particles/scan_branch_9
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_10 run function cartographer_core:helper/block_particles/scan_branch_10
+execute if block ~ ~ ~ #cartographer_core:block_scan/tag_branch_11 run function cartographer_core:helper/block_particles/scan_branch_11

@@ -1,0 +1,1 @@
+execute if data storage ltos:main data{block:"spawner"} run function cartographer_mimics:break_spawner/test

@@ -1,0 +1,2 @@
+execute if score $do_eruption ca.var matches 1.. run function cartographer_custom_enchantments:enchant_effects/eruption/branch
+execute if score $do_sapper ca.var matches 1.. run particle minecraft:heart ~ ~ ~ 0.3 0.3 0.3 1 5 normal 

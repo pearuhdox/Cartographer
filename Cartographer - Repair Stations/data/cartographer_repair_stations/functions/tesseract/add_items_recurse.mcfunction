@@ -89,7 +89,7 @@ execute if data storage cartographer_repair_stations:tesseract Data.Current{id:"
 execute if score $tridents_use_prismarine ca.repair_station_state matches 1.. if data storage cartographer_repair_stations:tesseract Data.Current{id:"minecraft:trident"} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:prismarine_shard",Count:2b}
 execute unless score $tridents_use_prismarine ca.repair_station_state matches 1.. if data storage cartographer_repair_stations:tesseract Data.Current{id:"minecraft:trident"} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:quartz",Count:2b}
 
-execute if data storage cartographer_repair_stations:tesseract Data.Current{id:"minecraft:turtle_helmet"} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:scute",Count:2b}
+execute if data storage cartographer_repair_stations:tesseract Data.Current{id:"minecraft:turtle_helmet"} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:turtle_scute",Count:2b}
 
 execute if data storage cartographer_repair_stations:tesseract Data.Current{id:"minecraft:carrot_on_a_stick"} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:carrot",Count:2b}
 execute if data storage cartographer_repair_stations:tesseract Data.Current{id:"minecraft:warped_fungus_on_a_stick"} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:warped_fungus",Count:2b}
@@ -104,7 +104,7 @@ execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:
 execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:{CustomRepair:{material:"netherite"}}} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:netherite_ingot",Count:2b}
 execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:{CustomRepair:{material:"leather"}}} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:leather",Count:2b}
 execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:{CustomRepair:{material:"chain"}}} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:chain",Count:2b}
-execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:{CustomRepair:{material:"scute"}}} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:scute",Count:2b}
+execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:{CustomRepair:{material:"turtle_scute"}}} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:turtle_scute",Count:2b}
 execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:{CustomRepair:{material:"membrane"}}} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:phantom_membrane",Count:2b}
 execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:{CustomRepair:{material:"string"}}} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:string",Count:2b}
 execute if data storage cartographer_repair_stations:tesseract Data.Current{tag:{CustomRepair:{material:"quartz"}}} run data modify entity @s Offers.Recipes[-1].buy set value {id:"minecraft:quartz",Count:2b}

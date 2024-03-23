@@ -1,12 +1,18 @@
-execute if score @s ca.stalwart matches 1 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 1.5 add
-execute if score @s ca.stalwart matches 2 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 3 add
-execute if score @s ca.stalwart matches 3 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 4.5 add
-execute if score @s ca.stalwart matches 4 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 6 add
-execute if score @s ca.stalwart matches 5 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 7.5 add
-execute if score @s ca.stalwart matches 6 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 9 add
-execute if score @s ca.stalwart matches 7 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 10.5 add
-execute if score @s ca.stalwart matches 8 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 12 add
-execute if score @s ca.stalwart matches 9 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 13.5 add
-execute if score @s ca.stalwart matches 10.. run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6630-000000000000 "stalwart" 15 add
+execute store result score $shield_total ca.stalwart run attribute @s minecraft:generic.max_health get
+scoreboard players operation $cap ca.abs_handler = $shield_total ca.stalwart
+
+scoreboard players operation $shield_total ca.stalwart *= @s ca.stalwart
+scoreboard players operation $shield_total ca.stalwart *= $5 ca.CONSTANT
+scoreboard players operation $shield_total ca.stalwart /= $100 ca.CONSTANT
+
+scoreboard players operation $amount ca.abs_handler = $shield_total ca.stalwart
+scoreboard players set $duration ca.abs_handler 120
+
+function cartographer_core:helper/abs_handler/add
+
+scoreboard players set @s ca.stalwart_cdl 2400
+
+playsound minecraft:item.shield.block player @s ~ ~ ~ 0.75 1.25
+particle minecraft:falling_honey ~ ~0.05 ~ 0.4 0 0.4 0 60
 
 function #minecraft:cartographer/events/enchantments/passive/stalwart

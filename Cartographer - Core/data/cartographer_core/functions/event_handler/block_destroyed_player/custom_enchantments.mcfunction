@@ -1,0 +1,1 @@
+execute if score $break_spawner ca.var matches 1.. run function cartographer_core:event_handler/block_destroyed_player/enchants_spawner_branch

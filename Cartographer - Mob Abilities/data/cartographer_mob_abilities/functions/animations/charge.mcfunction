@@ -7,11 +7,13 @@ execute if score @s ability_charge matches 1 run function cartographer_mob_abili
 execute if score @s ability_charge matches 1 unless score @s ca.accelerate_stacks matches 1.. run function cartographer_mob_abilities:ability_traits/accelerate/set_stacks
 
 execute if score @s ability_charge matches 1 run playsound minecraft:entity.enderman.scream hostile @a[distance=..16] ~ ~ ~ 3 0.5
-execute if score @s ability_charge matches 1 run scoreboard players set @s mob_move_dis 23
-execute if score @s ability_charge matches 1 run tp @s ~ ~ ~ facing entity @p feet
+execute if score @s ability_charge matches 1 run scoreboard players set @s mob_move_red 35
 
-execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animations/charge/branch
-execute if score @s ability_charge matches 1 run data merge entity @s {NoAI:1}
+execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animations/charge/aim_call
+execute if score @s ability_charge matches 1 store result storage cartographer:macro.mob_abilities aim_direction int 1 run scoreboard players get @s ca.aim_direction
+execute if score @s ability_charge matches 1 store result storage cartographer:macro.mob_abilities aim_direction_y int 1 run scoreboard players get @s ca.aim_direction_y
+execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animations/charge/branch with storage cartographer:macro.mob_abilities
+
 
 execute if score @s ability_charge matches 1..11 unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 

@@ -6,5 +6,3 @@ execute if entity @s[tag=ca.size_grow] at @s run function cartographer_mob_abili
 execute if entity @s[tag=ca.acro_pass] at @s run function cartographer_mob_abilities:ability_traits/acrobatic/passive/chance_hit
 
 execute if entity @s[tag=ca.active_when_hit] unless score @s cooldown matches 1.. at @s run function cartographer_mob_abilities:passive/attack_override/chance
-
-execute if score @s ca.carapace_stacks matches 1.. at @s run function cartographer_mob_abilities:ability_traits/carapace/remove

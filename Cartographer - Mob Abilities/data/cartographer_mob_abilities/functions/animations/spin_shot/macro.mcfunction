@@ -1,0 +1,3 @@
+$execute unless entity @s[tag=ca.rotate_cw] unless entity @s[tag=ca.rotate_ccw] if score @s ability_charge matches 35.. rotated $(aim_direction) $(aim_direction_y) run function cartographer_mob_abilities:abilities/spin_shot
+$execute if entity @s[tag=ca.rotate_cw] if score @s ability_charge matches 35.. positioned ~ ~0.7 ~ rotated $(aim_direction) $(aim_direction_y) run function cartographer_mob_abilities:abilities/spin_shot/rotate_cw
+$execute if entity @s[tag=ca.rotate_ccw] if score @s ability_charge matches 35.. positioned ~ ~0.7 ~ rotated $(aim_direction) $(aim_direction_y) run function cartographer_mob_abilities:abilities/spin_shot/rotate_ccw

@@ -64,13 +64,7 @@ scoreboard players set $success ca.attr_random_crit 0
 execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/random_crit_handler
 
 
-scoreboard players set $size ca.attr_aoe_size 55
+scoreboard players set $size ca.attr_aoe_size 40
 function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
 
-function cartographer_custom_enchantments:enchant_effects/quake/macro with storage cartographer:macro.custom_enchantments
-
-execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
-
-execute if score $quake_mob ca.ench_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/vfx with storage cartographer:macro.custom_enchantments
-
-execute if score $quake_mob ca.ench_var matches 1.. run function cartographer_custom_statuses:apply_effects/apply/create_aec
+scoreboard players set @s ca.quake_use_check 3

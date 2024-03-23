@@ -1,5 +1,7 @@
-execute if score @s ca.sweep_side matches 1 run tp @s ~ ~ ~ ~5 ~
-execute if score @s ca.sweep_side matches 2 run tp @s ~ ~ ~ ~-5 ~
+execute if score @s ca.sweep_side matches 1 run scoreboard players add @s ca.aim_direction 5
+execute if score @s ca.sweep_side matches 2 run scoreboard players remove @s ca.aim_direction 5
+
+scoreboard players set @s mob_move_red 4
 
 execute if score @s ca.sweep_animation matches 16 run playsound minecraft:entity.player.attack.sweep hostile @a[distance=..12] ~ ~ ~ 1 0.5
 execute if score @s ca.sweep_animation matches 15 run playsound minecraft:entity.player.attack.sweep hostile @a[distance=..12] ~ ~ ~ 1 0.6
@@ -18,7 +20,8 @@ execute if score @s ca.sweep_animation matches 3 run playsound minecraft:entity.
 execute if score @s ca.sweep_animation matches 2 run playsound minecraft:entity.player.attack.sweep hostile @a[distance=..12] ~ ~ ~ 1 1.9
 execute if score @s ca.sweep_animation matches 1 run playsound minecraft:entity.player.attack.sweep hostile @a[distance=..12] ~ ~ ~ 1 2.0
 
-function cartographer_mob_abilities:abilities/sweep/stage
+execute store result storage cartographer:macro.mob_abilities aim_direction int 1 run scoreboard players get @s ca.aim_direction
+function cartographer_mob_abilities:abilities/sweep/macro with storage cartographer:macro.mob_abilities
 
 execute if score @s ca.sweep_animation matches 1 run function cartographer_mob_abilities:abilities/sweep/end
 

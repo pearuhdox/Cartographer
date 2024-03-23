@@ -1,0 +1,67 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "bonus_rolls": 0,
+        "entries": [
+          {
+            "type": "minecraft:alternatives",
+            "children": [
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:decorated_pot",
+                "functions": [
+                  {
+                    "function": "minecraft:copy_state",
+                    "block": "minecraft:decorated_pot",
+                    "properties": [
+                      "cracked"
+                    ]
+                  },
+                  {
+                    "function": "minecraft:copy_nbt",
+                    "source": "block_entity",
+                    "ops": [
+                      {
+                        "source": "sherds",
+                        "target": "BlockEntityTag.sherds",
+                        "op": "replace"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+            {
+                "type": "minecraft:loot_table",
+                "name": "ltos:data",
+                "functions": [
+                    {
+                        "function": "minecraft:set_nbt",
+                        "tag": "{block:'decorated_pot'}"
+                    },
+                    {
+                      "function": "minecraft:copy_nbt",
+                      "source": "block_entity",
+                      "ops": [
+                        {
+                          "source": "sherds",
+                          "target": "BlockEntityTag.sherds",
+                          "op": "replace"
+                        }
+                      ]
+                    }
+                ]
+            }
+        ]
+    }
+    ]
+  }
+  

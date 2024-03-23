@@ -14,9 +14,11 @@ scoreboard players set @s ca.disengage_time 0
 
 execute positioned ^ ^1 ^-2 run tp 31182015-1791-2513-1181-151800000000 ~ ~ ~
 
-execute if score @s ca.disengage matches 1 run scoreboard players set $strength delta.api.launch 4000
-execute if score @s ca.disengage matches 2 run scoreboard players set $strength delta.api.launch 5500
-execute if score @s ca.disengage matches 3.. run scoreboard players set $strength delta.api.launch 7000
+execute if score @s ca.disengage matches 1 run scoreboard players set $strength delta.api.launch 3500
+execute if score @s ca.disengage matches 2 run scoreboard players set $strength delta.api.launch 5000
+execute if score @s ca.disengage matches 3.. run scoreboard players set $strength delta.api.launch 6500
+
+scoreboard players set @s ca.disengage_dur 41
 
 summon area_effect_cloud ~ ~ ~ {Particle:"block air",ReapplicationDelay:0,Radius:0.1f,RadiusPerTick:0f,RadiusOnUse:-5.0f,Duration:10,DurationOnUse:0f,Age:-1,WaitTime:0,effects:[{id:"minecraft:hunger",amplifier:75b,duration:4,ShowParticles:0b}]}
 

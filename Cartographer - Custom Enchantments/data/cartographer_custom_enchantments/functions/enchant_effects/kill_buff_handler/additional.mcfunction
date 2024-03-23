@@ -94,6 +94,9 @@ execute if score @s ca.energetic_dur matches 1.. if score $mod ca.energetic_dur 
 
 execute if score @s ca.adrenaline_dur matches 0 run attribute @s minecraft:generic.movement_speed modifier remove 31-119-1212-2216-0
 execute if score @s ca.frenzy_dur matches 0 run attribute @s minecraft:generic.attack_damage modifier remove 31-119-1212-2216-0
-execute if score @s ca.lifeblood_dur matches 0 run attribute @s minecraft:generic.armor modifier remove 31-119-1212-2216-0
+
+execute if score @s ca.energetic_dur matches 0 run attribute @s minecraft:generic.attack_speed modifier remove 31-119-1212-2216-0
+execute if score @s ca.energetic_dur matches 0 run attribute @s minecraft:player.block_break_speed modifier remove 31-119-1212-2216-0
+
 
 tag @s add kill_buff_checked

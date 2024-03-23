@@ -27,6 +27,10 @@ scoreboard players operation $temp ca.var += @s ca.duelist
 scoreboard players operation $temp ca.var += @s ca.hunter
 scoreboard players operation $temp ca.var += @s ca.smite
 
+scoreboard players operation $temp ca.var += @s ca.quake
+
+scoreboard players operation $temp ca.var += @s ca.lifesteal
+
 scoreboard players operation $temp ca.var += @s ca.curse_misfortune_main
 scoreboard players operation $temp ca.var += @s ca.curse_misfortune_off
 

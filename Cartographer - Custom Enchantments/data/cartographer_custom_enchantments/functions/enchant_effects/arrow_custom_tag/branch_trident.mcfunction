@@ -15,6 +15,8 @@ scoreboard players operation $duelist ca.var = @s ca.duelist
 scoreboard players operation $hunter ca.var = @s ca.hunter
 scoreboard players operation $smite ca.var = @s ca.smite
 
+scoreboard players operation $quake ca.var = @s ca.quake
+
 scoreboard players operation $curse_misfortune ca.var = @s ca.curse_misfortune
 
 scoreboard players operation $ranged_damage ca.var = @s ca.attr_ranged

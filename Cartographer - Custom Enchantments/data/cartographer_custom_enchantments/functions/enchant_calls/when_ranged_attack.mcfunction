@@ -23,6 +23,7 @@ scoreboard players set $executioner ca.var 0
 scoreboard players set $fire_aspect ca.var 0
 scoreboard players set $cauterize ca.var 0
 scoreboard players set $collapse ca.var 0
+scoreboard players set $quake ca.var 0
 
 scoreboard players set $loyalty ca.var 0
 scoreboard players set $wavedash ca.var 0

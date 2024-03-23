@@ -143,11 +143,16 @@ scoreboard objectives add ca.starfall dummy
 scoreboard objectives add ca.quake dummy
 scoreboard objectives add ca.momentum dummy
 
+scoreboard objectives add ca.quake_use_check dummy
+scoreboard objectives add ca.lifesteal_use_check dummy
+
 scoreboard objectives add ca.momentum_charge minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add ca.momentum_tier dummy
 
 scoreboard objectives add ca.stalwart dummy
 scoreboard objectives add ca.poise dummy
+scoreboard objectives add ca.stalwart_cdl dummy
+scoreboard objectives add ca.poise_cdl dummy
 
 scoreboard objectives add ca.shielding dummy
 scoreboard objectives add ca.shielding_time dummy
@@ -155,6 +160,10 @@ scoreboard objectives add ca.shielding_cdl dummy
 
 scoreboard objectives add ca.sprint_dash dummy
 scoreboard objectives add ca.disengage dummy
+
+scoreboard objectives add ca.sprint_dash_dur dummy
+scoreboard objectives add ca.disengage_dur dummy
+
 
 scoreboard objectives add ca.hex_eater dummy
 scoreboard objectives add ca.hex_eater_time dummy
@@ -549,6 +558,9 @@ scoreboard objectives add ca.enchant_var dummy
 #Setup LoE data space
 function cartographer_custom_enchantments:load/integration/active/clear
 
+#Setup Description Space
+function cartographer_custom_enchantments:lexica_calls/storage_setup
+
 #Set all needed player constants.
 execute as @a unless entity @s[scores={ca.echo_charges=-1..}] run scoreboard players set @a ca.echo_charges 0
 execute as @a unless entity @s[scores={ca.evocation_charges=-1..}] run scoreboard players set @a ca.evocation_charges 0
@@ -572,6 +584,12 @@ setblock 4206900 1 4206900 purple_shulker_box replace
 
 #Loyalty Ghost
 setblock 4206900 0 4206899 purple_shulker_box replace
+
+#Loyalty Ghost
+setblock 4206900 2 4206900 purple_shulker_box replace
+
+#Cartographer Glass
+setblock 4206900 6 4206900 purple_shulker_box replace
 
 #Initialize Global Value
 execute unless score $gl_ui_loc ca.gamerule matches 0.. run scoreboard players set $gl_ui_loc ca.gamerule 0

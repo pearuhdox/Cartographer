@@ -1,0 +1,1 @@
+scoreboard players set $#lib_bbl ca.installed 1

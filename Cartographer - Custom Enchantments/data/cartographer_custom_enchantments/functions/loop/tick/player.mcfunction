@@ -79,6 +79,14 @@ tag @s remove auto_charge_inv_fix
 #Remove Evading tag if no evasion
 execute unless score @s ca.evasion matches 1.. run tag @s remove evading
 
+#Remove Agility Stats Here
+execute unless score @s ca.agility matches 1.. run attribute @s minecraft:generic.jump_strength modifier remove 31-1179-1290-2025-0
+execute unless score @s ca.agility matches 1.. run attribute @s minecraft:generic.safe_fall_distance modifier remove 31-1179-1290-2025-0
+
+#Tick Sprint Dash Time and Disengage Time Here
+execute if score @s ca.disengage_dur matches 1.. run function cartographer_custom_enchantments:enchant_effects/disengage/tick
+execute if score @s ca.sprint_dash_dur matches 1.. run function cartographer_custom_enchantments:enchant_effects/sprint_dash/tick
+
 #Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
 execute if entity @s[tag=has_passive_ench] run function cartographer_custom_enchantments:enchant_calls/passively
 
@@ -96,7 +104,7 @@ execute if score @s ca.recoil_time matches 1.. run function cartographer_custom_
 execute unless block ~ ~-0.2 ~ #cartographer_core:can_raycast unless score @s ca.recoil_time matches 1.. unless score @s ca.recoil_count matches 1.. run function cartographer_custom_enchantments:enchant_effects/recoil/count_fix
 
 #Kill trigger (if score $cu_en_kill ca.enabler matches 1.. )
-execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
+#execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
 
 #Run Repulsion
 execute if score @s ca.repulsion matches 1.. unless score @s ca.repulsion_time matches 1.. if score @s ca.load_cro_time matches 5.. run function cartographer_custom_enchantments:enchant_effects/repulsion/activate
@@ -106,6 +114,10 @@ execute if score @s ca.repulsion_time matches 1.. unless score @s ca.load_cro_ti
 execute if score @s ca.fire_bow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 execute if score @s ca.fire_cbow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 execute if score @s ca.use_snowball matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
+
+execute if score @s ca.quake_use_check matches 1.. run scoreboard players remove @s ca.quake_use_check 1
+execute if score @s ca.lifesteal_use_check matches 1.. run scoreboard players remove @s ca.lifesteal_use_check 1
+
 
 #Break Spawner Trigger (if score $cu_en_spawner ca.enabler matches 1.. )
 execute if score @s ca.mine_spawner matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
@@ -240,6 +252,11 @@ execute if score @s ca.current_time matches 1.. run scoreboard players remove @s
 execute if score @s ca.concentrate_time matches 1.. run scoreboard players remove @s ca.concentrate_time 1
 execute if score @s ca.concentrate_time matches 1 run function cartographer_custom_enchantments:enchant_effects/concentration/reduce
 
+#Stalwart and Poise Cooldowns
+execute if score @s ca.stalwart_cdl matches 1.. run scoreboard players remove @s ca.stalwart_cdl 1
+execute if score @s ca.poise_cdl matches 1.. run scoreboard players remove @s ca.poise_cdl 1
+
+
 #Check if sneaking for Swift Sneak
 execute if score @s ca.death_time matches 60.. if score @s[tag=ca.added_swift_sneak] ca.sneak matches 0 if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/remove
 execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_swift_sneak] ca.sneak matches 1.. if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/add
@@ -283,6 +300,10 @@ tag @s remove ca.echo_charge_taken
 tag @s remove ca.evocation_charge_taken
 
 #Action bar indicators for Repeating, Echo, and Second Wind
+execute if score @s ca.repeating matches 1..7 run data modify storage ca.indicator Ammo set from entity @s SelectedItem.tag.Ammo
+execute if score @s ca.repeating matches 11..17 run data modify storage ca.indicator Ammo set from entity @s Inventory[{Slot:-106b}].tag.Ammo
+execute if score @s ca.repeating matches 1.. store result score @s ca.ind_val run data get storage ca.indicator Ammo
+
 execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 0 run function cartographer_custom_enchantments:helper/indicators/action_bar/master
 execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 1 run function cartographer_custom_enchantments:helper/indicators/subtitle/master
 

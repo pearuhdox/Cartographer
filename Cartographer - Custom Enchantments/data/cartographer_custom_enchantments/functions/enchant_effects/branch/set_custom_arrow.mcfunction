@@ -28,6 +28,9 @@ scoreboard players operation @s ca.duelist = $duelist ca.var
 scoreboard players operation @s ca.hunter = $hunter ca.var
 scoreboard players operation @s ca.smite = $smite ca.var
 
+scoreboard players operation @s ca.quake = $quake ca.var
+scoreboard players operation @s ca.lifesteal = $lifesteal ca.var
+
 scoreboard players operation @s ca.curse_misfortune = $curse_misfortune ca.var
 
 scoreboard players operation @s ca.attr_luck = $attr_luck ca.var

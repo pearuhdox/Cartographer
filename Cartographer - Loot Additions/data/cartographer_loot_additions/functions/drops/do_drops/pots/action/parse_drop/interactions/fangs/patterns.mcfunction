@@ -1,0 +1,3 @@
+execute if score $fang_pat ca.loot_var matches 1 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/fangs/patterns/x
+execute if score $fang_pat ca.loot_var matches 2 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/fangs/patterns/square
+execute if score $fang_pat ca.loot_var matches 3 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/fangs/patterns/close

@@ -8,7 +8,7 @@ execute as @a[distance=..2] at @s run function cartographer_mob_abilities:abilit
 function cartographer_mob_abilities:ability_traits/call_all_traits_hit
 
 scoreboard players set @s ca.mob_var 20
-execute if score @s ca.lifetime matches 41.. run scoreboard players add @s ca.lifetime 40
+scoreboard players add @s ca.lifetime 60
 
 execute facing entity @p eyes run particle minecraft:sweep_attack ^ ^0.3 ^1 0.5 0.15 0.5 0 8 normal
 

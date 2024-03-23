@@ -46,18 +46,8 @@ execute if score @s ca.attr_random_crit matches 1.. run function cartographer_cu
 scoreboard players operation $aoe_size ca.eruption = @s ca.attr_aoe_size
 
 #Run branching on the xp orb here.
-execute as @e[type=minecraft:experience_orb,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch
+#execute as @e[type=minecraft:experience_orb,limit=1,sort=nearest] at @s run function cartographer_custom_enchantments:enchant_effects/eruption/branch
 
-#If no xp orb, approximate instead
-execute unless entity @e[type=minecraft:experience_orb,limit=1,sort=nearest,distance=..6] as @s positioned ^ ^ ^3 run function cartographer_custom_enchantments:enchant_effects/eruption/recursion
-
-#scoreboard players set $eruption ca.eruption 0
+scoreboard players set $do_eruption ca.var 1
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
-
-scoreboard players set $eruption ca.cauterize 0
-scoreboard players set $eruption ca.fire_aspect 0
-scoreboard players set $eruption ca.knockback 0
-scoreboard players set $eruption ca.frostbite 0
-scoreboard players set $eruption ca.evocation 0
-scoreboard players set $eruption ca.executioner 0

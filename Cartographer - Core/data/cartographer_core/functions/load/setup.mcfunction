@@ -41,6 +41,42 @@ scoreboard players set $#lib_dies ca.installed 0
 #Create UUID Handshake score for Interactions
 scoreboard objectives add ca.uuid_interact dummy
 
+scoreboard objectives add ca.yaw dummy
+scoreboard objectives add ca.yaw_past dummy
+
+scoreboard objectives add ca.pitch dummy
+scoreboard objectives add ca.pitch_past dummy
+
+scoreboard objectives add ca.x_pos dummy
+scoreboard objectives add ca.y_pos dummy
+scoreboard objectives add ca.z_pos dummy
+
+scoreboard objectives add ca.x_pos_past dummy
+scoreboard objectives add ca.y_pos_past dummy
+scoreboard objectives add ca.z_pos_past dummy
+
+scoreboard objectives add ca.drop_box minecraft.dropped:minecraft.shulker_box
+
+scoreboard objectives add ca.drop_box_white minecraft.dropped:minecraft.white_shulker_box
+scoreboard objectives add ca.drop_box_orange minecraft.dropped:minecraft.orange_shulker_box
+scoreboard objectives add ca.drop_box_magenta minecraft.dropped:minecraft.magenta_shulker_box
+scoreboard objectives add ca.drop_box_light_blue minecraft.dropped:minecraft.light_blue_shulker_box
+scoreboard objectives add ca.drop_box_yellow minecraft.dropped:minecraft.yellow_shulker_box
+scoreboard objectives add ca.drop_box_lime minecraft.dropped:minecraft.lime_shulker_box
+scoreboard objectives add ca.drop_box_pink minecraft.dropped:minecraft.pink_shulker_box
+scoreboard objectives add ca.drop_box_gray minecraft.dropped:minecraft.gray_shulker_box
+scoreboard objectives add ca.drop_box_light_gray minecraft.dropped:minecraft.light_gray_shulker_box
+scoreboard objectives add ca.drop_box_cyan minecraft.dropped:minecraft.cyan_shulker_box
+scoreboard objectives add ca.drop_box_purple minecraft.dropped:minecraft.purple_shulker_box
+scoreboard objectives add ca.drop_box_blue minecraft.dropped:minecraft.blue_shulker_box
+scoreboard objectives add ca.drop_box_brown minecraft.dropped:minecraft.brown_shulker_box
+scoreboard objectives add ca.drop_box_green minecraft.dropped:minecraft.green_shulker_box
+scoreboard objectives add ca.drop_box_red minecraft.dropped:minecraft.red_shulker_box
+scoreboard objectives add ca.drop_box_black minecraft.dropped:minecraft.black_shulker_box
+
+scoreboard objectives add ca.quick_drop_anim dummy
+
+scoreboard objectives add ca.glass_cdl dummy
 
 #Create mutex score
 scoreboard objectives add ca.mutex dummy
@@ -258,6 +294,7 @@ scoreboard players set $150 ca.CONSTANT 150
 scoreboard players set $200 ca.CONSTANT 200
 scoreboard players set $210 ca.CONSTANT 210
 scoreboard players set $225 ca.CONSTANT 225
+scoreboard players set $250 ca.CONSTANT 250
 scoreboard players set $300 ca.CONSTANT 300
 scoreboard players set $600 ca.CONSTANT 600
 scoreboard players set $1000 ca.CONSTANT 1000

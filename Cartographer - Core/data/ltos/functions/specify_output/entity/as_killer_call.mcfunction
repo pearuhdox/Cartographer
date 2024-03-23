@@ -1,0 +1,1 @@
+$execute as $(killer_uuid) at @s run function #ltos:as_killer

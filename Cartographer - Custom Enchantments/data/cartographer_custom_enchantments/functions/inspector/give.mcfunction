@@ -1,0 +1,1 @@
+give @p bundle{display:{Name:'{"text":"Cartographer\'s Glass","color":"#D6C898","bold":true,"italic":false}',Lore:['{"text":"Place an item in this item to","color":"gray","italic":false}','{"text":"display a description of all custom","color":"gray","italic":false}','{"text":"enchantments and their effects.","color":"gray","italic":false}']},CartographerGlass:1b} 1

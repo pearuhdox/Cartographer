@@ -1,0 +1,45 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "bonus_rolls": 0.0,
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "conditions": [
+                        {
+                            "block": "minecraft:tnt",
+                            "condition": "minecraft:block_state_property",
+                            "properties": {
+                                "unstable": "false"
+                            }
+                        }
+                    ],
+                    "name": "minecraft:tnt"
+                }
+            ],
+            "rolls": 1.0
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "ltos:data",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{block:'tnt'}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "random_sequence": "minecraft:blocks/tnt"
+}

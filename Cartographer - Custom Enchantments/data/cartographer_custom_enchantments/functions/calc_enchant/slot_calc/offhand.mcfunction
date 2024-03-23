@@ -223,7 +223,6 @@ execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.
 execute unless score $hold_ranged_m ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"tempo_theft"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.off_tempo_theft += $temp ca.susu
 
-
 #duelist
 execute unless score $hold_ranged_m ca.ench_var matches 1.. if score $hold_trident ca.ench_var matches 1.. store result score $temp ca.susu run data get storage ca.susu:enchants offh.tag.CustomEnchantments[{id:"duelist"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_passive ca.enabler run scoreboard players operation @s ca.off_duelist += $temp ca.susu

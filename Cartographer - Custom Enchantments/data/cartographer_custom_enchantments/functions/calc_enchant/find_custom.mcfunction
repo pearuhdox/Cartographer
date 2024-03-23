@@ -16,7 +16,7 @@ data modify storage ca.susu:enchants offh set from storage ca.susu:enchants inv[
 #Run extra checks added via tag hook here
 function #minecraft:inventory_calculate/extras
 
-
+execute unless score @s ca.glass_cdl matches 1.. run function cartographer_custom_enchantments:inspector/find_slot
 
 execute if data storage ca.susu:enchants head.tag.CustomEnchantments run tag @s add ca.check_head
 execute if data storage ca.susu:enchants body.tag.CustomEnchantments run tag @s add ca.check_body

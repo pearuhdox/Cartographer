@@ -1,0 +1,50 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "bonus_rolls": 0,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:spawner",
+            "functions": [
+              {
+                "function": "minecraft:copy_nbt",
+                "source": "block_entity",
+                "ops": [
+                  {
+                    "source": "SpawnPotentials",
+                    "target": "BlockEntityTag.SpawnPotentials",
+                    "op": "replace"
+                  },
+                  {
+                    "source": "SpawnData",
+                    "target": "BlockEntityTag.SpawnData",
+                    "op": "replace"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "name": "ltos:data",
+            "functions": [
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{block:'spawner'}"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "random_sequence": "minecraft:blocks/spawner"
+  }
+  

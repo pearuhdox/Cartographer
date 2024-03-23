@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:block",
+    "random_sequence": "minecraft:blocks/frosted_ice",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "ltos:data",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{block:'frosted_ice'}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

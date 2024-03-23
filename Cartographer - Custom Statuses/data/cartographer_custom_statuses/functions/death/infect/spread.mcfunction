@@ -8,6 +8,9 @@ scoreboard players add $infect_pass_time ca.var 2
 scoreboard players set $did_spread_infect ca.var 0
 
 #Attempt to Spread Decay
+data modify storage cartographer_custom_statuses:infection active_effects set value []
+data modify storage cartographer_custom_statuses:infection active_effects set from entity @s data.active_effects
+
 execute as @e[type=#bb:hostile,distance=..6,limit=2,sort=random,tag=!ca.infect_warmup] at @s run function cartographer_custom_statuses:effects/infect/do_spread
 
 execute unless score $did_spread_infect ca.var matches 1.. run function cartographer_custom_statuses:effects/infect/pool

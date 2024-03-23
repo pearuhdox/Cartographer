@@ -9,7 +9,7 @@
             "text": "Arrows fired from this weapon temporarily steal movement speed from enemies."
         },
         "icon": {
-            "item": "minecraft:scute"
+            "item": "minecraft:turtle_scute"
         },
         "frame": "task",
         "show_toast": true,

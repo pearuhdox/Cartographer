@@ -9,16 +9,17 @@ execute if score @s ability_charge matches 1 run playsound minecraft:entity.rava
 
 execute if score @s ability_charge matches 1 run scoreboard players set @s mob_move_dis 23
 
-execute if score @s ability_charge matches 1 run tp @s ~ ~ ~ facing entity @p feet
 
-execute if score @s ability_charge matches 1 run data merge entity @s {NoAI:1}
+execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animations/hookshot/aim_call
+execute if score @s ability_charge matches 1 store result storage cartographer:macro.mob_abilities aim_direction int 1 run scoreboard players get @s ca.aim_direction
+execute if score @s ability_charge matches 1 store result storage cartographer:macro.mob_abilities aim_direction_y int 1 run scoreboard players get @s ca.aim_direction_y
+execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animations/hookshot/macro with storage cartographer:macro.mob_abilities
+
 
 execute if score @s ability_charge matches 1 run tag @s add is_casting
 
 execute if score @s ability_charge matches 1 unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
-
-execute if score @s ability_charge matches 1 at @s run function cartographer_mob_abilities:animations/hookshot/branch
 
 execute if score @s ability_charge matches 21 run tag @s remove is_casting
 

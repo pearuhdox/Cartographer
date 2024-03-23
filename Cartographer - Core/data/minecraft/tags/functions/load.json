@@ -1,5 +1,7 @@
 {
   "values":[
-	"cartographer_core:load/setup"
+	"cartographer_core:load/setup",
+  "ltos:load",
+	"gu:load"
   ]
 }

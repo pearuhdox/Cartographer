@@ -22,7 +22,7 @@ execute if score $diamond ca.repair_station_state matches 1.. run data modify st
 execute if score $netherite ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:netherite_ingot"
 execute if score $leather ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:leather"
 execute if score $chain ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:chain"
-execute if score $scute ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:scute"
+execute if score $scute ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:turtle_scute"
 execute if score $string ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:string"
 execute if score $quartz ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:quartz"
 execute if score $membrane ca.repair_station_state matches 1.. run data modify storage bbl:vanilla_clear sudo_root.item_id set value "minecraft:membrane"

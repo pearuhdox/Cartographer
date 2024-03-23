@@ -4,8 +4,6 @@ scoreboard players set @s ability_charge 0
 #Set Recast Count to 0
 scoreboard players set @s ca.accelerate_stacks 0
 
-#Reset potentially changed stats.
-data merge entity @s {NoAI:0}
 
 effect clear @s glowing
 

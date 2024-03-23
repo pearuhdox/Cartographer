@@ -10,7 +10,9 @@ execute anchored eyes run particle minecraft:cloud ^ ^ ^0.5 0.3 0.3 0.3 0.075 5 
 playsound minecraft:item.trident.throw hostile @a[distance=..20] ~ ~ ~ 2 0.75
 playsound minecraft:item.crossbow.shoot hostile @a[distance=..20] ~ ~ ~ 2 0.75
 
-execute anchored eyes positioned ^ ^ ^0.5 run function cartographer_mob_abilities:abilities/volley/branch
+execute store result storage cartographer:macro.mob_abilities aim_direction int 1 run scoreboard players get @s ca.aim_direction
+execute store result storage cartographer:macro.mob_abilities aim_direction_y int 1 run scoreboard players get @s ca.aim_direction_y
+function cartographer_mob_abilities:abilities/volley/macro with storage cartographer:macro.mob_abilities
 
 
 #Run not on hit traits

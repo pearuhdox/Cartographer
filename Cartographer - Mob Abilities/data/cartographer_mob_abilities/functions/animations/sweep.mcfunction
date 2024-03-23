@@ -11,18 +11,20 @@ execute if score @s ability_charge matches 9 run playsound minecraft:entity.play
 
 execute if score @s ability_charge matches 1 unless score $gl_ab_ani ca.gamerule matches 2 unless entity @s[tag=ca.no_glowing] run effect give @s glowing 1 0 true
 
-execute if score @s ability_charge matches 1 run data modify entity @s NoAI set value 1b
 
-execute if score @s ability_charge matches 1 run tp @s ~ ~ ~ facing entity @p feet
+execute if score @s ability_charge matches 1 run tp 31182015-2018-1311-5181-311811518 ~ ~ ~ facing entity @p feet
+execute if score @s ability_charge matches 1 store result score @s ca.aim_direction run data get entity 31182015-2018-1311-5181-311811518 Rotation[0]
+execute if score @s ability_charge matches 1 run tp 31182015-2018-1311-5181-311811518 4206900 0 4206900
+execute if score @s ability_charge matches 1 store result storage cartographer:macro.mob_abilities aim_direction int 1 run scoreboard players get @s ca.aim_direction
 
-scoreboard players set @s ca.mob_move_mode 1
-scoreboard players set @s ca.mob_move_time 32
+execute if score @s ability_charge matches 1 run function cartographer_mob_abilities:animations/sweep/macro with storage cartographer:macro.mob_abilities
 
-execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 positioned ~ ~0.75 ~ run function cartographer_mob_abilities:animations/sweep/place_lines
-execute if score @s ability_charge matches 1 facing entity @p feet rotated ~ 0 positioned ~ ~0.5 ~ run function cartographer_mob_abilities:animations/sweep/warn
+execute if score @s ability_charge matches 7 run tp 31182015-2018-1311-5181-311811518 ~ ~ ~ facing entity @p feet
+execute if score @s ability_charge matches 7 store result score @s ca.aim_direction run data get entity 31182015-2018-1311-5181-311811518 Rotation[0]
+execute if score @s ability_charge matches 7 run tp 31182015-2018-1311-5181-311811518 4206900 0 4206900
+execute if score @s ability_charge matches 7 store result storage cartographer:macro.mob_abilities aim_direction int 1 run scoreboard players get @s ca.aim_direction
 
-execute if score @s ability_charge matches 7 facing entity @p feet rotated ~ 0 positioned ~ ~0.75 ~ run function cartographer_mob_abilities:animations/sweep/place_lines
-execute if score @s ability_charge matches 7 facing entity @p feet rotated ~ 0 positioned ~ ~0.5 ~ run function cartographer_mob_abilities:animations/sweep/warn
+execute if score @s ability_charge matches 7 run function cartographer_mob_abilities:animations/sweep/macro with storage cartographer:macro.mob_abilities
 
 function cartographer_mob_abilities:loop/tick/animation
 

@@ -18,6 +18,8 @@ scoreboard players operation @s ca.duelist = @p ca.duelist
 scoreboard players operation @s ca.hunter = @p ca.hunter
 scoreboard players operation @s ca.smite = @p ca.smite
 
+scoreboard players operation @s ca.quake = @p ca.quake
+scoreboard players operation @s ca.lifesteal = @p ca.lifesteal
 
 
 scoreboard players operation @s ca.fire_aspect += @p ca.off_fire_aspect

@@ -1,0 +1,1 @@
+execute if score @s ca.stalwart_cdl matches 41.. run scoreboard players remove @s ca.stalwart_cdl 40

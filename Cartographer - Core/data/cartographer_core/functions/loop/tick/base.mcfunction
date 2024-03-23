@@ -10,6 +10,7 @@ execute store result score $player_count ca.gamerule if entity @a
 #Run the list track for Helper Damage No Knockback
 function cartographer_core:helper/damage_knockback/list_track
 
+execute if score $box ca.quick_drop_anim matches 1.. run scoreboard players remove $box ca.quick_drop_anim 1
 
 #Run all Cartographer Effects from Core Timers.
 #function cartographer_charon:loop/tick/base

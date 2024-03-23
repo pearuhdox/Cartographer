@@ -1,0 +1,1 @@
+execute if entity @a[scores={ca.quake_use_check=1..}] run function cartographer_custom_enchantments:enchant_effects/quake/at_entity

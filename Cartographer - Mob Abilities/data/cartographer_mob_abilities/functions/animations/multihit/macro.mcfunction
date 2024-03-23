@@ -1,0 +1,1 @@
+$execute at @s rotated $(aim_direction) 0 run particle minecraft:cloud ^ ^0.5 ^2 0.32 0 0.32 0.01 6 normal

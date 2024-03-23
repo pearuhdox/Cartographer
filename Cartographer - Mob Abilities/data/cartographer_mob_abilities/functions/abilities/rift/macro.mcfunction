@@ -1,0 +1,2 @@
+$execute rotated $(aim_direction) 0 unless entity @s[tag=ca.inverse] run function cartographer_mob_abilities:abilities/rift/spawn/branch
+$execute rotated $(aim_direction) 0 if entity @s[tag=ca.inverse] run function cartographer_mob_abilities:abilities/rift/spawn/inverse

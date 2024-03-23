@@ -2,7 +2,7 @@
 function cartographer_custom_enchantments:enchant_effects/infinity/kill_handler/tick_down
 
 #Auto Charge
-execute if score $cu_en_kill ca.enabler matches 1.. run function cartographer_custom_enchantments:enchant_effects/auto_charge/count_check
+execute run function cartographer_custom_enchantments:enchant_effects/auto_charge/count_check
 
 #Check to fire Deadeye
 execute if score @s ca.deadeye matches 1.. run function cartographer_custom_enchantments:enchant_effects/deadeye/chance

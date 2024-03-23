@@ -17,10 +17,11 @@ data remove storage cartographer_mob_abilities:info rift.Tags
 execute unless entity @s[tag=ca.ignore_traits_active] run function cartographer_mob_abilities:abilities/rift/trait_copy
 data modify storage cartographer_mob_abilities:info rift.Tags append value "ca.rift_projectile"
 
-execute unless entity @s[tag=ca.inverse] run function cartographer_mob_abilities:abilities/rift/spawn/branch
-execute if entity @s[tag=ca.inverse] run function cartographer_mob_abilities:abilities/rift/spawn/inverse
+#Aim and cast
+execute store result storage cartographer:macro.mob_abilities aim_direction int 1 run scoreboard players get @s ca.aim_direction
+function cartographer_mob_abilities:abilities/rift/macro with storage cartographer:macro.mob_abilities
 
-data modify entity @s NoAI set value 0b
+
 
 execute if entity @s[tag=ca.inverse] run scoreboard players set @s mob_move_dis 53
 

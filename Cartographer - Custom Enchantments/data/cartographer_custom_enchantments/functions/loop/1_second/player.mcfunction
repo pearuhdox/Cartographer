@@ -8,10 +8,10 @@ execute if score @s ca.combat_timer matches ..0 if score @s ca.sweeping_charges 
 execute if score @s ca.combat_timer matches ..0 if score @s ca.thrusting_charges < @s ca.thrusting run function cartographer_custom_enchantments:enchant_effects/thrusting/restore
 execute if score @s ca.combat_timer matches ..0 if score @s ca.slamming_charges < @s ca.slamming run function cartographer_custom_enchantments:enchant_effects/slamming/restore
 
+#Stalwart and Poise HP Checker
+execute if entity @s[tag=ca.check_hp_percent] run function cartographer_custom_enchantments:enchant_calls/check_hp
 
 #function cartographer_custom_enchantments:enchant_effects/confidence/reset
 #function cartographer_custom_enchantments:enchant_effects/desperation/reset
-function cartographer_custom_enchantments:enchant_effects/stalwart/reset
-function cartographer_custom_enchantments:enchant_effects/poise/reset
-
-execute if entity @s[tag=ca.check_hp_percent] run function cartographer_custom_enchantments:enchant_calls/check_hp
+#function cartographer_custom_enchantments:enchant_effects/stalwart/reset
+#function cartographer_custom_enchantments:enchant_effects/poise/reset

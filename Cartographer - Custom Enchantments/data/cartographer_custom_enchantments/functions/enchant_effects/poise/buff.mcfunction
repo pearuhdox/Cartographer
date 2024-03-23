@@ -1,12 +1,18 @@
-execute if score @s ca.poise matches 1 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 1 add
-execute if score @s ca.poise matches 2 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 2 add
-execute if score @s ca.poise matches 3 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 3 add
-execute if score @s ca.poise matches 4 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 4 add
-execute if score @s ca.poise matches 5 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 5 add
-execute if score @s ca.poise matches 6 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 6 add
-execute if score @s ca.poise matches 7 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 7 add
-execute if score @s ca.poise matches 8 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 8 add
-execute if score @s ca.poise matches 9 run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 9 add
-execute if score @s ca.poise matches 10.. run attribute @s minecraft:generic.armor modifier add 31182015-5143-8221-6631-000000000000 "poise" 10 add
+execute store result score $shield_total ca.poise run attribute @s minecraft:generic.max_health get
+scoreboard players operation $cap ca.abs_handler = $shield_total ca.poise
+
+scoreboard players operation $shield_total ca.poise *= @s ca.poise
+scoreboard players operation $shield_total ca.poise *= $5 ca.CONSTANT
+scoreboard players operation $shield_total ca.poise /= $100 ca.CONSTANT
+
+scoreboard players operation $amount ca.abs_handler = $shield_total ca.poise
+scoreboard players set $duration ca.abs_handler 120
+
+function cartographer_core:helper/abs_handler/add
+
+scoreboard players set @s ca.poise_cdl 2400
+
+playsound minecraft:item.shield.block player @s ~ ~ ~ 0.75 1.25
+particle minecraft:falling_honey ~ ~0.01 ~ 0.4 0 0.4 0 60
 
 function #minecraft:cartographer/events/enchantments/passive/poise

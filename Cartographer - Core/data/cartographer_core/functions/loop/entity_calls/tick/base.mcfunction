@@ -10,6 +10,9 @@ execute if entity @s[type=#cartographer_core:projectile] run function cartograph
 #Nothing Currently Runs on Item Frames - Leaving this for placeholder... Run All Item Frame Effects
 #execute if entity @s[type=#cartographer_core:item_frames] run function cartographer_core:loop/entity_calls/tick/types/item_frames
 
+#Item Display
+execute if score $box ca.quick_drop_anim matches 1.. if entity @s[type=item_display,tag=ca.quick_drop_box_animation] run function cartographer_core:quick_drop/shulker/animation
+
 #Run All Item Drop Effects
 execute if entity @s[type=item] run function cartographer_core:loop/entity_calls/tick/types/items
 

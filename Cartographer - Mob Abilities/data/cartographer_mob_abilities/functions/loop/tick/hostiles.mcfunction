@@ -8,6 +8,10 @@ execute unless score $has_los ca.mob_var matches 1.. run tag @s remove can_see_p
 #Boss Anti-Cheese
 execute if entity @s[tag=ca.boss] run function cartographer_mob_abilities:passive/boss
 
+#Run Breaker
+execute as @s[type=#bb:hostile,tag=ca.breaker] at @s run function cartographer_mob_abilities:passive/breaker/master
+
+
 #Run Touch
 execute if entity @s[tag=ca.running_touch_melee] run function cartographer_mob_abilities:ability_traits/touch/melee
 execute if entity @s[tag=ca.running_touch_ranged] run function cartographer_mob_abilities:ability_traits/touch/ranged
@@ -18,6 +22,8 @@ execute if entity @s[tag=ca.aug_running_touch_ranged] run function cartographer_
 #Run Invulnerable Notices
 execute if score $invul_time_check invul matches 1.. if entity @s[predicate=cartographer_mob_abilities:is_invulnerable] at @s run function cartographer_mob_abilities:loop/tick/invulnerable_test
 execute if score $invul_time_check invul matches 1.. if entity @s[predicate=cartographer_mob_abilities:has_proj_prot] at @s run function cartographer_mob_abilities:loop/tick/projectile_resist_test
+
+execute if score @s ca.carapace_stacks matches 1.. at @s if entity @s[nbt={HurtTime:9s}] run function cartographer_mob_abilities:ability_traits/carapace/remove
 
 #Run Enderport
 execute if entity @s[tag=ca.enderport] if entity @e[type=#bb:projectile,nbt=!{inGround:1b},distance=..5] run function cartographer_mob_abilities:passive/enderport
@@ -38,9 +44,6 @@ execute if score @s ca.cutter_animation matches 1.. run function cartographer_mo
 
 #Run Multihit Animations
 execute if score @s ca.multihit_animation matches 1.. run function cartographer_mob_abilities:abilities/multihit/animation
-
-#Run Move Animations
-execute if score @s ca.mob_move_time matches 1.. run function cartographer_mob_abilities:move_mode/master
 
 #Run Movement Disable and Melee Damage Disable
 execute if entity @s[scores={mob_move_dis=1..}] run function cartographer_mob_abilities:loop/tick/disablers/move

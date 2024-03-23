@@ -9,7 +9,7 @@ execute if entity @s[tag=ca.trigger_traits] unless score @s ability_charge match
 execute if entity @s[tag=ca.trigger_traits] if score @s ca.trigger_trait_cooldown matches 1.. run scoreboard players remove @s ca.trigger_trait_cooldown 1
 
 #Reduce Cooldowns on all enemies with cooldowns.
-scoreboard players remove @s[tag=ca.has_active,scores={cooldown=1..}] cooldown 1
+execute unless score @s ca.cutter_animation matches 1.. unless score @s ca.sweep_animation matches 1.. unless score @s ca.multihit_animation matches 1.. run scoreboard players remove @s[tag=ca.has_active,scores={cooldown=1..}] cooldown 1
 scoreboard players remove @s[tag=ca.acro_pass,scores={ca.acrobat_passive_cooldown=1..}] ca.acrobat_passive_cooldown 1
 
 #Stack Manager

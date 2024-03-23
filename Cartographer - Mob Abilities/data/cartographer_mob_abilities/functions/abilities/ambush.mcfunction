@@ -14,8 +14,8 @@ particle minecraft:smoke ~ ~1 ~ 0.3 0.5 0.3 0.05 40
 
 particle minecraft:smoke ~ ~ ~ 0.5 0.3 0.5 0.05 40
 
-execute positioned as @p[distance=..25] rotated as @p[distance=..25] rotated ~ 0 positioned ^ ^ ^-1.5 if block ~ ~ ~ #bb:can_raycast run tp @s ~ ~ ~ facing entity @p[distance=..25] feet
-execute positioned as @p[distance=..25] rotated as @p[distance=..25] rotated ~ 0 positioned ^ ^ ^-1.5 unless block ~ ~ ~ #bb:can_raycast run tp @s ~ ~1.5 ~ facing entity @p[distance=..25] feet
+execute positioned as @p[distance=..25] rotated as @p[distance=..25] rotated ~ 0 positioned ^ ^ ^-2 if block ~ ~ ~ #bb:can_raycast run tp @s ~ ~ ~ facing entity @p[distance=..25] feet
+execute positioned as @p[distance=..25] rotated as @p[distance=..25] rotated ~ 0 positioned ^ ^ ^-2 unless block ~ ~ ~ #bb:can_raycast run tp @s ~ ~1.5 ~ facing entity @p[distance=..25] feet
 
 execute as @p[distance=..25] at @s run playsound minecraft:entity.enderman.teleport hostile @a[distance=..16] ~ ~ ~ 2 0.5
 

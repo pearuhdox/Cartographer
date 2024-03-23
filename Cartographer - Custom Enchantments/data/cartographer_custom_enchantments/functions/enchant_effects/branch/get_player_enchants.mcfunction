@@ -8,15 +8,8 @@ scoreboard players operation $sharpshot ca.var = @s ca.sharpshot
 
 scoreboard players operation $piercing ca.var = @s ca.piercing
 
-
 scoreboard players operation $concentration_stacks ca.var = @s ca.concentrate_stack
 
-
-
-scoreboard players operation $cauterize ca.var += @s ca.off_cauterize
-scoreboard players operation $first_strike ca.var += @s ca.off_first_strike
-scoreboard players operation $hex_eater ca.var += @s ca.off_hex_eater
-scoreboard players operation $executioner ca.var += @s ca.off_executioner
 
 
 
@@ -47,6 +40,8 @@ scoreboard players operation $duelist ca.var = @s ca.duelist
 scoreboard players operation $hunter ca.var = @s ca.hunter
 scoreboard players operation $smite ca.var = @s ca.smite
 
+scoreboard players operation $quake ca.var += @s ca.quake
+scoreboard players operation $lifesteal ca.var += @s ca.lifesteal
 
 
 scoreboard players operation $fire_aspect ca.var += @s ca.off_fire_aspect

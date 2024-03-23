@@ -1,7 +1,7 @@
 execute if predicate cartographer_core:is_on_fire unless entity @s[tag=ca.oil_ignited] run function cartographer_custom_statuses:effects/oiled/ignite
-execute unless predicate cartographer_core:is_on_fire unless entity @s[type=#cartographer_core:fire_immune] if entity @s[tag=ca.oil_ignited] run function cartographer_custom_statuses:effects/oiled/clear
+execute unless predicate cartographer_core:is_on_fire unless entity @s[type=#cartographer_core:classes/fire_immune] if entity @s[tag=ca.oil_ignited] run function cartographer_custom_statuses:effects/oiled/clear
 
-execute if entity @s[type=#cartographer_core:fire_immune] unless entity @s[tag=ca.oil_ignited] run function cartographer_custom_statuses:effects/oiled/ignite
+execute if entity @s[type=#cartographer_core:classes/fire_immune] unless entity @s[tag=ca.oil_ignited] run function cartographer_custom_statuses:effects/oiled/ignite
 
 execute unless entity @s[tag=ca.oil_ignited] run particle minecraft:block minecraft:coal_block ~ ~1 ~ 0.1 0.4 0.1 0 2 normal
 execute if entity @s[tag=ca.oil_ignited] run particle minecraft:soul_fire_flame ~ ~1 ~ 0.1 0.4 0.1 0.04 1 normal

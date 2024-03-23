@@ -1,9 +1,7 @@
 function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
-data modify entity @s NoAI set value 0b
 
-
-scoreboard players set @s mob_atk_dis 6
+scoreboard players set @s mob_atk_dis 10
 
 tag @a remove multihit_tagged
 scoreboard players set @a ca.multihit_animation 0

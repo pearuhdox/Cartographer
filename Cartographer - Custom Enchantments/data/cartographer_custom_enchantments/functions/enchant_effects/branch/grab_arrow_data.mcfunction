@@ -49,6 +49,18 @@ scoreboard players operation $custom_arrow ca.var += $temp ca.susu
 
 
 scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"quake"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.quake += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
+
+scoreboard players set $temp ca.susu 0
+execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"lifesteal"}].lvl
+execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.lifesteal += $temp ca.susu
+scoreboard players operation $custom_arrow ca.var += $temp ca.susu
+
+
+scoreboard players set $temp ca.susu 0
 execute store result score $temp ca.susu run data get storage ca.susu:enchants arrow.tag.CustomEnchantments[{id:"duelist"}].lvl
 execute if score $temp ca.susu matches 1.. store result score $cu_en_ranged ca.enabler run scoreboard players operation @s ca.duelist += $temp ca.susu
 scoreboard players operation $custom_arrow ca.var += $temp ca.susu

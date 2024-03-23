@@ -4,9 +4,9 @@ function cartographer_mob_abilities:ability_traits/cooldown_traits
 
 scoreboard players set @s ability_charge 0
 
-function cartographer_mob_abilities:abilities/quickdraw/normal
-
-data merge entity @s {NoAI:0}
+execute store result storage cartographer:macro.mob_abilities aim_direction int 1 run scoreboard players get @s ca.aim_direction
+execute store result storage cartographer:macro.mob_abilities aim_direction_y int 1 run scoreboard players get @s ca.aim_direction_y
+function cartographer_mob_abilities:abilities/quickdraw/macro with storage cartographer:macro.mob_abilities
 
 effect give @s speed 4 0 true
 

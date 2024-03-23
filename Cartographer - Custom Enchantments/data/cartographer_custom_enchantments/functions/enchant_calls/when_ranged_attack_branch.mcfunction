@@ -41,3 +41,9 @@ scoreboard players set $block_fire_aspect ca.weapon_var 1
 scoreboard players set $block_knockback ca.weapon_var 1
 scoreboard players set $block_punch ca.weapon_var 1
 execute at @s run function cartographer_custom_enchantments:enchant_effects/on_hit/ranged_master
+
+#Lifesteal Check
+execute if score $lifesteal ca.var matches 1.. on attacker run scoreboard players set @s ca.lifesteal_use_check 3
+
+#Quake
+execute if score $quake ca.var matches 1.. at @s run function cartographer_custom_enchantments:enchant_effects/quake/projectile_find

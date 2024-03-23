@@ -1,0 +1,4 @@
+data modify storage cartographer_custom_enchantments:inspector lore append from storage cartographer_custom_enchantments:inspector description[0]
+
+data remove storage cartographer_custom_enchantments:inspector description[0]
+execute if data storage cartographer_custom_enchantments:inspector description[0] run function cartographer_custom_enchantments:inspector/tooltip/enchantments/fetch_recurse

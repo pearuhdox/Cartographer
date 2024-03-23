@@ -12,6 +12,8 @@ execute store result storage cartographer_custom_enchantments:sprint_dash data.P
 execute store result storage cartographer_custom_enchantments:sprint_dash data.Pos[1] double 0.01 run scoreboard players get @s ca.sprint_dash_y
 execute store result storage cartographer_custom_enchantments:sprint_dash data.Pos[2] double 0.01 run scoreboard players get @s ca.sprint_dash_z
 
+scoreboard players set @s ca.sprint_dash_dur 4
+
 scoreboard players set @s ca.sprint_dash_time 0
 
 data modify entity 31182015-1791-2513-1181-151800000000 Pos set from storage cartographer_custom_enchantments:sprint_dash data.Pos

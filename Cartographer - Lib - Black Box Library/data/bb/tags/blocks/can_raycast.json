@@ -1,0 +1,21 @@
+{
+  "values": [
+    "#bb:no_collision",
+    "minecraft:vine",
+    "minecraft:repeater",
+    "minecraft:comparator",
+    "minecraft:water",
+    "minecraft:ladder",
+    "minecraft:weeping_vines",
+    "minecraft:twisting_vines",
+    "minecraft:lava",
+    "minecraft:cobweb",
+    "minecraft:big_dripleaf",
+    "#minecraft:candles",
+    "#minecraft:wool_carpets",
+	"minecraft:bubble_column",
+	"minecraft:cave_vines",
+    "minecraft:cave_vines_plant",
+    "minecraft:moss_carpet"
+  ]
+}

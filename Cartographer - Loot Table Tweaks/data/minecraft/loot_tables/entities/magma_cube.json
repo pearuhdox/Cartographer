@@ -1,74 +1,55 @@
 {
-  "type": "minecraft:entity",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
+    "type": "minecraft:entity",
+    "pools": [
         {
-          "type": "minecraft:loot_table",
-          "name": "cartographer_mob_abilities:death_test/test"
-        }
-      ]
-    },
-    
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:loot_table",
-          "name": "cartographer_custom_statuses:death_test/test"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:entity_scores",
-          "entity": "killer",
-          "scores": {
-            "ca.loot_table_rules": {
-              "min": 0,
-              "max": 0
-            }
-          }
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": -2,
-                "max": 1,
-                "type": "minecraft:uniform"
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:player_head",
+                "functions": [
+                  {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{display:{Name:'{\"text\":\"Mob Essence\",\"color\":\"dark_aqua\",\"italic\":false}',Lore:['{\"text\":\"Can be converted into a variety\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"of useful consumables via\",\"color\":\"gray\",\"italic\":false}','{\"text\":\"an Essence Vendor trader.\",\"color\":\"gray\",\"italic\":false}']},HideFlags:1,Enchantments:[{id:\"minecraft:mending\",lvl:1s}],SkullOwner:{Id:[I;1927509704,-492089604,-1707993161,-498451464],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjUyMjljMzQ4NTRhNzI2MTg1ZTg0YzcwMzQ0MGU2ZGMzNDA3NDc1NDA3YWRhNWYxYjI3YmIyYzExNTZlYWMyZSJ9fX0=\"}]}}}"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "condition": "minecraft:random_chance_with_looting",
+                    "chance": 0.15,
+                    "looting_multiplier": 0.05
+                  }
+                ]
               }
-            },
-            {
-              "function": "minecraft:looting_enchant",
-              "count": {
-                "min": 0,
-                "max": 1
+            ],
+            "conditions": [
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "killer",
+                "scores": {
+                  "ca.loot_table_rules": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
               }
-            }
-          ],
-          "name": "minecraft:magma_cream"
-        }
-      ],
-      "conditions": [
+            ]
+          },
         {
-          "condition": "minecraft:entity_scores",
-          "entity": "killer",
-          "scores": {
-            "ca.loot_table_rules": {
-              "min": 0,
-              "max": 0
-            }
-          }
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "ltos:entity_data",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{entity:'magma_cube'}"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ],
+    "random_sequence": "minecraft:entities/magma_cube"
 }

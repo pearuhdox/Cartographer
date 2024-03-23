@@ -4,13 +4,9 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:empty",
-          "weight": 4
-        },
-        {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "minecraft:potion",
+          "name": "minecraft:splash_potion",
           "functions": [
             {
               "function": "minecraft:set_nbt",

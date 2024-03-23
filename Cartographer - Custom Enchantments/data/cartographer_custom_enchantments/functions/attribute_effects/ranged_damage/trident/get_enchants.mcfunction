@@ -14,6 +14,9 @@ scoreboard players operation $cu_trident ca.fire_aspect = @s ca.fire_aspect
 scoreboard players operation $cu_trident ca.cauterize = @s ca.cauterize
 scoreboard players operation $cu_trident ca.executioner = @s ca.executioner
 
+scoreboard players operation $cu_trident ca.quake = @s ca.quake
+scoreboard players operation $cu_trident ca.lifesteal = @s ca.lifesteal
+
 scoreboard players operation $cu_trident ca.first_strike = @s ca.first_strike
 
 scoreboard players operation $cu_trident ca.duelist += @s ca.off_duelist

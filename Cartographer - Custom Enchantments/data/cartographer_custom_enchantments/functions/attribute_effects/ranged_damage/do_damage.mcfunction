@@ -1,1 +1,1 @@
-$damage @s $(ranged_damage_tens).$(ranged_damage_ones) cartographer_custom_enchantments:custom_projectile_damage
+$damage @s $(ranged_damage_tens).$(ranged_damage_ones) cartographer_custom_enchantments:custom_projectile_damage by @p[tag=ca.custom_ranged_dmg_player]

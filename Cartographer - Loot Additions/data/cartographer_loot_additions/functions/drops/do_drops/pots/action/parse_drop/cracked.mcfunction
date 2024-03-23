@@ -8,6 +8,10 @@ scoreboard players set $pufferfish_pot_inter ca.loot_var 0
 scoreboard players set $potion_pot_inter ca.loot_var 0
 scoreboard players set $egg_pot_inter ca.loot_var 0
 
+scoreboard players set $tnt_pot_inter ca.loot_var 0
+scoreboard players set $fang_pot_inter ca.loot_var 0
+
+
 execute as 31192011-4452-2112-0000-000000000000 if predicate cartographer_loot_additions:arrow_check run scoreboard players set $arrow_pot_inter ca.loot_var 1
 execute as 31192011-4452-2112-0000-000000000000 if predicate cartographer_loot_additions:fire_charge_check run scoreboard players set $fire_charge_pot_inter ca.loot_var 1
 
@@ -18,6 +22,9 @@ execute as 31192011-4452-2112-0000-000000000000 if predicate cartographer_loot_a
 execute as 31192011-4452-2112-0000-000000000000 if predicate cartographer_loot_additions:potion_check run scoreboard players set $potion_pot_inter ca.loot_var 1
 execute as 31192011-4452-2112-0000-000000000000 if predicate cartographer_loot_additions:spawn_egg_check run scoreboard players set $egg_pot_inter ca.loot_var 1
 
+execute as 31192011-4452-2112-0000-000000000000 if predicate cartographer_loot_additions:tnt_check run scoreboard players set $tnt_pot_inter ca.loot_var 1
+execute as 31192011-4452-2112-0000-000000000000 if predicate cartographer_loot_additions:fang_check run scoreboard players set $fang_pot_inter ca.loot_var 1
+
 execute if score $arrow_pot_inter ca.loot_var matches 1.. align xyz positioned ~0.5 ~0.5 ~0.5 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/arrow
 execute if score $fire_charge_pot_inter ca.loot_var matches 1.. align xyz positioned ~0.5 ~0.5 ~0.5 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/fire_charge
 
@@ -27,3 +34,6 @@ execute if score $pufferfish_pot_inter ca.loot_var matches 1.. align xyz positio
 
 execute if score $potion_pot_inter ca.loot_var matches 1.. align xyz positioned ~0.5 ~0.5 ~0.5 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/potion
 execute if score $egg_pot_inter ca.loot_var matches 1.. align xyz positioned ~0.5 ~0.5 ~0.5 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/spawn_egg
+
+execute if score $tnt_pot_inter ca.loot_var matches 1.. align xyz positioned ~0.5 ~0.5 ~0.5 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/tnt
+execute if score $fang_pot_inter ca.loot_var matches 1.. align xyz positioned ~0.5 ~0.5 ~0.5 run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop/interactions/fangs/start

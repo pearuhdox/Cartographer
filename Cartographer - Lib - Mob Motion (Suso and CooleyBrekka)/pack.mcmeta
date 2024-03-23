@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 10,
+        "pack_format": 31,
         "description": "A datapack to apply motion to mobs following Cooley's interface, by Suso"
     }
 }

@@ -1,5 +1,7 @@
-particle minecraft:smoke ~ ~ ~ 0.15 0.15 0.15 0 8 normal
-execute positioned ~ ~ ~ run function cartographer_mob_abilities:ability_traits/trait_warnings/raycast
+particle minecraft:smoke ~ ~ ~ 0.08 0.08 0.08 0 5 normal
+particle minecraft:smoke ^ ^ ^0.5 0.08 0.08 0.08 0 5 normal
+
+function cartographer_mob_abilities:ability_traits/trait_warnings/raycast
 
 scoreboard players remove @s[scores={ca.raycast=1..}] ca.raycast 1
 
