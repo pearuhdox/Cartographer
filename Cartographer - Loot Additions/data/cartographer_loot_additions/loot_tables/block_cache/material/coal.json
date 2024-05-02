@@ -13,13 +13,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:coal",
+          "name": "minecraft:torch",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 3,
-                "max": 3
+                "min": 12,
+                "max": 12
               }
             }
           ]

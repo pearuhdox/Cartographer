@@ -4,6 +4,6 @@ execute if entity @s[tag=ca.alchemist] run function cartographer_mob_abilities:a
 
 tag @s add setup
 
-tp @s ~ ~ ~ facing entity @p feet
+tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,gamemode=!creative] feet
 
 scoreboard players operation @s ca.ability_dmg = $damage ca.ability_dmg

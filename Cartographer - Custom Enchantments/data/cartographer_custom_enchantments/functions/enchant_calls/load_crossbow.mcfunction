@@ -1,1 +1,0 @@
-execute if score @s ca.focus matches 1.. run tag @s add ca.focused_crossbow

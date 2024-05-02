@@ -19,10 +19,12 @@ scoreboard objectives add ca.place_repair minecraft.used:minecraft.glow_item_fra
 #execute unless score $repair_start MaterialCost matches 0.. run scoreboard players set $repair_start MaterialCost 4
 scoreboard players set $repair_start MaterialCost 4
 
-scoreboard objectives add tesseract dummy
+scoreboard objectives add ca.tesseract dummy
 
-scoreboard players set $is_used tesseract -1
-scoreboard players set $item_to_void tesseract -1
+say test
+
+scoreboard players set $is_used ca.tesseract -1
+scoreboard players set $item_to_void ca.tesseract -1
 
 
 execute unless score $xp_maximum ca.repair_station_state matches 1.. run scoreboard players set $xp_maximum ca.repair_station_state 50

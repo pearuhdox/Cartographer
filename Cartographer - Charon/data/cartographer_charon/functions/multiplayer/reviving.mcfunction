@@ -1,12 +1,18 @@
 scoreboard players add @s ca.revive_time 1
 
+scoreboard players set @s ca.revive_cdl 4
+
 execute unless score @s ca.is_reviving matches 1.. run playsound minecraft:entity.allay.item_given player @a ~ ~ ~ 3 0.85
 
 effect clear @s invisibility
 
 particle minecraft:cloud ~ ~-0.6 ~ 0.1 0.1 0.1 0.05 1 normal
 
-execute if score @s ca.revive_time matches 1 on passengers run data merge entity @s {interpolation_duration:3,start_interpolation:0,transformation:[0.700f, 0.000f, 0.000f,0.000f,0.000f, 0.700f, 0.000f,-0.850f,0.000f, 0.000f, 0.700f,0.000f,0.000f, 0.000f, 0.000f,1.000f]}
+scoreboard players operation $value ca.revive_time = @s ca.revive_time
+
+tp @s ~ ~ ~ facing entity @p eyes
+
+execute if score @s ca.revive_time matches 1 on passengers run data merge entity @s {interpolation_duration:1,start_interpolation:0,transformation:[0.700f, 0.000f, 0.000f,0.000f,0.000f, 0.700f, 0.000f,0.050f,0.000f, 0.000f, 0.700f,0.000f,0.000f, 0.000f, 0.000f,1.000f]}
 
 execute if score @s ca.revive_time matches 1 on passengers run data modify entity @s text set value '[{"text":"[","color":"white","italic":false},{"text":"Reviving...","color":"dark_gray","italic":false},{"text":"]","color":"white","italic":false}]'
 
@@ -28,6 +34,13 @@ execute if score @s ca.revive_time matches 17 on passengers run data modify enti
 
 execute if score @s ca.revive_time matches 19 on passengers run data modify entity @s text set value '[{"text":"[","color":"white","italic":false},{"text":"Reviving...","color":"aqua","italic":false},{"text":"]","color":"white","italic":false}]'
 
+execute if score @s ca.revive_time matches 20.. run scoreboard players set $revive_health_pot ca.shade_health 0
 execute if score @s ca.revive_time matches 20.. run function cartographer_charon:multiplayer/do_revive
+
+execute if score $value ca.revive_time matches 1 run function cartographer_charon:multiplayer/notify/start
+execute if score $value ca.revive_time matches 4 run function cartographer_charon:multiplayer/notify/start
+execute if score $value ca.revive_time matches 8 run function cartographer_charon:multiplayer/notify/start
+execute if score $value ca.revive_time matches 12 run function cartographer_charon:multiplayer/notify/start
+execute if score $value ca.revive_time matches 16 run function cartographer_charon:multiplayer/notify/start
 
 scoreboard players set @s ca.is_reviving 45

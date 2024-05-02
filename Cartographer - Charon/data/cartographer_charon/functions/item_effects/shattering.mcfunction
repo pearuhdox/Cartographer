@@ -71,6 +71,13 @@ execute if data storage cartographer_charon:player temp{id:"minecraft:netherite_
 execute if data storage cartographer_charon:player temp{id:"minecraft:netherite_shovel"} run scoreboard players set $charon_item ca.max_dmg 2031
 execute if data storage cartographer_charon:player temp{id:"minecraft:netherite_sword"} run scoreboard players set $charon_item ca.max_dmg 2031
 
+execute if data storage cartographer_charon:player temp{id:"minecraft:trident"} run scoreboard players set $charon_item taxes.var 250
+execute if data storage cartographer_charon:player temp{id:"minecraft:bow"} run scoreboard players set $charon_item taxes.var 384
+execute if data storage cartographer_charon:player temp{id:"minecraft:crossbow"} run scoreboard players set $charon_item taxes.var 465
+
+execute if data storage cartographer_charon:player temp{id:"minecraft:flint_and_steel"} run scoreboard players set $charon_item taxes.var 64
+execute if data storage cartographer_charon:player temp{id:"minecraft:brush"} run scoreboard players set $charon_item taxes.var 64
+
 scoreboard players operation $charon_item ca.dmg_to_deal = $charon_item ca.max_dmg
 scoreboard players operation $charon_item ca.dmg_to_deal -= $charon_item ca.cur_dmg
 

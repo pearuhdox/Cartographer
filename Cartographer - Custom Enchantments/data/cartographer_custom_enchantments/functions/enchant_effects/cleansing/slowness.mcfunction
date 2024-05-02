@@ -1,5 +1,5 @@
 playsound minecraft:block.bell.resonate player @p ~ ~ ~ 2 2
-tag @s add ca.cleanse_drain
+effect give @s minecraft:hunger 10 3
 effect clear @s minecraft:slowness
 
 function #minecraft:cartographer/events/enchantments/passive/cleansing

@@ -4,7 +4,6 @@
       "cartographer_mob_abilities:ability_projectile",
       "cartographer_mob_abilities:ability_explosion",
       "cartographer_mob_abilities:ability_magic",
-      "cartographer_mob_abilities:ability_melee",
-      "cartographer_mob_abilities:multihit"
+      "cartographer_mob_abilities:ability_melee"
     ]
   }

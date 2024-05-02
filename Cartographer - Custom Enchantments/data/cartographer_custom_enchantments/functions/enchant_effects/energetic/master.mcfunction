@@ -1,3 +1,0 @@
-function cartographer_custom_enchantments:enchant_effects/energetic/branch 
-
-function #minecraft:cartographer/events/enchantments/passive/energetic

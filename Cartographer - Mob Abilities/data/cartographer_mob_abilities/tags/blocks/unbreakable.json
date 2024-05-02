@@ -33,9 +33,6 @@
 		"minecraft:green_shulker_box",
 		"minecraft:red_shulker_box",
 		"minecraft:black_shulker_box",
-		"minecraft:reinforced_deepslate",
-		"minecraft:air",
-		"minecraft:cave_air",
-		"minecraft:void_air"
+		"minecraft:reinforced_deepslate"
 	]
 }

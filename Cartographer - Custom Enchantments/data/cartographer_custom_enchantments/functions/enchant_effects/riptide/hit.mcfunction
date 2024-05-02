@@ -28,8 +28,6 @@ scoreboard players operation $exec_dmg bbl.storage = @s ca.damage_queue
 
 #Damage and Weakening for Melee Protection
 scoreboard players operation @s ca.damage_queue = $damage ca.riptide
-scoreboard players operation @s ca.damage_queue *= $10 ca.CONSTANT
-
 function cartographer_custom_enchantments:helper/damage/macro_setup
 function cartographer_custom_enchantments:helper/damage/enchant_damage with storage cartographer:macro.custom_enchantments
 
@@ -51,8 +49,12 @@ execute if score $fire ca.riptide matches 3 as @s run data modify entity @s Fire
 execute if score $fire ca.riptide matches 4 as @s run data modify entity @s Fire set value 321
 execute if score $fire ca.riptide matches 5.. as @s run data modify entity @s Fire set value 401
 
+#Frostbite
+scoreboard players operation $fb ca.frostbite = $frostbite ca.riptide
+execute if score $frostbite ca.riptide matches 1.. run function cartographer_custom_enchantments:enchant_effects/frostbite/branch
+
 #Executioner
-scoreboard players operation $lvl ca.executioner = $exec ca.riptide
+scoreboard players operation $exec ca.executioner = $exec ca.riptide
 execute if score $exec ca.riptide matches 1.. run function cartographer_custom_enchantments:enchant_effects/executioner/branch
 
 #Statuses!

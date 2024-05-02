@@ -39,8 +39,6 @@ scoreboard objectives add ca.size_changed_stacks dummy
 
 scoreboard objectives add ca.size_max_health dummy
 
-scoreboard objectives add ca.aim_direction dummy
-scoreboard objectives add ca.aim_direction_y dummy
 
 scoreboard objectives add ca.sweep_animation dummy
 scoreboard objectives add ca.sweep_side dummy

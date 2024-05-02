@@ -1,10 +1,10 @@
 #These effects will activate when the player dies.
 
 #Curse of Shattering
-execute as @e[type=item,distance=..5,nbt={Item:{tag:{CustomEnchantments:[{id:"curse_shattering"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_shattering/master
+execute as @e[type=item,distance=..5,nbt={Item:{tag:{CustomEnchantments:[{id:"curse_shattering"}]}}}] at @s run function cartographer_custom_enchantments:enchant_effects/curse_shattering
 
 #Soulbound
-function cartographer_custom_enchantments:enchant_effects/soulbound/master
+function cartographer_custom_enchantments:enchant_effects/soulbound
 
 #Second Wind Reset
 #End the Second Wind effect if a player dies. Also reset their tier and remove second wind triggers.

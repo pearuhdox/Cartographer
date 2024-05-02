@@ -6,18 +6,19 @@ execute if data storage cartographer_custom_enchantments:fall_damage data.effect
 execute if score $jb ca.fall_damage matches 0.. run scoreboard players add $jb ca.fall_damage 1
 
 scoreboard players operation $buffer ca.fall_damage = $jb ca.fall_damage
+scoreboard players add $buffer ca.fall_damage 3
 scoreboard players operation $buffer ca.fall_damage *= $100 ca.CONSTANT
 
 
-execute store result score $buffer_extra ca.fall_damage run attribute @s minecraft:generic.safe_fall_distance get 100
-scoreboard players operation $buffer ca.fall_damage += $buffer_extra ca.fall_damage
+#execute store result score $buffer_extra ca.fall_damage run attribute @s minecraft:generic.safe_fall_distance get 100
+#scoreboard players operation $buffer ca.fall_damage += $buffer_extra ca.fall_damage
 
 scoreboard players operation $damage ca.fall_damage = @s ca.fall_damage
 scoreboard players operation $damage ca.fall_damage -= $buffer ca.fall_damage
 
-execute store result score $mult ca.fall_damage run attribute @s minecraft:generic.fall_damage_multiplier get 100
-scoreboard players operation $damage ca.fall_damage *= $mult ca.fall_damage
-scoreboard players operation $damage ca.fall_damage /= $100 ca.CONSTANT
+#execute store result score $mult ca.fall_damage run attribute @s minecraft:generic.fall_damage_multiplier get 100
+#scoreboard players operation $damage ca.fall_damage *= $mult ca.fall_damage
+#scoreboard players operation $damage ca.fall_damage /= $100 ca.CONSTANT
 
 execute if block ~ ~-0.1 ~ pointed_dripstone run scoreboard players operation $damage ca.fall_damage *= $2 ca.CONSTANT
 

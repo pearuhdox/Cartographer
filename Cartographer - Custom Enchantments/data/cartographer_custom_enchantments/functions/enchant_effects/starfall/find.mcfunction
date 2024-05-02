@@ -1,32 +1,13 @@
-scoreboard players set $fire_aspect ca.weapon_var 0
-scoreboard players set $knockback ca.weapon_var 0
-
-scoreboard players set $executioner ca.weapon_var 0
-scoreboard players set $first_strike ca.weapon_var 0
-scoreboard players set $hex_eater ca.weapon_var 0
-scoreboard players set $tempo_theft ca.weapon_var 0
-scoreboard players set $cauterize ca.weapon_var 0
-
-scoreboard players set $duelist ca.weapon_var 0
-scoreboard players set $hunter ca.weapon_var 0
-scoreboard players set $smite ca.weapon_var 0
-
 scoreboard players set $starfall_mob ca.ench_var 0
 
 scoreboard players operation $starfall_lvl ca.starfall = @s ca.starfall
 
-scoreboard players operation $fire_aspect ca.weapon_var = @s ca.sm_fire
-scoreboard players operation $knockback ca.weapon_var = @s ca.sm_knock
+scoreboard players operation $fire_aspect ca.starfall = @s ca.sm_fire
+scoreboard players operation $frostbite ca.starfall = @s ca.sm_frost
+scoreboard players operation $executioner ca.starfall = @s ca.sm_exec
+scoreboard players operation $knockback ca.starfall = @s ca.sm_knock
 
-scoreboard players operation $executioner ca.weapon_var = @s ca.sm_exec
-scoreboard players operation $first_strike ca.weapon_var = @s ca.sm_first
-scoreboard players operation $hex_eater ca.weapon_var = @s ca.sm_hex
-scoreboard players operation $tempo_theft ca.weapon_var = @s ca.sm_tempo
-scoreboard players operation $cauterize ca.weapon_var = @s ca.sm_cau
-
-scoreboard players operation $duelist ca.weapon_var = @s ca.sm_duelist
-scoreboard players operation $hunter ca.weapon_var = @s ca.sm_hunter
-scoreboard players operation $smite ca.weapon_var = @s ca.sm_hunter
+scoreboard players operation $cauterize ca.starfall = @s ca.cauterize
 
 execute if entity @s[tag=ca.ae_main] if entity @s[tag=ca.ce_starfall_main] run tag @s add ca.check_ae_main
 execute if entity @s[tag=ca.ae_offh] if entity @s[tag=ca.ce_starfall_offh] run tag @s add ca.check_ae_offh
@@ -47,17 +28,7 @@ function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
 
-scoreboard players operation $damage ca.starfall = @s ca.starfall
-scoreboard players add $damage ca.starfall 2
-scoreboard players operation $damage ca.starfall *= $10 ca.CONSTANT
-
-scoreboard players set $success ca.attr_random_crit 0
-execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/random_crit_handler
-
-scoreboard players set $size ca.attr_aoe_size 20
-function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
-
-execute as @e[type=#bb:hostile,distance=..24,limit=1,sort=random,tag=!ca.starfalled] at @s run function cartographer_custom_enchantments:enchant_effects/starfall/hit
+execute as @e[type=#bb:hostile,distance=..15,limit=1,sort=random,tag=!ca.starfalled] run function cartographer_custom_enchantments:enchant_effects/starfall/hit
 
 execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 

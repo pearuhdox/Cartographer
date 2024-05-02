@@ -1,4 +1,4 @@
-scoreboard players set @s ca.collapse 65
+scoreboard players set @s ca.collapse 20
 
 scoreboard players operation @s ca.efficiency = $efficiency ca.collapse
 scoreboard players operation @s ca.sapper = $sapper ca.collapse
@@ -14,10 +14,6 @@ scoreboard players operation @s ca.evocation = $evocation ca.collapse
 scoreboard players operation @s ca.frostbite = $frostbite ca.collapse
 scoreboard players operation @s ca.knockback = $knockback ca.collapse
 scoreboard players operation @s ca.executioner = $executioner ca.collapse
-scoreboard players operation @s ca.hex_eater = $hex_eater ca.collapse
-scoreboard players operation @s ca.first_strike = $first_strike ca.collapse
-scoreboard players operation @s ca.tempo_theft = $tempo_theft ca.collapse
-scoreboard players operation @s ca.cauterize = $cauterize ca.collapse
 
 playsound minecraft:entity.elder_guardian.death player @a[distance=..12] ~ ~ ~ 0.5 2
 playsound minecraft:entity.shulker.open player @a[distance=..12] ~ ~ ~ 1.5 0.5
@@ -25,8 +21,8 @@ playsound minecraft:entity.shulker.open player @a[distance=..12] ~ ~ ~ 1.5 0.5
 particle minecraft:glow_squid_ink ~ ~0.8 ~ 0.2 0.3 0.2 0.05 5 normal
 
 scoreboard players operation $extra_speed ca.collapse = $efficiency ca.collapse
-scoreboard players operation $extra_speed ca.collapse *= $4 ca.CONSTANT
+scoreboard players operation $extra_speed ca.collapse *= $2 ca.CONSTANT
 
-execute if score $extra_speed ca.collapse matches 36.. run scoreboard players set $extra_speed ca.collapse 35
+execute if score $extra_speed ca.collapse matches 20.. run scoreboard players set $extra_speed ca.collapse 19
 
 scoreboard players operation @s ca.collapse += $extra_speed ca.collapse

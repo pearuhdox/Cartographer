@@ -1,9 +1,9 @@
 function cartographer_mob_abilities:ability_traits/call_all_traits_no_hit
 
-scoreboard players set @s mob_atk_dis 10
+data modify entity @s NoAI set value 0b
 
-scoreboard players add @s ca.cutter_side 1
-execute if score @s ca.cutter_side matches 3.. run scoreboard players set @s ca.cutter_side 1
+
+scoreboard players set @s mob_atk_dis 6
 
 tag @a remove cutter_tagged
 

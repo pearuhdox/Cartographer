@@ -66,21 +66,6 @@
           ]
         }
       ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-          {
-              "type": "minecraft:loot_table",
-              "name": "ltos:data",
-              "functions": [
-                  {
-                      "function": "minecraft:set_nbt",
-                      "tag": "{block:'light_gray_shulker_box'}"
-                  }
-              ]
-          }
-      ]
-  }
+    }
   ]
 }

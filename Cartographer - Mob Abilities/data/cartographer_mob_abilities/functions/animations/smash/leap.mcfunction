@@ -6,7 +6,7 @@ effect give @s glowing 1 0 true
 
 execute run particle minecraft:crit ~ ~3 ~ 0.7 2 0.7 0 100
 
-tp @s ~ ~ ~ facing entity @p feet
+tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,gamemode=!creative] feet
 
 execute if entity @p[distance=..3] run scoreboard players set @s co_send 4
 execute if entity @p[distance=..3] run scoreboard players set @s co_y 10

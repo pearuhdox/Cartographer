@@ -1,6 +1,5 @@
 {
   "values":[
-	"cartographer_core:loop/tick/base",
-  "ltos:loop"
+	"cartographer_core:loop/tick/base"
   ]
 }

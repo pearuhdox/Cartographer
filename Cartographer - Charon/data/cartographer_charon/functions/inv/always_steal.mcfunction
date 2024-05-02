@@ -1,6 +1,9 @@
 #Always take an Always Steal tag
 execute if data storage cartographer_charon:player temp.tag{AlwaysSteal:1b} run function cartographer_charon:inv/modify_slot
 
+execute if data storage cartographer_charon:player temp{id:"minecraft:lapis_lazuli"} run function cartographer_charon:inv/modify_slot
+execute if data storage cartographer_charon:player temp{id:"minecraft:player_head"} run function cartographer_charon:inv/modify_slot
+
 #Always take shulker boxes if the rule is enabled.
 execute if score $always_drop_boxes charon.gmr matches 1 if data storage cartographer_charon:player temp{id:"minecraft:shulker_box"} run function cartographer_charon:inv/modify_slot
 execute if score $always_drop_boxes charon.gmr matches 1 if data storage cartographer_charon:player temp{id:"minecraft:white_shulker_box"} run function cartographer_charon:inv/modify_slot

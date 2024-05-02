@@ -76,6 +76,7 @@ execute if score @s bbl.move.climb matches 1.. run function bb:lib/move_detector
 execute if score @s bbl.move.swim matches 1.. run function bb:lib/move_detector/input/swim
 execute if score @s bbl.move.horse matches 1.. run function bb:lib/move_detector/input/horse
 execute if score @s bbl.move.walk_underwater matches 1.. run function bb:lib/move_detector/input/walk_underwater
+execute if score @s bbl.move.fly matches 1.. run function bb:lib/move_detector/input/fly
 #Mute timer
 execute if score @s bbl.move.mute matches 1.. run function bb:lib/move_detector/mute_loop
 #Mouse listener
@@ -87,3 +88,6 @@ execute if entity @s[tag=delta.kill.fix] run function bb:lib/delta_kill_fix
 #GUI Closer
 execute if score @s bbl.close_gui.stop_portal_sound matches 1.. run function bb:lib/close_gui/stop_sound/loop
 execute if entity @s[tag=bbl.tp_back_from_portal] run function bb:lib/close_gui/return
+
+#Enderchest cd
+execute if score @s bbl.universal_active_enderchest.cooldown_switch matches 1.. run scoreboard players remove @s bbl.universal_active_enderchest.cooldown_switch 1

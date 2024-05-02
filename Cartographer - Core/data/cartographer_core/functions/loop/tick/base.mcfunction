@@ -10,7 +10,6 @@ execute store result score $player_count ca.gamerule if entity @a
 #Run the list track for Helper Damage No Knockback
 function cartographer_core:helper/damage_knockback/list_track
 
-execute if score $box ca.quick_drop_anim matches 1.. run scoreboard players remove $box ca.quick_drop_anim 1
 
 #Run all Cartographer Effects from Core Timers.
 #function cartographer_charon:loop/tick/base
@@ -21,8 +20,6 @@ function cartographer_loot_additions:loop/tick/base
 function cartographer_mimics:loop/tick/base
 function cartographer_mob_abilities:loop/tick/base
 function cartographer_repair_stations:loop/tick/base
-
-execute unless score $value ca.player_id matches 1.. run scoreboard players set $value ca.player_id 0
 
 execute as @a[predicate=cartographer_core:in_valid_dimension] at @s run function cartographer_core:loop/tick/player
 
@@ -62,9 +59,9 @@ scoreboard players operation $ca_timer_mod ca.timer %= $10 ca.CONSTANT
 execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core:loop/half_second/base
 
 #1 second
-scoreboard players operation $ca_timer_mod_1 ca.timer = $ca_timer ca.timer
-scoreboard players operation $ca_timer_mod_1 ca.timer %= $20 ca.CONSTANT
-execute if score $ca_timer_mod_1 ca.timer matches 0 run function cartographer_core:loop/1_second/base
+scoreboard players operation $ca_timer_mod ca.timer = $ca_timer ca.timer
+scoreboard players operation $ca_timer_mod ca.timer %= $20 ca.CONSTANT
+execute if score $ca_timer_mod ca.timer matches 0 run function cartographer_core:loop/1_second/base
 
 #3 second
 scoreboard players operation $ca_timer_mod ca.timer = $ca_timer ca.timer
@@ -101,5 +98,3 @@ scoreboard players set @a ca.logout 0
 
 #Run UUID Ticking
 function cartographer_core:loop/tick/uuid_tick
-
-execute if score $active_potion ca.registry matches 1.. run scoreboard players remove $active_potion ca.registry 1

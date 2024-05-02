@@ -1,1 +1,0 @@
-$execute as @e[distance=..$(size),type=#bb:hostile] at @s run function cartographer_custom_enchantments:enchant_effects/gravity/mob with storage cartographer:macro.custom_enchantments

@@ -1,1 +1,0 @@
-$damage @p $(damage) cartographer_mob_abilities:multihit by @s

@@ -1,26 +1,19 @@
 
 #Setup all necessary scoreboard commands.
-scoreboard objectives add ca.lexica_ench_trig trigger
-
 scoreboard objectives add ca.auto_charge_count dummy
 scoreboard objectives add ca.auto_charge_req dummy
 
-scoreboard objectives add ca.allow_fast_attack dummy
-scoreboard objectives add ca.attack_speed dummy
+scoreboard objectives add ca.current_time dummy
 
 scoreboard objectives add ca.adrenaline dummy
 scoreboard objectives add ca.agility dummy
 scoreboard objectives add ca.aquadynamic dummy
 scoreboard objectives add ca.auto_charge dummy
-
 scoreboard objectives add ca.s_cleansing dummy
 scoreboard objectives add ca.f_cleansing dummy
 scoreboard objectives add ca.w_cleansing dummy
 scoreboard objectives add ca.p_cleansing dummy
 scoreboard objectives add ca.wi_cleansing dummy
-scoreboard objectives add ca.fi_cleansing dummy
-scoreboard objectives add ca.cleanse_stacks dummy
-
 scoreboard objectives add ca.exposing dummy
 scoreboard objectives add ca.concealed dummy
 scoreboard objectives add ca.current dummy
@@ -30,20 +23,6 @@ scoreboard objectives add ca.echo dummy
 scoreboard objectives add ca.evocation dummy
 scoreboard objectives add ca.sweeping dummy
 
-scoreboard objectives add ca.current_time dummy
-scoreboard objectives add ca.concentrate_stack dummy
-scoreboard objectives add ca.concentrate_time dummy
-
-scoreboard objectives add ca.repulsion_time dummy
-
-scoreboard objectives add ca.frenzy_main dummy
-scoreboard objectives add ca.adrenaline_main dummy
-scoreboard objectives add ca.energetic_main dummy
-scoreboard objectives add ca.lifeblood_main dummy
-scoreboard objectives add ca.concealed_main dummy
-
-
-scoreboard objectives add ca.lifeblood dummy
 scoreboard objectives add ca.energetic dummy
 scoreboard objectives add ca.eruption dummy
 scoreboard objectives add ca.evasion dummy
@@ -58,11 +37,10 @@ scoreboard objectives add ca.infinity dummy
 scoreboard objectives add ca.lifesteal dummy
 scoreboard objectives add ca.overcharge dummy
 scoreboard objectives add ca.focus dummy
-scoreboard objectives add ca.concentration dummy
 scoreboard objectives add ca.point_blank dummy
 scoreboard objectives add ca.first_strike dummy
 scoreboard objectives add ca.lethality dummy
-scoreboard objectives add ca.impact dummy
+scoreboard objectives add ca.lightborn dummy
 scoreboard objectives add ca.rally dummy
 scoreboard objectives add ca.repeating dummy
 scoreboard objectives add ca.regen dummy
@@ -78,16 +56,14 @@ scoreboard objectives add ca.spurs dummy
 scoreboard objectives add ca.thrusting dummy
 scoreboard objectives add ca.slamming dummy
 scoreboard objectives add ca.transfig dummy
+scoreboard objectives add ca.tempest dummy
 scoreboard objectives add ca.tempo_theft dummy
-scoreboard objectives add ca.shrapnel dummy
+scoreboard objectives add ca.trueshot dummy
+scoreboard objectives add ca.explosive dummy
 scoreboard objectives add ca.thorns dummy
 scoreboard objectives add ca.respiration dummy
 scoreboard objectives add ca.recoil dummy
 scoreboard objectives add ca.collapse dummy
-
-scoreboard objectives add ca.collapse_time dummy
-
-scoreboard objectives add ca.smite dummy
 
 scoreboard objectives add ca.unbreaking dummy
 scoreboard objectives add ca.unb_head dummy
@@ -95,8 +71,6 @@ scoreboard objectives add ca.unb_body dummy
 scoreboard objectives add ca.unb_legs dummy
 scoreboard objectives add ca.unb_feet dummy
 
-scoreboard objectives add ca.fleetfoot_cdl dummy
-scoreboard objectives add ca.fleetfoot_use dummy
 
 scoreboard objectives add ca.inf_kc_var dummy
 scoreboard objectives add ca.inf_kc_0 dummy
@@ -134,40 +108,31 @@ scoreboard objectives add ca.inf_ch_7 dummy
 scoreboard objectives add ca.inf_ch_8 dummy
 scoreboard objectives add ca.inf_ch_o dummy
 
-scoreboard objectives add ca.x dummy
-scoreboard objectives add ca.y dummy
-scoreboard objectives add ca.z dummy
 
 scoreboard objectives add ca.gravity dummy
+scoreboard objectives add ca.gravity_time dummy
+scoreboard objectives add ca.gravity_protect dummy
+
 scoreboard objectives add ca.starfall dummy
 scoreboard objectives add ca.quake dummy
 scoreboard objectives add ca.momentum dummy
 
-scoreboard objectives add ca.quake_use_check dummy
-scoreboard objectives add ca.lifesteal_use_check dummy
-
 scoreboard objectives add ca.momentum_charge minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add ca.momentum_tier dummy
 
+scoreboard objectives add ca.confidence dummy
+scoreboard objectives add ca.desperation dummy
 scoreboard objectives add ca.stalwart dummy
 scoreboard objectives add ca.poise dummy
-scoreboard objectives add ca.stalwart_cdl dummy
-scoreboard objectives add ca.poise_cdl dummy
 
 scoreboard objectives add ca.shielding dummy
 scoreboard objectives add ca.shielding_time dummy
-scoreboard objectives add ca.shielding_cdl dummy
+scoreboard objectives add ca.shielding_past dummy
 
 scoreboard objectives add ca.sprint_dash dummy
 scoreboard objectives add ca.disengage dummy
 
-scoreboard objectives add ca.sprint_dash_dur dummy
-scoreboard objectives add ca.disengage_dur dummy
-
-
 scoreboard objectives add ca.hex_eater dummy
-scoreboard objectives add ca.hex_eater_time dummy
-scoreboard objectives add ca.hex_eater_time_cleanse dummy
 
 scoreboard objectives add ca.repulsion dummy
 scoreboard objectives add ca.resourceful dummy
@@ -187,7 +152,6 @@ scoreboard objectives add ca.disengage_y dummy
 scoreboard objectives add ca.disengage_z dummy
 
 scoreboard objectives add ca.gravity_fall minecraft.custom:minecraft.fall_one_cm
-scoreboard objectives add ca.gravity_cd dummy
 
 scoreboard objectives add ca.fall_damage minecraft.custom:minecraft.fall_one_cm
 
@@ -207,13 +171,14 @@ scoreboard objectives add ca.efficiency dummy
 
 scoreboard objectives add ca.off_duelist dummy
 scoreboard objectives add ca.off_hunter dummy
-scoreboard objectives add ca.off_smite dummy
+scoreboard objectives add ca.off_singe dummy
+scoreboard objectives add ca.off_frostbite dummy
+scoreboard objectives add ca.off_exposing dummy
+scoreboard objectives add ca.off_stunning dummy
+scoreboard objectives add ca.off_infection dummy
+scoreboard objectives add ca.off_electrocute dummy
+scoreboard objectives add ca.off_bleeding dummy
 scoreboard objectives add ca.off_fire_aspect dummy
-scoreboard objectives add ca.off_first_strike dummy
-scoreboard objectives add ca.off_hex_eater dummy
-scoreboard objectives add ca.off_executioner dummy
-scoreboard objectives add ca.off_cauterize dummy
-scoreboard objectives add ca.off_tempo_theft dummy
 
 
 scoreboard objectives add ca.wavedash dummy
@@ -227,91 +192,39 @@ scoreboard objectives add ca.hy_knock dummy
 scoreboard objectives add ca.hy_exec dummy
 
 scoreboard objectives add ca.g_fire dummy
+scoreboard objectives add ca.g_frost dummy
 scoreboard objectives add ca.g_knock dummy
 scoreboard objectives add ca.g_exec dummy
-scoreboard objectives add ca.g_hex dummy
-scoreboard objectives add ca.g_first dummy
-scoreboard objectives add ca.g_cau dummy
-scoreboard objectives add ca.g_tempo dummy
-scoreboard objectives add ca.g_duelist dummy
-scoreboard objectives add ca.g_hunter dummy
-scoreboard objectives add ca.g_smite dummy
-
-scoreboard objectives add ca.dead_fire dummy
-scoreboard objectives add ca.dead_knock dummy
-scoreboard objectives add ca.dead_exec dummy
-scoreboard objectives add ca.dead_hex dummy
-scoreboard objectives add ca.dead_first dummy
-scoreboard objectives add ca.dead_cau dummy
-scoreboard objectives add ca.dead_tempo dummy
-scoreboard objectives add ca.dead_duelist dummy
-scoreboard objectives add ca.dead_hunter dummy
-scoreboard objectives add ca.dead_smite dummy
-scoreboard objectives add ca.dead_piercing dummy
 
 scoreboard objectives add ca.mo_fire dummy
+scoreboard objectives add ca.mo_frost dummy
 scoreboard objectives add ca.mo_knock dummy
 scoreboard objectives add ca.mo_exec dummy
-scoreboard objectives add ca.mo_hex dummy
-scoreboard objectives add ca.mo_first dummy
-scoreboard objectives add ca.mo_cau dummy
-scoreboard objectives add ca.mo_tempo dummy
-scoreboard objectives add ca.mo_duelist dummy
-scoreboard objectives add ca.mo_hunter dummy
-scoreboard objectives add ca.mo_smite dummy
 
 scoreboard objectives add ca.qu_fire dummy
+scoreboard objectives add ca.qu_frost dummy
 scoreboard objectives add ca.qu_knock dummy
 scoreboard objectives add ca.qu_exec dummy
-scoreboard objectives add ca.qu_hex dummy
-scoreboard objectives add ca.qu_first dummy
-scoreboard objectives add ca.qu_cau dummy
-scoreboard objectives add ca.qu_tempo dummy
-scoreboard objectives add ca.qu_duelist dummy
-scoreboard objectives add ca.qu_hunter dummy
-scoreboard objectives add ca.qu_smite dummy
 
 scoreboard objectives add ca.sm_fire dummy
+scoreboard objectives add ca.sm_frost dummy
 scoreboard objectives add ca.sm_knock dummy
 scoreboard objectives add ca.sm_exec dummy
-scoreboard objectives add ca.sm_hex dummy
-scoreboard objectives add ca.sm_first dummy
-scoreboard objectives add ca.sm_cau dummy
-scoreboard objectives add ca.sm_tempo dummy
-scoreboard objectives add ca.sm_duelist dummy
-scoreboard objectives add ca.sm_hunter dummy
-scoreboard objectives add ca.sm_smite dummy
 
 scoreboard objectives add ca.t_fire dummy
+scoreboard objectives add ca.t_frost dummy
 scoreboard objectives add ca.t_knock dummy
 scoreboard objectives add ca.t_exec dummy
-scoreboard objectives add ca.t_hex dummy
-scoreboard objectives add ca.t_first dummy
-scoreboard objectives add ca.t_cau dummy
-scoreboard objectives add ca.t_tempo dummy
-scoreboard objectives add ca.t_duelist dummy
-scoreboard objectives add ca.t_hunter dummy
-scoreboard objectives add ca.t_smite dummy
-scoreboard objectives add ca.t_aoe dummy
-
-scoreboard objectives add ca.re_fire dummy
-scoreboard objectives add ca.re_frost dummy
-scoreboard objectives add ca.re_knock dummy
-scoreboard objectives add ca.re_exec dummy
-scoreboard objectives add ca.re_hex dummy
-scoreboard objectives add ca.re_first dummy
-scoreboard objectives add ca.re_cau dummy
-scoreboard objectives add ca.re_tempo dummy
-scoreboard objectives add ca.re_duelist dummy
-scoreboard objectives add ca.re_hunter dummy
-scoreboard objectives add ca.re_smite dummy
-
 
 scoreboard objectives add ca.s_adren dummy
 scoreboard objectives add ca.s_frenzy dummy
 scoreboard objectives add ca.s_energ dummy
 scoreboard objectives add ca.s_con dummy
 
+scoreboard objectives add ca.re_fire dummy
+scoreboard objectives add ca.re_frost dummy
+scoreboard objectives add ca.re_knock dummy
+scoreboard objectives add ca.re_exec dummy
 
 scoreboard objectives add ca.riptide_time dummy
 scoreboard objectives add ca.riptide_count dummy
@@ -326,8 +239,6 @@ scoreboard objectives add ca.flame dummy
 scoreboard objectives add ca.power dummy
 scoreboard objectives add ca.multishot dummy
 scoreboard objectives add ca.piercing dummy
-
-scoreboard objectives add ca.ignore_arrow_ench dummy
 
 scoreboard objectives add ca.ammo_main dummy
 scoreboard objectives add ca.ammo_off dummy
@@ -354,13 +265,7 @@ scoreboard objectives add ca.curse_rusting dummy
 scoreboard objectives add ca.curse_mal dummy
 scoreboard objectives add ca.curse_regret dummy
 scoreboard objectives add ca.curse_two_hnd dummy
-scoreboard objectives add ca.curse_unwieldly dummy
-
-scoreboard objectives add ca.curse_misfortune_main dummy
-scoreboard objectives add ca.curse_misfortune_off dummy
-scoreboard objectives add ca.curse_misfortune dummy
-scoreboard objectives add ca.curse_misfortune_total dummy
-
+scoreboard objectives add ca.curse_encum dummy
 
 scoreboard objectives add ca.rally_mark_dur dummy
 scoreboard objectives add ca.rally_mark_amt dummy
@@ -385,26 +290,11 @@ scoreboard objectives add ca.transfig_id dummy
 
 #Setup ca.evasion bias score.
 scoreboard objectives add ca.evasion_bias dummy
-scoreboard objectives add ca.starfall_bias dummy
-scoreboard objectives add ca.deadeye_bias dummy
 
 scoreboard objectives add ca.recently_fired_weapon dummy
 
 scoreboard objectives add ca.attr_ranged dummy
 scoreboard objectives add ca.attr_ranged_perc dummy
-scoreboard objectives add ca.attr_ranged_speed dummy
-scoreboard objectives add ca.attr_potion_size dummy
-
-scoreboard objectives add ca.attr_luck dummy
-
-scoreboard objectives add ca.attr_random_crit dummy
-scoreboard objectives add ca.attr_random_crit_bias dummy
-
-scoreboard objectives add ca.attr_aoe_size dummy
-
-scoreboard objectives add ca.take_damage minecraft.custom:minecraft.damage_taken
-scoreboard objectives add ca.take_damage_a minecraft.custom:minecraft.damage_absorbed
-
 
 #Setup Second Wind cooldown timer and bank.
 scoreboard objectives add ca.sw_time dummy
@@ -514,10 +404,7 @@ scoreboard objectives add ca.food food
 
 scoreboard objectives add ca.attack_val dummy
 scoreboard objectives add ca.vol_dmg dummy
-
 scoreboard objectives add ca.temp_warp dummy
-scoreboard objectives add ca.temp_level dummy
-
 
 scoreboard objectives add ca.inf_var dummy
 
@@ -529,7 +416,6 @@ scoreboard objectives add ca.two_hand_time dummy
 scoreboard objectives add ca.dummy dummy
 scoreboard objectives add ca.var dummy
 scoreboard objectives add ca.ench_var dummy
-scoreboard objectives add ca.weapon_var dummy
 
 scoreboard objectives add ca.adrenaline_dur dummy
 scoreboard objectives add ca.frenzy_dur dummy
@@ -558,9 +444,6 @@ scoreboard objectives add ca.enchant_var dummy
 #Setup LoE data space
 function cartographer_custom_enchantments:load/integration/active/clear
 
-#Setup Description Space
-function cartographer_custom_enchantments:lexica_calls/storage_setup
-
 #Set all needed player constants.
 execute as @a unless entity @s[scores={ca.echo_charges=-1..}] run scoreboard players set @a ca.echo_charges 0
 execute as @a unless entity @s[scores={ca.evocation_charges=-1..}] run scoreboard players set @a ca.evocation_charges 0
@@ -585,18 +468,12 @@ setblock 4206900 1 4206900 purple_shulker_box replace
 #Loyalty Ghost
 setblock 4206900 0 4206899 purple_shulker_box replace
 
-#Loyalty Ghost
-setblock 4206900 2 4206900 purple_shulker_box replace
-
-#Cartographer Glass
-setblock 4206900 6 4206900 purple_shulker_box replace
-
 #Initialize Global Value
 execute unless score $gl_ui_loc ca.gamerule matches 0.. run scoreboard players set $gl_ui_loc ca.gamerule 0
 
 #Summon Marker for sprint_dash
 summon marker 4206900 0 4206900 {UUID:[I;823664661,395388179,293672216,0],Tags:["ca.sprint_dash_marker"]}
 
-#Summon Marker for other direction work
-# 31182015-1791-2513-1181-151800000001
-summon marker 4206900 0 4206900 {UUID:[I;823664661,395388179,293672216,1],Tags:["ca.dir_marker"]}
+#Summon Armor Stand for Item Tag Evaluation
+# "31192011-4452-2112-0000-000000000000"
+summon armor_stand 4206900 0 4206900 {Marker:1b,Invisible:1b,NoGravity:1b,UUID:[I;823730193,1146233106,0,0]}

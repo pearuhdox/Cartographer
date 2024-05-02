@@ -49,7 +49,7 @@ execute as @e[type=armor_stand,tag=trap_projectile,tag=!checked,limit=3,sort=nea
 
 tag @e[tag=trap_projectile,sort=nearest,tag=!checked,limit=5] add checked
 
-tp @s ~ ~ ~ facing entity @p feet
+tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,gamemode=!creative] feet
 scoreboard players set @s co_y 4
 scoreboard players set @s co_send -6
 function motion:motion/push

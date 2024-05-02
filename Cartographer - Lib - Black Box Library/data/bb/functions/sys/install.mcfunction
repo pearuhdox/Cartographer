@@ -51,8 +51,12 @@ scoreboard objectives add bbl.slot_change.present dummy
 scoreboard objectives add bbl.gamemode_change.past dummy
 scoreboard objectives add bbl.gamemode_change.present dummy
 scoreboard objectives add bbl.gamemode_change.old_gamemode dummy
-#Actionbar muter
+#\Actionbar muter
 scoreboard objectives add bbl.actionbar_spam_mute dummy
+#\Universal enderchest id system for enabling/disabling the right menus
+scoreboard objectives add bbl.universal_active_enderchest.menu_id dummy
+#\Universal enderchest id system for enabling/disabling the right menus
+scoreboard objectives add bbl.universal_active_enderchest.cooldown_switch dummy
 
 #Tp to xyz
 scoreboard objectives add bbl.tp_xyz.x dummy
@@ -136,6 +140,8 @@ scoreboard objectives add bbl.move.horse minecraft.custom:minecraft.horse_one_cm
 scoreboard objectives add bbl.move.swim minecraft.custom:minecraft.swim_one_cm
 #\Walk underwater
 scoreboard objectives add bbl.move.walk_underwater minecraft.custom:minecraft.walk_under_water_one_cm
+#\Fly
+scoreboard objectives add bbl.move.fly minecraft.custom:minecraft.fly_one_cm
 
 ##\Mouse
 ##\Pitch
@@ -158,6 +164,8 @@ execute unless score $next_id bbl.storage matches -2147483647..-2147483647 run s
 ##\Lexica inject
 execute unless score $bbl.config.lexica_inject bbl.storage matches -2147483647..2147483647 run scoreboard players set $bbl.config.lexica_inject bbl.storage 1
 execute unless score $bbl.config.no_iframes bbl.storage matches -2147483647..2147483647 run scoreboard players set $bbl.config.no_iframes bbl.storage 0
+#\Activve enderchest id
+execute unless score $bbl.universal_active_enderchest.menu_id bbl.storage matches -2147483647..2147483647 run scoreboard players set $bbl.universal_active_enderchest.menu_id bbl.storage 1
 
 #Set constants
 scoreboard players set $-1 bbl.constant -1

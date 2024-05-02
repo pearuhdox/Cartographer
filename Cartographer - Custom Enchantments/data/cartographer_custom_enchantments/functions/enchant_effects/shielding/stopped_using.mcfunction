@@ -1,5 +1,8 @@
-tag @s remove ca.shielding_full
-function cartographer_core:helper/abs_handler/reset
+effect clear @s absorption
 
-tag @s remove ca.using_shielding
-tag @s remove ca.shielding_first
+scoreboard players operation @s ca.shielding_past *= $5 ca.CONSTANT
+
+scoreboard players set @s ca.shielding_time 50
+scoreboard players operation @s ca.shielding_time -= @s ca.shielding_past
+
+scoreboard players set @s ca.shielding_past 0

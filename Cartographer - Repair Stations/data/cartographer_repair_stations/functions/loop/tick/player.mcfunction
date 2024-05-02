@@ -6,4 +6,4 @@ execute if score @s[gamemode=!creative,gamemode=!spectator] ca.repair_anvil_use 
 execute if score @s ca.place_repair matches 1.. run function cartographer_repair_stations:place/master
 
 execute unless score $no_tesseract ca.gamerule matches 1.. if entity @s[tag=check_to_tesseract] run function cartographer_repair_stations:tesseract/move_to_tesseract
-execute if score $no_tesseract ca.gamerule matches 1.. run scoreboard players set @s tesseract 0
+execute if score $no_tesseract ca.gamerule matches 1.. run scoreboard players set @s ca.tesseract 0

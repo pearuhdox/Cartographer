@@ -1,70 +1,4 @@
-#Approximate if the player is in an inventory or in their inventory
-#data modify storage cartographer_core:player_pos Rotation set value []
-#data modify storage cartographer_core:player_pos Pos set value []
-
-#data modify storage cartographer_core:player_pos Rotation set from entity @s Rotation
-#data modify storage cartographer_core:player_pos Pos set from entity @s Pos
-
-#scoreboard players operation @s ca.pitch_past = @s ca.pitch
-#execute store result score @s ca.pitch run data get storage cartographer_core:player_pos Rotation[0] 100
-
-#scoreboard players operation @s ca.yaw_past = @s ca.yaw
-#execute store result score @s ca.yaw run data get storage cartographer_core:player_pos Rotation[1] 100
-
-#scoreboard players operation @s ca.x_pos_past = @s ca.x_pos
-#execute store result score @s ca.x_pos run data get storage cartographer_core:player_pos Pos[0] 100
-
-#scoreboard players operation @s ca.y_pos_past = @s ca.y_pos
-#execute store result score @s ca.y_pos run data get storage cartographer_core:player_pos Pos[1] 100
-
-#scoreboard players operation @s ca.z_pos_past = @s ca.z_pos
-#execute store result score @s ca.z_pos run data get storage cartographer_core:player_pos Pos[2] 100
-
-#execute if score @s ca.x_pos = @s ca.x_pos_past if score @s ca.y_pos = @s ca.y_pos_past if score @s ca.z_pos = @s ca.z_pos_past if score @s ca.pitch = @s ca.pitch_past if score @s ca.yaw = @s ca.yaw_past run say inventory!
-
-
-execute if score @s ca.drop_box matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_white matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_orange matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_magenta matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_light_blue matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_yellow matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_lime matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_pink matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_gray matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_light_gray matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_cyan matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_purple matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_blue matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_brown matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_green matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_red matches 1.. run function cartographer_core:quick_drop/shulker/find
-execute if score @s ca.drop_box_black matches 1.. run function cartographer_core:quick_drop/shulker/find
-
-
-scoreboard players set @s ca.drop_box 0
-scoreboard players set @s ca.drop_box_white 0
-scoreboard players set @s ca.drop_box_orange 0
-scoreboard players set @s ca.drop_box_magenta 0
-scoreboard players set @s ca.drop_box_light_blue 0
-scoreboard players set @s ca.drop_box_yellow 0
-scoreboard players set @s ca.drop_box_lime 0
-scoreboard players set @s ca.drop_box_pink 0
-scoreboard players set @s ca.drop_box_gray 0
-scoreboard players set @s ca.drop_box_light_gray 0
-scoreboard players set @s ca.drop_box_cyan 0
-scoreboard players set @s ca.drop_box_purple 0
-scoreboard players set @s ca.drop_box_blue 0
-scoreboard players set @s ca.drop_box_brown 0
-scoreboard players set @s ca.drop_box_green 0
-scoreboard players set @s ca.drop_box_red 0
-scoreboard players set @s ca.drop_box_black 0
-
-execute if score @s ca.glass_cdl matches 1.. run scoreboard players remove @s ca.glass_cdl 1
-
 execute if entity @s[tag=!ca.init] run function cartographer_core:load/init_player
-
-execute unless score @s ca.player_id matches 1.. run function cartographer_core:helper/player_id/assign
 
 execute if score @s ca.core_delay_check matches 1.. run scoreboard players remove @s ca.core_delay_check 1
 execute if entity @s[tag=ca.core_check_inv] unless score @s ca.core_delay_check matches 1.. run function cartographer_core:helper/inventory/do_inventory_check
@@ -81,7 +15,8 @@ execute unless score @s ca.core_delay_check matches 1.. run tag @s remove ca.cor
 #Enable triggers
 scoreboard players enable @s lexica
 scoreboard players enable @s menu
-scoreboard players enable @s give_dev_box
+execute if entity @s[gamemode=creative] run scoreboard players enable @s give_dev_box
+execute unless entity @s[gamemode=creative] run scoreboard players reset @s give_dev_box
 
 #Get the count of lexica on the player
 scoreboard players operation $old_lex_count ca.lexica_count = @s ca.lexica_count
@@ -120,9 +55,6 @@ execute if score @s ca.shoot_bow matches 1.. run function cartographer_core:help
 execute if score @s ca.shoot_cross matches 1.. run function cartographer_core:helper/tag_player_projectile
 execute if score @s ca.throw_trident matches 1.. run function cartographer_core:helper/tag_player_projectile
 
-#Custom Absorption Handler Reset
-execute unless predicate cartographer_core:has_absorption if entity @s[tag=ca.carto_abs_applied] run function cartographer_core:helper/abs_handler/reset
-
 #Resets
 scoreboard players set @s ca.use_lectern 0
 
@@ -158,9 +90,3 @@ execute if score @s ca.load_cro_time matches 1.. run scoreboard players remove @
 execute if score @s ca.hold_shi_time matches 1.. run scoreboard players remove @s ca.hold_shi_time 1
 execute if score @s ca.hold_tri_time matches 1.. run scoreboard players remove @s ca.hold_tri_time 1
 execute if score @s ca.use_ee_time matches 1.. run scoreboard players remove @s ca.use_ee_time 1
-
-execute if score @s ca.throw_pot matches 1.. as @e[type=potion,sort=nearest,limit=1] at @s run function cartographer_core:potion_mark/test_player_owned
-execute if score @s ca.throw_linger_pot matches 1.. as @e[type=potion,sort=nearest,limit=1] at @s run function cartographer_core:potion_mark/test_player_owned
-
-scoreboard players set @s ca.throw_pot 0
-scoreboard players set @s ca.throw_linger_pot 0

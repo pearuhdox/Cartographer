@@ -1,12 +1,14 @@
+execute if score @s ca.adrenaline_dur matches 1 run attribute @s minecraft:generic.attack_damage modifier remove 31-119-1212-2216-0
+execute if score @s ca.frenzy_dur matches 1 run attribute @s minecraft:generic.attack_damage modifier remove 31-119-1212-2216-0
+
+
 scoreboard players set @s[scores={ca.adrenaline_dur=1}] ca.adrenaline_dur 0
 scoreboard players set @s[scores={ca.frenzy_dur=1}] ca.frenzy_dur 0
 scoreboard players set @s[scores={ca.energetic_dur=1}] ca.energetic_dur 0
-scoreboard players set @s[scores={ca.lifeblood_dur=1}] ca.lifeblood_dur 0
 
 scoreboard players remove @s[scores={ca.adrenaline_dur=1..}] ca.adrenaline_dur 1
 scoreboard players remove @s[scores={ca.frenzy_dur=1..}] ca.frenzy_dur 1
 scoreboard players remove @s[scores={ca.energetic_dur=1..}] ca.energetic_dur 1
-scoreboard players remove @s[scores={ca.lifeblood_dur=1..}] ca.lifeblood_dur 1
 
 #execute if score @s ca.conceal_time matches 19.. run effect give @s invisibility 1 1 true
 scoreboard players remove @s[scores={ca.conceal_time=1..}] ca.conceal_time 1
@@ -93,10 +95,6 @@ execute if score @s ca.energetic_dur matches 1.. if score $mod ca.energetic_dur 
 
 
 execute if score @s ca.adrenaline_dur matches 0 run attribute @s minecraft:generic.movement_speed modifier remove 31-119-1212-2216-0
-execute if score @s ca.frenzy_dur matches 0 run attribute @s minecraft:generic.attack_damage modifier remove 31-119-1212-2216-0
-
-execute if score @s ca.energetic_dur matches 0 run attribute @s minecraft:generic.attack_speed modifier remove 31-119-1212-2216-0
-execute if score @s ca.energetic_dur matches 0 run attribute @s minecraft:player.block_break_speed modifier remove 31-119-1212-2216-0
-
+execute if score @s ca.frenzy_dur matches 0 run attribute @s minecraft:generic.attack_damage modifier remove 31-119-1212-2216-1
 
 tag @s add kill_buff_checked

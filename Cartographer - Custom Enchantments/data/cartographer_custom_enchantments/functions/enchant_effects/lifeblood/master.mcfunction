@@ -1,3 +1,0 @@
-function cartographer_custom_enchantments:enchant_effects/lifeblood/branch 
-
-function #minecraft:cartographer/events/enchantments/passive/lifeblood

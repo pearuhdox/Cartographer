@@ -19,6 +19,11 @@ scoreboard objectives add charon.kill_test minecraft.killed:minecraft.wither_ske
 
 scoreboard objectives add cage.var dummy
 
+scoreboard objectives add ca.charon_statue_ct dummy
+scoreboard objectives add ca.charon_statue_ct_old dummy
+scoreboard objectives add ca.charon_statue_cdl dummy
+
+
 scoreboard objectives add void_home.x dummy
 scoreboard objectives add void_home.y dummy
 scoreboard objectives add void_home.z dummy
@@ -28,8 +33,11 @@ scoreboard objectives add taxes.time minecraft.custom:minecraft.time_since_death
 
 scoreboard objectives add charon.player_stats dummy
 
+scoreboard objectives add ca.revive_cdl dummy
 scoreboard objectives add ca.revive_time dummy
 scoreboard objectives add ca.is_reviving dummy
+scoreboard objectives add ca.shade_health dummy
+scoreboard objectives add ca.shade_health_old dummy
 
 scoreboard objectives add ca.self_revive_timer dummy
 scoreboard objectives add ca.self_revive_cooldown dummy

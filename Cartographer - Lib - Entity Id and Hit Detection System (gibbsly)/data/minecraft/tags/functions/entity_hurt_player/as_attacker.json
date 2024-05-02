@@ -1,0 +1,8 @@
+{
+	"values": [
+		{
+			"id": "example:chestplate/as_attacker",
+			"required": false
+		}
+	]
+}

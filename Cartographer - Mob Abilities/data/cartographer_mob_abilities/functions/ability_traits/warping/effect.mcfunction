@@ -1,4 +1,4 @@
-tp @s ~ ~ ~ facing entity @p feet
+tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,gamemode=!creative] feet
 
 scoreboard players set $warpshot_x ca.mob_var 0
 scoreboard players set $warpshot_y ca.mob_var 0

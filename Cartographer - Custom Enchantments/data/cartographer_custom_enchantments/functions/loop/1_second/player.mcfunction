@@ -1,4 +1,4 @@
-execute if entity @s[scores={ca.regen=1..}] run function cartographer_custom_enchantments:enchant_effects/regeneration/master
+execute if entity @s[scores={ca.regen=1..}] run function cartographer_custom_enchantments:enchant_effects/regeneration
 execute if entity @s[scores={ca.regen_bank=100..}] run function cartographer_custom_enchantments:enchant_effects/heal_bank
 
 
@@ -8,10 +8,16 @@ execute if score @s ca.combat_timer matches ..0 if score @s ca.sweeping_charges 
 execute if score @s ca.combat_timer matches ..0 if score @s ca.thrusting_charges < @s ca.thrusting run function cartographer_custom_enchantments:enchant_effects/thrusting/restore
 execute if score @s ca.combat_timer matches ..0 if score @s ca.slamming_charges < @s ca.slamming run function cartographer_custom_enchantments:enchant_effects/slamming/restore
 
-#Stalwart and Poise HP Checker
-execute if entity @s[tag=ca.check_hp_percent] run function cartographer_custom_enchantments:enchant_calls/check_hp
+#Shielding
+execute if score @s ca.shielding matches 1.. run function cartographer_custom_enchantments:enchant_effects/shielding/clock
+execute unless score @s ca.shielding matches 1.. if score @s ca.shielding_past matches 1.. run function cartographer_custom_enchantments:enchant_effects/shielding/stopped_using
+execute unless score @s ca.shielding matches 1.. if score @s ca.shielding_time matches 1.. run scoreboard players remove @s ca.shielding_time 1
 
-#function cartographer_custom_enchantments:enchant_effects/confidence/reset
-#function cartographer_custom_enchantments:enchant_effects/desperation/reset
-#function cartographer_custom_enchantments:enchant_effects/stalwart/reset
-#function cartographer_custom_enchantments:enchant_effects/poise/reset
+tag @s[scores={ca.combat_timer=1}] add can_first_strike
+
+function cartographer_custom_enchantments:enchant_effects/confidence/reset
+function cartographer_custom_enchantments:enchant_effects/desperation/reset
+function cartographer_custom_enchantments:enchant_effects/stalwart/reset
+function cartographer_custom_enchantments:enchant_effects/poise/reset
+
+execute if entity @s[tag=ca.check_hp_percent] run function cartographer_custom_enchantments:enchant_calls/check_hp

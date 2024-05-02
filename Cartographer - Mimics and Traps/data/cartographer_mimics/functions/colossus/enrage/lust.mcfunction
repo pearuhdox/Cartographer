@@ -3,6 +3,8 @@
 
 tag @s add ca.breaker
 tag @s add ca.cursing
+tag @s add ca.sidearm_after
+tag @s add ca.sh_grenade
 tag @s add ca.enraged
 
 effect give @s speed 30 0

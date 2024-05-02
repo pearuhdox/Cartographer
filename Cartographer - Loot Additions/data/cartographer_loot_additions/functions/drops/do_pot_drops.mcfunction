@@ -1,16 +1,22 @@
 setblock 4206900 2 4206900 air replace
 
-tag @s add ca.pot_debug_stick_ltos_drop
+#Pots
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:archer_pottery_sherd","minecraft:archer_pottery_sherd","minecraft:archer_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/archer
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:skull_pottery_sherd","minecraft:skull_pottery_sherd","minecraft:skull_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/mob
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:brewer_pottery_sherd","minecraft:brewer_pottery_sherd","minecraft:brewer_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/potion
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:prize_pottery_sherd","minecraft:prize_pottery_sherd","minecraft:prize_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/materials
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:angler_pottery_sherd","minecraft:angler_pottery_sherd","minecraft:angler_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/angler
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:plenty_pottery_sherd","minecraft:plenty_pottery_sherd","minecraft:plenty_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/blocks
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:blade_pottery_sherd","minecraft:blade_pottery_sherd","minecraft:blade_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/weapons
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:miner_pottery_sherd","minecraft:miner_pottery_sherd","minecraft:miner_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/tools
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:sheaf_pottery_sherd","minecraft:sheaf_pottery_sherd","minecraft:sheaf_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/food
 
-#say pot drop
 
-playsound minecraft:block.decorated_pot.shatter player @a ~ ~ ~ 1.2 0.75
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:heart_pottery_sherd","minecraft:heart_pottery_sherd","minecraft:heart_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/action/heal
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:heartbreak_pottery_sherd","minecraft:heartbreak_pottery_sherd","minecraft:heartbreak_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/action/harm
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:burn_pottery_sherd","minecraft:burn_pottery_sherd","minecraft:burn_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/action/fire
+execute if entity @s[type=item,nbt={Item:{id:"minecraft:decorated_pot",Count:1b,tag:{BlockEntityTag:{sherds:["minecraft:structure_void","minecraft:mourner_pottery_sherd","minecraft:mourner_pottery_sherd","minecraft:mourner_pottery_sherd"]}}}}] run function cartographer_loot_additions:drops/do_drops/pots/action/fang
 
-data modify storage cartographer_loot_additions:pot_trap pot_drop set value {}
-data modify storage cartographer_loot_additions:pot_trap pot_drop set from entity @s Item
-
-execute as @e[type=item,sort=nearest,tag=!ca.pot_debug_stick_ltos_drop,limit=1,distance=..1,nbt={Item:{id:"minecraft:decorated_pot"}}] run function cartographer_loot_additions:drops/do_drops/pots/action/type_check
-execute as @e[type=item,sort=nearest,limit=1,distance=..1,tag=!ca.pot_debug_stick_ltos_drop] at @s run function cartographer_loot_additions:drops/do_drops/pots/action/parse_drop
 
 #Rest of mechs
 execute store result score @s ca.x_seed run data get entity @s Pos[0] 1
@@ -35,4 +41,4 @@ tag @s add loot_checked
 #Sounds and particles
 stopsound @a[distance=..16] block minecraft:block.stone.break
 
-kill @s
+kill @s[tag=loot_add_custom]

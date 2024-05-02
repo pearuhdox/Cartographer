@@ -1,1 +1,0 @@
-function cartographer_custom_enchantments:enchant_calls/when_killing_mob

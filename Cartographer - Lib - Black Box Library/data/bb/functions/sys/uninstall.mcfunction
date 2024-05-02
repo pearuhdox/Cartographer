@@ -100,6 +100,8 @@ scoreboard objectives remove bbl.action.use.bundle
 #\CoaS
 scoreboard objectives remove bbl.action.use.coas
 
+#\Universal enderchest id system for enabling/disabling the right menus
+scoreboard objectives remove bbl.universal_active_enderchest_menu_id
 
 #\Move detector
 #Mute timer
@@ -118,6 +120,8 @@ scoreboard objectives remove bbl.move.horse
 scoreboard objectives remove bbl.move.swim
 #\Walk underwater
 scoreboard objectives remove bbl.move.walk_underwater
+#\Fly
+scoreboard objectives remove bbl.move.fly
 
 ##\Mouse
 ##\Pitch

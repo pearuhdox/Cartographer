@@ -1,1 +1,0 @@
-$damage @s $(damage) cartographer_custom_enchantments:enchant_damage_bypass

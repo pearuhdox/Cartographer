@@ -13,10 +13,10 @@ tellraw @s [{"text":"❰","color":"green","bold":true},{"text":"⊰ Lexica Carto
 tellraw @s {"text":"A guide by a cartographer about Cartographer.","color":"#ACFFA6","bold":false,"italic":true}
 tellraw @s {"text":"------------------------------------------","color":"#ACFFA6","bold":true}
 
-tellraw @s [{"text":"Lifesteal","color":"yellow","bold":true,"italic":false}]
+tellraw @s [{"text":"Gravity","color":"yellow","bold":true,"italic":false}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 
-tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the holder or wearer lands near a mob and would take fall damage, a portion of that fall damage is instead dealt to all nearby mobs within 3.5 blocks, and the fall damage is negated. If the item has effect applying enchantments, they are also applied to the mobs.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
+tellraw @s [{"text":"Description: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"When the user hits a mob while falling, the fall damage they would take is negated. Then mobs within 3 blocks of the player take ([25% of player's Attack Damage] * level) damage. Extra damage is also dealt depending on fall height.","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]
 tellraw @s [{"text":"Applicable Slots: ","color":"green","bold":false,"italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}},{"text":"Armor, Offhand, Mainhand (all items).","color":"#FFF4D9","italic":false,"hoverEvent":{"action":"show_text","contents":[{"text":"","color":"#FFF4D9","italic":true}]}}]
 tellraw @s [{"text":" ","color":"#FFF4D9","italic":false}]

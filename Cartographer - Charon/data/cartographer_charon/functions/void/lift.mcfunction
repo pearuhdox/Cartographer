@@ -87,9 +87,10 @@ execute if score $diff void_home.y matches 310..320 run effect give @s slow_fall
 effect give @s darkness 3 0 true
 
 scoreboard players operation @s bbl.damage_queue = $diff void_home.y
-scoreboard players operation @s bbl.damage_queue /= $5 ca.CONSTANT
-scoreboard players operation @s bbl.damage_queue /= $2 ca.CONSTANT
+scoreboard players operation @s bbl.damage_queue /= $7 ca.CONSTANT
+#scoreboard players operation @s bbl.damage_queue /= $2 ca.CONSTANT
 execute if score @s bbl.damage_queue matches ..4 run scoreboard players set @s bbl.damage_queue 4
+execute if score @s bbl.damage_queue matches 11.. run scoreboard players set @s bbl.damage_queue 10
 
 function bb:call/hpm/player/damage/true
 

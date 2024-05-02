@@ -1,32 +1,11 @@
-scoreboard players set $fire_aspect ca.weapon_var 0
-scoreboard players set $knockback ca.weapon_var 0
-
-scoreboard players set $executioner ca.weapon_var 0
-scoreboard players set $first_strike ca.weapon_var 0
-scoreboard players set $hex_eater ca.weapon_var 0
-scoreboard players set $tempo_theft ca.weapon_var 0
-scoreboard players set $cauterize ca.weapon_var 0
-
-scoreboard players set $duelist ca.weapon_var 0
-scoreboard players set $hunter ca.weapon_var 0
-scoreboard players set $smite ca.weapon_var 0
-
 scoreboard players set $quake_mob ca.ench_var 0
 
 scoreboard players operation $quake_lvl ca.quake = @s ca.quake
 
-scoreboard players operation $fire_aspect ca.weapon_var = @s ca.qu_fire
-scoreboard players operation $knockback ca.weapon_var = @s ca.qu_knock
-
-scoreboard players operation $executioner ca.weapon_var = @s ca.qu_exec
-scoreboard players operation $first_strike ca.weapon_var = @s ca.qu_first
-scoreboard players operation $hex_eater ca.weapon_var = @s ca.qu_hex
-scoreboard players operation $tempo_theft ca.weapon_var = @s ca.qu_tempo
-scoreboard players operation $cauterize ca.weapon_var = @s ca.qu_cau
-
-scoreboard players operation $duelist ca.weapon_var = @s ca.qu_duelist
-scoreboard players operation $hunter ca.weapon_var = @s ca.qu_hunter
-scoreboard players operation $smite ca.weapon_var = @s ca.qu_smite
+scoreboard players operation $fire_aspect ca.quake = @s ca.qu_fire
+scoreboard players operation $frostbite ca.quake = @s ca.qu_frost
+scoreboard players operation $executioner ca.quake = @s ca.qu_exec
+scoreboard players operation $knockback ca.quake = @s ca.qu_knock
 
 scoreboard players operation $cauterize ca.quake = @s ca.cauterize
 
@@ -56,15 +35,10 @@ function cartographer_custom_statuses:apply_self/save/additive/do
 function cartographer_custom_statuses:apply_status/save/additive/do
 
 
-scoreboard players operation $damage ca.quake = @s ca.quake
-scoreboard players add $damage ca.quake 2
-scoreboard players operation $damage ca.quake *= $10 ca.CONSTANT
+execute as @e[type=#bb:hostile,distance=..5.5] run function cartographer_custom_enchantments:enchant_effects/quake/hit
 
-scoreboard players set $success ca.attr_random_crit 0
-execute if score @s ca.attr_random_crit matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/random_crit_handler
+execute if score $do_linger ca.status_var matches 1.. run scoreboard players set @s ca.linger_cdl 300
 
+execute if score $quake_mob ca.ench_var matches 1.. run function cartographer_custom_enchantments:enchant_effects/quake/vfx
 
-scoreboard players set $size ca.attr_aoe_size 40
-function cartographer_custom_enchantments:attribute_effects/aoe_size/adjust
-
-scoreboard players set @s ca.quake_use_check 3
+execute if score $quake_mob ca.ench_var matches 1.. run function cartographer_custom_statuses:apply_effects/apply/create_aec

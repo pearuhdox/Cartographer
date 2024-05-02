@@ -8,17 +8,11 @@
 
 
 #Create the scoreboard used to enable or disable features to dynamically save performance.
-scoreboard objectives add ca.player_id dummy
-
 scoreboard objectives add ca.enabler dummy
 scoreboard objectives add ca.installed dummy
 
 scoreboard objectives add ca.registry dummy
 scoreboard objectives add ca.notice_time dummy
-
-scoreboard objectives add ca.lexica_log dummy
-
-scoreboard objectives add ca.rand_var dummy
 
 scoreboard players set $charon ca.installed 0
 scoreboard players set $custom_durability ca.installed 0
@@ -41,42 +35,6 @@ scoreboard players set $#lib_dies ca.installed 0
 #Create UUID Handshake score for Interactions
 scoreboard objectives add ca.uuid_interact dummy
 
-scoreboard objectives add ca.yaw dummy
-scoreboard objectives add ca.yaw_past dummy
-
-scoreboard objectives add ca.pitch dummy
-scoreboard objectives add ca.pitch_past dummy
-
-scoreboard objectives add ca.x_pos dummy
-scoreboard objectives add ca.y_pos dummy
-scoreboard objectives add ca.z_pos dummy
-
-scoreboard objectives add ca.x_pos_past dummy
-scoreboard objectives add ca.y_pos_past dummy
-scoreboard objectives add ca.z_pos_past dummy
-
-scoreboard objectives add ca.drop_box minecraft.dropped:minecraft.shulker_box
-
-scoreboard objectives add ca.drop_box_white minecraft.dropped:minecraft.white_shulker_box
-scoreboard objectives add ca.drop_box_orange minecraft.dropped:minecraft.orange_shulker_box
-scoreboard objectives add ca.drop_box_magenta minecraft.dropped:minecraft.magenta_shulker_box
-scoreboard objectives add ca.drop_box_light_blue minecraft.dropped:minecraft.light_blue_shulker_box
-scoreboard objectives add ca.drop_box_yellow minecraft.dropped:minecraft.yellow_shulker_box
-scoreboard objectives add ca.drop_box_lime minecraft.dropped:minecraft.lime_shulker_box
-scoreboard objectives add ca.drop_box_pink minecraft.dropped:minecraft.pink_shulker_box
-scoreboard objectives add ca.drop_box_gray minecraft.dropped:minecraft.gray_shulker_box
-scoreboard objectives add ca.drop_box_light_gray minecraft.dropped:minecraft.light_gray_shulker_box
-scoreboard objectives add ca.drop_box_cyan minecraft.dropped:minecraft.cyan_shulker_box
-scoreboard objectives add ca.drop_box_purple minecraft.dropped:minecraft.purple_shulker_box
-scoreboard objectives add ca.drop_box_blue minecraft.dropped:minecraft.blue_shulker_box
-scoreboard objectives add ca.drop_box_brown minecraft.dropped:minecraft.brown_shulker_box
-scoreboard objectives add ca.drop_box_green minecraft.dropped:minecraft.green_shulker_box
-scoreboard objectives add ca.drop_box_red minecraft.dropped:minecraft.red_shulker_box
-scoreboard objectives add ca.drop_box_black minecraft.dropped:minecraft.black_shulker_box
-
-scoreboard objectives add ca.quick_drop_anim dummy
-
-scoreboard objectives add ca.glass_cdl dummy
 
 #Create mutex score
 scoreboard objectives add ca.mutex dummy
@@ -84,6 +42,9 @@ scoreboard objectives add ca.mutex dummy
 #Trigger scoreboards for menus and giving lexica.
 scoreboard objectives add lexica trigger
 scoreboard objectives add menu trigger
+
+#Initialize Cloud Wolf's Math Lite Datapack
+function cartographer_core:helper/math/zprivate/init
 
 #Place Shulker Boxes needed for Shulker Box trick.
 forceload add 4206900 4206900
@@ -100,8 +61,6 @@ setblock 4206900 5 4206900 purple_shulker_box{Items:[{Slot:0b,id:"minecraft:know
 
 #Create var scoreboard
 scoreboard objectives add ca.var dummy
-
-scoreboard objectives add ca.registry dummy
 
 #Create logout scoreboard
 scoreboard objectives add ca.logout minecraft.custom:minecraft.leave_game
@@ -137,10 +96,6 @@ scoreboard objectives add ca.sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add ca.swim minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add ca.water_walk minecraft.custom:minecraft.walk_under_water_one_cm
 
-
-scoreboard objectives add ca.throw_pot minecraft.used:minecraft.splash_potion
-scoreboard objectives add ca.throw_linger_pot minecraft.used:minecraft.lingering_potion
-
 #Delta compat
 scoreboard objectives add ca.delta_fuse_max dummy
 scoreboard objectives add ca.delta_fuse dummy
@@ -155,9 +110,6 @@ scoreboard objectives add ca.raycast dummy
 #Create lifetime score
 scoreboard objectives add ca.lifetime dummy
 
-#Create abs handler score
-scoreboard objectives add ca.abs_handler dummy
-scoreboard objectives add ca.abs_time dummy
 
 #Create scores for custom damage
 scoreboard objectives add bbl.damage_queue dummy
@@ -259,7 +211,6 @@ scoreboard players set $1000 ca.CONSTANT 1000
 scoreboard players set $100 ca.CONSTANT 100
 scoreboard players set $10 ca.CONSTANT 10
 
-scoreboard players set $12 ca.CONSTANT 12
 scoreboard players set $13 ca.CONSTANT 13
 
 scoreboard players set $15 ca.CONSTANT 15
@@ -285,16 +236,14 @@ scoreboard players set $75 ca.CONSTANT 75
 scoreboard players set $77 ca.CONSTANT 77
 scoreboard players set $80 ca.CONSTANT 80
 scoreboard players set $81 ca.CONSTANT 81
-scoreboard players set $90 ca.CONSTANT 90
+scoreboard players set $100 ca.CONSTANT 100
 scoreboard players set $120 ca.CONSTANT 120
 scoreboard players set $125 ca.CONSTANT 125
 scoreboard players set $133 ca.CONSTANT 133
-scoreboard players set $140 ca.CONSTANT 140
 scoreboard players set $150 ca.CONSTANT 150
 scoreboard players set $200 ca.CONSTANT 200
 scoreboard players set $210 ca.CONSTANT 210
 scoreboard players set $225 ca.CONSTANT 225
-scoreboard players set $250 ca.CONSTANT 250
 scoreboard players set $300 ca.CONSTANT 300
 scoreboard players set $600 ca.CONSTANT 600
 scoreboard players set $1000 ca.CONSTANT 1000
@@ -361,9 +310,3 @@ schedule function cartographer_core:load/cleanup_forceload 20t
 #Analyse what gamerules feedback and death messages are set to.
 
 #Schedule core clocks.
-
-setblock 4206905 3 4206905 oak_sign replace
-
-#Summon Armor Stand for Item Tag Evaluation
-# "31192011-4452-2112-0000-000000000000"
-summon armor_stand 4206900 0 4206900 {Marker:1b,Invisible:1b,NoGravity:1b,UUID:[I;823730193,1146233106,0,0]}

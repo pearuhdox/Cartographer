@@ -5,12 +5,12 @@ execute unless score @s ca.is_reviving matches 1.. run effect give @s invisibili
 scoreboard players operation $mul_mod_20 dt.var = @s ca.lifetime
 scoreboard players operation $mul_mod_20 dt.var %= $20 ca.CONSTANT
 
-execute if score $mul_mod_20 dt.var matches 1 run particle minecraft:glow_squid_ink ~ ~ ~ 0 0 0 0.05 1 force
-execute if score $mul_mod_20 dt.var matches 1 run playsound minecraft:entity.allay.ambient_without_item player @a ~ ~ ~ 0.35 2
+execute if score $mul_mod_20 dt.var matches 11 run function cartographer_charon:multiplayer/second
+execute if score $mul_mod_20 dt.var matches 1 run damage @s 2 minecraft:out_of_world
 
 particle minecraft:glow ~ ~ ~ 0.2 0.2 0.2 5 1 normal
 
-execute unless data entity @s HandItems[0].id run function cartographer_charon:multiplayer/purge
+#execute unless data entity @s HandItems[0].id run function cartographer_charon:multiplayer/purge
 
 execute unless score @s ca.is_reviving matches 1.. if score @s ca.lifetime matches 602.. positioned ~ ~-1 ~ run function cartographer_charon:multiplayer/despawn
 
@@ -26,3 +26,5 @@ execute if score @s ca.is_reviving matches 1 run playsound minecraft:entity.alla
 execute if score @s ca.revive_time matches 1.. unless score @s ca.is_reviving matches 1.. run scoreboard players remove @s ca.revive_time 1
 
 execute if score @s ca.is_reviving matches 1.. run scoreboard players remove @s ca.is_reviving 1
+
+execute if score @s ca.revive_cdl matches 1.. run scoreboard players remove @s ca.revive_cdl 1

@@ -7,7 +7,8 @@ data modify storage cartographer_charon:player inv set value []
 
 execute if entity @s[tag=ca.can_self_revive] run spawnpoint @s ~ ~ ~
 
-execute if data storage inv:main inv.all[] run function cartographer_charon:inv/iterate_death
+#execute if data storage inv:main inv.all[] run function cartographer_charon:inv/iterate_death
+function cartographer_charon:inv/iterate_death
 
 tag @s add watched_die_already
 

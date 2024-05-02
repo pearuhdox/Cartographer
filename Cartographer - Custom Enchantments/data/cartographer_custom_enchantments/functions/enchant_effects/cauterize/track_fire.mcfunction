@@ -1,0 +1,1 @@
+execute store result score @s ca.cauterize_time run data get entity @s Fire

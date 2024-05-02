@@ -4,6 +4,6 @@ execute if score $loyalty_amt ca.loyalty matches 100.. run scoreboard players re
 data modify storage cartographer_custom_enchantments:loyalty SetupCurrentLvl set value {id:"minecraft:loyalty",lvl:1s}
 execute store result storage cartographer_custom_enchantments:loyalty SetupCurrentLvl.lvl short 1 run scoreboard players add $loyalty_amt ca.loyalty 0
 
-data modify entity @s Trident.tag.Enchantments append from storage cartographer_custom_enchantments:loyalty SetupCurrentLvl
-data modify entity @s Trident.id set value "minecraft:structure_void"
-data modify entity @s Trident.tag.TridentRemnantDelete set value 1b
+data modify entity @s item.tag.Enchantments append from storage cartographer_custom_enchantments:loyalty SetupCurrentLvl
+data modify entity @s item.id set value "minecraft:structure_void"
+data modify entity @s item.tag.TridentRemnantDelete set value 1b

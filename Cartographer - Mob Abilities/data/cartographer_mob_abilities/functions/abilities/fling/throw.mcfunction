@@ -2,7 +2,7 @@ playsound minecraft:item.trident.throw player @a ~ ~ ~ 2 0.5
 
 ride @s dismount
 
-tp @s ~ ~ ~ facing entity @p feet
+tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,gamemode=!creative] feet
 
 scoreboard players set @s co_send 8
 execute unless entity @a[distance=..8] run scoreboard players set @s co_send 17

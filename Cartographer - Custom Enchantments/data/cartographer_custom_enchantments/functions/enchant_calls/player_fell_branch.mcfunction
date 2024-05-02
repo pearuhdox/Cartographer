@@ -1,1 +1,3 @@
-execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/landed
+#execute if score @s ca.gravity_protect matches 1.. run scoreboard players set $block ca.fall_damage 1
+
+#execute if score @s ca.gravity matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/landed

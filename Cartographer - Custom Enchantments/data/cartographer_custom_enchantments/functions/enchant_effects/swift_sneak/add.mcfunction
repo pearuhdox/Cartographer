@@ -27,4 +27,9 @@ execute if score $hide_flags ca.swift_sneak matches 2.. run data modify storage 
 execute in minecraft:overworld run data modify block 4206900 0 4206900 Items append from storage cartographer_custom_enchantments:swift_sneak Item
 execute in minecraft:overworld run loot replace entity @s armor.legs 1 mine 4206900 0 4206900 air{drop_contents:1b}
 
-stopsound @a[distance=..8] * item.armor.equip_chain
+stopsound @a[distance=..12] * minecraft:item.armor.equip_leather
+stopsound @a[distance=..12] * minecraft:item.armor.equip_golden
+stopsound @a[distance=..12] * minecraft:item.armor.equip_chain
+stopsound @a[distance=..12] * minecraft:item.armor.equip_iron
+stopsound @a[distance=..12] * minecraft:item.armor.equip_diamond
+stopsound @a[distance=..12] * minecraft:item.armor.equip_netherite

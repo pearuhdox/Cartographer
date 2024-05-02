@@ -1,4 +1,4 @@
-tp @s ~ ~ ~ facing entity @p feet
+tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,gamemode=!creative] feet
 
 execute if entity @s[tag=rift_marker_1] run tp @s ~ ~ ~ ~0 0
 execute if entity @s[tag=rift_marker_2] run tp @s ~ ~ ~ ~120 0

@@ -1,0 +1,1 @@
+execute as @e[type=item,sort=nearest,tag=!loot_checked,nbt={Item:{id:"minecraft:decorated_pot",Count:1b}}] at @s run function cartographer_loot_additions:drops/pot_drop_test

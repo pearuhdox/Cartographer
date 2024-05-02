@@ -1,1 +1,0 @@
-execute unless score @s ca.hex_eater_time matches 1.. run function cartographer_custom_enchantments:enchant_effects/on_hit/hex_eater/do_effect

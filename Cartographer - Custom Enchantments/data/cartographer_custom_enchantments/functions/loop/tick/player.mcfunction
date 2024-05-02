@@ -36,28 +36,13 @@ execute if score @s ca.echo matches 1.. if score @s ca.echo_charges matches 1.. 
 execute if score @s ca.echo matches 0 run attribute @s minecraft:generic.attack_speed modifier remove 5-3-8-15-180504192125
 
 
-scoreboard players set @s ca.fleetfoot_use 0
-scoreboard players operation @s ca.fleetfoot_use = @s ca.is_load_cro
-scoreboard players operation @s ca.fleetfoot_use += @s ca.is_draw_bow
-scoreboard players operation @s ca.fleetfoot_use += @s ca.is_hold_tri
-
-execute if score @s ca.fleetfoot matches 1.. if score @s ca.fleetfoot_use matches 1.. run tag @s add ca.fleetfooting
-execute if score @s ca.fleetfoot matches 1.. if score @s ca.fleetfoot_use matches 1.. unless score @s ca.fleetfoot_cdl matches 1.. run attribute @s minecraft:generic.movement_speed modifier add 31-321-514-000-6151520 "fleetfoot_effect_spd" 0.33 add
+scoreboard players operation $temp ca.fleetfoot = @s ca.is_load_cro
+scoreboard players operation $temp ca.fleetfoot += @s ca.is_draw_bow
+scoreboard players operation $temp ca.fleetfoot += @s ca.is_hold_tri
+execute if score @s ca.fleetfoot matches 1.. if score $temp ca.fleetfoot matches 1.. run attribute @s minecraft:generic.movement_speed modifier add 31-321-514-000-6151520 "fleetfoot_effect_spd" 0.4 add
 
 execute if score @s ca.fleetfoot matches 0 run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
-
 execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_load_cro matches 0 unless score @s ca.is_draw_bow matches 1.. unless score @s ca.is_hold_tri matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
-execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_draw_bow matches 1 unless score @s ca.is_load_cro matches 1.. unless score @s ca.is_hold_tri matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
-execute if score @s ca.fleetfoot matches 1.. if score @s ca.is_hold_tri matches 0 unless score @s ca.is_draw_bow matches 1.. unless score @s ca.is_load_cro matches 1.. run attribute @s minecraft:generic.movement_speed modifier remove 31-321-514-000-6151520
-
-execute if entity @s[tag=ca.fleetfooting] if score @s ca.fleetfoot_use matches 0 unless score @s ca.fleetfoot_cdl matches 1.. run scoreboard players add @s ca.fleetfoot_cdl 20
-execute if entity @s[tag=ca.fleetfooting] if score @s ca.fleetfoot_use matches 0 run tag @s remove ca.fleetfooting
-
-
-execute if score @s ca.fleetfoot_cdl matches 21.. run scoreboard players set @s ca.fleetfoot_cdl 20
-
-execute if score @s ca.fleetfoot_cdl matches 1.. run scoreboard players remove @s ca.fleetfoot_cdl 1
-execute if score @s ca.fleetfoot_cdl matches ..-1 run scoreboard players add @s ca.fleetfoot_cdl 1
 
 #Custom Loyalty recharge attack meter
 execute if score @s ca.loyalty_speed matches 2.. run attribute @s minecraft:generic.attack_speed modifier add 31-321-1818-514-20 "loyalty_effect_spd" 1024 add
@@ -79,19 +64,8 @@ tag @s remove auto_charge_inv_fix
 #Remove Evading tag if no evasion
 execute unless score @s ca.evasion matches 1.. run tag @s remove evading
 
-#Remove Agility Stats Here
-execute unless score @s ca.agility matches 1.. run attribute @s minecraft:generic.jump_strength modifier remove 31-1179-1290-2025-0
-execute unless score @s ca.agility matches 1.. run attribute @s minecraft:generic.safe_fall_distance modifier remove 31-1179-1290-2025-0
-
-#Tick Sprint Dash Time and Disengage Time Here
-execute if score @s ca.disengage_dur matches 1.. run function cartographer_custom_enchantments:enchant_effects/disengage/tick
-execute if score @s ca.sprint_dash_dur matches 1.. run function cartographer_custom_enchantments:enchant_effects/sprint_dash/tick
-
 #Passive Trigger (if score $cu_en_passive ca.enabler matches 1.. )
 execute if entity @s[tag=has_passive_ench] run function cartographer_custom_enchantments:enchant_calls/passively
-
-#Do Crossbow Reload Check
-execute if score @s ca.is_load_cro matches 1.. if entity @s[nbt={SelectedItem:{tag:{Charged:1b}}}] run function cartographer_custom_enchantments:enchant_calls/load_crossbow
 
 #Ramp up Loyalty Time
 execute if score @s ca.loyalty_time matches 1.. run scoreboard players add @s ca.loyalty_time 1
@@ -104,20 +78,14 @@ execute if score @s ca.recoil_time matches 1.. run function cartographer_custom_
 execute unless block ~ ~-0.2 ~ #cartographer_core:can_raycast unless score @s ca.recoil_time matches 1.. unless score @s ca.recoil_count matches 1.. run function cartographer_custom_enchantments:enchant_effects/recoil/count_fix
 
 #Kill trigger (if score $cu_en_kill ca.enabler matches 1.. )
-#execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
+execute if score @s ca.kill_entity matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_killing_mob
 
 #Run Repulsion
-execute if score @s ca.repulsion matches 1.. unless score @s ca.repulsion_time matches 1.. if score @s ca.load_cro_time matches 5.. run function cartographer_custom_enchantments:enchant_effects/repulsion/activate
-execute if score @s ca.repulsion_time matches 1.. unless score @s ca.load_cro_time matches 5.. run scoreboard players remove @s ca.repulsion_time 1
+execute if score @s ca.repulsion matches 1.. if score @s ca.load_cro_time matches 5 run function cartographer_custom_enchantments:enchant_effects/repulsion/activate
 
 #Make ranged attack triggers.
 execute if score @s ca.fire_bow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
-execute if score @s ca.fire_cbow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
-execute if score @s ca.use_snowball matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
-
-execute if score @s ca.quake_use_check matches 1.. run scoreboard players remove @s ca.quake_use_check 1
-execute if score @s ca.lifesteal_use_check matches 1.. run scoreboard players remove @s ca.lifesteal_use_check 1
-
+execute if score $cu_en_ranged ca.enabler matches 1.. if score @s ca.fire_cbow matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_ranged_attack_made
 
 #Break Spawner Trigger (if score $cu_en_spawner ca.enabler matches 1.. )
 execute if score @s ca.mine_spawner matches 1.. run function cartographer_custom_enchantments:enchant_calls/when_break_spawner
@@ -129,42 +97,13 @@ execute if score @s ca.death_time matches 0 run function cartographer_custom_enc
 execute if score @s ca.death_time matches 2..20 run function cartographer_custom_enchantments:enchant_calls/when_player_respawns
 
 #Tempo Theft Effect - Players
-execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/on_hit/tempo_theft/effect_player
-
-#Shielding
-execute if score @s ca.shielding matches 1.. run function cartographer_custom_enchantments:enchant_effects/shielding/clock
-execute unless score @s ca.shielding matches 1.. if entity @s[tag=ca.using_shielding] if predicate cartographer_core:has_absorption run function cartographer_custom_enchantments:enchant_effects/shielding/stopped_using
-
-#Cauterize Check
-tag @s remove ca.has_cauterize
-execute if score @s ca.cauterize matches 1.. run tag @s add ca.has_cauterize
-execute if score @s ca.off_cauterize matches 1.. run tag @s add ca.has_cauterize
-execute if score @s ca.qu_cau matches 1.. run tag @s add ca.has_cauterize
-execute if score @s ca.sm_cau matches 1.. run tag @s add ca.has_cauterize
-execute if score @s ca.re_cau matches 1.. run tag @s add ca.has_cauterize
-execute if score @s ca.mo_cau matches 1.. run tag @s add ca.has_cauterize
-execute if score @s ca.g_cau matches 1.. run tag @s add ca.has_cauterize
-execute if score @s ca.t_cau matches 1.. run tag @s add ca.has_cauterize
-
-#Hex Eater Check
-tag @s remove ca.has_hex_eater
-execute if score @s ca.hex_eater matches 1.. run tag @s add ca.has_hex_eater
-execute if score @s ca.off_hex_eater matches 1.. run tag @s add ca.has_hex_eater
-execute if score @s ca.qu_hex matches 1.. run tag @s add ca.has_hex_eater
-execute if score @s ca.sm_hex matches 1.. run tag @s add ca.has_hex_eater
-execute if score @s ca.re_hex matches 1.. run tag @s add ca.has_hex_eater
-execute if score @s ca.mo_hex matches 1.. run tag @s add ca.has_hex_eater
-execute if score @s ca.g_hex matches 1.. run tag @s add ca.has_hex_eater
-execute if score @s ca.t_hex matches 1.. run tag @s add ca.has_hex_eater
+execute if score @s ca.temp_warp matches 1.. run function cartographer_custom_enchantments:enchant_effects/tempo_theft/effect_player
 
 #Momentum Cancel
 execute unless score @s ca.momentum matches 1.. run scoreboard players set @s ca.momentum_charge 0
 execute unless score @s ca.momentum matches 1.. run scoreboard players set @s ca.momentum_tier 0
 execute unless score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/del_attributes
 execute if score @s ca.momentum matches 1.. run function cartographer_custom_enchantments:enchant_effects/momentum/charge
-
-#Wavedash Time
-execute if score @s ca.wavedash_time matches 1.. run scoreboard players remove @s ca.wavedash_time 1
 
 #Sprint Dash and Disengage
 execute if score @s ca.sprint_dash matches 1.. run function cartographer_custom_enchantments:enchant_effects/sprint_dash/test
@@ -177,16 +116,9 @@ scoreboard players set @s ca.disengage_use 0
 execute unless score @s ca.disengage_time matches 0.. run scoreboard players set @s ca.disengage_time 0
 
 #Lethality
-execute if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/lethality/reset
+execute if predicate bb:cant_crit if score @s ca.lethality matches 1.. run function cartographer_custom_enchantments:enchant_effects/lethality/reset
 execute unless predicate bb:cant_crit if score @s ca.lethality matches 1.. run function cartographer_custom_enchantments:enchant_effects/lethality/apply
 
-#Unwieldly Curse
-execute if predicate bb:cant_crit run function cartographer_custom_enchantments:enchant_effects/curse_unwieldly/reset
-execute unless predicate bb:cant_crit if score @s ca.curse_unwieldly matches 1.. run function cartographer_custom_enchantments:enchant_effects/curse_unwieldly/apply
-
-#Impact
-execute unless predicate bb:cant_crit unless predicate cartographer_custom_enchantments:is_sprinting run function cartographer_custom_enchantments:enchant_effects/impact/reset
-execute if predicate bb:cant_crit if predicate cartographer_custom_enchantments:is_sprinting if score @s ca.impact matches 1.. run function cartographer_custom_enchantments:enchant_effects/impact/apply
 
 #Infinity 3.0
 function cartographer_custom_enchantments:enchant_effects/infinity/player
@@ -238,6 +170,10 @@ execute if entity @s[scores={ca.dmg_resist_check=1..,ca.evasion=1..}] run functi
 #Run Gravity Here
 execute if score @s ca.gravity matches 1.. unless score @s ca.gravity_cd matches 1.. run function cartographer_custom_enchantments:enchant_effects/gravity/tick
 execute if score @s ca.gravity_cd matches 1.. run scoreboard players remove @s ca.gravity_cd 1
+execute if score @s ca.gravity_protect matches 1.. run scoreboard players remove @s ca.gravity_protect 1
+
+#Current Time Reducer
+execute if score @s ca.current_time matches 1.. run scoreboard players remove @s ca.current_time 1
 
 #Run Starfall Here
 execute if score @s ca.starfall matches 1.. run function cartographer_custom_enchantments:enchant_effects/starfall/tick
@@ -245,26 +181,18 @@ execute if score @s ca.starfall matches 1.. run function cartographer_custom_enc
 #Reduce Ranged Weapon Recently Fired Counter
 execute if score @s ca.recently_fired_weapon matches 1.. run scoreboard players remove @s ca.recently_fired_weapon 1
 
-#Current Time Reducer
-execute if score @s ca.current_time matches 1.. run scoreboard players remove @s ca.current_time 1
-
-#Concentrate Stack Reducer
-execute if score @s ca.concentrate_time matches 1.. run scoreboard players remove @s ca.concentrate_time 1
-execute if score @s ca.concentrate_time matches 1 run function cartographer_custom_enchantments:enchant_effects/concentration/reduce
-
-#Stalwart and Poise Cooldowns
-execute if score @s ca.stalwart_cdl matches 1.. run scoreboard players remove @s ca.stalwart_cdl 1
-execute if score @s ca.poise_cdl matches 1.. run scoreboard players remove @s ca.poise_cdl 1
-
-
 #Check if sneaking for Swift Sneak
 execute if score @s ca.death_time matches 60.. if score @s[tag=ca.added_swift_sneak] ca.sneak matches 0 if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/remove
+execute if score @s ca.death_time matches 60.. if entity @s[tag=ca.added_swift_sneak] if score @s ca.swift_sneak matches 0 run function cartographer_custom_enchantments:enchant_effects/swift_sneak/remove
+
 execute if score @s ca.death_time matches 60.. if score @s[tag=!ca.added_swift_sneak] ca.sneak matches 1.. if score @s ca.swift_sneak matches 1.. run function cartographer_custom_enchantments:enchant_effects/swift_sneak/add
 
 #Check if under Soul Sand for Soul Speed
 execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft:soul_speed_blocks unless score @s[tag=ca.added_soul_speed] ca.sneak matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
 execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft:soul_speed_blocks unless score @s[tag=ca.added_soul_speed] ca.sprint matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
 execute if score @s ca.death_time matches 60.. unless block ~ ~-0.8 ~ #minecraft:soul_speed_blocks unless score @s[tag=ca.added_soul_speed] ca.walk matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
+
+execute if score @s ca.death_time matches 60.. if entity @s[tag=ca.added_soul_speed] if score @s ca.soul_speed matches 0 run function cartographer_custom_enchantments:enchant_effects/soul_speed/remove
 
 # Add SS if conditions are right unless blocked by tag
 execute if score @s ca.death_time matches 60.. if block ~ ~-0.8 ~ #minecraft:soul_speed_blocks if score @s[tag=!ca.added_soul_speed,tag=!ca.block_soul_speed] ca.sneak matches 1.. if score @s ca.soul_speed matches 1.. run function cartographer_custom_enchantments:enchant_effects/soul_speed/add
@@ -300,10 +228,6 @@ tag @s remove ca.echo_charge_taken
 tag @s remove ca.evocation_charge_taken
 
 #Action bar indicators for Repeating, Echo, and Second Wind
-execute if score @s ca.repeating matches 1..7 run data modify storage ca.indicator Ammo set from entity @s SelectedItem.tag.Ammo
-execute if score @s ca.repeating matches 11..17 run data modify storage ca.indicator Ammo set from entity @s Inventory[{Slot:-106b}].tag.Ammo
-execute if score @s ca.repeating matches 1.. store result score @s ca.ind_val run data get storage ca.indicator Ammo
-
 execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 0 run function cartographer_custom_enchantments:helper/indicators/action_bar/master
 execute if score @s ca.ui_loc matches 0 if score $gl_ui_loc ca.gamerule matches 1 run function cartographer_custom_enchantments:helper/indicators/subtitle/master
 

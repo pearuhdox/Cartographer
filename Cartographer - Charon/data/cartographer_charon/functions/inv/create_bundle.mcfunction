@@ -1,3 +1,4 @@
+data modify storage cartographer_charon:bundle bundle set value {}
 data modify storage cartographer_charon:bundle bundle set value {id:"minecraft:bundle",Count:1,tag:{DeathBundle:1b,XpStored:0}}
 
 execute store result score $tc dt.var if data entity 00000001-0000-0007-0000-001b0000000b Offers.Recipes[]

@@ -22,5 +22,6 @@ execute if score $temp ca.susu matches -106 run scoreboard players add @s ca.rec
 execute if score $temp ca.susu matches 0..9 run scoreboard players add @s ca.reconstruction 1
 execute if score $temp ca.susu matches 100..103 run scoreboard players add @s ca.reconstruction 1
 
+
 data remove storage ca.susu:enchants arr[0]
 execute if data storage ca.susu:enchants arr[0] run function cartographer_custom_enchantments:calc_enchant/reconstruction/rec

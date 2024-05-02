@@ -1,0 +1,1 @@
+stopsound @a[distance=..4] block minecraft:entity.generic.explode

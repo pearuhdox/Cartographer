@@ -1,11 +1,12 @@
 #writing to temp
+data modify storage cartographer_charon:player temp set value {}
 data modify storage cartographer_charon:player temp set from storage inv:main inv.all[0]
 data remove storage inv:main inv.all[0]
 
-#Apply Vanishing or Shattering
+#Apply Vanishing or Shattering or Binding
 execute if data storage cartographer_charon:player temp.tag{CustomEnchantments:[{id:"curse_shattering"}]} run function cartographer_charon:item_effects/shattering
 execute if data storage cartographer_charon:player temp.tag{Enchantments:[{id:"minecraft:vanishing_curse"}]} run function cartographer_charon:item_effects/vanishing
-
+execute if data storage cartographer_charon:player temp.tag{Enchantments:[{id:"minecraft:binding_curse"}]} run scoreboard players set $rand_t dt.var 0
 
 #modify slot
 scoreboard players remove $rand_t dt.var 1

@@ -1,4 +1,4 @@
-function bb:lib/pldata/write
+function bb:lib/pldata/read
 
 execute store result score @s void_home.x run data get storage bbl:pldata sudo_root.working_data.CharonHomePos[0]
 execute store result score @s void_home.y run data get storage bbl:pldata sudo_root.working_data.CharonHomePos[1]

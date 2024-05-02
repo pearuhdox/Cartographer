@@ -14,9 +14,7 @@ playsound minecraft:block.respawn_anchor.deplete player @a[distance=..8] ~ ~ ~ 2
 playsound minecraft:block.bell.resonate player @a[distance=..8] ~ ~ ~ 1 0.75
 playsound minecraft:entity.player.levelup player @a[distance=..8] ~ ~ ~ 2 1.2
 
-effect give @e[type=#bb:hostile,distance=..8.5] blindness 2 0 true
-effect give @e[type=#bb:hostile,distance=..8.5] weakness 2 9 true
-effect give @e[type=#bb:hostile,distance=..8.5] levitation 2 6 true
+effect give @e[type=#bb:hostile,distance=..10.5] blindness 2 0 true
 
 particle minecraft:glow_squid_ink ~ ~-1 ~ 0.3 0 0.3 0.05 50 normal
 particle minecraft:glow ~ ~1 ~ 0.3 0.25 0.3 3 50 normal
