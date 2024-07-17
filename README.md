@@ -4,6 +4,7 @@
 
 *You can find the new project here, at this link!* https://github.com/pearuhdox/Cartographer-2.0
 
+*Issues may not be fixed for this version Cartographer going forward, as the project is being rebuilt. Critical issues may be addressed while 1.21 is still in development.*
 
 Cartographer is a collection of datapacks for Minecraft that add custom enchantments, mob attacks, and more, for use in CTM maps.
 
@@ -35,4 +36,4 @@ https://github.com/pearuhdox/Cartographer/wiki/Home
 The credits and license information for the pack can be found in game with the pack installed, as well as here.
 https://github.com/pearuhdox/Cartographer/wiki/Acknowledgements:-Licensing-and-Credits
 
-If you would like to report a bug, or suggest a feature, please use the Issue tracker on Github to do so. Please check to see if a report has already been made before you make one. You can also contact me on discord (PearUhDox#0002) or via business email (pearuhdox@gmail.com) for any detailed questions (though I may not get back to you as quickly via those.) Please do not report bugs or suggest features in my socials.
+If you would like to report a bug, or suggest a feature, please use the Issue tracker on Github to do so. Please check to see if a report has already been made before you make one. You can also contact me on discord (pearuhdox) for any detailed questions. Please do not report bugs or suggest features in my socials.
