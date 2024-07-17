@@ -1,8 +1,8 @@
 # Cartographer
 
-**NOTE**: As of Minecraft 1.21, Cartographer is undergoing a full rewrite and reimagining, which means going forward, support will be dropped over time for the original Cartographer project.
+**NOTE**: *As of Minecraft 1.21, Cartographer is undergoing a full rewrite and reimagining, which means going forward, support will be dropped over time for the original Cartographer project.*
 
-You can find the new project here, at this link! https://github.com/pearuhdox/Cartographer-2.0
+*You can find the new project here, at this link!* https://github.com/pearuhdox/Cartographer-2.0
 
 
 Cartographer is a collection of datapacks for Minecraft 1.19.1 that add custom enchantments, mob attacks, and more, for use in CTM maps.
